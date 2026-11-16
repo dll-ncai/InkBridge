@@ -96,7 +96,7 @@ Scoring new predictions: `uhwr_eval.score(gt, pred, canvas, protocol)` (see `1_e
 
 ## Model checkpoints
 
-Checkpoints are released on Google Drive, not in git. `checkpoints/checkpoint_manifest.csv` lists every released file: 137 files (121 run checkpoints and 16 script-router classifiers), 36.47 GB, with its size and checksums; `checkpoints/checkpoint_manifest_meta_provenance.json` records how the manifest was made. 7 runs of the run roster (`supplementary/supp_recipes_runs_v11.csv`) are not among them: they have no selection record and no scored result file names them. 11 of the released files were trained on a second host; their Drive copies were checked by size, the other 126 by size and MD5 (column `drive_check`).
+Checkpoints are released on Google Drive, not in git. `checkpoints/checkpoint_manifest.csv` lists every released file: 78 files (71 run checkpoints and 7 script-router classifiers), 20.14 GB, with its size and checksums; `checkpoints/checkpoint_manifest_meta_provenance.json` records how the manifest was made. Only checkpoints relevant to the paper are released: those behind a number, table or figure of the paper or of Online Resource 1, the frozen backbones the released adapters need, and the backbones the released fine-tunes start from. Other runs of the run roster (`supplementary/supp_recipes_runs_v11.csv`) have no released checkpoint. 1 of the released files was trained on a second host; its Drive copy was checked by size, the other 77 by size and MD5 (column `drive_check`).
 
 **Download folder:** https://drive.google.com/drive/folders/1NXiF5ca7EpbRkULIjmPaNW5oFfTZKYMw (Google Drive folder `InkBridge/InkBridge_checkpoints`; the files are in `checkpoints/<family>/<name>.pt` below it, the same layout as `public_file` in the manifest).
 
@@ -109,16 +109,13 @@ Each row of the table below gives a checkpoint group, its notation in the paper 
 | `FMguided_warm_backbone` | `FMguided_warm_backbone (<fm>_W)` | 10 | 3.89 | [folder](https://drive.google.com/drive/folders/1rNR72M2_Rhi-2wYw2QztzfeEbWwhSxYr) |
 | `warm_FT` | `warm_FT (WFT, WFT^PE; NOFM_W/PEINIT_W FT)` | 14 | 5.46 | [folder](https://drive.google.com/drive/folders/1gTB1HsgXVTTtefUrMcWIXZxOMHjWwhMP) |
 | `FMguided_warm_FT` | `FMguided_warm_FT (WFT^FM)` | 10 | 3.89 | [folder](https://drive.google.com/drive/folders/1Z2ouTokk5ekUYicO_38PUpqQTHILfhPF) |
-| `plain_FT_10pct_30pct` | `plain_FT_10pct_30pct (FT; LUOFT_p10_*, M5 ft/p*)` | 7 | 3.04 | [folder](https://drive.google.com/drive/folders/1xJ19nHdPgW9-6MpV4v0o4VXp8og1cmNy) |
+| `plain_FT_10pct_30pct` | `plain_FT_10pct_30pct (FT; LUOFT_p10_*, M5 ft/p*)` | 3 | 1.30 | [folder](https://drive.google.com/drive/folders/1xJ19nHdPgW9-6MpV4v0o4VXp8og1cmNy) |
 | `joint_model` | `joint_model (f_all; M5 joint)` | 1 | 0.43 | [folder](https://drive.google.com/drive/folders/18l_OxMW8SkAPCUoa7iiHI_eG2vcPq6yi) |
 | `backbone_leave_Urdu_out` | `backbone_leave_Urdu_out (f_not_ur; M5 luo)` | 1 | 0.43 | [folder](https://drive.google.com/drive/folders/1VDxXnEVVmbMcSy1rXlgFO1bPBER5Vj6b) |
 | `stepmatched_backbone` | `stepmatched_backbone (LUOC40_bb)` | 1 | 0.43 | [folder](https://drive.google.com/drive/folders/1xMr3tgX3KM2E7Z7h25XgqXSVXdzskYQl) |
-| `stepmatched_FT` | `stepmatched_FT (SFT; LUOC40_p*)` | 5 | 2.17 | [folder](https://drive.google.com/drive/folders/1YdiIIRzvdbWlhExDSt3zn7sQmw6iY-Na) |
-| `routed_adapter` | `routed_adapter (AD; SMA_*)` | 32 | 0.66 | [folder](https://drive.google.com/drive/folders/1dy2kX9wf9FvCiQwbqxyJp6AB9zkoGdAO) |
-| `replay_single_model` | `replay_single_model (RP; SMR_*)` | 31 | 12.21 | [folder](https://drive.google.com/drive/folders/1rrRFY9CKgaUevtAkl4gW-gUDq4x0ErTT) |
-| `script_router` | `script-router classifiers` | 16 | 0.02 | [folder](https://drive.google.com/drive/folders/1XuXKjeWy7gWgq97x7rXYJfa90CEKdfwE) |
-| `stepmatched_FT_VPS_copy` | `stepmatched_FT_VPS_copy (LUOC40VPS_*; exploratory)` | 3 | 1.30 | [folder](https://drive.google.com/drive/folders/12FvDJdvsEriDVIk8Df956J_yhJU3fij5) |
-| `stepmatched_backbone_VPS_copy` | `stepmatched_backbone_VPS_copy (LUOC40_bb_vps; exploratory)` | 1 | 0.43 | [folder](https://drive.google.com/drive/folders/1LxjOKSnlel3PuhUSfKaBBViFnl6FsqMo) |
+| `stepmatched_FT` | `stepmatched_FT (SFT; LUOC40_p*)` | 4 | 1.74 | [folder](https://drive.google.com/drive/folders/1YdiIIRzvdbWlhExDSt3zn7sQmw6iY-Na) |
+| `routed_adapter` | `routed_adapter (AD; SMA_*)` | 22 | 0.45 | [folder](https://drive.google.com/drive/folders/1dy2kX9wf9FvCiQwbqxyJp6AB9zkoGdAO) |
+| `script_router` | `script-router classifiers` | 7 | 0.01 | [folder](https://drive.google.com/drive/folders/1XuXKjeWy7gWgq97x7rXYJfa90CEKdfwE) |
 
 ### Families
 
@@ -129,16 +126,13 @@ Each row of the table below gives a checkpoint group, its notation in the paper 
 | `FMguided_warm_backbone` | 10 | 3.89 | `stripped_backbone_fmdx_bb` |
 | `warm_FT` | 14 | 5.46 | `stripped_backbone_fmdx_bb` |
 | `FMguided_warm_FT` | 10 | 3.89 | `stripped_backbone_fmdx_bb` |
-| `plain_FT_10pct_30pct` | 7 | 3.04 | `full_checkpoint` |
+| `plain_FT_10pct_30pct` | 3 | 1.30 | `full_checkpoint` |
 | `joint_model` | 1 | 0.43 | `full_checkpoint` |
 | `backbone_leave_Urdu_out` | 1 | 0.43 | `full_checkpoint` |
 | `stepmatched_backbone` | 1 | 0.43 | `full_checkpoint` |
-| `stepmatched_FT` | 5 | 2.17 | `full_checkpoint` |
-| `routed_adapter` | 32 | 0.66 | `adapter_checkpoint` |
-| `replay_single_model` | 31 | 12.21 | `stripped_backbone_fmdx_bb` |
-| `script_router` | 16 | 0.02 | `script_router_classifier` |
-| `stepmatched_FT_VPS_copy` | 3 | 1.30 | `full_checkpoint` |
-| `stepmatched_backbone_VPS_copy` | 1 | 0.43 | `full_checkpoint` |
+| `stepmatched_FT` | 4 | 1.74 | `full_checkpoint` |
+| `routed_adapter` | 22 | 0.45 | `adapter_checkpoint` |
+| `script_router` | 7 | 0.01 | `script_router_classifier` |
 
 ### Manifest columns
 
@@ -183,10 +177,10 @@ The script uses the standard library only and exits with code 1 if a file differ
 
 | `file_kind` | files | families | loading code in this repository | `loading_command` of the manifest |
 |---|---|---|---|---|
-| `full_checkpoint` | 17 | `plain_FT_1pct`, `plain_FT_10pct_30pct`, `joint_model`, `backbone_leave_Urdu_out`, `stepmatched_backbone`, `stepmatched_FT` | `1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/uhwr_route_common.py`; `1_evaluator_and_table_code/exp/RQF/R1d/code/_src_snapshot.tgz__unpacked/CAND/code/frame_code_a44e78b0/frame_sample.py` | `sd, info = uhwr_route_common.load_checkpoint_weights("<file>", which="ema")` ; `python frame_sample.py --label <label> --run-dir <run_dir> --milestone <ms> --checkpoint <file> --stage <stage> --out-dir <out> --sets <sets>` |
-| `stripped_backbone_fmdx_bb` | 64 | `warm_backbone`, `FMguided_warm_backbone`, `warm_FT`, `FMguided_warm_FT`, `replay_single_model` | `1_evaluator_and_table_code/exp/FMD/xs/code/fmdx_backbone_v1/bb_model.py` | `unet = bb_model.load_backbone_for_inference("<file>", U, dev="cpu", which="ema")` |
-| `adapter_checkpoint` | 29 | `routed_adapter` | `1_evaluator_and_table_code/exp/RQF/code/sm_v1/sma_sample.py` | `python sma_sample.py --kind <kind> --ckpt <file> --backbone <backbone checkpoint> --gt-npz <npz> --set-name <set> --route <all\|router manifest csv> --out <out>` |
-| `script_router_classifier` | 16 | `script_router` | `1_evaluator_and_table_code/local/experiments/RV11/router336/code/script_clf.py`; `1_evaluator_and_table_code/local/experiments/RV11/router336/code/rr336_eval.py` | `m = ScriptCNN(); ck = torch.load('<file>', map_location='cpu', weights_only=False); m.load_state_dict(ck['state_dict']); m.eval()` |
+| `full_checkpoint` | 13 | `plain_FT_1pct`, `plain_FT_10pct_30pct`, `joint_model`, `backbone_leave_Urdu_out`, `stepmatched_backbone`, `stepmatched_FT` | `1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/uhwr_route_common.py`; `1_evaluator_and_table_code/exp/RQF/R1d/code/_src_snapshot.tgz__unpacked/CAND/code/frame_code_a44e78b0/frame_sample.py` | `sd, info = uhwr_route_common.load_checkpoint_weights("<file>", which="ema")` ; `python frame_sample.py --label <label> --run-dir <run_dir> --milestone <ms> --checkpoint <file> --stage <stage> --out-dir <out> --sets <sets>` |
+| `stripped_backbone_fmdx_bb` | 36 | `warm_backbone`, `FMguided_warm_backbone`, `warm_FT`, `FMguided_warm_FT` | `1_evaluator_and_table_code/exp/FMD/xs/code/fmdx_backbone_v1/bb_model.py` | `unet = bb_model.load_backbone_for_inference("<file>", U, dev="cpu", which="ema")` |
+| `adapter_checkpoint` | 22 | `routed_adapter` | `1_evaluator_and_table_code/exp/RQF/code/sm_v1/sma_sample.py` | `python sma_sample.py --kind <kind> --ckpt <file> --backbone <backbone checkpoint> --gt-npz <npz> --set-name <set> --route <all\|router manifest csv> --out <out>` |
+| `script_router_classifier` | 7 | `script_router` | `1_evaluator_and_table_code/local/experiments/RV11/router336/code/script_clf.py`; `1_evaluator_and_table_code/local/experiments/RV11/router336/code/rr336_eval.py` | `m = ScriptCNN(); ck = torch.load('<file>', map_location='cpu', weights_only=False); m.load_state_dict(ck['state_dict']); m.eval()` |
 
 The manifest names the router loading code by its path in the local project folder (`experiments/RV11/router336/code/`); in this repository that folder is `1_evaluator_and_table_code/local/experiments/RV11/router336/code/` (`script_clf.py` defines `ScriptCNN`; `rr336_eval.py`, line 17, holds the loading call; `rr336_train.py` and `run_all.sh` are the training script and its driver). Example for a router classifier:
 

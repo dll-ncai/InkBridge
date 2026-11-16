@@ -787,6 +787,17 @@
     "README.md": "03305f81d884267401c9c301cdc61438809d5392edadd23ca0b7af66783177ef"
    },
    "after_commit": "9045a8d (first public commit)"
+  },
+  {
+   "date": "2026-11-16",
+   "change": "public checkpoint release reduced to the 78 checkpoints relevant to the paper; manifest 137 -> 78 rows; README checkpoint tables and counts, NOT_INCLUDED.md and manifest provenance updated",
+   "files": {
+    "checkpoints/checkpoint_manifest.csv": "8d6e774d9ac2e1ef0140d15fe83c0c1155ce9d472d923a0b95b4c0118c7ed39c",
+    "checkpoints/checkpoint_manifest_meta_provenance.json": "22cbb5f52603154040980a158d0b8885e70767b552912b7422f52ae3369b2c6b",
+    "NOT_INCLUDED.md": "caa7eb8434504572691f96144ab1c94ca50ac6b521088b4b999c28ce40973746",
+    "README.md": "b93123e2b6c99d8659f4aaf5d7357a6747cced41ea18a2eed0704fd9c3282565"
+   },
+   "after_commit": "0393407"
   }
  ]
 }

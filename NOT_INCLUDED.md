@@ -3,7 +3,8 @@
 ## Items that are not in the repository
 | item | reason |
 |---|---|
-| Model weights and checkpoints (backbones, warm backbones, fine-tunes, adapters, router classifier) | not stored in git; released on Google Drive: 137 files listed with checksums in `checkpoints/checkpoint_manifest.csv`, links in the section "Model checkpoints" of `README.md`; 18 runs of the run roster are not released (13 without a selection record, 5 whose weights were not on the compute cluster) |
+| Model weights and checkpoints (backbones, warm backbones, fine-tunes, adapters, router classifier) | not stored in git; released on Google Drive: 78 files listed with checksums in `checkpoints/checkpoint_manifest.csv`, links in the section "Model checkpoints" of `README.md`; 18 runs of the run roster are not released (13 without a selection record, 5 whose weights were not on the compute cluster) |
+| Checkpoints of runs that are not relevant to the paper (no number, table or figure of the paper or of Online Resource 1 comes from them, and no released file needs them) | not released |
 | Ground-truth ink and rendered images of CASIA, IAM-OnDB, UNIPEN, HPL Tamil and OnHW units | third-party datasets with their own licences: identifiers only for these corpora |
 | Predicted trajectories (sample files) behind the scores | sizes not measured; per-unit scores are included instead |
 | Ground-truth ink of the OUHD-L training units under division v3.0 (ligatures_v3_train.npz, 95 MB) | size; unit boundaries of all training units are included and the file is rebuilt from the Zenodo release with the included build code |

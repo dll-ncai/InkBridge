@@ -1,11 +1,11 @@
 {
  "file": "checkpoint_manifest.csv",
  "created_utc": "2026-11-15T20:44:01Z",
- "sha256": "ce8ba2c5811bb403d958b989f40717803b3e74421af0cfde372a69690032c886",
- "rows": 137,
- "total_bytes": 36470281921,
- "total_GB": 36.47,
- "total_GiB": 33.97,
+ "sha256": "8d6e774d9ac2e1ef0140d15fe83c0c1155ce9d472d923a0b95b4c0118c7ed39c",
+ "rows": 78,
+ "total_bytes": 20135688362,
+ "total_GB": 20.136,
+ "total_GiB": 18.75,
  "companion_files": {
   "unlocated_runs.csv": "9e26fe969ffaa44890c205baf3afc016926959c332bdfbe4b5c01b9f2ec93b78",
   "checkpoint_sources_INTERNAL.csv": "81c830c1c54fddbe4c981117ffeaa9dc4de28d92f2661e1e318875c9c64e45d6",
@@ -182,5 +182,16 @@
    "11 files uploaded by hand": "file name and size reported by Google Drive equal the manifest: 11 of 11; no checksum is available for these through the interface used"
   },
   "script": "finalise_checkpoint_release.py (kept with the project records)"
+ },
+ "update_2026-11-16_paper_only": {
+  "previous": {
+   "sha256": "ce8ba2c5811bb403d958b989f40717803b3e74421af0cfde372a69690032c886",
+   "rows": 137,
+   "total_bytes": 36470281921
+  },
+  "rows_kept": 78,
+  "rule": "a checkpoint is released if a number, table or figure of the paper or of Online Resource 1 comes from it, if a released adapter needs it as frozen backbone, or if a released fine-tune was trained from it",
+  "evidence": "run names traced to the table and figure source files listed in README (section map) and to the sentences of the paper and Online Resource 1 that print values; decision list kept with the project records",
+  "removed_rows": 59
  }
 }
