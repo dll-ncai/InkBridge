@@ -1,0 +1,61 @@
+{
+ "log": [
+  {
+   "epoch": 0,
+   "train_loss": 0.5878108112001419,
+   "val_acc5": 0.8096,
+   "val_acc_rtl": 0.9632,
+   "sec": 352.14988899230957
+  },
+  {
+   "epoch": 1,
+   "train_loss": 0.22530658702135087,
+   "val_acc5": 0.7368,
+   "val_acc_rtl": 0.984,
+   "sec": 308.8656966686249
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.15572459090709687,
+   "val_acc5": 0.9448,
+   "val_acc_rtl": 0.9928,
+   "sec": 278.52847623825073
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.12023370052576066,
+   "val_acc5": 0.9032,
+   "val_acc_rtl": 0.9968,
+   "sec": 318.493292093277
+  },
+  {
+   "epoch": 4,
+   "train_loss": 0.10076683630943298,
+   "val_acc5": 0.9352,
+   "val_acc_rtl": 0.9912,
+   "sec": 316.34382224082947
+  },
+  {
+   "epoch": 5,
+   "train_loss": 0.08563401781320572,
+   "val_acc5": 0.932,
+   "val_acc_rtl": 0.9768,
+   "sec": 153.8965609073639
+  }
+ ],
+ "best_epoch": 2,
+ "best_val_acc5": 0.9448,
+ "n_params": 276485,
+ "args": {
+  "pull": "d3route/pull",
+  "out": "d3route/out",
+  "epochs": 12,
+  "bs": 256,
+  "lr": 0.002,
+  "seed": 0,
+  "patience": 3,
+  "threads": 12
+ },
+ "torch": "2.14.1",
+ "numpy": "1.26.4"
+}

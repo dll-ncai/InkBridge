@@ -1,0 +1,7 @@
+2026-11-06T20:25:45Z arm_job_start arm=dinov3-vitl16-sat493m_W lane=clusterA site=clusterA host=<node> slurm=24914902 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-06T20:25:47Z race_lock WIN site=clusterA host=<node> slurm=24914902 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-06T20:25:48Z batch_layout ng=2 mem_gb=44 per_gpu=64 global_micro=128 accum=4 units_per_step=512 site=clusterA host=<node> slurm=24914902 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-06T20:25:48Z train_start ngpu=2 site=clusterA host=<node> slurm=24914902 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-07T07:07:02Z train_exit rc=0 site=clusterA host=<node> slurm=24914902 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-07T08:41:32Z selected milestone 4 (step 40000) site=clusterA host=<node> slurm=24914902 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-07T08:41:43Z arm_job_end site=clusterA host=<node> slurm=24914902 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]

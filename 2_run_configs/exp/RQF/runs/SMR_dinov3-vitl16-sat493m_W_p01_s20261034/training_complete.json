@@ -1,0 +1,22 @@
+{
+ "status": "complete",
+ "final_step": 10000,
+ "completed_at": "2026-11-10T01:36:27Z",
+ "arm_id": "dinov3-vitl16-sat493m_W_FT",
+ "milestones": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "peak_rss_mb": 4060.92578125,
+ "cuda_max_alloc_gb": 5.068934144,
+ "lane": "clusterA",
+ "slurm": "24964816"
+}

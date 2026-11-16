@@ -1,0 +1,4 @@
+file,n_units,n_scored,n_dedup,n_error,seconds
+german_unipen_de_test__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed0_preds.npz,827,827,0,0,63.6
+german_unipen_de_test__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed1_preds.npz,827,827,0,0,1.0
+german_unipen_de_test__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed2_preds.npz,827,827,0,0,1.1

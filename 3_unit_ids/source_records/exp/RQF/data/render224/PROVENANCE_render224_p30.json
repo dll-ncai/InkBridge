@@ -1,0 +1,56 @@
+{
+ "schema": "rqf_provenance/1",
+ "kind": "rqf_render224_train_subset",
+ "fraction": "p30",
+ "created_utc": "2026-11-07T21:24:27Z",
+ "slurm_job_id": "24963972",
+ "transform": "same code as p01 render (fmd_student_v1 prep_renders.py, ligatures_v3 strokes -> unit_eval_ink -> render224 thickness 7); npz2npy in the order of the subset npz",
+ "subset_origin": "existing writer-stratified subset file m5_ft_ouhdl_p30.npz (built in M5, not rebuilt here)",
+ "inputs": {
+  "subset_npz": {
+   "path": "$U/data/m5_multiscript_v1/m5_ft_ouhdl_p30.npz",
+   "sha256": "4e4394ae0b5e1ededf7c4aa40b936ede8530da3f511b663e1366fd118d79d702"
+  },
+  "student_prep_renders.py": {
+   "path": "$U/exp/FMD/code/fmd_student_v1/prep_renders.py",
+   "sha256": "d41034246b800f6b8228f886da67628f13b348075e8530b57bf7f40c4df9c0fa"
+  },
+  "fmdx_prep_renders.py": {
+   "path": "$U/exp/FMD/xs/code/fmdx_backbone_v1/prep_renders.py",
+   "sha256": "eb100e6a39a87f2f6b27eb684ab59a3c7cd0949fe47f832cade33feef042a2d7"
+  }
+ },
+ "outputs": {
+  "harness_npz": {
+   "path": "$U/exp/RQF/data/render224/p30_harness/fmd_render224_p30train.npz",
+   "sha256": "33f5859d580d36e7fab38f56574f5db5e71159bd0ca0009af674450b72530aea"
+  },
+  "npy": {
+   "path": "$U/exp/RQF/data/render224/p30train_render224.npy",
+   "sha256": "562744d3dfd1956c2ed9a57496a6a4b0194abe5d063789fc156a17d4c5b0c112"
+  }
+ },
+ "prep_report": {
+  "n_units": 10085,
+  "n_writers": 248,
+  "check64_identical_vs_p01": 10085,
+  "check64_identical_vs_e0_train": 10085,
+  "check64_max_abs_diff": 0,
+  "edge_clean_64": 10085,
+  "edge_clean_224": 10085,
+  "mirror_render_vs_frame_cond_identical": 0,
+  "mirror_render_vs_frame_cond_max_abs": 104,
+  "unit_ids_sha256": "253bbf0cd1232bbf701ba3a65b30b9c034986ad22320d074d7322f4a48766a02",
+  "img224_sha256": "50fa3fee00657bd8217a2f0da8408f967c7cf97f6b34c8b868c65108987fa13c",
+  "img224_mx_sha256": "88d065b46a48f3a398c78e2e308b735cc4d740c7d9250cf8a26ffadccda31b5a",
+  "p01_cond_rendered_sha256": "f957fb2904d8a78a84e83e19c69b2aa506a515977d80ab1fe1236f831103db7c",
+  "out": [
+   "$U/exp/RQF/data/render224/p30_harness/fmd_render224_p01train.npz",
+   "$U/exp/RQF/data/render224/p30_harness/fmd_render224_p01train_mx.npz"
+  ],
+  "sha": [
+   "33f5859d580d36e7fab38f56574f5db5e71159bd0ca0009af674450b72530aea",
+   "85524fe0ec1c4d393faa559f15155ec44c9632535f014c44eaffe55f9e0aa920"
+  ]
+ }
+}

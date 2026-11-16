@@ -1,0 +1,78 @@
+{
+ "utc": "2026-11-12T19:49:44Z",
+ "verdicts": {
+  "LUO_ms6": {
+   "collapse_sets": {
+    "iam500": true,
+    "casia_en": true,
+    "hpl_tamil": true
+   },
+   "repair_sets": {
+    "iam500": true,
+    "casia_en": true,
+    "hpl_tamil": true
+   },
+   "collapse_n": 3,
+   "repair_n": 3,
+   "complete": true,
+   "COLLAPSE": true,
+   "REPAIR": true
+  },
+  "M5_ms9": {
+   "collapse_sets": {
+    "iam500": true,
+    "casia_en": true,
+    "hpl_tamil": true
+   },
+   "repair_sets": {
+    "iam500": true,
+    "casia_en": true,
+    "hpl_tamil": true
+   },
+   "collapse_n": 3,
+   "repair_n": 3,
+   "complete": true,
+   "COLLAPSE": true,
+   "REPAIR": true
+  },
+  "R1b": {
+   "repair_sets": {
+    "german_unipen_de_test": false,
+    "test_iam500": true,
+    "test_casia_en": false,
+    "german_onhw_all": true
+   },
+   "repair_n": 2,
+   "complete": true,
+   "REPAIR": false
+  },
+  "R1c": {
+   "LUO_ms6": {
+    "K1_tau_lo_ge_0_65": false,
+    "tau_lo": 0.62038880939079
+   },
+   "NOFM_W_bb3": {
+    "K1_tau_lo_ge_0_65": false,
+    "tau_lo": 0.4193943807633219
+   },
+   "PEINIT_W_bb4": {
+    "K1_tau_lo_ge_0_65": null,
+    "tau_lo": null
+   },
+   "TRACE_uhwr_f4": {
+    "K1_tau_lo_ge_0_65": true,
+    "tau_lo": 0.9876908865441163
+   },
+   "TRACE_trace_render": {
+    "K1_tau_lo_ge_0_65": true,
+    "tau_lo": 0.9895399881702704
+   }
+  }
+ },
+ "n_rows_files": 112,
+ "rows_files_sha256_of_list": "d8ed767ba2e045b44d04028ccd862564218adcdbf46d85482ad598a097072ce7",
+ "B": 2000,
+ "margins": {
+  "aiou": 0.01035
+ }
+}

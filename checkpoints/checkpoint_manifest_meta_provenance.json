@@ -1,0 +1,186 @@
+{
+ "file": "checkpoint_manifest.csv",
+ "created_utc": "2026-11-15T20:44:01Z",
+ "sha256": "ce8ba2c5811bb403d958b989f40717803b3e74421af0cfde372a69690032c886",
+ "rows": 137,
+ "total_bytes": 36470281921,
+ "total_GB": 36.47,
+ "total_GiB": 33.97,
+ "companion_files": {
+  "unlocated_runs.csv": "9e26fe969ffaa44890c205baf3afc016926959c332bdfbe4b5c01b9f2ec93b78",
+  "checkpoint_sources_INTERNAL.csv": "81c830c1c54fddbe4c981117ffeaa9dc4de28d92f2661e1e318875c9c64e45d6",
+  "RCLONE_SETUP_FOR_ALI.md": "fbb105923bc27bcea5b44f58b1504f06a527975c419d0e54592c8619c5c09cb4",
+  "handoff/ckpt_inspection.json": "ec9d222bbba7326435a414e25a85fcbbd93f0a33c813da0bae507479878455e7",
+  "handoff/stage_plan.tsv": "e7951c5769fe6fcd402be8e4cc1224097beaebfa641faf0f69dea232c8c5d99c",
+  "handoff/cluster/stage.py": "e22b68e38e4dc33868b6b79990438fa402927bcd0dff1c8145487340ca1cf379",
+  "handoff/cluster/inspect_ckpt.py": "dbff5c9888830ae112c9089003f4484e53681b2add63da76e3fa7eea1049d619",
+  "handoff/cluster/stage_job.sbatch": "45904d2ffbbc655f2bf9f2e0dd26fc6aa15dc4acb178d6da7ee9163e92d4cb4d",
+  "handoff/cluster/inspect_job.sbatch": "f035c7228465134ef9002545b5648cca0ca165377b4b2de1cf56643990e8ea1d",
+  "handoff/discovery.tsv": "ba2689f086cf2d3ceecf91feb782e8cccace48ad5253abba7d385f845a4e8ef5",
+  "checkpoint_staging_code.zip": "dd06863e4054c2356781e03869a0568db25739338b7a74173ab2b71473c04964",
+  "handoff/cluster/discover.py": "c8ee8d5b885d4debf05bb51c609cc65ac36bc2264031517f589e53175963f762"
+ },
+ "inputs": {
+  "roster": "supplementary/supp_recipes_runs_v11.csv inside inkbridge_reviewer_archive_v11.tar.gz (artifact version d5433241-1d25-41dd-ac6a-2000d7a41c15), 128 runs, 16 families",
+  "router_hashes": "supplementary/router336_checkpoints_sha256.csv in the same archive (14 rows)",
+  "paper": "paper v12.2 tex, artifact version 351e9eed-ddfb-4acc-b94d-830ffe4bd923 (float/symbol occurrence for paper_floats_v12_2)",
+  "selection_records": "<run dir>/eval/selection.json on the cluster (key best_milestone; pooled list re-sorted by ldtw, ties higher aiou)",
+  "hash_records": "<run dir>/bb_ms<k>.verify.json (sha256) and <run dir>/ckpt_sha256/checkpoint_<ms>.pt.sha256 on the cluster",
+  "router336_files": "local repository experiments/RV11/router336/runs/*/script_clf*.pt (12 files; sha256 equal to the CSV before upload), copied to the cluster as router336_src.tar sha256 prefix fc85dcd710ff18dd"
+ },
+ "staging": {
+  "host": "cluster",
+  "dir": "$U/tmp/release_v12/checkpoints/<family>/<public_run_name>.pt",
+  "method": "os.link hard links to the original files (126 of 126); no file copied, stripped or modified; router336 files are hard links to the files extracted from router336_src.tar",
+  "name_rule": "roster run name (pseudonymised, *_clusterA) under the first token of the roster family; routers under script_router/"
+ },
+ "jobs": [
+  {
+   "slurm_job": 25176016,
+   "purpose": "hard-link staging (stage.py), sha256sum and md5sum of 126 files with xargs -P 16",
+   "partition": "epyc-256",
+   "node": "<node>",
+   "cpus": 16,
+   "mem": "96G",
+   "state": "COMPLETED",
+   "elapsed": "00:01:02"
+  },
+  {
+   "slurm_job": 25176034,
+   "purpose": "checkpoint inspection, first submission (epyc-256)",
+   "state": "cancelled by the agent while PENDING (estimated start 4 h later); resubmitted"
+  },
+  {
+   "slurm_job": 25176084,
+   "purpose": "checkpoint inspection (inspect_ckpt.py) in apptainer images/torch27.sif with venvs/e0 python, torch 2.7.1+cu128",
+   "partition": "skylake-96",
+   "node": "<node>",
+   "cpus": 4,
+   "mem": "24G",
+   "state": "COMPLETED",
+   "elapsed": "00:00:52"
+  }
+ ],
+ "checks": {
+  "selection_record_best_equals_staged_milestone": "110 of 110 run checkpoints",
+  "pooled_argmin_ldtw_equals_staged_milestone": "110 of 110",
+  "staged_milestone_in_milestones_evaluated": "110 of 110",
+  "roster_milestone_equals_record": "109 of 110; LUOC40_p01_s20261036: roster columns say not available, eval/selection.json gives 4; joint and luo: roster txt column not available, roster selection_json column equals the record (9, 6)",
+  "init_checkpoint_cross_check": "for every backbone used as init_checkpoint by roster runs, the init milestone equals the backbone record best_milestone (LUOC40_bb 3, NOFM_W 3, PEINIT_W 4, FM-guided warm backbones 4, luo 6; LUOC40_bb_vps 1)",
+  "sha256_equal_to_earlier_record": "84 of 126 (64 bb verify.json, 6 ckpt_sha256 files, 14 router336 CSV rows); 42 files have no earlier hash record",
+  "public_manifest_scan": "no occurrence of cluster, <user>, /scratch, /Users in checkpoint_manifest.csv"
+ },
+ "not_staged": {
+  "n": 18,
+  "no_selection_record": 13,
+  "weights_not_on_cluster": 5,
+  "file": "unlocated_runs.csv (internal: holds real cluster paths)"
+ },
+ "column_notes": {
+  "paper_floats_v12_2": "FAMILY-LEVEL: floats of paper v12.2 (other than Table 1, notation) whose LaTeX source uses the family symbol macro; backbones inherit the floats of the runs initialised from them; this is not a per-run mapping to table cells",
+  "encoder_fm_teacher_init_checkpoint": "copied from the roster columns encoder, fm, init_checkpoint (\"not available\" = not recorded in that run_config.json)",
+  "loading_command": "call or CLI taken from the code file in loading_code_source (required arguments as placeholders); the router loader file is in the local repository only, not in reviewer archive v11"
+ },
+ "inspection": {
+  "method": "torch.load on CPU, one file per kind; weights-only size = torch.save to an in-memory buffer without the keys opt and scaler; no file written",
+  "files_inspected": 5,
+  "full_checkpoint": {
+   "example": "M5 luo checkpoint_000006.pt",
+   "file_bytes": 434608395,
+   "top_level_keys": [
+    "format_version",
+    "milestone",
+    "step",
+    "model",
+    "opt",
+    "ema",
+    "scaler"
+   ],
+   "optimizer_state_inside": true,
+   "bytes_without_opt_and_scaler": 217332397,
+   "bytes_ema_only": 217245997
+  },
+  "adapter_checkpoint": {
+   "example": "SMA_LUO_p01_s20261034 checkpoint_000010.pt",
+   "file_bytes": 20664769,
+   "top_level_keys": [
+    "format_version",
+    "milestone",
+    "step",
+    "trainable",
+    "ema_trainable",
+    "ema",
+    "opt",
+    "scaler",
+    "config",
+    "backbone_sha256_now",
+    "backbone_sha256_at_start",
+    "code_sha256_combined",
+    "seed_used",
+    "gpu"
+   ],
+   "optimizer_state_inside": true,
+   "bytes_without_opt_and_scaler": 12369763
+  },
+  "stripped_backbone": {
+   "example": "NOFM_W bb_ms3.pt",
+   "file_bytes": 389091621,
+   "top_level_keys": [
+    "format_version",
+    "milestone",
+    "step",
+    "model_unet",
+    "ema_unet",
+    "config",
+    "code_sha256_combined",
+    "fm_free",
+    "projector_in_file"
+   ],
+   "optimizer_state_inside": false
+  },
+  "router": {
+   "example": "D3_ROUTE script_clf.pt",
+   "file_bytes": 1118645,
+   "top_level_keys": [
+    "state_dict",
+    "scripts",
+    "rtl",
+    "epoch",
+    "val_acc5",
+    "arch",
+    "n_params",
+    "seed"
+   ],
+   "optimizer_state_inside": false
+  },
+  "estimate_total_bytes_if_weights_only": 28997147522,
+  "estimate_note": "PROVISIONAL: extrapolated from one inspected file per kind to 17 full checkpoints and 29 adapter checkpoints; no weights-only copy was created"
+ },
+ "rclone": {
+  "binary": "$HOME/.local/bin/rclone",
+  "version": "v1.76.0",
+  "zip_sha256": "b00f00b3266c3764413afe599d3ec316f6f43b3e0ea8a0bc1d186d2133e46df7",
+  "binary_sha256": "62e4d3e5432f2c685f1834b8bb342058ff0611c99d048aeb44bb8d8fd611527e",
+  "remotes_configured": 0,
+  "uploaded": "nothing"
+ },
+ "update_2026-11-16": {
+  "previous": {
+   "sha256": "9295b18520e042323064328847ba79726d8daaf043f00d7d3dacefe3f15c15e3",
+   "rows": 126,
+   "total_bytes": 32931420454
+  },
+  "added_rows": 11,
+  "added_rows_source": "11 selected checkpoints located on a second training host; SHA-256 and MD5 computed there and equal to the checkpoint hashes named in the prediction sidecars; uploaded to Google Drive from that host",
+  "added_columns": [
+   "selection_evidence",
+   "drive_url",
+   "drive_check"
+  ],
+  "drive_check": {
+   "126 files copied by rclone": "file name, size and MD5 reported by Google Drive equal the manifest (rclone lsf and rclone md5sum, 16 Nov 2026): 126 of 126",
+   "11 files uploaded by hand": "file name and size reported by Google Drive equal the manifest: 11 of 11; no checksum is available for these through the interface used"
+  },
+  "script": "finalise_checkpoint_release.py (kept with the project records)"
+ }
+}

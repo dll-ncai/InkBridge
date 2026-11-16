@@ -1,0 +1,13 @@
+2be9e593c573666e36ccdcb728a5d630512f67cd692f749a22958c96527c1b52  e0_code.tar.gz
+128db32854fe76acf472e9f7b0b5b74b81d6c84b2928841eeac9f85ec0facd94  data/e0_gold.npz
+c09560ed07a526614b3342a2fb6b642165f6aab3fffa25876bf1bc7502b7a514  data/e0_test.npz
+2c4ddc48fb37b3eb3145977d9245f16e2e237f1224e24b5c81b72785d8a1f048  data/e0_train.npz
+25451031d41408c32c504e07b9e16ebcafe4d5fc3c0678cb1bab82a877272f92  data/e0_val.npz
+c79c3c1abbc191940ed10a7afcf11b38fa5af636840cada892336d7071e8bcb8  bundle/code/build_e0_data.py
+83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10  bundle/code/e0_adapter.py
+2f2a11c6df94af2f27292a436732fe4ed25cf2432382ac8a347e07f7c153c2fa  bundle/code/e0_dataset.py
+2c4e05be7af67cc104840bec1026667ce320b826b247e1735b40a7e9fa1092a1  bundle/code/e0_sample.py
+c4a7218c93d56cd104ad57751541cd797f2fc7e656ad78f936f0d0aee3776fe8  bundle/code/e0_score.py
+640ad9067b9e313e3356375721ee4d9f051b7b1c0503dd9ca137306b88ceb774  bundle/code/e0_train.py
+0f7967b05cf8de47d36d03a9fc2dcd1f7ea4f2c7dbf7cfe770feaa33152416c6  bundle/code/test_e0_adapter.py
+# ERRATA 2026-10-22 (agent, Numbers track; finding N02): the e0_code.tar.gz line above (2be9e593...) is the FIRST build (CLUSTER-A e0/code_2be9e593). e0_code.tar.gz was rebuilt in place; the file now hashes 1a5ee72e8af4056e76ec9659bfb141af8f683e89cd3a27bff49ad9353dea86ec, which is the tarball the E0 training job 24417278 used (CLUSTER-A e0/code_1a5ee72e). The bundle/code lines for e0_sample.py (2c4e05be...) and e0_score.py (c4a7218c...) are also first-build hashes; training used e0_sample.py 5f60cb294f8bd7b27ccb676ef0a836b6b0c34730241e366d549fc2104953f84c and e0_score.py 0a7569d47d7af1ba3eddb5cbcac6bfd602dc4d257cc950098748d50ff9a2e1af. Data lines unchanged. Canonical record: CLUSTER-A runs/e0/e0_v3_rendered_100k_bs512/PROVENANCE_e0_final.json.

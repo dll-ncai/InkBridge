@@ -1,0 +1,712 @@
+diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/CHANGELOG.md $U/shared/uhwr_eval-0.3.1/CHANGELOG.md
+--- /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/CHANGELOG.md	1970-01-01 01:00:00.000000000 +0100
++++ $U/shared/uhwr_eval-0.3.1/CHANGELOG.md	2026-10-20 22:54:02.000000000 +0200
+@@ -0,0 +1,31 @@
++# CHANGELOG uhwr_eval
++
++## 0.3.1 (20 Oct 2026)
++
++Merge of two parallel 0.3.0 builds into one release.
++
++| parent | tarball sha256 | location on CLUSTER-A | adds |
++|---|---|---|---|
++| E1-v2 0.3.0 | a9d0a1e130f11addadc5321e52f5e17989e1eb54d950314a3e344873cce0ed02 | exp/E1_v2/out/uhwr_eval-0.3.0.tar.gz | v2metrics.py: penup_f1_v2, timing_profile_tv_v2 (in score()) |
++| DOT2 0.3.0 | 143627cc883bce7646a1d733b08e3402b6bfc25e22e43643f5c7e474c513f6a3 | exp/DOT2/code/eval/uhwr_eval-0.3.0.tar.gz | marks.py: mark_order_metrics, MARK_METRICS; tests_marks.py |
++| common base 0.2.0 | b1664bd3bce3a445dd2bfc06fee3487b534b09b95c2963bcf7575481dc966e8e | (artifact uhwr_eval-0.2.0.tar.gz) | - |
++
++* Files changed by the E1-v2 build vs 0.2.0: uhwr_eval/__init__.py, uhwr_eval/metrics.py, +uhwr_eval/v2metrics.py.
++* Files changed by the DOT2 build vs 0.2.0: README.md, pyproject.toml, uhwr_eval/__init__.py, +uhwr_eval/marks.py, +tests_marks.py.
++* The only file both builds changed is uhwr_eval/__init__.py (docstring, version, one import); merged by text edits
++  asserted in build_uhwr_eval_031.py.  No metric function differs from its parent.
++* score() returns every 0.2.0 key with 0.2.0 values, plus penup_f1_v2 (always) and timing_profile_tv_v2 (with timestamps).
++* Verification on CLUSTER-A (job record in release/PROVENANCE_uhwr_eval_0.3.1.json): score() vs 0.2.0 on DOT2's 711-unit
++  check set and on E0 ms8 predictions for all 4,406 v3 test units (rendered + dataset inputs, native + standardised);
++  E1-v2 rerun (penup_f1_v2, timing_profile_tv_v2) vs E1-v2 outputs; DOT2 dot2.py rerun (marks.py) vs DOT2 outputs.
++  Results: release/verify_summary_uhwr_eval_0.3.1.json.
++
++## 0.3.0 (19 Oct 2026) - two builds, see table above
++
++## 0.2.0 (16 Oct 2026)
++
++timing_profile_tv, timing_duration_tv; optional timestamps in score(); AIoU arguments.
++
++## 0.1.0
++
++Initial evaluator.
+diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/pyproject.toml $U/shared/uhwr_eval-0.3.1/pyproject.toml
+--- /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/pyproject.toml	2026-10-19 18:24:08.000000000 +0200
++++ $U/shared/uhwr_eval-0.3.1/pyproject.toml	2026-10-20 22:54:02.000000000 +0200
+@@ -1,6 +1,6 @@
+ [project]
+ name = "uhwr_eval"
+-version = "0.3.0"
++version = "0.3.1"
+ description = "Shared trajectory-recovery evaluator (uhwr baselines phase); wraps Nagamatsu metrics.py unchanged"
+ requires-python = ">=3.10"
+ dependencies = ["numpy", "scipy", "opencv-python", "tslearn", "numba", "pandas", "lpips", "torch", "torchvision"]
+diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/README.md $U/shared/uhwr_eval-0.3.1/README.md
+--- /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/README.md	2026-10-19 18:35:40.000000000 +0200
++++ $U/shared/uhwr_eval-0.3.1/README.md	2026-10-20 22:54:02.000000000 +0200
+@@ -1,4 +1,4 @@
+-# uhwr_eval 0.3.0
++# uhwr_eval 0.3.1
+ 
+ Shared evaluator for offline->online handwriting trajectory recovery (uhwr baselines phase).
+ 
+@@ -48,3 +48,22 @@
+ * `score()` and every 0.1.0 / 0.2.0 metric and default are unchanged; `metrics.py`, `strokes.py`,
+   `render.py`, `timing.py` and `_nagamatsu_metrics.py` are byte-identical to 0.2.0.
+ * `tests_marks.py`: toy checks (identity, reversed marks, marks moved to the end).
++
++## Changes in 0.3.0 (19 Oct 2026; plan item E1-v2, pen-up and timing redesign; separate 0.3.0 build)
++
++* New `uhwr_eval/v2metrics.py`: `penup_f1_v2` (orientation/order-invariant pen-up F1 on unordered stroke
++  end-point pairs, Hungarian, TP if cost <= 3 px) and `timing_profile_tv_v2` (as `timing_profile_tv`, predicted
++  segment midpoints binned by projected arc position on the matched GT stroke).  Both registered in `METRICS`
++  and returned by `score()` (`timing_profile_tv_v2` only when timestamps are given).
++* `metrics.py` edits: two `METRICS` entries, two calls in `score()`; every 0.2.0 metric value is unchanged.
++
++## Changes in 0.3.1 (20 Oct 2026; merge of the two 0.3.0 builds)
++
++* Two different trees were labelled 0.3.0 (E1-v2: tarball sha256
++  a9d0a1e130f11addadc5321e52f5e17989e1eb54d950314a3e344873cce0ed02; DOT2: tarball sha256
++  143627cc883bce7646a1d733b08e3402b6bfc25e22e43643f5c7e474c513f6a3).  0.3.1 contains both sets of additions.
++* `metrics.py` and `v2metrics.py` are byte-identical to the E1-v2 build; `marks.py`, `tests_marks.py` and every
++  other file except `__init__.py`, `README.md`, `pyproject.toml` are byte-identical to the DOT2 build.
++* `__init__.py` = 0.2.0 + both 0.3.0 docstring entries + the `marks` import + version 0.3.1.
++* New `metric_registry_0.3.1.csv` (generated from `METRICS` and `MARK_METRICS`); `metric_registry.csv` is kept
++  byte-identical to 0.2.0.  See CHANGELOG.md for the verification record.
+diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/release/uhwr_eval_0.2.0_to_0.3.1.diff $U/shared/uhwr_eval-0.3.1/release/uhwr_eval_0.2.0_to_0.3.1.diff
+--- /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/release/uhwr_eval_0.2.0_to_0.3.1.diff	1970-01-01 01:00:00.000000000 +0100
++++ $U/shared/uhwr_eval-0.3.1/release/uhwr_eval_0.2.0_to_0.3.1.diff	2026-10-20 22:54:02.000000000 +0200
+@@ -0,0 +1,451 @@
++diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/CHANGELOG.md $U/shared/uhwr_eval-0.3.1/CHANGELOG.md
++--- /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/CHANGELOG.md	1970-01-01 01:00:00.000000000 +0100
+++++ $U/shared/uhwr_eval-0.3.1/CHANGELOG.md	2026-10-20 22:54:02.000000000 +0200
++@@ -0,0 +1,31 @@
+++# CHANGELOG uhwr_eval
+++
+++## 0.3.1 (20 Oct 2026)
+++
+++Merge of two parallel 0.3.0 builds into one release.
+++
+++| parent | tarball sha256 | location on CLUSTER-A | adds |
+++|---|---|---|---|
+++| E1-v2 0.3.0 | a9d0a1e130f11addadc5321e52f5e17989e1eb54d950314a3e344873cce0ed02 | exp/E1_v2/out/uhwr_eval-0.3.0.tar.gz | v2metrics.py: penup_f1_v2, timing_profile_tv_v2 (in score()) |
+++| DOT2 0.3.0 | 143627cc883bce7646a1d733b08e3402b6bfc25e22e43643f5c7e474c513f6a3 | exp/DOT2/code/eval/uhwr_eval-0.3.0.tar.gz | marks.py: mark_order_metrics, MARK_METRICS; tests_marks.py |
+++| common base 0.2.0 | b1664bd3bce3a445dd2bfc06fee3487b534b09b95c2963bcf7575481dc966e8e | (artifact uhwr_eval-0.2.0.tar.gz) | - |
+++
+++* Files changed by the E1-v2 build vs 0.2.0: uhwr_eval/__init__.py, uhwr_eval/metrics.py, +uhwr_eval/v2metrics.py.
+++* Files changed by the DOT2 build vs 0.2.0: README.md, pyproject.toml, uhwr_eval/__init__.py, +uhwr_eval/marks.py, +tests_marks.py.
+++* The only file both builds changed is uhwr_eval/__init__.py (docstring, version, one import); merged by text edits
+++  asserted in build_uhwr_eval_031.py.  No metric function differs from its parent.
+++* score() returns every 0.2.0 key with 0.2.0 values, plus penup_f1_v2 (always) and timing_profile_tv_v2 (with timestamps).
+++* Verification on CLUSTER-A (job record in release/PROVENANCE_uhwr_eval_0.3.1.json): score() vs 0.2.0 on DOT2's 711-unit
+++  check set and on E0 ms8 predictions for all 4,406 v3 test units (rendered + dataset inputs, native + standardised);
+++  E1-v2 rerun (penup_f1_v2, timing_profile_tv_v2) vs E1-v2 outputs; DOT2 dot2.py rerun (marks.py) vs DOT2 outputs.
+++  Results: release/verify_summary_uhwr_eval_0.3.1.json.
+++
+++## 0.3.0 (19 Oct 2026) - two builds, see table above
+++
+++## 0.2.0 (16 Oct 2026)
+++
+++timing_profile_tv, timing_duration_tv; optional timestamps in score(); AIoU arguments.
+++
+++## 0.1.0
+++
+++Initial evaluator.
++diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/pyproject.toml $U/shared/uhwr_eval-0.3.1/pyproject.toml
++--- /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/pyproject.toml	2026-10-16 01:26:54.309117317 +0200
+++++ $U/shared/uhwr_eval-0.3.1/pyproject.toml	2026-10-20 22:54:02.000000000 +0200
++@@ -1,6 +1,6 @@
++ [project]
++ name = "uhwr_eval"
++-version = "0.2.0"
+++version = "0.3.1"
++ description = "Shared trajectory-recovery evaluator (uhwr baselines phase); wraps Nagamatsu metrics.py unchanged"
++ requires-python = ">=3.10"
++ dependencies = ["numpy", "scipy", "opencv-python", "tslearn", "numba", "pandas", "lpips", "torch", "torchvision"]
++diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/README.md $U/shared/uhwr_eval-0.3.1/README.md
++--- /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/README.md	2026-10-16 01:26:54.315098762 +0200
+++++ $U/shared/uhwr_eval-0.3.1/README.md	2026-10-20 22:54:02.000000000 +0200
++@@ -1,4 +1,4 @@
++-# uhwr_eval 0.2.0
+++# uhwr_eval 0.3.1
++ 
++ Shared evaluator for offline->online handwriting trajectory recovery (uhwr baselines phase).
++ 
++@@ -37,3 +37,33 @@
++ * Every 0.1.0 metric and default is unchanged; `_nagamatsu_metrics.py` is byte-identical.
++ * `tests_timing.py`: checks identity = 0, path-preserving time warp > 0, stroke-order swap = 0,
++   direction reversal with times reversed = 0.
+++
+++## Changes in 0.3.0 (19 Oct 2026; plan item DOT2, mark direction metric)
+++
+++* New `uhwr_eval/marks.py`: `mark_order_metrics(gt, pred, canvas, gt_is_mark, gt_group=None)` returns
+++  body/mark-split direction accuracy (chord >= 2 px and >= 4 px), body/mark recall, body/mark Kendall
+++  tau, a mark-before-body order flag, `mark_slot_exact` / `mark_slot_body_exact` (`gt_mark_before_body_flag`, `mark_before_body_recall`,
+++  `mark_after_body_kept`) and `mark_slot_exact`, each with an `n_` count.  Registered in `MARK_METRICS`.
+++* Stroke matching is `metrics.match_strokes`, unchanged (the matcher behind `kendall_tau` / `direction_acc`).
+++* `score()` and every 0.1.0 / 0.2.0 metric and default are unchanged; `metrics.py`, `strokes.py`,
+++  `render.py`, `timing.py` and `_nagamatsu_metrics.py` are byte-identical to 0.2.0.
+++* `tests_marks.py`: toy checks (identity, reversed marks, marks moved to the end).
+++
+++## Changes in 0.3.0 (19 Oct 2026; plan item E1-v2, pen-up and timing redesign; separate 0.3.0 build)
+++
+++* New `uhwr_eval/v2metrics.py`: `penup_f1_v2` (orientation/order-invariant pen-up F1 on unordered stroke
+++  end-point pairs, Hungarian, TP if cost <= 3 px) and `timing_profile_tv_v2` (as `timing_profile_tv`, predicted
+++  segment midpoints binned by projected arc position on the matched GT stroke).  Both registered in `METRICS`
+++  and returned by `score()` (`timing_profile_tv_v2` only when timestamps are given).
+++* `metrics.py` edits: two `METRICS` entries, two calls in `score()`; every 0.2.0 metric value is unchanged.
+++
+++## Changes in 0.3.1 (20 Oct 2026; merge of the two 0.3.0 builds)
+++
+++* Two different trees were labelled 0.3.0 (E1-v2: tarball sha256
+++  a9d0a1e130f11addadc5321e52f5e17989e1eb54d950314a3e344873cce0ed02; DOT2: tarball sha256
+++  143627cc883bce7646a1d733b08e3402b6bfc25e22e43643f5c7e474c513f6a3).  0.3.1 contains both sets of additions.
+++* `metrics.py` and `v2metrics.py` are byte-identical to the E1-v2 build; `marks.py`, `tests_marks.py` and every
+++  other file except `__init__.py`, `README.md`, `pyproject.toml` are byte-identical to the DOT2 build.
+++* `__init__.py` = 0.2.0 + both 0.3.0 docstring entries + the `marks` import + version 0.3.1.
+++* New `metric_registry_0.3.1.csv` (generated from `METRICS` and `MARK_METRICS`); `metric_registry.csv` is kept
+++  byte-identical to 0.2.0.  See CHANGELOG.md for the verification record.
++diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/tests_marks.py $U/shared/uhwr_eval-0.3.1/tests_marks.py
++--- /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/tests_marks.py	1970-01-01 01:00:00.000000000 +0100
+++++ $U/shared/uhwr_eval-0.3.1/tests_marks.py	2026-10-19 18:35:40.000000000 +0200
++@@ -0,0 +1,26 @@
+++"""Toy checks for uhwr_eval 0.3.0 mark_order_metrics.  python tests_marks.py"""
+++import numpy as np
+++from uhwr_eval import mark_order_metrics, score
+++
+++def line(x0, x1, y):
+++    return np.c_[np.linspace(x0, x1, 20), np.full(20, y)]
+++
+++body1 = line(60, 30, 40); dot1 = line(48, 44, 20); body2 = line(28, 5, 40); dot2 = line(18, 14, 52)
+++gt = [body1, dot1, body2, dot2]; isM = [False, True, False, True]; grp = [0, 0, 1, 1]
+++c = (64, 64)
+++r = mark_order_metrics(gt, gt, c, isM, grp)
+++assert r['mark_direction_acc'] == 1 and r['body_direction_acc'] == 1 and r['mark_slot_exact'] == 1 and r['mark_slot_body_exact'] == 1 and r['mark_recall'] == 1, r
+++rev = [body1, dot1[::-1], body2, dot2[::-1]]
+++r = mark_order_metrics(gt, rev, c, isM, grp)
+++assert r['mark_direction_acc'] == 0 and r['body_direction_acc'] == 1, r
+++late = [body1, body2, dot1, dot2]
+++r = mark_order_metrics(gt, late, c, isM, grp)
+++assert r['mark_slot_exact'] == 0.0 and r['mark_slot_body_exact'] == 0.5 and r['mark_after_body_kept'] == 1, r
+++early = [dot1, body1, body2, dot2]
+++r = mark_order_metrics(gt, early, c, isM, grp)
+++assert r['gt_mark_before_body_flag'] == 0 and r['mark_after_body_kept'] == 0.5, r
+++r2 = mark_order_metrics(early, gt, c, [True, False, False, True], [0, 0, 1, 1])
+++assert r2['gt_mark_before_body_flag'] == 1 and r2['mark_before_body_recall'] == 0, r2
+++s = score(gt, late, c, with_lpips=False)
+++assert np.isfinite(s['kendall_tau'])
+++print('tests_marks ok')
++diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/uhwr_eval/__init__.py $U/shared/uhwr_eval-0.3.1/uhwr_eval/__init__.py
++--- /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/uhwr_eval/__init__.py	2026-10-16 01:26:54.298605442 +0200
+++++ $U/shared/uhwr_eval-0.3.1/uhwr_eval/__init__.py	2026-10-20 22:54:02.000000000 +0200
++@@ -1,13 +1,24 @@
++ """uhwr_eval: shared trajectory-recovery evaluator for the uhwr baselines phase.
++ 
+++0.3.1 (20 Oct 2026): merge of the two 0.3.0 builds (E1-v2 tarball sha256 a9d0a1e1..., DOT2 tarball
+++sha256 143627cc...).  Contains both penup_f1_v2 / timing_profile_tv_v2 (v2metrics.py, in score()) and
+++marks.py (mark_order_metrics, separate call).  No metric code differs from either parent; see CHANGELOG.md.
+++
+++0.3.0 (19 Oct 2026, DOT2): adds marks.py (mark_order_metrics: body/mark-split direction accuracy,
+++mark recall, mark-before-body order flag, mark slot).  score() and every 0.2.0 metric are unchanged.
+++
++ 0.2.0 (16 Oct 2026): adds timing_profile_tv / timing_duration_tv (timing.py), optional
++ per-point timestamps in score(), and AIoU GT-thickness / dilation-range arguments.
++-DTW/LDTW/AIoU defaults and every 0.1.0 metric are unchanged."""
+++DTW/LDTW/AIoU defaults and every 0.1.0 metric are unchanged.
+++
+++0.3.0 (19 Oct 2026, E1-v2): adds penup_f1_v2 and timing_profile_tv_v2 (v2metrics.py). Every 0.2.0 metric is
+++unchanged; the two new keys are added to score() output."""
++ from .strokes import (clean_ink, to_nagamatsu, from_normalized, from_nan_separated, from_pen_flags,
++                       resample_ink_step, resample_ink_fixed_count, fit_transform_unit,
++                       fit_transform_line, apply_transform)
++ from .render import render_mask, render_image
++ from .metrics import score, METRICS, PROTOCOLS, metric_table, NAGAMATSU_SHA256, NAGAMATSU_COMMIT
++ 
++-__version__ = "0.2.0"
+++__version__ = "0.3.1"
++ from .timing import timing_metrics
+++from .marks import mark_order_metrics, MARK_METRICS
++diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/uhwr_eval/marks.py $U/shared/uhwr_eval-0.3.1/uhwr_eval/marks.py
++--- /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/uhwr_eval/marks.py	1970-01-01 01:00:00.000000000 +0100
+++++ $U/shared/uhwr_eval-0.3.1/uhwr_eval/marks.py	2026-10-19 18:35:40.000000000 +0200
++@@ -0,0 +1,149 @@
+++"""uhwr_eval 0.3.0: body/mark-split order metrics (plan item DOT2, 19 Oct 2026).
+++
+++New in 0.3.0; nothing in score() or any 0.1.0/0.2.0 metric changes.  Use
+++``mark_order_metrics(gt, pred, canvas, gt_is_mark, gt_group=None)`` next to ``score``.
+++
+++Stroke matching is exactly the matcher of ``metrics.order_metrics`` (``match_strokes``: Hungarian on
+++stroke-mask IoU, masks 5 px wide, accept IoU >= 0.5), run on the cleaned inks (``clean_ink``), so the
+++matched pairs are the pairs behind ``kendall_tau`` and ``direction_acc`` of ``score(..., 'native')``.
+++
+++Metrics (all NaN where undefined; every metric has an ``n_`` count of the strokes it averages over):
+++  body_direction_acc / mark_direction_acc
+++      ``direction_acc`` restricted to matched GT body / GT mark strokes (GT start-end chord >= 2 px:
+++      prediction's start nearer the GT start than the GT end).  ``*_ge4`` use a 4 px chord threshold.
+++  mark_recall            matched GT marks / GT marks (``n_gt_marks``)
+++  body_recall            matched GT bodies / GT bodies
+++  mark_kendall_tau       Kendall tau-b between GT and predicted indices over matched marks (>= 2)
+++  body_kendall_tau       the same over matched bodies
+++  mark_before_body_recall
+++      over GT marks written before the first body stroke of their own group (``gt_group``; the whole
+++      ink is one group when None) whose own first body is also matched: share whose predicted index is
+++      also before the predicted index of that body.  ``n_gt_mark_before_body`` = number of such GT marks
+++      (all, matched or not); ``gt_mark_before_body_flag`` = 1 if the ink has at least one.
+++  mark_after_body_kept
+++      the same for GT marks written after their group's first body: share whose predicted index is also
+++      after it (so a method that moves marks early is visible).
+++  mark_slot_body_exact
+++      over matched GT marks whose last GT body stroke written before them is matched (or there is none): share
+++      whose last predicted stroke matched to a GT body, before the mark's prediction, is that body's match
+++      (-1 = none).  This is the PF2 slot (predecessor body); unmatched predicted strokes are ignored.
+++  mark_slot_exact
+++      over matched GT marks whose GT predecessor stroke (the stroke written just before the mark, any
+++      kind; -1 = first stroke) is matched or is -1: share whose matched prediction has the matched
+++      counterpart of that predecessor as its predicted predecessor (pred index - 1).
+++"""
+++from __future__ import annotations
+++
+++from typing import Dict, Optional, Sequence
+++
+++import numpy as np
+++from scipy.stats import kendalltau
+++
+++from .metrics import match_strokes
+++from .strokes import clean_ink
+++
+++MARK_METRICS = {
+++    "body_direction_acc": ("\u2191", "proposed", "direction_acc over matched GT body strokes (chord >= 2 px)"),
+++    "mark_direction_acc": ("\u2191", "proposed", "direction_acc over matched GT mark strokes (chord >= 2 px)"),
+++    "body_direction_acc_ge4": ("\u2191", "proposed", "as body_direction_acc, chord >= 4 px"),
+++    "mark_direction_acc_ge4": ("\u2191", "proposed", "as mark_direction_acc, chord >= 4 px"),
+++    "mark_recall": ("\u2191", "proposed", "matched GT marks / GT marks (same matcher as kendall_tau)"),
+++    "body_recall": ("\u2191", "proposed", "matched GT bodies / GT bodies"),
+++    "mark_kendall_tau": ("\u2191", "proposed", "Kendall tau-b over matched GT marks (>= 2)"),
+++    "body_kendall_tau": ("\u2191", "proposed", "Kendall tau-b over matched GT bodies (>= 2)"),
+++    "mark_before_body_recall": ("\u2191", "proposed", "GT marks written before own group's first body: share also predicted before it"),
+++    "mark_after_body_kept": ("\u2191", "proposed", "GT marks written after own group's first body: share also predicted after it"),
+++    "mark_slot_exact": ("\u2191", "proposed", "matched GT marks whose predicted predecessor stroke (any kind) is the matched GT predecessor"),
+++    "mark_slot_body_exact": ("\u2191", "proposed", "matched GT marks whose last predicted BODY before it is the matched last GT body before it"),
+++}
+++
+++
+++def _clean_with_flags(ink, flags, groups):
+++    """clean_ink drops empty / non-finite strokes; keep flags aligned with the kept strokes."""
+++    keep_ink, keep_f, keep_g = [], [], []
+++    for s, f, g in zip(ink, flags, groups):
+++        c = clean_ink([s])
+++        if c:
+++            keep_ink.append(c[0]); keep_f.append(bool(f)); keep_g.append(g)
+++    return keep_ink, keep_f, keep_g
+++
+++
+++def mark_order_metrics(gt: Sequence[np.ndarray], pred: Sequence[np.ndarray], canvas, gt_is_mark: Sequence[bool],
+++                       gt_group: Optional[Sequence] = None, iou_min: float = 0.5, thickness: int = 5) -> Dict[str, float]:
+++    if gt_group is None:
+++        gt_group = [0] * len(gt)
+++    assert len(gt_is_mark) == len(gt) == len(gt_group)
+++    gt, isM, grp = _clean_with_flags(gt, gt_is_mark, gt_group)
+++    pr = clean_ink(pred)
+++    nan = float("nan")
+++    out = {k: nan for k in MARK_METRICS}
+++    nM = int(sum(isM)); nB = len(gt) - nM
+++    out.update(n_gt_marks=float(nM), n_gt_bodies=float(nB))
+++    m = match_strokes(gt, pr, canvas, thickness, iou_min) if (gt and pr) else []
+++    g2p = {i: j for i, j, _ in m}
+++    out["mark_recall"] = sum(1 for i in g2p if isM[i]) / nM if nM else nan
+++    out["body_recall"] = sum(1 for i in g2p if not isM[i]) / nB if nB else nan
+++    for kind, sel in (("body", False), ("mark", True)):
+++        for thr, suf in ((2.0, ""), (4.0, "_ge4")):
+++            ok = n = 0
+++            for i, j in g2p.items():
+++                if isM[i] != sel:
+++                    continue
+++                g, p = gt[i], pr[j]
+++                if np.linalg.norm(g[-1] - g[0]) >= thr:
+++                    n += 1; ok += int(np.linalg.norm(p[0] - g[0]) < np.linalg.norm(p[0] - g[-1]))
+++            out[f"{kind}_direction_acc{suf}"] = ok / n if n else nan
+++            out[f"n_{kind}_dir_eligible{suf}"] = float(n)
+++        ii = sorted(i for i in g2p if isM[i] == sel)
+++        if len(ii) >= 2:
+++            t = kendalltau(ii, [g2p[i] for i in ii]).statistic
+++            out[f"{kind}_kendall_tau"] = float(t) if np.isfinite(t) else nan
+++        out[f"n_{kind}_tau_matched"] = float(len(ii))
+++    # mark-before-body flag (per group)
+++    first_body = {}
+++    for i in range(len(gt)):
+++        if not isM[i] and grp[i] not in first_body:
+++            first_body[grp[i]] = i
+++    before, after = [], []
+++    n_before_all = 0
+++    for i in range(len(gt)):
+++        if not isM[i] or grp[i] not in first_body:
+++            continue
+++        b = first_body[grp[i]]
+++        if i < b:
+++            n_before_all += 1
+++        if i in g2p and b in g2p:
+++            (before if i < b else after).append(int((g2p[i] < g2p[b]) == (i < b)))
+++    out["mark_before_body_recall"] = float(np.mean(before)) if before else nan
+++    out["mark_after_body_kept"] = float(np.mean(after)) if after else nan
+++    out["n_gt_mark_before_body"] = float(n_before_all)
+++    out["n_mark_before_body_scored"] = float(len(before))
+++    out["n_mark_after_body_scored"] = float(len(after))
+++    out["gt_mark_before_body_flag"] = float(n_before_all > 0)
+++    # exact slot
+++    ex = []
+++    for i, j in g2p.items():
+++        if not isM[i]:
+++            continue
+++        pi = i - 1
+++        if pi >= 0 and pi not in g2p:
+++            continue
+++        want = -1 if pi < 0 else g2p[pi]
+++        ex.append(int(j - 1 == want))
+++    out["mark_slot_exact"] = float(np.mean(ex)) if ex else nan
+++    out["n_mark_slot_scored"] = float(len(ex))
+++    p2g = {j: i for i, j in g2p.items()}
+++    exb = []
+++    for i, j in g2p.items():
+++        if not isM[i]:
+++            continue
+++        gb = [q for q in range(i) if not isM[q]]
+++        want_g = gb[-1] if gb else -1
+++        if want_g >= 0 and want_g not in g2p:
+++            continue
+++        pb = [q for q in range(j) if q in p2g and not isM[p2g[q]]]
+++        got_g = p2g[pb[-1]] if pb else -1
+++        exb.append(int(got_g == want_g))
+++    out["mark_slot_body_exact"] = float(np.mean(exb)) if exb else nan
+++    out["n_mark_slot_body_scored"] = float(len(exb))
+++    return out
++diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/uhwr_eval/metrics.py $U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py
++--- /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/uhwr_eval/metrics.py	2026-10-16 01:26:54.292528390 +0200
+++++ $U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py	2026-10-20 22:54:02.000000000 +0200
++@@ -54,6 +54,8 @@
++     "direction_acc": ("\u2191", "proposed", "over matched strokes whose GT start-end distance >= 2 px: fraction where predicted start is nearer GT start than GT end"),
++     "timing_profile_tv": ("\u2193", "proposed", "uhwr_eval 0.2.0: per matched stroke (pred oriented to GT), total-variation distance between dwell-time distributions over 16 normalised arc-length bins, weighted by GT stroke duration; pen-up time ignored; NaN without timestamps"),
++     "timing_duration_tv": ("\u2193", "proposed", "uhwr_eval 0.2.0: total-variation distance between GT and predicted shares of pen-down time over matched strokes (>= 2 matches); NaN without timestamps"),
+++    "penup_f1_v2": ("\u2191", "proposed", "uhwr_eval 0.3.0: orientation/order-invariant pen-up F1 on unordered stroke end-point pairs; cost = min over orientation of max end-point distance; Hungarian; TP if <= 3 px"),
+++    "timing_profile_tv_v2": ("\u2193", "proposed", "uhwr_eval 0.3.0: timing_profile_tv with predicted segment midpoints binned by projected arc position on the matched GT stroke (not the prediction's own arc length); no orientation step"),
++     "loop_orient_acc": ("\u2191", "proposed", "over matched strokes whose GT is curved/looped (|signed area| >= 4 px^2 and 4*pi*|A|/L^2 >= 0.1): fraction with sign(signed area) of prediction == GT (CW vs CCW)"),
++ }
++ 
++@@ -245,7 +247,7 @@
++         raise ValueError("empty ground truth")
++     if not pr:
++         res.update(stroke_count_err=float(-len(gt)), stroke_count_abs_err=float(len(gt)),
++-                   stroke_match_recall=0.0, strict_order_acc=0.0, penup_f1=0.0, aiou=0.0)
+++                   stroke_match_recall=0.0, strict_order_acc=0.0, penup_f1=0.0, penup_f1_v2=0.0, aiou=0.0)
++         return res
++     G = to_nagamatsu(gt, canvas)
++     P = to_nagamatsu(pr, canvas)
++@@ -262,11 +264,16 @@
++     ra, rb = resample_ink_fixed_count(gt, rmse_K), resample_ink_fixed_count(pr, rmse_K)
++     res["rmse"] = float(np.sqrt(((ra - rb) ** 2).sum(axis=1).mean()))
++     res["penup_f1"] = penup_f1(gt, pr)
+++    from .v2metrics import penup_endpoint_f1
+++    res["penup_f1_v2"] = penup_endpoint_f1(gt, pr)
++     res.update(order_metrics(gt, pr, canvas))
++     if timing_in is not None:
++         from .timing import timing_metrics
++         g0, p0, gt_t, pr_t = timing_in
++-        res.update(timing_metrics(g0, p0, gt_t, pr_t, match_strokes(g0, p0, canvas)))
+++        _m = match_strokes(g0, p0, canvas)
+++        res.update(timing_metrics(g0, p0, gt_t, pr_t, _m))
+++        from .v2metrics import timing_profile_tv_v2
+++        res["timing_profile_tv_v2"] = timing_profile_tv_v2(g0, p0, gt_t, pr_t, _m)
++     if with_lpips:
++         res["lpips"] = lpips_distance(gt, pr, canvas)
++     return res
++diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/uhwr_eval/v2metrics.py $U/shared/uhwr_eval-0.3.1/uhwr_eval/v2metrics.py
++--- /tmp/EV031_24516363/ev031___eammki/ref/uhwr_eval-0.2.0/uhwr_eval/v2metrics.py	1970-01-01 01:00:00.000000000 +0100
+++++ $U/shared/uhwr_eval-0.3.1/uhwr_eval/v2metrics.py	2026-10-20 22:54:02.000000000 +0200
++@@ -0,0 +1,106 @@
+++"""uhwr_eval 0.3.0 additions (E1-v2 redesign of the pen-up and timing components; experiments_to_run 2026-10-18 A/E1-v2).
+++
+++Both metrics are NEW names; every 0.2.0 metric (incl. penup_f1, timing_profile_tv) is unchanged.
+++
+++penup_f1_v2  (proposed, higher is better, [0, 1])
+++    Orientation- and order-invariant pen-up F1.  Each stroke is represented by its UNORDERED end-point pair
+++    {first point, last point} (= its pen-down and pen-up locations).  Cost between GT stroke i and predicted stroke j =
+++    min over the two orientations of max(|g_a - p_a|, |g_b - p_b|).  One-to-one Hungarian assignment; a pair is a true
+++    positive when its cost <= tau (3 px).  F1 = 2 TP / (n_gt + n_pred).
+++    Motivation: 0.2.0 penup_f1 matches only the LAST point of each stroke, so reversing a stroke moves its 'pen-up' to
+++    the other end and is scored as a pen-up error (E1 v1: penup_f1 reacted more to direction than to merge/split).
+++    v2 is invariant to stroke direction and order by construction, and still drops for merges (two GT pairs -> one
+++    unmatched pair) and splits (one GT pair -> two pairs with one wrong end each).
+++timing_profile_tv_v2  (proposed, lower is better, [0, 1])
+++    As timing_profile_tv (16 arc-length bins, TV distance between dwell-time distributions per matched stroke pair,
+++    weighted by GT stroke duration, pen-up time ignored, same stroke matching), but the PREDICTED stroke is binned by
+++    the PROJECTED arc position of each predicted segment midpoint on the matched GT stroke polyline (nearest point on
+++    the GT polyline, arc length normalised by the GT stroke length), instead of by the prediction's own normalised arc
+++    length.  The GT stroke is binned by its own arc length as before.  No orientation step is needed (projection is
+++    orientation-free; per-segment time is |dt|).  Motivation: with own-arc binning, shape jitter lengthens the predicted
+++    path non-uniformly and shifts dwell mass between bins (timing leaked shape error in E1 v1).
+++"""
+++from __future__ import annotations
+++
+++from typing import Dict, Optional, Sequence
+++
+++import numpy as np
+++from scipy.optimize import linear_sum_assignment
+++
+++K_BINS = 16
+++
+++
+++def penup_endpoint_f1(gt, pr, tau: float = 3.0) -> float:
+++    if not len(gt) or not len(pr):
+++        return 0.0
+++    G0 = np.array([np.asarray(s, float)[0] for s in gt]); G1 = np.array([np.asarray(s, float)[-1] for s in gt])
+++    P0 = np.array([np.asarray(s, float)[0] for s in pr]); P1 = np.array([np.asarray(s, float)[-1] for s in pr])
+++    d = lambda A, B: np.linalg.norm(A[:, None, :] - B[None, :, :], axis=2)
+++    C = np.minimum(np.maximum(d(G0, P0), d(G1, P1)), np.maximum(d(G0, P1), d(G1, P0)))
+++    r, c = linear_sum_assignment(C)
+++    tp = int((C[r, c] <= tau).sum())
+++    return 2.0 * tp / (len(G0) + len(P0))
+++
+++
+++def _project_arc(P: np.ndarray, G: np.ndarray, chunk: int = 4096) -> Optional[np.ndarray]:
+++    """Normalised arc position in [0, 1] of the nearest point on polyline G for every point of P."""
+++    seg = G[1:] - G[:-1]
+++    L = np.linalg.norm(seg, axis=1)
+++    cum = np.concatenate([[0.0], np.cumsum(L)])
+++    tot = cum[-1]
+++    if len(G) < 2 or tot <= 1e-9:
+++        return None
+++    d2 = (seg ** 2).sum(1)
+++    ok = d2 > 1e-18
+++    d2s = np.where(ok, d2, 1.0)
+++    out = np.empty(len(P))
+++    for a in range(0, len(P), chunk):
+++        Q = P[a:a + chunk]
+++        rel = Q[:, None, :] - G[None, :-1, :]
+++        t = np.clip((rel * seg[None]).sum(2) / d2s, 0.0, 1.0)
+++        t = np.where(ok[None], t, 0.0)
+++        proj = G[None, :-1, :] + t[..., None] * seg[None]
+++        dist = ((Q[:, None, :] - proj) ** 2).sum(2)
+++        k = dist.argmin(1)
+++        out[a:a + chunk] = (cum[k] + t[np.arange(len(Q)), k] * L[k]) / tot
+++    return out
+++
+++
+++def _gt_hist(g, tg, K=K_BINS):
+++    seg = np.linalg.norm(np.diff(g, axis=0), axis=1); L = seg.sum(); dt = np.abs(np.diff(tg))
+++    if L <= 1e-9 or dt.sum() <= 0:
+++        return None
+++    mid = (np.cumsum(seg) - 0.5 * seg) / L
+++    h = np.bincount(np.clip((mid * K).astype(int), 0, K - 1), weights=dt, minlength=K)
+++    return h / h.sum()
+++
+++
+++def _pred_hist_projected(p, tp, g, K=K_BINS):
+++    if len(p) < 2:
+++        return None
+++    dt = np.abs(np.diff(tp))
+++    if dt.sum() <= 0:
+++        return None
+++    s = _project_arc(0.5 * (p[1:] + p[:-1]), g)
+++    if s is None:
+++        return None
+++    h = np.bincount(np.clip((s * K).astype(int), 0, K - 1), weights=dt, minlength=K)
+++    return h / h.sum()
+++
+++
+++def timing_profile_tv_v2(gt, pr, gt_t, pr_t, matches) -> float:
+++    if gt_t is None or pr_t is None or not matches:
+++        return float("nan")
+++    tv, w = [], []
+++    for i, j, _ in matches:
+++        g, p = np.asarray(gt[i], float), np.asarray(pr[j], float)
+++        tg, tp = np.asarray(gt_t[i], float), np.asarray(pr_t[j], float)
+++        if len(tg) != len(g) or len(tp) != len(p):
+++            raise ValueError("timestamps must align with stroke points")
+++        hg, hp = _gt_hist(g, tg), _pred_hist_projected(p, tp, g)
+++        if hg is None or hp is None:
+++            continue
+++        tv.append(0.5 * float(np.abs(hg - hp).sum())); w.append(abs(tg[-1] - tg[0]))
+++    if tv and sum(w) > 0:
+++        return float(np.average(tv, weights=w))
+++    return float("nan")
+diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/uhwr_eval/__init__.py $U/shared/uhwr_eval-0.3.1/uhwr_eval/__init__.py
+--- /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/uhwr_eval/__init__.py	2026-10-19 18:24:08.000000000 +0200
++++ $U/shared/uhwr_eval-0.3.1/uhwr_eval/__init__.py	2026-10-20 22:54:02.000000000 +0200
+@@ -1,17 +1,24 @@
+ """uhwr_eval: shared trajectory-recovery evaluator for the uhwr baselines phase.
+ 
++0.3.1 (20 Oct 2026): merge of the two 0.3.0 builds (E1-v2 tarball sha256 a9d0a1e1..., DOT2 tarball
++sha256 143627cc...).  Contains both penup_f1_v2 / timing_profile_tv_v2 (v2metrics.py, in score()) and
++marks.py (mark_order_metrics, separate call).  No metric code differs from either parent; see CHANGELOG.md.
++
+ 0.3.0 (19 Oct 2026, DOT2): adds marks.py (mark_order_metrics: body/mark-split direction accuracy,
+ mark recall, mark-before-body order flag, mark slot).  score() and every 0.2.0 metric are unchanged.
+ 
+ 0.2.0 (16 Oct 2026): adds timing_profile_tv / timing_duration_tv (timing.py), optional
+ per-point timestamps in score(), and AIoU GT-thickness / dilation-range arguments.
+-DTW/LDTW/AIoU defaults and every 0.1.0 metric are unchanged."""
++DTW/LDTW/AIoU defaults and every 0.1.0 metric are unchanged.
++
++0.3.0 (19 Oct 2026, E1-v2): adds penup_f1_v2 and timing_profile_tv_v2 (v2metrics.py). Every 0.2.0 metric is
++unchanged; the two new keys are added to score() output."""
+ from .strokes import (clean_ink, to_nagamatsu, from_normalized, from_nan_separated, from_pen_flags,
+                       resample_ink_step, resample_ink_fixed_count, fit_transform_unit,
+                       fit_transform_line, apply_transform)
+ from .render import render_mask, render_image
+ from .metrics import score, METRICS, PROTOCOLS, metric_table, NAGAMATSU_SHA256, NAGAMATSU_COMMIT
+ 
+-__version__ = "0.3.0"
++__version__ = "0.3.1"
+ from .timing import timing_metrics
+ from .marks import mark_order_metrics, MARK_METRICS
+diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/uhwr_eval/metrics.py $U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py
+--- /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/uhwr_eval/metrics.py	2026-10-19 18:24:08.000000000 +0200
++++ $U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py	2026-10-20 22:54:02.000000000 +0200
+@@ -54,6 +54,8 @@
+     "direction_acc": ("\u2191", "proposed", "over matched strokes whose GT start-end distance >= 2 px: fraction where predicted start is nearer GT start than GT end"),
+     "timing_profile_tv": ("\u2193", "proposed", "uhwr_eval 0.2.0: per matched stroke (pred oriented to GT), total-variation distance between dwell-time distributions over 16 normalised arc-length bins, weighted by GT stroke duration; pen-up time ignored; NaN without timestamps"),
+     "timing_duration_tv": ("\u2193", "proposed", "uhwr_eval 0.2.0: total-variation distance between GT and predicted shares of pen-down time over matched strokes (>= 2 matches); NaN without timestamps"),
++    "penup_f1_v2": ("\u2191", "proposed", "uhwr_eval 0.3.0: orientation/order-invariant pen-up F1 on unordered stroke end-point pairs; cost = min over orientation of max end-point distance; Hungarian; TP if <= 3 px"),
++    "timing_profile_tv_v2": ("\u2193", "proposed", "uhwr_eval 0.3.0: timing_profile_tv with predicted segment midpoints binned by projected arc position on the matched GT stroke (not the prediction's own arc length); no orientation step"),
+     "loop_orient_acc": ("\u2191", "proposed", "over matched strokes whose GT is curved/looped (|signed area| >= 4 px^2 and 4*pi*|A|/L^2 >= 0.1): fraction with sign(signed area) of prediction == GT (CW vs CCW)"),
+ }
+ 
+@@ -245,7 +247,7 @@
+         raise ValueError("empty ground truth")
+     if not pr:
+         res.update(stroke_count_err=float(-len(gt)), stroke_count_abs_err=float(len(gt)),
+-                   stroke_match_recall=0.0, strict_order_acc=0.0, penup_f1=0.0, aiou=0.0)
++                   stroke_match_recall=0.0, strict_order_acc=0.0, penup_f1=0.0, penup_f1_v2=0.0, aiou=0.0)
+         return res
+     G = to_nagamatsu(gt, canvas)
+     P = to_nagamatsu(pr, canvas)
+@@ -262,11 +264,16 @@
+     ra, rb = resample_ink_fixed_count(gt, rmse_K), resample_ink_fixed_count(pr, rmse_K)
+     res["rmse"] = float(np.sqrt(((ra - rb) ** 2).sum(axis=1).mean()))
+     res["penup_f1"] = penup_f1(gt, pr)
++    from .v2metrics import penup_endpoint_f1
++    res["penup_f1_v2"] = penup_endpoint_f1(gt, pr)
+     res.update(order_metrics(gt, pr, canvas))
+     if timing_in is not None:
+         from .timing import timing_metrics
+         g0, p0, gt_t, pr_t = timing_in
+-        res.update(timing_metrics(g0, p0, gt_t, pr_t, match_strokes(g0, p0, canvas)))
++        _m = match_strokes(g0, p0, canvas)
++        res.update(timing_metrics(g0, p0, gt_t, pr_t, _m))
++        from .v2metrics import timing_profile_tv_v2
++        res["timing_profile_tv_v2"] = timing_profile_tv_v2(g0, p0, gt_t, pr_t, _m)
+     if with_lpips:
+         res["lpips"] = lpips_distance(gt, pr, canvas)
+     return res
+diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/uhwr_eval/v2metrics.py $U/shared/uhwr_eval-0.3.1/uhwr_eval/v2metrics.py
+--- /tmp/EV031_24516363/ev031___eammki/dot2/uhwr_eval-0.3.0/uhwr_eval/v2metrics.py	1970-01-01 01:00:00.000000000 +0100
++++ $U/shared/uhwr_eval-0.3.1/uhwr_eval/v2metrics.py	2026-10-20 22:54:02.000000000 +0200
+@@ -0,0 +1,106 @@
++"""uhwr_eval 0.3.0 additions (E1-v2 redesign of the pen-up and timing components; experiments_to_run 2026-10-18 A/E1-v2).
++
++Both metrics are NEW names; every 0.2.0 metric (incl. penup_f1, timing_profile_tv) is unchanged.
++
++penup_f1_v2  (proposed, higher is better, [0, 1])
++    Orientation- and order-invariant pen-up F1.  Each stroke is represented by its UNORDERED end-point pair
++    {first point, last point} (= its pen-down and pen-up locations).  Cost between GT stroke i and predicted stroke j =
++    min over the two orientations of max(|g_a - p_a|, |g_b - p_b|).  One-to-one Hungarian assignment; a pair is a true
++    positive when its cost <= tau (3 px).  F1 = 2 TP / (n_gt + n_pred).
++    Motivation: 0.2.0 penup_f1 matches only the LAST point of each stroke, so reversing a stroke moves its 'pen-up' to
++    the other end and is scored as a pen-up error (E1 v1: penup_f1 reacted more to direction than to merge/split).
++    v2 is invariant to stroke direction and order by construction, and still drops for merges (two GT pairs -> one
++    unmatched pair) and splits (one GT pair -> two pairs with one wrong end each).
++timing_profile_tv_v2  (proposed, lower is better, [0, 1])
++    As timing_profile_tv (16 arc-length bins, TV distance between dwell-time distributions per matched stroke pair,
++    weighted by GT stroke duration, pen-up time ignored, same stroke matching), but the PREDICTED stroke is binned by
++    the PROJECTED arc position of each predicted segment midpoint on the matched GT stroke polyline (nearest point on
++    the GT polyline, arc length normalised by the GT stroke length), instead of by the prediction's own normalised arc
++    length.  The GT stroke is binned by its own arc length as before.  No orientation step is needed (projection is
++    orientation-free; per-segment time is |dt|).  Motivation: with own-arc binning, shape jitter lengthens the predicted
++    path non-uniformly and shifts dwell mass between bins (timing leaked shape error in E1 v1).
++"""
++from __future__ import annotations
++
++from typing import Dict, Optional, Sequence
++
++import numpy as np
++from scipy.optimize import linear_sum_assignment
++
++K_BINS = 16
++
++
++def penup_endpoint_f1(gt, pr, tau: float = 3.0) -> float:
++    if not len(gt) or not len(pr):
++        return 0.0
++    G0 = np.array([np.asarray(s, float)[0] for s in gt]); G1 = np.array([np.asarray(s, float)[-1] for s in gt])
++    P0 = np.array([np.asarray(s, float)[0] for s in pr]); P1 = np.array([np.asarray(s, float)[-1] for s in pr])
++    d = lambda A, B: np.linalg.norm(A[:, None, :] - B[None, :, :], axis=2)
++    C = np.minimum(np.maximum(d(G0, P0), d(G1, P1)), np.maximum(d(G0, P1), d(G1, P0)))
++    r, c = linear_sum_assignment(C)
++    tp = int((C[r, c] <= tau).sum())
++    return 2.0 * tp / (len(G0) + len(P0))
++
++
++def _project_arc(P: np.ndarray, G: np.ndarray, chunk: int = 4096) -> Optional[np.ndarray]:
++    """Normalised arc position in [0, 1] of the nearest point on polyline G for every point of P."""
++    seg = G[1:] - G[:-1]
++    L = np.linalg.norm(seg, axis=1)
++    cum = np.concatenate([[0.0], np.cumsum(L)])
++    tot = cum[-1]
++    if len(G) < 2 or tot <= 1e-9:
++        return None
++    d2 = (seg ** 2).sum(1)
++    ok = d2 > 1e-18
++    d2s = np.where(ok, d2, 1.0)
++    out = np.empty(len(P))
++    for a in range(0, len(P), chunk):
++        Q = P[a:a + chunk]
++        rel = Q[:, None, :] - G[None, :-1, :]
++        t = np.clip((rel * seg[None]).sum(2) / d2s, 0.0, 1.0)
++        t = np.where(ok[None], t, 0.0)
++        proj = G[None, :-1, :] + t[..., None] * seg[None]
++        dist = ((Q[:, None, :] - proj) ** 2).sum(2)
++        k = dist.argmin(1)
++        out[a:a + chunk] = (cum[k] + t[np.arange(len(Q)), k] * L[k]) / tot
++    return out
++
++
++def _gt_hist(g, tg, K=K_BINS):
++    seg = np.linalg.norm(np.diff(g, axis=0), axis=1); L = seg.sum(); dt = np.abs(np.diff(tg))
++    if L <= 1e-9 or dt.sum() <= 0:
++        return None
++    mid = (np.cumsum(seg) - 0.5 * seg) / L
++    h = np.bincount(np.clip((mid * K).astype(int), 0, K - 1), weights=dt, minlength=K)
++    return h / h.sum()
++
++
++def _pred_hist_projected(p, tp, g, K=K_BINS):
++    if len(p) < 2:
++        return None
++    dt = np.abs(np.diff(tp))
++    if dt.sum() <= 0:
++        return None
++    s = _project_arc(0.5 * (p[1:] + p[:-1]), g)
++    if s is None:
++        return None
++    h = np.bincount(np.clip((s * K).astype(int), 0, K - 1), weights=dt, minlength=K)
++    return h / h.sum()
++
++
++def timing_profile_tv_v2(gt, pr, gt_t, pr_t, matches) -> float:
++    if gt_t is None or pr_t is None or not matches:
++        return float("nan")
++    tv, w = [], []
++    for i, j, _ in matches:
++        g, p = np.asarray(gt[i], float), np.asarray(pr[j], float)
++        tg, tp = np.asarray(gt_t[i], float), np.asarray(pr_t[j], float)
++        if len(tg) != len(g) or len(tp) != len(p):
++            raise ValueError("timestamps must align with stroke points")
++        hg, hp = _gt_hist(g, tg), _pred_hist_projected(p, tp, g)
++        if hg is None or hp is None:
++            continue
++        tv.append(0.5 * float(np.abs(hg - hp).sum())); w.append(abs(tg[-1] - tg[0]))
++    if tv and sum(w) > 0:
++        return float(np.average(tv, weights=w))
++    return float("nan")

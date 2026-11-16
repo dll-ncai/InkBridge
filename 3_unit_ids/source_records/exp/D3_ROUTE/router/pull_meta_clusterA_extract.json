@@ -1,0 +1,1110 @@
+{
+ "train_m5_joint": {
+  "source": "$U/data/m5_multiscript_v1/m5_joint_train.npz",
+  "source_sha256": "56649a2581bcbc3d47240cc77f39256049dc81fed993ea88ba9c165d6862694b",
+  "source_bytes": 725090434,
+  "n": 100000,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "scripts",
+   "cond_rendered",
+   "seq",
+   "seq_offsets",
+   "step"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "scripts",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     100000
+    ],
+    "<U24"
+   ],
+   "sample_ids": [
+    [
+     100000
+    ],
+    "<U24"
+   ],
+   "writer_ids": [
+    [
+     100000
+    ],
+    "int64"
+   ],
+   "scripts": [
+    [
+     100000
+    ],
+    "<U9"
+   ],
+   "cond_rendered": [
+    [
+     100000,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     100001
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     100000
+    ],
+    "float32"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/train_m5_joint_cond.npz",
+  "out_bytes": 78117548,
+  "out_sha256": "ebfd07f56267c53ef83ccef1b461f04ed4776e780e32f3eb1dd4ab9a30000190"
+ },
+ "val_casia_en": {
+  "source": "$U/data/m5_multiscript_v1/m5_val_casia_en.npz",
+  "source_sha256": "eea15ff926c70bae84483f940f4491a1f784c8f1e40c9bae76b12f5be9281c8b",
+  "source_bytes": 1778752,
+  "n": 250,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "scripts",
+   "cond_rendered",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "scripts",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     250
+    ],
+    "<U19"
+   ],
+   "sample_ids": [
+    [
+     250
+    ],
+    "<U13"
+   ],
+   "writer_ids": [
+    [
+     250
+    ],
+    "int64"
+   ],
+   "scripts": [
+    [
+     250
+    ],
+    "<U8"
+   ],
+   "cond_rendered": [
+    [
+     250,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     250
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/val_casia_en_cond.npz",
+  "out_bytes": 168271,
+  "out_sha256": "209794ab89356325b5dfb848b19522a33ee897381f8948634b84fec0765c2892"
+ },
+ "val_casia_zh": {
+  "source": "$U/data/m5_multiscript_v1/m5_val_casia_zh.npz",
+  "source_sha256": "4927393116fb065b559f26323faddc0d3f5323d839b61fad75cbc205136ca2e7",
+  "source_bytes": 2506896,
+  "n": 250,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "scripts",
+   "cond_rendered",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "scripts",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     250
+    ],
+    "<U19"
+   ],
+   "sample_ids": [
+    [
+     250
+    ],
+    "<U13"
+   ],
+   "writer_ids": [
+    [
+     250
+    ],
+    "int64"
+   ],
+   "scripts": [
+    [
+     250
+    ],
+    "<U8"
+   ],
+   "cond_rendered": [
+    [
+     250,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     250
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/val_casia_zh_cond.npz",
+  "out_bytes": 268271,
+  "out_sha256": "39a0d0b090013331fe6a33911271f4474551e3b1731288db12f903ce847bf072"
+ },
+ "val_hpl_tamil": {
+  "source": "$U/data/m5_multiscript_v1/m5_val_hpl_tamil.npz",
+  "source_sha256": "dce93506078cf17f8da84377a5bc5b5ebfc53da8e2025f079e8093683f08d686",
+  "source_bytes": 2797508,
+  "n": 250,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "scripts",
+   "cond_rendered",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "scripts",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     250
+    ],
+    "<U24"
+   ],
+   "sample_ids": [
+    [
+     250
+    ],
+    "<U17"
+   ],
+   "writer_ids": [
+    [
+     250
+    ],
+    "int64"
+   ],
+   "scripts": [
+    [
+     250
+    ],
+    "<U9"
+   ],
+   "cond_rendered": [
+    [
+     250,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     250
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/val_hpl_tamil_cond.npz",
+  "out_bytes": 230499,
+  "out_sha256": "09625fe45b84f491028200db0befb90c7ec03d435fc1d8a223d2f84f1116ce74"
+ },
+ "val_iam": {
+  "source": "$U/data/m5_multiscript_v1/m5_val_iam.npz",
+  "source_sha256": "5ecbd8b0b4b159a87a8f65eeb3d298bdf233f708debbbea8a2a9699f03c7f840",
+  "source_bytes": 1853908,
+  "n": 250,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "scripts",
+   "cond_rendered",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "scripts",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     250
+    ],
+    "<U20"
+   ],
+   "sample_ids": [
+    [
+     250
+    ],
+    "<U24"
+   ],
+   "writer_ids": [
+    [
+     250
+    ],
+    "int64"
+   ],
+   "scripts": [
+    [
+     250
+    ],
+    "<U3"
+   ],
+   "cond_rendered": [
+    [
+     250,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     250
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/val_iam_cond.npz",
+  "out_bytes": 164476,
+  "out_sha256": "03db3da193e57e8005880b15c5131d3c4e109bceef4907a90590d45fd891f5f8"
+ },
+ "val_ouhdl": {
+  "source": "$U/data/m5_multiscript_v1/m5_val_ouhdl.npz",
+  "source_sha256": "9c6b7dd93fde089fe3023f1539ac8c51d7f053e3d0f819451afb65bbbb73c707",
+  "source_bytes": 3050484,
+  "n": 250,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "scripts",
+   "cond_rendered",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "scripts",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     250
+    ],
+    "<U22"
+   ],
+   "sample_ids": [
+    [
+     250
+    ],
+    "<U9"
+   ],
+   "writer_ids": [
+    [
+     250
+    ],
+    "int64"
+   ],
+   "scripts": [
+    [
+     250
+    ],
+    "<U5"
+   ],
+   "cond_rendered": [
+    [
+     250,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     250
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     251
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/val_ouhdl_cond.npz",
+  "out_bytes": 149548,
+  "out_sha256": "8ef8a3cb7220ca486526e70b6b483177f693d573e94a1dccf0ff0d77a1689859"
+ },
+ "test_iam500": {
+  "source": "$U/data/m5_multiscript_v1/m5_test_iam500.npz",
+  "source_sha256": "0dbd1a613adadb4e5b846d5ecbdb5e7df9b0006d6a7665ee37e1020fc00637de",
+  "source_bytes": 3747112,
+  "n": 500,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "scripts",
+   "cond_rendered",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "scripts",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     500
+    ],
+    "<U20"
+   ],
+   "sample_ids": [
+    [
+     500
+    ],
+    "<U9"
+   ],
+   "writer_ids": [
+    [
+     500
+    ],
+    "int64"
+   ],
+   "scripts": [
+    [
+     500
+    ],
+    "<U3"
+   ],
+   "cond_rendered": [
+    [
+     500,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     501
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     500
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     501
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/test_iam500_cond.npz",
+  "out_bytes": 348609,
+  "out_sha256": "42271a69d01727ebf9f5fa2cdb01b785c04a42ecfbdb137400b3355ca3dc05b2"
+ },
+ "test_casia_en": {
+  "source": "$U/exp/X4a/data/x4a_casia_en.npz",
+  "source_sha256": "eb8c6a7a54fac56448b5232e2ef56726a9046198ba439129241bf3d9d9af7d6a",
+  "source_bytes": 1339654,
+  "n": 500,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "set_ids",
+   "labels",
+   "directions",
+   "cond_rendered",
+   "cond_d2",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "step",
+   "set_ids",
+   "labels"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     500
+    ],
+    "<U19"
+   ],
+   "sample_ids": [
+    [
+     500
+    ],
+    "<U13"
+   ],
+   "writer_ids": [
+    [
+     500
+    ],
+    "int64"
+   ],
+   "set_ids": [
+    [
+     500
+    ],
+    "<U8"
+   ],
+   "labels": [
+    [
+     500
+    ],
+    "<U1"
+   ],
+   "directions": [
+    [
+     500
+    ],
+    "<U3"
+   ],
+   "cond_rendered": [
+    [
+     500,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "cond_d2": [
+    [
+     500,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     501
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     500
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     501
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/test_casia_en_cond.npz",
+  "out_bytes": 332526,
+  "out_sha256": "90fe01c029ba36dabea09d77a3c51f0cc914449619ead0f873bcff8b7ee64d7b"
+ },
+ "test_casia_zh": {
+  "source": "$U/exp/X4a/data/x4a_casia_zh.npz",
+  "source_sha256": "93f4efcb99941a77fd942e19e9001316d14654ac77e3dc5b622a6da2cdbc0f72",
+  "source_bytes": 2477506,
+  "n": 500,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "set_ids",
+   "labels",
+   "directions",
+   "cond_rendered",
+   "cond_d2",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "step",
+   "set_ids",
+   "labels"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     500
+    ],
+    "<U19"
+   ],
+   "sample_ids": [
+    [
+     500
+    ],
+    "<U13"
+   ],
+   "writer_ids": [
+    [
+     500
+    ],
+    "int64"
+   ],
+   "set_ids": [
+    [
+     500
+    ],
+    "<U8"
+   ],
+   "labels": [
+    [
+     500
+    ],
+    "<U1"
+   ],
+   "directions": [
+    [
+     500
+    ],
+    "<U3"
+   ],
+   "cond_rendered": [
+    [
+     500,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "cond_d2": [
+    [
+     500,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     501
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     500
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     501
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/test_casia_zh_cond.npz",
+  "out_bytes": 542887,
+  "out_sha256": "61609f50bf343a6f2605d7f5bd7f507cf4f297a8601816ebc839df7b87e0d616"
+ },
+ "test_hpl_tamil": {
+  "source": "$U/exp/X4a/data/x4a_hpl_tamil.npz",
+  "source_sha256": "d868ba858f07de2e5d179f5a635a4007fbfc25b1fa4bdbb1149ccf073dce6938",
+  "source_bytes": 2303231,
+  "n": 500,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "set_ids",
+   "labels",
+   "directions",
+   "cond_rendered",
+   "cond_d2",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "step",
+   "set_ids",
+   "labels"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     500
+    ],
+    "<U15"
+   ],
+   "sample_ids": [
+    [
+     500
+    ],
+    "<U13"
+   ],
+   "writer_ids": [
+    [
+     500
+    ],
+    "int64"
+   ],
+   "set_ids": [
+    [
+     500
+    ],
+    "<U9"
+   ],
+   "labels": [
+    [
+     500
+    ],
+    "<U1"
+   ],
+   "directions": [
+    [
+     500
+    ],
+    "<U3"
+   ],
+   "cond_rendered": [
+    [
+     500,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "cond_d2": [
+    [
+     500,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     501
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     500
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     501
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/test_hpl_tamil_cond.npz",
+  "out_bytes": 438728,
+  "out_sha256": "63b9d37395bf0e06a5a1699436a1d08e097bfe6a2cc7e688d45efa2b6b70ff08"
+ },
+ "test_ouhdl": {
+  "source": "$U/data/ouhdl_e0_v3/e0_test.npz",
+  "source_sha256": "c09560ed07a526614b3342a2fb6b642165f6aab3fffa25876bf1bc7502b7a514",
+  "source_bytes": 65720223,
+  "n": 4406,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "cond_rendered",
+   "cond_dataset",
+   "cond_rendered_f4",
+   "cond_dataset_f4",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     4406
+    ],
+    "<U16"
+   ],
+   "sample_ids": [
+    [
+     4406
+    ],
+    "<U11"
+   ],
+   "writer_ids": [
+    [
+     4406
+    ],
+    "int64"
+   ],
+   "cond_rendered": [
+    [
+     4406,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     4407
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     4406
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     4407
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/test_ouhdl_cond.npz",
+  "out_bytes": 2635102,
+  "out_sha256": "79ac7833cd2bb7b63c346b63d94e5bd4eb477493388eff465042cc868fd5604e"
+ },
+ "german_unipen_de_test": {
+  "source": "$U/data/d2_v2/unipen_de/e0_test.npz",
+  "source_sha256": "c5f1c29e7bdf231f5d6032a29362d0ab3c912450af3294c7f8e6a51dc653157f",
+  "source_bytes": 2464335,
+  "n": 827,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "cond_rendered",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     827
+    ],
+    "<U36"
+   ],
+   "sample_ids": [
+    [
+     827
+    ],
+    "<U31"
+   ],
+   "writer_ids": [
+    [
+     827
+    ],
+    "int64"
+   ],
+   "cond_rendered": [
+    [
+     827,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     828
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     827
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     828
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/german_unipen_de_test_cond.npz",
+  "out_bytes": 597870,
+  "out_sha256": "a47603d46c241582368f30794cac145c732b5b2ac8437059889add4ccf648cdc"
+ },
+ "german_onhw_all": {
+  "source": "$U/data/d2_v2/onhw/e0_all.npz",
+  "source_sha256": "59bc5fcbdf276a440f6afc5a4e14d9e3c7351595a2a724a0085160054fa68939",
+  "source_bytes": 27740608,
+  "n": 5925,
+  "all_keys": [
+   "unit_ids",
+   "sample_ids",
+   "writer_ids",
+   "cond_rendered",
+   "seq",
+   "seq_offsets",
+   "step",
+   "gt_points",
+   "gt_stroke_id",
+   "gt_offsets"
+  ],
+  "kept_keys": [
+   "cond_rendered",
+   "sample_ids",
+   "unit_ids",
+   "writer_ids",
+   "step"
+  ],
+  "keys_shapes": {
+   "unit_ids": [
+    [
+     5925
+    ],
+    "<U66"
+   ],
+   "sample_ids": [
+    [
+     5925
+    ],
+    "<U61"
+   ],
+   "writer_ids": [
+    [
+     5925
+    ],
+    "int64"
+   ],
+   "cond_rendered": [
+    [
+     5925,
+     64,
+     64
+    ],
+    "uint8"
+   ],
+   "seq_offsets": [
+    [
+     5926
+    ],
+    "int64"
+   ],
+   "step": [
+    [
+     5925
+    ],
+    "float32"
+   ],
+   "gt_offsets": [
+    [
+     5926
+    ],
+    "int64"
+   ]
+  },
+  "out": "$U/tmp/d3_route_pull/german_onhw_all_cond.npz",
+  "out_bytes": 3678631,
+  "out_sha256": "e9ed50b2bd91d07d4cb5cb2bf92a1362efa5d89d9e2e951a55bf598547ef594b"
+ }
+}

@@ -1,0 +1,3 @@
+2026-11-07T21:05:10Z arm_start frac=p01 frame=identity replay=1 qu=0.5 qu_end= cur_start= steps=200 gate= batch=32x16 workers=4 amp=--amp smoke_units= gpu=[NVIDIA A2;] host=<node> slurm=24964771 restart=0
+2026-11-07T22:32:24Z selected milestone 1 host=<node> slurm=24964771 restart=0
+2026-11-07T22:32:25Z arm_phase12_end selected=1 host=<node> slurm=24964771 restart=0

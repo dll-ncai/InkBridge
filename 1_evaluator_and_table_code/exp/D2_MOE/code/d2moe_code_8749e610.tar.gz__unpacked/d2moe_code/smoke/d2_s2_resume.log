@@ -1,0 +1,6 @@
+stage 2: train units 50 per script {'ouhdl': 50}
+Model Parameters: 3.88M
+resumed milestone 2 step 12 seed 12
+params {'backbone': 27092036, 'adapters_per_expert': 953344, 'adapters_total': 3813376, 'gate': 66180, 'n_wrapped_modules': 75, 'trainable': 1019524}; experts ['expert0', 'expert1', 'expert2', 'rtl']; trainable tensors 154; eff. batch 16
+step 15 loss 0.0122 den 0.0022 lb 1.0002 gn 0.00 route {'expert0': 4, 'expert1': 5, 'expert2': 0, 'rtl': 7} 2.90s/step
+training complete; backbone unchanged: True

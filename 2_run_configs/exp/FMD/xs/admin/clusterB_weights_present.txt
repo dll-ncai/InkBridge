@@ -1,0 +1,14 @@
+chandra
+cleandift
+c-radiov3-b
+c-radiov3-g
+c-radiov3-h
+c-radiov3-l
+c-radiov4-h
+c-radiov4-so400m
+_genvlm_extra
+pe-spatial-g14-448-timm
+pe-spatial-l14-448-timm
+pe-spatial-s16-512
+sd3-medium-diffusers
+siglip2-giant-opt-patch16-256

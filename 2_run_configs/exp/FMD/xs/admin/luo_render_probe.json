@@ -1,0 +1,37 @@
+{
+ "casia_en": {
+  "n": 125,
+  "identical_64": 0,
+  "max_abs_diff": 243,
+  "mean_abs_diff": 5.0217,
+  "step_gt1": 1
+ },
+ "casia_zh": {
+  "n": 125,
+  "identical_64": 0,
+  "max_abs_diff": 207,
+  "mean_abs_diff": 6.7653,
+  "step_gt1": 62
+ },
+ "hpl_tamil": {
+  "n": 125,
+  "identical_64": 0,
+  "max_abs_diff": 220,
+  "mean_abs_diff": 3.0015,
+  "step_gt1": 1
+ },
+ "iam": {
+  "n": 125,
+  "identical_64": 0,
+  "max_abs_diff": 193,
+  "mean_abs_diff": 3.9704,
+  "step_gt1": 0
+ },
+ "speed_s_per_unit": {
+  "decode": 0.0001052398681640625,
+  "render64": 0.0006606454849243164,
+  "render224": 0.0005074691772460938,
+  "n": 500
+ },
+ "note": "decode(seq) is the 1-px arc-length resampled ink (step grown until <=320 pts); stored cond_rendered was rendered from the un-resampled ink"
+}

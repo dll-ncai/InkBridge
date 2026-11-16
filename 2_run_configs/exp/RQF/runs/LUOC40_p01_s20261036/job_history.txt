@@ -1,0 +1,1 @@
+2026-11-15T08:53:52Z arm_start frac=p01 frame=identity replay=0 qu=0.25 qu_end= cur_start= steps=10000 gate= batch=32x16 workers=4 amp=--amp smoke_units= gpu=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;] host=<node> slurm=25164081 restart=0

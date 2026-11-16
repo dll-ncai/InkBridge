@@ -1,0 +1,154 @@
+{
+ "schema": "fmd_provenance/1",
+ "track": "Prereg",
+ "lane": "FMD (foundation-model distillation)",
+ "plan_artifact_version": "8f07471e-e758-404f-bb64-19f9a10508d4",
+ "date_utc": "2026-11-03",
+ "sub_agent_model": "<agent>",
+ "model_reason": "design + pre-registration + new harness code and smoke test = <agent> under <author>'s 30 Oct 2026 sub-agent model policy",
+ "lead_model": "<agent>",
+ "inputs": {
+  "freeze_record": {
+   "path": "$U/exp/CAND/prereg/FREEZE_DECISION_2026-11-03.md",
+   "sha256": "869d82e76d02b16501312428ce4043f646772caa1b15bc94937d5d85fe18326a"
+  },
+  "nomL1_ckpt": {
+   "path": "$U/exp/CAND/method_round/Loop/anchors/lineHT_d4/checkpoints/checkpoint_000004.pt",
+   "sha256": "873b669844f201d8858472a3c7b43fd0b4442b5b1c2bd24bc3fbec35cffe1aec",
+   "verified_by": "extract_api.NomineeEncoder.setup (sha256 recomputed in Slurm 24828905 and 24829075)"
+  },
+  "nomL2_ckpt": {
+   "path": "VPS runs/CAND/method_round/Loop/lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261027/checkpoints/checkpoint_000004.pt",
+   "sha256": "65847fbef0e649c8aa2ce8d3b86779666834efece888eeef7864c6528633baeb",
+   "on_clusterA": false
+  },
+  "luo_backbone": {
+   "path": "$U/exp/M5/runs/luo/checkpoints/checkpoint_000006.pt",
+   "file_sha256": "ab6b178d032d90e5ec86f5140e3dd166e0bda497b019d88d6d3fab5da646812c",
+   "param_sha256": "e9286680496687e716eb2ba9323e2bc036acb1ef66cee9d1405eac62b7821b71"
+  },
+  "router": {
+   "path": "$U/exp/D3_ROUTE/router/script_clf.pt",
+   "sha256": "22bb8802f2da46fc37972eec430a1439ad830905712f22f6d923c38829db45aa"
+  },
+  "e0_ms8": {
+   "path": "$U/runs/e0/e0_v3_rendered_100k_bs512/checkpoints/checkpoint_000008.pt",
+   "sha256": "9a9edb199d1c3308996b30a1663f83af3bf8dde3fd8f10deee8a7511f37700d5",
+   "param_sha256": "e11b615e82b79f156ca8a8da80ebec0d3b94b2f7b48f55100482fa75768c4ef1"
+  },
+  "code_tars": {
+   "loop_code_944a7401": {
+    "path": "$U/exp/CAND/code/loop_code_944a7401.tar.gz",
+    "sha256": "944a74013d89d25c715fd651e93897d7569f0d7d999b7002a75bc1b10d4fa5e7"
+   },
+   "adapter_code_b8f84563": {
+    "path": "$U/exp/CAND/code/adapter_code_b8f84563.tar.gz",
+    "sha256": "b8f845636c2acaa5fc25cc255150a8f8b3e94ade9cd1cf7a750b3b8db4e24ba8"
+   },
+   "nagamatsu_7c5cf623": {
+    "path": "$U/tmp/staging_2026-10-24/nagamatsu_repo_7c5cf623_nodata.tar.gz",
+    "sha256": "88660d423916b36ce7b72e6b3e536ae7e3371e2b4760edf13f438b7999f25b08",
+    "repo_head": "7c5cf62392e36cdc9f86445b4acb16c1e9198c68"
+   },
+   "c1_code_c7830637 (uhwr_frames mirror_x)": {
+    "path": "$U/exp/CAND/code/c1_code_c7830637"
+   }
+  },
+  "renderer": {
+   "module": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/render.py",
+   "sha256_reported_by_staging": "49ff4cf1dc0f90bf784cc459fc2c1e501ec1482a3f50f6b48e20909d679966eb",
+   "e0_adapter": "e0/code_2be9e593/e0_adapter.py sha256 83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10"
+  },
+  "data": {
+   "e0_val.npz": "25451031d41408c32c504e07b9e16ebcafe4d5fc3c0678cb1bab82a877272f92",
+   "e0_test.npz": "c09560ed07a526614b3342a2fb6b642165f6aab3fffa25876bf1bc7502b7a514",
+   "e0_train.npz": "2c4ddc48fb37b3eb3145977d9245f16e2e237f1224e24b5c81b72785d8a1f048",
+   "ligatures_v3_val.csv": "7f166fa0864b94a5886175bdd1281e9c6e40300f2ee75620f79476f4622240ae",
+   "ligatures_v3_test.csv": "3eaed4afbfaae95285c78e41b4679920c684ca18d8ef6a743d180f4c05385cb3"
+  }
+ },
+ "outputs_clusterA": {
+  "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md": "6ad98ab4c1f4455535afd468b9144df43bb26ed1aa6a091db79cfc669c896035",
+  "$U/plans/FMD_PREREG_2026-11-03.md": "6ad98ab4c1f4455535afd468b9144df43bb26ed1aa6a091db79cfc669c896035",
+  "$U/exp/FMD/code/fmd_harness_v1.0.1.tar.gz (unpacked at code/fmd_harness_v1/)": "a5b69f7b0753b2c486b5f2a297111f1cfdbb68b0ac0c1f2bf9c358bf6fcf53e3",
+  "$U/exp/FMD/code/fmd_harness_v1.0.0.tar.gz (smoke-test code)": "8700f7048aa8a4e06f3114736e5a08fe625e17d7da5481c9bd71d2806569925b",
+  "$U/exp/FMD/data/val1000_units.csv": "ecf35c304b40d842278f138c92bbb5ee01546d11f120cbc95b5533978ff34ea6",
+  "$U/exp/FMD/data/smoke50_units.csv": "2cfecfb262690c3ff4234718030e8b3997d19b68b391ee715d3b6ba6925b1631",
+  "$U/exp/FMD/data/fmd_render224_val1000.npz": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503",
+  "$U/exp/FMD/data/fmd_render224_smoke50.npz": "20dbffac85bd78d81d6e495706af1df01bef8a53086dc4081f75267310241555",
+  "$U/exp/FMD/data/fmd_targets_G16_val1000.npz": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5",
+  "$U/exp/FMD/data/fmd_targets_G14_val1000.npz": "5135131c46c2a900a9f20fa8cadb4ab245a43c249bac8181961c6d3f19caa025",
+  "$U/exp/FMD/data/fmd_targets_G16_smoke50.npz": "f6eccddf2f54f6fe80ba572ab7826d640b57b3c4dfc46b4bf45e001ae2a0c16a",
+  "$U/exp/FMD/data/fmd_targets_G14_smoke50.npz": "dfac9d761b3c1f30e170962ba6f863c23b24d43374cf632a670b2a739cbb4236",
+  "$U/exp/FMD/data/verify_renders_224_val1000.json": "5bdd74686da49d6673b690ca5672305dca4a4ecf5faad5a84bcbc695b67f5f1f",
+  "$U/exp/FMD/screen/smoke/fm_screen_rows_smoke50.csv": "496205d566f365df608b01b7194da26827566ab65f8e87f84db0a0a8cf5a85d3",
+  "$U/exp/FMD/screen/smoke/verdicts_smoke50.json": "8b0ec0cd2cf6a4643b800abc59841f51ffff1ed24969fa431a877b568b128b42",
+  "$U/exp/FMD/features/nomL1/cat16__val1000.npy": "a354af5dec8b03ed444e79386e524b52261cc364c624461ceb7089f1356164dd",
+  "$U/exp/FMD/features/e0/cat16__val1000.npy": "3fc477d9736f4d1fac60262b7490503dc9092191538a9ea3d1a0152e93fdd8c9",
+  "per-file meta provenance": "every data/features/units file has <file>.meta.json (inputs+sha256, params, code sha256, command, env); full smoke list in logs/smoke/smoke_outputs.sha256",
+  "$U/exp/FMD/screen/baseline_val1000_summary.csv": "f55ef713b80df849bac00914e53718f9c6f18cbb7f326bceeb7a96baeef5c2b9",
+  "$U/exp/FMD/screen/units/*__val1000.units.csv.gz (24 files, each with .meta.json)": "sha256 per file in baseline_val1000_summary.csv column units_file_sha256"
+ },
+ "jobs": {
+  "24828905": "smoke test, cpuidle <node>, harness 1.0.0, COMPLETED wall 00:21:06",
+  "24829074": "rows/verdicts rebuild (1.0.1) + Staging render verification, COMPLETED wall 00:04:47",
+  "24829075": "val1000 baseline token caches (nomL1, e0, pos, px; nomL2 BLOCKED), COMPLETED wall 00:08:27",
+  "24829076_[1-12]": "val1000 baseline probes (linear+attn; nomL1/e0 mid16,cat16 x G16,G14; pos; px), all 12 tasks COMPLETED, elapsed 00:03:02-00:15:50 per task, cpuidle 16 CPUs"
+ },
+ "facts": {
+  "val1000_n_writers": 31,
+  "val1000_unit_list_identical_to_loop_preds": true,
+  "render64_check_val1000": "1000/1000 identical",
+  "staging_render_check_val1000": "1000/1000 byte-identical, max abs diff 0",
+  "nomL1_router_val1000": "994/1000 units p_rtl>=0.5 (RTL route, mirror_x framed)",
+  "nomL1_cat16_linear_G16_val1000": {
+   "T0:iou": [
+    0.9599,
+    0.9578,
+    0.9619
+   ],
+   "T1:acc8": [
+    0.8191,
+    0.8071,
+    0.8308
+   ],
+   "T1:acc_orient4": [
+    0.9013,
+    0.8955,
+    0.9071
+   ],
+   "T2:rprec": [
+    0.5136,
+    0.4829,
+    0.5448
+   ],
+   "T23:sep_auc": [
+    0.8735,
+    0.8597,
+    0.8866
+   ],
+   "T3:rprec": [
+    0.633,
+    0.6041,
+    0.6607
+   ],
+   "T4:spearman": [
+    0.7895,
+    0.7656,
+    0.8104
+   ]
+  },
+  "smoke_test_runtime": "Slurm 24828905 wall 1,265 s (00:21:06) on 16 CPUs incl. val1000 renders/targets; per-probe-file fit 5.5-26.6 s on 50 units"
+ },
+ "blocked": [
+  "nomL2 (Line T d4 ms4) checkpoint not on CLUSTER-A: FileNotFoundError 'BLOCKED: nominee checkpoint $U/exp/FMD/weights/nominees/lineT_d4_ms4/checkpoint_000004.pt not on CLUSTER-A'; VPS not used in this phase per brief",
+  "Urdu News unlabelled pool: not found under $U/data"
+ ],
+ "deviations": [
+  "screen rows schema: the 14 named columns plus 7 appended provenance columns (probe, grid, baseline_value, n_writers, baseline_rows_sha, harness_code_sha, created_utc)",
+  "feature cache file name <layer>__<set>.npy (set suffix added) instead of <layer>.npy",
+  "FM ids follow the Staging track's staged repos: SigLIP2 so400m patch14-224 (patch16-224 so400m repo does not exist), SAM2.1 Hiera-B+, Qwen3-VL-8B-Instruct (8.77B incl. vision), SD2.1 community mirror",
+  "smoke run used harness 1.0.0 (T0 margin constant 0.01245); prereg + 1.0.1 fix 0.01035; smoke rows rebuilt with 1.0.1",
+  "nomL2 baseline absent: best-nominee comparator chosen within nomL1 until the checkpoint is on CLUSTER-A"
+ ]
+}

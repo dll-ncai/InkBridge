@@ -1,0 +1,7 @@
+
+## Warm monitor entry (written 2026-11-10 ~09:20Z, replacement monitor track, <agent>): A9.4 relay attempt 8 Nov (facts)
+- 08:50-09:30Z 8 Nov: CLUSTER-B inventory: 19 inputs (6 six-set GT npz, 2 OUHDL npz, 8 render npz, fmdx_backbone_v1 SHA256SUMS.txt, common.sh) sha256 identical to CLUSTER-A; arm_sample_a9.sbatch (sha16 3e1b951d0cae85ba) and wrapper clusterB_sample_a9.sbatch (sha16 79617e6519154e0e) placed under CLUSTER-B code/fmdx_monitor_v1.
+- CLUSTER-B sbatch --test-only (1 GPU, 6 h), 8 Nov ~08:55Z: RTX3090 8 Nov 18:00, A100-40GB 8 Nov 20:43, V100-32GB-SDS 9 Nov 01:50, A100-SDS 9 Nov 20:43; CLUSTER-A pending sampling estimates 10 Nov-7 Dec.
+- Checkpoint relay (~389 MB each) via agent download from CLUSTER-A + upload to CLUSTER-B: 200 MB parts (08:55Z), 100 MB parts (09:31Z) and 50 MB parts (11:42Z) all failed on CLUSTER-A sftp get ('Connection closed'). CLUSTER-A SSH stopped answering 10:40-11:41Z and again from ~12:20Z 8 Nov. Nothing relayed; no CLUSTER-B sampling job submitted.
+- Lead decision 8 Nov: no CLUSTER-A<->CLUSTER-B relays; sampling on CLUSTER-A only; poll CLUSTER-A at most hourly with one short command.
+- 10 Nov: control-plane loop replaced by CLUSTER-A cpuidle autopilot code/fmdx_monitor_v1/fxm_autopilot.py (same recipes; 3 earliest --test-only copies per job; pending-task-only race cancels; stale-lock seed repair max 2 per seed; skips sampling when preds exist), until 2026-11-10T18:00Z.

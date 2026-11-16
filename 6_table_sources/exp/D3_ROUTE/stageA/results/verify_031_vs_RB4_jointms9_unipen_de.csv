@@ -1,0 +1,17 @@
+metric,n,n_exact,max_abs_diff
+dtw,1654,1654,0.0
+ldtw,1654,1654,0.0
+aiou,1654,1654,0.0
+chamfer,1654,1654,0.0
+hausdorff,1654,1654,0.0
+frechet,1654,1654,0.0
+rmse,1654,1654,0.0
+penup_f1,1654,1654,0.0
+stroke_count_abs_err,1654,1654,0.0
+stroke_match_recall,1654,1654,0.0
+strict_order_acc,1654,1654,0.0
+kendall_tau,1654,1654,0.0
+direction_acc,1654,1654,0.0
+loop_orient_acc,1654,1654,0.0
+n_gt_strokes,1654,1654,0.0
+n_pred_strokes,1654,1654,0.0

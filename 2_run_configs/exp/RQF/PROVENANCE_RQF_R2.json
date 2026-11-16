@@ -1,0 +1,11 @@
+{
+ "schema": "rqf_provenance/1",
+ "kind": "RQF_R2_queue",
+ "created_utc": "2026-11-07T20:41:20Z",
+ "prereg": "PREREG_RQ_finalise_2026-11-07.md sha256 04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624 (section 2 R2a/R2b/R2c/R2e)",
+ "model_run_as": "<agent> (chosen by lead: reruns existing training/FT/scoring recipes, no new architecture code)",
+ "code_dir": "exp/RQF/code/rqf_v1 (copies of ft_job.sh, arm.sh, frame_arm.sh phases 1-2, m5_arm.sh phases 1-2; only run dir/seed/npz/init parametrised; sha256 via SHA256SUMS in dir)",
+ "queue_csv": "exp/RQF/admin/queue_with_state.csv",
+ "log": "exp/RQF/queue/rqf_log.md",
+ "rows": 61
+}

@@ -1,0 +1,549 @@
+{
+ "date_utc": "2026-10-24T18:47:28Z",
+ "machine": {
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "cpu_count": 14,
+  "torch": "2.14.1",
+  "python": "3.11.17",
+  "device": "cpu"
+ },
+ "inputs": {
+  "nagamatsu_repo": "tmp/staging_2026-10-24/nagamatsu_repo_7c5cf623_nodata.tar.gz (commit 7c5cf623)",
+  "teachers_fp16": {
+   "e0_ms8": {
+    "step": 80000,
+    "n_ema": 500,
+    "source_sha256": "9a9edb199d1c3308996b30a1663f83af3bf8dde3fd8f10deee8a7511f37700d5",
+    "bytes": 54368511,
+    "sec": 3.7,
+    "out_sha256": "eff573474323553301f8586963aade53030542b7e1d235275d14522a36eafbe0",
+    "sample_keys": [
+     "betas",
+     "alphas_cumprod",
+     "alphas_cumprod_prev"
+    ]
+   },
+   "x5_ms9": {
+    "step": 90000,
+    "n_ema": 500,
+    "source_sha256": "5758fa493418475d62f36699ce57cf8309436bb7fe4c484c71ef0cc7201f3b76",
+    "bytes": 54368511,
+    "sec": 12.2,
+    "out_sha256": "3eb50631718c963e88fcf6072ee218cec195e5b6886480d6477163f9570e8264",
+    "sample_keys": [
+     "betas",
+     "alphas_cumprod",
+     "alphas_cumprod_prev"
+    ]
+   },
+   "e27_ms47": {
+    "step": 470000,
+    "n_ema": 500,
+    "source_sha256": "af7d1edf454460582d97f239b5289821d0a3157266d704f2e603d9bbe427f2cd",
+    "bytes": 54369587,
+    "sec": 10.9,
+    "out_sha256": "c1f03275742ed72e171c195319b4de4ab18d85c05e9aea38347d80d1a3deb247",
+    "sample_keys": [
+     "betas",
+     "alphas_cumprod",
+     "alphas_cumprod_prev"
+    ]
+   },
+   "m5joint_ms9": {
+    "step": 90000,
+    "n_ema": 500,
+    "source_sha256": "b9592f22086555d3fcae46660a97f5c341dfe2de87717ed0a6e8c18d7eaaca7a",
+    "bytes": 108741389,
+    "sec": 8.8,
+    "out_sha256": "958575e74c165d88b86539890841c13f759b32ea5e0e93915ca38b417b47c419",
+    "sample_keys": [
+     "betas",
+     "alphas_cumprod",
+     "alphas_cumprod_prev"
+    ]
+   }
+  },
+  "data": [
+   "CLUSTER-A data/m5_multiscript_v1/m5_val_casia_zh.npz (250 units each)",
+   "CLUSTER-A data/m5_multiscript_v1/m5_val_casia_en.npz (250 units each)",
+   "CLUSTER-A data/m5_multiscript_v1/m5_val_hpl_tamil.npz (250 units each)",
+   "CLUSTER-A data/m5_multiscript_v1/m5_val_iam.npz (250 units each)",
+   "CLUSTER-A data/m5_multiscript_v1/m5_val_ouhdl.npz (250 units each)"
+  ]
+ },
+ "d3b": {
+  "run1": {
+   "desc": "500 units (100/script), init M5 joint ms9 (fp16 extract), 4 teachers fp32 on CPU, micro 8 x accum 2, 30 steps, lambda 1",
+   "student_params": 27092036,
+   "teacher_params_each": 27092036,
+   "route": {
+    "ouhdl": "e0_ms8",
+    "iam": "x5_ms9",
+    "casia_en": "x5_ms9",
+    "casia_zh": "e27_ms47",
+    "hpl_tamil": "m5joint_ms9"
+   },
+   "train_loss_by_step": {
+    "1": 0.00904,
+    "2": 0.04998,
+    "3": 0.10217,
+    "4": 0.04645,
+    "5": 0.04541,
+    "10": 0.05219,
+    "15": 0.02529,
+    "20": 0.01456,
+    "25": 0.02989,
+    "30": 0.05009
+   },
+   "loss_den_kd_last": {
+    "loss_den": 0.02338,
+    "loss_kd": 0.02672
+   },
+   "routing_counts_per_logged_step": {
+    "1": {
+     "e0_ms8": 6,
+     "m5joint_ms9": 2,
+     "x5_ms9": 6,
+     "e27_ms47": 2
+    },
+    "2": {
+     "m5joint_ms9": 3,
+     "e27_ms47": 4,
+     "x5_ms9": 7,
+     "e0_ms8": 2
+    },
+    "3": {
+     "e27_ms47": 4,
+     "e0_ms8": 3,
+     "m5joint_ms9": 2,
+     "x5_ms9": 7
+    },
+    "4": {
+     "x5_ms9": 5,
+     "e27_ms47": 5,
+     "e0_ms8": 5,
+     "m5joint_ms9": 1
+    },
+    "5": {
+     "x5_ms9": 7,
+     "e27_ms47": 2,
+     "m5joint_ms9": 6,
+     "e0_ms8": 1
+    },
+    "10": {
+     "x5_ms9": 6,
+     "e27_ms47": 5,
+     "m5joint_ms9": 2,
+     "e0_ms8": 3
+    },
+    "15": {
+     "x5_ms9": 11,
+     "e0_ms8": 3,
+     "m5joint_ms9": 2
+    },
+    "20": {
+     "m5joint_ms9": 3,
+     "x5_ms9": 7,
+     "e0_ms8": 5,
+     "e27_ms47": 1
+    },
+    "25": {
+     "x5_ms9": 9,
+     "m5joint_ms9": 2,
+     "e27_ms47": 3,
+     "e0_ms8": 2
+    },
+    "30": {
+     "e27_ms47": 3,
+     "e0_ms8": 6,
+     "x5_ms9": 6,
+     "m5joint_ms9": 1
+    }
+   },
+   "val_fixed_noise": {
+    "0": {
+     "casia_zh": {
+      "n": 32,
+      "val_den": 0.00789265800267458,
+      "val_kd": 0.03294418752193451,
+      "teacher": "e27_ms47"
+     }
+    },
+    "15": {
+     "casia_zh": {
+      "n": 32,
+      "val_den": 0.015521352179348469,
+      "val_kd": 0.0294791292399168,
+      "teacher": "e27_ms47"
+     }
+    },
+    "30": {
+     "casia_zh": {
+      "n": 32,
+      "val_den": 0.01163190696388483,
+      "val_kd": 0.028058573603630066,
+      "teacher": "e27_ms47"
+     }
+    }
+   },
+   "all_finite": true,
+   "peak_rss_mb": 3636,
+   "sec_per_step_cpu": 5.54
+  },
+  "fixed_batch": {
+   "desc": "same batch + fixed (t, noise) each step, 20 steps, micro 8",
+   "losses": [
+    0.00424,
+    0.11087,
+    0.02548,
+    0.0265,
+    0.022,
+    0.0145,
+    0.00973,
+    0.00903,
+    0.00741,
+    0.00771,
+    0.00641,
+    0.00532,
+    0.00487,
+    0.00525,
+    0.00431,
+    0.0036,
+    0.00331,
+    0.00358,
+    0.0033,
+    0.0026
+   ],
+   "with_warmup10": [
+    0.00424,
+    0.00241,
+    0.00243,
+    0.00271,
+    0.00329,
+    0.00225,
+    0.00533,
+    0.00431,
+    0.00387,
+    0.00341,
+    0.00324,
+    0.00346,
+    0.00296,
+    0.00289,
+    0.00238,
+    0.00241,
+    0.00228,
+    0.00215,
+    0.00195,
+    0.00169
+   ]
+  },
+  "kill_resume": {
+   "killed_after_step": 12,
+   "checkpoints_before_kill": [
+    "checkpoint_000001.pt",
+    "checkpoint_000002.pt"
+   ],
+   "resumed": [
+    [
+     "2",
+     "10",
+     "10"
+    ]
+   ],
+   "steps_after_resume": "11..20",
+   "training_complete": true
+  },
+  "sampling": {
+   "desc": "d3b_sample.py DDIM-50, EMA weights, 8 OUHD-L val units",
+   "step": 30,
+   "sampling_timesteps": 50,
+   "n_units": 8,
+   "seconds": 21.5,
+   "finite": true,
+   "chamfer_px_vs_gt_mean": 1.37
+  },
+  "full_trainer1d_checkpoint_paths_tested": true
+ },
+ "d2moe": {
+  "stage1": {
+   "desc": "400 units (4 non-Urdu scripts x 100), frozen M5 joint ms9 EMA backbone, E=3 rank 16 on cross/attn/linear (75 modules), micro 8 x accum 2, 30 steps, lb 0.01",
+   "params": {
+    "backbone": 27092036,
+    "adapters_per_expert": 953344,
+    "adapters_total": 2860032,
+    "gate": 66051,
+    "n_wrapped_modules": 75,
+    "trainable": 2926083
+   },
+   "train_loss_den_by_step": {
+    "1": 0.00205,
+    "2": 0.00531,
+    "3": 0.00322,
+    "4": 0.00378,
+    "5": 0.00189,
+    "10": 0.00286,
+    "15": 0.00589,
+    "20": 0.00437,
+    "25": 0.00307,
+    "30": 0.0006
+   },
+   "loss_lb_by_step": {
+    "1": 1.0,
+    "2": 1.0012,
+    "3": 1.0027,
+    "4": 1.0023,
+    "5": 1.0016,
+    "10": 1.0005,
+    "15": 1.0003,
+    "20": 1.0001,
+    "25": 1.0002,
+    "30": 1.0001
+   },
+   "routing_counts_per_logged_step": {
+    "1": {
+     "expert0": 16,
+     "expert1": 0,
+     "expert2": 0
+    },
+    "2": {
+     "expert0": 0,
+     "expert1": 16,
+     "expert2": 0
+    },
+    "3": {
+     "expert0": 0,
+     "expert1": 0,
+     "expert2": 16
+    },
+    "4": {
+     "expert0": 0,
+     "expert1": 0,
+     "expert2": 16
+    },
+    "5": {
+     "expert0": 0,
+     "expert1": 0,
+     "expert2": 16
+    },
+    "10": {
+     "expert0": 16,
+     "expert1": 0,
+     "expert2": 0
+    },
+    "15": {
+     "expert0": 1,
+     "expert1": 9,
+     "expert2": 6
+    },
+    "20": {
+     "expert0": 4,
+     "expert1": 3,
+     "expert2": 9
+    },
+    "25": {
+     "expert0": 10,
+     "expert1": 5,
+     "expert2": 1
+    },
+    "30": {
+     "expert0": 3,
+     "expert1": 4,
+     "expert2": 9
+    }
+   },
+   "val": {
+    "0": {
+     "casia_zh": {
+      "val_den": 0.00727,
+      "mean_gate": {
+       "expert0": 0.33333,
+       "expert1": 0.33333,
+       "expert2": 0.33333
+      }
+     },
+     "iam": {
+      "val_den": 0.00279,
+      "mean_gate": {
+       "expert0": 0.33333,
+       "expert1": 0.33333,
+       "expert2": 0.33333
+      }
+     }
+    },
+    "15": {
+     "casia_zh": {
+      "val_den": 0.00718,
+      "mean_gate": {
+       "expert0": 0.33316,
+       "expert1": 0.33345,
+       "expert2": 0.3334
+      }
+     },
+     "iam": {
+      "val_den": 0.00283,
+      "mean_gate": {
+       "expert0": 0.33312,
+       "expert1": 0.33351,
+       "expert2": 0.33338
+      }
+     }
+    },
+    "30": {
+     "casia_zh": {
+      "val_den": 0.00711,
+      "mean_gate": {
+       "expert0": 0.33326,
+       "expert1": 0.33337,
+       "expert2": 0.33337
+      }
+     },
+     "iam": {
+      "val_den": 0.00275,
+      "mean_gate": {
+       "expert0": 0.3332,
+       "expert1": 0.33341,
+       "expert2": 0.33339
+      }
+     }
+    }
+   },
+   "backbone_sha256_start": "be26efe3c5f4ab634655706cca45a48a395dd283501c1f16ffed79df2abbd14a",
+   "backbone_sha256_end": "be26efe3c5f4ab634655706cca45a48a395dd283501c1f16ffed79df2abbd14a",
+   "backbone_unchanged": true,
+   "peak_rss_mb": 5900,
+   "sec_per_step_cpu": 4.36
+  },
+  "stage2": {
+   "desc": "from stage-1 ckpt ms3: new 'rtl' expert (gate_mix, SVD rank 16), 50 Urdu units (p=0.5 of 100), old experts frozen, 12 (+6 resumed) steps",
+   "stage2": {
+    "init_from_stage1": "$HOME/.<agent>/orgs/8037de5d-5ead-44c3-89c3-2a970ea38b0c/workspaces/bd97c876-dba2-4484-bdc8-29e54ee3ceae/smoke/d2_s1/checkpoints/checkpoint_000003.pt",
+    "stage1_sha256": "12fd1f17226a7515dd624a6b7a577585357fe9dcd6e84f2fa9b5f79955ac6a17",
+    "stage1_step": 30,
+    "mix_weights": {
+     "expert0": 0.3332270681858063,
+     "expert1": 0.3333510458469391,
+     "expert2": 0.33342185616493225
+    },
+    "mix_sample_units": 50,
+    "new_expert": "rtl",
+    "new_expert_init": "gate_mix",
+    "old_experts": "frozen",
+    "train_gate": true
+   },
+   "params": {
+    "backbone": 27092036,
+    "adapters_per_expert": 953344,
+    "adapters_total": 3813376,
+    "gate": 66180,
+    "n_wrapped_modules": 75,
+    "trainable": 1019524
+   },
+   "trainable_tensors": 154,
+   "backbone_unchanged": true,
+   "routing_counts_per_logged_step": {
+    "1": {
+     "expert0": 0,
+     "expert1": 0,
+     "expert2": 16,
+     "rtl": 0
+    },
+    "2": {
+     "expert0": 3,
+     "expert1": 13,
+     "expert2": 0,
+     "rtl": 0
+    },
+    "3": {
+     "expert0": 6,
+     "expert1": 0,
+     "expert2": 0,
+     "rtl": 10
+    },
+    "4": {
+     "expert0": 9,
+     "expert1": 0,
+     "expert2": 0,
+     "rtl": 7
+    },
+    "5": {
+     "expert0": 4,
+     "expert1": 3,
+     "expert2": 0,
+     "rtl": 9
+    },
+    "10": {
+     "expert0": 1,
+     "expert1": 6,
+     "expert2": 8,
+     "rtl": 1
+    },
+    "15": {
+     "expert0": 4,
+     "expert1": 5,
+     "expert2": 0,
+     "rtl": 7
+    }
+   },
+   "resume": [
+    [
+     "2",
+     "12",
+     "12"
+    ]
+   ]
+  },
+  "fixed_batch": {
+   "desc": "stage 1, same batch + fixed (t, noise), lr 1e-3, 20 steps",
+   "losses_den": [
+    0.00748,
+    0.00762,
+    0.00418,
+    0.00313,
+    0.00246,
+    0.00226,
+    0.00233,
+    0.00178,
+    0.00176,
+    0.00181,
+    0.00169,
+    0.00157,
+    0.00152,
+    0.00146,
+    0.00137,
+    0.00133,
+    0.0013,
+    0.00126,
+    0.00121,
+    0.00116
+   ]
+  },
+  "kill_resume": {
+   "killed_after_step": 12,
+   "resumed": [
+    [
+     "2",
+     "10",
+     "10"
+    ]
+   ],
+   "steps_after_resume": [
+    11,
+    12
+   ],
+   "backbone_unchanged": true
+  },
+  "sampling": {
+   "desc": "d2moe_sample.py DDIM-50, EMA adapters, 8 OUHD-L val units, stage-2 ckpt",
+   "finite": true,
+   "chamfer_px_vs_gt_mean": 0.34,
+   "mean_gate": [
+    0.2499299943447113,
+    0.2499600052833557,
+    0.2501400113105774,
+    0.24997000396251678
+   ],
+   "seconds": 41.1
+  },
+  "gate_log_csv_rows": 16
+ }
+}

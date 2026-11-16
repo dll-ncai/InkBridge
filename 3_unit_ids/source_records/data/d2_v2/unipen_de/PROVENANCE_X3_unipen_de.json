@@ -1,0 +1,343 @@
+{
+ "experiment": "X3",
+ "dataset": "d2_v2_unipen_de",
+ "title": "UNIPEN train_r01_v07 German (sie word + char, atu) -> connected-component units",
+ "status": "full",
+ "created_utc": "2026-10-19T16:54:56Z",
+ "start_utc": "2026-10-19T16:52:10Z",
+ "host": "<node>",
+ "slurm": {
+  "job_id": "24480820",
+  "partition": "epyc-256",
+  "nodes": "<node>",
+  "cpus": "16",
+  "state_at_write": "RUNNING (provenance written by the job's last step; final state via sacct)",
+  "final_state": "COMPLETED"
+ },
+ "plan": "experiments_to_run_2026-10-18.md section A, X3 (artifact version b474164e)",
+ "licence": {
+  "name": "UNIPEN Train-R01/V07 (German contributors sie, atu)",
+  "licence": "Zenodo record 10.5281/zenodo.1195803: CC BY 4.0; shipped iUF conditions of use: non-commercial research use, no commercial use of raw coordinates/text, publications must name the release and describe subset selection, do not name writers",
+  "cite": "I. Guyon, L. Schomaker, R. Plamondon, M. Liberman, S. Janet. UNIPEN project of on-line data exchange and recognizer benchmarks. ICPR 1994, pp. 29-33.",
+  "redistributable": false
+ },
+ "command": "apptainer exec -B $SCRATCH_ROOT images/torch27.sif bash exp/X3/jobs/x3_run_v3.sh unipen_de full  ->  python -u $U/exp/X3/code_4d4e71ed/x3_build.py --set unipen_de --data $U/data --out $U/data/d2_v2/unipen_de --procs 16 ",
+ "params": {
+  "set": "unipen_de",
+  "data": "$U/data",
+  "out": "$U/data/d2_v2/unipen_de",
+  "m4_code": "$U/exp/M4/full2/code",
+  "procs": 16,
+  "limit": 0,
+  "seed": 20261016
+ },
+ "seeds": {
+  "unipen_split_seed": 20261016
+ },
+ "inputs": {
+  "m4_seed": 20261016,
+  "test_writers": [
+   "DE-A01",
+   "DE-A02",
+   "DE-A05",
+   "DE-A08",
+   "DE-S03",
+   "DE-S04",
+   "DE-S06"
+  ],
+  "train_writers": [
+   "DE-A03",
+   "DE-A04",
+   "DE-A06",
+   "DE-A07",
+   "DE-A09",
+   "DE-A10",
+   "DE-A11",
+   "DE-A12",
+   "DE-A13",
+   "DE-S01",
+   "DE-S02",
+   "DE-S05"
+  ],
+  "m4_data_sha256": "c6879d1abf8eb93036e9ca30009e4f09ecb2ce5a742d44f016df6bc6908ca372",
+  "reader_sha256": "e34fc4ecbfd6c3241ac5de11bed7ca30106456b6e6b7323389ff9b8d5a1210d8",
+  "files_writers_per_contrib_kind": {
+   "<unipen-path>": {
+    "files": 1593,
+    "writers": 4
+   },
+   "<unipen-path>": {
+    "files": 377,
+    "writers": 3
+   },
+   "<unipen-path>": {
+    "files": 92,
+    "writers": 13
+   }
+  },
+  "strokes_per_split": {
+   "train": 5608,
+   "test": 1182
+  }
+ },
+ "input_extra": {
+  "staging_fix_unipen_de.json": {
+   "step": "X3 UNIPEN-de staging fix",
+   "root_cause": "directory modes r-x from the CD-ROM image blocked extraction after the first writer folder",
+   "dirs_made_user_writable": 0,
+   "passes": [
+    {
+     "dirs_chmod": 0,
+     "tar_rc": 0,
+     "missing_after": 0
+    }
+   ],
+   "tar_options": "--skip-old-files --mode=u+w --exclude=._*",
+   "utc": "2026-10-19T16:52:54Z",
+   "tar": "$U/data/stage/unipen_de.tar",
+   "tar_sha256": "f8989c4793e7c038b04abdbc3a1225d203a9bf92e2923e15337e6c3baf8f27f7",
+   "target": "$U/data/unipen_train_r01_v07",
+   "tar_files_extracted_subtree": 6094,
+   "tar_dat_counts_include": {
+    "atu": 92,
+    "<unipen-path>": 131,
+    "<unipen-path>": 130,
+    "<unipen-path>": 116,
+    "<unipen-path>": 475,
+    "<unipen-path>": 494,
+    "<unipen-path>": 202,
+    "<unipen-path>": 422
+   },
+   "disk_dat_counts_before": {
+    "atu": 92,
+    "<unipen-path>": 131,
+    "<unipen-path>": 130,
+    "<unipen-path>": 116,
+    "<unipen-path>": 475,
+    "<unipen-path>": 494,
+    "<unipen-path>": 202,
+    "<unipen-path>": 422
+   },
+   "disk_dat_counts_after": {
+    "atu": 92,
+    "<unipen-path>": 131,
+    "<unipen-path>": 130,
+    "<unipen-path>": 116,
+    "<unipen-path>": 475,
+    "<unipen-path>": 494,
+    "<unipen-path>": 202,
+    "<unipen-path>": 422
+   },
+   "files_missing_before": 0,
+   "files_missing_after": 0,
+   "size_mismatch_after": 0,
+   "tar_compare_differences": 0,
+   "tar_compare_first": [],
+   "tar_returncode": 0,
+   "tar_stderr": [],
+   "ok": true
+  }
+ },
+ "code": {
+  "tarball": "code_X3_v3.tar.gz",
+  "tarball_sha256": "4d4e71ed0c4c126a1625b1ee2a9186b3490abd9cc36f243203629c62d2540672",
+  "e0_code_dir": "$U/e0/code_1a5ee72e",
+  "e0_code_py_sha256": {
+   "build_e0_data.py": "c79c3c1abbc191940ed10a7afcf11b38fa5af636840cada892336d7071e8bcb8",
+   "e0_adapter.py": "83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10",
+   "e0_dataset.py": "2f2a11c6df94af2f27292a436732fe4ed25cf2432382ac8a347e07f7c153c2fa",
+   "e0_sample.py": "5f60cb294f8bd7b27ccb676ef0a836b6b0c34730241e366d549fc2104953f84c",
+   "e0_score.py": "0a7569d47d7af1ba3eddb5cbcac6bfd602dc4d257cc950098748d50ff9a2e1af",
+   "e0_train.py": "640ad9067b9e313e3356375721ee4d9f051b7b1c0503dd9ca137306b88ceb774",
+   "test_e0_adapter.py": "0f7967b05cf8de47d36d03a9fc2dcd1f7ea4f2c7dbf7cfe770feaa33152416c6",
+   "uhwr_baselines/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "uhwr_baselines/aggregate.py": "7254af14d2593fd90e88c8b7aa6dc6d4f940b98cb2a670c61720b6ef2d877b32",
+   "uhwr_baselines/geometric.py": "d016dc9e01a8f850cc640ad25c307cc17748ef2ea53d6634292ff88ea574fdc7",
+   "uhwr_baselines/inksight_runner.py": "ce2ecea7d1d95c1b368843a8cb6f2093919dc2d613a01b2e544d451272fc6b5f",
+   "uhwr_baselines/inputs.py": "85571dae5e00aa1741cc8ac10f452cc103c1b5a92b057f3bdaf6948361e0e708",
+   "uhwr_baselines/momna.py": "3af0e8e91c35f64d9f1c3131cc0bc66018e88fb702d85ba0ad10cab7cae2a327",
+   "uhwr_baselines/ouhdl.py": "8c45950246f98a9bbb14c36cbb59212b328b18f10b0c6fdb992bb1eb642df6b1",
+   "uhwr_baselines/run_ouhdl.py": "b0362beda5cd851c797b55897f9435267deddde17dbf166f68d0367393b1fefa",
+   "uhwr_baselines/score_inksight.py": "5f6ee3331f432a6e9d416b8cfe0e1152fd76dcd321cf818836acfafe35d2f1de",
+   "uhwr_eval/__init__.py": "fe1a1a410b83b28e5dcba7f3531480e3b6ba0e8ab9b5a7b301f6f9f12b9bfc8d",
+   "uhwr_eval/_nagamatsu_metrics.py": "7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4",
+   "uhwr_eval/metrics.py": "00c937fa802a46c49ab8858047e9d1c2a4d2ae6bae648fa024276eb20bbfec40",
+   "uhwr_eval/render.py": "49ff4cf1dc0f90bf784cc459fc2c1e501ec1482a3f50f6b48e20909d679966eb",
+   "uhwr_eval/strokes.py": "1b3ef8505b7cf8cdcfa2d95191ab475582e16316bf18fd7a0d5cf70ed9e152b7",
+   "uhwr_eval/validate_toy.py": "3e386e2603ac2f47a9d25fb6e7be8e51a2d6390ff4831c3e157015064aa5fd0b"
+  },
+  "unit_rule": "uhwr_baselines.ouhdl.make_units (OUHD-L v1 component rule, unchanged) + left-to-right renumbering"
+ },
+ "checkpoint": null,
+ "environment": {
+  "container": "images/torch27.sif",
+  "venv": "venvs/cpu",
+  "pip_freeze_file": "pip_freeze_X3_unipen_de.txt",
+  "pip_freeze_sha256": "766a30b8da2cc10c685b3d353f7db7ba8e22deb85b86d70a2a7addec6f67c758"
+ },
+ "stats": {
+  "test": {
+   "n_sources": 475,
+   "n_sources_error": 0,
+   "errors_first": [],
+   "n_sources_with_writer": 475,
+   "n_writers": 7,
+   "n_units": 827,
+   "n_units_encode_error": 0,
+   "n_units_with_marks": 42,
+   "units_per_source_mean": 1.7410526315789474,
+   "n_seq_pct": {
+    "50": 178.0,
+    "90": 231.39999999999998,
+    "99": 261.0,
+    "100": 292.0
+   },
+   "n_step_gt_1": 0,
+   "strokes_per_unit_pct": {
+    "50": 1.0,
+    "90": 3.0,
+    "100": 9.0
+   },
+   "seconds": 68.5
+  },
+  "train": {
+   "n_sources": 1587,
+   "n_sources_error": 0,
+   "errors_first": [],
+   "n_sources_with_writer": 1587,
+   "n_writers": 12,
+   "n_units": 3927,
+   "n_units_encode_error": 0,
+   "n_units_with_marks": 308,
+   "units_per_source_mean": 2.4744801512287333,
+   "n_seq_pct": {
+    "50": 168.0,
+    "90": 249.0,
+    "99": 311.0,
+    "100": 320.0
+   },
+   "n_step_gt_1": 38,
+   "strokes_per_unit_pct": {
+    "50": 1.0,
+    "90": 2.0,
+    "100": 9.0
+   },
+   "seconds": 9.8
+  }
+ },
+ "extra": {},
+ "outputs": {
+  "build_log.txt": {
+   "sha256": "d8a3f3493ddc2006234186846ab062b25d8bc4859c01f693ee6ba64b2c3062e1",
+   "bytes": 1472
+  },
+  "build_stats.json": {
+   "sha256": "879746cc494b27a2feb5896713fb83f37f21d6d3b5ca10fd58bf8f177dd3724b",
+   "bytes": 2667
+  },
+  "e0_test.npz": {
+   "sha256": "c5f1c29e7bdf231f5d6032a29362d0ab3c912450af3294c7f8e6a51dc653157f",
+   "bytes": 2464335
+  },
+  "e0_train.npz": {
+   "sha256": "3d3dbaafc4364d2db9da9a079134ae126a8c0125e03e8be00fbc1a7fb43a7721",
+   "bytes": 10771757
+  },
+  "pip_freeze_X3_unipen_de.txt": {
+   "sha256": "766a30b8da2cc10c685b3d353f7db7ba8e22deb85b86d70a2a7addec6f67c758",
+   "bytes": 8911
+  },
+  "sources_test.csv": {
+   "sha256": "651c20e78a3f7856f36c2cf4f2d854c53543a43e936f1797096b032268c504a4",
+   "bytes": 64793
+  },
+  "sources_train.csv": {
+   "sha256": "b0ff5adef6c450c91210d22d23cb0c8a61735a93470d76c63d26327fd1606d22",
+   "bytes": 221055
+  },
+  "split_writers.json": {
+   "sha256": "4b26a2d59c176cb7086cdaf298c3f68c19f6e0a9df7d89c55d0d646f6e5fa66e",
+   "bytes": 829
+  },
+  "staging_fix_unipen_de.json": {
+   "sha256": "2abefcb6f7f81ca59c19f2a532ce4b6678234cabb60f75b2146813bd624383de",
+   "bytes": 1429
+  },
+  "staging_fix_unipen_de_applied_in_smoke_v3.json": {
+   "sha256": "6494ba9bb735a22d0a0d3a64e33ed1bcac573fc4b490e362a270e37380750526",
+   "bytes": 1383
+  },
+  "staging_log.txt": {
+   "sha256": "b7ce2a5f84a56879f81f804bef8545374a4388308ac33fa45516a58c9ddd2ca5",
+   "bytes": 426
+  },
+  "units_test.csv": {
+   "sha256": "097077d78baef5dc9feb24f9360f55c5d69936e3774a1da04956ea8324551293",
+   "bytes": 132807
+  },
+  "units_test.npz": {
+   "sha256": "53af1dfa318d36123a57ec1324db5f063abef99e1093bc47ca1cd7d99276c2eb",
+   "bytes": 594569
+  },
+  "units_train.csv": {
+   "sha256": "93495ab49f4616c610044c05161200d657484d63718eddac82bb0a2ef3cbae5a",
+   "bytes": 645137
+  },
+  "units_train.npz": {
+   "sha256": "7ca92a39c0a5cea4d5fdc28bd35714d373c8dc4468e5789db575194594825dda",
+   "bytes": 2389901
+  }
+ },
+ "deviations": [
+  "Staging fix: CD-ROM directory modes (r-x) had blocked extraction after the first writer folder; dirs given u+w, missing files extracted with tar --skip-old-files --mode=u+w (smoke v3 record: staging_fix_unipen_de_applied_in_smoke_v3.json; an intermediate attempt 24480522 extracted all but 261 <unipen-path> files).",
+  "Split = M4 rule reproduced (7 test writers identical to METHODS_M4). Stroke totals 5,608 train / 1,182 test vs 5,604 / 1,179 in METHODS_M4 (M4 counts strokes kept after its own short-stroke filter).",
+  "sie char files (377) are included as sources (unit_kind char)."
+ ],
+ "slurm_jobs": [
+  {
+   "slurm_id": "24480325",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "FAILED",
+   "exit": "3:0",
+   "start_utc": "2026-10-19T16:19:37Z",
+   "end_utc": "2026-10-19T16:26:28Z",
+   "node": "<node>",
+   "role": "smoke v1, code f7d16830: iam smoke OK; unipen_de staging fix extracted 0 files (read-only CD-ROM dir modes) -> exit 3"
+  },
+  {
+   "slurm_id": "24480522",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "FAILED",
+   "exit": "3:0",
+   "start_utc": "2026-10-19T16:34:11Z",
+   "end_utc": "2026-10-19T16:34:32Z",
+   "node": "<node>",
+   "role": "smoke v2, code 77792d7c: unipen_de staging fix left 261 <unipen-path> files missing -> exit 3"
+  },
+  {
+   "slurm_id": "24480691",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "FAILED",
+   "exit": "1:0",
+   "start_utc": "2026-10-19T16:43:44Z",
+   "end_utc": "2026-10-19T16:48:55Z",
+   "node": "<node>",
+   "role": "smoke v3, code 4d4e71ed: unipen_de smoke OK (staging fix complete); job script then stopped on a cp of onhw-only files (onhw not run) -> exit 1"
+  },
+  {
+   "slurm_id": "24480820",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "COMPLETED",
+   "exit": "0:0",
+   "start_utc": "2026-10-19T16:52:09Z",
+   "end_utc": "2026-10-19T16:54:56Z",
+   "node": "<node>",
+   "role": "full unipen_de, code 4d4e71ed (code_X3_v3.tar.gz)"
+  }
+ ],
+ "finalised_utc": "2026-10-19T17:00:00Z"
+}

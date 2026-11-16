@@ -1,0 +1,3 @@
+n_cells,gain_order_win,gain_bound_based,control_null_stored,holm_pass,full_stored,full_bound_stored,full_null_expectation_control,full_bound_null_expectation_control,randomization_control_pass_bonf8,full_randomization_control_bonf8,cells
+24,16,7,13,21,9,1,16,7,23,15,six other sets (24 cells)
+5,5,4,5,5,5,4,5,4,5,5,Urdu (5 bases)

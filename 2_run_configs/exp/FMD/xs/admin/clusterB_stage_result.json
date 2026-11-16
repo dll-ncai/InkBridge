@@ -1,0 +1,103 @@
+[
+ {
+  "name": "c-radiov3-b",
+  "repo": "nvidia/C-RADIOv3-B",
+  "revision": "44653a0482cf460bb4f12595fc3cc3dfecc403d1",
+  "status": "ok",
+  "files_ok": 25,
+  "files_bad": 0,
+  "bad": [],
+  "seconds": 17
+ },
+ {
+  "name": "c-radiov3-l",
+  "repo": "nvidia/C-RADIOv3-L",
+  "revision": "9d0413465e8a91e67bbf2c1ad342815478d1b906",
+  "status": "ok",
+  "files_ok": 26,
+  "files_bad": 0,
+  "bad": [],
+  "seconds": 40
+ },
+ {
+  "name": "c-radiov3-g",
+  "repo": "nvidia/C-RADIOv3-g",
+  "revision": "28e70735780c22cd7fca20f0c509cb9fc3893aeb",
+  "status": "ok",
+  "files_ok": 26,
+  "files_bad": 0,
+  "bad": [],
+  "seconds": 132
+ },
+ {
+  "name": "c-radiov4-h",
+  "repo": "nvidia/C-RADIOv4-H",
+  "revision": "0057b339059c0b9e1b4ba996f975410ebbfdfcc8",
+  "status": "ok",
+  "files_ok": 30,
+  "files_bad": 0,
+  "bad": [],
+  "seconds": 65
+ },
+ {
+  "name": "pe-spatial-l14-448-timm",
+  "repo": "timm/vit_pe_spatial_large_patch14_448.fb",
+  "revision": "ac6f424680a305470340dac75a0a9b4c47ee030f",
+  "status": "ok",
+  "files_ok": 3,
+  "files_bad": 0,
+  "bad": [],
+  "seconds": 47
+ },
+ {
+  "name": "pe-spatial-g14-448-timm",
+  "repo": "timm/vit_pe_spatial_gigantic_patch14_448.fb",
+  "revision": "f2cea21ca9d5900061bee5e896031ab4e8352936",
+  "status": "ok",
+  "files_ok": 3,
+  "files_bad": 0,
+  "bad": [],
+  "seconds": 193
+ },
+ {
+  "name": "siglip2-giant-opt-patch16-256",
+  "repo": "google/siglip2-giant-opt-patch16-256",
+  "revision": "46d7129e1aa1527cc5a44d86fb35250df3abf0aa",
+  "status": "ok",
+  "files_ok": 11,
+  "files_bad": 0,
+  "bad": [],
+  "seconds": 258
+ },
+ {
+  "name": "cleandift",
+  "repo": "CompVis/cleandift",
+  "revision": "bf3a8d841ebdce7e212b61e42877f8fdaed81d58",
+  "status": "ok",
+  "files_ok": 2,
+  "files_bad": 0,
+  "bad": [],
+  "seconds": 77
+ },
+ {
+  "name": "sd2.1",
+  "repo": "sd2-community/stable-diffusion-2-1",
+  "revision": "bb2154823665391b4fb29b0b9cf82a198964ee05",
+  "status": "mismatch",
+  "files_ok": 14,
+  "files_bad": 14,
+  "bad": [
+   "UNEXPECTED v2-1_768-nonema-pruned.safetensors",
+   "UNEXPECTED v2-1_768-nonema-pruned.ckpt",
+   "UNEXPECTED v2-1_768-ema-pruned.safetensors",
+   "UNEXPECTED .gitattributes",
+   "UNEXPECTED v2-1_768-ema-pruned.ckpt",
+   "UNEXPECTED unet/diffusion_pytorch_model.fp16.safetensors",
+   "UNEXPECTED unet/diffusion_pytorch_model.fp16.bin",
+   "UNEXPECTED unet/diffusion_pytorch_model.bin",
+   "UNEXPECTED text_encoder/pytorch_model.fp16.bin",
+   "UNEXPECTED text_encoder/pytorch_model.bin"
+  ],
+  "seconds": 634
+ }
+]

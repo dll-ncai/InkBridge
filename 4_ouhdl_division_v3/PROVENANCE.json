@@ -1,0 +1,167 @@
+{
+ "dataset": "OUHD-L ligature units, division v3.0",
+ "description": "Ligature units (a maximal run of joined letters, including single isolated letters, with its own dots and marks) derived from the OUHD-L v1.0 online strokes by per-line alignment of pen-down strokes to the transcript.",
+ "created_utc": "2026-10-15T19:47:54Z",
+ "seconds": 27.8,
+ "source": {
+  "name": "OUHD-L v1.0",
+  "doi": "10.5281/zenodo.20642162",
+  "local_root": "$LOCAL/data/ouhdl",
+  "manifests_sha256": {
+   "train": "f0f3270659ba4f1b9518397208f6e086ad4c4d5c61c1aea80716970a0e7d54cc",
+   "val": "cd828198d73f2c18bb37ae286f561d98715a8b3562837823fbc1dc973dfed7a9",
+   "test": "aaaccaee2669feb01e92f9f3a0007c324de0a373a859f749231c7ba458874c1b"
+  },
+  "core_archive_sha256": "d2cdf97bd9ba4ed645ed5bcdd85be0412036113fe7d791bd7518dec5465278ae",
+  "licence": "see LICENSE in the dataset root"
+ },
+ "method": {
+  "code": {
+   "ligseg_v3_py": "c08b62d3404e75ffec11316bdddfc8d2f95b4f234dd8c133b0154d36f3cee983",
+   "ouhdl_adapter_py": "8c45950246f98a9bbb14c36cbb59212b328b18f10b0c6fdb992bb1eb642df6b1",
+   "builder": "a10aa7d19ea7102bed1e3df6d8b962e1efefbecaa8ab0ee123d691e3a71f4e8b",
+   "loader": "73377aa6b33fc1f468a2034dad07a8c43c8e582da69f0199b47d6345a646698c"
+  },
+  "params": {
+   "wc": 1.0,
+   "lam": 1.0,
+   "wt": 1.5,
+   "St": 4.0,
+   "Si": 3.0,
+   "R": 6,
+   "Sj": 1.0,
+   "MJ": 3,
+   "Sm": 4.0,
+   "wsame": 3.0,
+   "wother": 10.0,
+   "wexp": 8.0,
+   "gmax": null
+  },
+  "letter_lengths": {
+   "file": "letter_lengths.json",
+   "sha256": "2f23011622e60314a98458929836fc61d7bfeb584d4700b5a005dbbf94d21ba2",
+   "fitted_on": "train split only"
+  },
+  "stroke_segmentation": "maximal runs of rows with pen_down == 1; rows with non-finite x/y dropped (as uhwr_baselines.ouhdl.load_raw_strokes)",
+  "uses": [
+   "pen-down stroke recording order",
+   "line transcript"
+  ],
+  "unit_rule_for_one_continuous_stroke_across_a_non_joiner": "kept as one unit (ink-based); open decision, <author> notes such ligatures are linguistically separate"
+ },
+ "validation": {
+  "gold": "21 test lines, 354 units, labelled by <author> 15 Oct 2026 (labels artifact b234d282-fdac-43d1-9e02-4797d8be3e7a)",
+  "exact_unit_f1": {
+   "v1": 0.667,
+   "v2": 0.742,
+   "v3": 0.834
+  },
+  "f1_v3_minus_v2_95ci": [
+   0.035,
+   0.152
+  ],
+  "pairwise": "<author> blind A/B on 73 regions: v3 43, v2 22, neither 7, equal 1 (sign test p = 0.0125)",
+  "note": "test-split gold lines must not be used for tuning later versions"
+ },
+ "checks": [
+  "every pen-down stroke assigned to exactly one unit (all lines, all splits)",
+  "extended stroke loader equals uhwr_baselines.ouhdl.load_raw_strokes x/y on every stroke",
+  "253/253 test lines identical to the v3 units scored against the gold lines"
+ ],
+ "stats": {
+  "train": {
+   "lines": 1911,
+   "writers": 248,
+   "units": 33615,
+   "text_ligatures": 35320,
+   "units_per_line_median": 17.0,
+   "single_stroke_units": 0.3819,
+   "units_with_marks": 0.5654,
+   "joined_units": 1541,
+   "skipped_text_ligatures": 7,
+   "unaligned_strokes": 24,
+   "lines_units_eq_text": 0.5746,
+   "points": 11904287
+  },
+  "val": {
+   "lines": 239,
+   "writers": 31,
+   "units": 4349,
+   "text_ligatures": 4513,
+   "units_per_line_median": 18.0,
+   "single_stroke_units": 0.3872,
+   "units_with_marks": 0.5615,
+   "joined_units": 158,
+   "skipped_text_ligatures": 0,
+   "unaligned_strokes": 7,
+   "lines_units_eq_text": 0.6025,
+   "points": 1395987
+  },
+  "test": {
+   "lines": 253,
+   "writers": 32,
+   "units": 4406,
+   "text_ligatures": 4628,
+   "units_per_line_median": 17.0,
+   "single_stroke_units": 0.3892,
+   "units_with_marks": 0.5617,
+   "joined_units": 206,
+   "skipped_text_ligatures": 0,
+   "unaligned_strokes": 7,
+   "lines_units_eq_text": 0.5415,
+   "points": 1502151
+  }
+ },
+ "outputs": {
+  "train": {
+   "ligatures_v3_train.csv": {
+    "sha256": "ff788c5fb081af55edfc4dce9068ec5ec1ea7e9b0f4a577f846f1c8380ed4f2a",
+    "bytes": 3450166
+   },
+   "ligatures_v3_train.npz": {
+    "sha256": "62482f11f89e3ed80659d512d8cb5c8152b27bf36cf4b404c0c36e38abc0dbec",
+    "bytes": 95040460
+   },
+   "lines_v3_train.csv": {
+    "sha256": "2769bdcee9a4447d018abc7bb99bb35c0d7900aad435a863179c4a4209337d52",
+    "bytes": 225153
+   }
+  },
+  "val": {
+   "ligatures_v3_val.csv": {
+    "sha256": "7f166fa0864b94a5886175bdd1281e9c6e40300f2ee75620f79476f4622240ae",
+    "bytes": 435037
+   },
+   "ligatures_v3_val.npz": {
+    "sha256": "4b7a0fd4d42e90110396ba046b9f439301a9be1ec0a4e0d5b2414a5980dc9523",
+    "bytes": 11258131
+   },
+   "lines_v3_val.csv": {
+    "sha256": "4b6b8eb8506525f3a34e1a3f4353e8a6148d62cbcdd2f16761be9e9c864e7d8e",
+    "bytes": 27930
+   }
+  },
+  "test": {
+   "ligatures_v3_test.csv": {
+    "sha256": "3eaed4afbfaae95285c78e41b4679920c684ca18d8ef6a743d180f4c05385cb3",
+    "bytes": 446919
+   },
+   "ligatures_v3_test.npz": {
+    "sha256": "1c08068f78772322e376798c2db8be56f686fa80afac6257f7d51a1e9d094953",
+    "bytes": 12029741
+   },
+   "lines_v3_test.csv": {
+    "sha256": "ded4ca7dbaf9451d2b476865ac4a94f0a3147aeb630b26d4b3e7fc20f0a099a4",
+    "bytes": 29414
+   }
+  }
+ },
+ "environment": {
+  "python": "3.11.17",
+  "numpy": "1.26.4",
+  "pandas": "3.0.6",
+  "scipy": "1.17.1",
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+ },
+ "command": "build_ligature_dataset.py --root $LOCAL/data/ouhdl --lengths letter_lengths.json --out $LOCAL/data/ouhdl_ligatures_v3 --check-test ../v3_len/units_v3_test.json"
+}

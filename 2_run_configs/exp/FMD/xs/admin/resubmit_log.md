@@ -1,0 +1,1 @@
+- 2026-11-07T13:43:48Z sd3-medium-diffusers_W: job 24866386 FAILED exit 7:0 node <node> -> resubmit 1/2 job 24957069 rc=0; sbatch -J fx_sd3-medium-diffusers_W --nice=5000 --hold -p gpuidle,b200idle --gres=gpu:2 --exclude=dgx[001-005],gpu[004-005,008,013-014,017-023,119-148],<node> $U/exp/FMD/xs/code/fmdx_backbone_v1/jobs/clusterA_arm.sbatch sd3-medium-diffusers_W

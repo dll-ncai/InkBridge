@@ -1,0 +1,209 @@
+{
+ "schema": "fmd_meta/1",
+ "kind": "fmdx_screen_rows",
+ "created_utc": "2026-11-05T13:56:13Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "code": {
+  "files": {
+   "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+   "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+   "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+   "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+   "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+   "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+   "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+   "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+   "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+   "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+  },
+  "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "command": "$U/exp/FMD/code/fmd_ext_genvlm/gv_post.py",
+ "env": {
+  "python": "3.11.13",
+  "host": "<node>",
+  "platform": "Linux-5.14.0-687.61.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "slurm_job_id": "24903135",
+  "numpy": "2.2.6",
+  "torch": "2.7.1+cu128",
+  "cv2": "4.12.0"
+ },
+ "inputs": {
+  "part arabic-english-hw-ocr-v3": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/arabic-english-hw-ocr-v3__zeroshot.json",
+   "sha256": "15ad9daeb233be7137957cf281c263c178c08ef9a8fd9b5c998a346db2ea705a"
+  },
+  "part arabic-ocr-deepseek-ocr-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/arabic-ocr-deepseek-ocr-2.json",
+   "sha256": "f287586176628f533c87df014e2c28f7c414223913975ae568fb1c835e06876b"
+  },
+  "part chandra-ocr-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/chandra-ocr-2__zeroshot.json",
+   "sha256": "ca56b77282bcd62e28886fff14e4933c932a94e9a59d21f2fb391c0396b9115a"
+  },
+  "part chandra": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/chandra__zeroshot.json",
+   "sha256": "a13c1f1963fc788ee472d61c2ed34f74725bd0b9a5fba888069ef727c3f8b2c4"
+  },
+  "part cleandift-sd15": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/cleandift-sd15.json",
+   "sha256": "fdd60211b59b33cddee40d081a63773aaafaff49ca2749500b219eb007c694e3"
+  },
+  "part cleandift-sd21": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/cleandift-sd21.json",
+   "sha256": "e4cd71c0130ffc8c36c6ff81f3918dc97e1f82f372d52a551db7e1146880c535"
+  },
+  "part deepseek-ocr-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/deepseek-ocr-2__zeroshot.json",
+   "sha256": "ee48039ae4f949a1d65d7431eb365404ef0151534b15239f57a45307bc770cf3"
+  },
+  "part deepseek-ocr": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/deepseek-ocr__zeroshot.json",
+   "sha256": "fe7bbb815b3e75aa6ed6b276581bd351ea594989b55347687a2c79073a501f7b"
+  },
+  "part dots-ocr": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/dots-ocr__zeroshot.json",
+   "sha256": "ffc039b3ce81353bad01a1eff314af2fb03a326465d7966541faa4e402cfa47f"
+  },
+  "part flux1-dev": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/flux1-dev.json",
+   "sha256": "0c9eb04c90edd380744e68edd1d75acc0b8d8fff9fc68368cf66f39b705534a6"
+  },
+  "part flux1-schnell": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/flux1-schnell.json",
+   "sha256": "d3b266781047dc7eb2c2703716fb95f9d56c60a157fe7ea3535bdb89e5573da4"
+  },
+  "part got-ocr2-hf": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/got-ocr2-hf.json",
+   "sha256": "077f0ae405987015a09269dd2f65a67eb9f265f72dd336d5f2efaf3b2ad46ab3"
+  },
+  "part inksight_small_p": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/inksight_small_p__trajzs.json",
+   "sha256": "91ce8d4560dc5b0fb74eae3f95281b5615f310e42a9f3d387ee0faff33b0bc1f"
+  },
+  "part lightonocr-2-1b": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/lightonocr-2-1b.json",
+   "sha256": "0436fb0057114ca7bd96ef655fcad9d65d68c29b9f5abeea73e07c156180f9c7"
+  },
+  "part paddleocr-vl-1.6": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/paddleocr-vl-1.6.json",
+   "sha256": "8659c0aa48479ed7eb8ca7770c147836df61bae025cb6f5ee86a2f734f9efc06"
+  },
+  "part qaari-0.1-urdu-ocr": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/qaari-0.1-urdu-ocr__zeroshot.json",
+   "sha256": "5262c24ae22affc26d83fb99097aab2dd43e5a62eb0841f1bcdca4e0e2b70685"
+  },
+  "part qari-ocr-v0.3-vl-2b": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/qari-ocr-v0.3-vl-2b__zeroshot.json",
+   "sha256": "47820772af868442f6a96d22bfd3e212cb7dbb458f58669379d51598c8962118"
+  },
+  "part qwen2-vl-2b-instruct": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/qwen2-vl-2b-instruct__zeroshot.json",
+   "sha256": "35949784d4e2c352d8edd5694c20f8a6658860200c0ea4da11f9021652d8c52e"
+  },
+  "part qwen3-vl-8b-instruct": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/qwen3-vl-8b-instruct__zeroshot.json",
+   "sha256": "969fd7b0b8445829a4afd197b3dbb7bfc9d21c79945174a5c08400c37ad00180"
+  },
+  "part qwen3.5-4b": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/qwen3.5-4b__zeroshot.json",
+   "sha256": "8f72fcb3e91e56d146a83d12969af5ba8601f5365b69e2e100e499d7aef4832c"
+  },
+  "part sd1.5-dift": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/sd1.5-dift.json",
+   "sha256": "e91900590d49ed5f2b59dcf5fff1908c3b7f1dd630b54da0c48739ab7c4d9243"
+  },
+  "part sd2.1-dift": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/sd2.1-dift.json",
+   "sha256": "3dd44aabdb3d4361980b526548f99404c95dbfe24af40bbbc9662410dfdeab1a"
+  },
+  "part sd3-medium-diffusers": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/sd3-medium-diffusers.json",
+   "sha256": "551d796b73841df3de70ce07eafb07c9b9a200bed5bc4bc422ae0648df8f45a4"
+  },
+  "part sd3.5-large-diffusers-layout": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/sd3.5-large-diffusers-layout.json",
+   "sha256": "b7c5eb82563ac526667f4d5f2ed520fe78de4823e9e14ecaa7f385a946e6ddc9"
+  },
+  "part sd3.5-large-turbo-diffusers-layout": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/sd3.5-large-turbo-diffusers-layout.json",
+   "sha256": "bb7ab17f1a0782ef10b985589546bb5fbba8dae346064281418a124f10766271"
+  },
+  "part sd3.5-medium-diffusers-layout": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/sd3.5-medium-diffusers-layout.json",
+   "sha256": "3d664b65188b430c4f18aec90e2a9a3d0b2dfeb4f7cdf25e1c0131354cd8387f"
+  },
+  "part urdu-ocr-deepseek-nomy": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/urdu-ocr-deepseek-nomy__zeroshot.json",
+   "sha256": "6cbc159c4e3a8e271a05577d22caaf48c9384e7099ccaced977a8a614d96aecd"
+  },
+  "part urdu-ocr-deepseek-ocr2-kingabzpro": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/casia_zh_val250/urdu-ocr-deepseek-ocr2-kingabzpro__zeroshot.json",
+   "sha256": "4a1dadab4494371437de5377e5811b3ecf8771fda0161509d7080370a6942eee"
+  }
+ },
+ "params": {
+  "set_id": "casia_zh_val250",
+  "track": "genvlm",
+  "schema": "v1 (fmd_harness.screen_rows.SCHEMA)",
+  "comparators": [
+   "luo6:mid16",
+   "luo6:cat16",
+   "joint9:mid16",
+   "joint9:cat16"
+  ],
+  "delta_T0": 0.01035,
+  "boot_B": 2000,
+  "boot_seed": 20261103,
+  "prereg": "FMD_PREREG_2026-11-03.md A3.2/A3.5/A5.1"
+ },
+ "outputs": {
+  "$U/exp/FMD/xs/screen/rows_xs_genvlm_casia_zh_val250.csv": "daea510804a57442b6e6b5b21006eca23eebdbbbf7ff9444a5f54e0ac2ef1862"
+ },
+ "n_rows": 1001,
+ "fms": [
+  "arabic-english-hw-ocr-v3",
+  "arabic-ocr-deepseek-ocr-2",
+  "chandra",
+  "chandra-ocr-2",
+  "cleandift-sd15",
+  "cleandift-sd21",
+  "deepseek-ocr",
+  "deepseek-ocr-2",
+  "dots-ocr",
+  "flux1-dev",
+  "flux1-schnell",
+  "got-ocr2-hf",
+  "inksight_small_p",
+  "lightonocr-2-1b",
+  "paddleocr-vl-1.6",
+  "qaari-0.1-urdu-ocr",
+  "qari-ocr-v0.3-vl-2b",
+  "qwen2-vl-2b-instruct",
+  "qwen3-vl-8b-instruct",
+  "qwen3.5-4b",
+  "sd1.5-dift",
+  "sd2.1-dift",
+  "sd3-medium-diffusers",
+  "sd3.5-large-diffusers-layout",
+  "sd3.5-large-turbo-diffusers-layout",
+  "sd3.5-medium-diffusers-layout",
+  "urdu-ocr-deepseek-nomy",
+  "urdu-ocr-deepseek-ocr2-kingabzpro"
+ ],
+ "xs_code": {
+  "files": {
+   "__init__.py": "ce6fc8aa99758f3c13a2b3a770bc511f213d7979a8a03ef0b293756159495c78",
+   "fmdx_verdicts.py": "67c78eabf6ace3d9b0bc6ab3f4501d305f175d732368893b443a0037dd902a52",
+   "xs_common.py": "46f865ed36b9d8159ecfc812d02b8ace5ec9a6d87915cf99d568aec7016704a0",
+   "xs_extract.py": "8dfd370dbea40b16d83aeeade38ce0f6c101a267a0d3972c7526f0d9e86ae478",
+   "xs_plan.py": "811bfbe873fa5bf1c1dd8b8a5c64e22e6a13550753f885beee588bb5f844de59",
+   "xs_probe.py": "6dbb3ad424a2252fd4e5c1be3544ed550bc4e0d8c9e3cef6b536fa96f727efb8",
+   "xs_rows.py": "093862bb4a99f9c69398ca99f4a34c3739ef7822b0f9f29fa0ceca67abdc8c81",
+   "xs_targets.py": "6547a725d9fef182aebe554aafcb6fe4ebf5e0dcf79b1a776da1a223f0b2b7a5",
+   "xs_worker.py": "4c6a5e87b2a8dc7de5651ef7120db10368922d0ff21a35ce5a01df6194e45973"
+  },
+  "combined": "b4323c86e0baa10bf4599fb350d109c02785c0016467525946f04f5585b08ede",
+  "version": "fmd_harness_xs 1.0.0 (2026-11-03)"
+ }
+}

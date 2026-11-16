@@ -1,0 +1,709 @@
+{
+ "track": "Encoders",
+ "lane": "FMD",
+ "phase": 1,
+ "created_utc": "2026-11-03T02:49:12Z",
+ "sub_agent_model": "<agent>",
+ "model_reason": "new extraction code + verdict-setting pre-registered probes = <agent> (<author>'s 30 Oct 2026 sub-agent model policy)",
+ "prereg": {
+  "path": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+  "sha256": "6ad98ab4c1f4455535afd468b9144df43bb26ed1aa6a091db79cfc669c896035"
+ },
+ "harness": {
+  "version": "fmd_harness 1.0.1",
+  "dir": "$U/exp/FMD/code/fmd_harness_v1",
+  "tar_sha256": "a5b69f7b0753b2c486b5f2a297111f1cfdbb68b0ac0c1f2bf9c358bf6fcf53e3",
+  "edited": false
+ },
+ "ext_code": {
+  "dir": "$U/exp/FMD/code/fmd_ext_encoders",
+  "files": {
+   "build_provenance.py": "b92aba761565719036e5a616b4c530987f555b594efea393e487b121c0aae690",
+   "check_sam2_load.py": "8fbbe162378d5941c7b6d60efc76a6ecddc581f39c92cf8569609b3f7405f142",
+   "fmd_ext_encoders.py": "4674bb2bea9e3f98776edb9079b2961a91141a6d13d241ed22273f5f0bb2e064",
+   "jobs/check_sam2_load.sbatch": "c0804d215e3e2bc0668e8bb18147825f3016ab0a131dd08cf46735ba56cebb52",
+   "jobs/enc_extract.sbatch": "7840aec18f769a63c01c4f61f07865b52eb36d1e9f54f836f2cba16e29c94f2b",
+   "jobs/enc_extract_a30.sbatch": "19fd1e094530fb63e9c55653a7990d96c518e58d8fcf33f45e31333c4842f1a4",
+   "jobs/enc_probe.sbatch": "4fb969916db5592c749c344c05c3c70f54242e4ac1b45d528dcbda9fca2ebc16",
+   "jobs/enc_probe_tasks.txt": "21f6c69148d49d9420f26cf05f67d923603b4b323a0a98b199a637cff41d5bca",
+   "jobs/enc_rows.sbatch": "6166e890c4fa858ed2df39d5637668e798e1a59f8ec225a9ab8ff2ef0ff4b40c",
+   "jobs/nomL2_extract.sbatch": "900b9fa22762aeb72b5bdfa49cab3df7425845819712fe75c501003e43961fa5",
+   "jobs/nomL2_probe_tasks.txt": "acd158ed54e5f3c63639247afca0bd3953dc96943976b20c5015f99098651aa3",
+   "jobs/nomL2_watch.sbatch": "70ced826c2c393134a0ec16f262907c91d5e06665c57baf3f5ce8cc6287695e7",
+   "make_rows.py": "1ea40783575b3b506233ce4fef0b028ab4a7ed576592d450601519a63468d9d1",
+   "nomL2_addendum.py": "64eb001e0340ac6c6db5e17cb2dcbb067e30a90d76b49bdf13daacdf7840c3ca"
+  }
+ },
+ "inputs": {
+  "render_npz": {
+   "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+   "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+  },
+  "targets_G16": {
+   "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+   "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+  },
+  "targets_G14": {
+   "path": "$U/exp/FMD/data/fmd_targets_G14_val1000.npz",
+   "sha256": "5135131c46c2a900a9f20fa8cadb4ab245a43c249bac8181961c6d3f19caa025"
+  },
+  "val1000_units": {
+   "path": "$U/exp/FMD/data/val1000_units.csv",
+   "sha256": "ecf35c304b40d842278f138c92bbb5ee01546d11f120cbc95b5533978ff34ea6"
+  },
+  "weights_manifest": {
+   "path": "$U/exp/FMD/weights/MANIFEST.json",
+   "sha256": "4e921b874863edde978562b1b3cfe225f52b08012dac9361e8e3c84757eb1653"
+  },
+  "sam2_load_check": {
+   "n_model_vision_tensors": 306,
+   "n_file_keys": 613,
+   "missing_in_file": [],
+   "mismatched": [],
+   "matched": 306,
+   "file_vision_keys_not_in_model": [],
+   "file_key_prefixes": [
+    "mask_decoder",
+    "mask_downsample",
+    "memory_attention",
+    "memory_encoder",
+    "memory_temporal_positional_encoding",
+    "no_memory_embedding",
+    "no_memory_positional_encoding",
+    "no_object_pointer",
+    "object_pointer_proj",
+    "occlusion_spatial_embedding_parameter",
+    "prompt_encoder",
+    "shared_image_embedding",
+    "temporal_positional_encoding_projection_layer",
+    "vision_encoder"
+   ],
+   "ok": true
+  }
+ },
+ "jobs": {
+  "24829922": "API inspection (cpuidle)",
+  "24829925": "duplicate inspection job, cancelled before start by this track",
+  "24829971": "feature extraction array tasks 1-4 = dinov2, dinov3, siglip2, sam2.1 (gpuidle, RTX A4000, max 2 concurrent; per-task SLURM_JOB_ID in features.<fm:layer>.slurm_job_id)",
+  "24830015": "SAM2 vision-encoder weight-load check (cpuidle)",
+  "24830002": "probe array tasks 1-4 (DINOv2, DINOv3; cpuidle 16 CPUs)",
+  "24830003": "probe array tasks 5-8 (SigLIP2, SAM2.1; cpuidle 16 CPUs)",
+  "24830094": "rows + verdicts (nomL1-only comparator)",
+  "24830149": "sbatch-from-compute-node test (cpuidle)",
+  "24830157": "nomL2 watcher chain (cpuidle, <= 24 h)"
+ },
+ "gpu_usage": "<= 2 GPUs concurrently (array %2), total GPU wall about 7 min",
+ "features": {
+  "dinov2-large:last": {
+   "path": "$U/exp/FMD/features/dinov2-large/last__val1000.npy",
+   "sha256": "3325e20aefec258f47a042d6f08b47182ef4cc52fed158325bcfe26f50e1891a",
+   "meta_sha256": "fcb1183be7b23e4c37734775ba1c14c6ba1b14590d6ed0c2ac78a6bd2b660143",
+   "native_shape": [
+    1000,
+    16,
+    16,
+    1024
+   ],
+   "slurm_job_id": "24829979",
+   "host": "<node>",
+   "gpu": "NVIDIA RTX A4000",
+   "weight_file_sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+   "sha_in_staging_manifest": true,
+   "max_abs": 17.92672348022461,
+   "nonfinite_fp16": 0,
+   "layer_def": "last_hidden_state[:,1:] (final layernorm)",
+   "ext_code": "2889dc8b8c627a98b25f39d6ca31ad4a3ad62fde7b6396a7042d1e3c4cb44e85",
+   "harness_code": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c",
+   "render_npz": {
+    "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+    "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+   }
+  },
+  "dinov2-large:mid": {
+   "path": "$U/exp/FMD/features/dinov2-large/mid__val1000.npy",
+   "sha256": "40aa42f8ef441de66e283c23ab317fa283f7b60e70c0c5a8af7c607041507b34",
+   "meta_sha256": "31f590632b1fc4719c7f58140c25dd664c7746dfd8a767ddd4911d4a49b78227",
+   "native_shape": [
+    1000,
+    16,
+    16,
+    1024
+   ],
+   "slurm_job_id": "24829979",
+   "host": "<node>",
+   "gpu": "NVIDIA RTX A4000",
+   "weight_file_sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+   "sha_in_staging_manifest": true,
+   "max_abs": 1.6416032314300537,
+   "nonfinite_fp16": 0,
+   "layer_def": "hidden_states[12] [:,1:] (block 12 of 24, no final norm)",
+   "ext_code": "2889dc8b8c627a98b25f39d6ca31ad4a3ad62fde7b6396a7042d1e3c4cb44e85",
+   "harness_code": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c",
+   "render_npz": {
+    "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+    "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+   }
+  },
+  "dinov3-vitl16:last": {
+   "path": "$U/exp/FMD/features/dinov3-vitl16/last__val1000.npy",
+   "sha256": "a02cfe35c01ee1775a5cc607af6de9b09c94dc4ff26431227245a1df37562a2f",
+   "meta_sha256": "cbffd23a650a819ade47e5f7ea8dd4e5ad413f69660b7bbb2417d80afa8d18f0",
+   "native_shape": [
+    1000,
+    14,
+    14,
+    1024
+   ],
+   "slurm_job_id": "24829980",
+   "host": "<node>",
+   "gpu": "NVIDIA RTX A4000",
+   "weight_file_sha256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179",
+   "sha_in_staging_manifest": true,
+   "max_abs": 3.9179201126098633,
+   "nonfinite_fp16": 0,
+   "layer_def": "last_hidden_state[:,5:] (final norm; CLS + 4 registers dropped)",
+   "ext_code": "2889dc8b8c627a98b25f39d6ca31ad4a3ad62fde7b6396a7042d1e3c4cb44e85",
+   "harness_code": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c",
+   "render_npz": {
+    "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+    "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+   }
+  },
+  "dinov3-vitl16:mid": {
+   "path": "$U/exp/FMD/features/dinov3-vitl16/mid__val1000.npy",
+   "sha256": "fc0a18f5180abef6bb8495614018bd521845e94309f85868e25958c3fff3c682",
+   "meta_sha256": "02f301d486b8f3fa155e6b07eee3301aae512100e6508c65a3623b0fb10ed97f",
+   "native_shape": [
+    1000,
+    14,
+    14,
+    1024
+   ],
+   "slurm_job_id": "24829980",
+   "host": "<node>",
+   "gpu": "NVIDIA RTX A4000",
+   "weight_file_sha256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179",
+   "sha_in_staging_manifest": true,
+   "max_abs": 57.195003509521484,
+   "nonfinite_fp16": 0,
+   "layer_def": "hidden_states[12] [:,5:] (block 12 of 24)",
+   "ext_code": "2889dc8b8c627a98b25f39d6ca31ad4a3ad62fde7b6396a7042d1e3c4cb44e85",
+   "harness_code": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c",
+   "render_npz": {
+    "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+    "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+   }
+  },
+  "siglip2-so400m-patch14-224:last": {
+   "path": "$U/exp/FMD/features/siglip2-so400m-patch14-224/last__val1000.npy",
+   "sha256": "12d3d1fe27cc7f4cb54e88dfd81b19295176495baf591ce5bfa9390a6135acc4",
+   "meta_sha256": "90822b12b2a37abc8c3d48c59fc69b40bde4156c96c0136c93ab06733f40ec33",
+   "native_shape": [
+    1000,
+    16,
+    16,
+    1152
+   ],
+   "slurm_job_id": "24829995",
+   "host": "<node>",
+   "gpu": "NVIDIA RTX A4000",
+   "weight_file_sha256": "2041e5330b3db96299b26bc3a6506c7fa8d5e61d5c94f267dd8aa4cfb12c1050",
+   "sha_in_staging_manifest": true,
+   "max_abs": 32.721824645996094,
+   "nonfinite_fp16": 0,
+   "layer_def": "vision_model last_hidden_state (post-layernorm)",
+   "ext_code": "2889dc8b8c627a98b25f39d6ca31ad4a3ad62fde7b6396a7042d1e3c4cb44e85",
+   "harness_code": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c",
+   "render_npz": {
+    "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+    "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+   }
+  },
+  "siglip2-so400m-patch14-224:mid": {
+   "path": "$U/exp/FMD/features/siglip2-so400m-patch14-224/mid__val1000.npy",
+   "sha256": "c838baf4b183ff69cd2c8cbc3d5af908dd267265bd338c2b34b6b18601259786",
+   "meta_sha256": "5b9721949bd9fa493f0f73d136c85dd215caa5db60c54f98f044bf6017c2a37a",
+   "native_shape": [
+    1000,
+    16,
+    16,
+    1152
+   ],
+   "slurm_job_id": "24829995",
+   "host": "<node>",
+   "gpu": "NVIDIA RTX A4000",
+   "weight_file_sha256": "2041e5330b3db96299b26bc3a6506c7fa8d5e61d5c94f267dd8aa4cfb12c1050",
+   "sha_in_staging_manifest": true,
+   "max_abs": 2067.756591796875,
+   "nonfinite_fp16": 0,
+   "layer_def": "vision_model hidden_states[13] of 27",
+   "ext_code": "2889dc8b8c627a98b25f39d6ca31ad4a3ad62fde7b6396a7042d1e3c4cb44e85",
+   "harness_code": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c",
+   "render_npz": {
+    "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+    "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+   }
+  },
+  "sam2.1-hiera-base-plus:last": {
+   "path": "$U/exp/FMD/features/sam2.1-hiera-base-plus/last__val1000.npy",
+   "sha256": "5e48ce6c38a5c6ff3d205f951aacda9c60e2bbfa9a1c98a0d5283da63529d1d8",
+   "meta_sha256": "f4da016c7fe812e7c44234e10c8c8c98da6073492006ca87c175c6ae6c61e401",
+   "native_shape": [
+    1000,
+    64,
+    64,
+    256
+   ],
+   "slurm_job_id": "24829971",
+   "host": "<node>",
+   "gpu": "NVIDIA RTX A4000",
+   "weight_file_sha256": "2012733a0de5d03efd1bba550a2847c4551be9ef2e0d497c83074df66189f780",
+   "sha_in_staging_manifest": true,
+   "max_abs": 2.4906327724456787,
+   "nonfinite_fp16": 0,
+   "layer_def": "vision_encoder(...).fpn_hidden_states[-1] (neck, stride 16, 256 ch, 64x64 at 1024)",
+   "ext_code": "2889dc8b8c627a98b25f39d6ca31ad4a3ad62fde7b6396a7042d1e3c4cb44e85",
+   "harness_code": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c",
+   "render_npz": {
+    "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+    "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+   }
+  },
+  "sam2.1-hiera-base-plus:mid": {
+   "path": "$U/exp/FMD/features/sam2.1-hiera-base-plus/mid__val1000.npy",
+   "sha256": "05d499cda4d36cfba865c1580c7b0808581af86ef0e0018ce1fd568da7b58806",
+   "meta_sha256": "aa4edd9e0deb8a6aaa645911161b09704bf0b483fbcac5b275be724953eaff67",
+   "native_shape": [
+    1000,
+    64,
+    64,
+    448
+   ],
+   "slurm_job_id": "24829971",
+   "host": "<node>",
+   "gpu": "NVIDIA RTX A4000",
+   "weight_file_sha256": "2012733a0de5d03efd1bba550a2847c4551be9ef2e0d497c83074df66189f780",
+   "sha_in_staging_manifest": true,
+   "max_abs": 118.5155029296875,
+   "nonfinite_fp16": 0,
+   "layer_def": "vision_encoder backbone intermediate_hidden_states[2] (Hiera stage-3 output, 448 ch, stride 16)",
+   "ext_code": "2889dc8b8c627a98b25f39d6ca31ad4a3ad62fde7b6396a7042d1e3c4cb44e85",
+   "harness_code": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c",
+   "render_npz": {
+    "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+    "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+   }
+  }
+ },
+ "probe_units": {
+  "dinov2-large:last:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov2-large__last__linear__G16__val1000.units.csv.gz",
+   "sha256": "06eeb18d8ef197019ea72294ea16e6e99b83a49e52ac12b5f92a6c0f13e6cad0",
+   "grid": 16,
+   "slurm_job_id": "24830006",
+   "host": "<node>",
+   "seconds": 123.3,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "dinov2-large:last:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov2-large__last__attn__G16__val1000.units.csv.gz",
+   "sha256": "cf83d92494112750ec9de4ff8ca3f59d0c906c5bd5cccd81c097157ec49badb3",
+   "grid": 16,
+   "slurm_job_id": "24830006",
+   "host": "<node>",
+   "seconds": 460.3,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "dinov2-large:mid:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov2-large__mid__linear__G16__val1000.units.csv.gz",
+   "sha256": "43374798c25af58228deca19970623458c8f4cc924fb7cae6e09f84f94dd2e3b",
+   "grid": 16,
+   "slurm_job_id": "24830007",
+   "host": "<node>",
+   "seconds": 227.4,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "dinov2-large:mid:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov2-large__mid__attn__G16__val1000.units.csv.gz",
+   "sha256": "0ab4a9d5cfafc89713ad5860e99534c3a2fa409a69783c7d91fa8dd78388afd4",
+   "grid": 16,
+   "slurm_job_id": "24830007",
+   "host": "<node>",
+   "seconds": 668.0,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "dinov3-vitl16:last:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov3-vitl16__last__linear__G14__val1000.units.csv.gz",
+   "sha256": "245b39d4a492fcd6a6d54ddfd678aac9a033130b0931be239487b2f04f0e7173",
+   "grid": 14,
+   "slurm_job_id": "24830008",
+   "host": "<node>",
+   "seconds": 160.2,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G14_val1000.npz",
+    "sha256": "5135131c46c2a900a9f20fa8cadb4ab245a43c249bac8181961c6d3f19caa025"
+   }
+  },
+  "dinov3-vitl16:last:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov3-vitl16__last__attn__G14__val1000.units.csv.gz",
+   "sha256": "b72246f89b28217b4a12c41ab7cc38facaf3303acdbc4166225167455ddb1de8",
+   "grid": 14,
+   "slurm_job_id": "24830008",
+   "host": "<node>",
+   "seconds": 721.2,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G14_val1000.npz",
+    "sha256": "5135131c46c2a900a9f20fa8cadb4ab245a43c249bac8181961c6d3f19caa025"
+   }
+  },
+  "dinov3-vitl16:mid:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov3-vitl16__mid__linear__G14__val1000.units.csv.gz",
+   "sha256": "c044e27ba1662f5753d07095131b35e55fcf83455556b8fd8bb406388f306d14",
+   "grid": 14,
+   "slurm_job_id": "24830002",
+   "host": "<node>",
+   "seconds": 44.0,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G14_val1000.npz",
+    "sha256": "5135131c46c2a900a9f20fa8cadb4ab245a43c249bac8181961c6d3f19caa025"
+   }
+  },
+  "dinov3-vitl16:mid:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov3-vitl16__mid__attn__G14__val1000.units.csv.gz",
+   "sha256": "758f678970c1973b84df79076a50e546d26ae30612f8d4ca906388933bf860ac",
+   "grid": 14,
+   "slurm_job_id": "24830002",
+   "host": "<node>",
+   "seconds": 177.6,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G14_val1000.npz",
+    "sha256": "5135131c46c2a900a9f20fa8cadb4ab245a43c249bac8181961c6d3f19caa025"
+   }
+  },
+  "siglip2-so400m-patch14-224:last:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/siglip2-so400m-patch14-224__last__linear__G16__val1000.units.csv.gz",
+   "sha256": "318d7c1d18451bd55ab7a2e27eb314be371ecbb14b37acaa497582bb0ee5cc6b",
+   "grid": 16,
+   "slurm_job_id": "24830020",
+   "host": "<node>",
+   "seconds": 62.3,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "siglip2-so400m-patch14-224:last:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/siglip2-so400m-patch14-224__last__attn__G16__val1000.units.csv.gz",
+   "sha256": "7fafc007b5ad940e965138bc54553f5ee71b8d9859e89b9381c48eff50f9aa1a",
+   "grid": 16,
+   "slurm_job_id": "24830020",
+   "host": "<node>",
+   "seconds": 225.9,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "siglip2-so400m-patch14-224:mid:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/siglip2-so400m-patch14-224__mid__linear__G16__val1000.units.csv.gz",
+   "sha256": "2cb44470d48d149d816865606164dc9f06a9b9ca31bc3380aa6dd5c5047695cb",
+   "grid": 16,
+   "slurm_job_id": "24830021",
+   "host": "<node>",
+   "seconds": 65.0,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "siglip2-so400m-patch14-224:mid:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/siglip2-so400m-patch14-224__mid__attn__G16__val1000.units.csv.gz",
+   "sha256": "3a82c4e96b1f926e4814cbed85107a4fdc7cda2169d0f078a5ad27cc2fb82c39",
+   "grid": 16,
+   "slurm_job_id": "24830021",
+   "host": "<node>",
+   "seconds": 226.3,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "sam2.1-hiera-base-plus:last:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/sam2.1-hiera-base-plus__last__linear__G16__val1000.units.csv.gz",
+   "sha256": "683e628a041265b4d7edddcd092ee265145e22ec51bc37371583b56b8b873c97",
+   "grid": 16,
+   "slurm_job_id": "24830022",
+   "host": "<node>",
+   "seconds": 28.1,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "sam2.1-hiera-base-plus:last:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/sam2.1-hiera-base-plus__last__attn__G16__val1000.units.csv.gz",
+   "sha256": "d6afae56359597ad498436f51dd715cb0546327bb2a9e9594190416d79069070",
+   "grid": 16,
+   "slurm_job_id": "24830022",
+   "host": "<node>",
+   "seconds": 186.9,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "sam2.1-hiera-base-plus:mid:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/sam2.1-hiera-base-plus__mid__linear__G16__val1000.units.csv.gz",
+   "sha256": "875831a34c2946ff4d6ae2a4c663a3f128461164789e90f85e2c7ccee17d94f6",
+   "grid": 16,
+   "slurm_job_id": "24830003",
+   "host": "<node>",
+   "seconds": 72.2,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  },
+  "sam2.1-hiera-base-plus:mid:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/sam2.1-hiera-base-plus__mid__attn__G16__val1000.units.csv.gz",
+   "sha256": "c63f3bc75d93a36e8c31f99fa4d4d788df2e002a536aa8d9248fc3b49d548c83",
+   "grid": 16,
+   "slurm_job_id": "24830003",
+   "host": "<node>",
+   "seconds": 248.3,
+   "n_units": 1000,
+   "n_writers": 31,
+   "fold_sizes": [
+    211,
+    199,
+    199,
+    197,
+    194
+   ],
+   "targets": {
+    "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+    "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+   }
+  }
+ },
+ "baseline_units_used": {
+  "nomL1:mid16:linear:G14": true,
+  "nomL1:mid16:attn:G14": true,
+  "nomL1:mid16:linear:G16": true,
+  "nomL1:mid16:attn:G16": true,
+  "nomL1:cat16:linear:G14": true,
+  "nomL1:cat16:attn:G14": true,
+  "nomL1:cat16:linear:G16": true,
+  "nomL1:cat16:attn:G16": true,
+  "nomL2:mid16:linear:G14": false,
+  "nomL2:mid16:attn:G14": false,
+  "nomL2:mid16:linear:G16": false,
+  "nomL2:mid16:attn:G16": false,
+  "nomL2:cat16:linear:G14": false,
+  "nomL2:cat16:attn:G14": false,
+  "nomL2:cat16:linear:G16": false,
+  "nomL2:cat16:attn:G16": false
+ },
+ "rows": {
+  "path": "$U/exp/FMD/screen/rows_encoders.csv",
+  "sha256": "05a5df4921ffc1352095ab65d93bf2ec64e9778956f6d9c333020e9168f46a31",
+  "meta_sha256": "12e697b12283a535caebd39c4f9be22304dbd12312d2b72cae86474545cd38de"
+ },
+ "verdicts": {
+  "path": "$U/exp/FMD/screen/verdicts_encoders.json",
+  "sha256": "3e41f6d912f55bcbb7edaa45ef3a12d506ea005cef471b9ccc7e35663aa25de3",
+  "encoder_family": {
+   "encoder": {
+    "verdict": "PASS",
+    "fms": {
+     "dinov2-large": {
+      "order_pass": [
+       "T2:rprec(last,linear)"
+      ],
+      "shape_NI": false,
+      "fm_pass": false
+     },
+     "dinov3-vitl16": {
+      "order_pass": [
+       "T2:rprec(last,linear)"
+      ],
+      "shape_NI": true,
+      "fm_pass": true
+     },
+     "sam2.1-hiera-base-plus": {
+      "order_pass": [
+       "T2:rprec(last,linear)"
+      ],
+      "shape_NI": false,
+      "fm_pass": false
+     },
+     "siglip2-so400m-patch14-224": {
+      "order_pass": [
+       "T2:rprec(last,linear)",
+       "T3:rprec(last,linear)"
+      ],
+      "shape_NI": false,
+      "fm_pass": false
+     }
+    }
+   }
+  }
+ },
+ "n_order_tests_gate_layer": 16,
+ "multiplicity": "no correction (prereg 4)",
+ "nomL2": "nomL2 baseline units absent: best nominee chosen within nomL1 {mid16, cat16} only",
+ "nomL2_chain": {
+  "watch_job": "24830157",
+  "script": "$U/exp/FMD/code/fmd_ext_encoders/jobs/nomL2_watch.sbatch",
+  "marker": "$U/exp/FMD/logs/encoders/nomL2_chain_submitted.json",
+  "addendum": "$U/exp/FMD/screen/PROVENANCE_FMD_encoders_nomL2_addendum.json",
+  "nomL1only_copies": "$U/exp/FMD/screen/rows_encoders_nomL1only.csv (+ .meta.json, verdicts_encoders_nomL1only.json), written when triggered"
+ }
+}

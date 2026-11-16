@@ -1,0 +1,479 @@
+{
+ "title": "frame_code smoke report (Mac, CPU only; no GPU job run) \u2014 2026-10-28",
+ "code_tag": "5dd59e88",
+ "host": {
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "python": "3.11.17",
+  "torch": "2.13.0",
+  "uhwr_eval": "0.3.1 (code/lib)",
+  "env": "conda uhwr-eval + pip wandb, lmdb"
+ },
+ "WARNING": "every number below comes from 4-8 unit smokes or untrained/4-step models; none is a result",
+ "fetched_from_clusterA": {
+  "SHA256_remote.txt": {
+   "bytes": 1045,
+   "sha256": "d7072c9b2b16e71b4108532c499455b0077d14e5d5eba179510c1573969b8b87"
+  },
+  "checkpoint_000006.pt.sha256": {
+   "bytes": 121,
+   "sha256": "9574d4a14a47b89b89707af17a0995e838027d2e0d164966a33ea7ddec74ae13"
+  },
+  "d3route_code_dirs.tar.gz": {
+   "bytes": 29668,
+   "sha256": "4a30b64c9cb1981ee8583d35fd261aaa459a95f0fc8cd98c3d09c333b2778bb7"
+  },
+  "luo_ms6_model_ema.pt": {
+   "bytes": 217342669,
+   "sha256": "5f8eb2018db93cb5821c4eb06dc9d490204562b88ed8fdba7afe2401317a6d50",
+   "note": "model+EMA tensors of exp/M5/runs/luo/checkpoints/checkpoint_000006.pt (sha256 ab6b178d032d90e5ec86f5140e3dd166e0bda497b019d88d6d3fab5da646812c, 434,608,395 B); opt+scaler dropped on the CLUSTER-A login node to fit the 256 MB transfer cap (strip_ckpt.py)"
+  },
+  "luo_ms6_model_ema.pt.json": {
+   "bytes": 594,
+   "sha256": "e2318d0e4ed745dc9b446d6119d60037ef9505d0a5ea93614520b5f24a2f8ced"
+  },
+  "m5_ft_ouhdl_p01.npz": {
+   "bytes": 2086428,
+   "sha256": "0e71475d6094b69a10dd1301bf05662e37816471407d2ee6e08a700a6780aad5"
+  },
+  "m5_luo_train_slice200.json": {
+   "bytes": 391,
+   "sha256": "e1d63d513a0e005f08db12dd164a934cee09011363c9d4cc30859e19258fc2a8"
+  },
+  "m5_luo_train_slice200.npz": {
+   "bytes": 508665,
+   "sha256": "ba275e9938589c660714ab7d2c61b209c2e2516ecc7b6fa97692d0bcaad2800a",
+   "note": "first 50 units per script (casia_en, casia_zh, hpl_tamil, iam) of m5_luo_train.npz in stored order (slice.py); smoke stand-in for the 80k-unit shard"
+  },
+  "nagamatsu_repo_7c5cf623_nodata.tar.gz": {
+   "bytes": 609153,
+   "sha256": "88660d423916b36ce7b72e6b3e536ae7e3371e2b4760edf13f438b7999f25b08"
+  },
+  "run_config.json": {
+   "bytes": 2413,
+   "sha256": "26f59e7f9d7d196604635758b88c9adf3c8ac36942db0911b96b107828d9fa58"
+  },
+  "selection.json": {
+   "bytes": 8428,
+   "sha256": "9340039fe681e8bfbb8d3a9f46b37145a7fff9d1a091104f7062d17abf515274"
+  },
+  "slice.py": {
+   "bytes": 1103,
+   "sha256": "b1ee1971ceba513bb499478fdbaf625e54bd5ce5fcfb61dbdc2c33c14e99ee7a"
+  },
+  "strip_ckpt.py": {
+   "bytes": 850,
+   "sha256": "9065af334f0a05d85d1621b4d1913d27ae629b366cefbe29ffa84ad38a42047f"
+  },
+  "uhwr_eval-0.3.1.tar.gz": {
+   "bytes": 75452,
+   "sha256": "cdf3fc038a6f87b3156105d8f3dcfb4808b82603f3f23b4ac140713584b05109"
+  },
+  "unipen_de_DATA_CARD.md": {
+   "bytes": 3516,
+   "sha256": "48aea733745826ecc8df5dd9dda8aac403f93b6489685491cc9f1567bf160ddb"
+  },
+  "unipen_de_e0_test.npz": {
+   "bytes": 2464335,
+   "sha256": "c5f1c29e7bdf231f5d6032a29362d0ab3c912450af3294c7f8e6a51dc653157f"
+  }
+ },
+ "test_e0_frames": {
+  "report": "test_e0_frames_report.json",
+  "T1_round_trip": true,
+  "T2_edge_background": "info",
+  "T3_renderer_consistency": "info",
+  "T4_metrics_vs_original_GT": true,
+  "T5_padded_and_ink_equivalence": true,
+  "T6_dataset_hook": true,
+  "overall_pass": true,
+  "n_units": 50,
+  "unit_ids_first3": [
+   "1000_0007_0_L000",
+   "1000_0007_0_L001",
+   "1000_0007_0_L002"
+  ],
+  "T2_edge": {
+   "e0_val.npz:cond_rendered": {
+    "n": 4349,
+    "row0_clean": 4349,
+    "col0_clean": 4349,
+    "row63_clean": 4349,
+    "col63_clean": 2777,
+    "min_ink_row": 2,
+    "max_ink_row": 62,
+    "min_ink_col": 1,
+    "max_ink_col": 63
+   },
+   "e0_train.npz:cond_rendered": {
+    "n": 33615,
+    "row0_clean": 33615,
+    "col0_clean": 33615,
+    "row63_clean": 33615,
+    "col63_clean": 19743,
+    "min_ink_row": 2,
+    "max_ink_row": 62,
+    "min_ink_col": 1,
+    "max_ink_col": 63
+   },
+   "e0_test.npz:cond_rendered": {
+    "n": 4406,
+    "row0_clean": 4406,
+    "col0_clean": 4406,
+    "row63_clean": 4406,
+    "col63_clean": 2595,
+    "min_ink_row": 2,
+    "max_ink_row": 62,
+    "min_ink_col": 1,
+    "max_ink_col": 63
+   },
+   "e0_test.npz:cond_dataset": {
+    "n": 4406,
+    "row0_clean": 3852,
+    "col0_clean": 4181,
+    "row63_clean": 3254,
+    "col63_clean": 3807,
+    "min_ink_row": 0,
+    "max_ink_row": 63,
+    "min_ink_col": 0,
+    "max_ink_col": 63
+   },
+   "e0_gold.npz:cond_rendered": {
+    "n": 354,
+    "row0_clean": 354,
+    "col0_clean": 354,
+    "row63_clean": 354,
+    "col63_clean": 228,
+    "min_ink_row": 2,
+    "max_ink_row": 62,
+    "min_ink_col": 1,
+    "max_ink_col": 63
+   },
+   "e0_gold.npz:cond_dataset": {
+    "n": 354,
+    "row0_clean": 292,
+    "col0_clean": 333,
+    "row63_clean": 252,
+    "col63_clean": 307,
+    "min_ink_row": 0,
+    "max_ink_row": 63,
+    "min_ink_col": 0,
+    "max_ink_col": 63
+   },
+   "pass_rendered": true
+  },
+  "T3_renderer": {
+   "stored_cond_reproduced": 50,
+   "n": 50,
+   "mirror_x": {
+    "n_pixels_diff_total": 4233,
+    "n_pixels_diff_max": 138,
+    "n_units_exact": 0,
+    "abs_diff_sum": 8586
+   },
+   "vt": {
+    "n_pixels_diff_total": 14021,
+    "n_pixels_diff_max": 408,
+    "n_units_exact": 0,
+    "abs_diff_sum": 91083
+   },
+   "control_plain_flip": {
+    "mirror_x": {
+     "n_pixels_diff_total": 26399
+    },
+    "vt": {
+     "n_pixels_diff_total": 25003
+    }
+   }
+  },
+  "T4_self_aiou_mean": 0.9602199925634314,
+  "T4_criterion": "aiou == self-score of the original GT (metric ceiling, <1 by construction), |1-tau|<1e-9, direction 1 or NaN, dtw = ldtw = 0"
+ },
+ "smoke_train_randinit_20steps": {
+  "run_dir": "smoke/run_smoke_randinit",
+  "args": "p01 Urdu npz + 200-unit LTR slice, frame vt (Urdu only), q_u 0.25 -> 0.5 curriculum from step 10, batch 4 x accum 2 (eff. 8), 20 steps, ckpt every 10, gate at step 20 on 5+5 units",
+  "replay_stats": {
+   "batches": 41,
+   "final_step": 20,
+   "k_u_hist": {
+    "1": 31,
+    "2": 10
+   },
+   "script_draws": {
+    "casia_en": 34,
+    "casia_zh": 28,
+    "hpl_tamil": 26,
+    "iam": 25
+   },
+   "urdu_draws": 51,
+   "at": "20261027T215627+0500"
+  },
+  "replay_config_sampler": {
+   "batch_size_total": 4,
+   "q_u": 0.25,
+   "q_u_end": 0.5,
+   "curriculum_start_step": 10,
+   "train_steps": 20,
+   "gradient_accumulate_every": 2,
+   "seed": 20261016,
+   "start_step": 0,
+   "replay_counts": {
+    "casia_en": 50,
+    "casia_zh": 50,
+    "hpl_tamil": 50,
+    "iam": 50
+   },
+   "replay_probs": {
+    "casia_en": 0.25,
+    "casia_zh": 0.25,
+    "hpl_tamil": 0.25,
+    "iam": 0.25
+   },
+   "replay_prob_rule": "p_s \u221d n_s^(1/5)",
+   "n_urdu_train": 332,
+   "stream_rule": "per-source shuffled epochs without replacement"
+  },
+  "gate": {
+   "step": 20,
+   "label": "smoke_gateonly_ms2",
+   "frame": "vt",
+   "gold_aiou": 0.031400133571751726,
+   "gold_tau": NaN,
+   "unipen_direction": NaN,
+   "n_gold": 5,
+   "n_gold_aiou_defined": 5,
+   "n_gold_tau_defined": 0,
+   "n_unipen": 5,
+   "n_unipen_direction_defined": 0,
+   "thresholds": {
+    "gold_aiou_min": 0.75,
+    "gold_tau_min": 0.8,
+    "unipen_direction_min": 0.9
+   },
+   "checks": {
+    "gold_aiou": false,
+    "gold_tau": false,
+    "unipen_direction": false
+   },
+   "pass": false,
+   "protocol": "uhwr_eval 0.3.1 native, nan-mean over units",
+   "sampler": "DDIM-50 eta 0 seed 0, EMA weights",
+   "device": "cpu",
+   "seconds": 29.6,
+   "files": {
+    "gold_ouhdl": "gold_ouhdl__smoke_gateonly_ms2__seed0_preds_smoke5.npz",
+    "german_unipen_de_test": "german_unipen_de_test__smoke_gateonly_ms2__seed0_preds_smoke5.npz"
+   },
+   "max_units": 5,
+   "smoke": true
+  },
+  "gate_fail_written": true,
+  "checkpoints": [
+   "checkpoint_000001.pt",
+   "checkpoint_000002.pt"
+  ],
+  "gate_only_rerun": {
+   "file": "eval/gold_ouhdl__smoke_gateonly_ms2__seed0_preds_smoke5.json",
+   "identical_values_to_in_job_gate": true
+  }
+ },
+ "smoke_train_luoinit_4steps": {
+  "run_dir": "smoke/run_smoke_luoinit",
+  "args": "--init-from luo_ms6_model_ema.pt, frame vt, replay q_u 0.25, batch 4 x accum 2, 4 steps, gate at step 4 on 5+5 units",
+  "init_from": {
+   "init_from": "../hpc/scp-79cfad0d5f1c0e6a/fetch/luo_ms6_model_ema.pt",
+   "sha256": "5f8eb2018db93cb5821c4eb06dc9d490204562b88ed8fdba7afe2401317a6d50",
+   "source_step": 60000,
+   "loaded": [
+    "model",
+    "ema"
+   ],
+   "fresh": [
+    "opt",
+    "scaler",
+    "step"
+   ],
+   "at": "20261027T220458+0500"
+  },
+  "gate": {
+   "step": 4,
+   "label": "smoke_luoinit_ms2",
+   "frame": "vt",
+   "gold_aiou": 0.6362806807996115,
+   "gold_tau": 0.0,
+   "unipen_direction": 1.0,
+   "n_gold": 5,
+   "n_gold_aiou_defined": 5,
+   "n_gold_tau_defined": 2,
+   "n_unipen": 5,
+   "n_unipen_direction_defined": 5,
+   "thresholds": {
+    "gold_aiou_min": 0.75,
+    "gold_tau_min": 0.8,
+    "unipen_direction_min": 0.9
+   },
+   "checks": {
+    "gold_aiou": false,
+    "gold_tau": false,
+    "unipen_direction": true
+   },
+   "pass": false,
+   "protocol": "uhwr_eval 0.3.1 native, nan-mean over units",
+   "sampler": "DDIM-50 eta 0 seed 0, EMA weights",
+   "device": "cpu",
+   "seconds": 29.3,
+   "files": {
+    "gold_ouhdl": "gold_ouhdl__smoke_luoinit_ms2__seed0_preds_smoke5.npz",
+    "german_unipen_de_test": "german_unipen_de_test__smoke_luoinit_ms2__seed0_preds_smoke5.npz"
+   },
+   "max_units": 5,
+   "smoke": true
+  },
+  "gate_fail_written": true
+ },
+ "smoke_frame_sample_luo_ms6_8units": {
+  "out_dir": "smoke/k1_smoke",
+  "sets": [
+   "val250_ouhdl (first 8)",
+   "val250_iam stand-in (8, mirror_x)",
+   "gold_ouhdl (first 8)"
+  ],
+  "seeds": [
+   0
+  ],
+  "checkpoint": "luo_ms6_model_ema.pt (EMA identical to LUO ms6)",
+  "native_means_val250_ouhdl_first8": {
+   "identity": {
+    "aiou": 0.7119,
+    "ldtw": 0.8439,
+    "kendall_tau": null,
+    "direction_acc": 0.5714,
+    "loop_orient_acc": 0.7143,
+    "n_units": 8,
+    "n_errors": 0
+   },
+   "mirror_x": {
+    "aiou": 0.697,
+    "ldtw": 0.6927,
+    "kendall_tau": -1.0,
+    "direction_acc": 0.9375,
+    "loop_orient_acc": 0.75,
+    "n_units": 8,
+    "n_errors": 0
+   },
+   "vt": {
+    "aiou": 0.6898,
+    "ldtw": 0.6085,
+    "kendall_tau": null,
+    "direction_acc": 0.625,
+    "loop_orient_acc": 0.625,
+    "n_units": 8,
+    "n_errors": 0
+   }
+  },
+  "k1_summary": {
+   "identity_ref_aiou": 0.7118693165202123,
+   "per_frame": {
+    "mirror_x": {
+     "direction_ok": true,
+     "tau_ok": false,
+     "aiou_ok": true,
+     "passes": false
+    },
+    "vt": {
+     "direction_ok": false,
+     "tau_ok": false,
+     "aiou_ok": false,
+     "passes": false
+    }
+   },
+   "any_frame_passes": false,
+   "best_frame_by_tau_then_direction": null,
+   "note": "exploratory readout; the pre-registered decision rule lives in prereg_candidates_2026-10-28.md"
+  }
+ },
+ "smoke_frame_arm_sh": {
+  "log": "frame_arm_smoke_resume.log",
+  "provenance": {
+   "arm": "smoke_c1_p01_vt_replay",
+   "frac": "p01",
+   "frame": "vt",
+   "replay": true,
+   "selected_milestone": 1,
+   "replay_stats": {
+    "batches": 9,
+    "final_step": 4,
+    "k_u_hist": {
+     "1": 9
+    },
+    "script_draws": {
+     "casia_en": 9,
+     "casia_zh": 6,
+     "hpl_tamil": 9,
+     "iam": 3
+    },
+    "urdu_draws": 9,
+    "at": "20261027T224129+0500"
+   },
+   "preds": {
+    "german_unipen_de_test__smoke_c1_p01_vt_replay_ms1_identity__seed0_preds_smoke5.npz": "27b76bc6a13bbac6486bf0ea89e23d428a026a35452ec3007048b9c0e22d689a",
+    "gold_ouhdl__smoke_c1_p01_vt_replay_ms1_vt__seed0_preds_smoke5.npz": "5ae92603c905a972bec55573c88ee12b2bfce4b44dad30c3e5a402690448d449",
+    "test_ouhdl__smoke_c1_p01_vt_replay_ms1_vt__seed0_preds_smoke5.npz": "f17cd308cf11bcf2bfe2e5d1192010b27fc132cde734b29304742d69e2867035",
+    "val1000_ouhdl__smoke_c1_p01_vt_replay_ms1_vt__seed0_preds_smoke5.npz": "91f25f605ba3bf2c2924a8cec4ce0950b7cdf70a280ef4a71cb747c0f4829cf6",
+    "val1000_ouhdl__smoke_c1_p01_vt_replay_ms2_vt__seed0_preds_smoke5.npz": "f6e9466c0a5980203d74278180261eb5d2f3f3d3e07164203dc7c11acf75aa9e",
+    "val250_iam__smoke_c1_p01_vt_replay_ms1_identity__seed0_preds_smoke5.npz": "b813637885d14268b93d2f84124b2ed637515fd2cbdd3e3b535953fa0b2184db"
+   },
+   "smoke_units": "5"
+  },
+  "env": "PYG=PYC=python STEPS=4 SAVE=2 GATE_STEP=\"\" SEEDS=0 SMOKE_UNITS=5 BATCH=4 ACCUM=2 WORKERS=0 AMP=--no-amp; m5_luo_train.npz and m5_val_iam.npz replaced by stand-ins (slice; IAM stand-in given decoded-seq GT)",
+  "note": "first attempt with WORKERS=4 failed on the Mac (torch_shm_manager, DataLoader workers in this sandbox) -> WORKERS override added; an e0_score.py run on an npz without gt_points leaves orphaned pool workers that keep a stdout pipe open (write job logs to files, as the sbatch files do)"
+ },
+ "smoke_frame_k1_sh": {
+  "log": "frame_k1_smoke.log",
+  "env": "SEEDS=0 SMOKE_UNITS=4 SETS=val250_ouhdl LTR_SETS=val250_iam(stand-in)",
+  "summaries": {
+   "k1_summary_val250_ouhdl_smoke4.json": {
+    "identity_ref_aiou": 0.7317670425621112,
+    "per_frame": {
+     "mirror_x": {
+      "direction_ok": true,
+      "tau_ok": false,
+      "aiou_ok": false,
+      "passes": false
+     },
+     "vt": {
+      "direction_ok": false,
+      "tau_ok": false,
+      "aiou_ok": false,
+      "passes": false
+     }
+    },
+    "any_frame_passes": false,
+    "best_frame_by_tau_then_direction": null,
+    "note": "exploratory readout; the pre-registered decision rule lives in prereg_candidates_2026-10-28.md"
+   },
+   "k1_summary_val250_iam_smoke4.json": {
+    "identity_ref_aiou": 0.8569858890595449,
+    "per_frame": {
+     "mirror_x": {
+      "direction_ok": false,
+      "tau_ok": false,
+      "aiou_ok": false,
+      "passes": false
+     }
+    },
+    "any_frame_passes": false,
+    "best_frame_by_tau_then_direction": null,
+    "note": "exploratory readout; the pre-registered decision rule lives in prereg_candidates_2026-10-28.md"
+   }
+  }
+ },
+ "deviations": [
+  "AIoU(ink, ink) < 1 in uhwr_eval 0.3.1 by construction (GT thickness 2 vs prediction thickness 1 + dilation); T4 therefore requires equality with the self-score (mean 0.960 on the 50 units), tau = 1 (or NaN for the 24 single-stroke units), direction = 1, dtw = ldtw = 0",
+  "VT/mirror-x pixel map is the shifted flip r -> 64 - r (row/col 0 := background), not np.flipud (y -> 63 - y): see e0_frames.py docstring and T3; lossless on every rendered condition, lossy on 554/4406 cond_dataset test images",
+  "LUO ms6 full checkpoint (434 MB) exceeds the 256 MB transfer cap: model+EMA stripped copy used locally (sha256 5f8eb201\u2026); smoke sidecars carry that sha, not ab6b178d\u2026",
+  "m5_luo_train.npz replaced by a 200-unit slice; m5_val_iam.npz by a 50-unit IAM stand-in from the slice (no real IAM val on the Mac); all smokes use 4-8 units and 4-20 optimiser steps at eff. batch 8",
+  "no GPU job and no queue submission (Phase 0 rule); job files are untested on CLUSTER-A/VPS/CLUSTER-B",
+  "the frame kill check, C3 and C1 arms were NOT run; the d2moe README on the VPS was not fetched \u2014 .cmd files follow the fetched 170_routeA_luo_ms6.cmd / 400_d2_stage2_p01_s0.cmd style"
+ ],
+ "at": "2026-10-27T18:05:48Z"
+}

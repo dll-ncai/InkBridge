@@ -1,0 +1,6 @@
+2026-11-09T18:41:37Z sma_chain_start tag=SMA_c-radiov3-h_W_p01_s20261036 kind=bb backbone=$U/exp/FMD/xs/runs/c-radiov3-h_W_clusterA/bb_ms4.pt frac=p01 seed=20261036 steps=10000 site=clusterA host=<node> slurm=24964868 restart=0 part=gpuidle gpus=[NVIDIA A2;]
+2026-11-09T18:41:38Z train_start layout=32x8 site=clusterA host=<node> slurm=24964868 restart=0 part=gpuidle gpus=[NVIDIA A2;]
+2026-11-10T05:55:04Z train_exit rc=0 site=clusterA host=<node> slurm=24964868 restart=0 part=gpuidle gpus=[NVIDIA A2;]
+2026-11-14T00:54:49Z sma_chain_start tag=SMA_c-radiov3-h_W_p01_s20261036 kind=bb backbone=$U/exp/FMD/xs/runs/c-radiov3-h_W_clusterA/bb_ms4.pt frac=p01 seed=20261036 steps=10000 site=clusterA host=<node> slurm=24964868 restart=1 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-14T01:05:50Z selected SM-A milestone 10 (step 10000) site=clusterA host=<node> slurm=24964868 restart=1 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-14T05:50:17Z sampling_done ms10 site=clusterA host=<node> slurm=24964868 restart=1 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]

@@ -1,0 +1,2 @@
+# keep every file byte-identical on checkout (MANIFEST.sha256 lists the checksums)
+* -text

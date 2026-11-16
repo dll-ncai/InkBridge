@@ -1,0 +1,123 @@
+{
+ "kind": "rqf_r1d_read",
+ "base": "PEINIT_W_bb",
+ "plan": "$U/exp/RQF/R1d/plan.json",
+ "plan_sha256": "1e19ba0a1d6e2c9fd45fa508ab89943b6dce78ed18fbe455f5f406ef9406f01a",
+ "inputs": {
+  "test_ouhdl": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_ouhdl__PEINIT_W_bb_idv3__seed0__rows031.csv",
+    "sha256": "7b19a03ee5fb6137cba036f5033bb4820d10982c1318477578212ad2dd174a40"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_ouhdl__PEINIT_W_bb_r1d__seed0__rows031.csv",
+    "sha256": "f7d2f5da99115025789064de9f20d9d2654c9c80b4e253d205e276b21ab31938"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_ouhdl__PEINIT_W_bb_mirv3__seed0__rows031.csv",
+    "sha256": "e8fe970fc24bae8d4d4497e59ec2f21595fffa88cb7b52c37606fdb510b288e6"
+   }
+  },
+  "test_casia_zh": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_zh__PEINIT_W_bb_idv3__seed0__rows031.csv",
+    "sha256": "cfa36a62518ea723f8bf24106d41c8faa8fd59e6ab240420d33ec89ee5177c77"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_zh__PEINIT_W_bb_r1d__seed0__rows031.csv",
+    "sha256": "972a22200e2f30bd7305e91acb709b5864c7d176e46d4b604d5d7e0c5505ff76"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_zh__PEINIT_W_bb_mirv3__seed0__rows031.csv",
+    "sha256": "781d577324f9d29ca703180f0171e88e5041ef1bcc7d8a5472f64a8392814e9f"
+   }
+  },
+  "test_casia_en": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_en__PEINIT_W_bb_idv3__seed0__rows031.csv",
+    "sha256": "864e846eab4ebc7cff460c6854a342c56606bf0039c5ffe39e2486e42e4c8d85"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_en__PEINIT_W_bb_r1d__seed0__rows031.csv",
+    "sha256": "5c4e22791a6a80a0df9832a273e38d57f28f4b1d5623432dca7c03facd8a35eb"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_en__PEINIT_W_bb_mirv3__seed0__rows031.csv",
+    "sha256": "1267004fbaabdc0c0cbccba4cc46c6a7dfe56cdce7ca30ccaa028a9eb2d55b34"
+   }
+  },
+  "test_hpl_tamil": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_hpl_tamil__PEINIT_W_bb_idv3__seed0__rows031.csv",
+    "sha256": "483724f1fb6d17df1baa02179679c9f137ce9986ab4a88abb70ea03e1ce8dc24"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_hpl_tamil__PEINIT_W_bb_r1d__seed0__rows031.csv",
+    "sha256": "a15a72b287d111ddaf0d91ea7fcb0822996614851d664e2dc084b11d12dca3d7"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_hpl_tamil__PEINIT_W_bb_mirv3__seed0__rows031.csv",
+    "sha256": "9f2b4a515b091c07a1454f9d8e82c2b70cbce2f5bd6772a7d2596b38a44b13b9"
+   }
+  },
+  "test_iam500": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_iam500__PEINIT_W_bb_idv3__seed0__rows031.csv",
+    "sha256": "d8690365e274306b38ac63c6fdc9a529d6907ce913c9db37d152618388e984e6"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_iam500__PEINIT_W_bb_r1d__seed0__rows031.csv",
+    "sha256": "fe5d9af897ee8e133290e064c3f41e263674382f99740ebf87bf2bbc314508b3"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_iam500__PEINIT_W_bb_mirv3__seed0__rows031.csv",
+    "sha256": "3d46136dc8a58b863d6a0ab61196f6faa9e567367508e0680f79f19d7ec484fe"
+   }
+  },
+  "german_unipen_de_test": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_unipen_de_test__PEINIT_W_bb_idv3__seed0__rows031.csv",
+    "sha256": "7c91497b8a093a0d9e8d6619e5129fe4436bd3fb8aff4cf276a6c24d206a00a2"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_unipen_de_test__PEINIT_W_bb_r1d__seed0__rows031.csv",
+    "sha256": "ba6b83d57f9a7e6e370740a84a9e03b6e27505b5b4bdef7b10a1909dee9823e7"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_unipen_de_test__PEINIT_W_bb_mirv3__seed0__rows031.csv",
+    "sha256": "7a4e93ae267e8643efaab6aff2376e58c936dae66422eb46cfa79255fa599d4b"
+   }
+  },
+  "german_onhw_all": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_onhw_all__PEINIT_W_bb_idv3__seed0__rows031.csv",
+    "sha256": "96abfe39da5ede281e68a65f3a64e69cb3ab7b5fba285a0d380d7f9ad60fe1e4"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_onhw_all__PEINIT_W_bb_r1d__seed0__rows031.csv",
+    "sha256": "5903cf1ab48db721b18a5b0edf2ff0e81cdeb463f40bb797ca8177bcf6951bdf"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_onhw_all__PEINIT_W_bb_mirv3__seed0__rows031.csv",
+    "sha256": "0244ad379d9eafaf48f793290f6305e3d6557dbf321532223c5896eb8e398b8e"
+   }
+  }
+ },
+ "code_sha256": {
+  "r1d_read.py": "5024b9746e5e8fdf9c274e355689b19392d08d7ea6c0418114fa57cd38684d7f",
+  "loop_tables.py": "5f59016518803745f9a91cecac5d1ff1ddeee260899be45c2a5517f977302ca5"
+ },
+ "agent": "<agent>",
+ "lead_reason": "Model <agent>: new inference code",
+ "prereg": {
+  "parent": "PREREG_RQ_finalise_2026-11-07.md sha256 04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+  "amendment": "A2 sha256 bface42b... (A2.5 R1d)"
+ },
+ "host": "<node>",
+ "slurm_job": "24964508",
+ "outputs": {
+  "R1d_paired_PEINIT_W_bb.csv": "0016247b2aa858411aa29859cdfa79d297a84679e742748a16f0c2e1f09a0d9f",
+  "R1d_absolute_PEINIT_W_bb.csv": "d76ee39dfbe8943e02e081a794cc7bee5bfb2a8618546aa84405a3dc16f14124",
+  "R1d_verdict_PEINIT_W_bb.json": "90cc0c8c6d42927174d71d9f98f189fddf57d8222c2ad557cdbeb913a882cb2a"
+ }
+}

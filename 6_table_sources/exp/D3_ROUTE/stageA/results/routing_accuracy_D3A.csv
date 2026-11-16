@@ -1,0 +1,8 @@
+set,set_label,n,home_specialist,oracle_specialist,router_accuracy_vs_oracle,script_accuracy,family_accuracy,manifest_vs_sampled_route_agreement,n_misrouted,share_E0_ms8,n_E0_ms8,share_E27_ms47,n_E27_ms47,share_X5_ms9,n_X5_ms9,share_M5_joint_ms9,n_M5_joint_ms9
+test_ouhdl,"OUHD-L Urdu test (4,406)",4406,E0_ms8,E0_ms8,0.9961416250567408,0.9963685882886972,0.9961416250567408,1.0,17,0.9961416250567408,4389,0.0,0,0.0022696323195642307,10,0.0015887426236949613,7
+test_iam500,IAM English (500),500,X5_ms9,X5_ms9,0.994,0.964,1.0,1.0,3,0.0,0,0.0,0,0.994,497,0.006,3
+test_casia_zh,CASIA zh (500),500,E27_ms47,E27_ms47,0.98,0.98,1.0,1.0,10,0.0,0,0.98,490,0.02,10,0.0,0
+test_casia_en,CASIA en (500),500,X5_ms9,X5_ms9,0.992,0.96,1.0,1.0,4,0.0,0,0.006,3,0.992,496,0.002,1
+test_hpl_tamil,HPL Tamil (500),500,M5_joint_ms9,M5_joint_ms9,0.994,0.994,0.998,1.0,3,0.002,1,0.0,0,0.004,2,0.994,497
+german_unipen_de_test,UNIPEN-de zero-shot (827),827,M5_joint_ms9,M5_joint_ms9,0.2660217654171705,,,1.0,607,0.12817412333736397,106,0.015719467956469165,13,0.5900846432889963,488,0.2660217654171705,220
+german_onhw_all,"OnHW German zero-shot (5,925)",5925,M5_joint_ms9,M5_joint_ms9,0.0010126582278481013,,,1.0,5919,0.0005063291139240507,3,0.0008438818565400844,5,0.9976371308016878,5911,0.0010126582278481013,6

@@ -1,0 +1,5 @@
+2026-11-08T14:55:04Z sma_chain_start tag=SMA_pe-spatial-b16-512_W_p01_s20261034 kind=bb backbone=$U/exp/FMD/xs/runs/pe-spatial-b16-512_W_clusterA/bb_ms4.pt frac=p01 seed=20261034 steps=10000 site=clusterA host=<node> slurm=24964896 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T14:55:04Z train_start layout=64x4 site=clusterA host=<node> slurm=24964896 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T17:30:17Z train_exit rc=0 site=clusterA host=<node> slurm=24964896 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T20:09:10Z selected SM-A milestone 10 (step 10000) site=clusterA host=<node> slurm=24964896 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T00:29:56Z sampling_done ms10 site=clusterA host=<node> slurm=24964896 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]

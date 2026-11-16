@@ -1,0 +1,4 @@
+arm,fm,fm_status_at_read,U_WIN,X_NI,FM_ATTRIBUTED_vs_NOFM,FM_ATTRIBUTED_vs_PEINIT,F_X_AIoU_vs_NOFM,F_X_AIoU_vs_PEINIT,promotion,any_DEVICE_MIXED,devices,milestones,read_utc,label
+NOFM_W,-,control,True,True,,,,,not promotable (control),False,RTX A4000,bb:3;cmp:1;ft:1,2026-11-07T15:01Z,EXPLORATORY (single training seed)
+PEINIT_W,-,control,True,True,,,,,not promotable (control),False,RTX A4000,bb:4;cmp:2;ft:2,2026-11-07T15:01Z,EXPLORATORY (single training seed)
+c-radiov3-h_W,c-radiov3-h,PASS_XS,True,True,False,False,False,False,PROMOTED,False,RTX A4000,bb:4;cmp:4;ft:4,2026-11-07T15:01Z,EXPLORATORY (single training seed)

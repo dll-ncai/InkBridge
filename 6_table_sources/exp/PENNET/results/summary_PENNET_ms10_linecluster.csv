@@ -1,0 +1,89 @@
+method,input,protocol,protocol_note,metric,mean,ci95_lo,ci95_hi,n_valid,n_units,n_lines,n_errors,n_empty_pred,rows_file
+pennet_v3_ms10_greedy,rendered,native,,aiou,0.27795912137115475,0.27338771441534565,0.2825552129453316,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,ldtw,0.4198759252084023,0.4094909047336335,0.4308866803593049,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,dtw,157.63250992423173,153.13003297440184,162.26055096785987,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",strict_order_acc,0.17998184294144348,0.16734849773294466,0.19291536205025187,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",kendall_tau,0.9047619047619047,0.8355527426160338,0.9610452450775031,154,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",direction_acc,0.9341408024224073,0.9211288742942735,0.9468014559029806,1321,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,penup_f1,0.29840377163681714,0.28606962877306985,0.310776727043014,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",stroke_count_abs_err,0.5267816613708579,0.4933293919932871,0.5606599611398236,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",stroke_match_recall,0.2554595546935538,0.24313420019790566,0.2681116724307131,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",loop_orient_acc,0.8776041666666666,0.8570245415080918,0.8988335909245064,1024,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,chamfer,3.6862339058298037,3.6151250779811424,3.7564439483655088,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,hausdorff,15.05622416307396,14.743086334509867,15.365892110475361,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,frechet,21.09288883748948,20.613010748719788,21.539207024747807,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,rmse,13.758593142072451,13.48673682632997,14.02462405862073,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,aiou,0.28585911395038965,0.2812174547564613,0.2905741340607132,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,ldtw,0.7249708314311419,0.7086847405997937,0.741713547311353,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,dtw,110.34735801244183,107.50893912323353,113.13716789441813,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,penup_f1,0.29840377163681714,0.28606962877306985,0.310776727043014,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,chamfer,3.9632322699449105,3.8919429066114755,4.03184036456052,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,hausdorff,15.018522293395668,14.698374964785776,15.33143248127479,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,frechet,21.049155909316394,20.566277632628356,21.496811551675417,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,rmse,13.693213705997286,13.416358626535954,13.962178743669243,4406,4406,253,0,0,test_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,aiou,0.184120802219987,0.18025432516859594,0.1882893339651018,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,ldtw,0.7475739809726607,0.7303640255935274,0.7652158914607662,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,dtw,258.4632192147898,253.5092326977324,263.04629270700406,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",strict_order_acc,0.06627326373127554,0.058471739454066654,0.0746302978920079,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",kendall_tau,0.14285714285714285,-0.42857142857142855,0.7142857142857143,7,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",direction_acc,0.8997555012224939,0.8740731219651529,0.9241771819451574,409,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,penup_f1,0.130311721931087,0.12174413039324705,0.13884230786097024,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",stroke_count_abs_err,2.007035860190649,1.9220859157651051,2.096439792547597,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",stroke_match_recall,0.08707895536651779,0.07864463744005643,0.09576412569176107,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",loop_orient_acc,0.8473684210526315,0.8036297242083759,0.8886925795053003,285,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,chamfer,6.026888758129765,5.926547601046143,6.124587566583927,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,hausdorff,19.856403277596485,19.555380495111223,20.145411415516374,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,frechet,32.73975092899988,32.2929385553227,33.17629406214133,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,rmse,21.498199914349975,21.201068414737055,21.79646934005952,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,aiou,0.18941801627694654,0.18550765241685593,0.19359222015190677,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,ldtw,1.2426985041524226,1.2219629308930549,1.263379147023574,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,dtw,182.87111187910665,180.08639327640068,185.5108031791139,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,penup_f1,0.130311721931087,0.12174413039324705,0.13884230786097024,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,chamfer,6.255564860138892,6.159697173364196,6.352267071827443,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,hausdorff,19.849224359665133,19.54690844204966,20.136233575335268,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,frechet,32.71878164007912,32.26972348273194,33.154334108684616,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,rmse,21.44335418083127,21.144275129171152,21.739004131840076,4406,4406,253,0,0,test_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,aiou,0.2856777740898865,0.2648051436292192,0.30627383391366825,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,ldtw,0.41330800205594637,0.3649037001367915,0.4648797476045239,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,dtw,150.03384608734243,131.59210229619077,170.8662911917994,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",strict_order_acc,0.2033898305084746,0.1573025372586937,0.2528887714916914,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",kendall_tau,0.9666666666666666,0.8947368421052632,1.0,20,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",direction_acc,0.8976377952755905,0.8392713133640554,0.9455821863629172,127,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,penup_f1,0.3050429874582417,0.2509057914092143,0.36724025921525366,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",stroke_count_abs_err,0.4717514124293785,0.3861644428305429,0.5621513920841353,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",stroke_match_recall,0.2960069121086071,0.24839877747560038,0.34186107881177763,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,"order/stroke metric: protocol-insensitive, reported once",loop_orient_acc,0.8631578947368421,0.8009466019417476,0.92,95,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,chamfer,3.5780390985581345,3.216405405257954,4.016252249725709,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,hausdorff,15.493469636539274,13.999659270717764,17.136288124503604,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,frechet,21.332043740345217,19.36432508021311,23.42851997612771,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,native,,rmse,13.61120723590905,12.47704693648715,14.813220731053717,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,aiou,0.2940884038360549,0.2731420223169844,0.3147181257592416,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,ldtw,0.7315148626266534,0.6562076489928669,0.8142198638994804,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,dtw,108.61800469728469,96.8380695188707,121.7558845277003,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,penup_f1,0.3050429874582417,0.2509057914092143,0.36724025921525366,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,chamfer,3.9331778030955538,3.5818251326493384,4.358235056938963,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,hausdorff,15.463952140359687,13.959424557124532,17.11230481648326,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,frechet,21.292604976405034,19.321817624385602,23.394675394546706,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,rendered,standardised,,rmse,13.507771749246043,12.343423474566391,14.762348454567515,354,354,21,0,0,gold_rendered_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,aiou,0.17941650102205173,0.16458874459555972,0.1949274201634377,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,ldtw,0.7934180342977224,0.7335692495595293,0.8611837338448548,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,dtw,269.5500008026654,251.7326920107034,286.90885339409874,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",strict_order_acc,0.059322033898305086,0.030485278264384852,0.08889507892293405,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",kendall_tau,1.0,1.0,1.0,1,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",direction_acc,0.7352941176470589,0.5161290322580645,0.9117647058823529,34,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,penup_f1,0.12651758160232737,0.09344229783897996,0.16279433583015843,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",stroke_count_abs_err,2.2005649717514126,1.9677080509623204,2.439943166379857,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",stroke_match_recall,0.08387476459510358,0.05467536921072869,0.1143144474342032,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,"order/stroke metric: protocol-insensitive, reported once",loop_orient_acc,0.8888888888888888,0.6923076923076923,1.0,18,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,chamfer,6.403879513228502,6.055510433526149,6.780075917053071,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,hausdorff,20.617202109556906,19.565355814841432,21.62758797940424,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,frechet,34.604811436354304,32.87239600910734,36.49088643806396,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,native,,rmse,23.017911729192758,21.870418463782297,24.25693947521105,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,aiou,0.18484022184407456,0.17003516531965326,0.20045037884049638,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,ldtw,1.3055468301199595,1.2240740019911283,1.3964887247543942,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,dtw,195.4251904837004,184.4095177889384,206.72626550932284,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,penup_f1,0.12651758160232737,0.09344229783897996,0.16279433583015843,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,chamfer,6.687822552024262,6.353480327413136,7.023207934239767,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,hausdorff,20.608950851733788,19.561460877661858,21.619135035087236,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,frechet,34.5756173502151,32.84541986473927,36.46498540544049,354,354,21,0,0,gold_dataset_ms10_rows.csv
+pennet_v3_ms10_greedy,dataset,standardised,,rmse,22.966794912456848,21.8090801901521,24.220346297145596,354,354,21,0,0,gold_dataset_ms10_rows.csv

@@ -1,0 +1,780 @@
+{
+ "what": "Provenance of the InkBridge public repository tree (v12)",
+ "created_utc": "2026-11-15T20:41:30Z",
+ "base": {
+  "description": "archive v11 (built 2026-11-15); folders 1_ to 6_ and supplementary/ copied unchanged except the files under modified_base_files; its README.md, NOT_INCLUDED.md, MANIFEST.sha256, PROVENANCE.json and ARCHIVE_BUILD/ are kept unchanged under provenance/archive_v11/; one file of the archive, 6_table_sources/paper/PROVENANCE_v10.json (build record of a manuscript version), is not included",
+  "archive_file": "inkbridge_reviewer_archive_v11.tar.gz",
+  "archive_sha256": "145eb6ac17294885ad0152bb62f568aadf7aec939d457aa897c476218acfde9f",
+  "archive_bytes": 84747759,
+  "archive_n_files": 2195,
+  "source_version_id": "d5433241-1d25-41dd-ac6a-2000d7a41c15"
+ },
+ "added_v12_files": [
+  {
+   "path": "7_checks_v12/checks_v12.py",
+   "source_artifact_id": "2ac9b98f-21ee-4301-b726-7bee7bdeff20",
+   "source_version_id": "e58fef8c-8be4-432d-869e-3303d5e9c67f",
+   "source_created_at": "2026-11-15T16:55:34.847Z",
+   "sha256_source": "5a7e55355433992a3f0adc479e8a2bd3cd7cbee8e71fd43a3edc127e8d8e3014",
+   "sha256_repo": "6f193793a7efbdd46029cb9f91e0361c32c2723c5f11e36c21593d5f44a3a4a5",
+   "changed": true,
+   "replacements": {
+    "abs_path_clusterA": 1
+   }
+  },
+  {
+   "path": "7_checks_v12/checks_v12_job.sh",
+   "source_artifact_id": "da837803-9c94-4c3b-a22e-fc0bbbeb922e",
+   "source_version_id": "4defff34-4edd-4710-a447-b2a7a2b18cec",
+   "source_created_at": "2026-11-15T16:55:34.852Z",
+   "sha256_source": "22ee6a0042536784af7d3532daf93ba2937a633de92cb57bae7697b43a8049a4",
+   "sha256_repo": "ed14f15ba38915ee8c8745a2d175b4efa9a6703854656d293b16ccee253fdcd5",
+   "changed": true,
+   "replacements": {
+    "abs_path_clusterA": 1
+   }
+  },
+  {
+   "path": "7_checks_v12/checks_v12_results.csv",
+   "source_artifact_id": "b67aa0c5-33d7-4280-a538-31f63bbba13a",
+   "source_version_id": "ba02d60f-eea6-44f4-8396-329556a520ea",
+   "source_created_at": "2026-11-15T16:55:34.834Z",
+   "sha256_source": "77555ecebba581a11d50e06e2e4e0ce4eba202d985ec6b9c68b5c90bfc281774",
+   "sha256_repo": "77555ecebba581a11d50e06e2e4e0ce4eba202d985ec6b9c68b5c90bfc281774",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "7_checks_v12/checks_v12_meta_provenance.json",
+   "source_artifact_id": "36721b84-2758-4fa1-9cd4-01dea68acaf5",
+   "source_version_id": "2c51f805-79d1-46bc-9b76-18a038a092aa",
+   "source_created_at": "2026-11-15T16:55:34.842Z",
+   "sha256_source": "b23303e1a01a4e1c00f82b670f8ef33e87ded3c025e28620f2dd99b85b4e19aa",
+   "sha256_repo": "34b1a976327c78485c7906f60ee8f735d3ce2d0b3f15e5e16d6836b97c954110",
+   "changed": true,
+   "replacements": {
+    "abs_path_clusterA": 14,
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "7_checks_v12/checks_v12_randctl_cells.csv",
+   "source_artifact_id": "2e098076-ba86-4ce4-9992-d2c26f17d557",
+   "source_version_id": "f0916eb6-bb61-4d4b-97ec-acc9a14caf19",
+   "source_created_at": "2026-11-15T16:55:34.857Z",
+   "sha256_source": "023cb2802d0bb515ed88bc33993f1f460035b494c79e0e2bf556b6f9f662f4ef",
+   "sha256_repo": "8945007c5063b4bd06b7aff408e8f16867c194abae65c26ef510721e5a2f73da",
+   "changed": true,
+   "replacements": {
+    "abs_path_clusterA": 30
+   }
+  },
+  {
+   "path": "7_checks_v12/checks_v12_ft1abs.csv",
+   "source_artifact_id": "bf1ce690-24aa-4a97-a4b0-fb2364484998",
+   "source_version_id": "379c036f-6081-46d0-9cff-705131150bcb",
+   "source_created_at": "2026-11-15T16:55:34.863Z",
+   "sha256_source": "e29923e034004c22532e9306bd62c5c137a1826cd8bb5004a0c28fc7f5d58ce3",
+   "sha256_repo": "e29923e034004c22532e9306bd62c5c137a1826cd8bb5004a0c28fc7f5d58ce3",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "7_checks_v12/checks_v12_inkinv.csv",
+   "source_artifact_id": "1fda23ee-900e-4641-b7d5-aa2dee4bf849",
+   "source_version_id": "809328e5-669d-4630-bb5a-215d8c3fec3d",
+   "source_created_at": "2026-11-15T16:55:34.868Z",
+   "sha256_source": "deca150791ff06bd4c84a37f1d9a7ad945e92be4690c79d7ff588932cc90373a",
+   "sha256_repo": "deca150791ff06bd4c84a37f1d9a7ad945e92be4690c79d7ff588932cc90373a",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "7_checks_v12/checks_v12_inkinv_units.csv",
+   "source_artifact_id": "0f1784cf-f588-43a8-8360-cfe35b621ac6",
+   "source_version_id": "9084a8f8-c6ea-44c0-8fae-5b06bf6f8d3a",
+   "source_created_at": "2026-11-15T16:55:34.874Z",
+   "sha256_source": "253d78c25c9e1ac1f47d41a701d5b0f8d60408006a365dce59ec9ee106e6d14b",
+   "sha256_repo": "f0089979dd52917721a2587c80d959591c55e75f0a65580329337fbcfc684213",
+   "changed": true,
+   "replacements": {
+    "german_unit_id": 5000
+   }
+  },
+  {
+   "path": "7_checks_v12/checks_v12_facts.json",
+   "source_artifact_id": "e421f6ec-b352-46bf-beb7-61aa09d6e540",
+   "source_version_id": "b6642fa7-74a4-4c1d-aaee-78884db44147",
+   "source_created_at": "2026-11-15T16:55:34.883Z",
+   "sha256_source": "77ec8005342b04dd451b2f13cd15e9e53135d2a8b0d35817c93d23a9b5c1557b",
+   "sha256_repo": "dd318c64ce9a9ca619fe69400e4268a5d393708d4b073e7bcba1736bfd937d97",
+   "changed": true,
+   "replacements": {
+    "abs_path_clusterA": 8,
+    "agent_id": 6
+   }
+  },
+  {
+   "path": "7_checks_v12/PROVENANCE_checks_v12.json",
+   "source_artifact_id": "7d79d5bb-c88c-4d02-9ac5-d50761570ff2",
+   "source_version_id": "15778e18-cb58-4545-83ab-e6a13dfeb346",
+   "source_created_at": "2026-11-15T16:55:34.889Z",
+   "sha256_source": "6d69ff99cb0f51cf7d1264652657a55450beef661461a0243cd0fc7605c6b8bd",
+   "sha256_repo": "3a8a441931eecdd0fcc9f84d6cdf189316f8b8915e59f3792f2ec35632f58de0",
+   "changed": true,
+   "replacements": {
+    "abs_path_clusterA": 609,
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "7_checks_v12/checks_v12_summary.md",
+   "source_artifact_id": "068dfbd2-06ea-46c2-9dd1-d71439e9505d",
+   "source_version_id": "46c03b90-6cbd-4563-8214-7db30544f0db",
+   "source_created_at": "2026-11-15T16:55:34.896Z",
+   "sha256_source": "acdf47a51d0497703643d5b5e397ae7ecb30db12d3686d89219c205983a6e79d",
+   "sha256_repo": "f8e958dc0b4c506fd798dbe44f8cda6d092a5d2d4924f3ab42bbf30f20b027df",
+   "changed": true,
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "8_figures_v12/make_figs_v12.py",
+   "source_artifact_id": "73e1924b-8c2e-435f-86b1-f5da44aa04c9",
+   "source_version_id": "b97588a3-cd30-451b-be71-4defb8405ac3",
+   "source_created_at": "2026-11-15T16:04:55.781Z",
+   "sha256_source": "1fd282d6a6499b0196d3cd6a36755ee768e83791b7a1690694a5890767d55063",
+   "sha256_repo": "1fd282d6a6499b0196d3cd6a36755ee768e83791b7a1690694a5890767d55063",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "8_figures_v12/fig_gain_data.csv",
+   "source_artifact_id": "741eebdf-62ad-4e18-83f0-c2b541d9ad33",
+   "source_version_id": "c2861781-aa92-425e-83b5-9ce56dcdd77f",
+   "source_created_at": "2026-11-15T16:04:55.750Z",
+   "sha256_source": "1982e054a0ff95b34607e3eb53ca2076809fa877e969660e500b14038a9951ba",
+   "sha256_repo": "1982e054a0ff95b34607e3eb53ca2076809fa877e969660e500b14038a9951ba",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "8_figures_v12/fig_retention_data.csv",
+   "source_artifact_id": "c0a8dadf-c574-4dbe-b7d1-b30acadcac8b",
+   "source_version_id": "d843b1ed-5c0d-498d-be34-0632d45128a4",
+   "source_created_at": "2026-11-15T16:04:55.760Z",
+   "sha256_source": "0b7017f54f66e1dbb1915c422e2e2a95f26aa8c5d8767910ccb77a5df1ddb6df",
+   "sha256_repo": "0b7017f54f66e1dbb1915c422e2e2a95f26aa8c5d8767910ccb77a5df1ddb6df",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "8_figures_v12/fig_selector_data.csv",
+   "source_artifact_id": "9aab48be-e34e-4446-b22b-35090f317f2b",
+   "source_version_id": "2a6f0569-fbb4-4f8b-94ef-9c3224441346",
+   "source_created_at": "2026-11-15T16:04:55.771Z",
+   "sha256_source": "8ea660345d1eb46b1710120328278a12522503bc84ef4a3196ccf1d6f0f5b8f7",
+   "sha256_repo": "8ea660345d1eb46b1710120328278a12522503bc84ef4a3196ccf1d6f0f5b8f7",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "8_figures_v12/figs_v12_meta_provenance.json",
+   "source_artifact_id": "728739f1-fece-45ec-bf15-2002e3ecd7f1",
+   "source_version_id": "c850de32-09d5-4697-8eeb-781dd9c5f8f7",
+   "source_created_at": "2026-11-15T16:04:55.789Z",
+   "sha256_source": "30cb4aafcf7600c8e005314e460d6f02695615b45095c3ee204be7d59de53143",
+   "sha256_repo": "cf96ddb6851685c6a64370f837c6d4727500da542e056804461c02637d53c7ab",
+   "changed": true,
+   "replacements": {
+    "abs_path_clusterA": 4
+   }
+  },
+  {
+   "path": "8_figures_v12/captions_v12.md",
+   "source_artifact_id": "b5016849-f4a4-4870-88cf-fe4895a72737",
+   "source_version_id": "e08be5c6-cb64-4163-811b-adf075e95200",
+   "source_created_at": "2026-11-15T16:04:55.818Z",
+   "sha256_source": "875380cfe853a08529647b2001473ad0ec75082d0a5bbbd0e4165735b86c8a61",
+   "sha256_repo": "875380cfe853a08529647b2001473ad0ec75082d0a5bbbd0e4165735b86c8a61",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "10_online_resource_1/supplementary_v12.1.tex",
+   "source_artifact_id": "3c91deed-ff7b-4bd0-b0ff-dcf6c9fd98fd",
+   "source_version_id": "a8316939-e4c6-4b5c-93cb-9dbb5c340c16",
+   "source_created_at": "2026-11-15T19:25:32.856Z",
+   "sha256_source": "9a349b74a14872df3e9b681511b24dab1b9267d57f4ae234c9f650c22afc5938",
+   "sha256_repo": "9a349b74a14872df3e9b681511b24dab1b9267d57f4ae234c9f650c22afc5938",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "10_online_resource_1/build_supplement_v12_1.py",
+   "source_artifact_id": "90914031-48b1-41b8-ad83-c753352807df",
+   "source_version_id": "8c0e0baa-c0b3-4791-9bbf-e18e0f86890d",
+   "source_created_at": "2026-11-15T19:25:32.842Z",
+   "sha256_source": "d224b649cf3a4934189246ecf86f59e1153d263aabb794a4414513fe51418f46",
+   "sha256_repo": "d224b649cf3a4934189246ecf86f59e1153d263aabb794a4414513fe51418f46",
+   "changed": false,
+   "replacements": {}
+  },
+  {
+   "path": "10_online_resource_1/supplement_map_v12.1.csv",
+   "source_artifact_id": "511c725a-e70d-4c81-93cd-bc012ad59fe0",
+   "source_version_id": "90f9abe0-5bd1-4b4d-9097-6a8edd167c60",
+   "source_created_at": "2026-11-15T19:25:32.827Z",
+   "sha256_source": "cab94c87641d27e89b9dce8648ea7b5725a558d12a73f3e6bdabe1d29f53bc2e",
+   "sha256_repo": "5e971d3b03948eca464debfba462ecd5f74b1165c802cc68ac2933b0aca73489",
+   "changed": true,
+   "replacements": {}
+  },
+  {
+   "path": "10_online_resource_1/supplement_v12.1_meta_provenance.json",
+   "source_artifact_id": "691afeb5-6e01-41ee-a4d9-85526b76dac1",
+   "source_version_id": "ee2ab379-f587-4a88-a316-64f673f27c60",
+   "source_created_at": "2026-11-15T19:25:32.834Z",
+   "sha256_source": "3474050c0b940fbd92d28e596aee8bae2d82b260b035a117b1d1cff2e7076e2e",
+   "sha256_repo": "9842b09f50775f968a0322e7f93d2faffc7779948ba724455023a071e9759793",
+   "changed": true,
+   "replacements": {
+    "abs_path_clusterA": 1
+   }
+  },
+  {
+   "path": "10_online_resource_1/supplement_v12.1_edit_log.json",
+   "source_artifact_id": "32eb3316-c1bc-417d-8c90-05877e156d01",
+   "source_version_id": "763623dc-0464-4b69-a493-4b59651442d6",
+   "source_created_at": "2026-11-15T19:25:32.849Z",
+   "sha256_source": "aaf925109ca4b0396025049813f99dc9cebdae3a8176f77befd56c5b8e155604",
+   "sha256_repo": "aaf925109ca4b0396025049813f99dc9cebdae3a8176f77befd56c5b8e155604",
+   "changed": false,
+   "replacements": {}
+  }
+ ],
+ "added_v12_note": "Files of folders 7_, 8_ and 10_ are the latest stored versions of the named records. Eight files of 7_checks_v12 (checks_v12.py, checks_v12_results.csv, checks_v12_randctl_cells.csv, checks_v12_ft1abs.csv, checks_v12_inkinv.csv, checks_v12_inkinv_units.csv, checks_v12_facts.json, PROVENANCE_checks_v12.json) had the same sha256 (first 12 hex digits compared) as the copies on the compute cluster under $U/exp/RV12/checks_v12/out_r2 and code/ before replacement.",
+ "replacement_rules_v12": [
+  "/scratch/<user>/uhwr -> $U",
+  "/scratch/<user> -> $SCRATCH",
+  "user name -> <user>",
+  "node names -> <node>",
+  "software agent identifiers -> <agent>",
+  "e-mail addresses -> <email>"
+ ],
+ "german_pseudonymisation": {
+  "file": "7_checks_v12/checks_v12_inkinv_units.csv",
+  "rows_changed": 5000,
+  "units": 1000,
+  "method": "unit_id of the sets german_onhw_all and german_unipen_de_test replaced by the pseudonym of the same row in the pseudonymised unit tables ($U/shared/release_staging/german_pseudonymised, made 2026-10-23), joined by row alignment with $U/data/d2_v2 units CSVs (0 misaligned rows in 5,925 + 827 + 3,927 rows); all other columns unchanged; all 1,000 units are present in 3_unit_ids/lists; the join table is not in the repository"
+ },
+ "modified_base_files": [
+  {
+   "path": "3_unit_ids/UNIT_ID_INDEX.md",
+   "sha256_before": "af97ce7832b0703f629f8c9851528c850165a71ed6523fd957f9a6d5f6aa9637",
+   "sha256_after": "a97dc2b2b111da992e9f1b5a94758bb27037648bfad983caa324426fa45e2749",
+   "edit": "sentence 'The original IDs are available to the editor on request.' replaced by 'The mapping to the original IDs is not released.'"
+  },
+  {
+   "path": "5_per_unit_scores/README_per_unit.md",
+   "sha256_before": "15eea2ed26800ac054d997bdc2f0593357e89778e7b0d5976adfa0fa9816473c",
+   "sha256_after": "f171b9dca24bce3c14529c774e690f55dbfc8a421d24e62d482386a75a404f25",
+   "edit": "section 'Added in the public repository' appended (2 lines)"
+  },
+  {
+   "path": "6_table_sources/exp/D3_ROUTE/stageA/results/PROVENANCE_D3A.json",
+   "sha256_before": "72e632b84fa3d91d30a2e9871d47b4e7c35c8a3989fd90e5b9cad84ce5490bce",
+   "sha256_after": "50f6e3e164449294d26db28b90f52f1f4939d674b8a44d3a8bf3f4ef3eb9a929",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "2_run_configs/exp/FMD/xs/admin/live_state_2026-11-03.json",
+   "sha256_before": "a0c5d65cda8aafe0b8dd307f617479efb83c518b3c4298606f9025bb8974d2e0",
+   "sha256_after": "3142dd2e6cee3ea72eb38a34f278e126a60b9d98de4149d48c8886c477f8e817",
+   "replacements": {
+    "username": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/RQF/R1d/code/_src_snapshot.tgz__unpacked/CAND/code/frame_code_a44e78b0/jobs/clusterB/frame_arm_clusterB.sbatch",
+   "sha256_before": "33f7e8bf95c514481439972765ce844ef040c62b690c95e9e6efc11ed1e116af",
+   "sha256_after": "bcfa67135f1fdba8fa82530d85e92be82c7fa87ac44243462d5f89a905d50c0c",
+   "replacements": {
+    "host_or_site": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/README.md",
+   "sha256_before": "19396220dfbb4287d4a29487c1cc556a6e9366e05f1eb60d25849a55534021b9",
+   "sha256_after": "c420e167233989cd4c180618aa7e523555fe9725f200b2a4d7d94d560c056dd3",
+   "replacements": {
+    "host_or_site": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/smoke/d2_kill/run_config_resume_0000010.json",
+   "sha256_before": "f63233134eb1fe9d03bea3e2f3ef8239845921a4b8d6d929f94f92298b6b0e49",
+   "sha256_after": "f121b674e331e6f1bf3160b8f49ce584993b280982e2cbd38ad0909e79630ba5",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/smoke/d2_kill/run_config.json",
+   "sha256_before": "be1011f6160a8191920e8654cedcb64a60594b5e9627808060aab41bdb57318e",
+   "sha256_after": "235b02b8d41f2b158b7ef5c425dac2eff86cc79dac658e42ed17c7b8420388c2",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/smoke/d2_s2/run_config.json",
+   "sha256_before": "6919016095d3321515664942ef3d3976fda520bea274508c390904d6544ecdb4",
+   "sha256_after": "78b76bca172cbd5fd53969e004ba6a4766b9222e12f665d9f7db78dfa4df956b",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/smoke/d2_s2/run_config_resume_0000012.json",
+   "sha256_before": "114a7814b4eba135847b751c3ecafe9c29691f014d8c0290e1d70c573e914df8",
+   "sha256_after": "16c2b73f51bfc7285c7b4abf555858003a9f204c7aad5e281561d60d08069386",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/smoke/d2_fixed/run_config.json",
+   "sha256_before": "91af0b527a1712a79dbe0fc072a1648953874a716fbc59c8f965a4d1efeffda0",
+   "sha256_after": "bce58a6cc2267eef19f0a3a0e7ef208f111f027cb70145ded4d8f93774ccb88f",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/smoke/d2_s1/run_config.json",
+   "sha256_before": "7d317daf7df755329e425971d648e2d654f13028f8bdd23e2363018dd5d6ed14",
+   "sha256_after": "8c1dc2148792c0826aca7d2aaf403c4085d538e9750a359c7e77fee682708c28",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/RQF/admin/d2moe_code_9a020b75.tgz__unpacked/d2moe_code_9a020b75/jobs/clusterB_d2_stage.sh",
+   "sha256_before": "8b2e49d8118e290c239435e8e8802559d86b8b0e3dea7570f151a12798e3a203",
+   "sha256_after": "638dc90c9ed72563a10ac108f35795907d7b09f75151a3e64ff5b9a5c94f0c17",
+   "replacements": {
+    "host_or_site": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_8749e610.tar.gz__unpacked/d2moe_code/README.md",
+   "sha256_before": "19396220dfbb4287d4a29487c1cc556a6e9366e05f1eb60d25849a55534021b9",
+   "sha256_after": "c420e167233989cd4c180618aa7e523555fe9725f200b2a4d7d94d560c056dd3",
+   "replacements": {
+    "host_or_site": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_8749e610.tar.gz__unpacked/d2moe_code/smoke/d2_kill/run_config_resume_0000010.json",
+   "sha256_before": "f63233134eb1fe9d03bea3e2f3ef8239845921a4b8d6d929f94f92298b6b0e49",
+   "sha256_after": "f121b674e331e6f1bf3160b8f49ce584993b280982e2cbd38ad0909e79630ba5",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_8749e610.tar.gz__unpacked/d2moe_code/smoke/d2_kill/run_config.json",
+   "sha256_before": "be1011f6160a8191920e8654cedcb64a60594b5e9627808060aab41bdb57318e",
+   "sha256_after": "235b02b8d41f2b158b7ef5c425dac2eff86cc79dac658e42ed17c7b8420388c2",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_8749e610.tar.gz__unpacked/d2moe_code/smoke/d2_s2/run_config.json",
+   "sha256_before": "6919016095d3321515664942ef3d3976fda520bea274508c390904d6544ecdb4",
+   "sha256_after": "78b76bca172cbd5fd53969e004ba6a4766b9222e12f665d9f7db78dfa4df956b",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_8749e610.tar.gz__unpacked/d2moe_code/smoke/d2_s2/run_config_resume_0000012.json",
+   "sha256_before": "114a7814b4eba135847b751c3ecafe9c29691f014d8c0290e1d70c573e914df8",
+   "sha256_after": "16c2b73f51bfc7285c7b4abf555858003a9f204c7aad5e281561d60d08069386",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_8749e610.tar.gz__unpacked/d2moe_code/smoke/d2_fixed/run_config.json",
+   "sha256_before": "91af0b527a1712a79dbe0fc072a1648953874a716fbc59c8f965a4d1efeffda0",
+   "sha256_after": "bce58a6cc2267eef19f0a3a0e7ef208f111f027cb70145ded4d8f93774ccb88f",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_8749e610.tar.gz__unpacked/d2moe_code/smoke/d2_s1/run_config.json",
+   "sha256_before": "7d317daf7df755329e425971d648e2d654f13028f8bdd23e2363018dd5d6ed14",
+   "sha256_after": "8c1dc2148792c0826aca7d2aaf403c4085d538e9750a359c7e77fee682708c28",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_8749e610.tar.gz__unpacked/d2moe_code/jobs/clusterB_d2_stage.sh",
+   "sha256_before": "8b2e49d8118e290c239435e8e8802559d86b8b0e3dea7570f151a12798e3a203",
+   "sha256_after": "638dc90c9ed72563a10ac108f35795907d7b09f75151a3e64ff5b9a5c94f0c17",
+   "replacements": {
+    "host_or_site": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_9a020b75.tar.gz__unpacked/d2moe_code/README.md",
+   "sha256_before": "19396220dfbb4287d4a29487c1cc556a6e9366e05f1eb60d25849a55534021b9",
+   "sha256_after": "c420e167233989cd4c180618aa7e523555fe9725f200b2a4d7d94d560c056dd3",
+   "replacements": {
+    "host_or_site": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_9a020b75.tar.gz__unpacked/d2moe_code/smoke/d2_kill/run_config_resume_0000010.json",
+   "sha256_before": "f63233134eb1fe9d03bea3e2f3ef8239845921a4b8d6d929f94f92298b6b0e49",
+   "sha256_after": "f121b674e331e6f1bf3160b8f49ce584993b280982e2cbd38ad0909e79630ba5",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_9a020b75.tar.gz__unpacked/d2moe_code/smoke/d2_kill/run_config.json",
+   "sha256_before": "be1011f6160a8191920e8654cedcb64a60594b5e9627808060aab41bdb57318e",
+   "sha256_after": "235b02b8d41f2b158b7ef5c425dac2eff86cc79dac658e42ed17c7b8420388c2",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_9a020b75.tar.gz__unpacked/d2moe_code/smoke/d2_s2/run_config.json",
+   "sha256_before": "6919016095d3321515664942ef3d3976fda520bea274508c390904d6544ecdb4",
+   "sha256_after": "78b76bca172cbd5fd53969e004ba6a4766b9222e12f665d9f7db78dfa4df956b",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_9a020b75.tar.gz__unpacked/d2moe_code/smoke/d2_s2/run_config_resume_0000012.json",
+   "sha256_before": "114a7814b4eba135847b751c3ecafe9c29691f014d8c0290e1d70c573e914df8",
+   "sha256_after": "16c2b73f51bfc7285c7b4abf555858003a9f204c7aad5e281561d60d08069386",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_9a020b75.tar.gz__unpacked/d2moe_code/smoke/d2_fixed/run_config.json",
+   "sha256_before": "91af0b527a1712a79dbe0fc072a1648953874a716fbc59c8f965a4d1efeffda0",
+   "sha256_after": "bce58a6cc2267eef19f0a3a0e7ef208f111f027cb70145ded4d8f93774ccb88f",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_9a020b75.tar.gz__unpacked/d2moe_code/smoke/d2_s1/run_config.json",
+   "sha256_before": "7d317daf7df755329e425971d648e2d654f13028f8bdd23e2363018dd5d6ed14",
+   "sha256_after": "8c1dc2148792c0826aca7d2aaf403c4085d538e9750a359c7e77fee682708c28",
+   "replacements": {
+    "host_or_node": 1
+   }
+  },
+  {
+   "path": "1_evaluator_and_table_code/exp/D2_MOE/code/d2moe_code_9a020b75.tar.gz__unpacked/d2moe_code/jobs/clusterB_d2_stage.sh",
+   "sha256_before": "8b2e49d8118e290c239435e8e8802559d86b8b0e3dea7570f151a12798e3a203",
+   "sha256_after": "638dc90c9ed72563a10ac108f35795907d7b09f75151a3e64ff5b9a5c94f0c17",
+   "replacements": {
+    "host_or_site": 1
+   }
+  },
+  {
+   "path": "3_unit_ids/source_records/data/d2_v2/onhw/PROVENANCE_X3_onhw.json",
+   "sha256_before": "3a1362c102187548ce1ea435f4402d06aea5f77147b5a7a275462853d9bddf69",
+   "sha256_after": "731c512175b13c8bad8b39847260c97039fc7760e79aab689504d007cb28ec64",
+   "replacements": {
+    "onhw_recording_id": 2,
+    "onhw_session_id": 3
+   }
+  },
+  {
+   "path": "3_unit_ids/source_records/data/d2_v2/onhw/build_stats.json",
+   "sha256_before": "1ce3b7cda8fc55f0cc1730ecd42574e0187ff530bd4de9111d1b1854474b4363",
+   "sha256_after": "7de61d4d61e6a62614d0577164ea0cb9e48d013554703ead007df11211678587",
+   "replacements": {
+    "onhw_recording_id": 2,
+    "onhw_session_id": 2
+   }
+  },
+  {
+   "path": "3_unit_ids/source_records/data/d2_v2/onhw/recordings.csv",
+   "sha256_before": "f104c5acde2d1fb48247b053a74004f641e2bc387235fec40a464a9d855247ab",
+   "sha256_after": "38a35f08144c62b6299a8b755d31809c23850564383efd8ae59b06ced45a8745",
+   "replacements": {
+    "onhw_recording_id": 58,
+    "onhw_session_id": 116
+   }
+  },
+  {
+   "path": "3_unit_ids/source_records/data/d2_v2/onhw/build_log.txt",
+   "sha256_before": "9aa7862a7bc5adaafe06ab44eae3abea989f50a3a310696532cc070ff0774d10",
+   "sha256_after": "c4cb18c0598c937f4b5e82d887545decd4069ac7167c85c3833f2d8560df2a4e",
+   "replacements": {
+    "onhw_recording_id": 2,
+    "onhw_session_id": 2
+   }
+  }
+ ],
+ "modified_base_note": "onhw_recording_id: OnHW recording names replaced by REC-01..REC-58 (order of recordings.csv); onhw_session_id: OnHW session names replaced by SES-<k>; host_or_node, host_or_site, username: names replaced by <node>, <site>, <user>. sha256 values recorded in provenance/archive_v11 refer to the files before these edits.",
+ "new_files": [
+  ".gitattributes",
+  ".gitignore",
+  "5_per_unit_scores/reproduce_warm_deltas.py",
+  "CITATION.cff",
+  "LICENSE",
+  "MANIFEST.sha256",
+  "NOT_INCLUDED.md",
+  "README.md",
+  "checkpoints/verify_checkpoints.py",
+  "provenance/PROVENANCE_repo_v12.json"
+ ],
+ "checks": {
+  "reproduce_warm_deltas": "24 pooled differences recomputed from 5_per_unit_scores; the recomputed column is equal to 5_per_unit_scores/CHECK_reproduce_T5_T6.csv (largest difference 0.0) in the staging environment; largest absolute difference to T56_per_seed.csv 9.71e-17 (staging environment) and 1.39e-17 (fresh environment: Python 3.11.18, numpy 2.4.6, pandas 3.1.1)",
+  "evaluator_smoke_test": "fresh conda environment, pip install of 1_evaluator_and_table_code/uhwr_eval-0.3.1 from a copy of the tree (uhwr_eval 0.3.1, torch 2.15.0, lpips 0.1.4, tslearn 0.10.0, numba 0.68.1, opencv-python 5.0.0.93, scipy 1.17.1); validate_toy.run exit 0; tests_marks.py exit 0; tests_timing.py exit 0; the regenerated toy_validation.csv has 33 columns (shipped file: 31) and its common numeric columns differ from the shipped file by at most 5.96e-08 (lpips)"
+ },
+ "not_done": [
+  "no file of the first-round archive was used",
+  "the manuscript source and PDF are not in the tree"
+ ],
+ "updated_utc": "2026-11-15T21:23:29Z",
+ "added_checkpoint_manifest_and_router_code": {
+  "added_utc": "2026-11-15T21:03:07Z",
+  "files": [
+   {
+    "path": "checkpoints/checkpoint_manifest.csv",
+    "source": "stored record of the checkpoint staging",
+    "source_version_id": "c52ad276-f5b7-4d20-a44e-413bd27b028b",
+    "sha256_source": "9295b18520e042323064328847ba79726d8daaf043f00d7d3dacefe3f15c15e3",
+    "sha256_repo": "9295b18520e042323064328847ba79726d8daaf043f00d7d3dacefe3f15c15e3",
+    "changed": false,
+    "replacements": {}
+   },
+   {
+    "path": "checkpoints/checkpoint_manifest_meta_provenance.json",
+    "source": "stored record of the checkpoint staging",
+    "source_version_id": "d525faff-e7a7-49b5-9502-438d6d8e129e",
+    "sha256_source": "cabc06fdceda305fb44b6717e8eb7f27afbe34cb309f326170776f084274e622",
+    "sha256_repo": "ab448f6bac9ec082802a79478e7447f846ca1e8f67ae4f2d8e838b04cb98be2b",
+    "changed": true,
+    "replacements": {
+     "abs_path_clusterA": 1,
+     "abs_path_home": 1,
+     "username": 1,
+     "host_or_node": 2
+    }
+   },
+   {
+    "path": "1_evaluator_and_table_code/local/experiments/RV11/router336/code/rr336_eval.py",
+    "source": "local project folder $LOCAL/experiments/RV11/router336/code",
+    "source_mtime_utc": "2026-11-15T13:30:47Z",
+    "sha256_source": "8329a8832a7efb9c79c1d2a2b9bc83a6cd315a70727ff0db6843c49bf93f89b7",
+    "sha256_repo": "bc3b7b34e23157190c1775638fe835025a863274e941ee754592b3e05874c366",
+    "changed": true,
+    "replacements": {
+     "abs_path_local": 3
+    }
+   },
+   {
+    "path": "1_evaluator_and_table_code/local/experiments/RV11/router336/code/script_clf.py",
+    "source": "local project folder $LOCAL/experiments/RV11/router336/code",
+    "source_mtime_utc": "2026-11-15T13:29:59Z",
+    "sha256_source": "58710f5729d71d6775078351fa6c5993b2a98aeb413ff333edc01ee8ed2b962f",
+    "sha256_repo": "58710f5729d71d6775078351fa6c5993b2a98aeb413ff333edc01ee8ed2b962f",
+    "changed": false,
+    "replacements": {}
+   },
+   {
+    "path": "1_evaluator_and_table_code/local/experiments/RV11/router336/code/rr336_train.py",
+    "source": "local project folder $LOCAL/experiments/RV11/router336/code",
+    "source_mtime_utc": "2026-11-15T13:29:59Z",
+    "sha256_source": "953bdd83cf2de46fd8b50dc5594b1d6c662c8e08b927db2b1095aa318378885a",
+    "sha256_repo": "953bdd83cf2de46fd8b50dc5594b1d6c662c8e08b927db2b1095aa318378885a",
+    "changed": false,
+    "replacements": {}
+   },
+   {
+    "path": "1_evaluator_and_table_code/local/experiments/RV11/router336/code/run_all.sh",
+    "source": "local project folder $LOCAL/experiments/RV11/router336/code",
+    "source_mtime_utc": "2026-11-15T13:29:59Z",
+    "sha256_source": "ec342a16fb8f65bc70d778070eefe46939497a26e2c3999a972e76dfcb6bc247",
+    "sha256_repo": "9d6162896052e85859b4a496a116c3f6566431769102b1c4df884f93a601e984",
+    "changed": true,
+    "replacements": {
+     "abs_path_local": 2
+    }
+   },
+   {
+    "path": "1_evaluator_and_table_code/local/experiments/RV11/router336/code/SHA256SUMS.txt",
+    "source": "local project folder $LOCAL/experiments/RV11/router336/code",
+    "source_mtime_utc": "2026-11-15T13:29:59Z",
+    "sha256_source": "325c80d75b9847fd0c93458b719685bbc9e9acab47c70f009e5b98015d5d07cf",
+    "sha256_repo": "325c80d75b9847fd0c93458b719685bbc9e9acab47c70f009e5b98015d5d07cf",
+    "changed": false,
+    "replacements": {}
+   }
+  ],
+  "note": "checkpoint_manifest.csv is byte-identical to the stored record (sha256 equal to the value in its provenance file); its provenance file and the two router scripts with absolute paths had paths, user name and node names replaced by placeholders. checkpoint_sources_INTERNAL.csv and unlocated_runs.csv, named in the provenance file, are not in the repository. script_clf.py is byte-identical to 3_unit_ids/source_records/exp/D3_ROUTE/router/code_D3_ROUTE_router.tar.gz__unpacked/code/script_clf.py.",
+  "checks": {
+   "router_loading": "13 of the 16 script-router files were available locally (sha256 equal to the manifest); all 13 loaded with ScriptCNN from the script_clf.py of this tree using the loading_command of the manifest (torch 2.15.0)",
+   "verify_checkpoints": "checkpoints/verify_checkpoints.py on these 13 files: 13 verified, 0 different, 113 not present; exit 0, and exit 1 with --require-all",
+   "other_loaders": "the loading commands of the other three file kinds were not run (no such checkpoint file was available locally); the named functions and command-line options exist in the named code files"
+  }
+ },
+ "post_release_edits": [
+  {
+   "date": "2026-11-16",
+   "file": "README.md",
+   "change": "added the Google Drive checkpoint folder link (folder InkBridge_checkpoints, id from rclone lsf --format pi on the owning account) above the checkpoint table; per-group links in the table not yet filled",
+   "readme_sha256_after": "339ed813d36ccab24ed51904ec95ce71207b29bad19a7f4adc1ac281f8a4eb12",
+   "upload_state_at_edit": "rclone copy still running"
+  },
+  {
+   "date": "2026-11-16",
+   "change": "compute-site name removed from labels, file name, keys and paths; text otherwise unchanged",
+   "files": {
+    "10_online_resource_1/supplement_v12.1_meta_provenance.json": {
+     "sha256_before": "8d864d9ae8392488c1cf85daa660e02b880069ea3cade61b9f6a338197d79ec6",
+     "sha256_after": "9842b09f50775f968a0322e7f93d2faffc7779948ba724455023a071e9759793"
+    },
+    "1_evaluator_and_table_code/local/experiments/RV11/router336/code/rr336_eval.py": {
+     "sha256_before": "7bec2394ad01dbabaa05cf7c1a84fb1253bcb304f6b9602db01696f87e5343b9",
+     "sha256_after": "bc3b7b34e23157190c1775638fe835025a863274e941ee754592b3e05874c366"
+    },
+    "7_checks_v12/PROVENANCE_checks_v12.json": {
+     "sha256_before": "3a8a441931eecdd0fcc9f84d6cdf189316f8b8915e59f3792f2ec35632f58de0",
+     "sha256_after": "4c92dac927fd91d9e40cce7fc9f7b7785bf7cf231d4138bd563f0e46f9d605f4"
+    },
+    "7_checks_v12/checks_v12.py": {
+     "sha256_before": "8718e0e81338f708fbebba86cbd3820796f5a6c7be5a808a386dba01ccc996da",
+     "sha256_after": "6f193793a7efbdd46029cb9f91e0361c32c2723c5f11e36c21593d5f44a3a4a5"
+    },
+    "7_checks_v12/checks_v12_facts.json": {
+     "sha256_before": "3f64ae201b305e72f6ae9ca940f037a57818b25ddc18947c1213a8bb7787afa3",
+     "sha256_after": "dd318c64ce9a9ca619fe69400e4268a5d393708d4b073e7bcba1736bfd937d97"
+    },
+    "7_checks_v12/checks_v12_ft1abs.csv": {
+     "sha256_before": "437bf9a724331022a86978cb05f23702fd42e53700c07429421b91807eb9c8e2",
+     "sha256_after": "e29923e034004c22532e9306bd62c5c137a1826cd8bb5004a0c28fc7f5d58ce3"
+    },
+    "7_checks_v12/checks_v12_meta_provenance.json": {
+     "sha256_before": "bd25f118c993fbaee7e32cd367a23d5d4f028beceabff8611c518bdfa696f5f1",
+     "sha256_after": "66ed0ffd0925d47616e2738986061fd7ee3b2a76a760669ded41d6417d1d5f14"
+    },
+    "7_checks_v12/checks_v12_summary.md": {
+     "sha256_before": "d4cc31a9267f76803c796b7d94faa1b4eb566ef1569b15c76ed2681fb1ae7195",
+     "sha256_after": "f8e958dc0b4c506fd798dbe44f8cda6d092a5d2d4924f3ab42bbf30f20b027df"
+    },
+    "8_figures_v12/figs_v12_meta_provenance.json": {
+     "sha256_before": "aaea773f246a5dfbf8da9e6db7826432f86360a522ad8e896cdf92916dda5858",
+     "sha256_after": "e8dc87054617b17e297e9dad49cb517e0b0329f115c9a4eb5a14a00c7d72c096"
+    },
+    "8_figures_v12/make_figs_v12.py": {
+     "sha256_before": "42104da94f30d22afe7cd1491aad0c40fd09ef625826d5fc867382807db2e86d",
+     "sha256_after": "1fd282d6a6499b0196d3cd6a36755ee768e83791b7a1690694a5890767d55063"
+    },
+    "README.md": {
+     "sha256_before": "864e4bbbb1d70096126d1f3c786f7483137b66e9cf67e73aa1611b7695932fac",
+     "sha256_after": "d85e7fdc31f4cbbe54924fb2b803664ae1b518b771bdf5af45007709f6495050"
+    },
+    "checkpoints/checkpoint_manifest_meta_provenance.json": {
+     "sha256_before": "a49f032698596085801fa98d9023c10343e81f11d3cb99aeec9fafd8596efa6b",
+     "sha256_after": "ab448f6bac9ec082802a79478e7447f846ca1e8f67ae4f2d8e838b04cb98be2b"
+    },
+    "provenance/PROVENANCE_repo_v12.json": {
+     "sha256_before": "65defdcb6fd2529431f81d916201fed350519937a359db98edccd628295c2776",
+     "sha256_after": "not recorded (this file)"
+    }
+   },
+   "renamed": {
+    "7_checks_v12/PROVENANCE_checks_v12_<site>.json": "7_checks_v12/PROVENANCE_checks_v12.json"
+   },
+   "manifest": "MANIFEST.sha256 lines of changed files recomputed",
+   "record_hashes_updated": [
+    [
+     "7_checks_v12/checks_v12_meta_provenance.json",
+     "437bf9a72433"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "a49f03269859"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "437bf9a72433"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "8718e0e81338"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "d4cc31a9267f"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "3f64ae201b30"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "bd25f118c993"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "42104da94f30"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "aaea773f246a"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "7bec2394ad01"
+    ],
+    [
+     "provenance/PROVENANCE_repo_v12.json",
+     "8d864d9ae839"
+    ],
+    [
+     "8_figures_v12/figs_v12_meta_provenance.json",
+     "42104da94f30"
+    ],
+    [
+     "7_checks_v12/PROVENANCE_checks_v12.json",
+     "437bf9a72433"
+    ]
+   ],
+   "note": "sha256_after of the three provenance records is their hash after the quoted hashes inside them were updated"
+  },
+  {
+   "date": "2026-11-16",
+   "change": "checkpoint manifest extended from 126 to 137 files with Drive links and upload checks; README checkpoint tables filled; NOT_INCLUDED.md count updated",
+   "files": {
+    "checkpoints/checkpoint_manifest.csv": "ce8ba2c5811bb403d958b989f40717803b3e74421af0cfde372a69690032c886",
+    "checkpoints/checkpoint_manifest_meta_provenance.json": "02e4e079d0c59474ae1f814ed7fe33bf9b98900b5e50b9a2fc2e1d8cf24eae45",
+    "NOT_INCLUDED.md": "647ebc8dc13c7ea093b2e42766c52666b17160705232a30110a1c44b41bd8634",
+    "README.md": "598e4802cf8c5260130f9767f5b61a07e6e2379b49956e5d9ffd40828f1f8834"
+   },
+   "manifest_lines_updated": 3
+  }
+ ]
+}

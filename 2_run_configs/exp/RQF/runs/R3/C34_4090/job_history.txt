@@ -1,0 +1,3 @@
+500_rqf_r3_comp_s34_seeds12 start Sat 11/07/2026 12:17:30.66 
+NVIDIA GeForce RTX 4090, 3281 MiB, 24564 MiB
+500_rqf_r3_comp_s34_seeds12 end Sat 11/07/2026 12:34:23.72 

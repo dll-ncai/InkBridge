@@ -1,0 +1,159 @@
+{
+ "not_staged": [
+  {
+   "repo_id": "google/inkfm or google/ink-fm (InkFM, arXiv 2503.23081)",
+   "gated": "",
+   "license": "",
+   "reason": "NOT RELEASED: HF api model_info for google/inkfm and google/ink-fm -> RepositoryNotFoundError 404; GitHub repository search for 'inkfm', 'InkFM google' and 'ink foundation model handwriting' returned no InkFM repository (only thesephist/inkfmt, unrelated); paper says 'We plan to make this model public'. Checked 2026-11-03."
+  },
+  {
+   "repo_id": "nvidia/C-RADIOv4-B, nvidia/C-RADIOv4-L, nvidia/C-RADIOv4-g",
+   "gated": "",
+   "license": "",
+   "reason": "DO NOT EXIST on HF: RepositoryNotFoundError 404 on https://huggingface.co/api/models/nvidia/C-RADIOv4-{B,L,g}. Only C-RADIOv4-H and C-RADIOv4-SO400M exist (staged)."
+  },
+  {
+   "repo_id": "oddadmix/Qaari-0.1-Urdu-OCR-VL-2B-Instruct base = unsloth/Qwen2-VL-2B-Instruct-unsloth-bnb-4bit",
+   "gated": "False",
+   "license": "",
+   "reason": "SUBSTITUTION (as requested in the task): the adapter's declared base is the unsloth bnb-4bit copy; Qwen/Qwen2-VL-2B-Instruct (bf16) is staged as base. Load test 'qaari-urdu-vision' merges the adapter's 256 visual LoRA tensors into the bf16 vision tower (scale alpha/r = 1)."
+  },
+  {
+   "repo_id": "unsloth/DeepSeek-OCR (declared base of nomypython/urdu-ocr-deepseek)",
+   "gated": "False",
+   "license": "mit",
+   "reason": "staged for identity check: its model-00001-of-000001.safetensors sha256 and config/tokenizer files are IDENTICAL to deepseek-ai/DeepSeek-OCR (compared 2026-11-03), so the declared base of the nomy Urdu adapter equals the official weights. Its remote config does not load with the transformers-4.46.3 stack (cannot import DeepseekV2Model) - the official repo does. Urdu LoRA adapters touch LM layers only (4392/4392 and 4584/4584 tensors), so the vision encoder equals the base model's."
+  },
+  {
+   "repo_id": "xcll/cleandift_flux_step_{1000..13000}",
+   "gated": "",
+   "license": "",
+   "reason": "community CleanDIFT-FLUX training snapshots (0 downloads, 2025-09); not staged: need gated FLUX.1 base, no release by CompVis."
+  },
+  {
+   "repo_id": "facebook/sam3.1",
+   "gated": "manual",
+   "license": "other",
+   "reason": "STAGED (3.5 GB sam3.1_multiplex.pt, original-format checkpoint; README: no Transformers integration) but NOT load-tested: transformers 5.22.1 Sam3Model -> OSError no model.safetensors/pytorch_model.bin. Key inspection admin/sam3.1_ckpt_keys.json: detector.backbone.vision_backbone.trunk.pos_embed [1,577,1024], patch_embed.proj 14x14 (same ViT-L/14 trunk shape as facebook/sam3). Needs github.com/facebookresearch/sam3 (not cloned)."
+  },
+  {
+   "repo_id": "facebook/PE-Core-S16-384, facebook/PE-Core-T16-384",
+   "gated": "False",
+   "license": "apache-2.0",
+   "reason": "STAGED (official .pt + config.yaml only, no timm port); NOT load-tested (no loader registered; the core.vision_encoder package is not installed on CLUSTER-A, PE-Core-G14-448 / PE-Lang use the timm ports)."
+  },
+  {
+   "repo_id": "sherif1313/Arabic-handwritten-OCR-4bit-Qwen2.5-VL-3B-v2",
+   "gated": "False",
+   "license": "",
+   "reason": "STAGED but NOT load-tested: bitsandbytes NF4 checkpoint; transformers raises ImportError 'Using bitsandbytes 4-bit quantization requires bitsandbytes' (not installed; no CUDA on load-test nodes). Vision tower: 1,200 tensors vs 390 in Qwen2.5-VL-3B (162 shape mismatches from packed 4-bit storage), see vision_identity_addendum1.json."
+  },
+  {
+   "repo_id": "depth-anything/DA3-GIANT-1.1, DA3-BASE, DA3-LARGE-1.1",
+   "gated": "False",
+   "license": "",
+   "reason": "STAGED; load tests fail: ValueError 'Unrecognized model ... Should have a model_type key in its config.json' (all AutoModel* classes, trust_remote_code False/True). Requires the depth_anything_3 package (clone at weights/github/depth-anything-3 belongs to another track; not installed)."
+  },
+  {
+   "repo_id": "dots-studio/dots.ocr, dots-studio/dots.ocr.base, PaddlePaddle/PaddleOCR-VL-1.0/1.5, microsoft Florence-2",
+   "gated": "False",
+   "license": "",
+   "reason": "STAGED; see load-test column: dots.ocr(-base), PaddleOCR-VL-1.0/1.5 instantiate (DotsOCRForCausalLM 3.04 B params, remote code) but no feature extractor written (lead: no extractors); Florence-2-base / -large-ft have a LOAD-TEST-only DaViT loader (large-ft needs transformers 4.46.3 stack: transformers 5.22.1 remote code raises AttributeError 'Florence2LanguageConfig' object has no attribute 'forced_bos_token_id')."
+  },
+  {
+   "repo_id": "facebook/deit-{tiny,small,base}-patch16-224 (config + pytorch_model.bin)",
+   "gated": "False",
+   "license": "apache-2.0",
+   "reason": "NOT a candidate: dependency of theaiinstitute/theia-* remote code (calls AutoModel.from_pretrained inside __init__); cached in weights/.hf_home/hub (HF cache, pinned snapshot ids in PROVENANCE addendum)."
+  },
+  {
+   "repo_id": "stabilityai/stable-diffusion-3.5-medium, -large, -large-turbo",
+   "gated": "auto",
+   "license": "other (stabilityai-ai-community)",
+   "reason": "STAGED in addendum 2 (after <author> accepted the Stability AI licence): diffusers layout only; see MANIFEST_v2 rows [A2]. Earlier GatedRepoError records kept as *.blocked_1st_attempt_add1.json."
+  },
+  {
+   "repo_id": "bigcode/starcoderbase-1b",
+   "gated": "auto",
+   "license": "bigcode-openrail-m",
+   "reason": "BLOCKED: GatedRepoError 403 - Cannot access gated repo for url https://huggingface.co/bigcode/starcoderbase-1b/resolve/182f0165fdf8da9c9935901eec65c94337f01c11/config.json. Access to model bigcode/starcoderbase-1b is restricted and you are not in the authorized list (access test 2026-11-03, job 24850449; staging attempt job 24850478)."
+  }
+ ],
+ "discovery_list": [
+  {
+   "repo_id": "google/tipsv2-{b14,l14,so400m14,g14} (+ -dpt heads), google/tipsv1-*",
+   "note": "TIPS v2 image-text encoders with strong dense features, 448-px native, 16x16 at 224 px (interpolated)",
+   "staged": "v2 b14,l14,so400m14,g14 staged (first task); tipsv1 s14,b14,l14,so400m14,g14 staged (addendum 1)"
+  },
+  {
+   "repo_id": "facebook/dinov2-with-registers-{small,base,large,giant}",
+   "note": "DINOv2 + registers (ViT/14)",
+   "staged": "large (first task); small, base, giant staged (addendum 1); dinov2-giant, dinov2-base also staged"
+  },
+  {
+   "repo_id": "facebook/webssl-dino{300m,1b,2b,3b,5b,7b}-*, facebook/webssl-mae{300m,1b,3b}-full2b-224",
+   "note": "Web-SSL (DINO / MAE scaled on web data)",
+   "staged": "dino1b-224, mae300m-224 (first task); dino300m, 2b, 3b, 5b, 7b, mae1b, mae3b staged (addendum 1)"
+  },
+  {
+   "repo_id": "apple/aimv2-{large,huge,1B,3B}-patch14-*",
+   "note": "AIMv2 autoregressive image-text pretraining; dense-feature competitive",
+   "staged": "large-patch14-224 (first task); huge, 1B, 3B, large-distilled staged (addendum 1)"
+  },
+  {
+   "repo_id": "facebook/vit-mae-large",
+   "note": "MAE ViT-L/16 pixel-reconstruction pretraining (relevant to stroke-level pixels)",
+   "staged": "staged (pytorch_model.bin only)"
+  },
+  {
+   "repo_id": "depth-anything/Depth-Anything-V2-Large-hf, depth-anything/DA3-{LARGE,GIANT}[-1.1]",
+   "note": "depth-trained DINOv2 backbones",
+   "staged": "V2-Large-hf and DA3-LARGE-1.1 staged"
+  },
+  {
+   "repo_id": "theaiinstitute/theia-{tiny,small,base}-patch16-224-*",
+   "note": "Theia multi-teacher distilled robot-vision encoders",
+   "staged": "all 5 staged (tiny-cddsv, tiny-cdiv, small-cdiv, base-cdiv, base-cddsv) (addendum 1)"
+  },
+  {
+   "repo_id": "facebook/dinov3-vitl16-pretrain-sat493m, facebook/dinov3-vit7b16-pretrain-sat493m",
+   "note": "DINOv3 satellite-domain variants",
+   "staged": "staged (addendum 1; stays on CLUSTER-A, DINOv3 licence): vitl16-sat493m and vit7b16-sat493m"
+  },
+  {
+   "repo_id": "microsoft/trocr-{base,large,small}-handwritten, Riksarkivet/trocr-base-handwritten-hist-swe-2",
+   "note": "handwriting recognition ViT/BEiT encoders",
+   "staged": "trocr-large-handwritten (first task); base, small-handwritten and Riksarkivet hist-swe-2 staged (addendum 1)"
+  },
+  {
+   "repo_id": "microsoft/Florence-2-{base,large}[-ft]",
+   "note": "DaViT encoder VLM with OCR task",
+   "staged": "large (first task, microsoft/Florence-2-large; does not load); Florence-2-base and -large-ft staged (addendum 1)"
+  },
+  {
+   "repo_id": "stepfun-ai/GOT-OCR-2.0-hf, PaddlePaddle/PaddleOCR-VL-{1.5,1.6}, lightonai/LightOnOCR-{2-1B,3-4B,3-0.8B}, datalab-to/chandra-ocr-2, dots-studio/dots.ocr",
+   "note": "document-OCR VLMs",
+   "staged": "GOT-OCR2.0-hf, PaddleOCR-VL-1.6, LightOnOCR-2-1B (first task); PaddleOCR-VL-1.0/1.5, LightOnOCR-3-4B/-0.8B, chandra-ocr-2, chandra (v1), dots.ocr, dots.ocr-base staged (addendum 1)"
+  },
+  {
+   "repo_id": "Reza2kn/surya-ocr-2-persian-handwriting-369k, sherif1313/Arabic-handwritten-OCR-4bit-Qwen2.5-VL-3B-v2, loay/Arabic-OCR-DeepSeek-OCR-2, NAMAA-Space/Qari-OCR-*",
+   "note": "Arabic-script / Persian handwriting OCR fine-tunes (Urdu-adjacent)",
+   "staged": "all staged (addendum 1): surya-ocr-2-persian-hw, Arabic-handwritten-OCR-4bit, loay/Arabic-OCR-DeepSeek-OCR-2, arabic-english-hw-ocr-v3, Qari v0.3 (2B), Qari-0.4.0 adapter (+ Qwen3-VL-4B-Instruct base) ; plus Qwen2.5-VL-3B-Instruct, Qwen3-VL-4B-Instruct as bases"
+  },
+  {
+   "repo_id": "Derendering/InkSight-Small-p",
+   "note": "ink derendering VLM (already in FMD v1 manifest)",
+   "staged": "v1 (not re-downloaded)"
+  },
+  {
+   "repo_id": "digital-ink foundation models other than InkSight/InkFM",
+   "note": "HF searches 'digital ink', 'online handwriting', 'handwriting', 'handwritten', 'stroke', 'sketch' returned no further ink/stroke foundation model",
+   "staged": "n/a"
+  },
+  {
+   "repo_id": "datalab-to/chandra (v1), starvector/starvector-8b-im2svg, facebook/PE-Core-G14-448 + PE-Lang L14/G14-448 (timm), facebook/sam3, facebook/sam3.1, stabilityai/stable-diffusion-3-medium-diffusers, black-forest-labs/FLUX.1-dev, FLUX.1-schnell, google/siglip2-{large,so400m}-patch16-256",
+   "note": "added by the lead's follow-up request 2026-11-03 (<author>: fetch ALL candidates)",
+   "staged": "all staged except SD3.5 (GatedRepoError); see table"
+  }
+ ]
+}

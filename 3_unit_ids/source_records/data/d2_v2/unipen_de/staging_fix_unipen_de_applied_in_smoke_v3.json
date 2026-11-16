@@ -1,0 +1,54 @@
+{
+ "step": "X3 UNIPEN-de staging fix",
+ "root_cause": "directory modes r-x from the CD-ROM image blocked extraction after the first writer folder",
+ "dirs_made_user_writable": 3,
+ "passes": [
+  {
+   "dirs_chmod": 3,
+   "tar_rc": 0,
+   "missing_after": 0
+  }
+ ],
+ "tar_options": "--skip-old-files --mode=u+w --exclude=._*",
+ "utc": "2026-10-19T16:44:35Z",
+ "tar": "$U/data/stage/unipen_de.tar",
+ "tar_sha256": "f8989c4793e7c038b04abdbc3a1225d203a9bf92e2923e15337e6c3baf8f27f7",
+ "target": "$U/data/unipen_train_r01_v07",
+ "tar_files_extracted_subtree": 6094,
+ "tar_dat_counts_include": {
+  "atu": 92,
+  "<unipen-path>": 131,
+  "<unipen-path>": 130,
+  "<unipen-path>": 116,
+  "<unipen-path>": 475,
+  "<unipen-path>": 494,
+  "<unipen-path>": 202,
+  "<unipen-path>": 422
+ },
+ "disk_dat_counts_before": {
+  "atu": 92,
+  "<unipen-path>": 116,
+  "<unipen-path>": 475,
+  "<unipen-path>": 494,
+  "<unipen-path>": 202,
+  "<unipen-path>": 422
+ },
+ "disk_dat_counts_after": {
+  "atu": 92,
+  "<unipen-path>": 131,
+  "<unipen-path>": 130,
+  "<unipen-path>": 116,
+  "<unipen-path>": 475,
+  "<unipen-path>": 494,
+  "<unipen-path>": 202,
+  "<unipen-path>": 422
+ },
+ "files_missing_before": 261,
+ "files_missing_after": 0,
+ "size_mismatch_after": 0,
+ "tar_compare_differences": 0,
+ "tar_compare_first": [],
+ "tar_returncode": 0,
+ "tar_stderr": [],
+ "ok": true
+}

@@ -1,0 +1,400 @@
+{
+ "seen_clusterB_lines": [],
+ "verdict_sha": {
+  "cleandift-sd15": "9a6c233d50a08dc59211df68706028a0fb4830fbf8fab6a226f263bfdae40429",
+  "cleandift-sd21": "e260d879a06d0aa40dc691aea83d3d7fe795b24c54abaaf89362243fd6d95dd5",
+  "deepseek-ocr": "c23cdaa6acfa42bc5c3bd430d1e7c2d8b37f83e5d6a90a2d509287e038ff3cb7",
+  "dinov3-vitl16": "4482999670330b78dfb21633683dffd90d4e06a3076504ba4e436133e63effa0",
+  "pe-spatial-b16-512": "978f7868264a13fe9b6a8bdde0d4e019dd580768211f6f63f9400c4562349253",
+  "pe-spatial-l14-448": "bb7765355fa0a0776edd4cd890bca0fb3881d3ede117ca912fbbbcc3ee18cdc0",
+  "pe-spatial-s16-512": "59837f53109241e09acda90d41618f128870d54c6ce4d972ad9b1af4d2adbabb",
+  "pe-spatial-t16-512": "41b2998bc09d0fe40c170af87fbf655711c6250872c9c782b102e636e4aa53ee",
+  "qwen3-vl-8b-instruct": "983b2396aab27fc6c903524d5e32756dbc16247edb6a7178d5147798dfdfbefc",
+  "qwen3.5-4b": "a8d603086a6a96f088c9f0fe3805c938f2716f2a17b944fc3e87604614bfc6c4",
+  "flux1-dev": "494d635714ef3532dd706660e5649f90ac1b775e5a61dec044fa4acde2a8bca4",
+  "flux1-schnell": "902126a46067322544d0413c3729d961a6b18b6173c74cf2817c216f18efb711",
+  "inkfm": "00a0b3e97c64e62ec5683eb612b77cac260ae2023bae189d127fadcd2abdd78a",
+  "sam3": "9680ccde27135868ef8ef29c1f20fb352ebb8a817d505fd2f06bfee87fafb9df",
+  "sd3-medium-diffusers": "2d2550e9d1df97caa7626eb7ed80702aa997dd56cae7f9cd47b6030ca2ffe550",
+  "pe-spatial-g14-448": "b0c9941540f0c4a0e56c19749efd1dcd110b178de3ea274f964e253005242bbd",
+  "qaari-0.1-urdu-ocr": "4e52393ab533adc63f883b0eae5c16e435fc4463d75ea837970ef7b8e5e1a2c6",
+  "qwen2-vl-2b-instruct": "f728a1afc6964cbe6f36f373094e4d9672c8d1e5257195ca95bd0b4fa01fd228",
+  "c-radiov3-b": "468c5cdadadb7bf52e6023fa28042d75bab32cce487a7e72b6d1c621c8f12f8b",
+  "deepseek-ocr-2": "e961ea2ef082cd4243f91cc5ec16e14bdc5385c267974ce715afee1ff67b0e62",
+  "got-ocr2-hf": "d45b820f13930743faee211dbfd4b4f39b3df2f2fae0b87265bbc93bba037a74",
+  "urdu-ocr-deepseek-nomy": "77a2d83340cc1de89a5402cce43389b306c3515e83ec06f639205bc133220b90",
+  "urdu-ocr-deepseek-ocr2-kingabzpro": "4dff0908eecdd9f47b93dec3c62aa8bd7711c2c9663609f56e0714eb0f959678",
+  "c-radiov3-l": "0570638601c35a5eb124ecf6d6d00dd1216db5dcd3e9c19e871b11282b2f31b3",
+  "sd2.1-dift": "08a4beb093e77a74fe11d4c24ad908117049aa4d3bdecddf3982e6cd308f9085",
+  "c-radiov3-h": "24c26bb5ebb4d06a3201f4a9879b7142d83c4447084e1ec9a2cf3d159a9878f9",
+  "lightonocr-2-1b": "ca4c325f701d670a9c6ece3fa3f5a4c2db074d0922d5ae90cf75c2e2395659bc",
+  "chandra-ocr-2": "4d74355f991a58e09daa073ec51d054c612a6cd4e9275e5cc6df17c07498959d",
+  "paddleocr-vl-1.6": "257a261151933162cd31e72001085ebe35c8654084442a7ee63bb705c9d32636",
+  "chandra": "59fb7adc61f1761df1d7bba6a2b51778b664a4448c5fe271bbc24f6642b7518f",
+  "sd3.5-large-diffusers-layout": "1b7d841d11a491d12cffc787741f2a1a436cbefb3b26214c3ef9b8074a1b29e0",
+  "sd3.5-medium-diffusers-layout": "4975bb16f0ace81dd70d2c6c8ef38f7270975e9c489c82ea2b19077739bdd7e2",
+  "c-radiov3-g": "32cb3e74e900896710e38f76899ec27c023ccddadd0342a4884d13fad7693f82",
+  "c-radiov4-so400m": "0e845eae446d3901aa315f83b592a583099b797e16e9d77b29168e11eb4ce506",
+  "c-radiov4-h": "73ef609a875197350973a5f8486e00179c36b16cf2081865b42213fc461a316d",
+  "dinov3-vitb16": "195de8211ac4de935e6eb7185acaa95883234686a031fda2359a02688ee096c9",
+  "dinov3-vits16plus": "344d504cead9308b8f368e208d9e9995fe202ae9788b07a4cf9c09f888f09baa",
+  "dinov3-vith16plus": "3c28ee23421f8785202927d63822da4f60bcb75280b3fdcd4fde0ba595a83ce2",
+  "dinov3-vits16": "58fe0386f389971135e6b10efafb10896979107c302d4178923fd5a7df4a639b",
+  "siglip2-giant-opt-patch16-256": "463e2a5e915ca1b388d7a34623eec62f3d60b3bddb3d474e02ba3060ddea6bd7",
+  "sam3.1": "50a3a000f3a585aa8b32806ac8fcb615b88451695d39aad7da10e12a279667dd",
+  "siglip2-giant-opt-patch16-384": "a158712b916449cb4a2f0e3caa8bd4bff6f6505ee7b752340364bfca554ae45b",
+  "qari-ocr-v0.3-vl-2b": "8dd51f4de85d473931f3ef45212ac090c2fc8d642e60e371fb168e79ff39b4ad",
+  "arabic-english-hw-ocr-v3": "bdb967f21763cf2b7437dc3c8f9a2312f0175c47ea19a9c6c85a1e67d8b0f84d",
+  "dinov2-reg-large": "70c0935a5aa62632f93f5b197d5e3396240f3b2b725c93238779be36f5574a35",
+  "webssl-dino1b-224": "58c89aa8f5560a18798d9287bc710855a92d90c56146b79dc5033ac881894111",
+  "aimv2-large-patch14-224": "df77874c0902fbba125e743ca0cd351f042212c43c003b6c1786731c7006cd52",
+  "tipsv2-l14": "a4cc588d244613f73d7dd8f54e7887bd9171ee850aea0d5886e85227f2f1fd9d",
+  "tipsv2-g14": "35a65966ac84130b537ede99cb2c13f37e10baad8d0b8a6155c7e3982b63fd8b",
+  "tipsv2-b14": "700d5fbef2fadcb00ddb6e9c7c7d0db60acbe2d5e10288a8db2513cd389a459f",
+  "tipsv2-so400m14": "2a5fa0d34d2cd10b00d74e99bac624a1e35f5a2209d31008a230dbe3cbb48f8b",
+  "pe-core-g14-448": "cfce4a97a2c724fbbd963d29354ebfb9f18a4497175fefaa9683498dfebf7f11",
+  "depth-anything-3-large-1.1": "b962e167cf029c8b34c4a44f08dfce43a43dc298ec8719d9728f533a3b766a56",
+  "depth-anything-v2-large": "2e1100168c78238b6516776fc4f6798f372eaa59f69a3a2ccd776ffb63b5b182",
+  "pe-core-b16-224": "5a68527bfb344ee0288083587cc7e57999657f09f52bca479a410e4296dbac8d",
+  "pe-core-l14-336": "b691271f5e6cad1924ba4d7eb3f83b93a962dcd1cad815f1a7d757fec2351184",
+  "sd1.5-dift": "9fd7624b22fa800be7ff395da4a06f4a36ce62b20ce3f1ae469abcbe18bbfe50",
+  "sam2.1-hiera-base-plus": "04a4c8a271d7a9270eee5001daae3b71ec4f4d9197774bfd1ef1ec670f59dc68",
+  "arabic-ocr-deepseek-ocr-2": "4dab2f4e82a0f6fcd793a725b48627c41a74317a30d30b8b82fa36a27a55be35",
+  "dinov2-large": "04ca56645dd7f569e01bbf46b95aeb91796b674d346bf68bf0a81bf3a7dbb5b7",
+  "siglip2-so400m-patch14-224": "759c8181222ae31cdb5fe152f7993243090d8e768100c811576513899436c69c",
+  "siglip2-base-patch16-224": "6c64900c4882a657dc6b75b704e376c0288d598098b0882191b8badf1571c02a",
+  "vit-mae-large": "ac8f2c6131b188eb03bf21e0222691b86eed38b5e76678a51c45095f937c0910",
+  "webssl-mae300m-224": "c48d06557b5f190bf6f4fa5cd4dfd07256334177392af494da278dc3fb31d526",
+  "dinov3-convnext-base": "c878ded498ab5aeb6f46d14cad2a14560bb2a9bbe2ce7ace9a7536ea09968f7d",
+  "dinov3-convnext-large": "e691de2e351d911930c1a7ac8075b714de0395de6fcb6a8ed3fe467e7fe8efd5",
+  "dinov3-convnext-small": "c4b9f91c7f8933b882a6212b46b8b05ff4d9358b503df7e8be2d747be2dac441",
+  "dinov3-convnext-tiny": "9e8bffe258fc1717b21ecbb4ae7aaeb77de4c66d2b21fbbbf68b79432d6134f4",
+  "starvector-1b-im2svg": "da678d4e0b7f68eaad9fe122aed214faf6a73c703d25301e7d5b5efe40f2b79f",
+  "trocr-large-handwritten": "2a099b514d22c222bfed05e7574a5038652a132bf55a6fc5d0effaa835d4cfe8",
+  "starvector-8b-im2svg": "46d258a4098a6e9a81142db71a4fb4fb131ecdf90199b06ff188955692f82969",
+  "theia-base-cdiv": "92952bc65becaa3377efa6fb7ddb2600c8a1d383b0194f15436479f096368e4e",
+  "dots-ocr": "1bb661fd00a265d36f5fcb19f77b1673a5fc91c291b226a7c323100e8dd39071",
+  "florence-2-large": "dada4d34fea35186f8735031f2b6c19571562bad82393e5e025355b0886c7b45",
+  "theia-base-cddsv": "5d389afc0a92a40801554fc7581ea14e28994615b87854f5e108c7f807a2cece",
+  "theia-small-cdiv": "51b569ad100de601ed0e76f96f878e6aac9e3867667d945f6d7c0180694128a5",
+  "theia-tiny-cddsv": "9eccda01c24036bf280346c7c9b145cc178d0f2cbc1b9e43b0a9f1a5ca4f5167",
+  "theia-tiny-cdiv": "27631d7a8dde75ce806fa208a1a3a9ae100b4e214812005118c04d2f4452f609",
+  "dinov2-base": "e97fae40ca7f2248302f7b37bd272599226dba66a680fcbe1d8190cb36e8ed25",
+  "dinov3-vitl16-sat493m": "68a3d553b9ecfe1ec869ead8fd8069c9b3e926bc0e39a4ef80cd2c14a1e01bd8",
+  "pe-core-s16-384": "73ff8f22e3d6180eabfdd09759547736418301dd7bdec881a42d6677038ae73c",
+  "pe-core-t16-384": "010d0295449eacbe391f4f9d873665346fccd06f01525a72cfbc6edeb4cd02b6",
+  "pe-lang-g14-448-timm": "d9b8b0f73a88bf1787303e55f15b4736d80bc19b2b3057e871d8265ef9982af0",
+  "pe-lang-l14-448-timm": "086e398afb0453567889cdb2c2ac98fb7c550f1ab7df312a47f35d3a4d322e06",
+  "dinov2-giant": "14ef9b755253a537dc9910d1ca778a071b58116c393993ec525fe9e567ab3def",
+  "dinov2-reg-small": "beec5e82efed797fcca94f84022e777af400f71bafd0e7f1b594b5e8880ee8de",
+  "dinov2-reg-base": "a1722a2be4e1e091a55312eb035c2b44f0e7add6bf2025cb55989bb7f38f9d79",
+  "dinov2-reg-giant": "ad13a48e46af5023cdef15d346ce006c3649fbf498820bbd9d13c98a4f367eea",
+  "webssl-dino300m-224": "d550c61267c0041a180e13cd7e040a6dbe22a0d4782f6ac8f9cc74039f61788f",
+  "webssl-mae1b-224": "137888be35eefc296c7a610c4734d3b9743695725bce0149f011f25e01d4f950",
+  "aimv2-1b-patch14-224": "4a5ad60923808e41983494419355ee97e6e2819660679534b88fe617ce218600",
+  "aimv2-huge-patch14-224": "3070070e945dbbca348bd6b12da102fdc259a4adb69c1f26ef45b26940826394",
+  "inksight_small_p": "aaa68e8d612786d72e43cb5981875e608078a8d4564ba8be90b502b4042dc059",
+  "aimv2-large-patch14-224-distilled": "3809bfdd1cc9c463a75d8dc46c84e6b5bde5c1308bfe9119b87d4fa61ea1c286",
+  "tipsv1-g14": "3b8f3cbbfd54850c2c74df8b413fd30963b50123064a890f5f6541bd164b2843",
+  "tipsv1-l14": "90a869d47abd370134166ea09b901f3871ef685c92b36218535632d1ddb80b37",
+  "tipsv1-so400m14": "e5e9f0df78113a3fa5350cee4c445b5b0205f117274f40fefa1488904de85224",
+  "siglip2-large-patch16-256": "96dd6ad612ed0e0de809e634a03807d7dd4acd46e533dca4ac032846219b5ca7",
+  "tipsv1-b14": "f30fc750c7dc2ec0f3251586d81754920f390803012f8b6943791c535f32b666",
+  "tipsv1-s14": "c18bef7c03d4e89b8819e248ae1f4b8d8b316a8de868b2e1c2c6374b45c964eb",
+  "depth-anything-3-base": "0f3ec49ff606afe92ce9993f9ed054642bd933f4dbe443a557bfddff5383a8ce",
+  "depth-anything-3-giant-1.1": "0d59a96d361e53d419b7cb4805bb75663afde6fa1d5f6767f7755ff2a5601028",
+  "siglip2-so400m-patch16-256": "6e503fd3be51fb3e61583cceb3258bf6c0257847acf346a1bad9fc11114449e7",
+  "trocr-base-handwritten": "3300e9569c16f2f1d168153e803a9915486a6ad53dec37b6719224cdb1b782e7",
+  "trocr-base-hw-hist-swe-2": "d0197f6b6a0c3dc0932e53e6223f7061e6dd83e10ad54f0fa3d71b18ea0181f8",
+  "trocr-small-handwritten": "2575bf50156f085394a28a2795e861993bcd660488bbbd4f9b2ba03409da4dfd",
+  "florence-2-base": "a3f792610adcc669375f3b22aac668639b29867cde25e115876eee2570292d72",
+  "florence-2-large-ft": "4455c5f09416e95bd27580b5df324c841de7fc9bdccbb75b0a747a4aadd8251d",
+  "dinov3-vit7b16": "8a21bfcffbd17fc40341a2259def4b504302728d00c23117f1c8789dbe7b18fa",
+  "aimv2-3b-patch14-224": "ec77c49c595dd38b37636132d6073f03fa00bbb7b94eae670a575b32ad04c95f",
+  "webssl-dino2b-224": "5c77519919ebaae4affd5e8c6d72edab393b2fc0f46790174c0f01fbb422a352",
+  "sd3.5-large-turbo-diffusers-layout": "355d9d828f88a28128e5ed21c32ca0c68465dce3d5fbf8590f1acc805ab7ae8a",
+  "webssl-dino3b-224": "04d1f37b8fd1933558036b25b38969664d97a44753c094b588ebc8aadfb13825",
+  "webssl-dino5b-224": "bfb9f31ea26a1c8735922f03c3d13f56747f3e46c40cf56554182def1f80faf2",
+  "webssl-dino7b-224": "d482730c6016a9154fe1c9af2591934e4ad4cd9e13c55e4057af19b5c0a00e5a",
+  "webssl-mae3b-224": "ede3e8d6f6d972b7b07c6229879a2403be9419e2bdb340161d4c65d031095177"
+ },
+ "cancelled": {
+  "pe-spatial-t16-512_W": "2026-11-03T14:52:56Z",
+  "pe-spatial-s16-512_W": "2026-11-03T14:52:58Z",
+  "pe-spatial-l14-448_W": "2026-11-03T14:52:59Z",
+  "cleandift-sd15_W": "2026-11-03T14:53:01Z",
+  "qwen3-vl-8b-instruct_W": "2026-11-03T14:53:03Z",
+  "pe-spatial-t16-512_S": "2026-11-03T14:53:04Z",
+  "pe-spatial-s16-512_S": "2026-11-03T14:53:06Z",
+  "pe-spatial-l14-448_S": "2026-11-03T14:53:07Z",
+  "cleandift-sd15_S": "2026-11-03T14:53:09Z",
+  "qwen3-vl-8b-instruct_S": "2026-11-03T14:53:23Z",
+  "pe-spatial-g14-448_W": "2026-11-03T15:03:57Z",
+  "qwen2-vl-2b-instruct_W": "2026-11-03T15:04:07Z",
+  "qaari-0.1-urdu-ocr_W": "2026-11-03T15:04:12Z",
+  "pe-spatial-g14-448_S": "2026-11-03T15:04:29Z",
+  "qwen2-vl-2b-instruct_S": "2026-11-03T15:04:39Z",
+  "qaari-0.1-urdu-ocr_S": "2026-11-03T15:04:44Z",
+  "deepseek-ocr_W": "2026-11-03T15:16:50Z",
+  "urdu-ocr-deepseek-nomy_W": "2026-11-03T15:16:52Z",
+  "deepseek-ocr-2_W": "2026-11-03T15:16:54Z",
+  "urdu-ocr-deepseek-ocr2-kingabzpro_W": "2026-11-03T15:16:56Z",
+  "got-ocr2-hf_W": "2026-11-03T15:16:59Z",
+  "deepseek-ocr_S": "2026-11-03T15:17:18Z",
+  "urdu-ocr-deepseek-nomy_S": "2026-11-03T15:17:21Z",
+  "deepseek-ocr-2_S": "2026-11-03T15:17:23Z",
+  "urdu-ocr-deepseek-ocr2-kingabzpro_S": "2026-11-03T15:17:26Z",
+  "got-ocr2-hf_S": "2026-11-03T15:17:28Z",
+  "sd2.1-dift_W": "2026-11-03T15:25:46Z",
+  "sd2.1-dift_S": "2026-11-03T15:26:20Z",
+  "lightonocr-2-1b_W": "2026-11-03T15:36:21Z",
+  "lightonocr-2-1b_S": "2026-11-03T15:37:06Z",
+  "paddleocr-vl-1.6_W": "2026-11-03T15:47:48Z",
+  "paddleocr-vl-1.6_S": "2026-11-03T15:48:32Z",
+  "dinov3-vits16plus_W": "2026-11-03T16:32:17Z",
+  "dinov3-vith16plus_W": "2026-11-03T16:32:19Z",
+  "dinov3-vits16plus_S": "2026-11-03T16:32:50Z",
+  "dinov3-vith16plus_S": "2026-11-03T16:32:51Z",
+  "siglip2-giant-opt-patch16-256_W": "2026-11-03T16:38:46Z",
+  "siglip2-giant-opt-patch16-256_S": "2026-11-03T16:39:16Z",
+  "siglip2-giant-opt-patch16-384_W": "2026-11-03T16:58:15Z",
+  "siglip2-giant-opt-patch16-384_S": "2026-11-03T16:58:49Z",
+  "dinov2-reg-large_W": "2026-11-03T17:18:42Z",
+  "dinov2-reg-large_S": "2026-11-03T17:19:16Z",
+  "webssl-dino1b-224_W": "2026-11-03T17:25:23Z",
+  "webssl-dino1b-224_S": "2026-11-03T17:26:01Z",
+  "aimv2-large-patch14-224_W": "2026-11-03T17:31:55Z",
+  "aimv2-large-patch14-224_S": "2026-11-03T17:32:33Z",
+  "tipsv2-l14_W": "2026-11-03T17:38:52Z",
+  "tipsv2-l14_S": "2026-11-03T17:39:33Z",
+  "tipsv2-g14_W": "2026-11-03T17:45:44Z",
+  "tipsv2-g14_S": "2026-11-03T17:46:26Z",
+  "tipsv2-b14_W": "2026-11-03T17:52:26Z",
+  "tipsv2-so400m14_W": "2026-11-03T17:52:29Z",
+  "tipsv2-b14_S": "2026-11-03T17:53:13Z",
+  "tipsv2-so400m14_S": "2026-11-03T17:53:16Z",
+  "pe-core-b16-224_W": "2026-11-03T18:05:23Z",
+  "pe-core-l14-336_W": "2026-11-03T18:05:24Z",
+  "depth-anything-v2-large_W": "2026-11-03T18:05:35Z",
+  "sd1.5-dift_W": "2026-11-03T18:05:38Z",
+  "pe-core-b16-224_S": "2026-11-03T18:06:17Z",
+  "pe-core-l14-336_S": "2026-11-03T18:06:18Z",
+  "depth-anything-v2-large_S": "2026-11-03T18:06:33Z",
+  "sd1.5-dift_S": "2026-11-03T18:06:36Z",
+  "depth-anything-3-large-1.1_W": "2026-11-03T18:12:51Z",
+  "depth-anything-3-large-1.1_S": "2026-11-03T18:13:48Z",
+  "sam2.1-hiera-base-plus_W": "2026-11-03T18:19:35Z",
+  "sam2.1-hiera-base-plus_S": "2026-11-03T18:20:33Z",
+  "dinov2-large_W": "2026-11-03T18:26:48Z",
+  "sam3_W": "2026-11-03T18:27:22Z",
+  "dinov2-large_S": "2026-11-03T18:27:48Z",
+  "sam3_S": "2026-11-03T18:28:23Z",
+  "siglip2-so400m-patch14-224_W": "2026-11-03T18:34:09Z",
+  "siglip2-so400m-patch14-224_S": "2026-11-03T18:35:08Z",
+  "siglip2-base-patch16-224_W": "2026-11-03T18:41:36Z",
+  "siglip2-base-patch16-224_S": "2026-11-03T18:42:36Z",
+  "dinov3-convnext-small_W": "2026-11-03T18:56:39Z",
+  "dinov3-convnext-base_W": "2026-11-03T18:56:40Z",
+  "dinov3-convnext-large_W": "2026-11-03T18:56:42Z",
+  "dinov3-convnext-small_S": "2026-11-03T18:57:48Z",
+  "dinov3-convnext-base_S": "2026-11-03T18:57:49Z",
+  "dinov3-convnext-large_S": "2026-11-03T18:57:51Z",
+  "dinov3-convnext-tiny_W": "2026-11-03T19:04:16Z",
+  "trocr-large-handwritten_W": "2026-11-03T19:04:50Z",
+  "starvector-1b-im2svg_W": "2026-11-03T19:05:11Z",
+  "dinov3-convnext-tiny_S": "2026-11-03T19:05:29Z",
+  "trocr-large-handwritten_S": "2026-11-03T19:06:00Z",
+  "starvector-1b-im2svg_S": "2026-11-03T19:06:25Z",
+  "florence-2-large_W": "2026-11-03T19:28:08Z",
+  "florence-2-large_S": "2026-11-03T19:29:22Z"
+ },
+ "relay": {
+  "c-radiov3-b": {
+   "pid": null,
+   "rc": "killed_at_controller_restart_v1.2 (push incomplete; VPS copy handled by waiter v3 sha gate)",
+   "log": "$U/exp/FMD/xs/admin/relay/push_c-radiov3-b.log",
+   "started": "2026-11-03T16:33:34Z"
+  },
+  "c-radiov4-h": {
+   "pid": 1211018,
+   "rc": 0,
+   "log": "$U/exp/FMD/xs/admin/relay/push_c-radiov4-h.log",
+   "started": "2026-11-03T17:33:05Z"
+  },
+  "c-radiov3-g": {
+   "pid": 1215315,
+   "rc": 0,
+   "log": "$U/exp/FMD/xs/admin/relay/push_c-radiov3-g.log",
+   "started": "2026-11-03T18:00:32Z"
+  },
+  "c-radiov3-l": {
+   "pid": 163529,
+   "rc": 0,
+   "log": "$U/exp/FMD/xs/admin/relay/push_c-radiov3-l.log",
+   "started": "2026-11-03T18:07:00Z"
+  },
+  "c-radiov4-so400m": {
+   "pid": 167257,
+   "rc": 0,
+   "log": "$U/exp/FMD/xs/admin/relay/push_c-radiov4-so400m.log",
+   "started": "2026-11-03T18:28:53Z"
+  },
+  "c-radiov3-h": {
+   "pid": 171145,
+   "rc": 0,
+   "log": "$U/exp/FMD/xs/admin/relay/push_c-radiov3-h.log",
+   "started": "2026-11-03T18:51:13Z"
+  },
+  "webssl-mae300m-224": {
+   "pid": null,
+   "rc": "killed_at_controller_restart_v1.3 (push incomplete; CLUSTER-B extracts locally)",
+   "started": "2026-11-03T19:29:49Z"
+  },
+  "dinov2-large": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "siglip2-so400m-patch14-224": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "sam2.1-hiera-base-plus": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "siglip2-base-patch16-224": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "siglip2-giant-opt-patch16-256": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "siglip2-giant-opt-patch16-384": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "dinov2-reg-large": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "pe-spatial-t16-512": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "pe-spatial-s16-512": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "pe-spatial-b16-512": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "pe-spatial-l14-448": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "pe-spatial-g14-448": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "pe-core-b16-224": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "pe-core-l14-336": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "tipsv2-b14": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "tipsv2-l14": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "tipsv2-so400m14": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "tipsv2-g14": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "webssl-dino1b-224": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "vit-mae-large": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "aimv2-large-patch14-224": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "depth-anything-v2-large": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "depth-anything-3-large-1.1": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "sam3": {
+   "pid": null,
+   "rc": "skip: CLUSTER-B-side extraction + chunk-0 check (addendum_5 E6)",
+   "started": "2026-11-03T19:47:25Z"
+  },
+  "cleandift-sd21": {
+   "pid": 1696681,
+   "rc": 0,
+   "log": "$U/exp/FMD/xs/admin/relay/push_cleandift-sd21.log",
+   "started": "2026-11-03T21:25:01Z"
+  },
+  "qwen3.5-4b": {
+   "pid": 1744752,
+   "rc": 0,
+   "log": "$U/exp/FMD/xs/admin/relay/push_qwen3.5-4b.log",
+   "started": "2026-11-04T01:34:00Z"
+  }
+ },
+ "resubmits": {
+  "sd3-medium-diffusers_W": [
+   {
+    "failed_job": "24866386",
+    "state": "FAILED",
+    "exit": "7:0",
+    "node": "<node>",
+    "utc": "2026-11-07T13:43:48Z",
+    "new_job": "24957069",
+    "rc": 0,
+    "cmd": "-J fx_sd3-medium-diffusers_W --nice=5000 --hold -p gpuidle,b200idle --gres=gpu:2 --exclude=dgx[001-005],gpu[004-005,008,013-014,017-023,119-148],<node> $U/exp/FMD/xs/code/fmdx_backbone_v1/jobs/clusterA_arm.sbatch sd3-medium-diffusers_W"
+   }
+  ]
+ }
+}

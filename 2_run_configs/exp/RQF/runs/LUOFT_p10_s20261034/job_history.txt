@@ -1,0 +1,5 @@
+2026-11-08T00:37:54Z arm_start frac=p10 frame=identity replay=0 qu=0.25 qu_end= cur_start= steps=10000 gate= batch=32x16 workers=4 amp=--amp smoke_units= gpu=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;] host=<node> slurm=24963998 restart=0
+2026-11-08T09:36:51Z selected milestone 10 host=<node> slurm=24963998 restart=0
+2026-11-08T09:36:51Z arm_phase12_end selected=10 host=<node> slurm=24963998 restart=0
+2026-11-08T09:36:51Z final_sampling_start ms10 gpu=[NVIDIA RTX A4000] host=<node> slurm=24963998
+2026-11-08T11:35:37Z final_sampling_end rc=0 gpu=[NVIDIA RTX A4000]

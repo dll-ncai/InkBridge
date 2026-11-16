@@ -1,0 +1,113 @@
+{
+ "track": "FMDX Warm monitor (replacement instance)",
+ "model": "<agent>",
+ "model_reason": "<agent> API failing; prior <agent> monitor frame 2f5f4d62 stalled after repeated API failures",
+ "written_utc": "2026-11-06T00:45:11Z",
+ "prereg": {
+  "path": "CLUSTER-A exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+  "sha256": "70ee53cd90c19c5aac3ce298440ae403e228fce2142f35711d0463e6d25ce348",
+  "verified_utc": "2026-11-05T08:23Z",
+  "governing": [
+   "A4 (FT recipe, U/X/F reads, A4.4 composed)",
+   "A8 (primary test preds arms+comparators on CLUSTER-A RTX A4000)"
+  ]
+ },
+ "table_build": {
+  "job": "24917136 (cpuidle, A9 builder; 6 Nov 00:42:54Z)",
+  "clusterA_dir": "$U/exp/FMD/xs/runs/fmdx_monitor/tables",
+  "code": "fmdx_monitor_v1/build_tables_a9.py",
+  "code_sha256": "fb609da204ebf21878cf7f6e35d88a175cbfb5a6463f1b4547325c9e2713b87f",
+  "B": 2000,
+  "rng_seed": 20261103,
+  "cluster": "writer (german_onhw_all: unit)",
+  "n_inputs": 234,
+  "arms": [
+   "NOFM_W",
+   "PEINIT_W",
+   "c-radiov3-h_W"
+  ],
+  "verdicts": "none (lead applies A4.5)",
+  "files": {
+   "FMDX_warm_absolute.csv": "f8397f677ec998230174e7684ee1842b00abbd6a03977a8a6110a0288593a0b0",
+   "FMDX_warm_contrasts.csv": "d2795efcb5ce1fc35a65472a0da17bf118fad97898636c8f3000c491015233b8",
+   "FMDX_warm_contrasts.md": "2092404e52f333569ef2530c2bcf8aa5bc10c0e1afb07142e95ef8aad111a650",
+   "FMDX_warm_inputs.json": "e673a7b8c54e35370027c8b02676253b51efb44338bb1e786865a5e78daa1011"
+  },
+  "device_summary": "all 1032 contrast rows RTX A4000 / RTX A4000, DEVICE_MIXED False",
+  "v1_build": "24914502 (build_tables.py, superseded only by added device columns)",
+  "n_contrast_rows": 1032,
+  "n_abs_rows": 60
+ },
+ "arms": {
+  "NOFM_W": {
+   "bb_ms": 3,
+   "ft_job_winner": "24879670 (gpuidle 2xA30)",
+   "ft_ms": 1,
+   "ft_selection": "E0 rule val1000 (e0_val.npz subset 1000 seed 0), pooled LDTW 0.19232, AIoU 0.80684",
+   "ft_cancelled": [
+    "24863028",
+    "24882897",
+    "24882899"
+   ],
+   "ft_a4000_sampling": "24900857_[0-2]",
+   "bb_a4000_sampling": "24862910"
+  },
+  "c-radiov3-h_W": {
+   "bb_ms": 4,
+   "ft_job_winner": "24869368 (gpuidle 2xA30)",
+   "ft_ms": 4,
+   "ft_cancelled": [
+    "24869367"
+   ],
+   "ft_race_lost": [
+    "24878842"
+   ],
+   "ft_a4000_sampling": "24883662_[0-2]",
+   "bb_a4000_sampling": "24869369"
+  },
+  "PEINIT_W": {
+   "bb_ms": 4,
+   "bb_a4000_sampling": "24878860_[0-2]",
+   "ft_training": "24879671 (gpuidle A30, start 5 Nov 03:37Z, preempted, restart 12:11Z) then resumed by 24882900 (llms RTX PRO 6000 Blackwell, 19:07Z, train_exit rc=0 19:25Z)",
+   "ft_ms": 2,
+   "ft_selection": "E0 rule val1000; pooled LDTW 0.19311, AIoU 0.81388; selection run twice with the same result (24882900 at 21:18Z, 24878859 gpuidle A4000 at 21:21Z)",
+   "ft_cancelled": [
+    "24879671",
+    "24878859",
+    "24882900",
+    "24882901 (scancel issued 21:34Z; some already finished)"
+   ],
+   "ft_sampling_A9": "winner 24915560 (gpuidle RTX A4000, all 3 seeds); 24915570 llms rtx6000 RACE_LOST; cancelled pending 24915561 24915563 24915564 24915565 24915569 24915571; a40 copy not submittable"
+  }
+ },
+ "comparators": {
+  "rows_dir": "$U/exp/FMD/xs/runs/fmdx_monitor/score_out_cmp/rows",
+  "LUO": "LUO_ms6_identity (A4000 job 24855870)",
+  "COMP_p01": [
+   "comp_p01_identity_s20261034_vps_ms3_identity",
+   "comp_p01_identity_s20261035_ms3_identity",
+   "comp_p01_identity_s20261036_ms4_identity"
+  ],
+  "note": "six-set COMP rows have sampling seed 0 only"
+ },
+ "operational_changes": [
+  "5 Nov ~15:25Z: nice 1000->0 and TimeLimit 24h->3h/6h on A4000 sampling jobs 24878860/24883662/24900857 (device/partition unchanged)",
+  "cand_log/cancellation_log corrected: c-radiov3-h FT winner is 24869368, not 24878842"
+ ],
+ "blockers": [
+  "9 CLUSTER-A warm arm jobs FAILED 4 Nov 19:27-20:01Z on llms <node> (CUDA illegal memory access in 2-GPU DDP, exit 7); lead moved 7 PASS_XS warm arms to CLUSTER-B (est. start 6 Nov ~12Z), checkpoints relayed to X/runs/<arm>_clusterB/relay/"
+ ],
+ "code_tar": "fmdx_monitor_v1_code.tgz (CLUSTER-A code dir incl. tables_job.sbatch + control-plane monitor_lib.py/warm_loop.py)",
+ "code_tar_sha256": "260a19ed02b20b59a43e48a2c7f781ecb28cb48ad96d7c2b3651ecdd824ec4bf",
+ "prereg_A9": {
+  "sha256": "7a71c715dc5ca1cf146f829b8c7f498811e1330e1eefa2bf1b3b60fddbc5d154",
+  "verified_utc": "2026-11-05T20:02Z",
+  "rule": "device per job: first non-MIG CLUSTER-A GPU type; device per pred file; device_a/device_b/DEVICE_MIXED per contrast row; existing A4000 rows primary"
+ },
+ "a9_sampler": {
+  "file": "fmdx_monitor_v1/arm_sample_a9.sbatch",
+  "sha16": "3e1b951d0cae85ba",
+  "copies": "gpuidle a4000/a30/a40/a100/h100/v100, b200idle b200, llms rtx6000/b300; per (tag,seed) mkdir lock, MIG rejected, device_log.tsv per pred; --exclude=<node> (A40 node without GPU cgroup)",
+  "excluded_types": "a30_2/a30_4 (MIG slices), rtx1070/1070ti/p2000/a2 (<=8-16 GB legacy)"
+ }
+}

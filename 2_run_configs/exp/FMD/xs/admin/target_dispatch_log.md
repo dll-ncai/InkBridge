@@ -1,0 +1,56 @@
+- 2026-11-03T19:14:36Z [target-dispatch] start pid 177371 slurm 24850228 dry_run=False
+- 2026-11-03T19:24:41Z [target-dispatch] cleandift-sd21: cancelled pending main-array task 24843687_5 (rank dispatch)
+- 2026-11-03T19:24:41Z [target-dispatch] cleandift-sd21: cancelled pending main-array task 24843687_6 (rank dispatch)
+- 2026-11-03T19:24:41Z [target-dispatch] cleandift-sd21 (rank 15, verdict PASS_URDU_ONLY): GPU extraction (diffusion family, 6 task(s)) -> job 24850329 rc=0 
+- 2026-11-03T19:29:44Z [target-dispatch] pe-spatial-b16-512: cancelled pending main-array task 24843687_65 (rank dispatch)
+- 2026-11-03T19:29:44Z [target-dispatch] pe-spatial-b16-512 (rank 16, verdict PASS_URDU_ONLY): CPU extraction 16 shards -> job 24850382 rc=0 
+- 2026-11-03T19:34:48Z [target-dispatch] qwen3.5-4b: cancelled pending main-array task 24843687_66 (rank dispatch)
+- 2026-11-03T19:34:48Z [target-dispatch] qwen3.5-4b (rank 17, verdict PASS_URDU_ONLY): GPU extraction (VLM family, 1 task(s)) -> job 24850451 rc=0 
+- 2026-11-03T19:50:54Z [target-dispatch] pe-spatial-b16-512: CLUSTER-B-side extraction requested (refpush job 24850651, weights yes); hub/clusterB_extract_requests.txt updated
+- 2026-11-03T23:19:18Z [target-dispatch] dinov3-vit7b16 (rank 13, verdict PASS_XS): CPU extraction 16 shards -> job 24854234 rc=0 
+- 2026-11-04T01:40:14Z [target-dispatch] dinov3-vit7b16 (rank 8, verdict PASS_XS): CPU extraction 16 shards -> job 24856159 rc=0 
+- 2026-11-04T02:05:27Z [target-dispatch] dinov3-vit7b16 (rank 8, verdict PASS_XS): CPU extraction 16 shards -> job 24856737 rc=0 
+- 2026-11-04T03:09:13Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24856737', '-o', '%T'], 120)
+- 2026-11-04T03:16:16Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-04T11:18:05Z [target-dispatch] restarted as 24866399 with DiT FMs seeded (array 24866395)
+- 2026-11-04T11:18:13Z [target-dispatch] start pid 305828 slurm 24866399 dry_run=False
+- 2026-11-04T14:24:27Z [target-dispatch] start pid 338121 slurm 24870597 dry_run=False
+- 2026-11-04T18:17:53Z [target-dispatch] flux1-schnell (rank 8, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-04T18:17:53Z [target-dispatch] flux1-dev (rank 9, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-04T18:17:53Z [target-dispatch] sd3-medium-diffusers (rank 14, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-04T18:22:55Z [target-dispatch] flux1-schnell (rank 8, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-04T18:22:55Z [target-dispatch] flux1-dev (rank 9, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-04T18:22:55Z [target-dispatch] sd3-medium-diffusers (rank 14, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-04T19:48:09Z [target-dispatch] start pid 395938 slurm 24878954 dry_run=False
+- 2026-11-05T16:26:25Z [target-dispatch] sd3.5-large-diffusers-layout (rank 15, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-05T16:26:26Z [target-dispatch] sd3.5-large-turbo-diffusers-layout (rank 16, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-05T16:26:26Z [target-dispatch] sd3.5-medium-diffusers-layout (rank 17, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-05T16:31:37Z [target-dispatch] sd3.5-large-diffusers-layout (rank 15, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-05T16:31:37Z [target-dispatch] sd3.5-large-turbo-diffusers-layout (rank 16, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-05T16:31:38Z [target-dispatch] sd3.5-medium-diffusers-layout (rank 17, verdict PASS_XS): GPU extraction (diffusion family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-05T20:41:59Z [target-dispatch] webssl-mae1b-224 (rank 7, verdict PASS_XS): CPU extraction 16 shards -> job 24915040 rc=0 
+- 2026-11-05T20:42:00Z [target-dispatch] dinov3-vitl16-sat493m (rank 18, verdict PASS_XS): CPU extraction 16 shards -> job 24915041 rc=0 
+- 2026-11-05T20:42:00Z [target-dispatch] chandra-ocr-2 (rank 25, verdict PASS_URDU_ONLY): GPU extraction (VLM family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-05T20:47:08Z [target-dispatch] chandra-ocr-2 (rank 25, verdict PASS_URDU_ONLY): GPU extraction (VLM family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-05T20:52:14Z [target-dispatch] chandra-ocr-2 (rank 25, verdict PASS_URDU_ONLY): GPU extraction (VLM family, 0 task(s)) -> job  rc=1 sbatch: error: Batch job submission failed: Invalid job array specification
+- 2026-11-05T21:02:25Z [target-dispatch] dinov3-vitl16-sat493m (rank 18, verdict PASS_XS): merge only (all 157 chunks present, no DONE) -> job 24915212 rc=0 
+- 2026-11-07T01:19:35Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-09T03:18:50Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-09T16:23:45Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24856737', '-o', '%T'], 120)
+- 2026-11-10T21:36:30Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T21:43:38Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T21:50:45Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T21:57:55Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T22:05:01Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T22:12:09Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T22:19:18Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T22:26:27Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T22:33:36Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T22:40:44Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T22:47:52Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T22:54:58Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T23:02:07Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T23:09:15Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T23:16:22Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T23:23:31Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)
+- 2026-11-10T23:30:39Z [target-dispatch] cycle error TimeoutExpired(['squeue', '-h', '-j', '24843687_24', '-o', '%T'], 120)

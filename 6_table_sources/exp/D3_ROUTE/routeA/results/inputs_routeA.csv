@@ -1,0 +1,132 @@
+set,route_mode,seed,source,n
+german_onhw_all,E0_ms8_rb4,0,"RB4 (CLUSTER-A A30, seed 0)",5925
+german_onhw_all,FT_p01_ms4,0,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p01_ms4,1,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p01_ms4,2,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p100_ms9,0,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p100_ms9,1,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p100_ms9,2,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p10_ms10,0,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p10_ms10,1,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p10_ms10,2,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p30_ms10,0,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p30_ms10,1,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,FT_p30_ms10,2,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,LUO_ms6,0,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,LUO_ms6,1,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,LUO_ms6,2,"RouteA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,LUO_ms6_rb4,0,"RB4 (CLUSTER-A A30, seed 0)",5925
+german_onhw_all,M5_joint_ms9,0,"StageA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,M5_joint_ms9,1,"StageA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,M5_joint_ms9,2,"StageA (VPS RTX 4090, seeds 0-2)",5925
+german_onhw_all,M5_joint_ms9_rb4,0,"RB4 (CLUSTER-A A30, seed 0)",5925
+german_onhw_all,X5_ms9_rb4,0,"RB4 (CLUSTER-A A30, seed 0)",5925
+german_unipen_de_test,E0_ms8_rb4,0,"RB4 (CLUSTER-A A30, seed 0)",827
+german_unipen_de_test,FT_p01_ms4,0,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p01_ms4,1,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p01_ms4,2,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p100_ms9,0,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p100_ms9,1,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p100_ms9,2,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p10_ms10,0,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p10_ms10,1,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p10_ms10,2,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p30_ms10,0,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p30_ms10,1,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,FT_p30_ms10,2,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,LUO_ms6,0,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,LUO_ms6,1,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,LUO_ms6,2,"RouteA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,LUO_ms6_rb4,0,"RB4 (CLUSTER-A A30, seed 0)",827
+german_unipen_de_test,M5_joint_ms9,0,"StageA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,M5_joint_ms9,1,"StageA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,M5_joint_ms9,2,"StageA (VPS RTX 4090, seeds 0-2)",827
+german_unipen_de_test,M5_joint_ms9_rb4,0,"RB4 (CLUSTER-A A30, seed 0)",827
+german_unipen_de_test,X5_ms9_rb4,0,"RB4 (CLUSTER-A A30, seed 0)",827
+gold_ouhdl,E0_ms8,0,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0_ms8,1,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0_ms8,2,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0scratch_p01_ms10,0,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0scratch_p01_ms10,1,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0scratch_p01_ms10,2,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0scratch_p10_ms10,0,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0scratch_p10_ms10,1,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0scratch_p10_ms10,2,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0scratch_p30_ms10,0,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0scratch_p30_ms10,1,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,E0scratch_p30_ms10,2,"controls (CLUSTER-A GPU, seeds 0-2)",354
+gold_ouhdl,FT_p01_ms4,0,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p01_ms4,1,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p01_ms4,2,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p100_ms9,0,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p100_ms9,1,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p100_ms9,2,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p10_ms10,0,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p10_ms10,1,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p10_ms10,2,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p30_ms10,0,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p30_ms10,1,"RouteA (VPS RTX 4090, seeds 0-2)",354
+gold_ouhdl,FT_p30_ms10,2,"RouteA (VPS RTX 4090, seeds 0-2)",354
+test_casia_en,LUO_ms6,0,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_casia_en,LUO_ms6,1,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_casia_en,LUO_ms6,2,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_casia_en,M5_joint_ms9,0,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_en,M5_joint_ms9,1,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_en,M5_joint_ms9,2,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_en,X5_ms9,0,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_en,X5_ms9,1,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_en,X5_ms9,2,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_zh,E27_ms47,0,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_zh,E27_ms47,1,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_zh,E27_ms47,2,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_zh,LUO_ms6,0,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_casia_zh,LUO_ms6,1,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_casia_zh,LUO_ms6,2,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_casia_zh,M5_joint_ms9,0,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_zh,M5_joint_ms9,1,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_casia_zh,M5_joint_ms9,2,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_hpl_tamil,LUO_ms6,0,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_hpl_tamil,LUO_ms6,1,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_hpl_tamil,LUO_ms6,2,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_hpl_tamil,M5_joint_ms9,0,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_hpl_tamil,M5_joint_ms9,1,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_hpl_tamil,M5_joint_ms9,2,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_iam500,LUO_ms6,0,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_iam500,LUO_ms6,1,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_iam500,LUO_ms6,2,"RouteA (VPS RTX 4090, seeds 0-2)",500
+test_iam500,M5_joint_ms9,0,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_iam500,M5_joint_ms9,1,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_iam500,M5_joint_ms9,2,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_iam500,X5_ms9,0,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_iam500,X5_ms9,1,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_iam500,X5_ms9,2,"StageA (VPS RTX 4090, seeds 0-2)",500
+test_ouhdl,E0_ms8,0,"StageA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,E0_ms8,1,"StageA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,E0_ms8,2,"StageA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,E0scratch_p01_ms10,0,"controls (CLUSTER-A GPU, seeds 0-2)",4406
+test_ouhdl,E0scratch_p01_ms10,1,"controls (CLUSTER-A GPU, seeds 0-2)",4406
+test_ouhdl,E0scratch_p01_ms10,2,"controls (CLUSTER-A GPU, seeds 0-2)",4406
+test_ouhdl,E0scratch_p10_ms10,0,"controls (CLUSTER-A GPU, seeds 0-2)",4406
+test_ouhdl,E0scratch_p10_ms10,1,"controls (CLUSTER-A GPU, seeds 0-2)",4406
+test_ouhdl,E0scratch_p10_ms10,2,"controls (CLUSTER-A GPU, seeds 0-2)",4406
+test_ouhdl,E0scratch_p30_ms10,0,"controls (CLUSTER-A GPU, seeds 0-2)",4406
+test_ouhdl,E0scratch_p30_ms10,1,"controls (CLUSTER-A GPU, seeds 0-2)",4406
+test_ouhdl,E0scratch_p30_ms10,2,"controls (CLUSTER-A GPU, seeds 0-2)",4406
+test_ouhdl,FT_p01_ms4,0,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p01_ms4,1,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p01_ms4,2,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p100_ms9,0,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p100_ms9,1,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p100_ms9,2,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p10_ms10,0,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p10_ms10,1,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p10_ms10,2,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p30_ms10,0,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p30_ms10,1,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,FT_p30_ms10,2,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,LUO_ms6,0,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,LUO_ms6,1,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,LUO_ms6,2,"RouteA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,M5_joint_ms9,0,"StageA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,M5_joint_ms9,1,"StageA (VPS RTX 4090, seeds 0-2)",4406
+test_ouhdl,M5_joint_ms9,2,"StageA (VPS RTX 4090, seeds 0-2)",4406

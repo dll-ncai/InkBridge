@@ -1,0 +1,9 @@
+variant,dtw,ldtw,aiou
+identical,0.0,0.0,0.966
+loop direction reversed (CW),181.005,1.496,0.966
+stroke order swapped,281.103,1.757,0.966
+bar direction reversed (RTL),119.806,0.998,0.966
+"same path, 2x point density",4.669,0.019,0.908
+"same path, 0.5x point density",8.118,0.068,0.916
+jitter sigma=1px,14.577,0.108,0.631
+shape drift (loop scaled 0.85),19.32,0.161,0.459

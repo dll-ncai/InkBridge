@@ -1,0 +1,295 @@
+{
+ "uhwr_eval_version": "0.3.1",
+ "npz": "$LOCAL/experiments/e0/data/e0_val.npz",
+ "n_units": 50,
+ "frames": [
+  "identity",
+  "mirror_x",
+  "vt"
+ ],
+ "tests": {
+  "T1_round_trip": {
+   "n": 50,
+   "identity": {
+    "seq_bitwise_ok": 50,
+    "cond_pixelwise_ok": 50,
+    "seq_max_abs_diff": 0.0,
+    "cond_n_pixels_diff": 0,
+    "pass": true
+   },
+   "mirror_x": {
+    "seq_bitwise_ok": 50,
+    "cond_pixelwise_ok": 50,
+    "seq_max_abs_diff": 0.0,
+    "cond_n_pixels_diff": 0,
+    "pass": true
+   },
+   "vt": {
+    "seq_bitwise_ok": 50,
+    "cond_pixelwise_ok": 50,
+    "seq_max_abs_diff": 0.0,
+    "cond_n_pixels_diff": 0,
+    "pass": true
+   },
+   "pass": true
+  },
+  "T2_edge_background": {
+   "e0_val.npz:cond_rendered": {
+    "n": 4349,
+    "row0_clean": 4349,
+    "col0_clean": 4349,
+    "row63_clean": 4349,
+    "col63_clean": 2777,
+    "min_ink_row": 2,
+    "max_ink_row": 62,
+    "min_ink_col": 1,
+    "max_ink_col": 63
+   },
+   "e0_train.npz:cond_rendered": {
+    "n": 33615,
+    "row0_clean": 33615,
+    "col0_clean": 33615,
+    "row63_clean": 33615,
+    "col63_clean": 19743,
+    "min_ink_row": 2,
+    "max_ink_row": 62,
+    "min_ink_col": 1,
+    "max_ink_col": 63
+   },
+   "e0_test.npz:cond_rendered": {
+    "n": 4406,
+    "row0_clean": 4406,
+    "col0_clean": 4406,
+    "row63_clean": 4406,
+    "col63_clean": 2595,
+    "min_ink_row": 2,
+    "max_ink_row": 62,
+    "min_ink_col": 1,
+    "max_ink_col": 63
+   },
+   "e0_test.npz:cond_dataset": {
+    "n": 4406,
+    "row0_clean": 3852,
+    "col0_clean": 4181,
+    "row63_clean": 3254,
+    "col63_clean": 3807,
+    "min_ink_row": 0,
+    "max_ink_row": 63,
+    "min_ink_col": 0,
+    "max_ink_col": 63
+   },
+   "e0_gold.npz:cond_rendered": {
+    "n": 354,
+    "row0_clean": 354,
+    "col0_clean": 354,
+    "row63_clean": 354,
+    "col63_clean": 228,
+    "min_ink_row": 2,
+    "max_ink_row": 62,
+    "min_ink_col": 1,
+    "max_ink_col": 63
+   },
+   "e0_gold.npz:cond_dataset": {
+    "n": 354,
+    "row0_clean": 292,
+    "col0_clean": 333,
+    "row63_clean": 252,
+    "col63_clean": 307,
+    "min_ink_row": 0,
+    "max_ink_row": 63,
+    "min_ink_col": 0,
+    "max_ink_col": 63
+   },
+   "pass_rendered": true
+  },
+  "T3_renderer_consistency": {
+   "stored_cond_reproduced": 50,
+   "n": 50,
+   "mirror_x": {
+    "n_pixels_diff_total": 4233,
+    "n_pixels_diff_max": 138,
+    "n_units_exact": 0,
+    "abs_diff_sum": 8586
+   },
+   "vt": {
+    "n_pixels_diff_total": 14021,
+    "n_pixels_diff_max": 408,
+    "n_units_exact": 0,
+    "abs_diff_sum": 91083
+   },
+   "control_plain_flip": {
+    "mirror_x": {
+     "n_pixels_diff_total": 26399
+    },
+    "vt": {
+     "n_pixels_diff_total": 25003
+    }
+   }
+  },
+  "T4_metrics_vs_original_GT": {
+   "identity": {
+    "n": 50,
+    "aiou_equals_self": 50,
+    "aiou_min": 0.9013698630136986,
+    "self_aiou_min": 0.9013698630136986,
+    "self_aiou_mean": 0.9602199925634314,
+    "tau_min": 0.9999999999999999,
+    "direction_min": 1.0,
+    "dtw_max": 0.0,
+    "ldtw_max": 0.0,
+    "n_all_ok": 50,
+    "direction_nan": 0,
+    "tau_nan": 24,
+    "pass": true
+   },
+   "mirror_x": {
+    "n": 50,
+    "aiou_equals_self": 50,
+    "aiou_min": 0.9013698630136986,
+    "self_aiou_min": 0.9013698630136986,
+    "self_aiou_mean": 0.9602199925634314,
+    "tau_min": 0.9999999999999999,
+    "direction_min": 1.0,
+    "dtw_max": 0.0,
+    "ldtw_max": 0.0,
+    "n_all_ok": 50,
+    "direction_nan": 0,
+    "tau_nan": 24,
+    "pass": true
+   },
+   "vt": {
+    "n": 50,
+    "aiou_equals_self": 50,
+    "aiou_min": 0.9013698630136986,
+    "self_aiou_min": 0.9013698630136986,
+    "self_aiou_mean": 0.9602199925634314,
+    "tau_min": 0.9999999999999999,
+    "direction_min": 1.0,
+    "dtw_max": 0.0,
+    "ldtw_max": 0.0,
+    "n_all_ok": 50,
+    "direction_nan": 0,
+    "tau_nan": 24,
+    "pass": true
+   },
+   "criterion": "aiou == self-score of the original GT (metric ceiling, <1 by construction), |1-tau|<1e-9, direction 1 or NaN, dtw = ldtw = 0",
+   "vs_native_gt_points_context": {
+    "identity": {
+     "aiou_mean": 0.9155866070745486,
+     "tau_mean": 1.0,
+     "direction_mean": 1.0,
+     "aiou_n_defined": 50,
+     "tau_n_defined": 26,
+     "direction_n_defined": 50
+    },
+    "mirror_x": {
+     "aiou_mean": 0.9155866070745486,
+     "tau_mean": 1.0,
+     "direction_mean": 1.0,
+     "aiou_n_defined": 50,
+     "tau_n_defined": 26,
+     "direction_n_defined": 50
+    },
+    "vt": {
+     "aiou_mean": 0.9155866070745486,
+     "tau_mean": 1.0,
+     "direction_mean": 1.0,
+     "aiou_n_defined": 50,
+     "tau_n_defined": 26,
+     "direction_n_defined": 50
+    }
+   },
+   "pass": true
+  },
+  "T5_padded_and_ink_equivalence": {
+   "n": 50,
+   "identity": {
+    "padded_roundtrip_ok": 50,
+    "array_vs_ink_ok": 50,
+    "pass": true
+   },
+   "mirror_x": {
+    "padded_roundtrip_ok": 50,
+    "array_vs_ink_ok": 50,
+    "pass": true
+   },
+   "vt": {
+    "padded_roundtrip_ok": 50,
+    "array_vs_ink_ok": 50,
+    "pass": true
+   },
+   "pass": true
+  },
+  "T6_dataset_hook": {
+   "n": 50,
+   "identity": {
+    "items_match_manual_transform": 50
+   },
+   "mirror_x": {
+    "items_match_manual_transform": 50
+   },
+   "vt": {
+    "items_match_manual_transform": 50
+   },
+   "frame_scripts_filter": {
+    "excluded_tag_identity_ok": 50,
+    "included_tag_vt_ok": 50
+   },
+   "pass": true
+  }
+ },
+ "unit_ids": [
+  "1000_0007_0_L000",
+  "1000_0007_0_L001",
+  "1000_0007_0_L002",
+  "1000_0007_0_L003",
+  "1000_0007_0_L004",
+  "1000_0007_0_L005",
+  "1000_0007_0_L006",
+  "1000_0007_0_L007",
+  "1000_0007_0_L008",
+  "1000_0007_0_L009",
+  "1000_0007_0_L010",
+  "1000_0007_0_L011",
+  "1000_0007_0_L012",
+  "1000_0007_0_L013",
+  "1000_0007_0_L014",
+  "1000_0007_0_L015",
+  "1000_0007_0_L016",
+  "1000_0007_0_L017",
+  "1000_0007_1_L000",
+  "1000_0007_1_L001",
+  "1000_0007_1_L002",
+  "1000_0007_1_L003",
+  "1000_0007_1_L004",
+  "1000_0007_1_L005",
+  "1000_0007_1_L006",
+  "1000_0007_1_L007",
+  "1000_0007_1_L008",
+  "1000_0007_1_L009",
+  "1000_0007_1_L010",
+  "1000_0007_1_L011",
+  "1000_0007_1_L012",
+  "1000_0007_1_L013",
+  "1000_0007_1_L014",
+  "1000_0007_1_L015",
+  "1000_0007_1_L016",
+  "1000_0007_2_L000",
+  "1000_0007_2_L001",
+  "1000_0007_2_L002",
+  "1000_0007_2_L003",
+  "1000_0007_2_L004",
+  "1000_0007_2_L005",
+  "1000_0007_2_L006",
+  "1000_0007_2_L007",
+  "1000_0007_2_L008",
+  "1000_0007_2_L009",
+  "1000_0007_2_L010",
+  "1000_0007_2_L011",
+  "1000_0007_2_L012",
+  "1000_0007_2_L013",
+  "1000_0007_2_L014"
+ ],
+ "pass": true,
+ "seconds": 6.0
+}

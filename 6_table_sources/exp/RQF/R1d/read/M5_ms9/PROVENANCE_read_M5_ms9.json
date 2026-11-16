@@ -1,0 +1,123 @@
+{
+ "kind": "rqf_r1d_read",
+ "base": "M5_ms9",
+ "plan": "$U/exp/RQF/R1d/plan.json",
+ "plan_sha256": "1e19ba0a1d6e2c9fd45fa508ab89943b6dce78ed18fbe455f5f406ef9406f01a",
+ "inputs": {
+  "test_ouhdl": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_ouhdl__M5_ms9_idv3__seed0__rows031.csv",
+    "sha256": "7761ae7a51a674f7a8c6f6263d6a364358dd0a03f16fca44ff9935e750de8ecd"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_ouhdl__M5_ms9_r1d__seed0__rows031.csv",
+    "sha256": "1dbdd71f0ac3dca2806966194727aaed8fcf46a36cafef68bbcdba153cf5d371"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_ouhdl__M5_ms9_mirv3__seed0__rows031.csv",
+    "sha256": "ba53d104f56239404ccb7e5bd6e06d1dcbac5beae683fc629ed0ad663465ce2f"
+   }
+  },
+  "test_casia_zh": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_zh__M5_ms9_idv3__seed0__rows031.csv",
+    "sha256": "ef733b0c9f184174aa56fcc48af980d694a78dbede7d2a5c62a7e78c334051d1"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_zh__M5_ms9_r1d__seed0__rows031.csv",
+    "sha256": "6d6ab7fcd7b71199822f0157cdca0d43748ace606b703c8f2676bb9fab6b087a"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_zh__M5_ms9_mirv3__seed0__rows031.csv",
+    "sha256": "3223f31c78b576b75c4b8f1bdff1ca93fb8317fc7fa8dea567a9331aba704ef0"
+   }
+  },
+  "test_casia_en": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_en__M5_ms9_idv3__seed0__rows031.csv",
+    "sha256": "36c0bca7d3bbeaeca847c1f2a51da23cc55ea40990c52bb334c7a5adaa36fece"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_en__M5_ms9_r1d__seed0__rows031.csv",
+    "sha256": "78389a6af4c8882474628cc5e4c8bf2f486b0fe19bd2cd541d9881815265c6ae"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_en__M5_ms9_mirv3__seed0__rows031.csv",
+    "sha256": "720111f546fa119a0b862a584ca7d18d9da8bf5f5b9e15e11ae9361c6fc7fe77"
+   }
+  },
+  "test_hpl_tamil": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_hpl_tamil__M5_ms9_idv3__seed0__rows031.csv",
+    "sha256": "0b254a5b8633ce5275f9b4d8e5e07520652804cd31831ae5a350e9f9610653a0"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_hpl_tamil__M5_ms9_r1d__seed0__rows031.csv",
+    "sha256": "9e6f3b1ac3c4e0050dc63d43808b6f5d0fe90cec28598d1b2b482c53613d5a4c"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_hpl_tamil__M5_ms9_mirv3__seed0__rows031.csv",
+    "sha256": "9778a84260899aad737519fa517f1ee8f89591800bdf39ef44dd10fd72a344be"
+   }
+  },
+  "test_iam500": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_iam500__M5_ms9_idv3__seed0__rows031.csv",
+    "sha256": "e9c8fcaa63cadc0b64086717869d2ebf5ac1df0ff2eb805b6727bf7381e01978"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_iam500__M5_ms9_r1d__seed0__rows031.csv",
+    "sha256": "1849bc44478fa0c3f579e39963c933de6a7f6764be20d1c597d1fdf32d9480e0"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_iam500__M5_ms9_mirv3__seed0__rows031.csv",
+    "sha256": "276b9885952e16b6fc3c99b8a08bda92f8fde55420652755324ebe2635215f7f"
+   }
+  },
+  "german_unipen_de_test": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_unipen_de_test__M5_ms9_idv3__seed0__rows031.csv",
+    "sha256": "240a77b7238572a8a4d1f930283afb8e6cc610224da9634157b0af2e94d3a9c2"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_unipen_de_test__M5_ms9_r1d__seed0__rows031.csv",
+    "sha256": "b037857bf44e25f862f85a59d9f9706bb693d0c76585922ef7c2cac14849b7d3"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_unipen_de_test__M5_ms9_mirv3__seed0__rows031.csv",
+    "sha256": "441d57d2c8c264159e3b584127ae5622ac6d6666734afc1c9cbb5ed9733a3051"
+   }
+  },
+  "german_onhw_all": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_onhw_all__M5_ms9_idv3__seed0__rows031.csv",
+    "sha256": "922f36a3e0eddda956d7c883da53949eb0cfc4618378bd7acb18d4210c676910"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_onhw_all__M5_ms9_r1d__seed0__rows031.csv",
+    "sha256": "445c69a4fe4da192993fe498bae08a9a8bdbeefe3ab5e5e2e7857d95ed531efe"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_onhw_all__M5_ms9_mirv3__seed0__rows031.csv",
+    "sha256": "9aa15499b839b98249a60ca4c3837c3be60b38b15d262340ac0aefa7b30c8dcc"
+   }
+  }
+ },
+ "code_sha256": {
+  "r1d_read.py": "5024b9746e5e8fdf9c274e355689b19392d08d7ea6c0418114fa57cd38684d7f",
+  "loop_tables.py": "5f59016518803745f9a91cecac5d1ff1ddeee260899be45c2a5517f977302ca5"
+ },
+ "agent": "<agent>",
+ "lead_reason": "Model <agent>: new inference code",
+ "prereg": {
+  "parent": "PREREG_RQ_finalise_2026-11-07.md sha256 04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+  "amendment": "A2 sha256 bface42b... (A2.5 R1d)"
+ },
+ "host": "<node>",
+ "slurm_job": "24964495",
+ "outputs": {
+  "R1d_paired_M5_ms9.csv": "f820addc6a7ecb1380787eaa853c15662be416421b439cee88cbe364f25fd24e",
+  "R1d_absolute_M5_ms9.csv": "cddf85e67e0e948e855138c5c72558dc881a48d13340d0d314caba7109fd459e",
+  "R1d_verdict_M5_ms9.json": "9a820656f0690843ae3456049ac3c79ab16c3957069c756d5bad9f48519596aa"
+ }
+}

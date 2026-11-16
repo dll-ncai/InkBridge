@@ -1,0 +1,885 @@
+{
+ "experiment": "D3_ROUTE Stage A (routed ensemble vs joint M5) - scoring and tables",
+ "status": "exploratory (single sampling device, 3 seeds); confirmatory re-run pending",
+ "created_utc": "2026-10-24T22:31:22Z",
+ "sampling": {
+  "host": "VPS <node>, NVIDIA GeForce RTX 4090 (shared GPU)",
+  "torch": "2.9.1+cu130",
+  "cuda": "13.0",
+  "python": "3.11.14",
+  "sampler": "DDIM 50, eta 0, batch 256, fp32, condition rendered",
+  "seed_protocol": "torch.manual_seed(seed) once per (set,specialist,seed); needed indices ascending, fixed batches; fp32",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "code": "d3a_sample.py",
+  "code_sha256": "1a5e378f923b409d1c3d2bb9423988547365f263d999edc91b9dfd09bbebbfcc",
+  "e0_code": "code_4cd40f57",
+  "finished_utc": "2026-10-24T20:28:10Z",
+  "clusterA_preds_dir": "$U/exp/D3_ROUTE/stageA/preds",
+  "clusterA_sha_list": "exp/D3_ROUTE/stageA/logs/SHA256SUMS_vps_pull.txt, exp/D3_ROUTE/stageA/SHA256SUMS_stageA_preds.txt"
+ },
+ "specialists": {
+  "E0_ms8": {
+   "run_dir": "$U/runs/e0/e0_v3_rendered_100k_bs512",
+   "step": 80000,
+   "checkpoint_sha256": "9a9edb199d1c3308996b30a1663f83af3bf8dde3fd8f10deee8a7511f37700d5"
+  },
+  "M5_joint_ms9": {
+   "run_dir": "$U/exp/M5/runs/joint",
+   "step": 90000,
+   "checkpoint_sha256": "b9592f22086555d3fcae46660a97f5c341dfe2de87717ed0a6e8c18d7eaaca7a"
+  },
+  "X5_ms9": {
+   "run_dir": "$U/exp/X5/run",
+   "step": 90000,
+   "checkpoint_sha256": "5758fa493418475d62f36699ce57cf8309436bb7fe4c484c71ef0cc7201f3b76"
+  },
+  "E27_ms47": {
+   "run_dir": "$U/runs/nagamatsu/casia_full_a100x2__03",
+   "step": 470000,
+   "checkpoint_sha256": "af7d1edf454460582d97f239b5289821d0a3157266d704f2e603d9bbe427f2cd"
+  }
+ },
+ "router": {
+  "script_clf.pt_sha256": "22bb8802f2da46fc37972eec430a1439ad830905712f22f6d923c38829db45aa",
+  "clusterA_dir": "$U/exp/D3_ROUTE/router",
+  "manifests_sha256": {
+   "manifest_german_onhw_all.csv": "c40795fd6008d2b6664bcf1bd484cd174f2a688e64607be5d257be6f03f362e4",
+   "manifest_german_unipen_de_test.csv": "4dcd840510396d1aef36534efc9eda1eadc2e255d331157e820f77ba5dbc9d65",
+   "manifest_test_casia_en.csv": "ac31eeb1e7060da17dc24401f288a6ba1db075e429fbdd8cf7ab59f432043de3",
+   "manifest_test_casia_zh.csv": "ca2c3b206b73b91825876aa162d5eab927a15cf0fe4edc08e2d516c1065adebd",
+   "manifest_test_hpl_tamil.csv": "1391e745334cf2bae14e02917d0a8af6566afe23db32159a4bd3b6bb2c03f262",
+   "manifest_test_iam500.csv": "cb878c5c4d5ee94758b54ac8f809e6edb354f6c386aeaa89414324f91577bb1e",
+   "manifest_test_ouhdl.csv": "e05bd7ad8122b4ce3bd78bed206e32e8cff2509d219a97c6317624e75e6b25d6"
+  },
+  "oracle_convention": "true script -> specialist; German (no specialist) -> M5_joint_ms9"
+ },
+ "ground_truth_npz_sha256": {
+  "$U/data/d2_v2/onhw/e0_all.npz": "59bc5fcbdf276a440f6afc5a4e14d9e3c7351595a2a724a0085160054fa68939",
+  "$U/data/d2_v2/unipen_de/e0_test.npz": "c5f1c29e7bdf231f5d6032a29362d0ab3c912450af3294c7f8e6a51dc653157f",
+  "$U/data/m5_multiscript_v1/m5_test_iam500.npz": "0dbd1a613adadb4e5b846d5ecbdb5e7df9b0006d6a7665ee37e1020fc00637de",
+  "$U/data/ouhdl_e0_v3/e0_test.npz": "c09560ed07a526614b3342a2fb6b642165f6aab3fffa25876bf1bc7502b7a514",
+  "$U/exp/X4a/data/x4a_casia_en.npz": "eb8c6a7a54fac56448b5232e2ef56726a9046198ba439129241bf3d9d9af7d6a",
+  "$U/exp/X4a/data/x4a_casia_zh.npz": "93f4efcb99941a77fd942e19e9001316d14654ac77e3dc5b622a6da2cdbc0f72",
+  "$U/exp/X4a/data/x4a_hpl_tamil.npz": "d868ba858f07de2e5d179f5a635a4007fbfc25b1fa4bdbb1149ccf073dce6938"
+ },
+ "preds_files": [
+  {
+   "file": "german_onhw_all__M5_joint_ms9__seed0_preds.npz",
+   "set": "german_onhw_all",
+   "route_mode": "M5_joint_ms9",
+   "seed": 0,
+   "n_units": 5925,
+   "route_counts": "{\"M5_joint_ms9\": 5925}",
+   "sha256": "46dd78659fa99baf3f1bff438005553b94616ec45a19f15b062ba595471bde44",
+   "size": 25238669
+  },
+  {
+   "file": "german_onhw_all__M5_joint_ms9__seed1_preds.npz",
+   "set": "german_onhw_all",
+   "route_mode": "M5_joint_ms9",
+   "seed": 1,
+   "n_units": 5925,
+   "route_counts": "{\"M5_joint_ms9\": 5925}",
+   "sha256": "edbc72e66e9a66115e51b80aad07adf5e7b958b6e6acd088d395a40a2f9d5238",
+   "size": 25234583
+  },
+  {
+   "file": "german_onhw_all__M5_joint_ms9__seed2_preds.npz",
+   "set": "german_onhw_all",
+   "route_mode": "M5_joint_ms9",
+   "seed": 2,
+   "n_units": 5925,
+   "route_counts": "{\"M5_joint_ms9\": 5925}",
+   "sha256": "807abeb21094d0d8e40c05fba76a2867d2e7f8317e230a94d86589549a0ef28c",
+   "size": 25240155
+  },
+  {
+   "file": "german_onhw_all__oracle_route__seed0_preds.npz",
+   "set": "german_onhw_all",
+   "route_mode": "oracle_route",
+   "seed": 0,
+   "n_units": 5925,
+   "route_counts": "{\"M5_joint_ms9\": 5925}",
+   "sha256": "7a9917b647a259d775d0f986514538749ac88b7b82d7e22b2058564ad1b2094e",
+   "size": 25238678
+  },
+  {
+   "file": "german_onhw_all__oracle_route__seed1_preds.npz",
+   "set": "german_onhw_all",
+   "route_mode": "oracle_route",
+   "seed": 1,
+   "n_units": 5925,
+   "route_counts": "{\"M5_joint_ms9\": 5925}",
+   "sha256": "12c20eaf85e272c171d70726fae913fb2232c6f7bb285d1b30c23fb0e9707819",
+   "size": 25234592
+  },
+  {
+   "file": "german_onhw_all__oracle_route__seed2_preds.npz",
+   "set": "german_onhw_all",
+   "route_mode": "oracle_route",
+   "seed": 2,
+   "n_units": 5925,
+   "route_counts": "{\"M5_joint_ms9\": 5925}",
+   "sha256": "908ac85e806d1e0d01402f2218527d0696a025c79ae7fb3914a824646da6926b",
+   "size": 25240165
+  },
+  {
+   "file": "german_onhw_all__pred_route__seed0_preds.npz",
+   "set": "german_onhw_all",
+   "route_mode": "pred_route",
+   "seed": 0,
+   "n_units": 5925,
+   "route_counts": "{\"E0_ms8\": 3, \"E27_ms47\": 5, \"M5_joint_ms9\": 6, \"X5_ms9\": 5911}",
+   "sha256": "cb2031b775bba45646703437b1b432a1fcecf1a456047a99750eaf3bb5582460",
+   "size": 25242653
+  },
+  {
+   "file": "german_onhw_all__pred_route__seed1_preds.npz",
+   "set": "german_onhw_all",
+   "route_mode": "pred_route",
+   "seed": 1,
+   "n_units": 5925,
+   "route_counts": "{\"E0_ms8\": 3, \"E27_ms47\": 5, \"M5_joint_ms9\": 6, \"X5_ms9\": 5911}",
+   "sha256": "451a22f8ab7fb011d8aa03c8a52c979893376e0defc7a2c5620ced948b52807e",
+   "size": 25238670
+  },
+  {
+   "file": "german_onhw_all__pred_route__seed2_preds.npz",
+   "set": "german_onhw_all",
+   "route_mode": "pred_route",
+   "seed": 2,
+   "n_units": 5925,
+   "route_counts": "{\"E0_ms8\": 3, \"E27_ms47\": 5, \"M5_joint_ms9\": 6, \"X5_ms9\": 5911}",
+   "sha256": "3026a203053e9217305fcd53f6577abfb83acd359dcea252077c00be5d701a55",
+   "size": 25240486
+  },
+  {
+   "file": "german_unipen_de_test__M5_joint_ms9__seed0_preds.npz",
+   "set": "german_unipen_de_test",
+   "route_mode": "M5_joint_ms9",
+   "seed": 0,
+   "n_units": 827,
+   "route_counts": "{\"M5_joint_ms9\": 827}",
+   "sha256": "e416e0ba1e02911e7e81cc00fef12def78edeedac1b19ab2c1467358f669425e",
+   "size": 3465087
+  },
+  {
+   "file": "german_unipen_de_test__M5_joint_ms9__seed1_preds.npz",
+   "set": "german_unipen_de_test",
+   "route_mode": "M5_joint_ms9",
+   "seed": 1,
+   "n_units": 827,
+   "route_counts": "{\"M5_joint_ms9\": 827}",
+   "sha256": "bc8f053102483258eba2aef4485ed80f7a26ea828e3a6121d6d1e988cb73f321",
+   "size": 3467271
+  },
+  {
+   "file": "german_unipen_de_test__M5_joint_ms9__seed2_preds.npz",
+   "set": "german_unipen_de_test",
+   "route_mode": "M5_joint_ms9",
+   "seed": 2,
+   "n_units": 827,
+   "route_counts": "{\"M5_joint_ms9\": 827}",
+   "sha256": "cd6d6827582abdcdd55ebf015b31cc948c4a170e5d8926cdfcdeb226706bc438",
+   "size": 3464319
+  },
+  {
+   "file": "german_unipen_de_test__oracle_route__seed0_preds.npz",
+   "set": "german_unipen_de_test",
+   "route_mode": "oracle_route",
+   "seed": 0,
+   "n_units": 827,
+   "route_counts": "{\"M5_joint_ms9\": 827}",
+   "sha256": "c50ad37198b3985e90218578cb11174f29265ee04fa90884d8372805af180d0e",
+   "size": 3465096
+  },
+  {
+   "file": "german_unipen_de_test__oracle_route__seed1_preds.npz",
+   "set": "german_unipen_de_test",
+   "route_mode": "oracle_route",
+   "seed": 1,
+   "n_units": 827,
+   "route_counts": "{\"M5_joint_ms9\": 827}",
+   "sha256": "6cc0b97b0a20fcfd6d0bab0e475f15aa3be5253a75fd1dca406c420bc71a9bea",
+   "size": 3467276
+  },
+  {
+   "file": "german_unipen_de_test__oracle_route__seed2_preds.npz",
+   "set": "german_unipen_de_test",
+   "route_mode": "oracle_route",
+   "seed": 2,
+   "n_units": 827,
+   "route_counts": "{\"M5_joint_ms9\": 827}",
+   "sha256": "f85a33d22d1abc04f1147672e7980a6a2e32bb9015ab00261382df6eeb0bb79c",
+   "size": 3464328
+  },
+  {
+   "file": "german_unipen_de_test__pred_route__seed0_preds.npz",
+   "set": "german_unipen_de_test",
+   "route_mode": "pred_route",
+   "seed": 0,
+   "n_units": 827,
+   "route_counts": "{\"E0_ms8\": 106, \"E27_ms47\": 13, \"M5_joint_ms9\": 220, \"X5_ms9\": 488}",
+   "sha256": "363ba43946c1476453e4fa39014a7d6fee9ef30ad9f211780de7674ee11fad38",
+   "size": 3457301
+  },
+  {
+   "file": "german_unipen_de_test__pred_route__seed1_preds.npz",
+   "set": "german_unipen_de_test",
+   "route_mode": "pred_route",
+   "seed": 1,
+   "n_units": 827,
+   "route_counts": "{\"E0_ms8\": 106, \"E27_ms47\": 13, \"M5_joint_ms9\": 220, \"X5_ms9\": 488}",
+   "sha256": "a47f4c3a303c9b8a9045aa59edf1d6cb2561b542f6ad645fc7eea8a3e1c675bd",
+   "size": 3458685
+  },
+  {
+   "file": "german_unipen_de_test__pred_route__seed2_preds.npz",
+   "set": "german_unipen_de_test",
+   "route_mode": "pred_route",
+   "seed": 2,
+   "n_units": 827,
+   "route_counts": "{\"E0_ms8\": 106, \"E27_ms47\": 13, \"M5_joint_ms9\": 220, \"X5_ms9\": 488}",
+   "sha256": "53b2d719e1dc8edd088d252742ad3ccf2f5ae3bbf26301d75f1ea82c8c0498c8",
+   "size": 3452339
+  },
+  {
+   "file": "test_casia_en__M5_joint_ms9__seed0_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "M5_joint_ms9",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "b2bb8237330d6ce2fa9ba7370a240d052a26037f9f28ece9c55871aa970ea0e4",
+   "size": 2075021
+  },
+  {
+   "file": "test_casia_en__M5_joint_ms9__seed1_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "M5_joint_ms9",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "a0ceac9bca1df003c2386a925ab772103d941382dac771cd157d0cfbc4a9713d",
+   "size": 2075738
+  },
+  {
+   "file": "test_casia_en__M5_joint_ms9__seed2_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "M5_joint_ms9",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "f2d03486db0f2deffc78b4b506379554d98a2e64dd3796096e47d90f8ae716bf",
+   "size": 2071954
+  },
+  {
+   "file": "test_casia_en__X5_ms9__seed0_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "X5_ms9",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "1b2b5bfc9399fd21f41fd55cd8510b327be712e3e40a91bf274b690639240bc8",
+   "size": 2073914
+  },
+  {
+   "file": "test_casia_en__X5_ms9__seed1_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "X5_ms9",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "2d4d3c5fcf2668e4a87c2bf22145da4dbfe593d0b03d76d2355b9e42fd018017",
+   "size": 2076197
+  },
+  {
+   "file": "test_casia_en__X5_ms9__seed2_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "X5_ms9",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "6a4bea7ee6ee4d8e377297eb147099c088dcf352a37b3248a8ab477a6db08407",
+   "size": 2073650
+  },
+  {
+   "file": "test_casia_en__oracle_route__seed0_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "oracle_route",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "fcad72c37500b74f2c31f6eb3db9aa0b6aee96726b5743d1c55fd55f704b4d78",
+   "size": 2073919
+  },
+  {
+   "file": "test_casia_en__oracle_route__seed1_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "oracle_route",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "91ae85c5edec289b74c4ddb8fb795789da7588a5a1b3178b62b2385b92d75b37",
+   "size": 2076199
+  },
+  {
+   "file": "test_casia_en__oracle_route__seed2_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "oracle_route",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "f5bbe9b78e0b73b5c0ef998f0938c7139a588f58b85bfd976eb62b22ccfec98f",
+   "size": 2073659
+  },
+  {
+   "file": "test_casia_en__pred_route__seed0_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "pred_route",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 3, \"M5_joint_ms9\": 1, \"X5_ms9\": 496}",
+   "sha256": "ac1362688cbfb6f442b0756d8c0d02c9b5fef2a02e76c71dc02cc916d7b89863",
+   "size": 2072587
+  },
+  {
+   "file": "test_casia_en__pred_route__seed1_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "pred_route",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 3, \"M5_joint_ms9\": 1, \"X5_ms9\": 496}",
+   "sha256": "584b2677da0ab647c56f07874d0d90f4edf653ab6016b30d3b1fb9801b19b521",
+   "size": 2074883
+  },
+  {
+   "file": "test_casia_en__pred_route__seed2_preds.npz",
+   "set": "test_casia_en",
+   "route_mode": "pred_route",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 3, \"M5_joint_ms9\": 1, \"X5_ms9\": 496}",
+   "sha256": "35a44c33bbb8f86d091eef57defb56ca0aef2fb411b7ee0f4c03253b225eb68e",
+   "size": 2071233
+  },
+  {
+   "file": "test_casia_zh__E27_ms47__seed0_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "E27_ms47",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 500}",
+   "sha256": "ef215a32258adc19bb1a327a28a67dc07e80df0c18e35fac21f32e48804eb2f1",
+   "size": 1828927
+  },
+  {
+   "file": "test_casia_zh__E27_ms47__seed1_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "E27_ms47",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 500}",
+   "sha256": "49f7cfa054cf4bc0165139e1a79bdee9689952765af82b78499a4e54e0957625",
+   "size": 1835312
+  },
+  {
+   "file": "test_casia_zh__E27_ms47__seed2_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "E27_ms47",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 500}",
+   "sha256": "c7e68adf65e2da9f9c5d881b46baf1d9687a88af7c7491d32a44a45bd28133bf",
+   "size": 1838299
+  },
+  {
+   "file": "test_casia_zh__M5_joint_ms9__seed0_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "M5_joint_ms9",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "05af2bab6b4584d3b6752ee9061a1f67e006ea5eb950520bc1f8a51261a3e2c5",
+   "size": 2147931
+  },
+  {
+   "file": "test_casia_zh__M5_joint_ms9__seed1_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "M5_joint_ms9",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "e0c78983f468337bcf33f2094c314441e08e1edf5805274f7d784899f392af4b",
+   "size": 2147312
+  },
+  {
+   "file": "test_casia_zh__M5_joint_ms9__seed2_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "M5_joint_ms9",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "1a3685ecdc612e2fb4c2e89df30ee49693e34b551a040b36f9d0596bc6c9a459",
+   "size": 2147720
+  },
+  {
+   "file": "test_casia_zh__oracle_route__seed0_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "oracle_route",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 500}",
+   "sha256": "98072c0a083ea78a56ad7a2439892f656f0b5ded7b535794b72514ac95d4f17f",
+   "size": 1828935
+  },
+  {
+   "file": "test_casia_zh__oracle_route__seed1_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "oracle_route",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 500}",
+   "sha256": "da057c5592ad9506f736532ae46622d4cd854e51928e8ac7675f9a7f57c6aa39",
+   "size": 1835319
+  },
+  {
+   "file": "test_casia_zh__oracle_route__seed2_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "oracle_route",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 500}",
+   "sha256": "777cdeed4c3d59a20e501794a05b80c6fde27155d41a60784552786000edb74f",
+   "size": 1838307
+  },
+  {
+   "file": "test_casia_zh__pred_route__seed0_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "pred_route",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 490, \"X5_ms9\": 10}",
+   "sha256": "767241cbff5f6259a74778836b539a45e0d5590b439f816d132d1e42dc8f999a",
+   "size": 1835898
+  },
+  {
+   "file": "test_casia_zh__pred_route__seed1_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "pred_route",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 490, \"X5_ms9\": 10}",
+   "sha256": "efb38d23db728140e7e8e5f22aed98e6a589154701846aba4349614362b77311",
+   "size": 1843555
+  },
+  {
+   "file": "test_casia_zh__pred_route__seed2_preds.npz",
+   "set": "test_casia_zh",
+   "route_mode": "pred_route",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"E27_ms47\": 490, \"X5_ms9\": 10}",
+   "sha256": "ef895b8171296ceba09ca4778d027509df6c54c90ae79d1b4793b3dc7ffcb8bf",
+   "size": 1844434
+  },
+  {
+   "file": "test_hpl_tamil__M5_joint_ms9__seed0_preds.npz",
+   "set": "test_hpl_tamil",
+   "route_mode": "M5_joint_ms9",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "0145095d7934768a28c42917a88b12caef64554abad4235937f07f8d0b635a34",
+   "size": 2104109
+  },
+  {
+   "file": "test_hpl_tamil__M5_joint_ms9__seed1_preds.npz",
+   "set": "test_hpl_tamil",
+   "route_mode": "M5_joint_ms9",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "84273f7ab252e5147fe496c9629cc0b98807c5b654d47b6066577162062f6fb1",
+   "size": 2106172
+  },
+  {
+   "file": "test_hpl_tamil__M5_joint_ms9__seed2_preds.npz",
+   "set": "test_hpl_tamil",
+   "route_mode": "M5_joint_ms9",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "340bbc28a65c2a37939897534b9adf2f3e1c8b3e47ad4e1ed6eab4a7bc60da01",
+   "size": 2102147
+  },
+  {
+   "file": "test_hpl_tamil__oracle_route__seed0_preds.npz",
+   "set": "test_hpl_tamil",
+   "route_mode": "oracle_route",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "f03c274dad6e57c8b64d254f7a8760bb07668d1aa5aa59f99170a57e0c4e0a49",
+   "size": 2104113
+  },
+  {
+   "file": "test_hpl_tamil__oracle_route__seed1_preds.npz",
+   "set": "test_hpl_tamil",
+   "route_mode": "oracle_route",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "dcad978b6c4d12216fa1ff0d9b12bf909db17bb2aca520fc9ee5fa1eaa1bcda9",
+   "size": 2106177
+  },
+  {
+   "file": "test_hpl_tamil__oracle_route__seed2_preds.npz",
+   "set": "test_hpl_tamil",
+   "route_mode": "oracle_route",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "3316e9998bf9419ce279297fbc3a31ebbbaaf0ebc216daa055cb505c22fe8440",
+   "size": 2102151
+  },
+  {
+   "file": "test_hpl_tamil__pred_route__seed0_preds.npz",
+   "set": "test_hpl_tamil",
+   "route_mode": "pred_route",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"E0_ms8\": 1, \"M5_joint_ms9\": 497, \"X5_ms9\": 2}",
+   "sha256": "210b375a64fbf969f659a8535e1fa6563aa1a1f40df0764898e0a93ea851deb0",
+   "size": 2104428
+  },
+  {
+   "file": "test_hpl_tamil__pred_route__seed1_preds.npz",
+   "set": "test_hpl_tamil",
+   "route_mode": "pred_route",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"E0_ms8\": 1, \"M5_joint_ms9\": 497, \"X5_ms9\": 2}",
+   "sha256": "a96f775ea143451380ed0bdd479b79b89178f4a94f256c5f6f847431c3fff670",
+   "size": 2106375
+  },
+  {
+   "file": "test_hpl_tamil__pred_route__seed2_preds.npz",
+   "set": "test_hpl_tamil",
+   "route_mode": "pred_route",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"E0_ms8\": 1, \"M5_joint_ms9\": 497, \"X5_ms9\": 2}",
+   "sha256": "cc4cc72a2b14c3d781449b9016b88d72e6e2602029ca652936e3058163e0fc68",
+   "size": 2102548
+  },
+  {
+   "file": "test_iam500__M5_joint_ms9__seed0_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "M5_joint_ms9",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "7a9db2a0015f8fde6aae3cc5e89afbf763ec9a9af5951c7686c8524f0da3e0fb",
+   "size": 2073197
+  },
+  {
+   "file": "test_iam500__M5_joint_ms9__seed1_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "M5_joint_ms9",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "7cd3d09f4278ff3b0e59811beec07970c68799de029e9989519e68cf5b102c7c",
+   "size": 2072137
+  },
+  {
+   "file": "test_iam500__M5_joint_ms9__seed2_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "M5_joint_ms9",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 500}",
+   "sha256": "01e8714230b9f5e107feaf74a736249b6f123ed63337d0ec7524599be656d9e3",
+   "size": 2070418
+  },
+  {
+   "file": "test_iam500__X5_ms9__seed0_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "X5_ms9",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "47b01c31871f27a44830914c69e67349a75a0402178ef7d8acd713e274a071aa",
+   "size": 2068784
+  },
+  {
+   "file": "test_iam500__X5_ms9__seed1_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "X5_ms9",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "d22db747ebe339d4fb795feda0238ae488d0fa1c1e23266bb0c651ae70df88b5",
+   "size": 2067693
+  },
+  {
+   "file": "test_iam500__X5_ms9__seed2_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "X5_ms9",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "e0f4f0ee219eb789e56b0efe755dbbd9a1acef90d152d628b4a6eaf875371de0",
+   "size": 2065719
+  },
+  {
+   "file": "test_iam500__oracle_route__seed0_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "oracle_route",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "6f2a08025c5358bafa4c21063743347896e756210a47d3faab64a66c4f49aba4",
+   "size": 2068792
+  },
+  {
+   "file": "test_iam500__oracle_route__seed1_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "oracle_route",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "f12789dadba84fd0e1604d0c4c49e1aca5ad44044c5cff66691fe3bcdddf101d",
+   "size": 2067700
+  },
+  {
+   "file": "test_iam500__oracle_route__seed2_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "oracle_route",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"X5_ms9\": 500}",
+   "sha256": "7b865e2f84006e90bd6605db0c08e18dc8c4bcc467bdcde383782c0d74b837cd",
+   "size": 2065726
+  },
+  {
+   "file": "test_iam500__pred_route__seed0_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "pred_route",
+   "seed": 0,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 3, \"X5_ms9\": 497}",
+   "sha256": "8963f049c067708241b01573eb83e0037018c57a94259e7c5d72675889095e96",
+   "size": 2069141
+  },
+  {
+   "file": "test_iam500__pred_route__seed1_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "pred_route",
+   "seed": 1,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 3, \"X5_ms9\": 497}",
+   "sha256": "80e91362b68f0f1ea6430963ee29c90e35a608b7f1662866a641d6b7806b8c87",
+   "size": 2067761
+  },
+  {
+   "file": "test_iam500__pred_route__seed2_preds.npz",
+   "set": "test_iam500",
+   "route_mode": "pred_route",
+   "seed": 2,
+   "n_units": 500,
+   "route_counts": "{\"M5_joint_ms9\": 3, \"X5_ms9\": 497}",
+   "sha256": "724b54565ec244695cc162ef5a6c1acc52e52d4bd542eefedb73ce091795e1fb",
+   "size": 2065930
+  },
+  {
+   "file": "test_ouhdl__E0_ms8__seed0_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "E0_ms8",
+   "seed": 0,
+   "n_units": 4406,
+   "route_counts": "{\"E0_ms8\": 4406}",
+   "sha256": "2e39fea831f237a3bec1f1d63fd608e95f0f8bff732bed21cc50c4a459714cea",
+   "size": 18189307
+  },
+  {
+   "file": "test_ouhdl__E0_ms8__seed1_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "E0_ms8",
+   "seed": 1,
+   "n_units": 4406,
+   "route_counts": "{\"E0_ms8\": 4406}",
+   "sha256": "094ff8469120c6d8ce112dbc6f9f97ef61e936b4f12ae8822f7d497416910deb",
+   "size": 18185739
+  },
+  {
+   "file": "test_ouhdl__E0_ms8__seed2_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "E0_ms8",
+   "seed": 2,
+   "n_units": 4406,
+   "route_counts": "{\"E0_ms8\": 4406}",
+   "sha256": "91a3ae8ad10193da70103247259f5dcd69b1e9820a3f48c5c2b4f2536f9ebf38",
+   "size": 18191264
+  },
+  {
+   "file": "test_ouhdl__M5_joint_ms9__seed0_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "M5_joint_ms9",
+   "seed": 0,
+   "n_units": 4406,
+   "route_counts": "{\"M5_joint_ms9\": 4406}",
+   "sha256": "3a01cf392b3f6e29edc076e87a2192d737351528016d81d3107bef10d63ee09c",
+   "size": 18144945
+  },
+  {
+   "file": "test_ouhdl__M5_joint_ms9__seed1_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "M5_joint_ms9",
+   "seed": 1,
+   "n_units": 4406,
+   "route_counts": "{\"M5_joint_ms9\": 4406}",
+   "sha256": "be682e35025671231e11ed8b1e6d6289fde8b9431d102917cf995b312d686828",
+   "size": 18132559
+  },
+  {
+   "file": "test_ouhdl__M5_joint_ms9__seed2_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "M5_joint_ms9",
+   "seed": 2,
+   "n_units": 4406,
+   "route_counts": "{\"M5_joint_ms9\": 4406}",
+   "sha256": "de1c46fdd19101cc71a388af945f08ce23fc59ef5e9419f31a53f6dc8813213f",
+   "size": 18148251
+  },
+  {
+   "file": "test_ouhdl__oracle_route__seed0_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "oracle_route",
+   "seed": 0,
+   "n_units": 4406,
+   "route_counts": "{\"E0_ms8\": 4406}",
+   "sha256": "ad123edeea57794886351ed155407a6a8cbf257a747f3c302a52559e37766d4f",
+   "size": 18189314
+  },
+  {
+   "file": "test_ouhdl__oracle_route__seed1_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "oracle_route",
+   "seed": 1,
+   "n_units": 4406,
+   "route_counts": "{\"E0_ms8\": 4406}",
+   "sha256": "e2a28678e6b56ae6f716c25ced9c57d6bfceed82111510cb2f9459dd7ed91755",
+   "size": 18185745
+  },
+  {
+   "file": "test_ouhdl__oracle_route__seed2_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "oracle_route",
+   "seed": 2,
+   "n_units": 4406,
+   "route_counts": "{\"E0_ms8\": 4406}",
+   "sha256": "6fc6a96add48ab0f4999d0d791927d503c883d85cbc9019071613a8080210f37",
+   "size": 18191264
+  },
+  {
+   "file": "test_ouhdl__pred_route__seed0_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "pred_route",
+   "seed": 0,
+   "n_units": 4406,
+   "route_counts": "{\"E0_ms8\": 4389, \"M5_joint_ms9\": 7, \"X5_ms9\": 10}",
+   "sha256": "135aca643ad82a2bbfa56fc899f42e4e6bb0b05b5308d47bb6a4d1c53488deb0",
+   "size": 18190078
+  },
+  {
+   "file": "test_ouhdl__pred_route__seed1_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "pred_route",
+   "seed": 1,
+   "n_units": 4406,
+   "route_counts": "{\"E0_ms8\": 4389, \"M5_joint_ms9\": 7, \"X5_ms9\": 10}",
+   "sha256": "2a577ab2b75e68cf1fd49b915b0ef80169b258343d78d6f565d1fbee37d8d08f",
+   "size": 18187257
+  },
+  {
+   "file": "test_ouhdl__pred_route__seed2_preds.npz",
+   "set": "test_ouhdl",
+   "route_mode": "pred_route",
+   "seed": 2,
+   "n_units": 4406,
+   "route_counts": "{\"E0_ms8\": 4389, \"M5_joint_ms9\": 7, \"X5_ms9\": 10}",
+   "sha256": "9700315022af8ecb91fad6a3508ff9056b2f712c6a15a7439c91085c1e9bf81b",
+   "size": 18191857
+  }
+ ],
+ "scoring": {
+  "evaluator": "uhwr_eval 0.3.1",
+  "evaluator_path": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/__init__.py (recorded per row in column uhwr_eval_file; penup_f1_v2 present)",
+  "call": "score(gt, pred, (64, 64), protocol, with_lpips=False), protocols native + standardised; E0 adapter e0/code_4cd40f57 (decode, unpack_ink) appended LAST to sys.path so its vendored uhwr_eval 0.1.0 does not shadow 0.3.1",
+  "container": "images/torch27.sif sha256 c2ba6dbf95d647f6ae7a3a0844e96ee729a1b60e1f7b18e5ba977d6bb88cbc2e",
+  "venv": "venvs/uhwr_eval02 (numpy 1.26.4, pandas 3.0.6)",
+  "code": {
+   "d3a_score.py": "1856c67238253edbdbd862048a2bcc87ed5451aa51bd3416f201353bb7444a9b",
+   "sb_d3a_score_array.sh": "9252ba0373504fa4a434df95efeba6ff87cbd2a5cf63dbc4560d04b5bbdb5c70",
+   "tasks.txt": "bebcd2dd569f4eae56e0cec81230ebc2ac96dbfd9070dd652dd027eb2a29552e",
+   "d3a_tables.py": "240ce18dc2b0f9167e6855e8f24a9a05bf3a0aaf5c83c28b6c586976c0eb3a9b"
+  },
+  "clusterA_code_dir": "$U/exp/D3_ROUTE/stageA/code/score",
+  "slurm": {
+   "array_job": "24619444 (26 tasks, epyc-256, 16 CPUs each, COMPLETED)",
+   "failed_attempt": "24619397 (rc=1: assert uhwr_eval 0.3.1 failed because the E0 code dir was inserted before PYTHONPATH -> vendored 0.1.0; no rows kept, logs in stageA/score_out_failed_v1)",
+   "smoke_cancelled": "24618876 (RB4 /dev/shm venv-copy recipe; copy from $SCRATCH_ROOT took >20 min, cancelled)",
+   "verify_031": "24619470 COMPLETED (<node>, 21:59-22:32Z): RB4 jointms9 UNIPEN-de preds rescored under verified 0.3.1 = RB4 rows exactly on all 16 shared metrics (1,654 rows, 0 diff); RB4 rows lack penup_f1_v2 only"
+  },
+  "units_scored": 136140,
+  "rows": 272280,
+  "errors": 0,
+  "rows_dir": "$U/exp/D3_ROUTE/stageA/score_out/rows",
+  "rows_tarball_sha256": "ab72b1b7054e96b89494c5ee50ff72869ca2b234959ccd45910eeb38d73a6e92"
+ },
+ "aggregation": {
+  "where": "local Mac (python env, pandas), d3a_tables.py",
+  "definitions": "table-builder code_7d405fd6: per-unit mean over seeds, writer-cluster percentile bootstrap B=2000 numpy default_rng(0) multinomial counts, ratio of resampled sums; tau_cp = mean over n_gt_strokes>=2 units of tau with NaN->0; paired deltas on units present in both; unit-cluster CIs also given",
+  "rb4_reference_values": {
+   "UNIPEN-de AIoU": {
+    "E0": 0.5886,
+    "joint": 0.7921,
+    "X5": 0.7768
+   },
+   "OnHW AIoU": {
+    "E0": 0.652,
+    "joint": 0.7554,
+    "X5": 0.7765
+   }
+  },
+  "rb4_rows_used": [
+   "exp/RB4_baselines/german/rows/jointms9_unipen_de_test_rows.csv",
+   "jointms9_onhw_all_rows.csv",
+   "x5ms9_unipen_de_test_rows.csv",
+   "x5ms9_onhw_all_rows.csv"
+  ]
+ },
+ "deviations": [
+  "gold set (354) not sampled in Stage A -> no gold row",
+  "OnHW writer-cluster CI degenerate (2 writers): unit-cluster CI reported alongside",
+  "RB4/table-builder rows were produced by the vendored uhwr_eval 0.1.0 (script dir shadowing); verified numerically identical to 0.3.1 on shared metrics (job 24619470)"
+ ],
+ "outputs": [
+  "results_D3A_crossscript.csv",
+  "results_D3A_per_seed.csv",
+  "paired_D3A.csv",
+  "routing_accuracy_D3A.csv",
+  "misrouted_units_D3A.csv",
+  "dedup_identity_D3A.csv",
+  "device_check_vs_RB4_D3A.csv",
+  "RESULTS_D3A.md",
+  "PROVENANCE_D3A.json",
+  "verify_031_vs_RB4_jointms9_unipen_de.csv"
+ ]
+}

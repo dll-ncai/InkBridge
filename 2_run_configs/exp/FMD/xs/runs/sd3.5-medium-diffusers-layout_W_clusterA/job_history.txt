@@ -1,0 +1,4 @@
+2026-11-09T17:13:48Z arm_job_start arm=sd3.5-medium-diffusers-layout_W lane=clusterA site=clusterA host=<node> slurm=24878944 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-09T17:13:49Z race_lock WIN site=clusterA host=<node> slurm=24878944 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-09T17:13:49Z batch_layout ng=2 mem_gb=24 per_gpu=32 global_micro=64 accum=8 units_per_step=512 site=clusterA host=<node> slurm=24878944 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-09T17:13:50Z train_start ngpu=2 site=clusterA host=<node> slurm=24878944 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]

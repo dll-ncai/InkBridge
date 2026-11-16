@@ -1,0 +1,18 @@
+metric,direction,tag,definition
+dtw,↓,established,"Nagamatsu metrics.py dtw_and_ldtw (tslearn dtw_path: sqrt of summed squared distances along the optimal path), pixel units of the evaluation canvas"
+ldtw,↓,established,"Nagamatsu metrics.py: DTW / alignment-path length (PEN-Net, Chen et al. ACCV 2022)"
+aiou,↑,established,"Nagamatsu metrics.py adaptive_iou: GT drawn at 2 px, prediction at 1 px, best IoU over 0-4 3x3 dilations; strokes with <2 points are not drawn"
+lpips,↓,established,"LPIPS (Zhang et al. 2018, AlexNet, lpips v0.1) between uniform-width renderings (2 px, anti-aliased, black on white) of GT and prediction on the evaluation canvas"
+chamfer,↓,established,"symmetric mean Chamfer distance 0.5*(mean_a min_b d + mean_b min_a d) between point sets, px"
+hausdorff,↓,established,"symmetric Hausdorff distance between point sets, px"
+frechet,↓,established,"discrete Frechet distance (Eiter & Mannila 1994) between the concatenated point sequences in drawing order (pen-ups ignored), px"
+rmse,↓,established,"point-wise RMSE after resampling each whole ink to K points uniformly in pen-down arc length (K=320 ligature, K=2048 line), px"
+penup_f1,↑,proposed,F1 of pen-up locations: last point of every stroke; one-to-one Hungarian matching on Euclidean distance with tolerance tau (3 px)
+stroke_count_abs_err,↓,established,|n_pred - n_gt| strokes
+stroke_count_err,n/a,established,n_pred - n_gt (signed)
+stroke_match_recall,↑,proposed,"fraction of GT strokes matched one-to-one (Hungarian on stroke-mask IoU, masks 5 px wide, accept IoU >= 0.5)"
+stroke_match_precision,↑,proposed,fraction of predicted strokes matched under the same rule
+strict_order_acc,↑,proposed,"1 if n_pred == n_gt, every GT stroke is matched (IoU >= 0.5, one-to-one; splits/merges therefore fail) and matched predicted indices are in GT order; else 0. Name follows Wang et al. 2026; matching rule is ours"
+kendall_tau,↑,proposed,Kendall tau-b between GT index and predicted index over matched strokes (needs >= 2 matches)
+direction_acc,↑,proposed,over matched strokes whose GT start-end distance >= 2 px: fraction where predicted start is nearer GT start than GT end
+loop_orient_acc,↑,proposed,over matched strokes whose GT is curved/looped (|signed area| >= 4 px^2 and 4*pi*|A|/L^2 >= 0.1): fraction with sign(signed area) of prediction == GT (CW vs CCW)

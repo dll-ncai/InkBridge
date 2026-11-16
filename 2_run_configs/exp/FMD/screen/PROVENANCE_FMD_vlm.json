@@ -1,0 +1,710 @@
+{
+ "schema": "fmd_provenance/1",
+ "track": "VLM",
+ "lane": "FMD",
+ "phase": 1,
+ "created_utc": "2026-11-03T03:27:04Z",
+ "subagent_model": "<agent>",
+ "subagent_model_reason": "new prompt harness + verdict-setting pre-registered tasks (lead policy: <agent> for new code and verdict-setting reads)",
+ "prereg": {
+  "path": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+  "sha256": "6ad98ab4c1f4455535afd468b9144df43bb26ed1aa6a091db79cfc669c896035"
+ },
+ "code": {
+  "dir": "$U/exp/FMD/code/fmd_ext_vlm",
+  "files": {
+   "$U/exp/FMD/code/fmd_ext_vlm/build_provenance_vlm.py": {
+    "sha256": "43aee90b493a59248e98228052692b5560f090c13f65b4ee17bf6f9b2ea11a66",
+    "bytes": 3539
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/qwen_vlm.py": {
+    "sha256": "37cf49cf9775ed140976c9a8f94a7825ccddf15fb6082690550750659bdb1e90",
+    "bytes": 13503
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/score_vlm.py": {
+    "sha256": "c95504fb48f6d49ca6f59b71d410f0993635e3482c984b41677cc40389035d03",
+    "bytes": 11978
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/vlm_inputs.py": {
+    "sha256": "18422676f2f891d17a0db70afc807250abbbe3de96c5c884cd057e91996ab388",
+    "bytes": 3248
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/PROMPTS_VLM_FROZEN.json": {
+    "sha256": "57e69c96db407192903428862ab1b0107a78422782eef4431f02582d83d2837d",
+    "bytes": 6476
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/jobs/vlm_prep_extract.sbatch": {
+    "sha256": "5bc90470d31166595d6d092076956edc17cb37e2e1ec015e2f7f76a7ccc2ed66",
+    "bytes": 1197
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/jobs/vlm_probe.sbatch": {
+    "sha256": "52c4508f2a33f7de723288223ab7823768c33cb9f54612113c59852ee482842f",
+    "bytes": 1523
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/jobs/vlm_provenance.sbatch": {
+    "sha256": "b8a338f2da3e80193d49b4a936a624420491893c348adb69c8bb0177745791d8",
+    "bytes": 1143
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/jobs/vlm_score.sbatch": {
+    "sha256": "526bc4deec4c8de4f397617b102807c8bf017a21b8cdda24642db0e14e29c3b8",
+    "bytes": 837
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/jobs/vlm_weights_sha.sbatch": {
+    "sha256": "89693a3953c34bf07391615c2ca34c224f78f045fa16b4988c31fe29709c141d",
+    "bytes": 1019
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm/jobs/vlm_zeroshot.sbatch": {
+    "sha256": "87ac67daecc5b2e8d8fef444778f01055adbcb239771c046fd59bc8285c20b2d",
+    "bytes": 1575
+   }
+  },
+  "tars": {
+   "$U/exp/FMD/code/fmd_ext_vlm_v1.1.tar.gz": {
+    "sha256": "d2def380a1fc166d5f5a5c3aa00fa3a1004cdafc70ba4e80ba1ce71d2776fbb6",
+    "bytes": 26334
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm_v1.2.tar.gz": {
+    "sha256": "d748f668505549533323a9b23aa61bdb50b7e5cb67336198a7fe77370cfd6f2e",
+    "bytes": 26356
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm_v1.3.tar.gz": {
+    "sha256": "2227b29ee6b67c3f88c6c4af1244a9b91dc8d89a0738fd5884aecf3c2cde2d57",
+    "bytes": 16152
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm_v1.4.tar.gz": {
+    "sha256": "52c4bac882d3761b0f9158c8a469c27d0a66ccfc2b008e3848bd1c23b86b3f05",
+    "bytes": 16553
+   },
+   "$U/exp/FMD/code/fmd_ext_vlm_v1.tar.gz": {
+    "sha256": "d27f5e5b3f92405e36801300539e70c3d1ca6a47de51766da745097f89517fde",
+    "bytes": 10808
+   }
+  },
+  "harness": {
+   "$U/exp/FMD/code/fmd_harness_v1.0.1.tar.gz": {
+    "sha256": "a5b69f7b0753b2c486b5f2a297111f1cfdbb68b0ac0c1f2bf9c358bf6fcf53e3",
+    "bytes": 27318
+   }
+  },
+  "harness_note": "fmd_harness 1.0.1 used unmodified; score_vlm.py only re-points screen_rows.units_file so this track's unit files are read from screen/units/vlm/ and the nominee baselines from screen/units/"
+ },
+ "inputs": {
+  "$U/exp/FMD/data/fmd_render224_val1000.npz": {
+   "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503",
+   "bytes": 3103722
+  },
+  "$U/exp/FMD/data/fmd_targets_G14_val1000.npz": {
+   "sha256": "5135131c46c2a900a9f20fa8cadb4ab245a43c249bac8181961c6d3f19caa025",
+   "bytes": 305811
+  },
+  "$U/exp/FMD/data/fmd_targets_G16_val1000.npz": {
+   "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5",
+   "bytes": 350670
+  },
+  "$U/exp/FMD/data/val1000_units.csv": {
+   "sha256": "ecf35c304b40d842278f138c92bbb5ee01546d11f120cbc95b5533978ff34ea6",
+   "bytes": 40436
+  },
+  "$U/exp/FMD/screen/units/nomL1__cat16__attn__G14__val1000.units.csv.gz": {
+   "sha256": "ed0e74416c44acb497af98e052bc88eb4dcda2479d59343fcf414308fbcea5e3",
+   "bytes": 112369
+  },
+  "$U/exp/FMD/screen/units/nomL1__cat16__linear__G14__val1000.units.csv.gz": {
+   "sha256": "80f34d1446fb979ecddbd2b0f79071770cd8ab7b3cb5c4fcad575bf514c8e010",
+   "bytes": 113261
+  },
+  "$U/exp/FMD/screen/units/nomL1__mid16__attn__G14__val1000.units.csv.gz": {
+   "sha256": "fd7b4be3af9a1343f0ba1a54941dc0e53a54ad489dd3a31c46dbf5bd6ccde3d7",
+   "bytes": 113477
+  },
+  "$U/exp/FMD/screen/units/nomL1__mid16__linear__G14__val1000.units.csv.gz": {
+   "sha256": "7b8e050495463cb24444bc5bb28af6b0956ccc0d6b496202d608fc0d85b8b282",
+   "bytes": 115557
+  },
+  "$U/exp/FMD/screen/units/nomL2__cat16__attn__G14__val1000.units.csv.gz": {
+   "sha256": "37e384c2273bf4c5a92dddc5a5f14bf899188855d5d6b499403347656ab4ac22",
+   "bytes": 112167
+  },
+  "$U/exp/FMD/screen/units/nomL2__cat16__linear__G14__val1000.units.csv.gz": {
+   "sha256": "d087977fd6664150aa91cb202ae01f6b14e9bc78098b90271761ef0903a65b8c",
+   "bytes": 113219
+  },
+  "$U/exp/FMD/screen/units/nomL2__mid16__attn__G14__val1000.units.csv.gz": {
+   "sha256": "8b95275c8ea7ebe4d4d137d59a58b806f3103d4c1666f2525e1b9d053d3c0c6a",
+   "bytes": 113513
+  },
+  "$U/exp/FMD/screen/units/nomL2__mid16__linear__G14__val1000.units.csv.gz": {
+   "sha256": "5a46af41d6145da19dc9c8b311505539795d45c1e6985e7fcdafde4ae0b1915a",
+   "bytes": 115625
+  },
+  "$U/exp/FMD/weights/qwen3-vl-8b-instruct.manifest_part.json": {
+   "sha256": "debf460fe4ae8322ebdf624e5c1c710ba72160b25011870385174457bc6a0828",
+   "bytes": 3035
+  },
+  "$U/exp/FMD/weights/qwen3.5-4b.manifest_part.json": {
+   "sha256": "7b0181911e4b9aeb919312fbe81421c184c47fe9967046c403f38bb19e9beb50",
+   "bytes": 2674
+  }
+ },
+ "datasets_created": {
+  "$U/exp/FMD/data/fmd_vlm_inputs_val1000.npz": {
+   "sha256": "4d65231aca45ae2ed9aba1df810c9c84eb6c0648b2af59bf3fc3accc7c4fa470",
+   "bytes": 3174956
+  },
+  "$U/exp/FMD/data/fmd_vlm_inputs_val1000.npz.meta.json": {
+   "sha256": "8c58797fb23a56560d20e21ace8bb0e1c3ec458b006855767aba64dbfd2edf40",
+   "bytes": 3269
+  }
+ },
+ "features": {
+  "$U/exp/FMD/features/qwen3-vl-8b-instruct/last__val1000.npy": {
+   "sha256": "0e5b0b98ec7a7e864e9565d62453ef5e7dd9f541dbf936d939580c0428208e28",
+   "bytes": 451584128
+  },
+  "$U/exp/FMD/features/qwen3-vl-8b-instruct/last__val1000.npy.meta.json": {
+   "sha256": "b0cdd1fa198d47b1b2960a5a97f909a786a0cbd0ed8d9886e3f4094b0d4d7f05",
+   "bytes": 4738
+  },
+  "$U/exp/FMD/features/qwen3-vl-8b-instruct/manifest.json": {
+   "sha256": "3a62c5afbebf14ecbad4fbecbaab3761b87fd7c1bef5f9149c3bf8196600bc6c",
+   "bytes": 1214
+  },
+  "$U/exp/FMD/features/qwen3-vl-8b-instruct/mid__val1000.npy": {
+   "sha256": "ecbbd8a7b8ca5bd7fb948126ead72ca6d19e16b6755802e90ae8cb26930d4ed2",
+   "bytes": 451584128
+  },
+  "$U/exp/FMD/features/qwen3-vl-8b-instruct/mid__val1000.npy.meta.json": {
+   "sha256": "587277e8c0cd5c8a73e7bb6bd4189cd910b3cc5264912935b7a10ca3a962f7b6",
+   "bytes": 4736
+  },
+  "$U/exp/FMD/features/qwen3.5-4b/last__val1000.npy": {
+   "sha256": "28c503c195ae42aa179afcf3600e15495ffddc4b3881831b9e70858ee5e59847",
+   "bytes": 401408128
+  },
+  "$U/exp/FMD/features/qwen3.5-4b/last__val1000.npy.meta.json": {
+   "sha256": "9274c8ca33d4be17ca0d26ead29e11c65d35d209b0159482ce7442a8363fd99e",
+   "bytes": 4307
+  },
+  "$U/exp/FMD/features/qwen3.5-4b/manifest.json": {
+   "sha256": "8022ff892579b153cc43c406bad9befdca01af92be05cdb811c0be9ee33198e0",
+   "bytes": 1184
+  },
+  "$U/exp/FMD/features/qwen3.5-4b/mid__val1000.npy": {
+   "sha256": "c48055bfebcfb8b99d37704590427c70e340b98ad35e5150b63037f35b1c95ac",
+   "bytes": 401408128
+  },
+  "$U/exp/FMD/features/qwen3.5-4b/mid__val1000.npy.meta.json": {
+   "sha256": "5fe8a6db964b51a030c46a7710f0c7d2e0cc8d8609ba8aa21a837534fdfc1c84",
+   "bytes": 4305
+  }
+ },
+ "outputs": {
+  "$U/exp/FMD/screen/units/vlm/majority__zeroshot__zeroshot__G0__val1000.units.csv.gz": {
+   "sha256": "5a01aab1791683ab949f478f533e8e520bc26fcdece0359708dca5dfe4f62c5c",
+   "bytes": 8216
+  },
+  "$U/exp/FMD/screen/units/vlm/majority__zeroshot__zeroshot__G0__val1000.units.csv.gz.meta.json": {
+   "sha256": "46d7d68f0e56fa630e7de76b524a086bf8f88daed49f69b1bb0f43bbaf36d5fd",
+   "bytes": 3731
+  },
+  "$U/exp/FMD/screen/units/vlm/prov_extra_vlm.json": {
+   "sha256": "5bb480ef22153ff80fb0dd13a93f7485376d423c46d0c890392df2ec4d315486",
+   "bytes": 2172
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__last__attn__G14__val1000.units.csv.gz": {
+   "sha256": "54ea4f46c6932f5954830de99894ce92ffff090c7a738a007f3bf97876a14d7d",
+   "bytes": 115104
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__last__attn__G14__val1000.units.csv.gz.meta.json": {
+   "sha256": "59302d6cfd4c3785d9ea376b43ca8468e0f53fc01bf07e1714a478a438f57ad8",
+   "bytes": 3577
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__last__linear__G14__val1000.units.csv.gz": {
+   "sha256": "e6e3e1e1739992cdb330804f6f339203334b43f511c33290e53667562ef18d90",
+   "bytes": 116412
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__last__linear__G14__val1000.units.csv.gz.meta.json": {
+   "sha256": "f01e965eca493ba40196ea3a94115ff40b4872c9d970113bd3ea6a7b5316a6e6",
+   "bytes": 3539
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__mid__attn__G14__val1000.units.csv.gz": {
+   "sha256": "300555ab545f400528475dcc5fe091df9c16a7c85637f30b9c5bb3ff4248ccb7",
+   "bytes": 109163
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__mid__attn__G14__val1000.units.csv.gz.meta.json": {
+   "sha256": "460f1a0fa102812c1132a9b5ca5e4a525146641a77da9c0cd0593548a9acaaf2",
+   "bytes": 3584
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__mid__linear__G14__val1000.units.csv.gz": {
+   "sha256": "5b8210ec10f9b2719c30a04b7230c58ac6d16d6156557cd090af9c5cda18ec78",
+   "bytes": 111285
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__mid__linear__G14__val1000.units.csv.gz.meta.json": {
+   "sha256": "969c3d69b9faa0ea706ad56f6041db95a89d86bc9a0cb967b40b907b62b80a23",
+   "bytes": 3539
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__zeroshot__zeroshot__G0__val1000.units.csv.gz": {
+   "sha256": "fec55093d42d53394904f28c07265ce6fd674a489fc15579a4dba9f4bdccfc4f",
+   "bytes": 16315
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__zeroshot__zeroshot__G0__val1000.units.csv.gz.meta.json": {
+   "sha256": "1d18a4a5058450baca54afcf0e938db797051e521e80bf38fe3d22945eec5a08",
+   "bytes": 3743
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__zeroshot_parsed__val1000.csv.gz": {
+   "sha256": "f8788c09891d2a88c271dbaf8d6553ac3d43bffff89bfb677fb81716b1da3e58",
+   "bytes": 20919
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__zeroshot_parsed__val1000.csv.gz.meta.json": {
+   "sha256": "a8536de36d708bae16041fb6a216bbcf54e8c623ff08d6a08a780d6d712880f5",
+   "bytes": 3731
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__zeroshot_raw__val1000.jsonl": {
+   "sha256": "a3ff230758dbcda2e6738bd9ad44f024db199cd634ac717ec51efdf4d56de2df",
+   "bytes": 945138
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__zeroshot_raw_sample100.jsonl": {
+   "sha256": "e2ca12417828f23c453407ef5ef80191cdb8ccc8e5ad4000430958f83910c062",
+   "bytes": 29035
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3-vl-8b-instruct__zeroshot_run_24829989.json": {
+   "sha256": "280a8ca4f3c8b8ef1c524e29fcf71374d3ac6f2f5b157c859bf86c16d6434c4a",
+   "bytes": 3822
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__last__attn__G14__val1000.units.csv.gz": {
+   "sha256": "6ac12190ad159cb201b3ff95240d46f2f930b76d509fe26aa9df9b9ccc041c18",
+   "bytes": 112228
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__last__attn__G14__val1000.units.csv.gz.meta.json": {
+   "sha256": "bdc525aa20bba20ee9c84bef120977bdbb68cb851dffc21334614e60438ac026",
+   "bytes": 3542
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__last__linear__G14__val1000.units.csv.gz": {
+   "sha256": "3aed749d1703a6233f9f3ec9584d78a7bd2011bc1a35821c461924c3ed241c5a",
+   "bytes": 113953
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__last__linear__G14__val1000.units.csv.gz.meta.json": {
+   "sha256": "dad7706ba4b4c8599fb2e9d706e4bfd5d4b7253bdfbe134a384c57062ce7c947",
+   "bytes": 3500
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__mid__attn__G14__val1000.units.csv.gz": {
+   "sha256": "9426fd8bccc09a0187f203a4b91bfe808b0a177b79fd815eaca324c47ce2252c",
+   "bytes": 109975
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__mid__attn__G14__val1000.units.csv.gz.meta.json": {
+   "sha256": "5686ce3a8c73f6c77a03f1538eca032c6e243f22ee961f6df9227f44c41b90bd",
+   "bytes": 3536
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__mid__linear__G14__val1000.units.csv.gz": {
+   "sha256": "9f3d9ebc9b3483e6cb7977cd67a1ec53eff943e863ee38e982c5dcafc4b32e6c",
+   "bytes": 108688
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__mid__linear__G14__val1000.units.csv.gz.meta.json": {
+   "sha256": "6631c4394efc56a5e59d76c53985a851d9199dc23d5d1c36671071d3874f45da",
+   "bytes": 3498
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__zeroshot__zeroshot__G0__val1000.units.csv.gz": {
+   "sha256": "8a81f2df8034d0b868975ac737a8c7ccab50493e9bcc14e6f25e1cfe7108ca93",
+   "bytes": 14992
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__zeroshot__zeroshot__G0__val1000.units.csv.gz.meta.json": {
+   "sha256": "3a1cbba9b2dd24c2bf2d5bd682b2114a4b8cf153fab842a56255510eb1dbac90",
+   "bytes": 3695
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__zeroshot_parsed__val1000.csv.gz": {
+   "sha256": "c334f310abaffdd2a5b039704abe8bf474667ddc8859dd69185ba12496e797b7",
+   "bytes": 18415
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__zeroshot_parsed__val1000.csv.gz.meta.json": {
+   "sha256": "24beb768e7fa68a08c9061aef5bf510384191e3e6bc547155633b3b65317b741",
+   "bytes": 3683
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__zeroshot_raw__val1000.jsonl": {
+   "sha256": "911cd5b80f12992541967b2031875005b57985b12fe8e9d890960017e5ac9a2d",
+   "bytes": 891486
+  },
+  "$U/exp/FMD/screen/units/vlm/qwen3.5-4b__zeroshot_run_24830088.json": {
+   "sha256": "9f5efcebb123ce1ceef14e5c6da455de172644005312b9504e23cfd10b9f7ab2",
+   "bytes": 3524
+  },
+  "$U/exp/FMD/screen/units/vlm/weights_sha_check.json": {
+   "sha256": "752ad472d9a62efdd459c8e9dfce338ff8f22ba5c874585058a3f828f06e1447",
+   "bytes": 276
+  },
+  "$U/exp/FMD/screen/rows_vlm.csv": {
+   "sha256": "a2d2b66d3ba41859fb3359db7754d7c37651b4f52221d029560555842d164a22",
+   "bytes": 11386
+  },
+  "$U/exp/FMD/screen/rows_vlm.csv.meta.json": {
+   "sha256": "8fc22b0179f362a679e36ff8f5290fcdc9135fb495d64f4db1ac63626c09c934",
+   "bytes": 4017
+  },
+  "$U/exp/FMD/screen/rows_vlm_exploratory.csv": {
+   "sha256": "82703668a19afe51f1f96c93dc4a23c63aae1b430661218ec1007386b9d5552d",
+   "bytes": 10993
+  },
+  "$U/exp/FMD/screen/rows_vlm_exploratory.csv.meta.json": {
+   "sha256": "cd13192d1c960b8e75fc27f3d188db2b3b94def82e273e5729750537533f033d",
+   "bytes": 3973
+  },
+  "$U/exp/FMD/screen/verdicts_vlm.json": {
+   "sha256": "edb9e4286257f67507181a1e44eeeedc0380fabb5b122b9c358861b5e2fce18d",
+   "bytes": 477
+  },
+  "$U/exp/FMD/screen/verdicts_vlm_exploratory.json": {
+   "sha256": "b530694d45a7440ff66e324a218fa4694939eb263c3a0d50e9046689fa127a6a",
+   "bytes": 513
+  }
+ },
+ "weights_sha_check": {
+  "qwen3-vl-8b-instruct": {
+   "n_files": 16,
+   "n_match": 16,
+   "mismatched": [],
+   "revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b"
+  },
+  "qwen3.5-4b": {
+   "n_files": 14,
+   "n_match": 14,
+   "mismatched": [],
+   "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+  }
+ },
+ "jobs": [
+  {
+   "purpose": "prep inputs + qwen3-vl-8b vision features (CPU)",
+   "sacct": [
+    {
+     "job_id": "24829987",
+     "name": "fmd_vlm_prep",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:05:10",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T03:27:47",
+     "end": "2026-11-03T03:32:57"
+    }
+   ]
+  },
+  {
+   "purpose": "qwen3-vl-8b probes G14 (array 1-4)",
+   "sacct": [
+    {
+     "job_id": "24829988_1",
+     "name": "fmd_vlm_probe",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:01:51",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T03:33:52",
+     "end": "2026-11-03T03:35:43"
+    },
+    {
+     "job_id": "24829988_2",
+     "name": "fmd_vlm_probe",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:03:04",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T03:33:52",
+     "end": "2026-11-03T03:36:56"
+    },
+    {
+     "job_id": "24829988_3",
+     "name": "fmd_vlm_probe",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:01:54",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T03:33:53",
+     "end": "2026-11-03T03:35:47"
+    },
+    {
+     "job_id": "24829988_4",
+     "name": "fmd_vlm_probe",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:04:13",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T03:33:53",
+     "end": "2026-11-03T03:38:06"
+    }
+   ]
+  },
+  {
+   "purpose": "qwen3-vl-8b zero-shot V1-V4 (A30)",
+   "sacct": [
+    {
+     "job_id": "24829989",
+     "name": "fmd_vlm_zs",
+     "partition": "gpu",
+     "state": "COMPLETED",
+     "elapsed": "00:23:01",
+     "nodes": "<node>",
+     "alloc_tres": "billing=8,cpu=8,gres/gpu=1,mem=48G,node=1",
+     "start": "2026-11-03T03:33:52",
+     "end": "2026-11-03T03:56:53"
+    }
+   ]
+  },
+  {
+   "purpose": "zero-shot race variant gpuidle H100 (cancelled pending)",
+   "sacct": [
+    {
+     "job_id": "24829990",
+     "name": "fmd_vlm_zs",
+     "partition": "gpuidle",
+     "state": "CANCELLED by 129107",
+     "elapsed": "00:00:00",
+     "nodes": "None assigned",
+     "alloc_tres": "",
+     "start": "None",
+     "end": "2026-11-03T03:40:47"
+    }
+   ]
+  },
+  {
+   "purpose": "zero-shot race variant gpuidle 2xA4000 (lock exit)",
+   "sacct": [
+    {
+     "job_id": "24829991",
+     "name": "fmd_vlm_zs",
+     "partition": "gpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:00:03",
+     "nodes": "<node>",
+     "alloc_tres": "billing=8,cpu=8,gres/gpu=2,mem=48G,node=1",
+     "start": "2026-11-03T03:33:53",
+     "end": "2026-11-03T03:33:56"
+    }
+   ]
+  },
+  {
+   "purpose": "preview scoring (FAILED, partial outputs)",
+   "sacct": [
+    {
+     "job_id": "24830073",
+     "name": "fmd_vlm_score",
+     "partition": "cpuidle",
+     "state": "FAILED",
+     "elapsed": "00:00:26",
+     "nodes": "<node>",
+     "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+     "start": "2026-11-03T03:40:57",
+     "end": "2026-11-03T03:41:23"
+    }
+   ]
+  },
+  {
+   "purpose": "scoring qwen3-vl-8b (superseded: nomL1-only comparator)",
+   "sacct": [
+    {
+     "job_id": "24830377",
+     "name": "fmd_vlm_score",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:00:33",
+     "nodes": "<node>",
+     "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+     "start": "2026-11-03T04:00:24",
+     "end": "2026-11-03T04:00:57"
+    }
+   ]
+  },
+  {
+   "purpose": "weights sha256 check",
+   "sacct": [
+    {
+     "job_id": "24830772",
+     "name": "fmd_vlm_sha",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:01:25",
+     "nodes": "<node>",
+     "alloc_tres": "billing=4,cpu=4,mem=8G,node=1",
+     "start": "2026-11-03T04:01:53",
+     "end": "2026-11-03T04:03:18"
+    }
+   ]
+  },
+  {
+   "purpose": "qwen3.5-4b vision features (exploratory)",
+   "sacct": [
+    {
+     "job_id": "24830086",
+     "name": "fmd_vlm_prep",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:04:07",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T03:57:08",
+     "end": "2026-11-03T04:01:15"
+    }
+   ]
+  },
+  {
+   "purpose": "qwen3.5-4b probes (exploratory)",
+   "sacct": [
+    {
+     "job_id": "24830087_1",
+     "name": "fmd_vlm_probe",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:01:50",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T04:01:41",
+     "end": "2026-11-03T04:03:31"
+    },
+    {
+     "job_id": "24830087_2",
+     "name": "fmd_vlm_probe",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:09:50",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T04:01:41",
+     "end": "2026-11-03T04:11:31"
+    },
+    {
+     "job_id": "24830087_3",
+     "name": "fmd_vlm_probe",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:01:51",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T04:01:41",
+     "end": "2026-11-03T04:03:32"
+    },
+    {
+     "job_id": "24830087_4",
+     "name": "fmd_vlm_probe",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:03:13",
+     "nodes": "<node>",
+     "alloc_tres": "billing=16,cpu=16,mem=48G,node=1",
+     "start": "2026-11-03T04:01:41",
+     "end": "2026-11-03T04:04:54"
+    }
+   ]
+  },
+  {
+   "purpose": "qwen3.5-4b zero-shot (exploratory, A30)",
+   "sacct": [
+    {
+     "job_id": "24830088",
+     "name": "fmd_vlm_zs",
+     "partition": "gpu",
+     "state": "COMPLETED",
+     "elapsed": "00:25:36",
+     "nodes": "<node>",
+     "alloc_tres": "billing=8,cpu=8,gres/gpu=1,mem=48G,node=1",
+     "start": "2026-11-03T03:56:58",
+     "end": "2026-11-03T04:22:34"
+    }
+   ]
+  },
+  {
+   "purpose": "qwen3.5-4b race variant A4000 (lock exit)",
+   "sacct": [
+    {
+     "job_id": "24830089",
+     "name": "fmd_vlm_zs",
+     "partition": "gpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:00:02",
+     "nodes": "<node>",
+     "alloc_tres": "billing=8,cpu=8,gres/gpu=1,mem=48G,node=1",
+     "start": "2026-11-03T03:57:22",
+     "end": "2026-11-03T03:57:24"
+    }
+   ]
+  },
+  {
+   "purpose": "scoring qwen3.5-4b (exploratory)",
+   "sacct": [
+    {
+     "job_id": "24830956",
+     "name": "fmd_vlm_score",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:00:16",
+     "nodes": "<node>",
+     "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+     "start": "2026-11-03T04:23:09",
+     "end": "2026-11-03T04:23:25"
+    }
+   ]
+  },
+  {
+   "purpose": "final scoring qwen3-vl-8b (nomL1+nomL2 comparators)",
+   "sacct": [
+    {
+     "job_id": "24830959",
+     "name": "fmd_vlm_score",
+     "partition": "cpuidle",
+     "state": "COMPLETED",
+     "elapsed": "00:00:16",
+     "nodes": "<node>",
+     "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+     "start": "2026-11-03T04:24:00",
+     "end": "2026-11-03T04:24:16"
+    }
+   ]
+  }
+ ],
+ "prereg_followed": {
+  "prompts": "verbatim (checked string-equal to prereg 2.3)",
+  "options_order": "fixed as prereg",
+  "decoding": "greedy, max_new_tokens 8 / 32",
+  "parse": "first stand-alone A/B/C; else 0",
+  "comparator_V1_V3": "majority over scored units (stats.majority_units)",
+  "gate_layer": "last (final vision block before merger)",
+  "probes": "linear+attn, G14, seeds 0-2, 5 writer-disjoint folds"
+ },
+ "choices_unspecified_in_prereg": [
+  "image presented at 224x224 without resize (processor shortest_edge=50176)",
+  "gray renders replicated to RGB",
+  "chat format: single user turn, image then text, no system message",
+  "batch size 1",
+  "parse = regex (?<![A-Za-z])([ABC])(?![A-Za-z]); literal variant differed for 0 units (both FMs)",
+  "CER = Levenshtein code points / len(ref), NFKC + whitespace removed, uncapped",
+  "vision features computed float32 on CPU from bf16 weights",
+  "mid = output of block floor(depth/2), 1-based (13 of 27; 12 of 24 for Qwen3.5-4B)"
+ ],
+ "results": {
+  "prereg_fm": "qwen3-vl-8b-instruct",
+  "family_verdict_VLM": "FAIL",
+  "order_tests": 7,
+  "order_pass": 0,
+  "shape_T0_ci_lo": -0.18006533842366534,
+  "shape_margin": -0.01035
+ },
+ "exploratory": {
+  "fm": "qwen3.5-4b",
+  "label": "exploratory, not pre-registered",
+  "rows": "exp/FMD/screen/rows_vlm_exploratory.csv (all gate_role info)"
+ },
+ "superseded": [
+  "rows_vlm.csv sha d59951960058\u2026 from job 24830377 (nomL1-only comparator) replaced by job 24830959",
+  "job 24830073 FAILED (partial outputs, KeyError V3)"
+ ],
+ "gpu_usage": {
+  "cap": 2,
+  "note": "A30 job 24829989 (1 GPU) ran 02:33-02:57Z; race variant 24829991 (2x A4000) was allocated for 3 s at 02:33Z and exited on the lock, so the track held 3 GPUs for 3 s; 24830089 (1x A4000) held 1 GPU for 2 s next to 24830088."
+ },
+ "login_node_runs": [
+  "processor/token-order smoke test (no weights, ~15 s)",
+  "two preview runs of score_vlm.py (~14-26 s each); outputs overwritten by Slurm scoring jobs"
+ ],
+ "artifacts_note": "Only code tar, prompt spec, rows CSVs, a 100-line raw sample (text only), summary md and this provenance are copied off CLUSTER-A; no weights, features or npz data."
+}

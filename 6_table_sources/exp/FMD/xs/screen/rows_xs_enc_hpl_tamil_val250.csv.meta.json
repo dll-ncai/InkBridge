@@ -1,0 +1,489 @@
+{
+ "schema": "fmd_meta/1",
+ "kind": "fmdx_screen_rows",
+ "created_utc": "2026-11-07T22:45:08Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "code": {
+  "files": {
+   "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+   "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+   "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+   "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+   "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+   "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+   "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+   "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+   "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+   "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+  },
+  "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "command": "$U/exp/FMD/code/fmd_harness_xs/fmd_harness_xs/xs_rows.py --set hpl_tamil_val250 --track encoders --refresh-set",
+ "env": {
+  "python": "3.11.13",
+  "host": "<node>",
+  "platform": "Linux-5.14.0-687.61.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "slurm_job_id": "24850422",
+  "numpy": "2.2.6",
+  "torch": "2.7.1+cu128",
+  "cv2": "4.12.0"
+ },
+ "inputs": {
+  "part aimv2-1b-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/aimv2-1b-patch14-224.json",
+   "sha256": "43a78e04c3662f0e4779fce73fbbfe41e59c7a2dc6b660ae01489b104acfa35e"
+  },
+  "part aimv2-3b-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/aimv2-3b-patch14-224.json",
+   "sha256": "22fcb224ac89d069ab8c88b4bdffffe2463771d0b2662764a275a7a11a410ad8"
+  },
+  "part aimv2-huge-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/aimv2-huge-patch14-224.json",
+   "sha256": "85e124f264f12f912ea6728e6d44b667eb9f5c43cdfdb193cae612c4f2409efc"
+  },
+  "part aimv2-large-patch14-224-distilled": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/aimv2-large-patch14-224-distilled.json",
+   "sha256": "19ae64e11c27dc3385d38ccdec08cdd3ab6f77e96a820e396a2824dd74a902ba"
+  },
+  "part aimv2-large-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/aimv2-large-patch14-224.json",
+   "sha256": "3750b1a996e9e5700ffd6818b4dbdd5d2719518fddb859cba20ff571a7a248c5"
+  },
+  "part c-radiov3-b": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/c-radiov3-b.json",
+   "sha256": "6de7a0167e615ba9d00adcb81170b26fbe835d8f16497849bde7847801d1f6da"
+  },
+  "part c-radiov3-g": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/c-radiov3-g.json",
+   "sha256": "43a5467bb557cdd9f59fd43e43d179ca6d2e8f3f5e4c30389cdcf1ca4ee3b256"
+  },
+  "part c-radiov3-h": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/c-radiov3-h.json",
+   "sha256": "a9560465861ff9656a65a9e92d33e43a6216b940b2c1958b605b7b5863d0c90a"
+  },
+  "part c-radiov3-l": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/c-radiov3-l.json",
+   "sha256": "31c9913a13d1e0ac6936eba465b4fe772712e008ee54ce2750545413e031ce98"
+  },
+  "part c-radiov4-h": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/c-radiov4-h.json",
+   "sha256": "41815f43bde4280e8939af7edfaaf411de8ee364b84e019d90e8ef6ed64defe2"
+  },
+  "part c-radiov4-so400m": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/c-radiov4-so400m.json",
+   "sha256": "6c01b7da654b19ad6da9876b0c1d29480f4d297592c2fcb9e0edcf9d88b8b7c3"
+  },
+  "part depth-anything-3-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/depth-anything-3-base.json",
+   "sha256": "25b633e802d8d194ff3b60b35260e1fb5def2178eb31fc8494552cc685bad598"
+  },
+  "part depth-anything-3-giant-1.1": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/depth-anything-3-giant-1.1.json",
+   "sha256": "d30316d0dc062d5eab68b9d462b0ae0051d931f10eafd9301c855a22b2b57cac"
+  },
+  "part depth-anything-3-large-1.1": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/depth-anything-3-large-1.1.json",
+   "sha256": "02deebaac9babe8fa3cb0a3302d39abe32146e28937c41ea868c752b8d080bad"
+  },
+  "part depth-anything-v2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/depth-anything-v2-large.json",
+   "sha256": "da9dfdd513fc6e84ec2a85cdf80ee29804f4f2dbcb90e9b7432c287ed2cca289"
+  },
+  "part dinov2-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov2-base.json",
+   "sha256": "b96c91575aaee029a2653cee539f3713550721129eeb8f5e084b5210883a6055"
+  },
+  "part dinov2-giant": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov2-giant.json",
+   "sha256": "9f0cab3e51d7c1590d143a5943606a252fc458296ce6f24b184cf33d0099adea"
+  },
+  "part dinov2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov2-large.json",
+   "sha256": "8b3268db06423cf474f53e55f7b4a1939fcd993665878b0d4df67e710ff05adb"
+  },
+  "part dinov2-reg-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov2-reg-base.json",
+   "sha256": "eaf07ea3d6a6380c77a7d6ee62d258a1ef7898d2da9e7e54d030a7c033acb726"
+  },
+  "part dinov2-reg-giant": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov2-reg-giant.json",
+   "sha256": "744a7a01bb446295d4a33b65eecbc1a4a198ed408cadf78210976956c13a7d03"
+  },
+  "part dinov2-reg-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov2-reg-large.json",
+   "sha256": "3233d2455c93e904dcaf81f88bde40f7cfa4d179dd980ffd82a490198a6fb36e"
+  },
+  "part dinov2-reg-small": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov2-reg-small.json",
+   "sha256": "72170ae3c9ffaa467b98a502763244afb702bf9807b16ce64070bc761c49f919"
+  },
+  "part dinov3-convnext-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-convnext-base.json",
+   "sha256": "77ad6ff82ff71af0151e494e66f29ac8e9a867f0c7638c5a7a08c65bf51644c3"
+  },
+  "part dinov3-convnext-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-convnext-large.json",
+   "sha256": "e5d5a76ae1aefdfac2bfde6a341f816be819c2415baa929649ca54cf96de610e"
+  },
+  "part dinov3-convnext-small": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-convnext-small.json",
+   "sha256": "e4a84ff66242609abcc7cdef3a88f27a9a2a155fe244571cae94bdebb4cdbe39"
+  },
+  "part dinov3-convnext-tiny": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-convnext-tiny.json",
+   "sha256": "de0fd4b3489108aa8f2895ecd9eb88db68a7bd36dd1992289789d3a002599960"
+  },
+  "part dinov3-vit7b16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-vit7b16.json",
+   "sha256": "8ae89c4aa368ef88cd63d13826869feb3c92530a90c202f3563dc48d7304291e"
+  },
+  "part dinov3-vitb16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-vitb16.json",
+   "sha256": "8865da39adcc0734eb67bd0c1d938aa35a01ce5f65209b88398aec61610e1263"
+  },
+  "part dinov3-vith16plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-vith16plus.json",
+   "sha256": "de3c0678e7c341851582de30fe27a5fc2bb79743d3e5cc9595df0f620b1167f5"
+  },
+  "part dinov3-vitl16-sat493m": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-vitl16-sat493m.json",
+   "sha256": "0798993b3e636879850a4e2a34c8b17558031425eabd387ced947a04665984ac"
+  },
+  "part dinov3-vitl16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-vitl16.json",
+   "sha256": "c81d2e379a93bf2856902e9f18d2c26b40c4c08aa896a1df6bfc6faa31f70a57"
+  },
+  "part dinov3-vits16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-vits16.json",
+   "sha256": "53649599bb56f7bbbc176155d54e562d56a67d2305c28f6ef1ed55823e2540c3"
+  },
+  "part dinov3-vits16plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/dinov3-vits16plus.json",
+   "sha256": "3848cb460556ea4a27b14e4d6522da0d3ed02c7be324fd11e8ad9bce5cbe9f25"
+  },
+  "part florence-2-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/florence-2-base.json",
+   "sha256": "76a3f2a6348cb74e12243a991b4952ddbcfa1ddffa819a8f88e6ded7b11e40ef"
+  },
+  "part florence-2-large-ft": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/florence-2-large-ft.json",
+   "sha256": "9562780c48494046b756de8e387cebdba6c7dfc472cfc152962ad9ee0a602022"
+  },
+  "part florence-2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/florence-2-large.json",
+   "sha256": "3601a00fdee925a11212d96000390faf154cd645082fd6225c5ba85eeec1d260"
+  },
+  "part pe-core-b16-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-core-b16-224.json",
+   "sha256": "a63842d3e0ea0aca6a84df4c4b0be1006e60cb9bde0d704e2b53f099a8491bfd"
+  },
+  "part pe-core-g14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-core-g14-448.json",
+   "sha256": "3e49ee34853c062f02bde0e88c919c5ec854be05e7879dd78b42c5ba8c8e099d"
+  },
+  "part pe-core-l14-336": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-core-l14-336.json",
+   "sha256": "fe8f0e6d4117028c587088c04e344ba867fd7bb749ef20f9a469e524e352ba47"
+  },
+  "part pe-core-s16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-core-s16-384.json",
+   "sha256": "fb37f6bf48997645690526cf8782fe60df8bcd9ee05516b46a1cfd9124f8bb4e"
+  },
+  "part pe-core-t16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-core-t16-384.json",
+   "sha256": "82a2550413510055345c1e5b71447a7bfbb024e3ea685d095595b3ce4746ee24"
+  },
+  "part pe-lang-g14-448-timm": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-lang-g14-448-timm.json",
+   "sha256": "b84088e6f76ba1697191d163b421c5d333a8ddc3d9ee7e82cea2e3fac4dbb07c"
+  },
+  "part pe-lang-l14-448-timm": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-lang-l14-448-timm.json",
+   "sha256": "1ef05061ea1e66d2f5f46f07a0a31b1c684cc3599c157d4cab292156b1644cbc"
+  },
+  "part pe-spatial-b16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-spatial-b16-512.json",
+   "sha256": "2050a4180e2a233e295c710abaf72292ece843545430509ab272e5590c23baa3"
+  },
+  "part pe-spatial-g14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-spatial-g14-448.json",
+   "sha256": "b81b6ffef6e995dab42f48827687fae3b010c473853af93c3b340551a4e7de17"
+  },
+  "part pe-spatial-l14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-spatial-l14-448.json",
+   "sha256": "9068492c5f62c809e484fb73818c48c0ac1877295e03b105f46c3378b6a5d0e6"
+  },
+  "part pe-spatial-s16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-spatial-s16-512.json",
+   "sha256": "f695606f5d3c671bdffa4376cf754559ec374efb07d2e4546a4359f3fa676102"
+  },
+  "part pe-spatial-t16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/pe-spatial-t16-512.json",
+   "sha256": "462d87125d888819e082c7cf07bf515986950450b6a540cf16d97dab4834367f"
+  },
+  "part sam2.1-hiera-base-plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/sam2.1-hiera-base-plus.json",
+   "sha256": "2060b04aeb245e790cf1880d8a59f737312f60efe885ca7656a66e363bcdc388"
+  },
+  "part sam3": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/sam3.json",
+   "sha256": "6a2fd42a36d4a3de64a4c84d196f4b67aca7677cea60af1de4c82fba0fd6077d"
+  },
+  "part siglip2-base-patch16-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/siglip2-base-patch16-224.json",
+   "sha256": "ba6623ec532fd0fef233368734f8a3355fbf7bd0ebdf16684db8be6e76723e5b"
+  },
+  "part siglip2-giant-opt-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/siglip2-giant-opt-patch16-256.json",
+   "sha256": "65daec28187e8479dfa3704e0c6c97a6f30921462fb95e3c9ec72f5fc1f0b22e"
+  },
+  "part siglip2-giant-opt-patch16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/siglip2-giant-opt-patch16-384.json",
+   "sha256": "136cac9dfebc4a269406ec3731135bdf6bbee8fe39254ad4351c8d9d3045851e"
+  },
+  "part siglip2-large-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/siglip2-large-patch16-256.json",
+   "sha256": "1aa1cb23599d3a291697b9fac38479c9cae59e02799f4e787007c88ecb909759"
+  },
+  "part siglip2-so400m-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/siglip2-so400m-patch14-224.json",
+   "sha256": "0a70ffb933cfd5460577bde3e306ebcca10597e2d07b731df2c630e038eaaca9"
+  },
+  "part siglip2-so400m-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/siglip2-so400m-patch16-256.json",
+   "sha256": "a7aa9883cf545c7e8941544fb0bea357cfc45d2968b4d6c68200da558c55a824"
+  },
+  "part starvector-1b-im2svg": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/starvector-1b-im2svg.json",
+   "sha256": "e89ac65246ec93d9fad4ff58f1624e573b748810d9c74135eb26011d61462216"
+  },
+  "part starvector-8b-im2svg": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/starvector-8b-im2svg.json",
+   "sha256": "aea2fd839384c97f1dbc24ba8589cebe49f0d8d1e4469d6fff4329e4d326b0f5"
+  },
+  "part theia-base-cddsv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/theia-base-cddsv.json",
+   "sha256": "6f5394224d6ede8d6cb72aa099b930807b83c7ec1520e37ddca80814c19d421e"
+  },
+  "part theia-base-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/theia-base-cdiv.json",
+   "sha256": "3916237ddc3c05aed7e8ba896e1d205d21b234386f0def6d05d68d253f247f09"
+  },
+  "part theia-small-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/theia-small-cdiv.json",
+   "sha256": "aaf05fd557c6463f1dc30baf90e2888391f9adeb9c5aab6abdb2fd9e31638958"
+  },
+  "part theia-tiny-cddsv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/theia-tiny-cddsv.json",
+   "sha256": "1c84ab84012e12af9a4e0f37d450fde7b91d7d792314d71dbaac53073b3fc3d1"
+  },
+  "part theia-tiny-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/theia-tiny-cdiv.json",
+   "sha256": "84615b4fcd9c0eed52490da5d36cd7a821a3ad7bb0b22f4d57b26f45119a1cb8"
+  },
+  "part tipsv1-b14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/tipsv1-b14.json",
+   "sha256": "af835af660667f64bd16f82b6e5bee31ac33990aa563f4b167c3830e4af4ab4a"
+  },
+  "part tipsv1-g14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/tipsv1-g14.json",
+   "sha256": "fdb6286b76cdcd99a05e6aa9e724978c6878761c25cda687f01e0dd9bc6d8c4e"
+  },
+  "part tipsv1-l14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/tipsv1-l14.json",
+   "sha256": "596e736ca3b633d045dfbc67aa7561b5d64be74dd806920f2fcdeb6ba7cab276"
+  },
+  "part tipsv1-s14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/tipsv1-s14.json",
+   "sha256": "51dd07d45d649930065b50419ae556f627f5c36e3df26ed1ea372a6d0bc4c44d"
+  },
+  "part tipsv1-so400m14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/tipsv1-so400m14.json",
+   "sha256": "29e47f091676978626516da0b41fe8b08ab0e048700f9581df53992335df74d2"
+  },
+  "part tipsv2-b14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/tipsv2-b14.json",
+   "sha256": "0ada39497b7f0df54f0a15c656ab4cd5e957662b3ce93aef8369d1b381fd1497"
+  },
+  "part tipsv2-g14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/tipsv2-g14.json",
+   "sha256": "53832ed4cb8a89f367beecfd6f802895e0c3c35776e4a83e2eb6c1a3df3995cc"
+  },
+  "part tipsv2-l14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/tipsv2-l14.json",
+   "sha256": "d2fb721aa5e5bab70e65da40b6ea222cbe6fb2ed2631b6b55ee1ea55d568308a"
+  },
+  "part tipsv2-so400m14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/tipsv2-so400m14.json",
+   "sha256": "2851392e84292e3fd8be5e7b44c724425854a28f2ccfe94696544a1dffd978f4"
+  },
+  "part trocr-base-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/trocr-base-handwritten.json",
+   "sha256": "ba787c794f1f8d297f05b9fffde3cb0e15a276d3752eec123003bbb71d875d39"
+  },
+  "part trocr-base-hw-hist-swe-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/trocr-base-hw-hist-swe-2.json",
+   "sha256": "fca5063f4c4c29d9b0455d9a34e3b9d16405e88854a02d8bc210a3186e171584"
+  },
+  "part trocr-large-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/trocr-large-handwritten.json",
+   "sha256": "debd8bda082ff5ab4466bbb280ccee1985cf594eb0a31a1dbad7c6f54f3dfbbb"
+  },
+  "part trocr-small-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/trocr-small-handwritten.json",
+   "sha256": "8d4a0a8f1ee10c1146f38e9fe5126bb7a8cc6b4d108a5b02145e13841645aa05"
+  },
+  "part vit-mae-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/vit-mae-large.json",
+   "sha256": "1dbd109b72f31e6c0c206f20f9dbadf8bddf6823469ededace3f3dcd11534bcc"
+  },
+  "part webssl-dino1b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/webssl-dino1b-224.json",
+   "sha256": "4816ac8cf7fea26e97df221b5c949fe3a8c305f1cfac8bb37ed436fd07219670"
+  },
+  "part webssl-dino2b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/webssl-dino2b-224.json",
+   "sha256": "18ec07127e546dce513105ec44a61f768e719b5acb25f0c8f528b7ff2d197d77"
+  },
+  "part webssl-dino300m-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/webssl-dino300m-224.json",
+   "sha256": "b25913324a4036c2ccd400cceffd97fbf893b932da2bdeaef6dc47d1e0537f8f"
+  },
+  "part webssl-dino3b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/webssl-dino3b-224.json",
+   "sha256": "ea3d7fb43f7af621be42847717261f93bbf9761c3e26e4465a49e635b452ebee"
+  },
+  "part webssl-dino5b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/webssl-dino5b-224.json",
+   "sha256": "f5aafd10484b1b93abff5372ac0c556504dda3b8afe127ed08e4560c5ee18d6c"
+  },
+  "part webssl-mae1b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/webssl-mae1b-224.json",
+   "sha256": "5af1522fecbc0a4c99632b2e5f173fae8c866b851d63df45a6f71f2603c06a46"
+  },
+  "part webssl-mae300m-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/hpl_tamil_val250/webssl-mae300m-224.json",
+   "sha256": "ca0387695d00be18646f5680cd5212758b78a0aac2bbf9e3de4cb435e832f952"
+  }
+ },
+ "params": {
+  "set_id": "hpl_tamil_val250",
+  "track": "encoders",
+  "schema": "v1 (fmd_harness.screen_rows.SCHEMA)",
+  "comparators": [
+   "luo6:mid16",
+   "luo6:cat16",
+   "joint9:mid16",
+   "joint9:cat16"
+  ],
+  "delta_T0": 0.01035,
+  "boot_B": 2000,
+  "boot_seed": 20261103,
+  "prereg": "FMD_PREREG_2026-11-03.md A3.2/A3.5/A5.1"
+ },
+ "outputs": {
+  "$U/exp/FMD/xs/screen/rows_xs_enc_hpl_tamil_val250.csv": "e578496b0fc071770f4c0273d08543c3c92c66a4eff9eb3727c975574c815192"
+ },
+ "n_rows": 2338,
+ "fms": [
+  "aimv2-1b-patch14-224",
+  "aimv2-3b-patch14-224",
+  "aimv2-huge-patch14-224",
+  "aimv2-large-patch14-224",
+  "aimv2-large-patch14-224-distilled",
+  "c-radiov3-b",
+  "c-radiov3-g",
+  "c-radiov3-h",
+  "c-radiov3-l",
+  "c-radiov4-h",
+  "c-radiov4-so400m",
+  "depth-anything-3-base",
+  "depth-anything-3-giant-1.1",
+  "depth-anything-3-large-1.1",
+  "depth-anything-v2-large",
+  "dinov2-base",
+  "dinov2-giant",
+  "dinov2-large",
+  "dinov2-reg-base",
+  "dinov2-reg-giant",
+  "dinov2-reg-large",
+  "dinov2-reg-small",
+  "dinov3-convnext-base",
+  "dinov3-convnext-large",
+  "dinov3-convnext-small",
+  "dinov3-convnext-tiny",
+  "dinov3-vit7b16",
+  "dinov3-vitb16",
+  "dinov3-vith16plus",
+  "dinov3-vitl16",
+  "dinov3-vitl16-sat493m",
+  "dinov3-vits16",
+  "dinov3-vits16plus",
+  "florence-2-base",
+  "florence-2-large",
+  "florence-2-large-ft",
+  "pe-core-b16-224",
+  "pe-core-g14-448",
+  "pe-core-l14-336",
+  "pe-core-s16-384",
+  "pe-core-t16-384",
+  "pe-lang-g14-448-timm",
+  "pe-lang-l14-448-timm",
+  "pe-spatial-b16-512",
+  "pe-spatial-g14-448",
+  "pe-spatial-l14-448",
+  "pe-spatial-s16-512",
+  "pe-spatial-t16-512",
+  "sam2.1-hiera-base-plus",
+  "sam3",
+  "siglip2-base-patch16-224",
+  "siglip2-giant-opt-patch16-256",
+  "siglip2-giant-opt-patch16-384",
+  "siglip2-large-patch16-256",
+  "siglip2-so400m-patch14-224",
+  "siglip2-so400m-patch16-256",
+  "starvector-1b-im2svg",
+  "starvector-8b-im2svg",
+  "theia-base-cddsv",
+  "theia-base-cdiv",
+  "theia-small-cdiv",
+  "theia-tiny-cddsv",
+  "theia-tiny-cdiv",
+  "tipsv1-b14",
+  "tipsv1-g14",
+  "tipsv1-l14",
+  "tipsv1-s14",
+  "tipsv1-so400m14",
+  "tipsv2-b14",
+  "tipsv2-g14",
+  "tipsv2-l14",
+  "tipsv2-so400m14",
+  "trocr-base-handwritten",
+  "trocr-base-hw-hist-swe-2",
+  "trocr-large-handwritten",
+  "trocr-small-handwritten",
+  "vit-mae-large",
+  "webssl-dino1b-224",
+  "webssl-dino2b-224",
+  "webssl-dino300m-224",
+  "webssl-dino3b-224",
+  "webssl-dino5b-224",
+  "webssl-mae1b-224",
+  "webssl-mae300m-224"
+ ],
+ "xs_code": {
+  "files": {
+   "__init__.py": "ce6fc8aa99758f3c13a2b3a770bc511f213d7979a8a03ef0b293756159495c78",
+   "fmdx_verdicts.py": "67c78eabf6ace3d9b0bc6ab3f4501d305f175d732368893b443a0037dd902a52",
+   "xs_common.py": "46f865ed36b9d8159ecfc812d02b8ace5ec9a6d87915cf99d568aec7016704a0",
+   "xs_extract.py": "8dfd370dbea40b16d83aeeade38ce0f6c101a267a0d3972c7526f0d9e86ae478",
+   "xs_plan.py": "811bfbe873fa5bf1c1dd8b8a5c64e22e6a13550753f885beee588bb5f844de59",
+   "xs_probe.py": "6dbb3ad424a2252fd4e5c1be3544ed550bc4e0d8c9e3cef6b536fa96f727efb8",
+   "xs_rows.py": "093862bb4a99f9c69398ca99f4a34c3739ef7822b0f9f29fa0ceca67abdc8c81",
+   "xs_targets.py": "6547a725d9fef182aebe554aafcb6fe4ebf5e0dcf79b1a776da1a223f0b2b7a5",
+   "xs_worker.py": "4c6a5e87b2a8dc7de5651ef7120db10368922d0ff21a35ce5a01df6194e45973"
+  },
+  "combined": "b4323c86e0baa10bf4599fb350d109c02785c0016467525946f04f5585b08ede",
+  "version": "fmd_harness_xs 1.0.0 (2026-11-03)"
+ }
+}

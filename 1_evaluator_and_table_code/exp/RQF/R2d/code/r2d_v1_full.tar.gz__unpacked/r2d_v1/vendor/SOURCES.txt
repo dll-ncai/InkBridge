@@ -1,0 +1,1 @@
+# vendor sources: lane_score.py=exp/D3_ROUTE/routeA/code/lane_score.py adapt_sidecars.py=exp/FMD/xs/code/fmdx_monitor_v1/adapt_sidecars.py (unchanged copies)

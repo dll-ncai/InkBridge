@@ -1,0 +1,7 @@
+2026-11-08T04:03:04Z ft_job_start arm=c-radiov3-h_W lane=clusterA src=$U/exp/FMD/xs/runs/c-radiov3-h_W_clusterA/bb_ms4.pt seed=20261034 site=clusterA host=<node> slurm=24964800 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T04:03:06Z batch_layout ng=1 mem_gb=44 global_micro=128 accum=4 units_per_step=512 site=clusterA host=<node> slurm=24964800 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T04:03:06Z train_start site=clusterA host=<node> slurm=24964800 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T08:42:30Z train_exit rc=0 site=clusterA host=<node> slurm=24964800 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T10:59:31Z selected FT milestone 8 (step 8000) site=clusterA host=<node> slurm=24964800 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T11:00:00Z ft_job_end site=clusterA host=<node> slurm=24964800 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T14:35:53Z sampling_done ms8 site=clusterA host=<node> slurm=24964800 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]

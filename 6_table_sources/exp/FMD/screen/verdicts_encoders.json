@@ -1,0 +1,137 @@
+{
+ "rows_csv": "$U/exp/FMD/screen/rows_encoders.csv",
+ "rows_csv_sha256": "1fa76ecd9ea67dcbcda94a0089fd211bcc654c283fc691b3bdfbf30809481ffd",
+ "created_utc": "2026-11-03T03:22:48Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "harness_code_sha": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c",
+ "make_rows_sha256": "1ea40783575b3b506233ce4fef0b028ab4a7ed576592d450601519a63468d9d1",
+ "verdicts": {
+  "encoder": {
+   "verdict": "PASS",
+   "fms": {
+    "dinov2-large": {
+     "order_pass": [
+      "T2:rprec(last,linear)"
+     ],
+     "shape_NI": false,
+     "fm_pass": false
+    },
+    "dinov3-vitl16": {
+     "order_pass": [
+      "T2:rprec(last,linear)"
+     ],
+     "shape_NI": true,
+     "fm_pass": true
+    },
+    "sam2.1-hiera-base-plus": {
+     "order_pass": [
+      "T2:rprec(last,linear)"
+     ],
+     "shape_NI": false,
+     "fm_pass": false
+    },
+    "siglip2-so400m-patch14-224": {
+     "order_pass": [
+      "T2:rprec(last,linear)",
+      "T3:rprec(last,linear)"
+     ],
+     "shape_NI": false,
+     "fm_pass": false
+    }
+   }
+  }
+ },
+ "n_order_tests_gate_layer": 16,
+ "prereg_order_tests_encoder": 16,
+ "multiplicity": "no correction (prereg 4)",
+ "ranking_inputs_prereg6": {
+  "dinov2-large": {
+   "n_order_pass": 1,
+   "mean_ci_lo_over_sd": 0.03230270367685653,
+   "t0_delta": -0.09119124333333332,
+   "criteria": [
+    {
+     "target": "T2",
+     "metric": "rprec",
+     "ci_lo": 0.011565096099414248,
+     "comparator": "nomL1:cat16",
+     "comparator_unit_sd": 0.35802254248148685,
+     "ci_lo_over_sd": 0.03230270367685653
+    }
+   ]
+  },
+  "dinov3-vitl16": {
+   "n_order_pass": 1,
+   "mean_ci_lo_over_sd": 0.028535869005415923,
+   "t0_delta": 0.0038190203333333334,
+   "criteria": [
+    {
+     "target": "T2",
+     "metric": "rprec",
+     "ci_lo": 0.009914309600924365,
+     "comparator": "nomL1:cat16",
+     "comparator_unit_sd": 0.3474332461731827,
+     "ci_lo_over_sd": 0.028535869005415923
+    }
+   ]
+  },
+  "siglip2-so400m-patch14-224": {
+   "n_order_pass": 2,
+   "mean_ci_lo_over_sd": 0.07214734287839032,
+   "t0_delta": -0.15572904833333331,
+   "criteria": [
+    {
+     "target": "T2",
+     "metric": "rprec",
+     "ci_lo": 0.04109989198916341,
+     "comparator": "nomL1:cat16",
+     "comparator_unit_sd": 0.35802254248148685,
+     "ci_lo_over_sd": 0.1147969390538828
+    },
+    {
+     "target": "T3",
+     "metric": "rprec",
+     "ci_lo": 0.009952372531813683,
+     "comparator": "nomL2:cat16",
+     "comparator_unit_sd": 0.3373943315757054,
+     "ci_lo_over_sd": 0.029497746702897832
+    }
+   ]
+  },
+  "sam2.1-hiera-base-plus": {
+   "n_order_pass": 1,
+   "mean_ci_lo_over_sd": 0.08268849217623236,
+   "t0_delta": -0.01777098533333333,
+   "criteria": [
+    {
+     "target": "T2",
+     "metric": "rprec",
+     "ci_lo": 0.029604344202895247,
+     "comparator": "nomL1:cat16",
+     "comparator_unit_sd": 0.35802254248148685,
+     "ci_lo_over_sd": 0.08268849217623236
+    }
+   ]
+  }
+ },
+ "baseline_arms_present": {
+  "nomL1:mid16:linear:G14": true,
+  "nomL1:mid16:attn:G14": true,
+  "nomL1:mid16:linear:G16": true,
+  "nomL1:mid16:attn:G16": true,
+  "nomL1:cat16:linear:G14": true,
+  "nomL1:cat16:attn:G14": true,
+  "nomL1:cat16:linear:G16": true,
+  "nomL1:cat16:attn:G16": true,
+  "nomL2:mid16:linear:G14": true,
+  "nomL2:mid16:attn:G14": true,
+  "nomL2:mid16:linear:G16": true,
+  "nomL2:mid16:attn:G16": true,
+  "nomL2:cat16:linear:G14": true,
+  "nomL2:cat16:attn:G14": true,
+  "nomL2:cat16:linear:G16": true,
+  "nomL2:cat16:attn:G16": true
+ },
+ "missing_fm_units": [],
+ "nomL2_note": "nomL2 baseline units present"
+}

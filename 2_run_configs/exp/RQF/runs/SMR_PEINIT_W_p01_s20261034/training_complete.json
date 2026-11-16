@@ -1,0 +1,22 @@
+{
+ "status": "complete",
+ "final_step": 10000,
+ "completed_at": "2026-11-08T08:36:42Z",
+ "arm_id": "PEINIT_W_FT",
+ "milestones": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "peak_rss_mb": 4656.56640625,
+ "cuda_max_alloc_gb": 17.97703424,
+ "lane": "clusterA",
+ "slurm": "24964792"
+}

@@ -1,0 +1,828 @@
+set_id,unit_id,source_id,split,writer_key,writer_int,rank_ltr,n_units_in_source,stroke_idx,n_strokes,n_diacritic_strokes,n_points_raw,n_seq,step
+d2v2_unipen_de,DE-S03/sie_00001_u000,DE-S03/sie_00001,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,1,71,190,1.0
+d2v2_unipen_de,DE-S03/sie_00001_u001,DE-S03/sie_00001,test,DE-S03,17,1,2,"[4, 5]",2,0,49,172,1.0
+d2v2_unipen_de,DE-S03/sie_00002_u000,DE-S03/sie_00002,test,DE-S03,17,0,1,"[0, 1]",2,0,38,209,1.0
+d2v2_unipen_de,DE-S03/sie_00003_u000,DE-S03/sie_00003,test,DE-S03,17,0,1,[0],1,0,140,147,1.0
+d2v2_unipen_de,DE-S03/sie_00004_u000,DE-S03/sie_00004,test,DE-S03,17,0,1,[0],1,0,109,204,1.0
+d2v2_unipen_de,DE-S03/sie_00005_u000,DE-S03/sie_00005,test,DE-S03,17,0,1,"[0, 1]",2,0,105,255,1.0
+d2v2_unipen_de,DE-S03/sie_00006_u000,DE-S03/sie_00006,test,DE-S03,17,0,2,[0],1,0,45,179,1.0
+d2v2_unipen_de,DE-S03/sie_00006_u001,DE-S03/sie_00006,test,DE-S03,17,1,2,"[1, 2, 3]",3,0,120,207,1.0
+d2v2_unipen_de,DE-S03/sie_00007_u000,DE-S03/sie_00007,test,DE-S03,17,0,2,[0],1,0,67,199,1.0
+d2v2_unipen_de,DE-S03/sie_00007_u001,DE-S03/sie_00007,test,DE-S03,17,1,2,"[1, 2]",2,0,119,292,1.0
+d2v2_unipen_de,DE-S03/sie_00008_u000,DE-S03/sie_00008,test,DE-S03,17,0,1,[0],1,0,57,262,1.0
+d2v2_unipen_de,DE-S03/sie_00009_u000,DE-S03/sie_00009,test,DE-S03,17,0,1,[0],1,0,45,188,1.0
+d2v2_unipen_de,DE-S03/sie_00010_u000,DE-S03/sie_00010,test,DE-S03,17,0,1,[0],1,0,75,113,1.0
+d2v2_unipen_de,DE-S03/sie_00011_u000,DE-S03/sie_00011,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,1,72,200,1.0
+d2v2_unipen_de,DE-S03/sie_00011_u001,DE-S03/sie_00011,test,DE-S03,17,1,2,"[4, 5]",2,0,46,191,1.0
+d2v2_unipen_de,DE-S03/sie_00012_u000,DE-S03/sie_00012,test,DE-S03,17,0,3,[0],1,0,130,227,1.0
+d2v2_unipen_de,DE-S03/sie_00012_u001,DE-S03/sie_00012,test,DE-S03,17,1,3,[1],1,0,18,198,1.0
+d2v2_unipen_de,DE-S03/sie_00012_u002,DE-S03/sie_00012,test,DE-S03,17,2,3,[2],1,0,19,113,1.0
+d2v2_unipen_de,DE-S03/sie_00013_u000,DE-S03/sie_00013,test,DE-S03,17,0,1,[0],1,0,82,213,1.0
+d2v2_unipen_de,DE-S03/sie_00014_u000,DE-S03/sie_00014,test,DE-S03,17,0,1,"[0, 1, 2]",3,1,171,205,1.0
+d2v2_unipen_de,DE-S03/sie_00015_u000,DE-S03/sie_00015,test,DE-S03,17,0,2,[0],1,0,82,173,1.0
+d2v2_unipen_de,DE-S03/sie_00015_u001,DE-S03/sie_00015,test,DE-S03,17,1,2,"[1, 2, 3]",3,0,120,264,1.0
+d2v2_unipen_de,DE-S03/sie_00016_u000,DE-S03/sie_00016,test,DE-S03,17,0,2,[0],1,0,25,213,1.0
+d2v2_unipen_de,DE-S03/sie_00016_u001,DE-S03/sie_00016,test,DE-S03,17,1,2,[1],1,0,29,167,1.0
+d2v2_unipen_de,DE-S03/sie_00017_u000,DE-S03/sie_00017,test,DE-S03,17,0,1,"[0, 1]",2,0,99,211,1.0
+d2v2_unipen_de,DE-S03/sie_00018_u000,DE-S03/sie_00018,test,DE-S03,17,0,1,[0],1,0,45,199,1.0
+d2v2_unipen_de,DE-S03/sie_00019_u000,DE-S03/sie_00019,test,DE-S03,17,0,1,[0],1,0,58,111,1.0
+d2v2_unipen_de,DE-S03/sie_00020_u000,DE-S03/sie_00020,test,DE-S03,17,0,4,"[0, 1, 2]",3,0,66,227,1.0
+d2v2_unipen_de,DE-S03/sie_00020_u001,DE-S03/sie_00020,test,DE-S03,17,1,4,[3],1,0,53,230,1.0
+d2v2_unipen_de,DE-S03/sie_00020_u002,DE-S03/sie_00020,test,DE-S03,17,2,4,[4],1,0,86,157,1.0
+d2v2_unipen_de,DE-S03/sie_00020_u003,DE-S03/sie_00020,test,DE-S03,17,3,4,[5],1,0,13,110,1.0
+d2v2_unipen_de,DE-S03/sie_00021_u000,DE-S03/sie_00021,test,DE-S03,17,0,1,"[0, 1, 2, 3]",4,0,31,164,1.0
+d2v2_unipen_de,DE-S03/sie_00022_u000,DE-S03/sie_00022,test,DE-S03,17,0,1,[0],1,0,68,190,1.0
+d2v2_unipen_de,DE-S03/sie_00023_u000,DE-S03/sie_00023,test,DE-S03,17,0,1,"[0, 1]",2,1,47,173,1.0
+d2v2_unipen_de,DE-S03/sie_00024_u000,DE-S03/sie_00024,test,DE-S03,17,0,2,[0],1,0,26,204,1.0
+d2v2_unipen_de,DE-S03/sie_00024_u001,DE-S03/sie_00024,test,DE-S03,17,1,2,[1],1,0,29,174,1.0
+d2v2_unipen_de,DE-S03/sie_00025_u000,DE-S03/sie_00025,test,DE-S03,17,0,3,"[0, 1]",2,0,15,118,1.0
+d2v2_unipen_de,DE-S03/sie_00025_u001,DE-S03/sie_00025,test,DE-S03,17,1,3,[2],1,0,68,156,1.0
+d2v2_unipen_de,DE-S03/sie_00025_u002,DE-S03/sie_00025,test,DE-S03,17,2,3,[3],1,0,16,135,1.0
+d2v2_unipen_de,DE-S03/sie_00026_u000,DE-S03/sie_00026,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,30,158,1.0
+d2v2_unipen_de,DE-S03/sie_00026_u001,DE-S03/sie_00026,test,DE-S03,17,1,2,"[3, 4]",2,0,102,235,1.0
+d2v2_unipen_de,DE-S03/sie_00027_u000,DE-S03/sie_00027,test,DE-S03,17,0,1,[0],1,0,62,127,1.0
+d2v2_unipen_de,DE-S03/sie_00028_u000,DE-S03/sie_00028,test,DE-S03,17,0,1,"[0, 1]",2,0,193,258,1.0
+d2v2_unipen_de,DE-S03/sie_00029_u000,DE-S03/sie_00029,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,1,78,199,1.0
+d2v2_unipen_de,DE-S03/sie_00029_u001,DE-S03/sie_00029,test,DE-S03,17,1,2,"[4, 5]",2,0,42,192,1.0
+d2v2_unipen_de,DE-S03/sie_00030_u000,DE-S03/sie_00030,test,DE-S03,17,0,1,[0],1,0,62,226,1.0
+d2v2_unipen_de,DE-S03/sie_00031_u000,DE-S03/sie_00031,test,DE-S03,17,0,2,[0],1,0,123,205,1.0
+d2v2_unipen_de,DE-S03/sie_00031_u001,DE-S03/sie_00031,test,DE-S03,17,1,2,[1],1,0,63,247,1.0
+d2v2_unipen_de,DE-S03/sie_00032_u000,DE-S03/sie_00032,test,DE-S03,17,0,1,"[0, 1]",2,0,97,246,1.0
+d2v2_unipen_de,DE-S03/sie_00033_u000,DE-S03/sie_00033,test,DE-S03,17,0,2,[0],1,0,23,120,1.0
+d2v2_unipen_de,DE-S03/sie_00033_u001,DE-S03/sie_00033,test,DE-S03,17,1,2,"[1, 2, 3, 4]",4,0,105,241,1.0
+d2v2_unipen_de,DE-S03/sie_00034_u000,DE-S03/sie_00034,test,DE-S03,17,0,2,[0],1,0,28,201,1.0
+d2v2_unipen_de,DE-S03/sie_00034_u001,DE-S03/sie_00034,test,DE-S03,17,1,2,[1],1,0,29,172,1.0
+d2v2_unipen_de,DE-S03/sie_00035_u000,DE-S03/sie_00035,test,DE-S03,17,0,1,"[0, 1]",2,0,117,260,1.0
+d2v2_unipen_de,DE-S03/sie_00036_u000,DE-S03/sie_00036,test,DE-S03,17,0,1,[0],1,0,79,126,1.0
+d2v2_unipen_de,DE-S03/sie_00037_u000,DE-S03/sie_00037,test,DE-S03,17,0,3,"[0, 1]",2,0,17,119,1.0
+d2v2_unipen_de,DE-S03/sie_00037_u001,DE-S03/sie_00037,test,DE-S03,17,1,3,[2],1,0,64,167,1.0
+d2v2_unipen_de,DE-S03/sie_00037_u002,DE-S03/sie_00037,test,DE-S03,17,2,3,[3],1,0,15,120,1.0
+d2v2_unipen_de,DE-S03/sie_00038_u000,DE-S03/sie_00038,test,DE-S03,17,0,4,[0],1,0,8,65,1.0
+d2v2_unipen_de,DE-S03/sie_00038_u001,DE-S03/sie_00038,test,DE-S03,17,1,4,[1],1,0,8,64,1.0
+d2v2_unipen_de,DE-S03/sie_00038_u002,DE-S03/sie_00038,test,DE-S03,17,2,4,[2],1,0,18,205,1.0
+d2v2_unipen_de,DE-S03/sie_00038_u003,DE-S03/sie_00038,test,DE-S03,17,3,4,[3],1,0,88,194,1.0
+d2v2_unipen_de,DE-S03/sie_00039_u000,DE-S03/sie_00039,test,DE-S03,17,0,1,[0],1,0,59,126,1.0
+d2v2_unipen_de,DE-S03/sie_00040_u000,DE-S03/sie_00040,test,DE-S03,17,0,1,[0],1,0,186,231,1.0
+d2v2_unipen_de,DE-S03/sie_00041_u000,DE-S03/sie_00041,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,1,68,202,1.0
+d2v2_unipen_de,DE-S03/sie_00041_u001,DE-S03/sie_00041,test,DE-S03,17,1,2,"[4, 5]",2,0,50,193,1.0
+d2v2_unipen_de,DE-S03/sie_00042_u000,DE-S03/sie_00042,test,DE-S03,17,0,2,[0],1,0,74,197,1.0
+d2v2_unipen_de,DE-S03/sie_00042_u001,DE-S03/sie_00042,test,DE-S03,17,1,2,[1],1,0,32,104,1.0
+d2v2_unipen_de,DE-S03/sie_00043_u000,DE-S03/sie_00043,test,DE-S03,17,0,1,[0],1,0,69,206,1.0
+d2v2_unipen_de,DE-S03/sie_00044_u000,DE-S03/sie_00044,test,DE-S03,17,0,2,[0],1,0,22,208,1.0
+d2v2_unipen_de,DE-S03/sie_00044_u001,DE-S03/sie_00044,test,DE-S03,17,1,2,[1],1,0,24,159,1.0
+d2v2_unipen_de,DE-S03/sie_00045_u000,DE-S03/sie_00045,test,DE-S03,17,0,1,"[0, 1]",2,0,90,203,1.0
+d2v2_unipen_de,DE-S03/sie_00046_u000,DE-S03/sie_00046,test,DE-S03,17,0,1,[0],1,0,41,189,1.0
+d2v2_unipen_de,DE-S03/sie_00047_u000,DE-S03/sie_00047,test,DE-S03,17,0,1,[0],1,0,69,129,1.0
+d2v2_unipen_de,DE-S03/sie_00048_u000,DE-S03/sie_00048,test,DE-S03,17,0,3,"[0, 1]",2,0,16,112,1.0
+d2v2_unipen_de,DE-S03/sie_00048_u001,DE-S03/sie_00048,test,DE-S03,17,1,3,[2],1,0,68,158,1.0
+d2v2_unipen_de,DE-S03/sie_00048_u002,DE-S03/sie_00048,test,DE-S03,17,2,3,[3],1,0,15,142,1.0
+d2v2_unipen_de,DE-S03/sie_00049_u000,DE-S03/sie_00049,test,DE-S03,17,0,5,[1],1,0,8,60,1.0
+d2v2_unipen_de,DE-S03/sie_00049_u001,DE-S03/sie_00049,test,DE-S03,17,1,5,[0],1,0,8,66,1.0
+d2v2_unipen_de,DE-S03/sie_00049_u002,DE-S03/sie_00049,test,DE-S03,17,2,5,[2],1,0,18,217,1.0
+d2v2_unipen_de,DE-S03/sie_00049_u003,DE-S03/sie_00049,test,DE-S03,17,3,5,[3],1,0,59,146,1.0
+d2v2_unipen_de,DE-S03/sie_00049_u004,DE-S03/sie_00049,test,DE-S03,17,4,5,[4],1,0,14,91,1.0
+d2v2_unipen_de,DE-S03/sie_00050_u000,DE-S03/sie_00050,test,DE-S03,17,0,3,"[0, 1]",2,0,33,178,1.0
+d2v2_unipen_de,DE-S03/sie_00050_u001,DE-S03/sie_00050,test,DE-S03,17,1,3,"[2, 3]",2,1,36,129,1.0
+d2v2_unipen_de,DE-S03/sie_00050_u002,DE-S03/sie_00050,test,DE-S03,17,2,3,"[4, 5]",2,0,42,184,1.0
+d2v2_unipen_de,DE-S03/sie_00051_u000,DE-S03/sie_00051,test,DE-S03,17,0,3,"[0, 1, 2]",3,0,53,237,1.0
+d2v2_unipen_de,DE-S03/sie_00051_u001,DE-S03/sie_00051,test,DE-S03,17,1,3,"[3, 4]",2,0,46,210,1.0
+d2v2_unipen_de,DE-S03/sie_00051_u002,DE-S03/sie_00051,test,DE-S03,17,2,3,[5],1,0,108,206,1.0
+d2v2_unipen_de,DE-S03/sie_00052_u000,DE-S03/sie_00052,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,0,38,173,1.0
+d2v2_unipen_de,DE-S03/sie_00052_u001,DE-S03/sie_00052,test,DE-S03,17,1,2,[4],1,0,54,118,1.0
+d2v2_unipen_de,DE-S03/sie_00053_u000,DE-S03/sie_00053,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,108,188,1.0
+d2v2_unipen_de,DE-S03/sie_00053_u001,DE-S03/sie_00053,test,DE-S03,17,1,2,"[3, 4]",2,0,57,236,1.0
+d2v2_unipen_de,DE-S03/sie_00054_u000,DE-S03/sie_00054,test,DE-S03,17,0,1,[0],1,0,65,185,1.0
+d2v2_unipen_de,DE-S03/sie_00055_u000,DE-S03/sie_00055,test,DE-S03,17,0,1,"[0, 1, 2]",3,1,148,184,1.0
+d2v2_unipen_de,DE-S03/sie_00056_u000,DE-S03/sie_00056,test,DE-S03,17,0,1,"[0, 1]",2,1,53,175,1.0
+d2v2_unipen_de,DE-S03/sie_00057_u000,DE-S03/sie_00057,test,DE-S03,17,0,2,[0],1,0,29,200,1.0
+d2v2_unipen_de,DE-S03/sie_00057_u001,DE-S03/sie_00057,test,DE-S03,17,1,2,[1],1,0,30,174,1.0
+d2v2_unipen_de,DE-S03/sie_00058_u000,DE-S03/sie_00058,test,DE-S03,17,0,1,"[0, 1]",2,0,97,208,1.0
+d2v2_unipen_de,DE-S03/sie_00059_u000,DE-S03/sie_00059,test,DE-S03,17,0,1,[0],1,0,43,185,1.0
+d2v2_unipen_de,DE-S03/sie_00060_u000,DE-S03/sie_00060,test,DE-S03,17,0,1,[0],1,0,63,111,1.0
+d2v2_unipen_de,DE-S03/sie_00061_u000,DE-S03/sie_00061,test,DE-S03,17,0,3,"[0, 1]",2,0,16,113,1.0
+d2v2_unipen_de,DE-S03/sie_00061_u001,DE-S03/sie_00061,test,DE-S03,17,1,3,[2],1,0,67,149,1.0
+d2v2_unipen_de,DE-S03/sie_00061_u002,DE-S03/sie_00061,test,DE-S03,17,2,3,[3],1,0,15,139,1.0
+d2v2_unipen_de,DE-S03/sie_00062_u000,DE-S03/sie_00062,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,25,151,1.0
+d2v2_unipen_de,DE-S03/sie_00062_u001,DE-S03/sie_00062,test,DE-S03,17,1,2,"[3, 4]",2,0,95,195,1.0
+d2v2_unipen_de,DE-S03/sie_00063_u000,DE-S03/sie_00063,test,DE-S03,17,0,1,[0],1,0,57,132,1.0
+d2v2_unipen_de,DE-S03/sie_00064_u000,DE-S03/sie_00064,test,DE-S03,17,0,2,"[0, 1]",2,0,63,222,1.0
+d2v2_unipen_de,DE-S03/sie_00064_u001,DE-S03/sie_00064,test,DE-S03,17,1,2,[2],1,0,111,260,1.0
+d2v2_unipen_de,DE-S03/sie_00065_u000,DE-S03/sie_00065,test,DE-S03,17,0,3,"[0, 1, 2]",3,0,57,196,1.0
+d2v2_unipen_de,DE-S03/sie_00065_u001,DE-S03/sie_00065,test,DE-S03,17,1,3,"[3, 4]",2,0,49,218,1.0
+d2v2_unipen_de,DE-S03/sie_00065_u002,DE-S03/sie_00065,test,DE-S03,17,2,3,[5],1,0,87,222,1.0
+d2v2_unipen_de,DE-S03/sie_00066_u000,DE-S03/sie_00066,test,DE-S03,17,0,1,[0],1,0,44,203,1.0
+d2v2_unipen_de,DE-S03/sie_00067_u000,DE-S03/sie_00067,test,DE-S03,17,0,1,"[0, 1, 2, 3]",4,0,224,251,1.0
+d2v2_unipen_de,DE-S03/sie_00068_u000,DE-S03/sie_00068,test,DE-S03,17,0,1,"[0, 1]",2,0,90,194,1.0
+d2v2_unipen_de,DE-S03/sie_00069_u000,DE-S03/sie_00069,test,DE-S03,17,0,2,[0],1,0,24,130,1.0
+d2v2_unipen_de,DE-S03/sie_00069_u001,DE-S03/sie_00069,test,DE-S03,17,1,2,"[1, 2]",2,0,129,255,1.0
+d2v2_unipen_de,DE-S03/sie_00070_u000,DE-S03/sie_00070,test,DE-S03,17,0,1,"[0, 1]",2,0,90,200,1.0
+d2v2_unipen_de,DE-S03/sie_00071_u000,DE-S03/sie_00071,test,DE-S03,17,0,1,[0],1,0,42,205,1.0
+d2v2_unipen_de,DE-S03/sie_00072_u000,DE-S03/sie_00072,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,23,133,1.0
+d2v2_unipen_de,DE-S03/sie_00072_u001,DE-S03/sie_00072,test,DE-S03,17,1,2,"[3, 4]",2,0,87,197,1.0
+d2v2_unipen_de,DE-S03/sie_00073_u000,DE-S03/sie_00073,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,53,219,1.0
+d2v2_unipen_de,DE-S03/sie_00073_u001,DE-S03/sie_00073,test,DE-S03,17,1,2,"[3, 4]",2,0,113,276,1.0
+d2v2_unipen_de,DE-S03/sie_00074_u000,DE-S03/sie_00074,test,DE-S03,17,0,1,[0],1,0,63,207,1.0
+d2v2_unipen_de,DE-S03/sie_00075_u000,DE-S03/sie_00075,test,DE-S03,17,0,1,[0],1,0,85,161,1.0
+d2v2_unipen_de,DE-S03/sie_00076_u000,DE-S03/sie_00076,test,DE-S03,17,0,1,"[0, 1, 2, 3, 4]",5,0,188,244,1.0
+d2v2_unipen_de,DE-S03/sie_00077_u000,DE-S03/sie_00077,test,DE-S03,17,0,1,[0],1,0,80,220,1.0
+d2v2_unipen_de,DE-S03/sie_00078_u000,DE-S03/sie_00078,test,DE-S03,17,0,1,"[0, 1]",2,0,97,225,1.0
+d2v2_unipen_de,DE-S03/sie_00079_u000,DE-S03/sie_00079,test,DE-S03,17,0,2,"[0, 1, 2]",3,1,78,182,1.0
+d2v2_unipen_de,DE-S03/sie_00079_u001,DE-S03/sie_00079,test,DE-S03,17,1,2,[3],1,0,74,167,1.0
+d2v2_unipen_de,DE-S03/sie_00080_u000,DE-S03/sie_00080,test,DE-S03,17,0,2,[0],1,0,86,170,1.0
+d2v2_unipen_de,DE-S03/sie_00080_u001,DE-S03/sie_00080,test,DE-S03,17,1,2,[1],1,0,5,60,1.0
+d2v2_unipen_de,DE-S03/sie_00081_u000,DE-S03/sie_00081,test,DE-S03,17,0,1,[0],1,0,43,165,1.0
+d2v2_unipen_de,DE-S03/sie_00082_u000,DE-S03/sie_00082,test,DE-S03,17,0,1,[0],1,0,81,124,1.0
+d2v2_unipen_de,DE-S03/sie_00083_u000,DE-S03/sie_00083,test,DE-S03,17,0,4,[1],1,0,8,64,1.0
+d2v2_unipen_de,DE-S03/sie_00083_u001,DE-S03/sie_00083,test,DE-S03,17,1,4,[0],1,0,10,65,1.0
+d2v2_unipen_de,DE-S03/sie_00083_u002,DE-S03/sie_00083,test,DE-S03,17,2,4,[2],1,0,73,149,1.0
+d2v2_unipen_de,DE-S03/sie_00083_u003,DE-S03/sie_00083,test,DE-S03,17,3,4,[3],1,0,17,123,1.0
+d2v2_unipen_de,DE-S03/sie_00084_u000,DE-S03/sie_00084,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,28,153,1.0
+d2v2_unipen_de,DE-S03/sie_00084_u001,DE-S03/sie_00084,test,DE-S03,17,1,2,"[3, 4]",2,0,86,215,1.0
+d2v2_unipen_de,DE-S03/sie_00085_u000,DE-S03/sie_00085,test,DE-S03,17,0,5,[1],1,0,7,64,1.0
+d2v2_unipen_de,DE-S03/sie_00085_u001,DE-S03/sie_00085,test,DE-S03,17,1,5,[0],1,0,9,63,1.0
+d2v2_unipen_de,DE-S03/sie_00085_u002,DE-S03/sie_00085,test,DE-S03,17,2,5,[2],1,0,19,185,1.0
+d2v2_unipen_de,DE-S03/sie_00085_u003,DE-S03/sie_00085,test,DE-S03,17,3,5,[3],1,0,58,129,1.0
+d2v2_unipen_de,DE-S03/sie_00085_u004,DE-S03/sie_00085,test,DE-S03,17,4,5,[4],1,0,13,106,1.0
+d2v2_unipen_de,DE-S03/sie_00086_u000,DE-S03/sie_00086,test,DE-S03,17,0,1,[0],1,0,56,122,1.0
+d2v2_unipen_de,DE-S03/sie_00087_u000,DE-S03/sie_00087,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,0,104,236,1.0
+d2v2_unipen_de,DE-S03/sie_00087_u001,DE-S03/sie_00087,test,DE-S03,17,1,2,[4],1,0,91,205,1.0
+d2v2_unipen_de,DE-S03/sie_00088_u000,DE-S03/sie_00088,test,DE-S03,17,0,1,[0],1,0,51,219,1.0
+d2v2_unipen_de,DE-S03/sie_00089_u000,DE-S03/sie_00089,test,DE-S03,17,0,2,[0],1,0,62,222,1.0
+d2v2_unipen_de,DE-S03/sie_00089_u001,DE-S03/sie_00089,test,DE-S03,17,1,2,[1],1,0,25,106,1.0
+d2v2_unipen_de,DE-S03/sie_00090_u000,DE-S03/sie_00090,test,DE-S03,17,0,2,"[0, 1]",2,0,119,208,1.0
+d2v2_unipen_de,DE-S03/sie_00090_u001,DE-S03/sie_00090,test,DE-S03,17,1,2,"[2, 3]",2,0,60,248,1.0
+d2v2_unipen_de,DE-S03/sie_00091_u000,DE-S03/sie_00091,test,DE-S03,17,0,1,[0],1,0,77,219,1.0
+d2v2_unipen_de,DE-S03/sie_00092_u000,DE-S03/sie_00092,test,DE-S03,17,0,1,"[0, 1]",2,0,93,204,1.0
+d2v2_unipen_de,DE-S03/sie_00093_u000,DE-S03/sie_00093,test,DE-S03,17,0,1,"[0, 1, 2]",3,1,161,196,1.0
+d2v2_unipen_de,DE-S03/sie_00094_u000,DE-S03/sie_00094,test,DE-S03,17,0,1,[0],1,0,60,263,1.0
+d2v2_unipen_de,DE-S03/sie_00095_u000,DE-S03/sie_00095,test,DE-S03,17,0,1,[0],1,0,76,124,1.0
+d2v2_unipen_de,DE-S03/sie_00096_u000,DE-S03/sie_00096,test,DE-S03,17,0,3,"[0, 1]",2,0,19,105,1.0
+d2v2_unipen_de,DE-S03/sie_00096_u001,DE-S03/sie_00096,test,DE-S03,17,1,3,[2],1,0,70,155,1.0
+d2v2_unipen_de,DE-S03/sie_00096_u002,DE-S03/sie_00096,test,DE-S03,17,2,3,[3],1,0,15,137,1.0
+d2v2_unipen_de,DE-S03/sie_00097_u000,DE-S03/sie_00097,test,DE-S03,17,0,5,[1],1,0,8,67,1.0
+d2v2_unipen_de,DE-S03/sie_00097_u001,DE-S03/sie_00097,test,DE-S03,17,1,5,[0],1,0,11,67,1.0
+d2v2_unipen_de,DE-S03/sie_00097_u002,DE-S03/sie_00097,test,DE-S03,17,2,5,[2],1,0,18,194,1.0
+d2v2_unipen_de,DE-S03/sie_00097_u003,DE-S03/sie_00097,test,DE-S03,17,3,5,[3],1,0,60,143,1.0
+d2v2_unipen_de,DE-S03/sie_00097_u004,DE-S03/sie_00097,test,DE-S03,17,4,5,[4],1,0,16,95,1.0
+d2v2_unipen_de,DE-S03/sie_00098_u000,DE-S03/sie_00098,test,DE-S03,17,0,1,[0],1,0,60,140,1.0
+d2v2_unipen_de,DE-S03/sie_00099_u000,DE-S03/sie_00099,test,DE-S03,17,0,3,"[0, 1, 2]",3,0,51,236,1.0
+d2v2_unipen_de,DE-S03/sie_00099_u001,DE-S03/sie_00099,test,DE-S03,17,1,3,[3],1,0,46,206,1.0
+d2v2_unipen_de,DE-S03/sie_00099_u002,DE-S03/sie_00099,test,DE-S03,17,2,3,[4],1,0,98,212,1.0
+d2v2_unipen_de,DE-S03/sie_00100_u000,DE-S03/sie_00100,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,0,166,200,1.0
+d2v2_unipen_de,DE-S03/sie_00100_u001,DE-S03/sie_00100,test,DE-S03,17,1,2,[4],1,0,11,87,1.0
+d2v2_unipen_de,DE-S03/sie_00101_u000,DE-S03/sie_00101,test,DE-S03,17,0,4,[0],1,0,24,125,1.0
+d2v2_unipen_de,DE-S03/sie_00101_u001,DE-S03/sie_00101,test,DE-S03,17,1,4,"[1, 4]",2,0,78,235,1.0
+d2v2_unipen_de,DE-S03/sie_00101_u002,DE-S03/sie_00101,test,DE-S03,17,2,4,[2],1,0,17,174,1.0
+d2v2_unipen_de,DE-S03/sie_00101_u003,DE-S03/sie_00101,test,DE-S03,17,3,4,[3],1,0,15,111,1.0
+d2v2_unipen_de,DE-S03/sie_00102_u000,DE-S03/sie_00102,test,DE-S03,17,0,1,[0],1,0,72,139,1.0
+d2v2_unipen_de,DE-S03/sie_00103_u000,DE-S03/sie_00103,test,DE-S03,17,0,3,"[0, 1]",2,0,16,110,1.0
+d2v2_unipen_de,DE-S03/sie_00103_u001,DE-S03/sie_00103,test,DE-S03,17,1,3,[2],1,0,72,148,1.0
+d2v2_unipen_de,DE-S03/sie_00103_u002,DE-S03/sie_00103,test,DE-S03,17,2,3,[3],1,0,16,110,1.0
+d2v2_unipen_de,DE-S03/sie_00104_u000,DE-S03/sie_00104,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,27,149,1.0
+d2v2_unipen_de,DE-S03/sie_00104_u001,DE-S03/sie_00104,test,DE-S03,17,1,2,"[3, 4]",2,0,103,208,1.0
+d2v2_unipen_de,DE-S03/sie_00105_u000,DE-S03/sie_00105,test,DE-S03,17,0,2,"[0, 1]",2,0,52,221,1.0
+d2v2_unipen_de,DE-S03/sie_00105_u001,DE-S03/sie_00105,test,DE-S03,17,1,2,"[2, 3]",2,0,105,257,1.0
+d2v2_unipen_de,DE-S03/sie_00106_u000,DE-S03/sie_00106,test,DE-S03,17,0,3,"[0, 1, 2]",3,0,54,220,1.0
+d2v2_unipen_de,DE-S03/sie_00106_u001,DE-S03/sie_00106,test,DE-S03,17,1,3,"[3, 4]",2,0,46,176,1.0
+d2v2_unipen_de,DE-S03/sie_00106_u002,DE-S03/sie_00106,test,DE-S03,17,2,3,[5],1,0,91,215,1.0
+d2v2_unipen_de,DE-S03/sie_00107_u000,DE-S03/sie_00107,test,DE-S03,17,0,2,"[0, 1, 3]",3,0,169,232,1.0
+d2v2_unipen_de,DE-S03/sie_00107_u001,DE-S03/sie_00107,test,DE-S03,17,1,2,[2],1,0,13,91,1.0
+d2v2_unipen_de,DE-S03/sie_00108_u000,DE-S03/sie_00108,test,DE-S03,17,0,1,"[0, 1]",2,0,89,214,1.0
+d2v2_unipen_de,DE-S03/sie_00109_u000,DE-S03/sie_00109,test,DE-S03,17,0,3,"[0, 1, 2]",3,1,80,195,1.0
+d2v2_unipen_de,DE-S03/sie_00109_u001,DE-S03/sie_00109,test,DE-S03,17,1,3,[3],1,0,114,135,1.0
+d2v2_unipen_de,DE-S03/sie_00109_u002,DE-S03/sie_00109,test,DE-S03,17,2,3,[4],1,0,35,204,1.0
+d2v2_unipen_de,DE-S03/sie_00110_u000,DE-S03/sie_00110,test,DE-S03,17,0,3,[0],1,0,23,120,1.0
+d2v2_unipen_de,DE-S03/sie_00110_u001,DE-S03/sie_00110,test,DE-S03,17,1,3,"[1, 3]",2,0,96,256,1.0
+d2v2_unipen_de,DE-S03/sie_00110_u002,DE-S03/sie_00110,test,DE-S03,17,2,3,[2],1,0,35,169,1.0
+d2v2_unipen_de,DE-S03/sie_00111_u000,DE-S03/sie_00111,test,DE-S03,17,0,1,"[0, 1]",2,1,50,200,1.0
+d2v2_unipen_de,DE-S03/sie_00112_u000,DE-S03/sie_00112,test,DE-S03,17,0,2,[0],1,0,27,215,1.0
+d2v2_unipen_de,DE-S03/sie_00112_u001,DE-S03/sie_00112,test,DE-S03,17,1,2,[1],1,0,28,167,1.0
+d2v2_unipen_de,DE-S03/sie_00113_u000,DE-S03/sie_00113,test,DE-S03,17,0,1,[0],1,0,49,200,1.0
+d2v2_unipen_de,DE-S03/sie_00114_u000,DE-S03/sie_00114,test,DE-S03,17,0,4,[0],1,0,8,70,1.0
+d2v2_unipen_de,DE-S03/sie_00114_u001,DE-S03/sie_00114,test,DE-S03,17,1,4,[1],1,0,7,61,1.0
+d2v2_unipen_de,DE-S03/sie_00114_u002,DE-S03/sie_00114,test,DE-S03,17,2,4,[2],1,0,73,185,1.0
+d2v2_unipen_de,DE-S03/sie_00114_u003,DE-S03/sie_00114,test,DE-S03,17,3,4,[3],1,0,17,130,1.0
+d2v2_unipen_de,DE-S03/sie_00115_u000,DE-S03/sie_00115,test,DE-S03,17,0,5,[0],1,0,8,66,1.0
+d2v2_unipen_de,DE-S03/sie_00115_u001,DE-S03/sie_00115,test,DE-S03,17,1,5,[1],1,0,8,61,1.0
+d2v2_unipen_de,DE-S03/sie_00115_u002,DE-S03/sie_00115,test,DE-S03,17,2,5,[2],1,0,18,201,1.0
+d2v2_unipen_de,DE-S03/sie_00115_u003,DE-S03/sie_00115,test,DE-S03,17,3,5,[3],1,0,61,147,1.0
+d2v2_unipen_de,DE-S03/sie_00115_u004,DE-S03/sie_00115,test,DE-S03,17,4,5,[4],1,0,14,114,1.0
+d2v2_unipen_de,DE-S03/sie_00116_u000,DE-S03/sie_00116,test,DE-S03,17,0,1,[0],1,0,53,119,1.0
+d2v2_unipen_de,DE-S03/sie_00117_u000,DE-S03/sie_00117,test,DE-S03,17,0,3,[0],1,0,46,191,1.0
+d2v2_unipen_de,DE-S03/sie_00117_u001,DE-S03/sie_00117,test,DE-S03,17,1,3,[1],1,0,29,144,1.0
+d2v2_unipen_de,DE-S03/sie_00117_u002,DE-S03/sie_00117,test,DE-S03,17,2,3,"[2, 3]",2,0,124,258,1.0
+d2v2_unipen_de,DE-S03/sie_00118_u000,DE-S03/sie_00118,test,DE-S03,17,0,3,"[0, 1, 2]",3,0,61,225,1.0
+d2v2_unipen_de,DE-S03/sie_00118_u001,DE-S03/sie_00118,test,DE-S03,17,1,3,"[3, 4]",2,0,48,196,1.0
+d2v2_unipen_de,DE-S03/sie_00118_u002,DE-S03/sie_00118,test,DE-S03,17,2,3,[5],1,0,93,200,1.0
+d2v2_unipen_de,DE-S03/sie_00119_u000,DE-S03/sie_00119,test,DE-S03,17,0,1,[0],1,0,50,194,1.0
+d2v2_unipen_de,DE-S03/sie_00120_u000,DE-S03/sie_00120,test,DE-S03,17,0,1,"[0, 1, 2, 3]",4,0,252,249,1.0
+d2v2_unipen_de,DE-S03/sie_00121_u000,DE-S03/sie_00121,test,DE-S03,17,0,1,"[0, 1]",2,0,104,244,1.0
+d2v2_unipen_de,DE-S03/sie_00122_u000,DE-S03/sie_00122,test,DE-S03,17,0,2,"[0, 1, 2]",3,1,83,205,1.0
+d2v2_unipen_de,DE-S03/sie_00122_u001,DE-S03/sie_00122,test,DE-S03,17,1,2,[3],1,0,70,172,1.0
+d2v2_unipen_de,DE-S03/sie_00123_u000,DE-S03/sie_00123,test,DE-S03,17,0,3,[0],1,0,23,121,1.0
+d2v2_unipen_de,DE-S03/sie_00123_u001,DE-S03/sie_00123,test,DE-S03,17,1,3,"[1, 3]",2,0,104,241,1.0
+d2v2_unipen_de,DE-S03/sie_00123_u002,DE-S03/sie_00123,test,DE-S03,17,2,3,[2],1,0,15,93,1.0
+d2v2_unipen_de,DE-S03/sie_00124_u000,DE-S03/sie_00124,test,DE-S03,17,0,1,"[0, 1]",2,0,108,228,1.0
+d2v2_unipen_de,DE-S03/sie_00125_u000,DE-S03/sie_00125,test,DE-S03,17,0,1,[0],1,0,56,213,1.0
+d2v2_unipen_de,DE-S03/sie_00126_u000,DE-S03/sie_00126,test,DE-S03,17,0,3,"[0, 1]",2,0,25,141,1.0
+d2v2_unipen_de,DE-S03/sie_00126_u001,DE-S03/sie_00126,test,DE-S03,17,1,3,[2],1,0,74,162,1.0
+d2v2_unipen_de,DE-S03/sie_00126_u002,DE-S03/sie_00126,test,DE-S03,17,2,3,[3],1,0,20,168,1.0
+d2v2_unipen_de,DE-S03/sie_00127_u000,DE-S03/sie_00127,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,34,153,1.0
+d2v2_unipen_de,DE-S03/sie_00127_u001,DE-S03/sie_00127,test,DE-S03,17,1,2,[3],1,0,106,208,1.0
+d2v2_unipen_de,DE-S03/sie_00128_u000,DE-S03/sie_00128,test,DE-S03,17,0,2,[0],1,0,47,201,1.0
+d2v2_unipen_de,DE-S03/sie_00128_u001,DE-S03/sie_00128,test,DE-S03,17,1,2,[1],1,0,31,112,1.0
+d2v2_unipen_de,DE-S03/sie_00129_u000,DE-S03/sie_00129,test,DE-S03,17,0,1,[0],1,0,78,217,1.0
+d2v2_unipen_de,DE-S03/sie_00130_u000,DE-S03/sie_00130,test,DE-S03,17,0,1,"[0, 1]",2,0,95,230,1.0
+d2v2_unipen_de,DE-S03/sie_00131_u000,DE-S03/sie_00131,test,DE-S03,17,0,1,[0],1,0,143,164,1.0
+d2v2_unipen_de,DE-S03/sie_00132_u000,DE-S03/sie_00132,test,DE-S03,17,0,1,"[0, 1]",2,1,50,218,1.0
+d2v2_unipen_de,DE-S03/sie_00133_u000,DE-S03/sie_00133,test,DE-S03,17,0,1,[0],1,0,98,222,1.0
+d2v2_unipen_de,DE-S03/sie_00134_u000,DE-S03/sie_00134,test,DE-S03,17,0,1,[0],1,0,47,225,1.0
+d2v2_unipen_de,DE-S03/sie_00135_u000,DE-S03/sie_00135,test,DE-S03,17,0,3,"[0, 1]",2,0,20,121,1.0
+d2v2_unipen_de,DE-S03/sie_00135_u001,DE-S03/sie_00135,test,DE-S03,17,1,3,[2],1,0,69,180,1.0
+d2v2_unipen_de,DE-S03/sie_00135_u002,DE-S03/sie_00135,test,DE-S03,17,2,3,[3],1,0,16,151,1.0
+d2v2_unipen_de,DE-S03/sie_00136_u000,DE-S03/sie_00136,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,30,161,1.0
+d2v2_unipen_de,DE-S03/sie_00136_u001,DE-S03/sie_00136,test,DE-S03,17,1,2,[3],1,0,90,208,1.0
+d2v2_unipen_de,DE-S03/sie_00137_u000,DE-S03/sie_00137,test,DE-S03,17,0,2,[0],1,0,54,220,1.0
+d2v2_unipen_de,DE-S03/sie_00137_u001,DE-S03/sie_00137,test,DE-S03,17,1,2,[1],1,0,117,231,1.0
+d2v2_unipen_de,DE-S03/sie_00138_u000,DE-S03/sie_00138,test,DE-S03,17,0,3,"[0, 1]",2,0,34,197,1.0
+d2v2_unipen_de,DE-S03/sie_00138_u001,DE-S03/sie_00138,test,DE-S03,17,1,3,"[2, 3]",2,1,39,140,1.0
+d2v2_unipen_de,DE-S03/sie_00138_u002,DE-S03/sie_00138,test,DE-S03,17,2,3,[4],1,0,46,179,1.0
+d2v2_unipen_de,DE-S03/sie_00139_u000,DE-S03/sie_00139,test,DE-S03,17,0,1,[0],1,0,168,237,1.0
+d2v2_unipen_de,DE-S03/sie_00140_u000,DE-S03/sie_00140,test,DE-S03,17,0,1,[0],1,0,74,209,1.0
+d2v2_unipen_de,DE-S03/sie_00141_u000,DE-S03/sie_00141,test,DE-S03,17,0,1,[0],1,0,150,183,1.0
+d2v2_unipen_de,DE-S03/sie_00142_u000,DE-S03/sie_00142,test,DE-S03,17,0,1,[0],1,0,47,213,1.0
+d2v2_unipen_de,DE-S03/sie_00143_u000,DE-S03/sie_00143,test,DE-S03,17,0,1,[0],1,0,66,267,1.0
+d2v2_unipen_de,DE-S03/sie_00144_u000,DE-S03/sie_00144,test,DE-S03,17,0,1,[0],1,0,123,227,1.0
+d2v2_unipen_de,DE-S03/sie_00145_u000,DE-S03/sie_00145,test,DE-S03,17,0,1,[0],1,0,46,209,1.0
+d2v2_unipen_de,DE-S03/sie_00146_u000,DE-S03/sie_00146,test,DE-S03,17,0,1,[0],1,0,76,124,1.0
+d2v2_unipen_de,DE-S03/sie_00147_u000,DE-S03/sie_00147,test,DE-S03,17,0,2,"[0, 1]",2,0,18,102,1.0
+d2v2_unipen_de,DE-S03/sie_00147_u001,DE-S03/sie_00147,test,DE-S03,17,1,2,[2],1,0,72,149,1.0
+d2v2_unipen_de,DE-S03/sie_00148_u000,DE-S03/sie_00148,test,DE-S03,17,0,3,"[0, 1]",2,0,18,99,1.0
+d2v2_unipen_de,DE-S03/sie_00148_u001,DE-S03/sie_00148,test,DE-S03,17,1,3,[2],1,0,17,206,1.0
+d2v2_unipen_de,DE-S03/sie_00148_u002,DE-S03/sie_00148,test,DE-S03,17,2,3,[3],1,0,57,147,1.0
+d2v2_unipen_de,DE-S03/sie_00149_u000,DE-S03/sie_00149,test,DE-S03,17,0,1,[0],1,0,52,122,1.0
+d2v2_unipen_de,DE-S03/sie_00150_u000,DE-S03/sie_00150,test,DE-S03,17,0,3,"[0, 1]",2,0,34,218,1.0
+d2v2_unipen_de,DE-S03/sie_00150_u001,DE-S03/sie_00150,test,DE-S03,17,1,3,[2],1,0,53,152,1.0
+d2v2_unipen_de,DE-S03/sie_00150_u002,DE-S03/sie_00150,test,DE-S03,17,2,3,[3],1,0,22,131,1.0
+d2v2_unipen_de,DE-S03/sie_00151_u000,DE-S03/sie_00151,test,DE-S03,17,0,4,"[0, 1]",2,0,35,208,1.0
+d2v2_unipen_de,DE-S03/sie_00151_u001,DE-S03/sie_00151,test,DE-S03,17,1,4,[2],1,0,28,143,1.0
+d2v2_unipen_de,DE-S03/sie_00151_u002,DE-S03/sie_00151,test,DE-S03,17,2,4,[3],1,0,25,157,1.0
+d2v2_unipen_de,DE-S03/sie_00151_u003,DE-S03/sie_00151,test,DE-S03,17,3,4,[4],1,0,22,139,1.0
+d2v2_unipen_de,DE-S03/sie_00152_u000,DE-S03/sie_00152,test,DE-S03,17,0,1,[0],1,0,56,225,1.0
+d2v2_unipen_de,DE-S03/sie_00153_u000,DE-S03/sie_00153,test,DE-S03,17,0,2,[0],1,0,48,186,1.0
+d2v2_unipen_de,DE-S03/sie_00153_u001,DE-S03/sie_00153,test,DE-S03,17,1,2,[1],1,0,29,122,1.0
+d2v2_unipen_de,DE-S03/sie_00154_u000,DE-S03/sie_00154,test,DE-S03,17,0,1,[0],1,0,115,178,1.0
+d2v2_unipen_de,DE-S03/sie_00155_u000,DE-S03/sie_00155,test,DE-S03,17,0,1,[0],1,0,76,223,1.0
+d2v2_unipen_de,DE-S03/sie_00156_u000,DE-S03/sie_00156,test,DE-S03,17,0,2,"[0, 1]",2,1,81,217,1.0
+d2v2_unipen_de,DE-S03/sie_00156_u001,DE-S03/sie_00156,test,DE-S03,17,1,2,[2],1,0,75,170,1.0
+d2v2_unipen_de,DE-S03/sie_00157_u000,DE-S03/sie_00157,test,DE-S03,17,0,3,[0],1,0,22,113,1.0
+d2v2_unipen_de,DE-S03/sie_00157_u001,DE-S03/sie_00157,test,DE-S03,17,1,3,[1],1,0,38,192,1.0
+d2v2_unipen_de,DE-S03/sie_00157_u002,DE-S03/sie_00157,test,DE-S03,17,2,3,[2],1,0,36,187,1.0
+d2v2_unipen_de,DE-S03/sie_00158_u000,DE-S03/sie_00158,test,DE-S03,17,0,1,[0],1,0,94,206,1.0
+d2v2_unipen_de,DE-S03/sie_00159_u000,DE-S03/sie_00159,test,DE-S03,17,0,2,"[0, 1]",2,0,17,95,1.0
+d2v2_unipen_de,DE-S03/sie_00159_u001,DE-S03/sie_00159,test,DE-S03,17,1,2,[2],1,0,70,158,1.0
+d2v2_unipen_de,DE-S03/sie_00160_u000,DE-S03/sie_00160,test,DE-S03,17,0,1,[0],1,0,58,134,1.0
+d2v2_unipen_de,DE-S03/sie_00161_u000,DE-S03/sie_00161,test,DE-S03,17,0,1,[0],1,0,54,244,1.0
+d2v2_unipen_de,DE-S03/sie_00162_u000,DE-S03/sie_00162,test,DE-S03,17,0,2,"[0, 1]",2,0,34,199,1.0
+d2v2_unipen_de,DE-S03/sie_00162_u001,DE-S03/sie_00162,test,DE-S03,17,1,2,[2],1,0,38,148,1.0
+d2v2_unipen_de,DE-S03/sie_00163_u000,DE-S03/sie_00163,test,DE-S03,17,0,1,"[0, 1, 2]",3,0,53,213,1.0
+d2v2_unipen_de,DE-S03/sie_00164_u000,DE-S03/sie_00164,test,DE-S03,17,0,1,"[0, 1]",2,0,142,208,1.0
+d2v2_unipen_de,DE-S03/sie_00165_u000,DE-S03/sie_00165,test,DE-S03,17,0,1,"[0, 1, 2]",3,1,157,197,1.0
+d2v2_unipen_de,DE-S03/sie_00166_u000,DE-S03/sie_00166,test,DE-S03,17,0,1,[0],1,0,47,193,1.0
+d2v2_unipen_de,DE-S03/sie_00167_u000,DE-S03/sie_00167,test,DE-S03,17,0,3,"[0, 2]",2,0,17,102,1.0
+d2v2_unipen_de,DE-S03/sie_00167_u001,DE-S03/sie_00167,test,DE-S03,17,1,3,[1],1,0,8,60,1.0
+d2v2_unipen_de,DE-S03/sie_00167_u002,DE-S03/sie_00167,test,DE-S03,17,2,3,"[3, 4]",2,0,98,219,1.0
+d2v2_unipen_de,DE-S03/sie_00168_u000,DE-S03/sie_00168,test,DE-S03,17,0,2,"[0, 1]",2,0,54,238,1.0
+d2v2_unipen_de,DE-S03/sie_00168_u001,DE-S03/sie_00168,test,DE-S03,17,1,2,[2],1,0,96,235,1.0
+d2v2_unipen_de,DE-S03/sie_00169_u000,DE-S03/sie_00169,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,1,79,205,1.0
+d2v2_unipen_de,DE-S03/sie_00169_u001,DE-S03/sie_00169,test,DE-S03,17,1,2,"[4, 5]",2,0,45,203,1.0
+d2v2_unipen_de,DE-S03/sie_00170_u000,DE-S03/sie_00170,test,DE-S03,17,0,3,"[0, 1, 2]",3,0,62,236,1.0
+d2v2_unipen_de,DE-S03/sie_00170_u001,DE-S03/sie_00170,test,DE-S03,17,1,3,"[3, 4]",2,0,55,201,1.0
+d2v2_unipen_de,DE-S03/sie_00170_u002,DE-S03/sie_00170,test,DE-S03,17,2,3,[5],1,0,83,193,1.0
+d2v2_unipen_de,DE-S03/sie_00171_u000,DE-S03/sie_00171,test,DE-S03,17,0,1,[0],1,0,48,233,1.0
+d2v2_unipen_de,DE-S03/sie_00172_u000,DE-S03/sie_00172,test,DE-S03,17,0,2,[0],1,0,68,227,1.0
+d2v2_unipen_de,DE-S03/sie_00172_u001,DE-S03/sie_00172,test,DE-S03,17,1,2,[1],1,0,31,107,1.0
+d2v2_unipen_de,DE-S03/sie_00173_u000,DE-S03/sie_00173,test,DE-S03,17,0,1,[0],1,0,88,234,1.0
+d2v2_unipen_de,DE-S03/sie_00174_u000,DE-S03/sie_00174,test,DE-S03,17,0,2,[0],1,0,26,193,1.0
+d2v2_unipen_de,DE-S03/sie_00174_u001,DE-S03/sie_00174,test,DE-S03,17,1,2,[1],1,0,32,167,1.0
+d2v2_unipen_de,DE-S03/sie_00175_u000,DE-S03/sie_00175,test,DE-S03,17,0,1,[0],1,0,59,217,1.0
+d2v2_unipen_de,DE-S03/sie_00176_u000,DE-S03/sie_00176,test,DE-S03,17,0,1,[0],1,0,73,132,1.0
+d2v2_unipen_de,DE-S03/sie_00177_u000,DE-S03/sie_00177,test,DE-S03,17,0,2,[0],1,0,60,250,1.0
+d2v2_unipen_de,DE-S03/sie_00177_u001,DE-S03/sie_00177,test,DE-S03,17,1,2,[1],1,0,106,241,1.0
+d2v2_unipen_de,DE-S03/sie_00178_u000,DE-S03/sie_00178,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,1,91,206,1.0
+d2v2_unipen_de,DE-S03/sie_00178_u001,DE-S03/sie_00178,test,DE-S03,17,1,2,"[4, 5]",2,0,56,200,1.0
+d2v2_unipen_de,DE-S03/sie_00179_u000,DE-S03/sie_00179,test,DE-S03,17,0,3,"[0, 1, 2]",3,0,56,209,1.0
+d2v2_unipen_de,DE-S03/sie_00179_u001,DE-S03/sie_00179,test,DE-S03,17,1,3,"[3, 4]",2,0,49,202,1.0
+d2v2_unipen_de,DE-S03/sie_00179_u002,DE-S03/sie_00179,test,DE-S03,17,2,3,[5],1,0,82,192,1.0
+d2v2_unipen_de,DE-S03/sie_00180_u000,DE-S03/sie_00180,test,DE-S03,17,0,1,[0],1,0,51,240,1.0
+d2v2_unipen_de,DE-S03/sie_00181_u000,DE-S03/sie_00181,test,DE-S03,17,0,3,[0],1,0,36,192,1.0
+d2v2_unipen_de,DE-S03/sie_00181_u001,DE-S03/sie_00181,test,DE-S03,17,1,3,"[1, 2]",2,0,84,210,1.0
+d2v2_unipen_de,DE-S03/sie_00181_u002,DE-S03/sie_00181,test,DE-S03,17,2,3,[3],1,0,50,191,1.0
+d2v2_unipen_de,DE-S03/sie_00182_u000,DE-S03/sie_00182,test,DE-S03,17,0,2,[0],1,0,37,213,1.0
+d2v2_unipen_de,DE-S03/sie_00182_u001,DE-S03/sie_00182,test,DE-S03,17,1,2,[1],1,0,32,174,1.0
+d2v2_unipen_de,DE-S03/sie_00183_u000,DE-S03/sie_00183,test,DE-S03,17,0,1,"[0, 1]",2,0,113,221,1.0
+d2v2_unipen_de,DE-S03/sie_00184_u000,DE-S03/sie_00184,test,DE-S03,17,0,4,"[0, 1]",2,0,19,106,1.0
+d2v2_unipen_de,DE-S03/sie_00184_u001,DE-S03/sie_00184,test,DE-S03,17,1,4,[2],1,0,18,171,1.0
+d2v2_unipen_de,DE-S03/sie_00184_u002,DE-S03/sie_00184,test,DE-S03,17,2,4,[3],1,0,61,141,1.0
+d2v2_unipen_de,DE-S03/sie_00184_u003,DE-S03/sie_00184,test,DE-S03,17,3,4,[4],1,0,13,104,1.0
+d2v2_unipen_de,DE-S03/sie_00185_u000,DE-S03/sie_00185,test,DE-S03,17,0,3,"[0, 1]",2,0,35,187,1.0
+d2v2_unipen_de,DE-S03/sie_00185_u001,DE-S03/sie_00185,test,DE-S03,17,1,3,"[2, 3]",2,1,49,134,1.0
+d2v2_unipen_de,DE-S03/sie_00185_u002,DE-S03/sie_00185,test,DE-S03,17,2,3,"[4, 5]",2,0,44,175,1.0
+d2v2_unipen_de,DE-S03/sie_00186_u000,DE-S03/sie_00186,test,DE-S03,17,0,1,[0],1,0,51,236,1.0
+d2v2_unipen_de,DE-S03/sie_00187_u000,DE-S03/sie_00187,test,DE-S03,17,0,2,[0],1,0,52,212,1.0
+d2v2_unipen_de,DE-S03/sie_00187_u001,DE-S03/sie_00187,test,DE-S03,17,1,2,[1],1,0,32,123,1.0
+d2v2_unipen_de,DE-S03/sie_00188_u000,DE-S03/sie_00188,test,DE-S03,17,0,1,[0],1,0,75,178,1.0
+d2v2_unipen_de,DE-S03/sie_00189_u000,DE-S03/sie_00189,test,DE-S03,17,0,1,"[0, 1, 2]",3,1,156,195,1.0
+d2v2_unipen_de,DE-S03/sie_00190_u000,DE-S03/sie_00190,test,DE-S03,17,0,4,[0],1,0,24,116,1.0
+d2v2_unipen_de,DE-S03/sie_00190_u001,DE-S03/sie_00190,test,DE-S03,17,1,4,"[1, 2]",2,0,90,244,1.0
+d2v2_unipen_de,DE-S03/sie_00190_u002,DE-S03/sie_00190,test,DE-S03,17,2,4,[3],1,0,22,209,1.0
+d2v2_unipen_de,DE-S03/sie_00190_u003,DE-S03/sie_00190,test,DE-S03,17,3,4,[4],1,0,29,128,1.0
+d2v2_unipen_de,DE-S03/sie_00191_u000,DE-S03/sie_00191,test,DE-S03,17,0,1,"[0, 1]",2,1,56,193,1.0
+d2v2_unipen_de,DE-S03/sie_00192_u000,DE-S03/sie_00192,test,DE-S03,17,0,1,[0],1,0,55,197,1.0
+d2v2_unipen_de,DE-S03/sie_00193_u000,DE-S03/sie_00193,test,DE-S03,17,0,2,"[0, 1, 2]",3,0,30,127,1.0
+d2v2_unipen_de,DE-S03/sie_00193_u001,DE-S03/sie_00193,test,DE-S03,17,1,2,"[3, 4]",2,0,118,218,1.0
+d2v2_unipen_de,DE-S03/sie_00194_u000,DE-S03/sie_00194,test,DE-S03,17,0,1,[0],1,0,71,128,1.0
+d2v2_unipen_de,DE-S03/sie_00195_u000,DE-S03/sie_00195,test,DE-S03,17,0,2,"[0, 1, 2, 3]",4,1,76,195,1.0
+d2v2_unipen_de,DE-S03/sie_00195_u001,DE-S03/sie_00195,test,DE-S03,17,1,2,"[4, 5]",2,0,49,198,1.0
+d2v2_unipen_de,DE-S03/sie_00196_u000,DE-S03/sie_00196,test,DE-S03,17,0,3,"[0, 1, 2]",3,0,64,193,1.0
+d2v2_unipen_de,DE-S03/sie_00196_u001,DE-S03/sie_00196,test,DE-S03,17,1,3,"[3, 4]",2,0,53,181,1.0
+d2v2_unipen_de,DE-S03/sie_00196_u002,DE-S03/sie_00196,test,DE-S03,17,2,3,[5],1,0,90,181,1.0
+d2v2_unipen_de,DE-S03/sie_00197_u000,DE-S03/sie_00197,test,DE-S03,17,0,1,[0],1,0,64,215,1.0
+d2v2_unipen_de,DE-S03/sie_00198_u000,DE-S03/sie_00198,test,DE-S03,17,0,1,"[0, 1]",2,0,105,231,1.0
+d2v2_unipen_de,DE-S03/sie_00199_u000,DE-S03/sie_00199,test,DE-S03,17,0,2,[0],1,0,29,197,1.0
+d2v2_unipen_de,DE-S03/sie_00199_u001,DE-S03/sie_00199,test,DE-S03,17,1,2,[1],1,0,32,179,1.0
+d2v2_unipen_de,DE-S03/sie_00200_u000,DE-S03/sie_00200,test,DE-S03,17,0,2,[0],1,0,35,197,1.0
+d2v2_unipen_de,DE-S03/sie_00200_u001,DE-S03/sie_00200,test,DE-S03,17,1,2,"[1, 2]",2,0,92,271,1.0
+d2v2_unipen_de,DE-S03/sie_00201_u000,DE-S03/sie_00201,test,DE-S03,17,0,5,[1],1,0,6,60,1.0
+d2v2_unipen_de,DE-S03/sie_00201_u001,DE-S03/sie_00201,test,DE-S03,17,1,5,[0],1,0,10,72,1.0
+d2v2_unipen_de,DE-S03/sie_00201_u002,DE-S03/sie_00201,test,DE-S03,17,2,5,[2],1,0,19,194,1.0
+d2v2_unipen_de,DE-S03/sie_00201_u003,DE-S03/sie_00201,test,DE-S03,17,3,5,[3],1,0,68,154,1.0
+d2v2_unipen_de,DE-S03/sie_00201_u004,DE-S03/sie_00201,test,DE-S03,17,4,5,[4],1,0,15,101,1.0
+d2v2_unipen_de,DE-S03/sie_00202_u000,DE-S03/sie_00202,test,DE-S03,17,0,1,[0],1,0,58,108,1.0
+d2v2_unipen_de,DE-S04/sie_00001_u000,DE-S04/sie_00001,test,DE-S04,18,0,1,[0],1,0,67,142,1.0
+d2v2_unipen_de,DE-S04/sie_00002_u000,DE-S04/sie_00002,test,DE-S04,18,0,1,[0],1,0,56,128,1.0
+d2v2_unipen_de,DE-S04/sie_00003_u000,DE-S04/sie_00003,test,DE-S04,18,0,1,[0],1,0,88,173,1.0
+d2v2_unipen_de,DE-S04/sie_00004_u000,DE-S04/sie_00004,test,DE-S04,18,0,1,[0],1,0,134,233,1.0
+d2v2_unipen_de,DE-S04/sie_00005_u000,DE-S04/sie_00005,test,DE-S04,18,0,1,[0],1,0,179,227,1.0
+d2v2_unipen_de,DE-S04/sie_00006_u000,DE-S04/sie_00006,test,DE-S04,18,0,1,[0],1,0,122,209,1.0
+d2v2_unipen_de,DE-S04/sie_00007_u000,DE-S04/sie_00007,test,DE-S04,18,0,1,[0],1,0,83,195,1.0
+d2v2_unipen_de,DE-S04/sie_00008_u000,DE-S04/sie_00008,test,DE-S04,18,0,1,[0],1,0,97,193,1.0
+d2v2_unipen_de,DE-S04/sie_00009_u000,DE-S04/sie_00009,test,DE-S04,18,0,1,[0],1,0,92,151,1.0
+d2v2_unipen_de,DE-S04/sie_00010_u000,DE-S04/sie_00010,test,DE-S04,18,0,1,[0],1,0,81,131,1.0
+d2v2_unipen_de,DE-S04/sie_00011_u000,DE-S04/sie_00011,test,DE-S04,18,0,1,[0],1,0,104,174,1.0
+d2v2_unipen_de,DE-S04/sie_00012_u000,DE-S04/sie_00012,test,DE-S04,18,0,1,[0],1,0,94,168,1.0
+d2v2_unipen_de,DE-S04/sie_00013_u000,DE-S04/sie_00013,test,DE-S04,18,0,1,[0],1,0,82,183,1.0
+d2v2_unipen_de,DE-S04/sie_00014_u000,DE-S04/sie_00014,test,DE-S04,18,0,1,[0],1,0,163,244,1.0
+d2v2_unipen_de,DE-S04/sie_00015_u000,DE-S04/sie_00015,test,DE-S04,18,0,1,[0],1,0,128,221,1.0
+d2v2_unipen_de,DE-S04/sie_00016_u000,DE-S04/sie_00016,test,DE-S04,18,0,1,[0],1,0,93,155,1.0
+d2v2_unipen_de,DE-S04/sie_00017_u000,DE-S04/sie_00017,test,DE-S04,18,0,1,[0],1,0,93,181,1.0
+d2v2_unipen_de,DE-S04/sie_00018_u000,DE-S04/sie_00018,test,DE-S04,18,0,1,[0],1,0,120,233,1.0
+d2v2_unipen_de,DE-S04/sie_00019_u000,DE-S04/sie_00019,test,DE-S04,18,0,1,[0],1,0,130,235,1.0
+d2v2_unipen_de,DE-S04/sie_00020_u000,DE-S04/sie_00020,test,DE-S04,18,0,1,[0],1,0,103,195,1.0
+d2v2_unipen_de,DE-S04/sie_00021_u000,DE-S04/sie_00021,test,DE-S04,18,0,1,[0],1,0,79,138,1.0
+d2v2_unipen_de,DE-S04/sie_00022_u000,DE-S04/sie_00022,test,DE-S04,18,0,1,[0],1,0,69,155,1.0
+d2v2_unipen_de,DE-S04/sie_00023_u000,DE-S04/sie_00023,test,DE-S04,18,0,1,[0],1,0,120,232,1.0
+d2v2_unipen_de,DE-S04/sie_00024_u000,DE-S04/sie_00024,test,DE-S04,18,0,1,[0],1,0,78,183,1.0
+d2v2_unipen_de,DE-S04/sie_00025_u000,DE-S04/sie_00025,test,DE-S04,18,0,1,[0],1,0,121,197,1.0
+d2v2_unipen_de,DE-S04/sie_00026_u000,DE-S04/sie_00026,test,DE-S04,18,0,1,[0],1,0,91,164,1.0
+d2v2_unipen_de,DE-S04/sie_00027_u000,DE-S04/sie_00027,test,DE-S04,18,0,1,[0],1,0,74,139,1.0
+d2v2_unipen_de,DE-S04/sie_00028_u000,DE-S04/sie_00028,test,DE-S04,18,0,1,[0],1,0,122,241,1.0
+d2v2_unipen_de,DE-S04/sie_00029_u000,DE-S04/sie_00029,test,DE-S04,18,0,1,[0],1,0,83,172,1.0
+d2v2_unipen_de,DE-S04/sie_00030_u000,DE-S04/sie_00030,test,DE-S04,18,0,1,[0],1,0,117,181,1.0
+d2v2_unipen_de,DE-S04/sie_00031_u000,DE-S04/sie_00031,test,DE-S04,18,0,1,[0],1,0,75,141,1.0
+d2v2_unipen_de,DE-S04/sie_00032_u000,DE-S04/sie_00032,test,DE-S04,18,0,1,[0],1,0,93,169,1.0
+d2v2_unipen_de,DE-S04/sie_00033_u000,DE-S04/sie_00033,test,DE-S04,18,0,1,[0],1,0,69,146,1.0
+d2v2_unipen_de,DE-S04/sie_00034_u000,DE-S04/sie_00034,test,DE-S04,18,0,1,[0],1,0,73,162,1.0
+d2v2_unipen_de,DE-S04/sie_00035_u000,DE-S04/sie_00035,test,DE-S04,18,0,1,[0],1,0,61,126,1.0
+d2v2_unipen_de,DE-S04/sie_00036_u000,DE-S04/sie_00036,test,DE-S04,18,0,1,[0],1,0,104,174,1.0
+d2v2_unipen_de,DE-S04/sie_00037_u000,DE-S04/sie_00037,test,DE-S04,18,0,1,[0],1,0,94,166,1.0
+d2v2_unipen_de,DE-S04/sie_00038_u000,DE-S04/sie_00038,test,DE-S04,18,0,1,[0],1,0,116,243,1.0
+d2v2_unipen_de,DE-S04/sie_00039_u000,DE-S04/sie_00039,test,DE-S04,18,0,1,[0],1,0,139,226,1.0
+d2v2_unipen_de,DE-S04/sie_00040_u000,DE-S04/sie_00040,test,DE-S04,18,0,1,[0],1,0,155,237,1.0
+d2v2_unipen_de,DE-S04/sie_00041_u000,DE-S04/sie_00041,test,DE-S04,18,0,1,[0],1,0,134,191,1.0
+d2v2_unipen_de,DE-S04/sie_00042_u000,DE-S04/sie_00042,test,DE-S04,18,0,1,[0],1,0,97,199,1.0
+d2v2_unipen_de,DE-S04/sie_00043_u000,DE-S04/sie_00043,test,DE-S04,18,0,1,[0],1,0,108,189,1.0
+d2v2_unipen_de,DE-S04/sie_00044_u000,DE-S04/sie_00044,test,DE-S04,18,0,1,[0],1,0,68,147,1.0
+d2v2_unipen_de,DE-S04/sie_00045_u000,DE-S04/sie_00045,test,DE-S04,18,0,1,[0],1,0,72,178,1.0
+d2v2_unipen_de,DE-S04/sie_00046_u000,DE-S04/sie_00046,test,DE-S04,18,0,1,[0],1,0,87,166,1.0
+d2v2_unipen_de,DE-S04/sie_00047_u000,DE-S04/sie_00047,test,DE-S04,18,0,1,[0],1,0,132,224,1.0
+d2v2_unipen_de,DE-S04/sie_00048_u000,DE-S04/sie_00048,test,DE-S04,18,0,1,[0],1,0,108,214,1.0
+d2v2_unipen_de,DE-S04/sie_00049_u000,DE-S04/sie_00049,test,DE-S04,18,0,1,[0],1,0,151,229,1.0
+d2v2_unipen_de,DE-S04/sie_00050_u000,DE-S04/sie_00050,test,DE-S04,18,0,1,[0],1,0,142,230,1.0
+d2v2_unipen_de,DE-S04/sie_00051_u000,DE-S04/sie_00051,test,DE-S04,18,0,1,[0],1,0,92,172,1.0
+d2v2_unipen_de,DE-S04/sie_00052_u000,DE-S04/sie_00052,test,DE-S04,18,0,1,[0],1,0,79,185,1.0
+d2v2_unipen_de,DE-S04/sie_00053_u000,DE-S04/sie_00053,test,DE-S04,18,0,1,[0],1,0,82,164,1.0
+d2v2_unipen_de,DE-S04/sie_00054_u000,DE-S04/sie_00054,test,DE-S04,18,0,1,[0],1,0,130,237,1.0
+d2v2_unipen_de,DE-S04/sie_00055_u000,DE-S04/sie_00055,test,DE-S04,18,0,1,[0],1,0,128,236,1.0
+d2v2_unipen_de,DE-S04/sie_00056_u000,DE-S04/sie_00056,test,DE-S04,18,0,1,[0],1,0,128,207,1.0
+d2v2_unipen_de,DE-S04/sie_00057_u000,DE-S04/sie_00057,test,DE-S04,18,0,1,[0],1,0,57,132,1.0
+d2v2_unipen_de,DE-S04/sie_00058_u000,DE-S04/sie_00058,test,DE-S04,18,0,1,[0],1,0,53,165,1.0
+d2v2_unipen_de,DE-S04/sie_00059_u000,DE-S04/sie_00059,test,DE-S04,18,0,1,[0],1,0,57,124,1.0
+d2v2_unipen_de,DE-S04/sie_00060_u000,DE-S04/sie_00060,test,DE-S04,18,0,1,[0],1,0,140,217,1.0
+d2v2_unipen_de,DE-S04/sie_00061_u000,DE-S04/sie_00061,test,DE-S04,18,0,1,[0],1,0,175,230,1.0
+d2v2_unipen_de,DE-S04/sie_00062_u000,DE-S04/sie_00062,test,DE-S04,18,0,1,[0],1,0,99,169,1.0
+d2v2_unipen_de,DE-S04/sie_00063_u000,DE-S04/sie_00063,test,DE-S04,18,0,1,[0],1,0,63,169,1.0
+d2v2_unipen_de,DE-S04/sie_00064_u000,DE-S04/sie_00064,test,DE-S04,18,0,1,[0],1,0,125,223,1.0
+d2v2_unipen_de,DE-S04/sie_00065_u000,DE-S04/sie_00065,test,DE-S04,18,0,1,[0],1,0,167,235,1.0
+d2v2_unipen_de,DE-S04/sie_00066_u000,DE-S04/sie_00066,test,DE-S04,18,0,1,[0],1,0,113,192,1.0
+d2v2_unipen_de,DE-S04/sie_00067_u000,DE-S04/sie_00067,test,DE-S04,18,0,1,[0],1,0,77,180,1.0
+d2v2_unipen_de,DE-S04/sie_00068_u000,DE-S04/sie_00068,test,DE-S04,18,0,1,[0],1,0,101,192,1.0
+d2v2_unipen_de,DE-S04/sie_00069_u000,DE-S04/sie_00069,test,DE-S04,18,0,1,[0],1,0,72,141,1.0
+d2v2_unipen_de,DE-S04/sie_00070_u000,DE-S04/sie_00070,test,DE-S04,18,0,1,[0],1,0,58,126,1.0
+d2v2_unipen_de,DE-S04/sie_00071_u000,DE-S04/sie_00071,test,DE-S04,18,0,1,[0],1,0,103,178,1.0
+d2v2_unipen_de,DE-S04/sie_00072_u000,DE-S04/sie_00072,test,DE-S04,18,0,1,[0],1,0,103,182,1.0
+d2v2_unipen_de,DE-S04/sie_00073_u000,DE-S04/sie_00073,test,DE-S04,18,0,1,[0],1,0,125,223,1.0
+d2v2_unipen_de,DE-S04/sie_00074_u000,DE-S04/sie_00074,test,DE-S04,18,0,1,[0],1,0,95,216,1.0
+d2v2_unipen_de,DE-S04/sie_00075_u000,DE-S04/sie_00075,test,DE-S04,18,0,1,[0],1,0,119,183,1.0
+d2v2_unipen_de,DE-S04/sie_00076_u000,DE-S04/sie_00076,test,DE-S04,18,0,1,[0],1,0,83,178,1.0
+d2v2_unipen_de,DE-S04/sie_00077_u000,DE-S04/sie_00077,test,DE-S04,18,0,1,[0],1,0,97,195,1.0
+d2v2_unipen_de,DE-S04/sie_00078_u000,DE-S04/sie_00078,test,DE-S04,18,0,1,[0],1,0,65,144,1.0
+d2v2_unipen_de,DE-S04/sie_00079_u000,DE-S04/sie_00079,test,DE-S04,18,0,1,"[0, 1]",2,1,66,174,1.0
+d2v2_unipen_de,DE-S04/sie_00080_u000,DE-S04/sie_00080,test,DE-S04,18,0,1,[0],1,0,62,126,1.0
+d2v2_unipen_de,DE-S04/sie_00081_u000,DE-S04/sie_00081,test,DE-S04,18,0,1,[0],1,0,108,180,1.0
+d2v2_unipen_de,DE-S04/sie_00082_u000,DE-S04/sie_00082,test,DE-S04,18,0,1,[0],1,0,127,261,1.0
+d2v2_unipen_de,DE-S04/sie_00083_u000,DE-S04/sie_00083,test,DE-S04,18,0,1,[0],1,0,128,217,1.0
+d2v2_unipen_de,DE-S04/sie_00084_u000,DE-S04/sie_00084,test,DE-S04,18,0,1,[0],1,0,164,231,1.0
+d2v2_unipen_de,DE-S04/sie_00085_u000,DE-S04/sie_00085,test,DE-S04,18,0,1,[0],1,0,85,182,1.0
+d2v2_unipen_de,DE-S04/sie_00086_u000,DE-S04/sie_00086,test,DE-S04,18,0,1,[0],1,0,94,208,1.0
+d2v2_unipen_de,DE-S04/sie_00087_u000,DE-S04/sie_00087,test,DE-S04,18,0,1,[0],1,0,68,152,1.0
+d2v2_unipen_de,DE-S04/sie_00088_u000,DE-S04/sie_00088,test,DE-S04,18,0,1,[0],1,0,130,225,1.0
+d2v2_unipen_de,DE-S04/sie_00089_u000,DE-S04/sie_00089,test,DE-S04,18,0,1,[0],1,0,132,246,1.0
+d2v2_unipen_de,DE-S04/sie_00090_u000,DE-S04/sie_00090,test,DE-S04,18,0,1,[0],1,0,98,188,1.0
+d2v2_unipen_de,DE-S04/sie_00091_u000,DE-S04/sie_00091,test,DE-S04,18,0,1,[0],1,0,113,185,1.0
+d2v2_unipen_de,DE-S04/sie_00092_u000,DE-S04/sie_00092,test,DE-S04,18,0,1,[0],1,0,78,157,1.0
+d2v2_unipen_de,DE-S04/sie_00093_u000,DE-S04/sie_00093,test,DE-S04,18,0,1,[0],1,0,66,161,1.0
+d2v2_unipen_de,DE-S04/sie_00094_u000,DE-S04/sie_00094,test,DE-S04,18,0,1,[0],1,0,59,125,1.0
+d2v2_unipen_de,DE-S04/sie_00095_u000,DE-S04/sie_00095,test,DE-S04,18,0,1,[0],1,0,88,170,1.0
+d2v2_unipen_de,DE-S04/sie_00096_u000,DE-S04/sie_00096,test,DE-S04,18,0,1,[0],1,0,90,194,1.0
+d2v2_unipen_de,DE-S04/sie_00097_u000,DE-S04/sie_00097,test,DE-S04,18,0,1,[0],1,0,161,238,1.0
+d2v2_unipen_de,DE-S04/sie_00098_u000,DE-S04/sie_00098,test,DE-S04,18,0,1,[0],1,0,117,204,1.0
+d2v2_unipen_de,DE-S04/sie_00099_u000,DE-S04/sie_00099,test,DE-S04,18,0,1,[0],1,0,83,176,1.0
+d2v2_unipen_de,DE-S04/sie_00100_u000,DE-S04/sie_00100,test,DE-S04,18,0,1,[0],1,0,92,181,1.0
+d2v2_unipen_de,DE-S04/sie_00101_u000,DE-S04/sie_00101,test,DE-S04,18,0,1,[0],1,0,61,132,1.0
+d2v2_unipen_de,DE-S04/sie_00102_u000,DE-S04/sie_00102,test,DE-S04,18,0,1,[0],1,0,86,211,1.0
+d2v2_unipen_de,DE-S04/sie_00103_u000,DE-S04/sie_00103,test,DE-S04,18,0,1,[0],1,0,160,245,1.0
+d2v2_unipen_de,DE-S04/sie_00104_u000,DE-S04/sie_00104,test,DE-S04,18,0,1,[0],1,0,120,173,1.0
+d2v2_unipen_de,DE-S04/sie_00105_u000,DE-S04/sie_00105,test,DE-S04,18,0,1,[0],1,0,60,137,1.0
+d2v2_unipen_de,DE-S04/sie_00106_u000,DE-S04/sie_00106,test,DE-S04,18,0,1,[0],1,0,58,120,1.0
+d2v2_unipen_de,DE-S04/sie_00107_u000,DE-S04/sie_00107,test,DE-S04,18,0,1,[0],1,0,102,194,1.0
+d2v2_unipen_de,DE-S04/sie_00108_u000,DE-S04/sie_00108,test,DE-S04,18,0,1,[0],1,0,79,168,1.0
+d2v2_unipen_de,DE-S04/sie_00109_u000,DE-S04/sie_00109,test,DE-S04,18,0,1,[0],1,0,120,249,1.0
+d2v2_unipen_de,DE-S04/sie_00110_u000,DE-S04/sie_00110,test,DE-S04,18,0,1,[0],1,0,121,219,1.0
+d2v2_unipen_de,DE-S04/sie_00111_u000,DE-S04/sie_00111,test,DE-S04,18,0,1,[0],1,0,72,195,1.0
+d2v2_unipen_de,DE-S04/sie_00112_u000,DE-S04/sie_00112,test,DE-S04,18,0,1,[0],1,0,187,245,1.0
+d2v2_unipen_de,DE-S04/sie_00113_u000,DE-S04/sie_00113,test,DE-S04,18,0,1,[0],1,0,60,137,1.0
+d2v2_unipen_de,DE-S04/sie_00114_u000,DE-S04/sie_00114,test,DE-S04,18,0,1,[0],1,0,90,179,1.0
+d2v2_unipen_de,DE-S04/sie_00115_u000,DE-S04/sie_00115,test,DE-S04,18,0,1,[0],1,0,114,216,1.0
+d2v2_unipen_de,DE-S04/sie_00116_u000,DE-S04/sie_00116,test,DE-S04,18,0,1,[0],1,0,122,228,1.0
+d2v2_unipen_de,DE-S04/sie_00117_u000,DE-S04/sie_00117,test,DE-S04,18,0,1,[0],1,0,68,145,1.0
+d2v2_unipen_de,DE-S04/sie_00118_u000,DE-S04/sie_00118,test,DE-S04,18,0,1,[0],1,0,87,201,1.0
+d2v2_unipen_de,DE-S04/sie_00119_u000,DE-S04/sie_00119,test,DE-S04,18,0,1,[0],1,0,139,225,1.0
+d2v2_unipen_de,DE-S04/sie_00120_u000,DE-S04/sie_00120,test,DE-S04,18,0,1,[0],1,0,62,132,1.0
+d2v2_unipen_de,DE-S04/sie_00121_u000,DE-S04/sie_00121,test,DE-S04,18,0,1,[0],1,0,90,174,1.0
+d2v2_unipen_de,DE-S04/sie_00122_u000,DE-S04/sie_00122,test,DE-S04,18,0,1,[0],1,0,86,177,1.0
+d2v2_unipen_de,DE-S04/sie_00123_u000,DE-S04/sie_00123,test,DE-S04,18,0,1,[0],1,0,117,219,1.0
+d2v2_unipen_de,DE-S04/sie_00124_u000,DE-S04/sie_00124,test,DE-S04,18,0,1,[0],1,0,126,213,1.0
+d2v2_unipen_de,DE-S04/sie_00125_u000,DE-S04/sie_00125,test,DE-S04,18,0,1,[0],1,0,59,141,1.0
+d2v2_unipen_de,DE-S04/sie_00126_u000,DE-S04/sie_00126,test,DE-S04,18,0,1,[0],1,0,92,185,1.0
+d2v2_unipen_de,DE-S04/sie_00127_u000,DE-S04/sie_00127,test,DE-S04,18,0,1,[0],1,0,108,228,1.0
+d2v2_unipen_de,DE-S04/sie_00128_u000,DE-S04/sie_00128,test,DE-S04,18,0,1,[0],1,0,70,200,1.0
+d2v2_unipen_de,DE-S04/sie_00129_u000,DE-S04/sie_00129,test,DE-S04,18,0,1,[0],1,0,108,164,1.0
+d2v2_unipen_de,DE-S04/sie_00130_u000,DE-S04/sie_00130,test,DE-S04,18,0,1,[0],1,0,62,146,1.0
+d2v2_unipen_de,DE-S06/sie_00001_u000,DE-S06/sie_00001,test,DE-S06,20,0,1,[0],1,0,141,180,1.0
+d2v2_unipen_de,DE-S06/sie_00002_u000,DE-S06/sie_00002,test,DE-S06,20,0,1,[0],1,0,177,252,1.0
+d2v2_unipen_de,DE-S06/sie_00003_u000,DE-S06/sie_00003,test,DE-S06,20,0,1,[0],1,0,142,190,1.0
+d2v2_unipen_de,DE-S06/sie_00004_u000,DE-S06/sie_00004,test,DE-S06,20,0,1,[0],1,0,105,201,1.0
+d2v2_unipen_de,DE-S06/sie_00005_u000,DE-S06/sie_00005,test,DE-S06,20,0,1,[0],1,0,162,218,1.0
+d2v2_unipen_de,DE-S06/sie_00006_u000,DE-S06/sie_00006,test,DE-S06,20,0,1,[0],1,0,117,190,1.0
+d2v2_unipen_de,DE-S06/sie_00007_u000,DE-S06/sie_00007,test,DE-S06,20,0,1,[0],1,0,143,181,1.0
+d2v2_unipen_de,DE-S06/sie_00008_u000,DE-S06/sie_00008,test,DE-S06,20,0,1,[0],1,0,91,149,1.0
+d2v2_unipen_de,DE-S06/sie_00009_u000,DE-S06/sie_00009,test,DE-S06,20,0,1,[0],1,0,82,177,1.0
+d2v2_unipen_de,DE-S06/sie_00010_u000,DE-S06/sie_00010,test,DE-S06,20,0,1,[0],1,0,119,155,1.0
+d2v2_unipen_de,DE-S06/sie_00011_u000,DE-S06/sie_00011,test,DE-S06,20,0,1,[0],1,0,144,207,1.0
+d2v2_unipen_de,DE-S06/sie_00012_u000,DE-S06/sie_00012,test,DE-S06,20,0,1,[0],1,0,124,181,1.0
+d2v2_unipen_de,DE-S06/sie_00013_u000,DE-S06/sie_00013,test,DE-S06,20,0,1,[0],1,0,72,173,1.0
+d2v2_unipen_de,DE-S06/sie_00014_u000,DE-S06/sie_00014,test,DE-S06,20,0,1,[0],1,0,131,213,1.0
+d2v2_unipen_de,DE-S06/sie_00015_u000,DE-S06/sie_00015,test,DE-S06,20,0,1,[0],1,0,128,177,1.0
+d2v2_unipen_de,DE-S06/sie_00016_u000,DE-S06/sie_00016,test,DE-S06,20,0,1,[0],1,0,139,229,1.0
+d2v2_unipen_de,DE-S06/sie_00017_u000,DE-S06/sie_00017,test,DE-S06,20,0,1,[0],1,0,92,178,1.0
+d2v2_unipen_de,DE-S06/sie_00018_u000,DE-S06/sie_00018,test,DE-S06,20,0,1,[0],1,0,150,193,1.0
+d2v2_unipen_de,DE-S06/sie_00019_u000,DE-S06/sie_00019,test,DE-S06,20,0,1,[0],1,0,95,159,1.0
+d2v2_unipen_de,DE-S06/sie_00020_u000,DE-S06/sie_00020,test,DE-S06,20,0,1,[0],1,0,134,219,1.0
+d2v2_unipen_de,DE-S06/sie_00021_u000,DE-S06/sie_00021,test,DE-S06,20,0,1,[0],1,0,119,172,1.0
+d2v2_unipen_de,DE-S06/sie_00022_u000,DE-S06/sie_00022,test,DE-S06,20,0,1,[0],1,0,83,163,1.0
+d2v2_unipen_de,DE-S06/sie_00023_u000,DE-S06/sie_00023,test,DE-S06,20,0,1,[0],1,0,154,259,1.0
+d2v2_unipen_de,DE-S06/sie_00024_u000,DE-S06/sie_00024,test,DE-S06,20,0,1,[0],1,0,93,182,1.0
+d2v2_unipen_de,DE-S06/sie_00025_u000,DE-S06/sie_00025,test,DE-S06,20,0,1,[0],1,0,99,150,1.0
+d2v2_unipen_de,DE-S06/sie_00026_u000,DE-S06/sie_00026,test,DE-S06,20,0,1,[0],1,0,120,173,1.0
+d2v2_unipen_de,DE-S06/sie_00027_u000,DE-S06/sie_00027,test,DE-S06,20,0,1,[0],1,0,138,222,1.0
+d2v2_unipen_de,DE-S06/sie_00028_u000,DE-S06/sie_00028,test,DE-S06,20,0,1,[0],1,0,114,164,1.0
+d2v2_unipen_de,DE-S06/sie_00029_u000,DE-S06/sie_00029,test,DE-S06,20,0,1,[0],1,0,144,259,1.0
+d2v2_unipen_de,DE-S06/sie_00030_u000,DE-S06/sie_00030,test,DE-S06,20,0,1,[0],1,0,91,168,1.0
+d2v2_unipen_de,DE-S06/sie_00031_u000,DE-S06/sie_00031,test,DE-S06,20,0,1,[0],1,0,75,146,1.0
+d2v2_unipen_de,DE-S06/sie_00032_u000,DE-S06/sie_00032,test,DE-S06,20,0,1,[0],1,0,89,158,1.0
+d2v2_unipen_de,DE-S06/sie_00033_u000,DE-S06/sie_00033,test,DE-S06,20,0,1,[0],1,0,109,222,1.0
+d2v2_unipen_de,DE-S06/sie_00034_u000,DE-S06/sie_00034,test,DE-S06,20,0,1,[0],1,0,131,228,1.0
+d2v2_unipen_de,DE-S06/sie_00035_u000,DE-S06/sie_00035,test,DE-S06,20,0,1,[0],1,0,136,242,1.0
+d2v2_unipen_de,DE-S06/sie_00036_u000,DE-S06/sie_00036,test,DE-S06,20,0,1,[0],1,0,124,189,1.0
+d2v2_unipen_de,DE-S06/sie_00037_u000,DE-S06/sie_00037,test,DE-S06,20,0,1,[0],1,0,94,157,1.0
+d2v2_unipen_de,DE-S06/sie_00038_u000,DE-S06/sie_00038,test,DE-S06,20,0,1,[0],1,0,114,178,1.0
+d2v2_unipen_de,DE-S06/sie_00039_u000,DE-S06/sie_00039,test,DE-S06,20,0,1,[0],1,0,114,194,1.0
+d2v2_unipen_de,DE-S06/sie_00040_u000,DE-S06/sie_00040,test,DE-S06,20,0,1,[0],1,0,66,147,1.0
+d2v2_unipen_de,DE-S06/sie_00041_u000,DE-S06/sie_00041,test,DE-S06,20,0,1,[0],1,0,127,255,1.0
+d2v2_unipen_de,DE-S06/sie_00042_u000,DE-S06/sie_00042,test,DE-S06,20,0,1,[0],1,0,105,157,1.0
+d2v2_unipen_de,DE-S06/sie_00043_u000,DE-S06/sie_00043,test,DE-S06,20,0,1,[0],1,0,66,137,1.0
+d2v2_unipen_de,DE-S06/sie_00044_u000,DE-S06/sie_00044,test,DE-S06,20,0,1,[0],1,0,105,176,1.0
+d2v2_unipen_de,DE-S06/sie_00045_u000,DE-S06/sie_00045,test,DE-S06,20,0,1,[0],1,0,140,238,1.0
+d2v2_unipen_de,DE-S06/sie_00046_u000,DE-S06/sie_00046,test,DE-S06,20,0,1,[0],1,0,115,166,1.0
+d2v2_unipen_de,DE-S06/sie_00047_u000,DE-S06/sie_00047,test,DE-S06,20,0,1,[0],1,0,96,173,1.0
+d2v2_unipen_de,DE-S06/sie_00048_u000,DE-S06/sie_00048,test,DE-S06,20,0,1,[0],1,0,110,186,1.0
+d2v2_unipen_de,DE-S06/sie_00049_u000,DE-S06/sie_00049,test,DE-S06,20,0,1,[0],1,0,66,142,1.0
+d2v2_unipen_de,DE-S06/sie_00050_u000,DE-S06/sie_00050,test,DE-S06,20,0,1,[0],1,0,87,196,1.0
+d2v2_unipen_de,DE-S06/sie_00051_u000,DE-S06/sie_00051,test,DE-S06,20,0,1,[0],1,0,91,160,1.0
+d2v2_unipen_de,DE-S06/sie_00052_u000,DE-S06/sie_00052,test,DE-S06,20,0,1,[0],1,0,106,173,1.0
+d2v2_unipen_de,DE-S06/sie_00053_u000,DE-S06/sie_00053,test,DE-S06,20,0,1,[0],1,0,138,231,1.0
+d2v2_unipen_de,DE-S06/sie_00054_u000,DE-S06/sie_00054,test,DE-S06,20,0,1,[0],1,0,93,158,1.0
+d2v2_unipen_de,DE-S06/sie_00055_u000,DE-S06/sie_00055,test,DE-S06,20,0,1,[0],1,0,109,172,1.0
+d2v2_unipen_de,DE-S06/sie_00056_u000,DE-S06/sie_00056,test,DE-S06,20,0,1,[0],1,0,109,176,1.0
+d2v2_unipen_de,DE-S06/sie_00057_u000,DE-S06/sie_00057,test,DE-S06,20,0,1,[0],1,0,69,166,1.0
+d2v2_unipen_de,DE-S06/sie_00058_u000,DE-S06/sie_00058,test,DE-S06,20,0,1,[0],1,0,84,146,1.0
+d2v2_unipen_de,DE-S06/sie_00059_u000,DE-S06/sie_00059,test,DE-S06,20,0,1,[0],1,0,98,173,1.0
+d2v2_unipen_de,DE-S06/sie_00060_u000,DE-S06/sie_00060,test,DE-S06,20,0,1,[0],1,0,110,198,1.0
+d2v2_unipen_de,DE-S06/sie_00061_u000,DE-S06/sie_00061,test,DE-S06,20,0,1,[0],1,0,130,229,1.0
+d2v2_unipen_de,DE-S06/sie_00062_u000,DE-S06/sie_00062,test,DE-S06,20,0,1,[0],1,0,78,149,1.0
+d2v2_unipen_de,DE-S06/sie_00063_u000,DE-S06/sie_00063,test,DE-S06,20,0,1,[0],1,0,135,238,1.0
+d2v2_unipen_de,DE-S06/sie_00064_u000,DE-S06/sie_00064,test,DE-S06,20,0,1,[0],1,0,69,188,1.0
+d2v2_unipen_de,DE-S06/sie_00065_u000,DE-S06/sie_00065,test,DE-S06,20,0,1,[0],1,0,119,216,1.0
+d2v2_unipen_de,DE-S06/sie_00066_u000,DE-S06/sie_00066,test,DE-S06,20,0,1,[0],1,0,106,180,1.0
+d2v2_unipen_de,DE-S06/sie_00067_u000,DE-S06/sie_00067,test,DE-S06,20,0,1,[0],1,0,87,160,1.0
+d2v2_unipen_de,DE-S06/sie_00068_u000,DE-S06/sie_00068,test,DE-S06,20,0,1,[0],1,0,113,214,1.0
+d2v2_unipen_de,DE-S06/sie_00069_u000,DE-S06/sie_00069,test,DE-S06,20,0,1,[0],1,0,97,178,1.0
+d2v2_unipen_de,DE-S06/sie_00070_u000,DE-S06/sie_00070,test,DE-S06,20,0,1,[0],1,0,122,195,1.0
+d2v2_unipen_de,DE-S06/sie_00071_u000,DE-S06/sie_00071,test,DE-S06,20,0,1,[0],1,0,127,222,1.0
+d2v2_unipen_de,DE-S06/sie_00072_u000,DE-S06/sie_00072,test,DE-S06,20,0,1,[0],1,0,76,151,1.0
+d2v2_unipen_de,DE-S06/sie_00073_u000,DE-S06/sie_00073,test,DE-S06,20,0,1,[0],1,0,91,174,1.0
+d2v2_unipen_de,DE-S06/sie_00074_u000,DE-S06/sie_00074,test,DE-S06,20,0,1,[0],1,0,71,158,1.0
+d2v2_unipen_de,DE-S06/sie_00075_u000,DE-S06/sie_00075,test,DE-S06,20,0,1,[0],1,0,121,217,1.0
+d2v2_unipen_de,DE-S06/sie_00076_u000,DE-S06/sie_00076,test,DE-S06,20,0,1,[0],1,0,80,162,1.0
+d2v2_unipen_de,DE-S06/sie_00077_u000,DE-S06/sie_00077,test,DE-S06,20,0,1,[0],1,0,118,188,1.0
+d2v2_unipen_de,DE-S06/sie_00078_u000,DE-S06/sie_00078,test,DE-S06,20,0,1,[0],1,0,108,198,1.0
+d2v2_unipen_de,DE-S06/sie_00079_u000,DE-S06/sie_00079,test,DE-S06,20,0,1,[0],1,0,69,147,1.0
+d2v2_unipen_de,DE-S06/sie_00080_u000,DE-S06/sie_00080,test,DE-S06,20,0,1,[0],1,0,63,170,1.0
+d2v2_unipen_de,DE-S06/sie_00081_u000,DE-S06/sie_00081,test,DE-S06,20,0,1,[0],1,0,85,157,1.0
+d2v2_unipen_de,DE-S06/sie_00082_u000,DE-S06/sie_00082,test,DE-S06,20,0,1,[0],1,0,117,228,1.0
+d2v2_unipen_de,DE-S06/sie_00083_u000,DE-S06/sie_00083,test,DE-S06,20,0,1,[0],1,0,90,173,1.0
+d2v2_unipen_de,DE-S06/sie_00084_u000,DE-S06/sie_00084,test,DE-S06,20,0,1,[0],1,0,121,231,1.0
+d2v2_unipen_de,DE-S06/sie_00085_u000,DE-S06/sie_00085,test,DE-S06,20,0,1,[0],1,0,68,159,1.0
+d2v2_unipen_de,DE-S06/sie_00086_u000,DE-S06/sie_00086,test,DE-S06,20,0,1,[0],1,0,88,174,1.0
+d2v2_unipen_de,DE-S06/sie_00087_u000,DE-S06/sie_00087,test,DE-S06,20,0,1,[0],1,0,99,173,1.0
+d2v2_unipen_de,DE-S06/sie_00088_u000,DE-S06/sie_00088,test,DE-S06,20,0,1,[0],1,0,63,150,1.0
+d2v2_unipen_de,DE-S06/sie_00089_u000,DE-S06/sie_00089,test,DE-S06,20,0,1,[0],1,0,77,154,1.0
+d2v2_unipen_de,DE-S06/sie_00090_u000,DE-S06/sie_00090,test,DE-S06,20,0,1,[0],1,0,109,179,1.0
+d2v2_unipen_de,DE-S06/sie_00091_u000,DE-S06/sie_00091,test,DE-S06,20,0,1,[0],1,0,123,212,1.0
+d2v2_unipen_de,DE-S06/sie_00092_u000,DE-S06/sie_00092,test,DE-S06,20,0,1,[0],1,0,69,155,1.0
+d2v2_unipen_de,DE-S06/sie_00093_u000,DE-S06/sie_00093,test,DE-S06,20,0,1,[0],1,0,90,160,1.0
+d2v2_unipen_de,DE-S06/sie_00094_u000,DE-S06/sie_00094,test,DE-S06,20,0,1,[0],1,0,65,149,1.0
+d2v2_unipen_de,DE-S06/sie_00095_u000,DE-S06/sie_00095,test,DE-S06,20,0,1,[0],1,0,87,164,1.0
+d2v2_unipen_de,DE-S06/sie_00096_u000,DE-S06/sie_00096,test,DE-S06,20,0,1,[0],1,0,117,194,1.0
+d2v2_unipen_de,DE-S06/sie_00097_u000,DE-S06/sie_00097,test,DE-S06,20,0,1,[0],1,0,134,230,1.0
+d2v2_unipen_de,DE-S06/sie_00098_u000,DE-S06/sie_00098,test,DE-S06,20,0,1,[0],1,0,66,156,1.0
+d2v2_unipen_de,DE-S06/sie_00099_u000,DE-S06/sie_00099,test,DE-S06,20,0,1,[0],1,0,84,190,1.0
+d2v2_unipen_de,DE-S06/sie_00100_u000,DE-S06/sie_00100,test,DE-S06,20,0,1,[0],1,0,112,218,1.0
+d2v2_unipen_de,DE-S06/sie_00101_u000,DE-S06/sie_00101,test,DE-S06,20,0,1,[0],1,0,108,209,1.0
+d2v2_unipen_de,DE-S06/sie_00102_u000,DE-S06/sie_00102,test,DE-S06,20,0,1,[0],1,0,129,252,1.0
+d2v2_unipen_de,DE-S06/sie_00103_u000,DE-S06/sie_00103,test,DE-S06,20,0,1,[0],1,0,83,169,1.0
+d2v2_unipen_de,DE-S06/sie_00104_u000,DE-S06/sie_00104,test,DE-S06,20,0,1,[0],1,0,90,165,1.0
+d2v2_unipen_de,DE-S06/sie_00105_u000,DE-S06/sie_00105,test,DE-S06,20,0,1,[0],1,0,52,163,1.0
+d2v2_unipen_de,DE-S06/sie_00106_u000,DE-S06/sie_00106,test,DE-S06,20,0,1,[0],1,0,124,223,1.0
+d2v2_unipen_de,DE-S06/sie_00107_u000,DE-S06/sie_00107,test,DE-S06,20,0,1,[0],1,0,124,229,1.0
+d2v2_unipen_de,DE-S06/sie_00108_u000,DE-S06/sie_00108,test,DE-S06,20,0,1,[0],1,0,111,175,1.0
+d2v2_unipen_de,DE-S06/sie_00109_u000,DE-S06/sie_00109,test,DE-S06,20,0,1,[0],1,0,93,165,1.0
+d2v2_unipen_de,DE-S06/sie_00110_u000,DE-S06/sie_00110,test,DE-S06,20,0,1,[0],1,0,63,162,1.0
+d2v2_unipen_de,DE-S06/sie_00111_u000,DE-S06/sie_00111,test,DE-S06,20,0,1,[0],1,0,70,159,1.0
+d2v2_unipen_de,DE-S06/sie_00112_u000,DE-S06/sie_00112,test,DE-S06,20,0,1,[0],1,0,108,206,1.0
+d2v2_unipen_de,DE-S06/sie_00113_u000,DE-S06/sie_00113,test,DE-S06,20,0,1,[0],1,0,132,230,1.0
+d2v2_unipen_de,DE-S06/sie_00114_u000,DE-S06/sie_00114,test,DE-S06,20,0,1,[0],1,0,69,147,1.0
+d2v2_unipen_de,DE-S06/sie_00115_u000,DE-S06/sie_00115,test,DE-S06,20,0,1,[0],1,0,117,197,1.0
+d2v2_unipen_de,DE-S06/sie_00116_u000,DE-S06/sie_00116,test,DE-S06,20,0,1,[0],1,0,89,150,1.0
+d2v2_unipen_de,DE-A01/atu_00001_u000,DE-A01/atu_00001,test,DE-A01,0,0,6,[0],1,0,54,195,1.0
+d2v2_unipen_de,DE-A01/atu_00001_u001,DE-A01/atu_00001,test,DE-A01,0,1,6,[1],1,0,43,160,1.0
+d2v2_unipen_de,DE-A01/atu_00001_u002,DE-A01/atu_00001,test,DE-A01,0,2,6,"[2, 3, 4]",3,2,100,187,1.0
+d2v2_unipen_de,DE-A01/atu_00001_u003,DE-A01/atu_00001,test,DE-A01,0,3,6,"[5, 6]",2,0,112,160,1.0
+d2v2_unipen_de,DE-A01/atu_00001_u004,DE-A01/atu_00001,test,DE-A01,0,4,6,"[7, 8]",2,0,109,195,1.0
+d2v2_unipen_de,DE-A01/atu_00001_u005,DE-A01/atu_00001,test,DE-A01,0,5,6,"[9, 10, 11, 12]",4,0,244,159,1.0
+d2v2_unipen_de,DE-A01/atu_00002_u000,DE-A01/atu_00002,test,DE-A01,0,0,5,"[0, 1, 2, 3, 4]",5,0,173,180,1.0
+d2v2_unipen_de,DE-A01/atu_00002_u001,DE-A01/atu_00002,test,DE-A01,0,1,5,"[5, 6]",2,0,194,176,1.0
+d2v2_unipen_de,DE-A01/atu_00002_u002,DE-A01/atu_00002,test,DE-A01,0,2,5,"[7, 8, 9, 10]",4,0,239,153,1.0
+d2v2_unipen_de,DE-A01/atu_00002_u003,DE-A01/atu_00002,test,DE-A01,0,3,5,"[11, 12, 13]",3,0,77,173,1.0
+d2v2_unipen_de,DE-A01/atu_00002_u004,DE-A01/atu_00002,test,DE-A01,0,4,5,"[14, 15, 16]",3,0,246,143,1.0
+d2v2_unipen_de,DE-A01/atu_00003_u000,DE-A01/atu_00003,test,DE-A01,0,0,5,"[0, 1, 2]",3,0,265,167,1.0
+d2v2_unipen_de,DE-A01/atu_00003_u001,DE-A01/atu_00003,test,DE-A01,0,1,5,[3],1,0,55,121,1.0
+d2v2_unipen_de,DE-A01/atu_00003_u002,DE-A01/atu_00003,test,DE-A01,0,2,5,"[4, 5, 6, 7]",4,0,285,237,1.0
+d2v2_unipen_de,DE-A01/atu_00003_u003,DE-A01/atu_00003,test,DE-A01,0,3,5,"[8, 9]",2,0,185,253,1.0
+d2v2_unipen_de,DE-A01/atu_00003_u004,DE-A01/atu_00003,test,DE-A01,0,4,5,"[10, 11, 12, 13, 14]",5,0,157,194,1.0
+d2v2_unipen_de,DE-A01/atu_00004_u000,DE-A01/atu_00004,test,DE-A01,0,0,8,"[0, 1, 2, 3, 4]",5,0,262,200,1.0
+d2v2_unipen_de,DE-A01/atu_00004_u001,DE-A01/atu_00004,test,DE-A01,0,1,8,"[5, 6, 7, 8, 9, 10, 11]",7,2,345,220,1.0
+d2v2_unipen_de,DE-A01/atu_00004_u002,DE-A01/atu_00004,test,DE-A01,0,2,8,"[12, 13]",2,1,142,142,1.0
+d2v2_unipen_de,DE-A01/atu_00004_u003,DE-A01/atu_00004,test,DE-A01,0,3,8,"[14, 15]",2,0,78,183,1.0
+d2v2_unipen_de,DE-A01/atu_00004_u004,DE-A01/atu_00004,test,DE-A01,0,4,8,"[16, 17]",2,1,35,75,1.0
+d2v2_unipen_de,DE-A01/atu_00004_u005,DE-A01/atu_00004,test,DE-A01,0,5,8,"[18, 19]",2,0,106,187,1.0
+d2v2_unipen_de,DE-A01/atu_00004_u006,DE-A01/atu_00004,test,DE-A01,0,6,8,"[20, 21]",2,0,86,192,1.0
+d2v2_unipen_de,DE-A01/atu_00004_u007,DE-A01/atu_00004,test,DE-A01,0,7,8,"[22, 23, 24]",3,0,167,156,1.0
+d2v2_unipen_de,DE-A01/atu_00005_u000,DE-A01/atu_00005,test,DE-A01,0,0,8,"[0, 1, 2]",3,0,86,199,1.0
+d2v2_unipen_de,DE-A01/atu_00005_u001,DE-A01/atu_00005,test,DE-A01,0,1,8,"[3, 4, 5, 6]",4,0,205,171,1.0
+d2v2_unipen_de,DE-A01/atu_00005_u002,DE-A01/atu_00005,test,DE-A01,0,2,8,"[7, 8, 9, 10]",4,1,230,146,1.0
+d2v2_unipen_de,DE-A01/atu_00005_u003,DE-A01/atu_00005,test,DE-A01,0,3,8,"[11, 12]",2,0,99,188,1.0
+d2v2_unipen_de,DE-A01/atu_00005_u004,DE-A01/atu_00005,test,DE-A01,0,4,8,[13],1,0,58,148,1.0
+d2v2_unipen_de,DE-A01/atu_00005_u005,DE-A01/atu_00005,test,DE-A01,0,5,8,"[14, 15]",2,0,142,237,1.0
+d2v2_unipen_de,DE-A01/atu_00005_u006,DE-A01/atu_00005,test,DE-A01,0,6,8,[16],1,0,54,128,1.0
+d2v2_unipen_de,DE-A01/atu_00005_u007,DE-A01/atu_00005,test,DE-A01,0,7,8,"[17, 18]",2,0,116,160,1.0
+d2v2_unipen_de,DE-A01/atu_00006_u000,DE-A01/atu_00006,test,DE-A01,0,0,7,"[0, 1, 2]",3,0,122,245,1.0
+d2v2_unipen_de,DE-A01/atu_00006_u001,DE-A01/atu_00006,test,DE-A01,0,1,7,[3],1,0,163,177,1.0
+d2v2_unipen_de,DE-A01/atu_00006_u002,DE-A01/atu_00006,test,DE-A01,0,2,7,"[4, 5]",2,0,112,194,1.0
+d2v2_unipen_de,DE-A01/atu_00006_u003,DE-A01/atu_00006,test,DE-A01,0,3,7,[6],1,0,181,187,1.0
+d2v2_unipen_de,DE-A01/atu_00006_u004,DE-A01/atu_00006,test,DE-A01,0,4,7,[7],1,0,70,142,1.0
+d2v2_unipen_de,DE-A01/atu_00006_u005,DE-A01/atu_00006,test,DE-A01,0,5,7,[8],1,0,50,180,1.0
+d2v2_unipen_de,DE-A01/atu_00006_u006,DE-A01/atu_00006,test,DE-A01,0,6,7,[9],1,0,179,164,1.0
+d2v2_unipen_de,DE-A01/atu_00007_u000,DE-A01/atu_00007,test,DE-A01,0,0,7,"[0, 1, 2]",3,0,97,214,1.0
+d2v2_unipen_de,DE-A01/atu_00007_u001,DE-A01/atu_00007,test,DE-A01,0,1,7,"[3, 4, 5, 6]",4,0,220,185,1.0
+d2v2_unipen_de,DE-A01/atu_00007_u002,DE-A01/atu_00007,test,DE-A01,0,2,7,[7],1,0,134,143,1.0
+d2v2_unipen_de,DE-A01/atu_00007_u003,DE-A01/atu_00007,test,DE-A01,0,3,7,"[8, 9]",2,0,98,164,1.0
+d2v2_unipen_de,DE-A01/atu_00007_u004,DE-A01/atu_00007,test,DE-A01,0,4,7,"[10, 11]",2,0,103,197,1.0
+d2v2_unipen_de,DE-A01/atu_00007_u005,DE-A01/atu_00007,test,DE-A01,0,5,7,"[12, 13, 14]",3,0,234,215,1.0
+d2v2_unipen_de,DE-A01/atu_00007_u006,DE-A01/atu_00007,test,DE-A01,0,6,7,"[15, 16, 17]",3,0,180,158,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u000,DE-A02/atu_00001,test,DE-A02,1,0,25,"[0, 1, 2]",3,0,117,170,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u001,DE-A02/atu_00001,test,DE-A02,1,1,25,[3],1,0,85,200,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u002,DE-A02/atu_00001,test,DE-A02,1,2,25,[4],1,0,78,174,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u003,DE-A02/atu_00001,test,DE-A02,1,3,25,[5],1,0,76,135,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u004,DE-A02/atu_00001,test,DE-A02,1,4,25,"[6, 7]",2,0,74,88,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u005,DE-A02/atu_00001,test,DE-A02,1,5,25,[8],1,0,138,152,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u006,DE-A02/atu_00001,test,DE-A02,1,6,25,"[9, 10]",2,0,78,102,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u007,DE-A02/atu_00001,test,DE-A02,1,7,25,[11],1,0,72,160,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u008,DE-A02/atu_00001,test,DE-A02,1,8,25,[12],1,0,35,82,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u009,DE-A02/atu_00001,test,DE-A02,1,9,25,[13],1,0,25,90,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u010,DE-A02/atu_00001,test,DE-A02,1,10,25,[14],1,0,76,172,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u011,DE-A02/atu_00001,test,DE-A02,1,11,25,[15],1,0,131,230,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u012,DE-A02/atu_00001,test,DE-A02,1,12,25,[16],1,0,93,230,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u013,DE-A02/atu_00001,test,DE-A02,1,13,25,[17],1,0,58,153,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u014,DE-A02/atu_00001,test,DE-A02,1,14,25,[18],1,0,126,177,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u015,DE-A02/atu_00001,test,DE-A02,1,15,25,[19],1,0,58,156,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u016,DE-A02/atu_00001,test,DE-A02,1,16,25,[20],1,0,39,66,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u017,DE-A02/atu_00001,test,DE-A02,1,17,25,[21],1,0,95,198,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u018,DE-A02/atu_00001,test,DE-A02,1,18,25,[22],1,0,113,184,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u019,DE-A02/atu_00001,test,DE-A02,1,19,25,[23],1,0,53,147,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u020,DE-A02/atu_00001,test,DE-A02,1,20,25,[24],1,0,76,150,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u021,DE-A02/atu_00001,test,DE-A02,1,21,25,[25],1,0,108,155,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u022,DE-A02/atu_00001,test,DE-A02,1,22,25,[26],1,0,66,137,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u023,DE-A02/atu_00001,test,DE-A02,1,23,25,[27],1,0,66,177,1.0
+d2v2_unipen_de,DE-A02/atu_00001_u024,DE-A02/atu_00001,test,DE-A02,1,24,25,"[28, 29]",2,0,78,121,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u000,DE-A02/atu_00002,test,DE-A02,1,0,15,"[0, 1]",2,0,53,70,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u001,DE-A02/atu_00002,test,DE-A02,1,1,15,[2],1,0,46,127,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u002,DE-A02/atu_00002,test,DE-A02,1,2,15,[3],1,0,84,130,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u003,DE-A02/atu_00002,test,DE-A02,1,3,15,[4],1,0,115,163,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u004,DE-A02/atu_00002,test,DE-A02,1,4,15,[5],1,0,52,135,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u005,DE-A02/atu_00002,test,DE-A02,1,5,15,[6],1,0,78,121,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u006,DE-A02/atu_00002,test,DE-A02,1,6,15,[7],1,0,53,124,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u007,DE-A02/atu_00002,test,DE-A02,1,7,15,[8],1,0,85,185,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u008,DE-A02/atu_00002,test,DE-A02,1,8,15,[9],1,0,80,199,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u009,DE-A02/atu_00002,test,DE-A02,1,9,15,"[10, 11]",2,0,110,168,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u010,DE-A02/atu_00002,test,DE-A02,1,10,15,"[12, 13, 14]",3,0,123,163,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u011,DE-A02/atu_00002,test,DE-A02,1,11,15,[15],1,0,83,201,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u012,DE-A02/atu_00002,test,DE-A02,1,12,15,[16],1,0,72,192,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u013,DE-A02/atu_00002,test,DE-A02,1,13,15,[17],1,0,76,132,1.0
+d2v2_unipen_de,DE-A02/atu_00002_u014,DE-A02/atu_00002,test,DE-A02,1,14,15,[18],1,0,57,178,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u000,DE-A02/atu_00003,test,DE-A02,1,0,17,"[0, 1]",2,0,117,158,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u001,DE-A02/atu_00003,test,DE-A02,1,1,17,[2],1,0,61,142,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u002,DE-A02/atu_00003,test,DE-A02,1,2,17,[3],1,0,69,196,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u003,DE-A02/atu_00003,test,DE-A02,1,3,17,"[4, 5]",2,0,66,96,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u004,DE-A02/atu_00003,test,DE-A02,1,4,17,[6],1,0,45,97,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u005,DE-A02/atu_00003,test,DE-A02,1,5,17,[7],1,0,156,183,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u006,DE-A02/atu_00003,test,DE-A02,1,6,17,"[8, 9]",2,1,60,82,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u007,DE-A02/atu_00003,test,DE-A02,1,7,17,[10],1,0,57,146,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u008,DE-A02/atu_00003,test,DE-A02,1,8,17,[11],1,0,88,174,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u009,DE-A02/atu_00003,test,DE-A02,1,9,17,[12],1,0,59,195,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u010,DE-A02/atu_00003,test,DE-A02,1,10,17,[13],1,0,66,143,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u011,DE-A02/atu_00003,test,DE-A02,1,11,17,[14],1,0,73,152,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u012,DE-A02/atu_00003,test,DE-A02,1,12,17,[15],1,0,51,166,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u013,DE-A02/atu_00003,test,DE-A02,1,13,17,[16],1,0,97,198,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u014,DE-A02/atu_00003,test,DE-A02,1,14,17,[17],1,0,72,168,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u015,DE-A02/atu_00003,test,DE-A02,1,15,17,[18],1,0,49,118,1.0
+d2v2_unipen_de,DE-A02/atu_00003_u016,DE-A02/atu_00003,test,DE-A02,1,16,17,[19],1,0,63,154,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u000,DE-A02/atu_00004,test,DE-A02,1,0,17,"[0, 1]",2,0,99,153,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u001,DE-A02/atu_00004,test,DE-A02,1,1,17,[2],1,0,79,199,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u002,DE-A02/atu_00004,test,DE-A02,1,2,17,[3],1,0,71,170,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u003,DE-A02/atu_00004,test,DE-A02,1,3,17,[4],1,0,37,69,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u004,DE-A02/atu_00004,test,DE-A02,1,4,17,[5],1,0,64,77,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u005,DE-A02/atu_00004,test,DE-A02,1,5,17,[6],1,0,85,210,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u006,DE-A02/atu_00004,test,DE-A02,1,6,17,[8],1,0,57,101,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u007,DE-A02/atu_00004,test,DE-A02,1,7,17,[7],1,0,67,170,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u008,DE-A02/atu_00004,test,DE-A02,1,8,17,[9],1,0,78,107,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u009,DE-A02/atu_00004,test,DE-A02,1,9,17,"[10, 11, 12, 13]",4,0,146,163,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u010,DE-A02/atu_00004,test,DE-A02,1,10,17,[14],1,0,102,114,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u011,DE-A02/atu_00004,test,DE-A02,1,11,17,"[15, 16, 17]",3,1,138,165,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u012,DE-A02/atu_00004,test,DE-A02,1,12,17,"[18, 19]",2,1,58,96,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u013,DE-A02/atu_00004,test,DE-A02,1,13,17,"[20, 21, 22]",3,0,84,183,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u014,DE-A02/atu_00004,test,DE-A02,1,14,17,"[23, 24, 25]",3,0,171,178,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u015,DE-A02/atu_00004,test,DE-A02,1,15,17,[26],1,0,50,142,1.0
+d2v2_unipen_de,DE-A02/atu_00004_u016,DE-A02/atu_00004,test,DE-A02,1,16,17,"[27, 28, 29]",3,0,100,130,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u000,DE-A02/atu_00005,test,DE-A02,1,0,18,"[0, 1]",2,0,149,160,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u001,DE-A02/atu_00005,test,DE-A02,1,1,18,[2],1,0,82,156,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u002,DE-A02/atu_00005,test,DE-A02,1,2,18,[3],1,0,41,68,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u003,DE-A02/atu_00005,test,DE-A02,1,3,18,[4],1,0,40,67,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u004,DE-A02/atu_00005,test,DE-A02,1,4,18,"[5, 6]",2,0,74,143,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u005,DE-A02/atu_00005,test,DE-A02,1,5,18,[7],1,0,58,131,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u006,DE-A02/atu_00005,test,DE-A02,1,6,18,[8],1,0,86,125,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u007,DE-A02/atu_00005,test,DE-A02,1,7,18,[9],1,0,59,186,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u008,DE-A02/atu_00005,test,DE-A02,1,8,18,[10],1,0,41,75,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u009,DE-A02/atu_00005,test,DE-A02,1,9,18,[11],1,0,44,71,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u010,DE-A02/atu_00005,test,DE-A02,1,10,18,[12],1,0,52,119,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u011,DE-A02/atu_00005,test,DE-A02,1,11,18,[13],1,0,63,155,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u012,DE-A02/atu_00005,test,DE-A02,1,12,18,[14],1,0,71,138,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u013,DE-A02/atu_00005,test,DE-A02,1,13,18,[15],1,0,64,201,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u014,DE-A02/atu_00005,test,DE-A02,1,14,18,[16],1,0,42,72,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u015,DE-A02/atu_00005,test,DE-A02,1,15,18,[17],1,0,41,77,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u016,DE-A02/atu_00005,test,DE-A02,1,16,18,[18],1,0,55,186,1.0
+d2v2_unipen_de,DE-A02/atu_00005_u017,DE-A02/atu_00005,test,DE-A02,1,17,18,[19],1,0,69,162,1.0
+d2v2_unipen_de,DE-A05/atu_00001_u000,DE-A05/atu_00001,test,DE-A05,4,0,5,"[0, 1]",2,0,398,232,1.0
+d2v2_unipen_de,DE-A05/atu_00001_u001,DE-A05/atu_00001,test,DE-A05,4,1,5,"[2, 3]",2,1,69,124,1.0
+d2v2_unipen_de,DE-A05/atu_00001_u002,DE-A05/atu_00001,test,DE-A05,4,2,5,"[4, 5]",2,0,161,241,1.0
+d2v2_unipen_de,DE-A05/atu_00001_u003,DE-A05/atu_00001,test,DE-A05,4,3,5,"[6, 7, 8]",3,0,212,151,1.0
+d2v2_unipen_de,DE-A05/atu_00001_u004,DE-A05/atu_00001,test,DE-A05,4,4,5,"[9, 10, 11, 12, 13]",5,1,1174,205,1.0
+d2v2_unipen_de,DE-A05/atu_00002_u000,DE-A05/atu_00002,test,DE-A05,4,0,8,[0],1,0,80,179,1.0
+d2v2_unipen_de,DE-A05/atu_00002_u001,DE-A05/atu_00002,test,DE-A05,4,1,8,[1],1,0,205,161,1.0
+d2v2_unipen_de,DE-A05/atu_00002_u002,DE-A05/atu_00002,test,DE-A05,4,2,8,"[2, 3]",2,0,225,182,1.0
+d2v2_unipen_de,DE-A05/atu_00002_u003,DE-A05/atu_00002,test,DE-A05,4,3,8,[4],1,0,22,72,1.0
+d2v2_unipen_de,DE-A05/atu_00002_u004,DE-A05/atu_00002,test,DE-A05,4,4,8,[5],1,0,159,261,1.0
+d2v2_unipen_de,DE-A05/atu_00002_u005,DE-A05/atu_00002,test,DE-A05,4,5,8,"[6, 7, 8]",3,0,181,155,1.0
+d2v2_unipen_de,DE-A05/atu_00002_u006,DE-A05/atu_00002,test,DE-A05,4,6,8,"[9, 10, 11]",3,1,155,243,1.0
+d2v2_unipen_de,DE-A05/atu_00002_u007,DE-A05/atu_00002,test,DE-A05,4,7,8,"[12, 13, 14, 15]",4,0,465,251,1.0
+d2v2_unipen_de,DE-A05/atu_00003_u000,DE-A05/atu_00003,test,DE-A05,4,0,3,"[0, 1]",2,0,379,200,1.0
+d2v2_unipen_de,DE-A05/atu_00003_u001,DE-A05/atu_00003,test,DE-A05,4,1,3,[2],1,0,366,183,1.0
+d2v2_unipen_de,DE-A05/atu_00003_u002,DE-A05/atu_00003,test,DE-A05,4,2,3,[3],1,0,372,165,1.0
+d2v2_unipen_de,DE-A05/atu_00004_u000,DE-A05/atu_00004,test,DE-A05,4,0,5,[0],1,0,128,253,1.0
+d2v2_unipen_de,DE-A05/atu_00004_u001,DE-A05/atu_00004,test,DE-A05,4,1,5,[1],1,0,209,171,1.0
+d2v2_unipen_de,DE-A05/atu_00004_u002,DE-A05/atu_00004,test,DE-A05,4,2,5,"[2, 3, 4, 5, 6]",5,1,329,276,1.0
+d2v2_unipen_de,DE-A05/atu_00004_u003,DE-A05/atu_00004,test,DE-A05,4,3,5,"[7, 8, 9]",3,0,191,163,1.0
+d2v2_unipen_de,DE-A05/atu_00004_u004,DE-A05/atu_00004,test,DE-A05,4,4,5,"[10, 11, 12]",3,0,1056,212,1.0
+d2v2_unipen_de,DE-A05/atu_00005_u000,DE-A05/atu_00005,test,DE-A05,4,0,3,"[0, 2]",2,0,391,217,1.0
+d2v2_unipen_de,DE-A05/atu_00005_u001,DE-A05/atu_00005,test,DE-A05,4,1,3,[1],1,0,21,71,1.0
+d2v2_unipen_de,DE-A05/atu_00005_u002,DE-A05/atu_00005,test,DE-A05,4,2,3,[3],1,0,450,168,1.0
+d2v2_unipen_de,DE-A05/atu_00006_u000,DE-A05/atu_00006,test,DE-A05,4,0,4,"[0, 1]",2,0,207,194,1.0
+d2v2_unipen_de,DE-A05/atu_00006_u001,DE-A05/atu_00006,test,DE-A05,4,1,4,[2],1,0,252,249,1.0
+d2v2_unipen_de,DE-A05/atu_00006_u002,DE-A05/atu_00006,test,DE-A05,4,2,4,[3],1,0,342,174,1.0
+d2v2_unipen_de,DE-A05/atu_00006_u003,DE-A05/atu_00006,test,DE-A05,4,3,4,"[4, 5]",2,0,428,197,1.0
+d2v2_unipen_de,DE-A05/atu_00007_u000,DE-A05/atu_00007,test,DE-A05,4,0,3,[0],1,0,530,232,1.0
+d2v2_unipen_de,DE-A05/atu_00007_u001,DE-A05/atu_00007,test,DE-A05,4,1,3,[1],1,0,343,216,1.0
+d2v2_unipen_de,DE-A05/atu_00007_u002,DE-A05/atu_00007,test,DE-A05,4,2,3,"[2, 3]",2,0,391,251,1.0
+d2v2_unipen_de,DE-A05/atu_00008_u000,DE-A05/atu_00008,test,DE-A05,4,0,1,"[0, 1, 2, 3, 4, 5, 6, 7, 8]",9,1,664,240,1.0
+d2v2_unipen_de,DE-A05/atu_00009_u000,DE-A05/atu_00009,test,DE-A05,4,0,5,"[0, 1]",2,0,364,193,1.0
+d2v2_unipen_de,DE-A05/atu_00009_u001,DE-A05/atu_00009,test,DE-A05,4,1,5,"[2, 3]",2,1,148,145,1.0
+d2v2_unipen_de,DE-A05/atu_00009_u002,DE-A05/atu_00009,test,DE-A05,4,2,5,[4],1,0,188,166,1.0
+d2v2_unipen_de,DE-A05/atu_00009_u003,DE-A05/atu_00009,test,DE-A05,4,3,5,[5],1,0,113,179,1.0
+d2v2_unipen_de,DE-A05/atu_00009_u004,DE-A05/atu_00009,test,DE-A05,4,4,5,[6],1,0,423,180,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u000,DE-A08/atu_00001,test,DE-A08,7,0,11,"[0, 1]",2,0,112,170,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u001,DE-A08/atu_00001,test,DE-A08,7,1,11,"[2, 3]",2,0,196,140,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u002,DE-A08/atu_00001,test,DE-A08,7,2,11,"[4, 5]",2,1,192,189,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u003,DE-A08/atu_00001,test,DE-A08,7,3,11,[6],1,0,40,82,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u004,DE-A08/atu_00001,test,DE-A08,7,4,11,"[7, 8]",2,1,180,114,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u005,DE-A08/atu_00001,test,DE-A08,7,5,11,[9],1,0,98,206,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u006,DE-A08/atu_00001,test,DE-A08,7,6,11,[10],1,0,100,165,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u007,DE-A08/atu_00001,test,DE-A08,7,7,11,"[11, 12, 13, 14]",4,0,432,161,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u008,DE-A08/atu_00001,test,DE-A08,7,8,11,[15],1,0,69,104,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u009,DE-A08/atu_00001,test,DE-A08,7,9,11,[16],1,0,121,182,1.0
+d2v2_unipen_de,DE-A08/atu_00001_u010,DE-A08/atu_00001,test,DE-A08,7,10,11,[17],1,0,53,86,1.0
+d2v2_unipen_de,DE-A08/atu_00002_u000,DE-A08/atu_00002,test,DE-A08,7,0,4,[0],1,0,113,163,1.0
+d2v2_unipen_de,DE-A08/atu_00002_u001,DE-A08/atu_00002,test,DE-A08,7,1,4,[2],1,0,23,60,1.0
+d2v2_unipen_de,DE-A08/atu_00002_u002,DE-A08/atu_00002,test,DE-A08,7,2,4,"[1, 3]",2,0,169,137,1.0
+d2v2_unipen_de,DE-A08/atu_00002_u003,DE-A08/atu_00002,test,DE-A08,7,3,4,"[4, 5, 6]",3,0,407,155,1.0
+d2v2_unipen_de,DE-A08/atu_00003_u000,DE-A08/atu_00003,test,DE-A08,7,0,8,"[0, 1]",2,0,153,185,1.0
+d2v2_unipen_de,DE-A08/atu_00003_u001,DE-A08/atu_00003,test,DE-A08,7,1,8,[2],1,0,139,194,1.0
+d2v2_unipen_de,DE-A08/atu_00003_u002,DE-A08/atu_00003,test,DE-A08,7,2,8,[3],1,0,96,111,1.0
+d2v2_unipen_de,DE-A08/atu_00003_u003,DE-A08/atu_00003,test,DE-A08,7,3,8,"[4, 5]",2,0,143,124,1.0
+d2v2_unipen_de,DE-A08/atu_00003_u004,DE-A08/atu_00003,test,DE-A08,7,4,8,[6],1,0,91,161,1.0
+d2v2_unipen_de,DE-A08/atu_00003_u005,DE-A08/atu_00003,test,DE-A08,7,5,8,"[7, 8]",2,0,107,151,1.0
+d2v2_unipen_de,DE-A08/atu_00003_u006,DE-A08/atu_00003,test,DE-A08,7,6,8,[9],1,0,137,100,1.0
+d2v2_unipen_de,DE-A08/atu_00003_u007,DE-A08/atu_00003,test,DE-A08,7,7,8,[10],1,0,112,149,1.0
+d2v2_unipen_de,DE-A08/atu_00004_u000,DE-A08/atu_00004,test,DE-A08,7,0,6,"[0, 1]",2,0,235,139,1.0
+d2v2_unipen_de,DE-A08/atu_00004_u001,DE-A08/atu_00004,test,DE-A08,7,1,6,[2],1,0,103,145,1.0
+d2v2_unipen_de,DE-A08/atu_00004_u002,DE-A08/atu_00004,test,DE-A08,7,2,6,"[3, 4, 5]",3,0,189,102,1.0
+d2v2_unipen_de,DE-A08/atu_00004_u003,DE-A08/atu_00004,test,DE-A08,7,3,6,[6],1,0,81,150,1.0
+d2v2_unipen_de,DE-A08/atu_00004_u004,DE-A08/atu_00004,test,DE-A08,7,4,6,[7],1,0,111,118,1.0
+d2v2_unipen_de,DE-A08/atu_00004_u005,DE-A08/atu_00004,test,DE-A08,7,5,6,"[8, 9]",2,0,336,128,1.0
+d2v2_unipen_de,DE-A08/atu_00005_u000,DE-A08/atu_00005,test,DE-A08,7,0,8,[0],1,0,160,194,1.0
+d2v2_unipen_de,DE-A08/atu_00005_u001,DE-A08/atu_00005,test,DE-A08,7,1,8,[1],1,0,135,105,1.0
+d2v2_unipen_de,DE-A08/atu_00005_u002,DE-A08/atu_00005,test,DE-A08,7,2,8,[2],1,0,24,74,1.0
+d2v2_unipen_de,DE-A08/atu_00005_u003,DE-A08/atu_00005,test,DE-A08,7,3,8,[3],1,0,68,157,1.0
+d2v2_unipen_de,DE-A08/atu_00005_u004,DE-A08/atu_00005,test,DE-A08,7,4,8,[4],1,0,98,202,1.0
+d2v2_unipen_de,DE-A08/atu_00005_u005,DE-A08/atu_00005,test,DE-A08,7,5,8,[5],1,0,59,123,1.0
+d2v2_unipen_de,DE-A08/atu_00005_u006,DE-A08/atu_00005,test,DE-A08,7,6,8,[6],1,0,62,144,1.0
+d2v2_unipen_de,DE-A08/atu_00005_u007,DE-A08/atu_00005,test,DE-A08,7,7,8,[7],1,0,187,205,1.0
+d2v2_unipen_de,DE-A08/atu_00006_u000,DE-A08/atu_00006,test,DE-A08,7,0,9,"[0, 1]",2,0,113,165,1.0
+d2v2_unipen_de,DE-A08/atu_00006_u001,DE-A08/atu_00006,test,DE-A08,7,1,9,"[2, 3]",2,0,273,168,1.0
+d2v2_unipen_de,DE-A08/atu_00006_u002,DE-A08/atu_00006,test,DE-A08,7,2,9,[4],1,0,16,61,1.0
+d2v2_unipen_de,DE-A08/atu_00006_u003,DE-A08/atu_00006,test,DE-A08,7,3,9,[5],1,0,100,125,1.0
+d2v2_unipen_de,DE-A08/atu_00006_u004,DE-A08/atu_00006,test,DE-A08,7,4,9,"[6, 7]",2,1,76,106,1.0
+d2v2_unipen_de,DE-A08/atu_00006_u005,DE-A08/atu_00006,test,DE-A08,7,5,9,"[8, 9]",2,0,119,160,1.0
+d2v2_unipen_de,DE-A08/atu_00006_u006,DE-A08/atu_00006,test,DE-A08,7,6,9,[10],1,0,104,155,1.0
+d2v2_unipen_de,DE-A08/atu_00006_u007,DE-A08/atu_00006,test,DE-A08,7,7,9,[11],1,0,110,202,1.0
+d2v2_unipen_de,DE-A08/atu_00006_u008,DE-A08/atu_00006,test,DE-A08,7,8,9,[12],1,0,274,124,1.0

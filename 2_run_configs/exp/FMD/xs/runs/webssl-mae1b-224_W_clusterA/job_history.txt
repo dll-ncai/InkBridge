@@ -1,0 +1,7 @@
+2026-11-06T19:05:31Z arm_job_start arm=webssl-mae1b-224_W lane=clusterA site=clusterA host=<node> slurm=24914901 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-06T19:05:33Z race_lock WIN site=clusterA host=<node> slurm=24914901 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-06T19:05:33Z batch_layout ng=2 mem_gb=15 per_gpu=32 global_micro=64 accum=8 units_per_step=512 site=clusterA host=<node> slurm=24914901 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-06T19:05:33Z train_start ngpu=2 site=clusterA host=<node> slurm=24914901 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-08T02:53:21Z train_exit rc=0 site=clusterA host=<node> slurm=24914901 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-08T05:32:45Z selected milestone 4 (step 40000) site=clusterA host=<node> slurm=24914901 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-08T05:33:07Z arm_job_end site=clusterA host=<node> slurm=24914901 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]

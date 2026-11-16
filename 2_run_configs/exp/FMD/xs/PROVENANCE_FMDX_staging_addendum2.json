@@ -1,0 +1,200 @@
+{
+ "schema": "fmdx_provenance_addendum/2",
+ "track": "XS staging addendum 2",
+ "created_utc": "2026-11-03T20:58Z",
+ "sub_agent_model": "<agent>",
+ "request": "Lead follow-up 2026-11-03 evening: <author> accepted SD3.5 (Stability AI community licence) and possibly bigcode licences; test access, stage accessible repos, load-test, no CLUSTER-B/VPS mirror",
+ "prereg": {
+  "path": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+  "sha256_at_build": "b5af7ee97706d4a7c8d5c880c7612b769712e9d1a41de4808ee4158e95fd04c8"
+ },
+ "access_test": {
+  "file": "$U/exp/FMD/xs/admin/access_test_add2.json",
+  "sha256": "d9ae50443effee834fb38462f8b1aca8978f9c559d535a30e5d712333da72edf",
+  "job": 24850449,
+  "method": "huggingface_hub model_info + get_hf_file_metadata HEAD on model_index.json/config.json at pinned revision; token not printed"
+ },
+ "staged": {
+  "sd3.5-large-diffusers-layout": {
+   "repo_id": "stabilityai/stable-diffusion-3.5-large",
+   "revision": "ceddf0a7fdf2064ea28e2213e3b84e4afa170a0f",
+   "license": "other",
+   "license_name": "stabilityai-ai-community",
+   "gated": "auto",
+   "bytes": 27628331228,
+   "n_files": 31,
+   "part_sha256": "d02c1eaa530785e143c6b9bcbc97a7c0fe399d9a6c3d79a335ccc096b7b93909"
+  },
+  "sd3.5-large-turbo-diffusers-layout": {
+   "repo_id": "stabilityai/stable-diffusion-3.5-large-turbo",
+   "revision": "ec07796fc06b096cc56de9762974a28f4c632eda",
+   "license": "other",
+   "license_name": "stabilityai-ai-community",
+   "gated": "auto",
+   "bytes": 27628331572,
+   "n_files": 31,
+   "part_sha256": "7f24ff3216c4013f4fcb81a42101b793342ef2002212b78c3b9e6b3d9f7bddcf"
+  },
+  "sd3.5-medium-diffusers-layout": {
+   "repo_id": "stabilityai/stable-diffusion-3.5-medium",
+   "revision": "b940f670f0eda2d07fbb75229e779da1ad11eb80",
+   "license": "other",
+   "license_name": "stabilityai-ai-community",
+   "gated": "auto",
+   "bytes": 16274934491,
+   "n_files": 29,
+   "part_sha256": "1d8414fb94486729ea8dbef91586b5680a5f60afe8fe1e275ab24fe52e91936e"
+  },
+  "starcoder2-7b": {
+   "repo_id": "bigcode/starcoder2-7b",
+   "revision": "bb9afde76d7945da5745592525db122d4d729eb1",
+   "license": "bigcode-openrail-m",
+   "license_name": null,
+   "gated": "False",
+   "bytes": 14351245339,
+   "n_files": 12,
+   "part_sha256": "968476c06ebdb305c37f27c8471202b36e3ad61086ff8fbcc965f1c882bc3896"
+  }
+ },
+ "blocked": [
+  {
+   "local_name": "starcoderbase-1b",
+   "repo_id": "bigcode/starcoderbase-1b",
+   "revision": null,
+   "error_type": "GatedRepoError",
+   "error": "403 Client Error. (Request ID: Root=1-6aea37ba-30954824216cafa909332c90;602eb82c-87b1-42d7-bc50-69903c500711)\n\nCannot access gated repo for url https://huggingface.co/bigcode/starcoderbase-1b/resolve/182f0165fdf8da9c9935901eec65c94337f01c11/model.safetensors.\nAccess to model bigcode/starcoderbase-1b is restricted and you are not in the authorized list. Visit https://huggingface.co/bigcode/starcoderbase-1b to ask for access."
+  }
+ ],
+ "loadtests": {
+  "sd3.5-large-diffusers-layout": {
+   "sha256": "4508d87b677d56a75b13309504615a6642669c0570ef51018de8b5f540d7a728",
+   "status": "ok",
+   "token_map": {
+    "s0.261_block19": [
+     64,
+     64
+    ],
+    "s0.261_block28": [
+     64,
+     64
+    ],
+    "s0.101_block19": [
+     64,
+     64
+    ],
+    "s0.101_block28": [
+     64,
+     64
+    ]
+   },
+   "code_sha": "2e4d566186fd",
+   "add_sha": "b35f136133c5",
+   "device": "cpu",
+   "convention": "prereg A3.a/A3.c DiT convention (1024 px, VAE latent, flow s 0.261/0.101, empty prompt x3 text encoders, seed 0); LOAD-TEST uses 1 noise draw(s) instead of 4; forward stopped after block floor(3N/4)"
+  },
+  "sd3.5-large-turbo-diffusers-layout": {
+   "sha256": "87e4fdd0423bde2df37dca391c4cc3d60932425a053397939270381e04501f2a",
+   "status": "ok",
+   "token_map": {
+    "s0.261_block19": [
+     64,
+     64
+    ],
+    "s0.261_block28": [
+     64,
+     64
+    ],
+    "s0.101_block19": [
+     64,
+     64
+    ],
+    "s0.101_block28": [
+     64,
+     64
+    ]
+   },
+   "code_sha": "2e4d566186fd",
+   "add_sha": "b35f136133c5",
+   "device": "cpu",
+   "convention": "prereg A3.a/A3.c DiT convention (1024 px, VAE latent, flow s 0.261/0.101, empty prompt x3 text encoders, seed 0); LOAD-TEST uses 1 noise draw(s) instead of 4; forward stopped after block floor(3N/4)"
+  },
+  "sd3.5-medium-diffusers-layout": {
+   "sha256": "d7f35f860d5afc2c75c1aa23f96280e96acbac50c40c83b5a6259f6c3ee483db",
+   "status": "ok",
+   "token_map": {
+    "s0.261_block12": [
+     64,
+     64
+    ],
+    "s0.261_block18": [
+     64,
+     64
+    ],
+    "s0.101_block12": [
+     64,
+     64
+    ],
+    "s0.101_block18": [
+     64,
+     64
+    ]
+   },
+   "code_sha": "2e4d566186fd",
+   "add_sha": "b35f136133c5",
+   "device": "cpu",
+   "convention": "prereg A3.a/A3.c DiT convention (1024 px, VAE latent, flow s 0.261/0.101, empty prompt x3 text encoders, seed 0); LOAD-TEST uses 1 noise draw(s) instead of 4; forward stopped after block floor(3N/4)"
+  },
+  "starcoder2-7b": {
+   "sha256": "12d10e27a47e44513eb8e2bb22cd4c336bc94ec0d74df810decb4b3168ba711f",
+   "status": "error",
+   "token_map": null,
+   "code_sha": "2e4d566186fd",
+   "add_sha": "b35f136133c5",
+   "device": "cpu",
+   "convention": null
+  }
+ },
+ "jobs": {
+  "access": 24850449,
+  "staging": {
+   "sd35_large_turbo": 24850474,
+   "sd35_medium_first": 24850475,
+   "sd35_medium_rerun_transformer_added": 24850655,
+   "sd35_large": 24850476,
+   "starcoder2_7b": 24850477,
+   "starcoderbase_1b": 24850478
+  },
+  "loadtests": {
+   "c1_medium_failed_transformer_missing": 24850580,
+   "c1_starcoder2": 24850593,
+   "c3_medium": 24851705,
+   "c4_turbo": 24851706,
+   "c4_large": 24851707,
+   "c2_turbo_large_cancelled_200G_pending": [
+    24850656,
+    24850658
+   ]
+  }
+ },
+ "code_sha256": {
+  "xs_probe.py": "2e4d566186fd2e072feb725c72a46e5d9d99e9b184c11104947533be6c3c2927",
+  "xs_probe_add.py": "b35f136133c528cf8923393a41af4cfca32e0a0a0b9ee8be91ace5c6f978a2eb",
+  "stage_xs_v3.py": "b8c975d6787d1ba09c532af7e3d5e47893362bbcabdea079a8c3f903e0fdcdd8",
+  "build_manifest_v2.py": "2f3f9217187defba19799673e09c37352114bbfdde3c00c5d4f3c094103f2324",
+  "access_test_add2.py": "04ed7c474a03fe632db8c14a06984d8aa9d3c69a42b6d7f8b1d10bb64bace2eb",
+  "build_provenance_addendum2.py": "24bb3576d870db1ac0256d1e113b7a1334dc695bb9c55786c6f640ea475b3f4d"
+ },
+ "files_kept": [
+  "weights/sd3.5-medium-diffusers-layout.manifest_part.incomplete_transformer_missing.json (first staging pass: SD35 pattern missed the unsharded medium transformer/diffusion_pytorch_model.safetensors; re-staged, part overwritten)",
+  "weights/sd3.5-*-diffusers-layout.manifest_part.blocked_1st_attempt_add1.json (GatedRepoError records from addendum 1)"
+ ],
+ "deviations": [
+  "SD3.5 load test follows the prereg A3.a/A3.c DiT convention (1024 px, VAE latent, flow s 0.261 and 0.101, empty prompt through 3 text encoders, seed 0, gate/info blocks floor(N/2) and floor(3N/4)) with 1 noise draw instead of 4, 1 image, CPU bf16, forward stopped after block floor(3N/4); native token grid 64x64 (16x16 mapping not applied)",
+  "SD3.5 staged as diffusers layout only (no root single-file checkpoints, text_encoders/ folder or fp16 duplicates)",
+  "starcoder2-7b load-only (AutoModelForCausalLM bf16 CPU), no token map",
+  "starcoderbase-1b BLOCKED (GatedRepoError)",
+  "nothing mirrored to CLUSTER-B or the VPS",
+  "no A4000 timing for SD3.5 / starcoder (not requested)",
+  "gen-VLM frame ba407acd not messaged directly (topology: only parent/children); paths relayed via lead"
+ ]
+}

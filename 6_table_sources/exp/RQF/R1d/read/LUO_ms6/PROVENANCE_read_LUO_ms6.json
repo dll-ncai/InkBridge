@@ -1,0 +1,123 @@
+{
+ "kind": "rqf_r1d_read",
+ "base": "LUO_ms6",
+ "plan": "$U/exp/RQF/R1d/plan.json",
+ "plan_sha256": "1e19ba0a1d6e2c9fd45fa508ab89943b6dce78ed18fbe455f5f406ef9406f01a",
+ "inputs": {
+  "test_ouhdl": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_ouhdl__LUO_ms6_idv3__seed0__rows031.csv",
+    "sha256": "d9198df7531523305854604f0c641207af824f6a7356f70afc74a80f7792a016"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_ouhdl__LUO_ms6_r1d__seed0__rows031.csv",
+    "sha256": "a4393448e2a122b1c5720c5a61be6174fe63f8831417511d3657110b0def05e9"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_ouhdl__LUO_ms6_mirv3__seed0__rows031.csv",
+    "sha256": "525260de62630e7608fc94d6db9da6b49aea57b5644eb06ad7f807930cdca1cf"
+   }
+  },
+  "test_casia_zh": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_zh__LUO_ms6_idv3__seed0__rows031.csv",
+    "sha256": "cbd6323b1dd47b13bb9e4e29486f16713d1c96bc29759d9d632dd436410986e1"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_zh__LUO_ms6_r1d__seed0__rows031.csv",
+    "sha256": "d874f7ee7c2a793288d4823d1eb8c1b92c8c67aa24bd0b464779eb85c31a5757"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_zh__LUO_ms6_mirv3__seed0__rows031.csv",
+    "sha256": "d1c4c7284c5d87f655c6f6fc111fb945ca838affc8cc13d401659a51b9fa700f"
+   }
+  },
+  "test_casia_en": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_en__LUO_ms6_idv3__seed0__rows031.csv",
+    "sha256": "e7ef3bc05735ec12047b1652b9d1269c498618dc95faa5ceb4fc8b3a85fd6945"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_en__LUO_ms6_r1d__seed0__rows031.csv",
+    "sha256": "0bb182a881c1728582236ad76c523320abda18bc54ebe62aa3d3eb452835bfd4"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_casia_en__LUO_ms6_mirv3__seed0__rows031.csv",
+    "sha256": "1e893948db19ff47b2eabd55d829a8ccbb6d18f92f9998a73c422185577e94fd"
+   }
+  },
+  "test_hpl_tamil": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_hpl_tamil__LUO_ms6_idv3__seed0__rows031.csv",
+    "sha256": "60d32ce9afad789c3fe2f588e4824d8cb8f7cfdb6be19c1b15af2453bcd5f3cb"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_hpl_tamil__LUO_ms6_r1d__seed0__rows031.csv",
+    "sha256": "11a092d96905068f8b598f1fcf84fa1c2ce60fac4845e705e237043b1484905c"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_hpl_tamil__LUO_ms6_mirv3__seed0__rows031.csv",
+    "sha256": "7ff2bc58689c9b7f0cf3e50ef485982182c08dbcd3beca795393c6769823154b"
+   }
+  },
+  "test_iam500": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_iam500__LUO_ms6_idv3__seed0__rows031.csv",
+    "sha256": "7aab7eecd4cf946da8186b2fb12943b116fc66886640a056493dfada0e7756be"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_iam500__LUO_ms6_r1d__seed0__rows031.csv",
+    "sha256": "4daaaa01399aa662789eff7188352d81227e99508e6392fd01b851d5a3a9ee69"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/test_iam500__LUO_ms6_mirv3__seed0__rows031.csv",
+    "sha256": "744b38119eac4317d28c3a50726f04b4a86b6fe1a4dbf617cc4e346b20ade7e0"
+   }
+  },
+  "german_unipen_de_test": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_unipen_de_test__LUO_ms6_idv3__seed0__rows031.csv",
+    "sha256": "9371d8230aceabccbb4f48118da288885ce0b68d0a8b5ea0e1eea90c3b6e5be8"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_unipen_de_test__LUO_ms6_r1d__seed0__rows031.csv",
+    "sha256": "07ee95f8088a368bffea710e724533bd6c409f6a7c9e9eebaba4c4480ebe06a0"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_unipen_de_test__LUO_ms6_mirv3__seed0__rows031.csv",
+    "sha256": "8b3092d32e061599b11ceecf15f4812cce5455a5c3f85279539babadff927b98"
+   }
+  },
+  "german_onhw_all": {
+   "idv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_onhw_all__LUO_ms6_idv3__seed0__rows031.csv",
+    "sha256": "28809c4d76b86f53de0d5ef9b039af774f16d43077c26284f1f44553a8f50b75"
+   },
+   "r1d": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_onhw_all__LUO_ms6_r1d__seed0__rows031.csv",
+    "sha256": "a84a9ac66ea4ae3c7392d8b0ca80d1fcc41f69345f105119c25b44802796dd38"
+   },
+   "mirv3": {
+    "path": "$U/exp/RQF/R1d/score_out/rows/german_onhw_all__LUO_ms6_mirv3__seed0__rows031.csv",
+    "sha256": "167ab70151063bdd7ccd5c8cc3ecf715cb97aa73301f221b685c3b0eedc7530b"
+   }
+  }
+ },
+ "code_sha256": {
+  "r1d_read.py": "5024b9746e5e8fdf9c274e355689b19392d08d7ea6c0418114fa57cd38684d7f",
+  "loop_tables.py": "5f59016518803745f9a91cecac5d1ff1ddeee260899be45c2a5517f977302ca5"
+ },
+ "agent": "<agent>",
+ "lead_reason": "Model <agent>: new inference code",
+ "prereg": {
+  "parent": "PREREG_RQ_finalise_2026-11-07.md sha256 04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+  "amendment": "A2 sha256 bface42b... (A2.5 R1d)"
+ },
+ "host": "<node>",
+ "slurm_job": "24964490",
+ "outputs": {
+  "R1d_paired_LUO_ms6.csv": "3171ad9a42738352d7a60397914a1eadeddd301c8a8310cfacbe5ab40fd95178",
+  "R1d_absolute_LUO_ms6.csv": "7b067787ed714bd56d7b307e1eb2d5433e62538630da886dae7cc020bb94e155",
+  "R1d_verdict_LUO_ms6.json": "5c3f2d34e4845eee4443ef8765172c8331c21feec4e83803b1e6c061bdac195e"
+ }
+}

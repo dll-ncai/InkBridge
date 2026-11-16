@@ -1,0 +1,7 @@
+2026-11-09T21:25:26Z sma_chain_start tag=SMA_dinov3-vitl16-sat493m_W_p10_s20261034 kind=bb backbone=$U/exp/FMD/xs/runs/dinov3-vitl16-sat493m_W_clusterA/bb_ms4.pt frac=p10 seed=20261034 steps=10000 site=clusterA host=<node> slurm=24964886 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-09T21:25:26Z train_start layout=64x4 site=clusterA host=<node> slurm=24964886 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-10T15:56:52Z sma_chain_start tag=SMA_dinov3-vitl16-sat493m_W_p10_s20261034 kind=bb backbone=$U/exp/FMD/xs/runs/dinov3-vitl16-sat493m_W_clusterA/bb_ms4.pt frac=p10 seed=20261034 steps=10000 site=clusterA host=<node> slurm=24964886 restart=1 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-10T15:56:52Z train_start layout=64x4 site=clusterA host=<node> slurm=24964886 restart=1 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-10T17:18:59Z train_exit rc=0 site=clusterA host=<node> slurm=24964886 restart=1 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-10T20:05:33Z selected SM-A milestone 10 (step 10000) site=clusterA host=<node> slurm=24964886 restart=1 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-11T00:27:52Z sampling_done ms10 site=clusterA host=<node> slurm=24964886 restart=1 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]

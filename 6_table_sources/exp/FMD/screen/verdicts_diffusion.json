@@ -1,0 +1,48 @@
+{
+ "rows_csv": "$U/exp/FMD/screen/rows_diffusion.csv",
+ "rows_csv_sha256": "5f4faf206122422ca01557bd96b363073619eb8f49ca0ceded5f361f9ce26e3d",
+ "created_utc": "2026-11-03T03:15:39Z",
+ "verdicts": {
+  "diffusion": {
+   "verdict": "FAIL",
+   "fms": {
+    "sd2.1-dift": {
+     "order_pass": [
+      "T1:acc8(t261_up1,linear)",
+      "T2:rprec(t261_up1,linear)",
+      "T3:rprec(t261_up1,linear)"
+     ],
+     "shape_NI": false,
+     "fm_pass": false
+    }
+   }
+  }
+ },
+ "n_rows": 56,
+ "baselines_chosen": [
+  "nomL1:cat16",
+  "nomL2:cat16"
+ ],
+ "baseline_arms_available": {
+  "linear": [
+   "nomL1:mid16",
+   "nomL1:cat16",
+   "nomL2:mid16",
+   "nomL2:cat16"
+  ],
+  "attn": [
+   "nomL1:mid16",
+   "nomL1:cat16",
+   "nomL2:cat16"
+  ]
+ },
+ "baseline_arms_prereg": [
+  "nomL1:mid16",
+  "nomL1:cat16",
+  "nomL2:mid16",
+  "nomL2:cat16"
+ ],
+ "n_order_tests_gate_layer": 4,
+ "multiplicity": "none (prereg section 4: diffusion 4 order tests)",
+ "harness_code": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+}

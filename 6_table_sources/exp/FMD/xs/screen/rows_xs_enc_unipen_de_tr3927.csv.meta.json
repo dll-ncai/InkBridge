@@ -1,0 +1,489 @@
+{
+ "schema": "fmd_meta/1",
+ "kind": "fmdx_screen_rows",
+ "created_utc": "2026-11-07T23:44:46Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "code": {
+  "files": {
+   "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+   "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+   "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+   "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+   "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+   "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+   "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+   "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+   "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+   "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+  },
+  "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "command": "$U/exp/FMD/code/fmd_harness_xs/fmd_harness_xs/xs_rows.py --set unipen_de_tr3927 --track encoders --refresh-set",
+ "env": {
+  "python": "3.11.13",
+  "host": "<node>",
+  "platform": "Linux-5.14.0-687.61.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "slurm_job_id": "24850422",
+  "numpy": "2.2.6",
+  "torch": "2.7.1+cu128",
+  "cv2": "4.12.0"
+ },
+ "inputs": {
+  "part aimv2-1b-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/aimv2-1b-patch14-224.json",
+   "sha256": "f9b30b7c8bbf649806b717cb0a9ab67f0cf86bcc54859d6d196c9b22b947d4af"
+  },
+  "part aimv2-3b-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/aimv2-3b-patch14-224.json",
+   "sha256": "44c827e335d9409aed91a6cab37e7020ce412c653a67e07edab9857377b62a7c"
+  },
+  "part aimv2-huge-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/aimv2-huge-patch14-224.json",
+   "sha256": "5ae94582164a3b3724a15db410d5c0572d095bc77c2b881edafce516cc46a48a"
+  },
+  "part aimv2-large-patch14-224-distilled": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/aimv2-large-patch14-224-distilled.json",
+   "sha256": "360dbfe06650708dcbedd7b1d51e60bb249dba0affe0e4e058fc14914eef2e70"
+  },
+  "part aimv2-large-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/aimv2-large-patch14-224.json",
+   "sha256": "d1854ad0407408559f5b51ee82239c52c74572b4a86665e7c3a891a96317b52c"
+  },
+  "part c-radiov3-b": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/c-radiov3-b.json",
+   "sha256": "713422736d9087569b3eabeebfeb006e96840b94c5aaa998a6b261787ab34ac2"
+  },
+  "part c-radiov3-g": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/c-radiov3-g.json",
+   "sha256": "f297e5b944a889462a4965f8772d156e88fe246031104d09333c20766a6f5b02"
+  },
+  "part c-radiov3-h": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/c-radiov3-h.json",
+   "sha256": "c718bbe205aab8077f6a5a8c4ef1f028b723b491d8ddc8084c7b19cc3c8ea178"
+  },
+  "part c-radiov3-l": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/c-radiov3-l.json",
+   "sha256": "f55856782b73b5686c7149bb19470f90a43a901814b369fed4acfaae64d24cb6"
+  },
+  "part c-radiov4-h": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/c-radiov4-h.json",
+   "sha256": "884da5776c118a30981e21fd94c0091ea021b6778e3329af9c9193f2d7a080a7"
+  },
+  "part c-radiov4-so400m": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/c-radiov4-so400m.json",
+   "sha256": "8fc5dadb6bd94ea5a094d29596440a99283b5f1da585dd03ff4eedec11528f16"
+  },
+  "part depth-anything-3-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/depth-anything-3-base.json",
+   "sha256": "71a0d12a582b311ed2147af4d294720fc23cd0a1466cf5819d728f317e6ca67c"
+  },
+  "part depth-anything-3-giant-1.1": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/depth-anything-3-giant-1.1.json",
+   "sha256": "2631aa899479b6a5cbb5c3ccbf49df26dacc5f9a4a35827955183a06ea345f69"
+  },
+  "part depth-anything-3-large-1.1": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/depth-anything-3-large-1.1.json",
+   "sha256": "ad722a94bcd219778d7b4a88fdaf73245ccc0191e77ff7c78fd01e936164f0f4"
+  },
+  "part depth-anything-v2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/depth-anything-v2-large.json",
+   "sha256": "58ffe1942e8d6384782849453afb4cf5f837f45d418ef1a2782fb11e686250fa"
+  },
+  "part dinov2-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov2-base.json",
+   "sha256": "aee2839a4c74f41214ea91ff517ded8cc4c3644aa0f130cd28f363c43e4d3f95"
+  },
+  "part dinov2-giant": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov2-giant.json",
+   "sha256": "369a2720331596ffb7e5b45cda76cdfb36116ebabd40cac36ae227dc6416a44f"
+  },
+  "part dinov2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov2-large.json",
+   "sha256": "1ba42013f5825a8e522a7d37c97e200b6fd7b3c5d161c8cd29dcff1164d59980"
+  },
+  "part dinov2-reg-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov2-reg-base.json",
+   "sha256": "8134f752955929411c788a6f3de0d5af2cc202587d5d1e98143a335590edbf5c"
+  },
+  "part dinov2-reg-giant": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov2-reg-giant.json",
+   "sha256": "67481c2d4b1a6b71a90d9f7b2e63975c87ffa70319e3eb155242f8b4bfdb4707"
+  },
+  "part dinov2-reg-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov2-reg-large.json",
+   "sha256": "7f022efb6a975fe5ec054b4d01eb67885bc33ee1d8e25bf8b5dbf1b405d46e36"
+  },
+  "part dinov2-reg-small": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov2-reg-small.json",
+   "sha256": "acb42db303c27ce18c8d9fd19010dfa77918361ccb32afc9e26eb6537a44fcee"
+  },
+  "part dinov3-convnext-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-convnext-base.json",
+   "sha256": "e991c85fa215b70d4c457af509cf3e5d0e87b3c92bcbc1f86ffb865b9cd24154"
+  },
+  "part dinov3-convnext-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-convnext-large.json",
+   "sha256": "879d1a424e0ab5ec4c2812112b123c79a6cd530344bc82eb4bea0836f91a7b9c"
+  },
+  "part dinov3-convnext-small": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-convnext-small.json",
+   "sha256": "efe6690bdaf8c0588f052ee4f5d410f5b3d23db3c926737d4b7ae076316383bb"
+  },
+  "part dinov3-convnext-tiny": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-convnext-tiny.json",
+   "sha256": "1ae34299c3ccdf6da9cbcb2adaa74a8b1d02d885b50fa292c3702d45e9a3ad24"
+  },
+  "part dinov3-vit7b16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-vit7b16.json",
+   "sha256": "852da1d128b96fad2fefd977ed8e52ee9f4e20576605802944cbd30510638ddd"
+  },
+  "part dinov3-vitb16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-vitb16.json",
+   "sha256": "00299c7aad15213ee81afe958a0bac7dec0a8b3a6ba9eaeeb00ddbc19cbe454d"
+  },
+  "part dinov3-vith16plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-vith16plus.json",
+   "sha256": "e22e66b2c62b19c231fd0919cc0ade6796f94d7d41cc11d5fb80b7deabb976a5"
+  },
+  "part dinov3-vitl16-sat493m": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-vitl16-sat493m.json",
+   "sha256": "7d8723885c828d0cd07b98df3d6c9a2a76acf3743dc6d4080cd886284944c810"
+  },
+  "part dinov3-vitl16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-vitl16.json",
+   "sha256": "562a691119fc595efb8e60748769c912577e29a0f90e03f05550d4eb8699d5b2"
+  },
+  "part dinov3-vits16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-vits16.json",
+   "sha256": "8c95e2121031b3d8448a69a8d0b18c841517604c374377d238375a7faf830625"
+  },
+  "part dinov3-vits16plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/dinov3-vits16plus.json",
+   "sha256": "1acc62f1af4b841c710343e9e657669da3659c059b68159ec0ba120aacc51e36"
+  },
+  "part florence-2-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/florence-2-base.json",
+   "sha256": "ab9eaea5954e9cdf4ba627d3d6f832e422f3970ca43770887d8ce81704c64065"
+  },
+  "part florence-2-large-ft": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/florence-2-large-ft.json",
+   "sha256": "8e3c06feb19dbfac9d7a151f896f04e7a2c6f122094954fe7ace2521a432480c"
+  },
+  "part florence-2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/florence-2-large.json",
+   "sha256": "851da442470e397eb2a0a7a5b91ec949eca5e7550192efeae8939c2fde1a3f55"
+  },
+  "part pe-core-b16-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-core-b16-224.json",
+   "sha256": "22e105e7bb641d494e8c5c1eb3d6b1e6b06609470f727c0ffb16d32856eb4f39"
+  },
+  "part pe-core-g14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-core-g14-448.json",
+   "sha256": "f54474bbc91cf367d4fef5c7319009c9a6a4615c0c825ab3ecf2e0e57d0d4a0d"
+  },
+  "part pe-core-l14-336": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-core-l14-336.json",
+   "sha256": "803ac033f0a91a470de307afaff03df4f93ee1ee90a200383f94c4c7315b7ee9"
+  },
+  "part pe-core-s16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-core-s16-384.json",
+   "sha256": "c91e3fc7317be670371a0bc3b295fb3db28248030e64ba1bd46c903108e33320"
+  },
+  "part pe-core-t16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-core-t16-384.json",
+   "sha256": "153485481e147cbdec5a7b2ef4261c93dca84a20042802c939d816ced4ffcfa2"
+  },
+  "part pe-lang-g14-448-timm": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-lang-g14-448-timm.json",
+   "sha256": "de87eb5dd850f149d9b990c66768116249b9a91d7ce53735a136f15f0c3dc745"
+  },
+  "part pe-lang-l14-448-timm": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-lang-l14-448-timm.json",
+   "sha256": "765ff68ac37c6a92eb26475f835700e969dc300a30e8179dea4284fb4d6169cc"
+  },
+  "part pe-spatial-b16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-spatial-b16-512.json",
+   "sha256": "8490d64398138a0166c124c56bde522a423e2fd3183ecc31fcf70573601d3271"
+  },
+  "part pe-spatial-g14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-spatial-g14-448.json",
+   "sha256": "98fed977629c892c016835f5f2453b1b71c58466745cd980d2308e2edec75855"
+  },
+  "part pe-spatial-l14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-spatial-l14-448.json",
+   "sha256": "3dbe987255004a52299f6a128645be10631795131a00d57ab0aabaab6c261f16"
+  },
+  "part pe-spatial-s16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-spatial-s16-512.json",
+   "sha256": "f394cd7343d8b54556fa9aef82a2107e375096762582538af8f64eef81b4ee1f"
+  },
+  "part pe-spatial-t16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/pe-spatial-t16-512.json",
+   "sha256": "eae44a1714978c9a79674c5915a5c540a53907c362292184a9d12229d03db7e0"
+  },
+  "part sam2.1-hiera-base-plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/sam2.1-hiera-base-plus.json",
+   "sha256": "4bf4abb957bf893e1c54e48058119c85a3f68e37a747dea5d732cc45527cc88b"
+  },
+  "part sam3": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/sam3.json",
+   "sha256": "109cd6e4022f639862364f5d578deb44cb419767eae6b2be3acb9e2b18f7cfe2"
+  },
+  "part siglip2-base-patch16-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/siglip2-base-patch16-224.json",
+   "sha256": "3a184bf0df53408b92534d19ba779fd06a20def29aa2cc2497646538578a31c4"
+  },
+  "part siglip2-giant-opt-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/siglip2-giant-opt-patch16-256.json",
+   "sha256": "c03fbab5a572eed209107fdf43c1d72307dbd9c8476064c27591eba865b1f6a9"
+  },
+  "part siglip2-giant-opt-patch16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/siglip2-giant-opt-patch16-384.json",
+   "sha256": "c8ffc4bd516b921ba279f518b34a90e6391e2674e23de004a92c86f739822ce3"
+  },
+  "part siglip2-large-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/siglip2-large-patch16-256.json",
+   "sha256": "f31b076014b632293a29fe9d8c1169601ab2a7ea1112222d13de758be329839c"
+  },
+  "part siglip2-so400m-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/siglip2-so400m-patch14-224.json",
+   "sha256": "dd1095f54408770a766b70d306879c4334531215399b7aeaba24996cce893d6b"
+  },
+  "part siglip2-so400m-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/siglip2-so400m-patch16-256.json",
+   "sha256": "886a71d830af3887a6624c8c1944ecc1eb67449595ec3e5137ddd48ad3482f21"
+  },
+  "part starvector-1b-im2svg": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/starvector-1b-im2svg.json",
+   "sha256": "59c36b1ab941dee46b190ec7c541264e277563662273f889ac87d3d5a92534d7"
+  },
+  "part starvector-8b-im2svg": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/starvector-8b-im2svg.json",
+   "sha256": "d84c0e750dab204def786fb996c07022e10512c40e0b2589eb4ef85b8cc5d44e"
+  },
+  "part theia-base-cddsv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/theia-base-cddsv.json",
+   "sha256": "2d5165301cc1791b9ff7aaa27f184ea350d156194042805dd49f643fae372996"
+  },
+  "part theia-base-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/theia-base-cdiv.json",
+   "sha256": "a2be2c11d28a2c8fb8ae4a314ad7e7956f6a006c13309db2b87b0a0aa7d870c6"
+  },
+  "part theia-small-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/theia-small-cdiv.json",
+   "sha256": "65aafbbf4a43d700eaa515bdc3acdedcb83c44e658625765d9f8a6e89c3f6811"
+  },
+  "part theia-tiny-cddsv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/theia-tiny-cddsv.json",
+   "sha256": "d1d80eed7b097293512aea0654a7d14d1eef6b184204ce986be538b8c238aff3"
+  },
+  "part theia-tiny-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/theia-tiny-cdiv.json",
+   "sha256": "2b61e466a2fa5d5763d7dd1d9f49cecd05ae0d7322f29f7c572eff204b3ac724"
+  },
+  "part tipsv1-b14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/tipsv1-b14.json",
+   "sha256": "7a28849abb34b23e2a7f8f1cbb5b74fe2059d7a9424ac7f9c896ba7f97b7aadd"
+  },
+  "part tipsv1-g14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/tipsv1-g14.json",
+   "sha256": "0a6193a1f4855e3859aefdff6bf9b5e59fddd25dbf6b79d720c7746b70321ed6"
+  },
+  "part tipsv1-l14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/tipsv1-l14.json",
+   "sha256": "3f521870d1bb8de238ae7576d9dd8bd135675f3315ba4b0f34f6d8fa13816338"
+  },
+  "part tipsv1-s14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/tipsv1-s14.json",
+   "sha256": "3d1dc78bec07c5c021c9835d7df554b54eee9c34e0723f19386ce506332c5fcc"
+  },
+  "part tipsv1-so400m14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/tipsv1-so400m14.json",
+   "sha256": "bb78cbb0870457cdb25b7e28104581bd4652b271d6f2dbe1442f0ffb1f6887b7"
+  },
+  "part tipsv2-b14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/tipsv2-b14.json",
+   "sha256": "20a163caab4a807181be79e1e2db2de48c6279b6e3e3194f0c07d747df980570"
+  },
+  "part tipsv2-g14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/tipsv2-g14.json",
+   "sha256": "aab32e2d9639b8d8e827412721ef0a39f431d647dfa92e8cb9a47baf602646f0"
+  },
+  "part tipsv2-l14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/tipsv2-l14.json",
+   "sha256": "3d0af13cce876a1d9adf4a1896dedc2a07b83c1e008fc47ab34f9a7f672391f4"
+  },
+  "part tipsv2-so400m14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/tipsv2-so400m14.json",
+   "sha256": "07f5edd645c2814d1827619d5dfa82abbf1d26d00a956ffc0f2cc20eeb392b15"
+  },
+  "part trocr-base-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/trocr-base-handwritten.json",
+   "sha256": "5640c9777096ed5cd916df065826ed8f220802bd3fec41af2e357ba9503565bc"
+  },
+  "part trocr-base-hw-hist-swe-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/trocr-base-hw-hist-swe-2.json",
+   "sha256": "4305b9999f2929e1bf0210965ec0ce088ce5f989da3d9047cd949db21c2d1a80"
+  },
+  "part trocr-large-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/trocr-large-handwritten.json",
+   "sha256": "49931b849bed22ecb5829135e30f951a9f3a4d11bae3732e01e98773f1d42503"
+  },
+  "part trocr-small-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/trocr-small-handwritten.json",
+   "sha256": "7d7cc57df4a665c5b2e2cefbdb19f73d0cba4b5ae5190caefb36cbe14b79cb3d"
+  },
+  "part vit-mae-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/vit-mae-large.json",
+   "sha256": "1f4ca1a9e4c83d05e670b673fe137d97eb66a48dc56c7f8fc1be97b31e14771b"
+  },
+  "part webssl-dino1b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/webssl-dino1b-224.json",
+   "sha256": "91dff25aa08dbfcbf5b2091e63aa1da3ef35d1d8054978f08297eb1c6fdf651e"
+  },
+  "part webssl-dino2b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/webssl-dino2b-224.json",
+   "sha256": "dabdc0c770e3657cde94b0da6f55bc6a3d4b9047a584207012ac609dc34c9dc4"
+  },
+  "part webssl-dino300m-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/webssl-dino300m-224.json",
+   "sha256": "c9883edb094c7b17a09bfd9df156c80b5718a452ebc69e2e528961829b64922b"
+  },
+  "part webssl-dino3b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/webssl-dino3b-224.json",
+   "sha256": "c3db859f05e79f4c7cf0762c7d04c59d9628f6634ee279b0c15c7845d3844c05"
+  },
+  "part webssl-dino5b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/webssl-dino5b-224.json",
+   "sha256": "d481823763f1383e91844c68b1aa49c9d2f26ea9afa4f9dc0d2f648d34da3943"
+  },
+  "part webssl-mae1b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/webssl-mae1b-224.json",
+   "sha256": "4a90b31bc67c685474998159313e2b95d5d7b95c4499a31ce0983a9a0075abf0"
+  },
+  "part webssl-mae300m-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/unipen_de_tr3927/webssl-mae300m-224.json",
+   "sha256": "c7b0d12efc2f34bd66c11ffe83204f35bddc911ca3870958885d6f9ed6fefb98"
+  }
+ },
+ "params": {
+  "set_id": "unipen_de_tr3927",
+  "track": "encoders",
+  "schema": "v1 (fmd_harness.screen_rows.SCHEMA)",
+  "comparators": [
+   "luo6:mid16",
+   "luo6:cat16",
+   "joint9:mid16",
+   "joint9:cat16"
+  ],
+  "delta_T0": 0.01035,
+  "boot_B": 2000,
+  "boot_seed": 20261103,
+  "prereg": "FMD_PREREG_2026-11-03.md A3.2/A3.5/A5.1"
+ },
+ "outputs": {
+  "$U/exp/FMD/xs/screen/rows_xs_enc_unipen_de_tr3927.csv": "938bd40e841f99ee5a8aceb6762aefa98a1b5f1ec6acc87702f4605f6d8a39e8"
+ },
+ "n_rows": 2338,
+ "fms": [
+  "aimv2-1b-patch14-224",
+  "aimv2-3b-patch14-224",
+  "aimv2-huge-patch14-224",
+  "aimv2-large-patch14-224",
+  "aimv2-large-patch14-224-distilled",
+  "c-radiov3-b",
+  "c-radiov3-g",
+  "c-radiov3-h",
+  "c-radiov3-l",
+  "c-radiov4-h",
+  "c-radiov4-so400m",
+  "depth-anything-3-base",
+  "depth-anything-3-giant-1.1",
+  "depth-anything-3-large-1.1",
+  "depth-anything-v2-large",
+  "dinov2-base",
+  "dinov2-giant",
+  "dinov2-large",
+  "dinov2-reg-base",
+  "dinov2-reg-giant",
+  "dinov2-reg-large",
+  "dinov2-reg-small",
+  "dinov3-convnext-base",
+  "dinov3-convnext-large",
+  "dinov3-convnext-small",
+  "dinov3-convnext-tiny",
+  "dinov3-vit7b16",
+  "dinov3-vitb16",
+  "dinov3-vith16plus",
+  "dinov3-vitl16",
+  "dinov3-vitl16-sat493m",
+  "dinov3-vits16",
+  "dinov3-vits16plus",
+  "florence-2-base",
+  "florence-2-large",
+  "florence-2-large-ft",
+  "pe-core-b16-224",
+  "pe-core-g14-448",
+  "pe-core-l14-336",
+  "pe-core-s16-384",
+  "pe-core-t16-384",
+  "pe-lang-g14-448-timm",
+  "pe-lang-l14-448-timm",
+  "pe-spatial-b16-512",
+  "pe-spatial-g14-448",
+  "pe-spatial-l14-448",
+  "pe-spatial-s16-512",
+  "pe-spatial-t16-512",
+  "sam2.1-hiera-base-plus",
+  "sam3",
+  "siglip2-base-patch16-224",
+  "siglip2-giant-opt-patch16-256",
+  "siglip2-giant-opt-patch16-384",
+  "siglip2-large-patch16-256",
+  "siglip2-so400m-patch14-224",
+  "siglip2-so400m-patch16-256",
+  "starvector-1b-im2svg",
+  "starvector-8b-im2svg",
+  "theia-base-cddsv",
+  "theia-base-cdiv",
+  "theia-small-cdiv",
+  "theia-tiny-cddsv",
+  "theia-tiny-cdiv",
+  "tipsv1-b14",
+  "tipsv1-g14",
+  "tipsv1-l14",
+  "tipsv1-s14",
+  "tipsv1-so400m14",
+  "tipsv2-b14",
+  "tipsv2-g14",
+  "tipsv2-l14",
+  "tipsv2-so400m14",
+  "trocr-base-handwritten",
+  "trocr-base-hw-hist-swe-2",
+  "trocr-large-handwritten",
+  "trocr-small-handwritten",
+  "vit-mae-large",
+  "webssl-dino1b-224",
+  "webssl-dino2b-224",
+  "webssl-dino300m-224",
+  "webssl-dino3b-224",
+  "webssl-dino5b-224",
+  "webssl-mae1b-224",
+  "webssl-mae300m-224"
+ ],
+ "xs_code": {
+  "files": {
+   "__init__.py": "ce6fc8aa99758f3c13a2b3a770bc511f213d7979a8a03ef0b293756159495c78",
+   "fmdx_verdicts.py": "67c78eabf6ace3d9b0bc6ab3f4501d305f175d732368893b443a0037dd902a52",
+   "xs_common.py": "46f865ed36b9d8159ecfc812d02b8ace5ec9a6d87915cf99d568aec7016704a0",
+   "xs_extract.py": "8dfd370dbea40b16d83aeeade38ce0f6c101a267a0d3972c7526f0d9e86ae478",
+   "xs_plan.py": "811bfbe873fa5bf1c1dd8b8a5c64e22e6a13550753f885beee588bb5f844de59",
+   "xs_probe.py": "6dbb3ad424a2252fd4e5c1be3544ed550bc4e0d8c9e3cef6b536fa96f727efb8",
+   "xs_rows.py": "093862bb4a99f9c69398ca99f4a34c3739ef7822b0f9f29fa0ceca67abdc8c81",
+   "xs_targets.py": "6547a725d9fef182aebe554aafcb6fe4ebf5e0dcf79b1a776da1a223f0b2b7a5",
+   "xs_worker.py": "4c6a5e87b2a8dc7de5651ef7120db10368922d0ff21a35ce5a01df6194e45973"
+  },
+  "combined": "b4323c86e0baa10bf4599fb350d109c02785c0016467525946f04f5585b08ede",
+  "version": "fmd_harness_xs 1.0.0 (2026-11-03)"
+ }
+}

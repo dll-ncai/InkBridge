@@ -1,0 +1,13 @@
+{
+ "status": "complete",
+ "final_step": 200,
+ "completed_at": "2026-11-07T23:07:58Z",
+ "arm_id": "NOFM_W_FT",
+ "milestones": [
+  1
+ ],
+ "peak_rss_mb": 4255.515625,
+ "cuda_max_alloc_gb": 5.068934144,
+ "lane": "clusterA",
+ "slurm": "24964772"
+}

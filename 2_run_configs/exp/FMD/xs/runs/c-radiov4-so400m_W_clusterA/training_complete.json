@@ -1,0 +1,16 @@
+{
+ "status": "complete",
+ "final_step": 40000,
+ "completed_at": "2026-11-08T04:38:13Z",
+ "arm_id": "c-radiov4-so400m_W",
+ "milestones": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "peak_rss_mb": 8237.7734375,
+ "cuda_max_alloc_gb": 17.438439424,
+ "lane": "clusterA",
+ "slurm": "24940530"
+}

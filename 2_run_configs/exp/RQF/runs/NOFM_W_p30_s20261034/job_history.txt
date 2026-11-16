@@ -1,0 +1,7 @@
+2026-11-08T14:56:25Z ft_job_start arm=NOFM_W lane=clusterA src=$U/exp/FMD/xs/runs/NOFM_W_clusterA/bb_ms3.pt seed=20261034 site=clusterA host=<node> slurm=24964006 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-08T14:56:28Z batch_layout ng=1 mem_gb=24 global_micro=32 accum=16 units_per_step=512 site=clusterA host=<node> slurm=24964006 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-08T14:56:28Z train_start site=clusterA host=<node> slurm=24964006 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-09T00:19:13Z train_exit rc=0 site=clusterA host=<node> slurm=24964006 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-09T03:12:14Z selected FT milestone 10 (step 10000) site=clusterA host=<node> slurm=24964006 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-09T03:12:47Z ft_job_end site=clusterA host=<node> slurm=24964006 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-09T04:41:18Z sampling_done ms10 site=clusterA host=<node> slurm=24964006 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]

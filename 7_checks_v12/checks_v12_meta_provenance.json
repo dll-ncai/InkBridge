@@ -1,0 +1,310 @@
+{
+ "title": "Meta provenance for the InkBridge v12 review checks (random selection control, ink invariance, unit counts, plain FT1% row, FM screen counts)",
+ "created_utc": "2026-11-15T16:55:27Z",
+ "project": "proj_846a475c4c75",
+ "frame": "226f9df3-1077-4e8b-a2d1-91570261c0f7",
+ "compute": {
+  "target": "ssh:cluster",
+  "partition": "cpuidle",
+  "node": "<node>",
+  "cluster_out_dir": "$U/exp/RV12/checks_v12/out_r2",
+  "cluster_code": "$U/exp/RV12/checks_v12/code/checks_v12.py",
+  "jobs": [
+   {
+    "slurm_job": "25171088",
+    "sdk_job": "f65a2dae-28f0-4437-b6a0-1a85194d25b8",
+    "state": "CANCELLED by agent (scancel), exit 143",
+    "reason": "script lacked a __main__ guard, so each spawn pool worker re-ran the analysis parts; outputs in out/ and smoke/ are not used"
+   },
+   {
+    "slurm_job": "25171113",
+    "sdk_job": "bf2e05fd-a72c-4010-9d5f-594724962789",
+    "state": "COMPLETED, exit 0",
+    "utc_start": "2026-11-15T16:34:19Z",
+    "utc_end": "2026-11-15T16:38:39Z",
+    "part_status": {
+     "C_n4358": "ok 2s",
+     "E_screen": "ok 1s",
+     "D_ft1abs": "ok 11s",
+     "A_randctl": "ok 125s",
+     "B_inkinv": "ok 121s"
+    }
+   }
+  ],
+  "environment": "apptainer images/torch27.sif, venvs/uhwr_eval02/bin/python, PYTHONPATH=shared/uhwr_eval-0.3.1, e0/code_4cd40f57 appended for e0_adapter.unpack_ink"
+ },
+ "scripts": {
+  "checks_v12.py": {
+   "sha256": "5a7e55355433992a3f0adc479e8a2bd3cd7cbee8e71fd43a3edc127e8d8e3014",
+   "sha256_on_cluster": "5a7e55355433992a3f0adc479e8a2bd3cd7cbee8e71fd43a3edc127e8d8e3014"
+  },
+  "checks_v12_job.sh": {
+   "sha256": "22ee6a0042536784af7d3532daf93ba2937a633de92cb57bae7697b43a8049a4"
+  }
+ },
+ "reused_code_sha256": {
+  "$U/exp/RQF/code/rq3_v1/loop_tables.py": "5f59016518803745f9a91cecac5d1ff1ddeee260899be45c2a5517f977302ca5",
+  "$U/exp/RQF/code/rq3_v1/sealed_read.py": "f5808d298cf259d6e6ee85d5a2919b3616779d6c7d15f62b11827a9ffc380a23",
+  "$U/exp/RQF/code/rq3_v1/rq3_summarize.py": "9dc629dff27488250a31a8689e7b43942b95865e4b2a1da737c2dd34842dacba",
+  "$U/exp/RQF/code/rqf_paired_ext.py": "ef690e5280ca19e5b7751813dc05e5abf4e7b9f1646d9ea39b0ec6a22355d9d4",
+  "$U/exp/ORDER/code/loop_tables.py": "5f59016518803745f9a91cecac5d1ff1ddeee260899be45c2a5517f977302ca5"
+ },
+ "method": {
+  "randctl": "Per cell (29 specs of exp/RQF/R3/read_all3 plus exp/ORDER/sealed/COMP_rep3/read/spec_test_ouhdl.json) and metric (loop_tables.MET, 8 metrics): per-unit sample-mean tables via loop_tables.load_cell/unit_table (native protocol); contrast COMP_rep3 minus COMP_pool3 (selected minus mean of its three candidates) and COMP_rnd3 minus COMP_pool3; inner join on unit, dropna; writer-cluster bootstrap loop_tables.boot_idx, B=2000, rng 20261029, percentile 95% interval and Bonferroni-8 interval (0.3125 and 99.6875 percentiles); strict pairing = per training seed, selected minus mean of the three candidate rows, all four values required. Integrity checks per training seed: unit-set equality, file-stem match, gt_sha256, evaluator, row equality of the selected row with candidate rows on 10 columns (atol 1e-12), sampling sidecar comparison for R3 pairs. Stored flags read from R3_summary_3seed_cells.csv, cells_*.json and RV10/tables/facts_v11_v2/L08_control_per_cell.csv.",
+  "ft1abs": "Functions boot_counts, boot, load, peritem copied verbatim from exp/RQF/code/rqf_paired_ext.py; common units = intersection of its 9 methods; plain FT1% = COMP_pool3 files of the ORDER sealed spec (9 files); writer-cluster multinomial bootstrap, default_rng(0), B=2000, ratio of sums.",
+  "n4358": "exp/CAND/K1/score/rows test_ouhdl LUO_ms6_identity and LUO_ms6_mirror_x, seeds 0-2, native rows; per-unit mean over seeds (NaN skipped); counts of units with direction_acc defined per arm and in both; thresholds |d direction| >= 0.5 and |d AIoU| <= 0.01.",
+  "inkinv": "uhwr_eval 0.3.1 score(gt, variant, (64,64), protocol='native', with_lpips=False, with_frechet=False) on ground-truth inks unpacked by e0_adapter.unpack_ink; 500 units per set chosen by default_rng(20261115).choice without replacement; variants: reverse_points, reorder_reversed, reorder_random (rng 20261115+unit index), reverse_points_and_order; diagnostics: to_nagamatsu points, integer pixels, _render_trajectory masks at thickness 1 and 2.",
+  "screen": "Counter of 'status' over exp/FMD/xs/verdicts/verdict_*.json and value counts of exp/FMD/xs/read_v1/v1_1_fmdx_gate_read.csv."
+ },
+ "outputs": {
+  "checks_v12_results.csv": {
+   "sha256": "77555ecebba581a11d50e06e2e4e0ce4eba202d985ec6b9c68b5c90bfc281774",
+   "n_rows": 240,
+   "columns": [
+    "check",
+    "source",
+    "base",
+    "set",
+    "metric",
+    "n_units",
+    "n_writers",
+    "mean_selected",
+    "mean_of_3_candidates",
+    "sel_minus_mean3_delta",
+    "sel_minus_mean3_ci_lo",
+    "sel_minus_mean3_ci_hi",
+    "sel_minus_mean3_bonf8_lo",
+    "sel_minus_mean3_bonf8_hi",
+    "sel_minus_mean3_p_boot",
+    "sel_minus_mean3_ci_excl0",
+    "sel_minus_mean3_bonf8_excl0",
+    "rnd_minus_mean3_delta",
+    "rnd_minus_mean3_ci_lo",
+    "rnd_minus_mean3_ci_hi",
+    "rnd_minus_mean3_bonf8_lo",
+    "rnd_minus_mean3_bonf8_hi",
+    "rnd_minus_mean3_p_boot",
+    "rnd_minus_mean3_ci_excl0",
+    "rnd_minus_mean3_bonf8_excl0",
+    "sel_minus_mean3_strict_delta",
+    "sel_minus_mean3_strict_n",
+    "sel_minus_mean3_stored_delta",
+    "sel_minus_mean3_stored_ci_lo",
+    "sel_minus_mean3_stored_ci_hi",
+    "sel_minus_mean3_stored_n",
+    "rnd_minus_mean3_stored_delta",
+    "rnd_minus_mean3_stored_ci_lo",
+    "rnd_minus_mean3_stored_ci_hi",
+    "rnd_minus_mean3_stored_n",
+    "urdu",
+    "order_win_stored",
+    "p_holm_stored",
+    "flag_all8_ci_contain0_stored",
+    "flag_all8_ci_contain0_recomputed",
+    "flag_all8_bonf8_ci_contain0_recomputed",
+    "L08_randomization_control_pass_bonf8",
+    "L08_randomization_control_pass_bonf4"
+   ]
+  },
+  "checks_v12_randctl_cells.csv": {
+   "sha256": "023cb2802d0bb515ed88bc33993f1f460035b494c79e0e2bf556b6f9f662f4ef",
+   "n_rows": 30,
+   "columns": [
+    "source",
+    "base",
+    "set",
+    "urdu",
+    "spec",
+    "order_win_stored",
+    "part1_metrics",
+    "p_holm_stored",
+    "flag_all8_ci_contain0_stored",
+    "order_win_and_holm_and_flag_stored",
+    "keys_equal",
+    "n_train",
+    "n_keys",
+    "rep_file_same_for_3_keys",
+    "same_model_stem",
+    "same_unit_set",
+    "same_gt_sha",
+    "same_evaluator",
+    "same_specialist",
+    "sel_match_none",
+    "sel_match_one",
+    "sel_match_multi",
+    "sel_rows",
+    "sel_is_seed0_unique",
+    "sel_is_seed1_unique",
+    "sel_is_seed2_unique",
+    "sidecars_found_train",
+    "sampling_sidecar_keys_differing_across_3_candidates",
+    "L08_stored_rule_fail",
+    "L08_min_randomization_p",
+    "L08_randomization_control_pass_bonf8",
+    "L08_randomization_control_pass_bonf4",
+    "sel_n_metrics_ci_excl0",
+    "sel_n_metrics_bonf8_excl0",
+    "rnd_n_metrics_ci_excl0",
+    "rnd_n_metrics_bonf8_excl0",
+    "flag_all8_ci_contain0_recomputed",
+    "flag_all8_bonf8_ci_contain0_recomputed"
+   ]
+  },
+  "checks_v12_ft1abs.csv": {
+   "sha256": "e29923e034004c22532e9306bd62c5c137a1826cd8bb5004a0c28fc7f5d58ce3",
+   "n_rows": 11,
+   "columns": [
+    "check",
+    "method",
+    "n_units",
+    "n_writers",
+    "n_common_units_missing",
+    "device",
+    "n_files",
+    "aiou",
+    "aiou_lo",
+    "aiou_hi",
+    "aiou_ndef",
+    "penup_f1_v2",
+    "penup_f1_v2_lo",
+    "penup_f1_v2_hi",
+    "penup_f1_v2_ndef",
+    "strict_order_acc",
+    "strict_order_acc_lo",
+    "strict_order_acc_hi",
+    "strict_order_acc_ndef",
+    "direction_acc",
+    "direction_acc_lo",
+    "direction_acc_hi",
+    "direction_acc_ndef",
+    "kendall_tau",
+    "kendall_tau_lo",
+    "kendall_tau_hi",
+    "kendall_tau_ndef",
+    "tau_cp",
+    "tau_cp_lo",
+    "tau_cp_hi",
+    "tau_cp_ndef",
+    "ldtw",
+    "ldtw_lo",
+    "ldtw_hi",
+    "ldtw_ndef",
+    "in_stored_absolute_common_units_csv"
+   ]
+  },
+  "checks_v12_inkinv.csv": {
+   "sha256": "deca150791ff06bd4c84a37f1d9a7ad945e92be4690c79d7ff588932cc90373a",
+   "n_rows": 40,
+   "columns": [
+    "check",
+    "set",
+    "variant",
+    "n_units",
+    "n_multi_stroke",
+    "mean_aiou_self",
+    "mean_aiou_variant_as_pred",
+    "n_aiou_changed_as_pred",
+    "max_abs_aiou_change_as_pred",
+    "mean_aiou_change_as_pred",
+    "n_aiou_changed_as_ref",
+    "max_abs_aiou_change_as_ref",
+    "mean_aiou_change_as_ref",
+    "n_points_not_equal",
+    "n_int_pixels_not_equal",
+    "n_mask_t1_diff",
+    "n_mask_t2_diff",
+    "max_mask_t1_px_diff",
+    "max_mask_t2_px_diff",
+    "n_units_with_asym_stroke_t1",
+    "n_units_with_asym_stroke_t2",
+    "mean_direction_acc",
+    "mean_strict_order_acc",
+    "mean_kendall_tau",
+    "mean_penup_f1_v2",
+    "n_units_with_stroke_lt2pts"
+   ]
+  },
+  "checks_v12_inkinv_units.csv": {
+   "sha256": "253d78c25c9e1ac1f47d41a701d5b0f8d60408006a365dce59ec9ee106e6d14b",
+   "n_rows": 17500,
+   "columns": [
+    "set",
+    "unit_id",
+    "variant",
+    "n_strokes",
+    "n_pts",
+    "n_strokes_lt2pts",
+    "aiou_self",
+    "aiou_variant_as_pred",
+    "aiou_variant_as_ref",
+    "ldtw",
+    "direction_acc",
+    "strict_order_acc",
+    "kendall_tau",
+    "penup_f1_v2",
+    "points_equal",
+    "int_pixels_equal",
+    "mask_t1_px_diff",
+    "mask_t2_px_diff",
+    "strokes_asym_t1",
+    "strokes_asym_t2",
+    "n_draw_strokes"
+   ]
+  },
+  "checks_v12_facts.json": {
+   "sha256": "77ec8005342b04dd451b2f13cd15e9e53135d2a8b0d35817c93d23a9b5c1557b",
+   "n_rows": null,
+   "columns": null
+  },
+  "checks_v12_summary.md": {
+   "sha256": "acdf47a51d0497703643d5b5e397ae7ecb30db12d3686d89219c205983a6e79d",
+   "n_rows": null,
+   "columns": null
+  },
+  "checks_v12.py": {
+   "sha256": "5a7e55355433992a3f0adc479e8a2bd3cd7cbee8e71fd43a3edc127e8d8e3014",
+   "n_rows": null,
+   "columns": null
+  },
+  "checks_v12_job.sh": {
+   "sha256": "22ee6a0042536784af7d3532daf93ba2937a633de92cb57bae7697b43a8049a4",
+   "n_rows": null,
+   "columns": null
+  },
+  "PROVENANCE_checks_v12.json": {
+   "sha256": "6d69ff99cb0f51cf7d1264652657a55450beef661461a0243cd0fc7605c6b8bd",
+   "n_rows": null,
+   "columns": null
+  }
+ },
+ "column_notes": {
+  "checks_v12_results.csv": "one row per cell and metric; sel_minus_mean3_* = selected minus mean of three candidates; rnd_minus_mean3_* = stored random pick minus the same mean; *_stored_* = values in the stored paired_<cell>.csv; *_bonf8_* = interval at level 1-0.05/8; *_strict_* = strict pairing; cell-level stored flags repeated on each row.",
+  "checks_v12_randctl_cells.csv": "one row per cell; integrity counters are sums over training seeds (n_train); L08_* from the v11 L08 file.",
+  "checks_v12_ft1abs.csv": "one row per method; <metric>, <metric>_lo, <metric>_hi, <metric>_ndef as in absolute_common_units.csv; FT1pct_plain and FT1pct_plain_A4000cmp are new rows.",
+  "checks_v12_inkinv.csv": "one row per set and variant plus ALL_7_SETS.",
+  "checks_v12_inkinv_units.csv": "one row per sampled unit and variant."
+ },
+ "inputs": {
+  "n_files": 604,
+  "sha256_list": "PROVENANCE_checks_v12.json -> inputs (cluster absolute path -> sha256)",
+  "key_files": {
+   "$U/exp/FMD/xs/read_v1/snap_final_20261107T0047Z.tgz": "5236f0baa7e7b3bccf3c1926e7fccd0165f76dbbbe5e4b7043fb2c0b8eebd700",
+   "$U/exp/FMD/xs/read_v1/v1_1_fmdx_gate_read.csv": "28a8b0c8f2aa1a3dd656859af0e5b71395d0edd08d0723379be41b80144d040d",
+   "$U/exp/ORDER/sealed/COMP_rep3/read/spec_test_ouhdl.json": "b318acb87e08fcc0ca03906a6a304a150cf79fa9ba252b70a4f328604a8a809f",
+   "$U/exp/RQF/tables/paired_ext/absolute_common_units.csv": "851c75ab8c22f5973a8f045b956db79943e1251610cc5a55bf9d7946c334df8c",
+   "$U/exp/RQF/R3/plan.json": "221ff50d1f9decd8ed0b0b6213caf7903480e7fa91b77c10d82fb743632721a0",
+   "$U/exp/RQF/R3/R3_summary_3seed_cells.csv": "d2534edacd78ccffa43645a083f7b8558d7ea1f93d8c3e4eb0fc4ab31be160d7",
+   "$U/exp/RV10/tables/facts_v11_v2/L08_control_per_cell.csv": "2493839d6721b8a0fe752ab93185566eda94fe95f06cecd79c3dc34b8e24fca3"
+  },
+  "paper": {
+   "v11_tex": "artifact version 0417da64-8eae-402c-80ec-f75873c62e5d",
+   "review_docx": "artifact version b2891793-1b05-4a56-9e68-612c49dde7a4",
+   "M3_descriptive_csv": "artifact version 240fde67 (values compared in n4358)"
+  }
+ },
+ "deviations": [
+  "inkinv uses 500 sampled units for OUHD-L (of 4,406), UNIPEN-de (of 827) and OnHW (of 5,925); the other four sets are complete (500 of 500).",
+  "Sampling sidecars compared for the 41 R3 model-set pairs; not checked for the 3 pairs of the ORDER sealed FT1% Urdu cell.",
+  "Bonferroni-8 percentile bounds rest on B=2000 draws (about 6 draws in each tail)."
+ ]
+}

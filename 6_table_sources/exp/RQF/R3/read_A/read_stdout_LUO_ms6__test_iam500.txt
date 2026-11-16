@@ -1,0 +1,19 @@
+                     set     method  comparator            metric   delta   ci_lo   ci_hi    n  p_boot
+0   LUO_ms6__test_iam500  COMP_rep3  COMP_pool3              aiou  0.0071  0.0055  0.0087  500   0.000
+1   LUO_ms6__test_iam500  COMP_rep3  COMP_pool3       penup_f1_v2  0.0155  0.0055  0.0253  500   0.002
+2   LUO_ms6__test_iam500  COMP_rep3  COMP_pool3  strict_order_acc  0.0113  0.0041  0.0190  500   0.000
+3   LUO_ms6__test_iam500  COMP_rep3  COMP_pool3     direction_acc  0.0006 -0.0045  0.0059  497   0.788
+8   LUO_ms6__test_iam500  COMP_rep3  COMP_pool3       composite_C  2.2134  1.0036  3.3782  500     NaN
+9   LUO_ms6__test_iam500  COMP_rnd3  COMP_pool3              aiou  0.0008 -0.0010  0.0025  500   0.360
+10  LUO_ms6__test_iam500  COMP_rnd3  COMP_pool3       penup_f1_v2 -0.0051 -0.0166  0.0052  500   0.344
+11  LUO_ms6__test_iam500  COMP_rnd3  COMP_pool3  strict_order_acc  0.0033 -0.0065  0.0125  500   0.481
+12  LUO_ms6__test_iam500  COMP_rnd3  COMP_pool3     direction_acc  0.0011 -0.0042  0.0067  496   0.661
+17  LUO_ms6__test_iam500  COMP_rnd3  COMP_pool3       composite_C  0.0405 -1.6704  1.6500  500     NaN
+18  LUO_ms6__test_iam500  COMP_rep3   COMP_rnd3              aiou  0.0063  0.0037  0.0089  500   0.000
+19  LUO_ms6__test_iam500  COMP_rep3   COMP_rnd3       penup_f1_v2  0.0206  0.0069  0.0356  500   0.000
+20  LUO_ms6__test_iam500  COMP_rep3   COMP_rnd3  strict_order_acc  0.0080  0.0000  0.0180  500   0.123
+21  LUO_ms6__test_iam500  COMP_rep3   COMP_rnd3     direction_acc -0.0005 -0.0082  0.0074  495   0.887
+26  LUO_ms6__test_iam500  COMP_rep3   COMP_rnd3       composite_C  2.1729  0.4218  4.0815  500     NaN
+COMP_rep3__vs__COMP_pool3 ORDER-WIN True p1 ['strict_order_acc', 'penup_f1_v2'] holm [('strict_order_acc', 98.33, 0.0025, True), ('penup_f1_v2', 97.5, 0.0043, True), ('direction_acc', 95.0, -0.0045, False)]
+COMP_rnd3__vs__COMP_pool3 ORDER-WIN False p1 [] holm [('penup_f1_v2', 98.33, -0.0188, False), ('strict_order_acc', 97.5, -0.0084, False), ('direction_acc', 95.0, -0.0042, False)]
+COMP_rep3__vs__COMP_rnd3 ORDER-WIN None p1 ['penup_f1_v2'] holm [('penup_f1_v2', 98.33, 0.0047, True), ('strict_order_acc', 97.5, -0.002, False), ('direction_acc', 95.0, -0.0082, False)]

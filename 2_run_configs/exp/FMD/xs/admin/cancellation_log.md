@@ -1,0 +1,205 @@
+- 2026-11-03T14:52:23Z pe-spatial-t16-512_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843733)
+- 2026-11-03T14:52:23Z pe-spatial-s16-512_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843734)
+- 2026-11-03T14:52:23Z pe-spatial-l14-448_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843736)
+- 2026-11-03T14:52:23Z cleandift-sd15_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843757)
+- 2026-11-03T14:52:24Z qwen3-vl-8b-instruct_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843758)
+- 2026-11-03T14:52:25Z pe-spatial-t16-512_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843813)
+- 2026-11-03T14:52:25Z pe-spatial-s16-512_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843814)
+- 2026-11-03T14:52:25Z pe-spatial-l14-448_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843816)
+- 2026-11-03T14:52:25Z cleandift-sd15_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843834)
+- 2026-11-03T14:52:26Z qwen3-vl-8b-instruct_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs 24843835)
+- 2026-11-03T14:52:55Z scancel 24843733 fx_pe-spatial-t16-512_W (PENDING) site=clusterA: FM pe-spatial-t16-512 verdict FAIL, verdict sha256 0d1178acc5f771bb8bae9caab37e96f601b84e3d781fbdf8b5c99564429e0936
+- 2026-11-03T14:52:56Z scancel 24843734 fx_pe-spatial-s16-512_W (PENDING) site=clusterA: FM pe-spatial-s16-512 verdict FAIL, verdict sha256 dfe56f8fd48a03f5106dbd4587a57d7d4b60c77ae0b8fded5de708a4922f045a
+- 2026-11-03T14:52:58Z scancel 24843736 fx_pe-spatial-l14-448_W (PENDING) site=clusterA: FM pe-spatial-l14-448 verdict FAIL, verdict sha256 86a7816abbbd01b0fbebcd8beef32ebdf6b7a0de76ce9cebfd85c37d2f827a70
+- 2026-11-03T14:53:00Z scancel 24843757 fx_cleandift-sd15_W (PENDING) site=clusterA: FM cleandift-sd15 verdict FAIL, verdict sha256 c978640393668bfca21ced87dae07d3cd23709ad9893ade0cf263b43286d168a
+- 2026-11-03T14:53:01Z scancel 24843758 fx_qwen3-vl-8b-instruct_W (PENDING) site=clusterA: FM qwen3-vl-8b-instruct verdict FAIL, verdict sha256 0c9fe0bd7a0a2836b5082d19772d27dd1bc39113b08f261a73fd86a15f211797
+- 2026-11-03T14:53:03Z scancel 24843813 fx_pe-spatial-t16-512_S (PENDING) site=clusterA: FM pe-spatial-t16-512 verdict FAIL, verdict sha256 0d1178acc5f771bb8bae9caab37e96f601b84e3d781fbdf8b5c99564429e0936
+- 2026-11-03T14:53:04Z scancel 24843814 fx_pe-spatial-s16-512_S (PENDING) site=clusterA: FM pe-spatial-s16-512 verdict FAIL, verdict sha256 dfe56f8fd48a03f5106dbd4587a57d7d4b60c77ae0b8fded5de708a4922f045a
+- 2026-11-03T14:53:06Z scancel 24843816 fx_pe-spatial-l14-448_S (PENDING) site=clusterA: FM pe-spatial-l14-448 verdict FAIL, verdict sha256 86a7816abbbd01b0fbebcd8beef32ebdf6b7a0de76ce9cebfd85c37d2f827a70
+- 2026-11-03T14:53:08Z scancel 24843834 fx_cleandift-sd15_S (PENDING) site=clusterA: FM cleandift-sd15 verdict FAIL, verdict sha256 c978640393668bfca21ced87dae07d3cd23709ad9893ade0cf263b43286d168a
+- 2026-11-03T14:53:21Z scancel 24843835 fx_qwen3-vl-8b-instruct_S (PENDING) site=clusterA: FM qwen3-vl-8b-instruct verdict FAIL, verdict sha256 0c9fe0bd7a0a2836b5082d19772d27dd1bc39113b08f261a73fd86a15f211797
+- 2026-11-03T15:03:55Z scancel 24843737 fx_pe-spatial-g14-448_W (PENDING) site=clusterA: FM pe-spatial-g14-448 verdict FAIL, verdict sha256 e3800752cf2f17150265d07f3a4ad9b1e57dbacfc1503fba7fb9a726a183ff85
+- 2026-11-03T15:04:05Z scancel 24843762 fx_qwen2-vl-2b-instruct_W (PENDING) site=clusterA: FM qwen2-vl-2b-instruct verdict FAIL, verdict sha256 978e70571efe7c31f459817113c3a57c1f50fe346ff68f6730dde5d2cd7d742c
+- 2026-11-03T15:04:10Z scancel 24843763 fx_qaari-0.1-urdu-ocr_W (PENDING) site=clusterA: FM qaari-0.1-urdu-ocr verdict FAIL, verdict sha256 b60762c18f9e03f19e4d883a31c96f168c1580d568bd4e936d4eaec72446e84f
+- 2026-11-03T15:04:27Z scancel 24843817 fx_pe-spatial-g14-448_S (PENDING) site=clusterA: FM pe-spatial-g14-448 verdict FAIL, verdict sha256 e3800752cf2f17150265d07f3a4ad9b1e57dbacfc1503fba7fb9a726a183ff85
+- 2026-11-03T15:04:36Z scancel 24843837 fx_qwen2-vl-2b-instruct_S (PENDING) site=clusterA: FM qwen2-vl-2b-instruct verdict FAIL, verdict sha256 978e70571efe7c31f459817113c3a57c1f50fe346ff68f6730dde5d2cd7d742c
+- 2026-11-03T15:04:42Z scancel 24843838 fx_qaari-0.1-urdu-ocr_S (PENDING) site=clusterA: FM qaari-0.1-urdu-ocr verdict FAIL, verdict sha256 b60762c18f9e03f19e4d883a31c96f168c1580d568bd4e936d4eaec72446e84f
+- 2026-11-03T15:07:56Z pe-spatial-g14-448_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:07:57Z qwen2-vl-2b-instruct_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:07:58Z qaari-0.1-urdu-ocr_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:07:59Z pe-spatial-g14-448_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:08:00Z qwen2-vl-2b-instruct_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:08:00Z qaari-0.1-urdu-ocr_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:16:48Z scancel 24843764 fx_deepseek-ocr_W (PENDING) site=clusterA: FM deepseek-ocr verdict FAIL, verdict sha256 eeb427756e357ed4f98525b9e02747427b1455aa465a92d2283a6dd7454ed5bc
+- 2026-11-03T15:16:50Z scancel 24843765 fx_urdu-ocr-deepseek-nomy_W (PENDING) site=clusterA: FM urdu-ocr-deepseek-nomy verdict FAIL, verdict sha256 523d0e68a1acd470353f88b3f64c8b1f4476d6a40c87b83cd4576822df603962
+- 2026-11-03T15:16:52Z scancel 24843766 fx_deepseek-ocr-2_W (PENDING) site=clusterA: FM deepseek-ocr-2 verdict FAIL, verdict sha256 e18685cf20c765f6f9000a91099430bea65adc9b19e6534feb77063d721b5c68
+- 2026-11-03T15:16:54Z scancel 24843767 fx_urdu-ocr-deepseek-ocr2-kingabzpro_W (PENDING) site=clusterA: FM urdu-ocr-deepseek-ocr2-kingabzpro verdict FAIL, verdict sha256 33f9154212317ef259b76553f0b76f32dd2f730faee893ccf4d95018b565dbc9
+- 2026-11-03T15:16:56Z scancel 24843768 fx_got-ocr2-hf_W (PENDING) site=clusterA: FM got-ocr2-hf verdict FAIL, verdict sha256 f6a51728f9962fd8ff17fc428bc4e45a174d20979b420b3e483565e5a6d81797
+- 2026-11-03T15:17:16Z scancel 24843839 fx_deepseek-ocr_S (PENDING) site=clusterA: FM deepseek-ocr verdict FAIL, verdict sha256 eeb427756e357ed4f98525b9e02747427b1455aa465a92d2283a6dd7454ed5bc
+- 2026-11-03T15:17:19Z scancel 24843840 fx_urdu-ocr-deepseek-nomy_S (PENDING) site=clusterA: FM urdu-ocr-deepseek-nomy verdict FAIL, verdict sha256 523d0e68a1acd470353f88b3f64c8b1f4476d6a40c87b83cd4576822df603962
+- 2026-11-03T15:17:21Z scancel 24843841 fx_deepseek-ocr-2_S (PENDING) site=clusterA: FM deepseek-ocr-2 verdict FAIL, verdict sha256 e18685cf20c765f6f9000a91099430bea65adc9b19e6534feb77063d721b5c68
+- 2026-11-03T15:17:23Z scancel 24843842 fx_urdu-ocr-deepseek-ocr2-kingabzpro_S (PENDING) site=clusterA: FM urdu-ocr-deepseek-ocr2-kingabzpro verdict FAIL, verdict sha256 33f9154212317ef259b76553f0b76f32dd2f730faee893ccf4d95018b565dbc9
+- 2026-11-03T15:17:26Z scancel 24843843 fx_got-ocr2-hf_S (PENDING) site=clusterA: FM got-ocr2-hf verdict FAIL, verdict sha256 f6a51728f9962fd8ff17fc428bc4e45a174d20979b420b3e483565e5a6d81797
+- 2026-11-03T15:17:38Z deepseek-ocr_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:17:38Z urdu-ocr-deepseek-nomy_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:17:38Z deepseek-ocr-2_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:17:38Z urdu-ocr-deepseek-ocr2-kingabzpro_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:17:38Z got-ocr2-hf_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:17:40Z deepseek-ocr_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:17:40Z urdu-ocr-deepseek-nomy_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:17:40Z deepseek-ocr-2_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:17:40Z urdu-ocr-deepseek-ocr2-kingabzpro_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:17:40Z got-ocr2-hf_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:25:45Z scancel 24843754 fx_sd2.1-dift_W (PENDING) site=clusterA: FM sd2.1-dift verdict FAIL, verdict sha256 688e088922f0e46a50c82d838d1b11af342454e58a4426b3940ebfbf15556bef
+- 2026-11-03T15:26:18Z scancel 24843832 fx_sd2.1-dift_S (PENDING) site=clusterA: FM sd2.1-dift verdict FAIL, verdict sha256 688e088922f0e46a50c82d838d1b11af342454e58a4426b3940ebfbf15556bef
+- 2026-11-03T15:26:58Z sd2.1-dift_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:26:59Z sd2.1-dift_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:36:16Z scancel 24843771 fx_lightonocr-2-1b_W (PENDING) site=clusterA: FM lightonocr-2-1b verdict FAIL, verdict sha256 b74e3cf1d318f834e32b6c39de66d83ef9292e46e925b28715760e01c1351ee3
+- 2026-11-03T15:37:03Z scancel 24843845 fx_lightonocr-2-1b_S (PENDING) site=clusterA: FM lightonocr-2-1b verdict FAIL, verdict sha256 b74e3cf1d318f834e32b6c39de66d83ef9292e46e925b28715760e01c1351ee3
+- 2026-11-03T15:41:20Z lightonocr-2-1b_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:41:22Z lightonocr-2-1b_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:47:46Z scancel 24843769 fx_paddleocr-vl-1.6_W (PENDING) site=clusterA: FM paddleocr-vl-1.6 verdict FAIL, verdict sha256 14a07ce940365a18b75dd7c94bbf99c61ff03fcfda045360e51c02be9300c7ce
+- 2026-11-03T15:48:30Z scancel 24843844 fx_paddleocr-vl-1.6_S (PENDING) site=clusterA: FM paddleocr-vl-1.6 verdict FAIL, verdict sha256 14a07ce940365a18b75dd7c94bbf99c61ff03fcfda045360e51c02be9300c7ce
+- 2026-11-03T15:48:46Z paddleocr-vl-1.6_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T15:48:51Z paddleocr-vl-1.6_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T16:32:16Z scancel 24843718 fx_dinov3-vits16plus_W (PENDING) site=clusterA: FM dinov3-vits16plus verdict FAIL, verdict sha256 d3f8010618b00ec3dfd0e71179d6df5634f650c5b78154ecd31e2a277b094320
+- 2026-11-03T16:32:17Z scancel 24843720 fx_dinov3-vith16plus_W (PENDING) site=clusterA: FM dinov3-vith16plus verdict FAIL, verdict sha256 5611031dae415fad300f616cb2fad2a3c8d723ed54c4fa3f1f2151885a138f23
+- 2026-11-03T16:32:48Z scancel 24843798 fx_dinov3-vits16plus_S (PENDING) site=clusterA: FM dinov3-vits16plus verdict FAIL, verdict sha256 d3f8010618b00ec3dfd0e71179d6df5634f650c5b78154ecd31e2a277b094320
+- 2026-11-03T16:32:50Z scancel 24843800 fx_dinov3-vith16plus_S (PENDING) site=clusterA: FM dinov3-vith16plus verdict FAIL, verdict sha256 5611031dae415fad300f616cb2fad2a3c8d723ed54c4fa3f1f2151885a138f23
+- 2026-11-03T16:33:34Z dinov3-vits16plus_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T16:33:34Z dinov3-vith16plus_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T16:33:36Z dinov3-vits16plus_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T16:33:36Z dinov3-vith16plus_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T16:38:45Z scancel 24843715 fx_siglip2-giant-opt-patch16-256_W (PENDING) site=clusterA: FM siglip2-giant-opt-patch16-256 verdict FAIL, verdict sha256 b570e5f19726e9f4346231d21bcce25b9efb5096209e7f06314e5cf2fa65009c
+- 2026-11-03T16:39:14Z scancel 24843795 fx_siglip2-giant-opt-patch16-256_S (PENDING) site=clusterA: FM siglip2-giant-opt-patch16-256 verdict FAIL, verdict sha256 b570e5f19726e9f4346231d21bcce25b9efb5096209e7f06314e5cf2fa65009c
+- 2026-11-03T16:40:03Z siglip2-giant-opt-patch16-256_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T16:40:04Z siglip2-giant-opt-patch16-256_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T16:55:29Z scancel 24843716 fx_siglip2-giant-opt-patch16-384_W (PENDING) site=clusterA: FM siglip2-giant-opt-patch16-384 verdict FAIL, verdict sha256 d1e837d0c31c15d07e1e65ac38c0a36aac29b65ce191ea91f839b4492fa1f06b
+- 2026-11-03T16:56:04Z scancel 24843796 fx_siglip2-giant-opt-patch16-384_S (PENDING) site=clusterA: FM siglip2-giant-opt-patch16-384 verdict FAIL, verdict sha256 d1e837d0c31c15d07e1e65ac38c0a36aac29b65ce191ea91f839b4492fa1f06b
+- 2026-11-03T16:57:02Z siglip2-giant-opt-patch16-384_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T16:57:06Z siglip2-giant-opt-patch16-384_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:18:40Z scancel 24843726 fx_dinov2-reg-large_W (PENDING) site=clusterA: FM dinov2-reg-large verdict FAIL, verdict sha256 48a21e62041e665e55273815eb8bf47b1b874e7098c1e3dc198756cd0c8299cc
+- 2026-11-03T17:19:15Z scancel 24843806 fx_dinov2-reg-large_S (PENDING) site=clusterA: FM dinov2-reg-large verdict FAIL, verdict sha256 48a21e62041e665e55273815eb8bf47b1b874e7098c1e3dc198756cd0c8299cc
+- 2026-11-03T17:19:54Z dinov2-reg-large_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:19:56Z dinov2-reg-large_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:25:22Z scancel 24843746 fx_webssl-dino1b-224_W (PENDING) site=clusterA: FM webssl-dino1b-224 verdict FAIL, verdict sha256 443652c6e84a1a914e062c51f251514f35b6264185f4d5366b244fe55796666a
+- 2026-11-03T17:25:59Z scancel 24843824 fx_webssl-dino1b-224_S (PENDING) site=clusterA: FM webssl-dino1b-224 verdict FAIL, verdict sha256 443652c6e84a1a914e062c51f251514f35b6264185f4d5366b244fe55796666a
+- 2026-11-03T17:26:27Z webssl-dino1b-224_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:26:29Z webssl-dino1b-224_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:31:53Z scancel 24843749 fx_aimv2-large-patch14-224_W (PENDING) site=clusterA: FM aimv2-large-patch14-224 verdict FAIL, verdict sha256 629f8d50d41a85f7bd4ab1849b650fd2c5ba09e935f0a57ff78d01002749ae2a
+- 2026-11-03T17:32:32Z scancel 24843827 fx_aimv2-large-patch14-224_S (PENDING) site=clusterA: FM aimv2-large-patch14-224 verdict FAIL, verdict sha256 629f8d50d41a85f7bd4ab1849b650fd2c5ba09e935f0a57ff78d01002749ae2a
+- 2026-11-03T17:33:12Z aimv2-large-patch14-224_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:33:23Z aimv2-large-patch14-224_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:38:51Z scancel 24843741 fx_tipsv2-l14_W (PENDING) site=clusterA: FM tipsv2-l14 verdict FAIL, verdict sha256 b621ca3856c027552be30e4f68c667f1644cc6a3d1793af5bcd1552cbe19e3ac
+- 2026-11-03T17:39:31Z scancel 24843821 fx_tipsv2-l14_S (PENDING) site=clusterA: FM tipsv2-l14 verdict FAIL, verdict sha256 b621ca3856c027552be30e4f68c667f1644cc6a3d1793af5bcd1552cbe19e3ac
+- 2026-11-03T17:40:09Z tipsv2-l14_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:40:11Z tipsv2-l14_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:45:42Z scancel 24843745 fx_tipsv2-g14_W (PENDING) site=clusterA: FM tipsv2-g14 verdict FAIL, verdict sha256 ce58df07e1e674db51eb5fc1e7b78535918077c4d8ce55feab02c40aa2811aae
+- 2026-11-03T17:46:24Z scancel 24843823 fx_tipsv2-g14_S (PENDING) site=clusterA: FM tipsv2-g14 verdict FAIL, verdict sha256 ce58df07e1e674db51eb5fc1e7b78535918077c4d8ce55feab02c40aa2811aae
+- 2026-11-03T17:47:00Z tipsv2-g14_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:47:02Z tipsv2-g14_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:52:24Z scancel 24843740 fx_tipsv2-b14_W (PENDING) site=clusterA: FM tipsv2-b14 verdict FAIL, verdict sha256 307a64d50de2ec39b460b337fa907cadfc466cba799f4ea1f3f579327279935f
+- 2026-11-03T17:52:27Z scancel 24843744 fx_tipsv2-so400m14_W (PENDING) site=clusterA: FM tipsv2-so400m14 verdict FAIL, verdict sha256 1d5d40bcfe025b5baf19b34a394af960e46bef17ebf56815451f712a17a064b3
+- 2026-11-03T17:53:12Z scancel 24843820 fx_tipsv2-b14_S (PENDING) site=clusterA: FM tipsv2-b14 verdict FAIL, verdict sha256 307a64d50de2ec39b460b337fa907cadfc466cba799f4ea1f3f579327279935f
+- 2026-11-03T17:53:15Z scancel 24843822 fx_tipsv2-so400m14_S (PENDING) site=clusterA: FM tipsv2-so400m14 verdict FAIL, verdict sha256 1d5d40bcfe025b5baf19b34a394af960e46bef17ebf56815451f712a17a064b3
+- 2026-11-03T17:53:50Z tipsv2-b14_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:53:50Z tipsv2-so400m14_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:53:53Z tipsv2-b14_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T17:53:53Z tipsv2-so400m14_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:05:21Z scancel 24843738 fx_pe-core-b16-224_W (PENDING) site=clusterA: FM pe-core-b16-224 verdict FAIL, verdict sha256 331094505c3b89da3dacfeaa89f827f3b4fd8dd7745484f383dc1a0c6d6c0e1e
+- 2026-11-03T18:05:23Z scancel 24843739 fx_pe-core-l14-336_W (PENDING) site=clusterA: FM pe-core-l14-336 verdict FAIL, verdict sha256 f9914a0b4d0f5dd8ccbadcd9dd48a2d772bcac8065a39b4367816067bce118c1
+- 2026-11-03T18:05:33Z scancel 24843750 fx_depth-anything-v2-large_W (PENDING) site=clusterA: FM depth-anything-v2-large verdict FAIL, verdict sha256 3ade2ba47f2a67781abc839717ac46ee975075dbbd4c0b43d4df172ae41383cc
+- 2026-11-03T18:05:36Z scancel 24843756 fx_sd1.5-dift_W (PENDING) site=clusterA: FM sd1.5-dift verdict FAIL, verdict sha256 11f45fb30616f8cbd72f869aec998d81fb074bfe5caf34712371037254aa2688
+- 2026-11-03T18:06:15Z scancel 24843818 fx_pe-core-b16-224_S (PENDING) site=clusterA: FM pe-core-b16-224 verdict FAIL, verdict sha256 331094505c3b89da3dacfeaa89f827f3b4fd8dd7745484f383dc1a0c6d6c0e1e
+- 2026-11-03T18:06:17Z scancel 24843819 fx_pe-core-l14-336_S (PENDING) site=clusterA: FM pe-core-l14-336 verdict FAIL, verdict sha256 f9914a0b4d0f5dd8ccbadcd9dd48a2d772bcac8065a39b4367816067bce118c1
+- 2026-11-03T18:06:32Z scancel 24843828 fx_depth-anything-v2-large_S (PENDING) site=clusterA: FM depth-anything-v2-large verdict FAIL, verdict sha256 3ade2ba47f2a67781abc839717ac46ee975075dbbd4c0b43d4df172ae41383cc
+- 2026-11-03T18:06:35Z scancel 24843833 fx_sd1.5-dift_S (PENDING) site=clusterA: FM sd1.5-dift verdict FAIL, verdict sha256 11f45fb30616f8cbd72f869aec998d81fb074bfe5caf34712371037254aa2688
+- 2026-11-03T18:07:01Z pe-core-b16-224_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:07:01Z pe-core-l14-336_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:07:02Z depth-anything-v2-large_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:07:02Z sd1.5-dift_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:07:05Z pe-core-b16-224_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:07:05Z pe-core-l14-336_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:07:06Z depth-anything-v2-large_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:07:06Z sd1.5-dift_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:12:50Z scancel 24843751 fx_depth-anything-3-large-1.1_W (PENDING) site=clusterA: FM depth-anything-3-large-1.1 verdict FAIL, verdict sha256 29f85b169951ae31fea2c3fbd5693a2dfe7394bc3c76f0834a54adb29f8caa55
+- 2026-11-03T18:13:47Z scancel 24843829 fx_depth-anything-3-large-1.1_S (PENDING) site=clusterA: FM depth-anything-3-large-1.1 verdict FAIL, verdict sha256 29f85b169951ae31fea2c3fbd5693a2dfe7394bc3c76f0834a54adb29f8caa55
+- 2026-11-03T18:14:23Z depth-anything-3-large-1.1_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:14:25Z depth-anything-3-large-1.1_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:19:34Z scancel 24843713 fx_sam2.1-hiera-base-plus_W (PENDING) site=clusterA: FM sam2.1-hiera-base-plus verdict FAIL, verdict sha256 6c9806f9d2df4792c6d3373155018d9272a1ab24b7c15c6a3908a58359afc53d
+- 2026-11-03T18:20:31Z scancel 24843793 fx_sam2.1-hiera-base-plus_S (PENDING) site=clusterA: FM sam2.1-hiera-base-plus verdict FAIL, verdict sha256 6c9806f9d2df4792c6d3373155018d9272a1ab24b7c15c6a3908a58359afc53d
+- 2026-11-03T18:21:35Z sam2.1-hiera-base-plus_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:21:37Z sam2.1-hiera-base-plus_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:26:46Z scancel 24843711 fx_dinov2-large_W (PENDING) site=clusterA: FM dinov2-large verdict FAIL, verdict sha256 97872a6272ce6d33beb11b3ff8d5da9f3d814120a53ed3b21a5f6ecb2b7a0961
+- 2026-11-03T18:27:46Z scancel 24843791 fx_dinov2-large_S (PENDING) site=clusterA: FM dinov2-large verdict FAIL, verdict sha256 97872a6272ce6d33beb11b3ff8d5da9f3d814120a53ed3b21a5f6ecb2b7a0961
+- 2026-11-03T18:28:53Z dinov2-large_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:28:54Z sam3_W: BLOCKED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:28:56Z dinov2-large_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:28:58Z sam3_S: BLOCKED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:34:08Z scancel 24843712 fx_siglip2-so400m-patch14-224_W (PENDING) site=clusterA: FM siglip2-so400m-patch14-224 verdict FAIL, verdict sha256 5ce35ac253ec817d38cce4e153eaa7df04716aad6d3a3090c859606eef615cfe
+- 2026-11-03T18:35:07Z scancel 24843792 fx_siglip2-so400m-patch14-224_S (PENDING) site=clusterA: FM siglip2-so400m-patch14-224 verdict FAIL, verdict sha256 5ce35ac253ec817d38cce4e153eaa7df04716aad6d3a3090c859606eef615cfe
+- 2026-11-03T18:36:15Z siglip2-so400m-patch14-224_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:36:16Z siglip2-so400m-patch14-224_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:41:35Z scancel 24843714 fx_siglip2-base-patch16-224_W (PENDING) site=clusterA: FM siglip2-base-patch16-224 verdict FAIL, verdict sha256 f3c616d7ad4e279795b64afb1c06ad5324a59b4a8343849319a11f563a6ae6c1
+- 2026-11-03T18:42:34Z scancel 24843794 fx_siglip2-base-patch16-224_S (PENDING) site=clusterA: FM siglip2-base-patch16-224 verdict FAIL, verdict sha256 f3c616d7ad4e279795b64afb1c06ad5324a59b4a8343849319a11f563a6ae6c1
+- 2026-11-03T18:43:50Z siglip2-base-patch16-224_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:43:53Z siglip2-base-patch16-224_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:56:37Z scancel 24843723 fx_dinov3-convnext-small_W (PENDING) site=clusterA: FM dinov3-convnext-small verdict FAIL, verdict sha256 0fa6110b86859009e235f3ceeb652ebd9f1d7c5f33c0ed15a8764b410b60f2b4
+- 2026-11-03T18:56:39Z scancel 24843724 fx_dinov3-convnext-base_W (PENDING) site=clusterA: FM dinov3-convnext-base verdict FAIL, verdict sha256 c7fe2d73bf6322f896ee8406bdb3077437e4d338538fb047e683d2b5d4de76d5
+- 2026-11-03T18:56:40Z scancel 24843725 fx_dinov3-convnext-large_W (PENDING) site=clusterA: FM dinov3-convnext-large verdict FAIL, verdict sha256 3715b5159e8cf6a12e5c48698244e1bb0113704ae6bd58f048a3c0e12a7b7510
+- 2026-11-03T18:57:46Z scancel 24843803 fx_dinov3-convnext-small_S (PENDING) site=clusterA: FM dinov3-convnext-small verdict FAIL, verdict sha256 0fa6110b86859009e235f3ceeb652ebd9f1d7c5f33c0ed15a8764b410b60f2b4
+- 2026-11-03T18:57:48Z scancel 24843804 fx_dinov3-convnext-base_S (PENDING) site=clusterA: FM dinov3-convnext-base verdict FAIL, verdict sha256 c7fe2d73bf6322f896ee8406bdb3077437e4d338538fb047e683d2b5d4de76d5
+- 2026-11-03T18:57:49Z scancel 24843805 fx_dinov3-convnext-large_S (PENDING) site=clusterA: FM dinov3-convnext-large verdict FAIL, verdict sha256 3715b5159e8cf6a12e5c48698244e1bb0113704ae6bd58f048a3c0e12a7b7510
+- 2026-11-03T18:58:48Z dinov3-convnext-small_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:58:48Z dinov3-convnext-base_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:58:48Z dinov3-convnext-large_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:58:50Z dinov3-convnext-small_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:58:50Z dinov3-convnext-base_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T18:58:50Z dinov3-convnext-large_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T19:04:14Z scancel 24843722 fx_dinov3-convnext-tiny_W (PENDING) site=clusterA: FM dinov3-convnext-tiny verdict FAIL, verdict sha256 455b665ae0a9854cda9c6b513326d2b92598751f3ac5d95c966392b0c70702c4
+- 2026-11-03T19:04:48Z scancel 24843752 fx_trocr-large-handwritten_W (PENDING) site=clusterA: FM trocr-large-handwritten verdict FAIL, verdict sha256 b8383a8fc50f941b1616e5ad6926a50e122b90326e58242f8284997c23ab967f
+- 2026-11-03T19:05:09Z scancel 24843780 fx_starvector-1b-im2svg_W (PENDING) site=clusterA: FM starvector-1b-im2svg verdict FAIL, verdict sha256 8c6ef3d6679354df7e45dd034e44b19b6eed8534d4eaf827ffe9fd8528ebd2f3
+- 2026-11-03T19:05:27Z scancel 24843802 fx_dinov3-convnext-tiny_S (PENDING) site=clusterA: FM dinov3-convnext-tiny verdict FAIL, verdict sha256 455b665ae0a9854cda9c6b513326d2b92598751f3ac5d95c966392b0c70702c4
+- 2026-11-03T19:05:58Z scancel 24843830 fx_trocr-large-handwritten_S (PENDING) site=clusterA: FM trocr-large-handwritten verdict FAIL, verdict sha256 b8383a8fc50f941b1616e5ad6926a50e122b90326e58242f8284997c23ab967f
+- 2026-11-03T19:06:23Z scancel 24843846 fx_starvector-1b-im2svg_S (PENDING) site=clusterA: FM starvector-1b-im2svg verdict FAIL, verdict sha256 8c6ef3d6679354df7e45dd034e44b19b6eed8534d4eaf827ffe9fd8528ebd2f3
+- 2026-11-03T19:06:32Z dinov3-convnext-tiny_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T19:06:33Z trocr-large-handwritten_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T19:06:33Z starvector-1b-im2svg_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T19:06:34Z dinov3-convnext-tiny_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T19:06:34Z trocr-large-handwritten_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T19:06:35Z starvector-1b-im2svg_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T19:28:07Z scancel 24843753 fx_florence-2-large_W (PENDING) site=clusterA: FM florence-2-large verdict FAIL, verdict sha256 57929b2e1c297b935db28260e4b7b9861c312653fd87be9119e37c67c47e598f
+- 2026-11-03T19:29:20Z scancel 24843831 fx_florence-2-large_S (PENDING) site=clusterA: FM florence-2-large verdict FAIL, verdict sha256 57929b2e1c297b935db28260e4b7b9861c312653fd87be9119e37c67c47e598f
+- 2026-11-03T19:29:51Z florence-2-large_W: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-03T19:30:01Z florence-2-large_S: SUBMITTED -> CANCELLED_GATE_FAIL (controller, jobs none)
+- 2026-11-05T12:19:53Z [FMDX warm-monitor, <agent>] NOFM_W FT race: winner 24879670 (gpuidle, COMPLETED 04:36:20Z, val1000 best ms1); cancelled pending copies 24863028 (gpuidle) 24882897 (llms) 24882899 (b200idle)
+- 2026-11-05T12:22:02Z [FMDX warm-monitor, <agent>] c-radiov3-h_W FT race: winner 24878842 (llms, COMPLETED 4 Nov 21:47Z, val1000 best ms4); cancelled pending copy 24869367 (gpuidle)
+- 2026-11-05T12:22:14Z [FMDX warm-monitor, <agent>] CORRECTION to previous line: c-radiov3-h_W FT winner was 24869368 (gpuidle 2xA30, train_exit 22:33Z 4 Nov, selected ms4 00:11Z 5 Nov); 24878842 lost the local race (RACE_LOST json)
+- 2026-11-05T21:34:19Z [FMDX warm-monitor, <agent>] PEINIT_W FT complete (val1000 best ms2); scancel issued for remaining copies [24879671, 24878859, 24882900, 24882901] (winner = job in ft/PEINIT_W_FT_clusterA/job_history.txt)
+- 2026-11-05T23:58:33Z [FMDX warm-monitor, <agent>] A9 sampling race PEINIT_W ft: winner 24915560 (gpuidle a4000, all 3 seed locks); 24915570 (llms rtx6000) RACE_LOST; a40 copy not submittable (node config); cancelled pending copies 24915561 24915563 24915564 24915565 24915569 24915571
+- 2026-11-07T15:26:49Z [FMDX warm-monitor, <agent>] A9 sampling race vit-mae-large_W bb: all 3 seed locks taken (owners in preds/vit-mae-large_W/bb/.lock_*/owner); cancelled pending copies 24957708 24957709 24957710 24957712 24957714
+- 2026-11-07T15:26:57Z [FMDX warm-monitor, <agent>] A9 sampling race cleandift-sd21_W bb: all 3 seed locks taken (owners in preds/cleandift-sd21_W/bb/.lock_*/owner); cancelled pending copies 24958049 24958050 24958051 24958052 24958053 24958054 24958056
+- 2026-11-07T15:27:00Z [FMDX warm-monitor, <agent>] A9 sampling race dinov3-vitl16-sat493m_W bb: all 3 seed locks taken (owners in preds/dinov3-vitl16-sat493m_W/bb/.lock_*/owner); cancelled pending copies 24958065 24958066 24958067 24958068 24958069 24958070 24958071
+- 2026-11-07T15:27:05Z [FMDX warm-monitor, <agent>] A9 sampling race pe-spatial-b16-512_W bb: all 3 seed locks taken (owners in preds/pe-spatial-b16-512_W/bb/.lock_*/owner); cancelled pending copies 24958099 24958100 24958101 24958102 24958103 24958104 24958105
+- 2026-11-07T20:23:38Z [FMDX warm-monitor, <agent>] cleandift-sd21_W FT complete (val1000 best ms3); scancel issued for remaining copies [24958042, 24958043, 24958044, 24958045, 24958046, 24958047] (winner = job in ft/cleandift-sd21_W_FT_clusterA/job_history.txt)
+- 2026-11-07T22:05:00Z [FMDX warm-monitor, <agent>] A9 sampling race cleandift-sd21_W ft: all 3 seed locks taken (owners in preds/cleandift-sd21_W/ft/.lock_*/owner); cancelled pending copies 24964146 24964147 24964148 24964150 24964152
+- 2026-11-08T05:36:42Z [FMDX warm-monitor, <agent>] vit-mae-large_W FT complete (val1000 best ms5); scancel issued for remaining copies [24957701, 24957702, 24957703, 24957704, 24957705, 24957706] (winner = job in ft/vit-mae-large_W_FT_clusterA/job_history.txt)
+- 2026-11-08T05:37:07Z [FMDX warm-monitor, <agent>] dinov3-vitl16-sat493m_W FT complete (val1000 best ms5); scancel issued for remaining copies [24958057, 24958058, 24958060, 24958061, 24958062, 24958063] (winner = job in ft/dinov3-vitl16-sat493m_W_FT_clusterA/job_history.txt)
+- 2026-11-08T05:37:22Z [FMDX warm-monitor, <agent>] pe-spatial-b16-512_W FT complete (val1000 best ms2); scancel issued for remaining copies [24958072, 24958073, 24958089, 24958090, 24958093, 24958097] (winner = job in ft/pe-spatial-b16-512_W_FT_clusterA/job_history.txt)
+- 2026-11-08T05:37:45Z [FMDX warm-monitor, <agent>] A9 sampling race webssl-mae1b-224_W bb: all 3 seed locks taken (owners in preds/webssl-mae1b-224_W/bb/.lock_*/owner); cancelled pending copies 24969669 24969670 24969671 24969672 24969674 24969675 24969676
+- 2026-11-08T05:52:17Z [FMDX warm-monitor, <agent>] Lead directive (A7 cap): max 3 race copies per FT/sampling job, chosen by earliest sbatch --test-only start. Trimmed pending copies (no running tasks): 24969665 24969666 24969667 24969679 24969680 24969681 24969684 24969685 24969686 24969689 24969690 24969694 24969695 24969696 24969701 24969702 24969711 24969712 24969713 24969717 24969718 24969719 24969720 24969721 24969725 24969726 24969732 24969733 24969734 24969738 24969739 24969740 24969741 24969742 24969746 24969747
+- 2026-11-08T10:03:48Z [FMDX warm-monitor, <agent>] webssl-mae1b-224_W FT complete (val1000 best ms3); scancel issued for remaining copies [24969662, 24969663, 24969668] (winner = job in ft/webssl-mae1b-224_W_FT_clusterA/job_history.txt)
+- 2026-11-10T09:16:32Z [FMDX warm-monitor autopilot, <agent> track] A9 race vit-mae-large_W ft: preds complete; cancelled pending tasks ['24969697_0', '24969697_1', '24969697_2']
+- 2026-11-10T09:17:37Z [FMDX warm-monitor autopilot, <agent> track] A9 race cleandift-sd21_W bb: preds complete; cancelled pending tasks ['24969735_0']
+- 2026-11-10T09:18:26Z [FMDX warm-monitor autopilot, <agent> track] A9 race dinov3-vitl16-sat493m_W ft: preds complete; cancelled pending tasks ['24969714_0', '24969714_1', '24969714_2']
+- 2026-11-10T09:19:08Z [FMDX warm-monitor autopilot, <agent> track] A9 race pe-spatial-b16-512_W ft: preds complete; cancelled pending tasks ['24969722_0', '24969722_1', '24969722_2']
+- 2026-11-10T09:20:30Z [FMDX warm-monitor autopilot, <agent> track] webssl-mae300m-224_W FT selected ms2 (val1000 E0); scancel issued for FT copies ['24969677', '24969678', '24969682'] (winner in ft/webssl-mae300m-224_W_FT_clusterA/job_history.txt)
+- 2026-11-10T09:20:40Z [FMDX warm-monitor autopilot, <agent> track] c-radiov3-b_W FT selected ms3 (val1000 E0); scancel issued for FT copies ['24970453', '24970454', '24970455'] (winner in ft/c-radiov3-b_W_FT_clusterA/job_history.txt)
+- 2026-11-10T09:20:57Z [FMDX warm-monitor autopilot, <agent> track] c-radiov4-so400m_W FT selected ms3 (val1000 E0); scancel issued for FT copies ['24970473', '24970474', '24970478'] (winner in ft/c-radiov4-so400m_W_FT_clusterA/job_history.txt)
+- 2026-11-10T09:21:18Z [FMDX warm-monitor autopilot, <agent> track] A9 race dinov3-vitb16_W bb: 3 seed locks taken; cancelled pending tasks ['25036933_0', '25036933_1', '25036933_2']
+- 2026-11-10T10:21:27Z [FMDX warm-monitor autopilot, <agent> track] A9 race webssl-mae300m-224_W ft: 3 seed locks taken; cancelled pending tasks ['25037191_0', '25037191_1', '25037191_2']
+- 2026-11-10T10:31:33Z [FMDX warm-monitor autopilot, <agent> track] A9 race c-radiov3-b_W ft: 3 seed locks taken; cancelled pending tasks ['25037203_0', '25037203_1', '25037203_2']
+- 2026-11-10T11:11:57Z [FMDX warm-monitor autopilot, <agent> track] A9 race c-radiov4-so400m_W ft: 3 seed locks taken; cancelled pending tasks ['25037323_0', '25037323_1', '25037323_2']
+- 2026-11-10T13:05:09Z [FMDX warm-monitor autopilot, <agent> track] dinov3-vitb16_W FT selected ms2 (val1000 E0); scancel issued for FT copies ['25036922', '25036923', '25036924'] (winner in ft/dinov3-vitb16_W_FT_clusterA/job_history.txt)
+- 2026-11-10T13:15:13Z [FMDX warm-monitor autopilot, <agent> track] A9 race dinov3-vitb16_W ft: 3 seed locks taken; cancelled pending tasks ['25041706_0', '25041706_1', '25041706_2', '25041708_0', '25041708_1', '25041708_2']
+- 2026-11-10T14:17:18Z [FMDX warm-monitor, <agent>] webssl-mae1b-224_W bb: seed0 complete (owner 24969745_0); cancelled stale seed-0 copy 24969743_[0] (est 10 Dec) so the autopilot resubmits missing seeds 1-2

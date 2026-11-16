@@ -1,0 +1,17 @@
+{
+ "rows_csv": "$U/exp/FMD/screen/rows_ink.csv",
+ "rows_csv_sha256": "8b0b847730cb32478a232b5e8c26373ecb2c86e1e57d5bc95b1e793c515f664a",
+ "created_utc": "2026-11-03T04:06:24Z",
+ "verdicts": {
+  "ink": {
+   "verdict": "FAIL",
+   "fms": {
+    "inksight_small_p": {
+     "order_pass": [],
+     "shape_NI": true,
+     "fm_pass": false
+    }
+   }
+  }
+ }
+}

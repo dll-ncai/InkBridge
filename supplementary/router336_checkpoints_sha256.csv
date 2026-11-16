@@ -1,0 +1,15 @@
+arm,ckpt_rule,seed,path,sha256,epoch,val_acc5
+reported,best,0,experiments/D3_ROUTE/router/script_clf.pt,22bb8802f2da46fc37972eec430a1439ad830905712f22f6d923c38829db45aa,6,0.9832
+lineR_day1_balanced_clusterA,best,0,experiments/RV11/router336/lineR_ref/run_p01_s0/script_clf_p01.pt,c3e0a29c1bd2a91a8a48f45fb10d19e4d5be070878062f30d329857fe7bce32d,6,0.98
+natural,best,0,experiments/RV11/router336/runs/natural_s0/script_clf.pt,c9a97d6cebbef1607e6724e4dde7886b9ff31aaada5f5463eea1dfad7ff184ce,7,0.9712
+natural,last,0,experiments/RV11/router336/runs/natural_s0/script_clf_last.pt,e2caf493cf8cb78691bfbd23740f2f4031ad1bd62b85a0966db85e6ce52cb93f,7,0.9712
+natural,best,1,experiments/RV11/router336/runs/natural_s1/script_clf.pt,4240b9b16e5d7d191c12c3076099a5f38c4c397b098fabe66a65260f5b69df98,7,0.9672
+natural,last,1,experiments/RV11/router336/runs/natural_s1/script_clf_last.pt,689e5c7def93f439a15378cbe548174e8d982de04274e073b914ebbea1f2c231,7,0.9672
+natural,best,2,experiments/RV11/router336/runs/natural_s2/script_clf.pt,cfbdb6dafacaf06589b22e55f31a9dadc10a9e48e0aed1f4d16b47d46d690cbd,6,0.9664
+natural,last,2,experiments/RV11/router336/runs/natural_s2/script_clf_last.pt,11c9b62de484a6afa30068819659343b832cb38f32dbcacce5fd501d96f90f9b,7,0.964
+balanced,best,0,experiments/RV11/router336/runs/balanced_s0/script_clf.pt,074690d98b74e77c90a02bb6aa1742f425b336f15a3ffa51176864a6d33b23e6,7,0.9792
+balanced,last,0,experiments/RV11/router336/runs/balanced_s0/script_clf_last.pt,8b2b5f55f6ab7165b9bd33acede66d84e4932ffd98feff7e7fe6b6f332751057,7,0.9792
+balanced,best,1,experiments/RV11/router336/runs/balanced_s1/script_clf.pt,be6dbf0dd74998f29ca0c550988f929bd756fc14d6e0bbb14a342578b9291f39,7,0.98
+balanced,last,1,experiments/RV11/router336/runs/balanced_s1/script_clf_last.pt,d1697d055f3c3c04031fa0cad51679ff0c4c26b00179b49e3ebdcb6d93f89bad,7,0.98
+balanced,best,2,experiments/RV11/router336/runs/balanced_s2/script_clf.pt,e5630438fabdcd34a12b8074bca65933ded8c95ae6811ac9d0ec55f2bd8ae12b,7,0.976
+balanced,last,2,experiments/RV11/router336/runs/balanced_s2/script_clf_last.pt,e7fb9c81d7760bff329320b16fa35fc194fb97b257a4a6854b307c66ad31c709,7,0.976

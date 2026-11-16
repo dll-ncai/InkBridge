@@ -1,0 +1,65 @@
+{
+ "track": "Encoders",
+ "kind": "nomL2 baseline addendum",
+ "created_utc": "2026-11-03T03:22:53Z",
+ "note": "written automatically by the nomL2 watcher chain armed by the Encoders sub-agent (<agent>); not reviewed by it",
+ "jobs": {
+  "watch": "24830157",
+  "extract": "24830777",
+  "probe_array": "24830778",
+  "rows": "24830779",
+  "addendum": "24830780"
+ },
+ "files": {
+  "$U/exp/FMD/features/nomL2/mid16__val1000.npy": "90af0d24a324aee0cef9b047850bab58fb6a897707d9aba7a91508c857067450",
+  "$U/exp/FMD/features/nomL2/cat16__val1000.npy": "b80ad1b386d5f5ca64ff22594e8e3dcb29b550164a893298bede14e534478348",
+  "$U/exp/FMD/screen/units/nomL2__cat16__attn__G14__val1000.units.csv.gz": "37e384c2273bf4c5a92dddc5a5f14bf899188855d5d6b499403347656ab4ac22",
+  "$U/exp/FMD/screen/units/nomL2__cat16__attn__G16__val1000.units.csv.gz": "f9179ec73ef1c372226e7747d875dd638963cde092940e51d920a4d5c34c727b",
+  "$U/exp/FMD/screen/units/nomL2__cat16__linear__G14__val1000.units.csv.gz": "d087977fd6664150aa91cb202ae01f6b14e9bc78098b90271761ef0903a65b8c",
+  "$U/exp/FMD/screen/units/nomL2__cat16__linear__G16__val1000.units.csv.gz": "6a0d683486fe19e1cd01c7bc2b7fb8ae85c1fe41db2af49151f711cd6e1d621e",
+  "$U/exp/FMD/screen/units/nomL2__mid16__attn__G14__val1000.units.csv.gz": "8b95275c8ea7ebe4d4d137d59a58b806f3103d4c1666f2525e1b9d053d3c0c6a",
+  "$U/exp/FMD/screen/units/nomL2__mid16__attn__G16__val1000.units.csv.gz": "beafc0bfd6620b5543c3195a7214090c1bd2dae35581cbcb2d2afe655d9df6fd",
+  "$U/exp/FMD/screen/units/nomL2__mid16__linear__G14__val1000.units.csv.gz": "5a46af41d6145da19dc9c8b311505539795d45c1e6985e7fcdafde4ae0b1915a",
+  "$U/exp/FMD/screen/units/nomL2__mid16__linear__G16__val1000.units.csv.gz": "dfae5e76979c6c47ed68b5c321d569e77a5f9a1b42dfd623ebe69db3c9ef31cc",
+  "$U/exp/FMD/screen/rows_encoders.csv": "1fa76ecd9ea67dcbcda94a0089fd211bcc654c283fc691b3bdfbf30809481ffd",
+  "$U/exp/FMD/screen/verdicts_encoders.json": "f07b8bd9e0cfc513306c104682656d8cd78f79088d9e2e4c8ec5a572b36eaf34",
+  "$U/exp/FMD/screen/rows_encoders_nomL1only.csv": "05a5df4921ffc1352095ab65d93bf2ec64e9778956f6d9c333020e9168f46a31",
+  "$U/exp/FMD/screen/verdicts_encoders_nomL1only.json": "3e41f6d912f55bcbb7edaa45ef3a12d506ea005cef471b9ccc7e35663aa25de3"
+ },
+ "verdicts": {
+  "encoder": {
+   "verdict": "PASS",
+   "fms": {
+    "dinov2-large": {
+     "order_pass": [
+      "T2:rprec(last,linear)"
+     ],
+     "shape_NI": false,
+     "fm_pass": false
+    },
+    "dinov3-vitl16": {
+     "order_pass": [
+      "T2:rprec(last,linear)"
+     ],
+     "shape_NI": true,
+     "fm_pass": true
+    },
+    "sam2.1-hiera-base-plus": {
+     "order_pass": [
+      "T2:rprec(last,linear)"
+     ],
+     "shape_NI": false,
+     "fm_pass": false
+    },
+    "siglip2-so400m-patch14-224": {
+     "order_pass": [
+      "T2:rprec(last,linear)",
+      "T3:rprec(last,linear)"
+     ],
+     "shape_NI": false,
+     "fm_pass": false
+    }
+   }
+  }
+ }
+}

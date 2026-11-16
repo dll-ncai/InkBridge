@@ -1,0 +1,91 @@
+exp,arm,lane,job_id,depends_on,outputs_path
+R2c,render224_p10,clusterA:cpuidle,24963971,-,$U/exp/RQF/data/render224
+R2c,render224_p30,clusterA:cpuidle,24963972,-,$U/exp/RQF/data/render224
+R2a,NOFM_W_p01_s20261035,clusterA:gpuidle,24963994,-,$U/exp/RQF/preds/NOFM_W_p01_s20261035
+R2a,NOFM_W_p01_s20261036,clusterA:gpuidle,24963995,-,$U/exp/RQF/preds/NOFM_W_p01_s20261036
+R2a,PEINIT_W_p01_s20261035,clusterA:gpuidle,24963996,-,$U/exp/RQF/preds/PEINIT_W_p01_s20261035
+R2a,PEINIT_W_p01_s20261036,clusterA:gpuidle,24963997,-,$U/exp/RQF/preds/PEINIT_W_p01_s20261036
+R2c,LUOFT_p10_s20261034,clusterA:gpuidle,24963998,-,$U/exp/RQF/preds/LUOFT_p10_s20261034
+R2c,LUOFT_p10_s20261035,clusterA:gpuidle,24963999,-,$U/exp/RQF/preds/LUOFT_p10_s20261035
+R2c,LUOFT_p10_s20261036,clusterA:gpuidle,24964000,-,$U/exp/RQF/preds/LUOFT_p10_s20261036
+R2c,NOFM_W_p10_s20261034,clusterA:gpuidle,24964001,afterok:24963971,$U/exp/RQF/preds/NOFM_W_p10_s20261034
+R2c,NOFM_W_p10_s20261035,clusterA:gpuidle,24964002,afterok:24963971,$U/exp/RQF/preds/NOFM_W_p10_s20261035
+R2c,NOFM_W_p10_s20261036,clusterA:gpuidle,24964005,afterok:24963971,$U/exp/RQF/preds/NOFM_W_p10_s20261036
+R2c,NOFM_W_p30_s20261034,clusterA:gpuidle,24964006,afterok:24963972,$U/exp/RQF/preds/NOFM_W_p30_s20261034
+R2c,PEINIT_W_p10_s20261034,clusterA:gpuidle,24964007,afterok:24963971,$U/exp/RQF/preds/PEINIT_W_p10_s20261034
+R2c,PEINIT_W_p10_s20261035,clusterA:gpuidle,24964008,afterok:24963971,$U/exp/RQF/preds/PEINIT_W_p10_s20261035
+R2c,PEINIT_W_p10_s20261036,clusterA:gpuidle,24964009,afterok:24963971,$U/exp/RQF/preds/PEINIT_W_p10_s20261036
+R2c,PEINIT_W_p30_s20261034,clusterA:gpuidle,24964010,afterok:24963972,$U/exp/RQF/preds/PEINIT_W_p30_s20261034
+R2a-bb2,NOFM_W2_bb,clusterA:gpuidle a30x2,24964011,-,$U/exp/RQF/preds/NOFM_W2_bb
+R2a-bb2,PEINIT_W2_bb,clusterA:gpuidle a30x2,24964012,-,$U/exp/RQF/preds/PEINIT_W2_bb
+R2a-bb2,NOFM_W2_p01_s20261034,clusterA:gpuidle,24964014,afterany:24964011,$U/exp/RQF/preds/NOFM_W2_p01_s20261034
+R2a-bb2,PEINIT_W2_p01_s20261034,clusterA:gpuidle,24964015,afterany:24964012,$U/exp/RQF/preds/PEINIT_W2_p01_s20261034
+R2b,LUOC40_p01_s20261034,clusterA:gpuidle,24964016,afterany:24964013,$U/exp/RQF/preds/LUOC40_p01_s20261034
+R2b,LUOC40_p01_s20261035,clusterA:gpuidle,24964017,afterany:24964013,$U/exp/RQF/preds/LUOC40_p01_s20261035
+R2b,LUOC40_p01_s20261036,clusterA:gpuidle,24964018,afterany:24964013,$U/exp/RQF/preds/LUOC40_p01_s20261036
+R2c,LUOC40_p10_s20261034,clusterA:gpuidle,24964019,afterany:24964013,$U/exp/RQF/preds/LUOC40_p10_s20261034
+R2c,LUOC40_p30_s20261034,clusterA:gpuidle,24964020,afterany:24964013,$U/exp/RQF/preds/LUOC40_p30_s20261034
+R2b,LUOC40_bb_sample,clusterA:gpuidle,24964021,afterany:24964013,$U/exp/RQF/preds/LUOC40_bb_sample
+R2,NOFM_W_p01_s20261035__score_ft,clusterA:cpuidle,24964022,afterany:24963994,$U/exp/RQF/preds/NOFM_W_p01_s20261035__score_ft
+R2,NOFM_W_p01_s20261035__score_cmp,clusterA:cpuidle,24964023,afterany:24963994,$U/exp/RQF/preds/NOFM_W_p01_s20261035__score_cmp
+R2,NOFM_W_p01_s20261036__score_ft,clusterA:cpuidle,24964024,afterany:24963995,$U/exp/RQF/preds/NOFM_W_p01_s20261036__score_ft
+R2,NOFM_W_p01_s20261036__score_cmp,clusterA:cpuidle,24964025,afterany:24963995,$U/exp/RQF/preds/NOFM_W_p01_s20261036__score_cmp
+R2,PEINIT_W_p01_s20261035__score_ft,clusterA:cpuidle,24964026,afterany:24963996,$U/exp/RQF/preds/PEINIT_W_p01_s20261035__score_ft
+R2,PEINIT_W_p01_s20261035__score_cmp,clusterA:cpuidle,24964027,afterany:24963996,$U/exp/RQF/preds/PEINIT_W_p01_s20261035__score_cmp
+R2,PEINIT_W_p01_s20261036__score_ft,clusterA:cpuidle,24964028,afterany:24963997,$U/exp/RQF/preds/PEINIT_W_p01_s20261036__score_ft
+R2,PEINIT_W_p01_s20261036__score_cmp,clusterA:cpuidle,24964030,afterany:24963997,$U/exp/RQF/preds/PEINIT_W_p01_s20261036__score_cmp
+R2,LUOFT_p10_s20261034__score_luoft,clusterA:cpuidle,24964031,afterany:24963998,$U/exp/RQF/preds/LUOFT_p10_s20261034__score_luoft
+R2,LUOFT_p10_s20261035__score_luoft,clusterA:cpuidle,24964032,afterany:24963999,$U/exp/RQF/preds/LUOFT_p10_s20261035__score_luoft
+R2,LUOFT_p10_s20261036__score_luoft,clusterA:cpuidle,24964034,afterany:24964000,$U/exp/RQF/preds/LUOFT_p10_s20261036__score_luoft
+R2,NOFM_W_p10_s20261034__score_ft,clusterA:cpuidle,24964035,afterany:24964001,$U/exp/RQF/preds/NOFM_W_p10_s20261034__score_ft
+R2,NOFM_W_p10_s20261035__score_ft,clusterA:cpuidle,24964036,afterany:24964002,$U/exp/RQF/preds/NOFM_W_p10_s20261035__score_ft
+R2,NOFM_W_p10_s20261036__score_ft,clusterA:cpuidle,24964037,afterany:24964005,$U/exp/RQF/preds/NOFM_W_p10_s20261036__score_ft
+R2,NOFM_W_p30_s20261034__score_ft,clusterA:cpuidle,24964038,afterany:24964006,$U/exp/RQF/preds/NOFM_W_p30_s20261034__score_ft
+R2,PEINIT_W_p10_s20261034__score_ft,clusterA:cpuidle,24964039,afterany:24964007,$U/exp/RQF/preds/PEINIT_W_p10_s20261034__score_ft
+R2,PEINIT_W_p10_s20261035__score_ft,clusterA:cpuidle,24964040,afterany:24964008,$U/exp/RQF/preds/PEINIT_W_p10_s20261035__score_ft
+R2,PEINIT_W_p10_s20261036__score_ft,clusterA:cpuidle,24964041,afterany:24964009,$U/exp/RQF/preds/PEINIT_W_p10_s20261036__score_ft
+R2,PEINIT_W_p30_s20261034__score_ft,clusterA:cpuidle,24964042,afterany:24964010,$U/exp/RQF/preds/PEINIT_W_p30_s20261034__score_ft
+R2,NOFM_W2_p01_s20261034__score_ft,clusterA:cpuidle,24964043,afterany:24964014,$U/exp/RQF/preds/NOFM_W2_p01_s20261034__score_ft
+R2,PEINIT_W2_p01_s20261034__score_ft,clusterA:cpuidle,24964044,afterany:24964015,$U/exp/RQF/preds/PEINIT_W2_p01_s20261034__score_ft
+R2,LUOC40_p01_s20261034__score_luoft,clusterA:cpuidle,24964045,afterany:24964016,$U/exp/RQF/preds/LUOC40_p01_s20261034__score_luoft
+R2,LUOC40_p01_s20261035__score_luoft,clusterA:cpuidle,24964046,afterany:24964017,$U/exp/RQF/preds/LUOC40_p01_s20261035__score_luoft
+R2,LUOC40_p01_s20261036__score_luoft,clusterA:cpuidle,24964047,afterany:24964018,$U/exp/RQF/preds/LUOC40_p01_s20261036__score_luoft
+R2,LUOC40_p10_s20261034__score_luoft,clusterA:cpuidle,24964048,afterany:24964019,$U/exp/RQF/preds/LUOC40_p10_s20261034__score_luoft
+R2,LUOC40_p30_s20261034__score_luoft,clusterA:cpuidle,24964049,afterany:24964020,$U/exp/RQF/preds/LUOC40_p30_s20261034__score_luoft
+R2b,LUOC40_bb__score_luoft,clusterA:cpuidle,24964051,afterany:24964021,$U/exp/RQF/preds/LUOC40_bb__score_luoft
+R2a-bb2,NOFM_W2_bb,clusterB:A100-SDS|H200-SDS|H100-RP|A100-RP,3722036,-,$U_B/exp/RQF/runs/NOFM_W2_clusterB
+R2a-bb2,PEINIT_W2_bb,clusterB:A100-SDS|H200-SDS|H100-RP|A100-RP,3722037,-,$U_B/exp/RQF/runs/PEINIT_W2_clusterB
+R2-gate,NOFM_W2_clusterA__gate,clusterA:cpuidle,24964071,-,$U/exp/RQF/preds/NOFM_W2_clusterA__gate
+R2-gate,PEINIT_W2_clusterA__gate,clusterA:cpuidle,24964072,-,$U/exp/RQF/preds/PEINIT_W2_clusterA__gate
+R2-gate,LUOC40_bb__gate,clusterA:cpuidle,24964073,-,$U/exp/RQF/preds/LUOC40_bb__gate
+R2b-bb,LUOC40_bb,clusterA:gpuidle a30x1,24964074,-,$U/exp/RQF/preds/LUOC40_bb
+R2,RQF_R2_tables,clusterA:cpuidle,24964255,afterany:all-scoring,$U/exp/RQF/tables
+R2b-bb,LUOC40_bb_h100copy,clusterA:gpuidle h100x1,24964380,-,$U/exp/RQF/preds/LUOC40_bb_h100copy
+R2a-bb2,NOFM_W2_bb_h100copy,clusterA:gpuidle h100x1,24964381,-,$U/exp/RQF/preds/NOFM_W2_bb_h100copy
+R2a-bb2,PEINIT_W2_bb_h100copy,clusterA:gpuidle h100x1,24964382,-,$U/exp/RQF/preds/PEINIT_W2_bb_h100copy
+R2b-bb,LUOC40_bb_clusterBcopy,clusterB:A100-40GB|A100-PCI|A100-SDS,3722157,-,$U_B/exp/RQF/runs/LUOC40_bb
+R2b,LUOC40_vps_smoke,vps:4090,522a_rqf_luoc40_smoke,-,$VPS_ROOT/uhwr/runs/RQF
+R2b,LUOC40_bb_vps,vps:4090,525_rqf_luoc40_bb,-,$VPS_ROOT/uhwr/runs/RQF
+R2b,LUOC40_vps_auto_chain_526-529,vps:4090,526_rqf_luoc40_LUOC40_p01_s20261034|527_..s20261035|528_..s20261036|529_rqf_luoc40_bb_sample,enqueued-by-525-after-selection,$VPS_ROOT/uhwr/runs/RQF
+R2,RQF_R2_interim_tables,clusterA:cpuidle,25037654,-,$U/exp/RQF/tables
+R2c,PEINIT_W_p10_s20261034_resume,clusterA:gpuidle,25037655,-,$U/exp/RQF/preds/PEINIT_W_p10_s20261034_resume
+R2c,PEINIT_W_p30_s20261034_resume,clusterA:gpuidle,25037656,-,$U/exp/RQF/preds/PEINIT_W_p30_s20261034_resume
+R2c,PEINIT_W_p10_s20261034_ft_score,clusterA:gpuidle,25037657,afterok:25037655,$U/exp/RQF/preds/PEINIT_W_p10_s20261034_ft_score
+R2c,PEINIT_W_p30_s20261034_ft_score,clusterA:gpuidle,25037658,afterok:25037656,$U/exp/RQF/preds/PEINIT_W_p30_s20261034_ft_score
+R2b,RQF_R2_interim_tables_after_CLUSTER-A_LUOC40,clusterA:cpuidle,25038261,afterany:LUOC40 posts,$U/exp/RQF/tables
+R2b,LUOC40_p01_s20261036_resubmit,clusterA:gpuidle,25055037,afterok:gate,$U/exp/RQF/preds/LUOC40_p01_s20261036
+R2b,LUOC40_p01_s20261036_score_resubmit,clusterA:cpuidle,25055038,afterok:25055037,$U/exp/RQF/score_out
+R2b,RQF_R2_interim_tables_after_s36,clusterA:cpuidle,25055046,afterany:25055038,$U/exp/RQF/tables
+R2b,LUOC40_vps_puller_v4,clusterA:cpuidle,25055979,-,$U/exp/RQF/preds
+R2b,LUOC40_vps_post_s35_s36,vps:4090,527_rqf_luoc40_post_s35_s36,after 526f,$VPS_ROOT/uhwr/runs/RQF
+R2c,LUOC40_p10_s20261034_resub,clusterA:gpuidle,25056066,-,$U/exp/RQF/preds/LUOC40_p10_s20261034_resub
+R2c,LUOC40_p30_s20261034_resub,clusterA:gpuidle,25056068,-,$U/exp/RQF/preds/LUOC40_p30_s20261034_resub
+R2b,LUOC40_bb_sample_resub,clusterA:gpuidle,25056069,-,$U/exp/RQF/preds/LUOC40_bb_sample_resub
+R2c,LUOC40_p10_score_resub,clusterA:gpuidle,25056070,afterok:25056066,$U/exp/RQF/preds/LUOC40_p10_score_resub
+R2c,LUOC40_p30_score_resub,clusterA:gpuidle,25056071,afterok:25056068,$U/exp/RQF/preds/LUOC40_p30_score_resub
+R2b,LUOC40_bb_score_resub,clusterA:gpuidle,25056072,afterok:25056069,$U/exp/RQF/preds/LUOC40_bb_score_resub
+R2b,hold_release_watcher,clusterA:cpuidle,25056655,-,
+R2b,LUOC40VPS_p01_s20261035_score,clusterA:cpuidle,25061842,-,$U/exp/RQF/score_out
+R2b,LUOC40VPS_p01_s20261036_score,clusterA:cpuidle,25061843,-,$U/exp/RQF/score_out
+R2b,RQF_R2_interim_tables_fix,clusterA:cpuidle,25061844,-,$U/exp/RQF/tables
+R2b,RQF_R2_interim_tables_after_VPS_s35_s36,clusterA:cpuidle,25061845,afterany:25061842:25061843,$U/exp/RQF/tables

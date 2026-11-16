@@ -1,0 +1,3 @@
+2026-11-11T00:10:30Z sm_vps start kind=sma_bb tag=SMA_PEINIT_W_p01_s20261034 frac=p01 seed=20261034 backbone=$VPS_ROOT\uhwr\stage\exp\FMD\xs\runs\PEINIT_W_clusterA\bb_ms4.pt gpu=NVIDIA GeForce RTX 4090 cmd=539_rqf_sm_SMA_PEINIT_W_p01_s20261034 smoke=None
+2026-11-11T04:04:46Z selected ms9
+2026-11-11T06:03:08Z sampling_done

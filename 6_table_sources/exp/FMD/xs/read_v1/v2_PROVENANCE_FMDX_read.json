@@ -1,0 +1,41 @@
+{
+ "read_label": "v2 FINAL screen + final warm table 25049213",
+ "created_utc": "2026-11-10T17:18:09Z",
+ "track": "FMDX XS gate read + Warm read + Figures v1",
+ "model": "<agent>",
+ "model_reason": "verdict-setting reads are <agent> tasks under the 30 Oct 2026 model policy; the <agent> API failed earlier in the lane",
+ "prereg": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+ "prereg_sha256": "7a71c715dc5ca1cf146f829b8c7f498811e1330e1eefa2bf1b3b60fddbc5d154",
+ "clusterA_snapshot_dir": "$U/exp/FMD/xs/read_v1/",
+ "inputs_sha256": {
+  "artifact aae330d5 FMDX_warm_contrasts.csv (CLUSTER-A table job 25049213)": "b8be069af995e58ba4b678d6f0c5dd78b8d716a620b969328a51209aaa9a2aa5",
+  "artifact 66730411 FMDX_not_assessed_A43f.csv": "7dd85d06e22c05a0c242dd6a047f1d1e0899af467a0cf724d839bd183465a056",
+  "artifact 889bf57d HANDOFF_FMDX_monitor": "63b962c98e460dcb21a8f6c2555864dbadd4df5fef47d78f530ae6123275ce1f",
+  "prereg excerpt (sections 3-5,10) of sha be563cdf": "6d2d1961cdfcb73356c7312920302932a629a1be01996b549403a2c74cd66131",
+  "fmdx_gate_read.csv v1.1 (4531786f)": "28a8b0c8f2aa1a3dd656859af0e5b71395d0edd08d0723379be41b80144d040d",
+  "incident sources (CLUSTER-A): runs/DECISION_RECORD_backbone_addendum_9.md.b64, addendum_10.md, exp/CAND/queue/cand_log.md, HANDOFF": "read via grep, not hashed",
+  "new_incidents.json": "2ed9ca13cfb713849bf69a51f82e3fe1aadf19628dbeef93e7e16dda75f1cdc2"
+ },
+ "code_sha256": {
+  "fmdx_figures.py": "e6b29f578db5622e2c89a8413311c6542c3053999866d88b19bafc8e104aadd9",
+  "fmdx_gate_read.py": "27eb72479731888830b691cb8adf4e9e7d9f479850bba0190ff76bb7d34fa425",
+  "fmdx_gate_report.py": "5747676c382d7eea943dbc684d74adfcb463b91fdc68fad6355ef0cfe2e8144b",
+  "fmdx_results.py": "73335df144cee5e13461c31174d72049861f43bf020d25addf307da5d3bc2aa7",
+  "fmdx_warm_read.py": "d2ed5ce10b50816b5f77472dbc43c68af28204f46a26b4332186777df605a2cf",
+  "make_prov.py": "2fd18f8b65255581bbf2c01238632c22b9d208f1b232bdf139d46adfc44f215e"
+ },
+ "outputs_sha256": {
+  "RESULTS_FMDX.md": "8229f779ee2a425b9129a12f19b98c4e2bff3bffeaf7eb3eff528383baf74205",
+  "fmdx_warm_forest.pdf": "71649b66b65fce18799977a127eb5b8809ce1a1c8bfca4878f26401d49fb7036",
+  "fmdx_warm_forest.png": "eb6cd5f71449845ec15a610086b781612ad588b8d8b431846ecc53a20c61db37",
+  "fmdx_warm_read.csv": "5afc285a66e4f4fa2dc125ddd0ac89a37ba2bf16ac0dc4fc3e741204af4d59c2",
+  "fmdx_warm_read_clauses.csv": "3673c780f734d384589d7423d06856a9bf3cf560109f7b2b01f5de6b0f8b73cc"
+ },
+ "prereg_sha256_current": "be563cdfa038d76a216e14a0a251a94d1a894c25bf38b5b58f159b993d5d37ab",
+ "note": "prereg_sha256 field = sha used for the gate read (7a71c715); A9.4 added later is operational only",
+ "deviations": [
+  "webssl-mae1b-224_W partial (no bb/composed rows): X-NI and promotion not assessed",
+  "heatmap unchanged from v1.1 (b28900d4)",
+  "incident text for the CLUSTER-B controller and race-cancel bug read from CLUSTER-A logs by grep; files not hashed"
+ ]
+}

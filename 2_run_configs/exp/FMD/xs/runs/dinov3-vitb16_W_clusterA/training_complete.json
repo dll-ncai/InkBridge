@@ -1,0 +1,16 @@
+{
+ "status": "complete",
+ "final_step": 40000,
+ "completed_at": "2026-11-08T11:06:18Z",
+ "arm_id": "dinov3-vitb16_W",
+ "milestones": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "peak_rss_mb": 4637.82421875,
+ "cuda_max_alloc_gb": 5.199036928,
+ "lane": "clusterA",
+ "slurm": "24904693"
+}

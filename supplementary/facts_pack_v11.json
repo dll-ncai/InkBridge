@@ -1,0 +1,4613 @@
+{
+ "document": "facts_pack_v11 (InkBridge v11, track Analyses)",
+ "built_utc": "2026-11-15T13:55:45Z",
+ "conventions": "every fact = {value, source[]}; source = CLUSTER-A path with sha256 of the file as read (mtime_utc = file modification time), or a project artifact (version id, sha256), or a table of this pack (file, sha256); \"not available\" = no record found in the files read; internal names are kept (NOFM_W = WFT, PEINIT_W = WFT^PE, LUOC40 = SFT, COMP_p01 = FT1%, LUO = f_not_ur, M5 = f_all, SMA = routed adapter, SMR = replay single model)",
+ "L08_random_control": {
+  "job": {
+   "value": "CLUSTER-A Slurm 25168115 (rv10_analyses2) COMPLETED, start 2026-11-15T12:29:19, end 12:35:15 (cluster local time); outputs exp/RV10/tables/analyses_v1 (J11_random_pick_control.csv, J11_control_null_counts.csv)",
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/analyses_v1/SHA256SUMS.txt",
+     "sha256": "a1c791a6411a695e960471166f13708f0a4b0792c1a746ba8eca7c6f947b7ace",
+     "mtime_utc": "2026-11-15T11:35:15Z"
+    },
+    {
+     "path": "$U/exp/RV10/admin/facts_v11/sacct_facts_jobs_final.psv",
+     "sha256": "ea16707a6f9e36e46a17b6fc1a380066c4a1f848caaaf4d03b8bbe91224a975d",
+     "mtime_utc": "2026-11-15T13:50:05Z"
+    }
+   ]
+  },
+  "added_run": {
+   "value": "SPEC_RV10 addendum F1; CLUSTER-A Slurm 25169515 (facts_v11_v2), script facts_v11_analyses_v2.py sha256 d082053b00621036e169b67f3c1d77fc8c00b82bb56fd4863b113c1537311aaf; 2,000 redraws per cell. Job 25169472 (v1 script) sorted writer ids as strings, so its bootstrap stream differed from the stored one (bounds differed by up to 0.0055; point values identical); v2 is the version of record",
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/PROVENANCE_facts_v11_analyses.json",
+     "sha256": "eb445f1a33a796761abbe7a71509853a45a5a30dfa764bc92b812d3539dd1f98",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    },
+    {
+     "path": "$U/exp/RV10/code_facts_v11/SHA256SUMS_v2.txt",
+     "sha256": "b542c33f4839b61c941ccfe4bca49b289c75820e99ac43907ca239370ea1318a",
+     "mtime_utc": "2026-11-15T13:44:22Z"
+    }
+   ]
+  },
+  "stored_rule": {
+   "value": "control is null iff the 95 % writer-cluster interval of rnd3 - pool3 contains 0 for every one of 8 metrics (aiou, penup_f1_v2, strict_order_acc, direction_acc, kendall_tau, tau_cp, ldtw, stroke_count_err); no multiplicity adjustment; B=2000, default_rng(20261029); writer clusters on every set including german_onhw_all",
+   "source": [
+    {
+     "path": "$U/exp/RQF/code/rq3_v1/rq3_summarize.py",
+     "sha256": "9dc629dff27488250a31a8689e7b43942b95865e4b2a1da737c2dd34842dacba"
+    },
+    {
+     "path": "$U/exp/RQF/code/rq3_v1/loop_tables.py",
+     "sha256": "5f59016518803745f9a91cecac5d1ff1ddeee260899be45c2a5517f977302ca5"
+    },
+    {
+     "path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "mtime_utc": "2026-11-07T19:44:03Z",
+     "line_37": "R3a (other base models, Urdu; CONFIRMATORY). Bases: E0 ms8, joint M5 ms9, LUO-FT p10 ms10, NOFM_W FT, PEINIT_W FT. Each vs its own pooled 3-seed base on test_ouhdl. ORDER-WIN per base, Holm over 5 bases. Random-of-3 control must have all CIs containing 0."
+    }
+   ]
+  },
+  "pick_definition": {
+   "value": "rnd[k] = default_rng([20261104, SET_INDEX, TRAIN_INDEX]).integers(0, 3, n_units)[k]: one pick vector per set and training index, shared by all bases of that set (pick counts are identical across the 4 single-seed bases of every set), so the 24 non-Urdu cells are not 24 independent control draws",
+   "source": [
+    {
+     "path": "$U/exp/RQF/code/rq3_v1/sealed_apply.py",
+     "sha256": "524d61d8ed672aeb76f137e9ee1554620f9c3cd08ff84a15209d06e714df6f16"
+    },
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L08_pick_membership.csv",
+     "sha256": "3f7db77220b05eead3f2ae6217d425ec8d83e3092549c62444eed899efcfa71f",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    }
+   ]
+  },
+  "paper_protocol_difference": {
+   "value": "the Table 5/6 code (build_tables_a9.paired) resamples units on german_onhw_all (2 writer ids); the R3 selector/control read (loop_tables.boot_idx) resamples the 2 writer ids",
+   "source": [
+    {
+     "path": "$U/exp/FMD/xs/code/fmdx_monitor_v1/build_tables_a9.py",
+     "sha256": "df1d4ec5f31cd619f969372270d93e8990ec5208093953fdd4bcbfabb6ba2244",
+     "mtime_utc": "2026-11-07T15:24:35Z",
+     "lines": {
+      "8": "units enter). german_onhw_all (2 writers): unit-cluster CI (Route A convention).",
+      "74": "    cl = np.arange(len(j)) if sset == \"german_onhw_all\" else j.writer_id.to_numpy()"
+     }
+    }
+   ]
+  },
+  "reproduction": {
+   "value": {
+    "n_cell_metric_intervals": 232,
+    "max_abs_diff_delta": 1.0061396160665481e-16,
+    "max_abs_diff_ci_lo": 1.0408340855860843e-16,
+    "max_abs_diff_ci_hi": 1.0061396160665481e-16,
+    "cells_rule_flag_agree": 29,
+    "n_cells": 29
+   },
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L08_control_per_cell_metric.csv",
+     "sha256": "cab168c55f55ae10c5246afd6f0f09a9097ce4bf8b1ccde83fbda63fd5dc58a8",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    }
+   ]
+  },
+  "baseline_definition_check": {
+   "value": {
+    "question": "is pool3 the mean over the same 3 samples the random pick draws from?",
+    "answer": "yes",
+    "n_rnd3_files": 41,
+    "n_unit_rows": 74542,
+    "rows_equal_to_exactly_one_pool_sample": 74542,
+    "rows_equal_to_none": 0,
+    "rows_equal_to_several": 0,
+    "same_unit_set_in_all_files": true,
+    "pick_share_seed0_1_2": [
+     0.339393,
+     0.329412,
+     0.331196
+    ],
+    "expectation_of_redraw_delta": "six always-defined metrics: |mean redraw delta| <= 0.00074, |z| <= 2.71 over 29 cells; kendall_tau and direction_acc (undefined on some samples) are not exactly null: 4 cell-metric entries with |z| > 3, all base COMP_p01, largest |mean| 0.0044",
+    "stored_pick_vs_2000_redraws": {
+     "non_urdu_intervals": 192,
+     "non_urdu_randomization_p_below_0p05": 5,
+     "urdu_intervals": 40,
+     "urdu_randomization_p_below_0p05": 0,
+     "onhw_randomization_p_below_0p05": 0,
+     "onhw_stored_writer_intervals_excluding_0": 16,
+     "onhw_intervals": 32
+    },
+    "J11_rnd3_minus_seed0_note": "the J11 contrast rnd3 - seed0 is not a valid check for base COMP_p01: its spec keys are 00..22 (training index, sampling seed) and the filter int(key) in [0] keeps key 00 only (one of three training seeds); 23 of 30 COMP_p01 writer intervals of that contrast exclude 0"
+   },
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L08_pick_membership.csv",
+     "sha256": "3f7db77220b05eead3f2ae6217d425ec8d83e3092549c62444eed899efcfa71f",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    },
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L08_control_per_cell_metric.csv",
+     "sha256": "cab168c55f55ae10c5246afd6f0f09a9097ce4bf8b1ccde83fbda63fd5dc58a8",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    },
+    {
+     "path": "$U/exp/RV10/tables/analyses_v1/J11_random_pick_control.csv",
+     "sha256": "20f69f66103090faa3c8604daa2263f891c913524adbef2ab623ba4fe4e55a57"
+    }
+   ]
+  },
+  "calibration": {
+   "value": {
+    "by_set_group": [
+     {
+      "grp": "CASIA-zh/en, Tamil, IAM (52-63 writers)",
+      "n_cells": 16,
+      "stored_rule_fail": 5,
+      "expected_fail_writer8": 6.005,
+      "rate_writer8": 0.375,
+      "rate_writer4": 0.221,
+      "rate_unit8": 0.296,
+      "rate_unit4": 0.181,
+      "n_intervals": 128,
+      "stored_excl0": 6,
+      "redraw_rate_writer": 0.0651,
+      "redraw_rate_unit": 0.0482,
+      "max_abs_redraw_mean_delta": 0.0044,
+      "AA_n_intervals": 384,
+      "AA_writer_excl0": 32,
+      "AA_writer_rate": 0.0833,
+      "AA_unitnormal_excl0": 29,
+      "AA_unitnormal_rate": 0.0755
+     },
+     {
+      "grp": "OnHW (2 writer ids)",
+      "n_cells": 4,
+      "stored_rule_fail": 4,
+      "expected_fail_writer8": 3.981,
+      "rate_writer8": 0.995,
+      "rate_writer4": 0.936,
+      "rate_unit8": 0.332,
+      "rate_unit4": 0.191,
+      "n_intervals": 32,
+      "stored_excl0": 16,
+      "redraw_rate_writer": 0.5048,
+      "redraw_rate_unit": 0.0515,
+      "max_abs_redraw_mean_delta": 0.0037,
+      "AA_n_intervals": 96,
+      "AA_writer_excl0": 49,
+      "AA_writer_rate": 0.5104,
+      "AA_unitnormal_excl0": 5,
+      "AA_unitnormal_rate": 0.0521
+     },
+     {
+      "grp": "UNIPEN-de (7 writers)",
+      "n_cells": 4,
+      "stored_rule_fail": 2,
+      "expected_fail_writer8": 2.705,
+      "rate_writer8": 0.676,
+      "rate_writer4": 0.417,
+      "rate_unit8": 0.298,
+      "rate_unit4": 0.177,
+      "n_intervals": 32,
+      "stored_excl0": 2,
+      "redraw_rate_writer": 0.1458,
+      "redraw_rate_unit": 0.0502,
+      "max_abs_redraw_mean_delta": 0.0005,
+      "AA_n_intervals": 96,
+      "AA_writer_excl0": 18,
+      "AA_writer_rate": 0.1875,
+      "AA_unitnormal_excl0": 5,
+      "AA_unitnormal_rate": 0.0521
+     },
+     {
+      "grp": "Urdu (32 writers)",
+      "n_cells": 5,
+      "stored_rule_fail": 0,
+      "expected_fail_writer8": 1.954,
+      "rate_writer8": 0.391,
+      "rate_writer4": 0.228,
+      "rate_unit8": 0.303,
+      "rate_unit4": 0.174,
+      "n_intervals": 40,
+      "stored_excl0": 0,
+      "redraw_rate_writer": 0.0665,
+      "redraw_rate_unit": 0.0492,
+      "max_abs_redraw_mean_delta": 0.0003,
+      "AA_n_intervals": 120,
+      "AA_writer_excl0": 4,
+      "AA_writer_rate": 0.0333,
+      "AA_unitnormal_excl0": 2,
+      "AA_unitnormal_rate": 0.0167
+     }
+    ],
+    "reading_rule": "SPEC_RV10 D: an interval type is called anti-conservative if a null-by-construction contrast excludes zero in more than 5 % of intervals",
+    "columns": "rate_writer8 / rate_writer4 = share of 2,000 uniform redraws in which the stored rule fails with 8 metrics / with the 4 decision metrics; rate_unit8 / rate_unit4 = same with unit-level normal intervals (mean +- 1.96 se); redraw_rate_writer / redraw_rate_unit = per-interval exclusion rate; AA_* = sampling-seed pairs (0,1),(0,2),(1,2) of the same model; expected_fail_writer8 = sum of per-cell rates"
+   },
+   "source": [
+    {
+     "file": "L08_calibration_by_set_group_v11.csv",
+     "sha256": "ef725879ab4ebcc01da7c23f0544b5d9e1f10987f0b0728e7f14b7e959dd059f",
+     "note": "table in this facts pack"
+    },
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L08_control_per_cell.csv",
+     "sha256": "2493839d6721b8a0fe752ab93185566eda94fe95f06cecd79c3dc34b8e24fca3",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    },
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L08_AA_seed_pairs.csv",
+     "sha256": "56e5dc939657a0ed8114e6739e40432db5823cee03841c21acda5489ca722b9d",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    }
+   ]
+  },
+  "expected_vs_observed_nonnull": {
+   "value": {
+    "non_urdu_expected_failing_cells_under_correct_pick": 12.691,
+    "non_urdu_observed": 11,
+    "urdu_expected": 1.9535,
+    "urdu_observed": 0,
+    "stored_intervals_excluding_0_non_urdu": "24 of 192 (OnHW 16 of 32; other five sets 8 of 160)"
+   },
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L08_control_per_cell.csv",
+     "sha256": "2493839d6721b8a0fe752ab93185566eda94fe95f06cecd79c3dc34b8e24fca3",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    },
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L08_control_per_cell_metric.csv",
+     "sha256": "cab168c55f55ae10c5246afd6f0f09a9097ce4bf8b1ccde83fbda63fd5dc58a8",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    }
+   ]
+  },
+  "cause": {
+   "value": {
+    "found": true,
+    "statement": "The non-null control is produced by the rule, not by the baseline. (1) The rule asks 8 unadjusted 95 % intervals per cell to contain 0; a correctly drawn random pick fails it in 37.5-39.1 % of draws on sets with 32-63 writers. (2) german_onhw_all has 2 writer ids, so the writer-cluster percentile interval spans only the two writer means and excludes 0 in 50.5 % of intervals under a correct pick (rule fails in 99.5 % of draws; 4 of 4 stored cells fail). (3) german_unipen_de_test has 7 writers (rule fails in 67.6 % of draws). Expected failing non-Urdu cells under a correct pick: 12.7 of 24; observed 11."
+   },
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L08_control_per_cell.csv",
+     "sha256": "2493839d6721b8a0fe752ab93185566eda94fe95f06cecd79c3dc34b8e24fca3",
+     "mtime_utc": "2026-11-15T13:48:46Z"
+    },
+    {
+     "file": "L08_calibration_by_set_group_v11.csv",
+     "sha256": "ef725879ab4ebcc01da7c23f0544b5d9e1f10987f0b0728e7f14b7e959dd059f",
+     "note": "table in this facts pack"
+    }
+   ]
+  },
+  "recount": {
+   "value": {
+    "counts": [
+     {
+      "n_cells": 24,
+      "gain_order_win": 16,
+      "gain_bound_based": 7,
+      "control_null_stored": 13,
+      "holm_pass": 21,
+      "full_stored": 9,
+      "full_bound_stored": 1,
+      "full_null_expectation_control": 16,
+      "full_bound_null_expectation_control": 7,
+      "randomization_control_pass_bonf8": 23,
+      "full_randomization_control_bonf8": 15,
+      "cells": "six other sets (24 cells)"
+     },
+     {
+      "n_cells": 5,
+      "gain_order_win": 5,
+      "gain_bound_based": 4,
+      "control_null_stored": 5,
+      "holm_pass": 5,
+      "full_stored": 5,
+      "full_bound_stored": 4,
+      "full_null_expectation_control": 5,
+      "full_bound_null_expectation_control": 4,
+      "randomization_control_pass_bonf8": 5,
+      "full_randomization_control_bonf8": 5,
+      "cells": "Urdu (5 bases)"
+     }
+    ],
+    "definitions": {
+     "gain_order_win": "stored ORDER-WIN flag",
+     "gain_bound_based": "J10 order_gain_bound (a lower bound beyond the margin, no order lower bound below -margin, AIoU lower bound above -0.01035)",
+     "full_stored": "ORDER-WIN and Holm p < 0.05 and stored control null",
+     "full_null_expectation_control": "control replaced by its expectation over all picks, which equals pool3 for always-defined metrics (control delta 0 by construction): ORDER-WIN and Holm p < 0.05",
+     "full_randomization_control_bonf8": "control = randomization test of the stored pick against 2,000 redraws, Bonferroni over 8 metrics: ORDER-WIN and Holm and control pass",
+     "full_bound_null_expectation_control": "bound-based gain and Holm p < 0.05",
+     "full_bound_stored": "J10 full_bound: bound-based gain and stored control null"
+    },
+    "failing_randomization_cell": [
+     {
+      "base": "COMP_p01",
+      "set": "test_casia_en",
+      "min_randomization_p": 0.0044977511244377,
+      "stored_metrics_excluding_0": "kendall_tau;tau_cp"
+     }
+    ],
+    "gain_cells_by_set_group": {
+     "CASIA-zh/en, Tamil, IAM (52-63 writers)": 11,
+     "OnHW (2 writer ids)": 2,
+     "UNIPEN-de (7 writers)": 3,
+     "Urdu (32 writers)": 5
+    },
+    "bound_cells_by_set_group": {
+     "CASIA-zh/en, Tamil, IAM (52-63 writers)": 4,
+     "OnHW (2 writer ids)": 2,
+     "UNIPEN-de (7 writers)": 1,
+     "Urdu (32 writers)": 4
+    },
+    "caveat": "the gain intervals (rep3 - pool3) of german_onhw_all cells are also writer-cluster intervals over 2 writer ids; gain and bound counts are the stored ones and were not recomputed with unit resampling"
+   },
+   "source": [
+    {
+     "file": "L08_recount_v11.csv",
+     "sha256": "77bba3c63a7493dcff9f96f2aae9c2df048f80bbf7ae3d034a38adece7456ee7",
+     "note": "table in this facts pack"
+    },
+    {
+     "file": "L08_control_cells_v11.csv",
+     "sha256": "cc253ff0856261de789b55ecd8a62dd66ea11c4c7373806e5d6461a608120a8c",
+     "note": "table in this facts pack"
+    },
+    {
+     "path": "$U/exp/RV10/tables/analyses_v1/J10_bound_recount_cells.csv",
+     "sha256": "2a854707862db04104dd2a508575695851622001e2fd4b1882dedee73172ddae"
+    }
+   ]
+  },
+  "per_cell_control": {
+   "value": [
+    {
+     "base": "COMP_p01",
+     "set": "german_onhw_all",
+     "n_units": 5925,
+     "n_writer_ids": 2,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "penup_f1_v2;direction_acc;tau_cp;stroke_count_err",
+     "redraw_false_fail_rate_rule_8_metrics": 0.997,
+     "min_randomization_p": 0.05947,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      0.001644,
+      0.00104,
+      0.002212
+     ],
+     "ctrl_strict_order_acc": [
+      -0.000825,
+      -0.002221,
+      0.000657
+     ],
+     "ctrl_direction_acc": [
+      -0.002531,
+      -0.005314,
+      -0.000194
+     ],
+     "ctrl_aiou": [
+      -0.000142,
+      -0.000285,
+      1e-05
+     ],
+     "ctrl_kendall_tau": [
+      0.00587,
+      -0.00349,
+      0.018938
+     ]
+    },
+    {
+     "base": "COMP_p01",
+     "set": "german_unipen_de_test",
+     "n_units": 827,
+     "n_writer_ids": 7,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.656,
+     "min_randomization_p": 0.182409,
+     "order_win": false,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": false,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.001642,
+      -0.010265,
+      0.00514
+     ],
+     "ctrl_strict_order_acc": [
+      -0.004434,
+      -0.009382,
+      0.003329
+     ],
+     "ctrl_direction_acc": [
+      0.000854,
+      -0.012721,
+      0.009958
+     ],
+     "ctrl_aiou": [
+      0.000418,
+      -0.000824,
+      0.00283
+     ],
+     "ctrl_kendall_tau": [
+      -0.033647,
+      -0.063135,
+      0.057333
+     ]
+    },
+    {
+     "base": "COMP_p01",
+     "set": "test_casia_en",
+     "n_units": 500,
+     "n_writer_ids": 60,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "kendall_tau;tau_cp",
+     "redraw_false_fail_rate_rule_8_metrics": 0.333,
+     "min_randomization_p": 0.004498,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      0.007387,
+      -0.003548,
+      0.018074
+     ],
+     "ctrl_strict_order_acc": [
+      -0.006667,
+      -0.018751,
+      0.005536
+     ],
+     "ctrl_direction_acc": [
+      0.007216,
+      -0.003648,
+      0.017878
+     ],
+     "ctrl_aiou": [
+      -8.5e-05,
+      -0.00275,
+      0.002478
+     ],
+     "ctrl_kendall_tau": [
+      -0.043969,
+      -0.088847,
+      -0.003504
+     ]
+    },
+    {
+     "base": "COMP_p01",
+     "set": "test_casia_zh",
+     "n_units": 500,
+     "n_writer_ids": 60,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.373,
+     "min_randomization_p": 0.162919,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      0.003215,
+      -0.004205,
+      0.010398
+     ],
+     "ctrl_strict_order_acc": [
+      -0.004,
+      -0.009295,
+      0.001198
+     ],
+     "ctrl_direction_acc": [
+      0.003253,
+      -0.004727,
+      0.011027
+     ],
+     "ctrl_aiou": [
+      0.00064,
+      -0.001174,
+      0.002422
+     ],
+     "ctrl_kendall_tau": [
+      0.004844,
+      -0.0189,
+      0.02796
+     ]
+    },
+    {
+     "base": "COMP_p01",
+     "set": "test_hpl_tamil",
+     "n_units": 500,
+     "n_writer_ids": 52,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "penup_f1_v2",
+     "redraw_false_fail_rate_rule_8_metrics": 0.368,
+     "min_randomization_p": 0.017991,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      -0.013466,
+      -0.022468,
+      -0.004494
+     ],
+     "ctrl_strict_order_acc": [
+      0.003111,
+      -0.009312,
+      0.017218
+     ],
+     "ctrl_direction_acc": [
+      -0.009577,
+      -0.018811,
+      0.000198
+     ],
+     "ctrl_aiou": [
+      -0.000871,
+      -0.003676,
+      0.00197
+     ],
+     "ctrl_kendall_tau": [
+      0.022942,
+      -0.008838,
+      0.059869
+     ]
+    },
+    {
+     "base": "COMP_p01",
+     "set": "test_iam500",
+     "n_units": 500,
+     "n_writer_ids": 63,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.3625,
+     "min_randomization_p": 0.292354,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      0.000466,
+      -0.010395,
+      0.011275
+     ],
+     "ctrl_strict_order_acc": [
+      0.003778,
+      -0.008391,
+      0.016251
+     ],
+     "ctrl_direction_acc": [
+      -0.005633,
+      -0.017787,
+      0.007395
+     ],
+     "ctrl_aiou": [
+      -0.000753,
+      -0.003604,
+      0.001998
+     ],
+     "ctrl_kendall_tau": [
+      -0.003322,
+      -0.044653,
+      0.038114
+     ]
+    },
+    {
+     "base": "E0",
+     "set": "test_ouhdl",
+     "n_units": 4406,
+     "n_writer_ids": 32,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.4115,
+     "min_randomization_p": 0.073963,
+     "order_win": true,
+     "p_holm": 0.0075,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.000475,
+      -0.003799,
+      0.003036
+     ],
+     "ctrl_strict_order_acc": [
+      0.000757,
+      -0.003047,
+      0.004559
+     ],
+     "ctrl_direction_acc": [
+      0.001024,
+      -0.001064,
+      0.003075
+     ],
+     "ctrl_aiou": [
+      0.000131,
+      -0.000525,
+      0.000767
+     ],
+     "ctrl_kendall_tau": [
+      -7.6e-05,
+      -0.004445,
+      0.004345
+     ]
+    },
+    {
+     "base": "LUO_ms6",
+     "set": "german_onhw_all",
+     "n_units": 5925,
+     "n_writer_ids": 2,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "penup_f1_v2;strict_order_acc;direction_acc;tau_cp;stroke_count_err",
+     "redraw_false_fail_rate_rule_8_metrics": 0.996,
+     "min_randomization_p": 0.053973,
+     "order_win": false,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": false,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      0.001666,
+      0.000557,
+      0.002845
+     ],
+     "ctrl_strict_order_acc": [
+      0.0009,
+      0.000232,
+      0.00153
+     ],
+     "ctrl_direction_acc": [
+      -0.001693,
+      -0.002511,
+      -0.000735
+     ],
+     "ctrl_aiou": [
+      -0.000354,
+      -0.000813,
+      7.9e-05
+     ],
+     "ctrl_kendall_tau": [
+      -0.001354,
+      -0.003048,
+      3.4e-05
+     ]
+    },
+    {
+     "base": "LUO_ms6",
+     "set": "german_unipen_de_test",
+     "n_units": 827,
+     "n_writer_ids": 7,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.657,
+     "min_randomization_p": 0.389305,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -4.4e-05,
+      -0.011992,
+      0.024475
+     ],
+     "ctrl_strict_order_acc": [
+      0.00524,
+      -0.011161,
+      0.021533
+     ],
+     "ctrl_direction_acc": [
+      -0.00104,
+      -0.013659,
+      0.012775
+     ],
+     "ctrl_aiou": [
+      -0.000134,
+      -0.002108,
+      0.002755
+     ],
+     "ctrl_kendall_tau": [
+      -0.008683,
+      -0.033645,
+      0.0
+     ]
+    },
+    {
+     "base": "LUO_ms6",
+     "set": "test_casia_en",
+     "n_units": 500,
+     "n_writer_ids": 60,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.349,
+     "min_randomization_p": 0.283358,
+     "order_win": false,
+     "p_holm": 0.759,
+     "full_stored": false,
+     "full_null_expectation_control": false,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      0.001606,
+      -0.007597,
+      0.01029
+     ],
+     "ctrl_strict_order_acc": [
+      -0.000667,
+      -0.009768,
+      0.009133
+     ],
+     "ctrl_direction_acc": [
+      -0.0029,
+      -0.008273,
+      0.001878
+     ],
+     "ctrl_aiou": [
+      -0.000787,
+      -0.002794,
+      0.001182
+     ],
+     "ctrl_kendall_tau": [
+      0.005682,
+      -0.011696,
+      0.021858
+     ]
+    },
+    {
+     "base": "LUO_ms6",
+     "set": "test_casia_zh",
+     "n_units": 500,
+     "n_writer_ids": 60,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.3915,
+     "min_randomization_p": 0.082459,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      0.000734,
+      -0.008596,
+      0.010319
+     ],
+     "ctrl_strict_order_acc": [
+      0.014,
+      -0.003361,
+      0.031901
+     ],
+     "ctrl_direction_acc": [
+      -0.002919,
+      -0.008286,
+      0.002609
+     ],
+     "ctrl_aiou": [
+      7.6e-05,
+      -0.002186,
+      0.002177
+     ],
+     "ctrl_kendall_tau": [
+      0.000629,
+      -0.006662,
+      0.007196
+     ]
+    },
+    {
+     "base": "LUO_ms6",
+     "set": "test_hpl_tamil",
+     "n_units": 500,
+     "n_writer_ids": 52,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "strict_order_acc",
+     "redraw_false_fail_rate_rule_8_metrics": 0.352,
+     "min_randomization_p": 0.021489,
+     "order_win": false,
+     "p_holm": 0.114,
+     "full_stored": false,
+     "full_null_expectation_control": false,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.00076,
+      -0.010992,
+      0.008948
+     ],
+     "ctrl_strict_order_acc": [
+      -0.010667,
+      -0.020066,
+      -0.001363
+     ],
+     "ctrl_direction_acc": [
+      0.000556,
+      -0.006916,
+      0.007221
+     ],
+     "ctrl_aiou": [
+      0.000371,
+      -0.001326,
+      0.002394
+     ],
+     "ctrl_kendall_tau": [
+      0.002096,
+      -0.011885,
+      0.01411
+     ]
+    },
+    {
+     "base": "LUO_ms6",
+     "set": "test_iam500",
+     "n_units": 500,
+     "n_writer_ids": 63,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.399,
+     "min_randomization_p": 0.118941,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.0051,
+      -0.016648,
+      0.005248
+     ],
+     "ctrl_strict_order_acc": [
+      0.003333,
+      -0.006537,
+      0.012523
+     ],
+     "ctrl_direction_acc": [
+      0.00111,
+      -0.004189,
+      0.006725
+     ],
+     "ctrl_aiou": [
+      0.000829,
+      -0.00096,
+      0.002451
+     ],
+     "ctrl_kendall_tau": [
+      0.010433,
+      -0.006537,
+      0.028574
+     ]
+    },
+    {
+     "base": "LUOft_p10",
+     "set": "test_ouhdl",
+     "n_units": 4406,
+     "n_writer_ids": 32,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.3935,
+     "min_randomization_p": 0.489255,
+     "order_win": true,
+     "p_holm": 0.0075,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      -0.000618,
+      -0.004849,
+      0.003558
+     ],
+     "ctrl_strict_order_acc": [
+      -0.00121,
+      -0.004723,
+      0.002164
+     ],
+     "ctrl_direction_acc": [
+      0.000563,
+      -0.001488,
+      0.002689
+     ],
+     "ctrl_aiou": [
+      0.000342,
+      -0.000622,
+      0.001378
+     ],
+     "ctrl_kendall_tau": [
+      0.001531,
+      -0.004314,
+      0.007703
+     ]
+    },
+    {
+     "base": "M5",
+     "set": "german_onhw_all",
+     "n_units": 5925,
+     "n_writer_ids": 2,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "penup_f1_v2;strict_order_acc;direction_acc;ldtw;stroke_count_err",
+     "redraw_false_fail_rate_rule_8_metrics": 0.994,
+     "min_randomization_p": 0.196902,
+     "order_win": false,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": false,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.0023,
+      -0.003484,
+      -0.001043
+     ],
+     "ctrl_strict_order_acc": [
+      0.001069,
+      0.000328,
+      0.001856
+     ],
+     "ctrl_direction_acc": [
+      0.000901,
+      0.000471,
+      0.001263
+     ],
+     "ctrl_aiou": [
+      -2.9e-05,
+      -0.000206,
+      0.000158
+     ],
+     "ctrl_kendall_tau": [
+      0.001095,
+      -0.008987,
+      0.009123
+     ]
+    },
+    {
+     "base": "M5",
+     "set": "german_unipen_de_test",
+     "n_units": 827,
+     "n_writer_ids": 7,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "tau_cp",
+     "redraw_false_fail_rate_rule_8_metrics": 0.718,
+     "min_randomization_p": 0.202399,
+     "order_win": true,
+     "p_holm": 0.048,
+     "full_stored": false,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.000742,
+      -0.005778,
+      0.010383
+     ],
+     "ctrl_strict_order_acc": [
+      0.004434,
+      -0.005944,
+      0.018717
+     ],
+     "ctrl_direction_acc": [
+      0.001616,
+      -0.004594,
+      0.00548
+     ],
+     "ctrl_aiou": [
+      -0.000401,
+      -0.001824,
+      0.001091
+     ],
+     "ctrl_kendall_tau": [
+      0.01104,
+      -0.005031,
+      0.033803
+     ]
+    },
+    {
+     "base": "M5",
+     "set": "test_casia_en",
+     "n_units": 500,
+     "n_writer_ids": 60,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.383,
+     "min_randomization_p": 0.01949,
+     "order_win": false,
+     "p_holm": 0.048,
+     "full_stored": false,
+     "full_null_expectation_control": false,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.002989,
+      -0.014145,
+      0.007911
+     ],
+     "ctrl_strict_order_acc": [
+      -0.005333,
+      -0.016508,
+      0.005793
+     ],
+     "ctrl_direction_acc": [
+      -0.001952,
+      -0.007962,
+      0.00361
+     ],
+     "ctrl_aiou": [
+      -0.000196,
+      -0.001919,
+      0.00144
+     ],
+     "ctrl_kendall_tau": [
+      -0.014049,
+      -0.044701,
+      0.016071
+     ]
+    },
+    {
+     "base": "M5",
+     "set": "test_casia_zh",
+     "n_units": 500,
+     "n_writer_ids": 60,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.384,
+     "min_randomization_p": 0.169915,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      0.005777,
+      -0.004259,
+      0.01545
+     ],
+     "ctrl_strict_order_acc": [
+      0.000667,
+      -0.015334,
+      0.015303
+     ],
+     "ctrl_direction_acc": [
+      -0.002604,
+      -0.008274,
+      0.004131
+     ],
+     "ctrl_aiou": [
+      0.000346,
+      -0.001695,
+      0.002339
+     ],
+     "ctrl_kendall_tau": [
+      -0.00359,
+      -0.009621,
+      0.001757
+     ]
+    },
+    {
+     "base": "M5",
+     "set": "test_hpl_tamil",
+     "n_units": 500,
+     "n_writer_ids": 52,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "stroke_count_err",
+     "redraw_false_fail_rate_rule_8_metrics": 0.4375,
+     "min_randomization_p": 0.037481,
+     "order_win": false,
+     "p_holm": 0.063,
+     "full_stored": false,
+     "full_null_expectation_control": false,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      0.008668,
+      -0.000616,
+      0.01701
+     ],
+     "ctrl_strict_order_acc": [
+      0.004,
+      -0.002931,
+      0.011191
+     ],
+     "ctrl_direction_acc": [
+      0.001111,
+      -0.002237,
+      0.004873
+     ],
+     "ctrl_aiou": [
+      0.000994,
+      -0.000279,
+      0.002334
+     ],
+     "ctrl_kendall_tau": [
+      -0.002029,
+      -0.014054,
+      0.007845
+     ]
+    },
+    {
+     "base": "M5",
+     "set": "test_iam500",
+     "n_units": 500,
+     "n_writer_ids": 63,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.3645,
+     "min_randomization_p": 0.236382,
+     "order_win": true,
+     "p_holm": 0.048,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.004773,
+      -0.013687,
+      0.003839
+     ],
+     "ctrl_strict_order_acc": [
+      0.000667,
+      -0.00855,
+      0.0104
+     ],
+     "ctrl_direction_acc": [
+      -0.001375,
+      -0.006693,
+      0.003551
+     ],
+     "ctrl_aiou": [
+      0.000946,
+      -0.000553,
+      0.002409
+     ],
+     "ctrl_kendall_tau": [
+      -0.006783,
+      -0.02631,
+      0.01078
+     ]
+    },
+    {
+     "base": "M5",
+     "set": "test_ouhdl",
+     "n_units": 4406,
+     "n_writer_ids": 32,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.366,
+     "min_randomization_p": 0.05947,
+     "order_win": true,
+     "p_holm": 0.0075,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      0.002053,
+      -0.001162,
+      0.005234
+     ],
+     "ctrl_strict_order_acc": [
+      0.004237,
+      -0.000219,
+      0.008806
+     ],
+     "ctrl_direction_acc": [
+      -0.000887,
+      -0.003006,
+      0.001429
+     ],
+     "ctrl_aiou": [
+      0.000175,
+      -0.000458,
+      0.000853
+     ],
+     "ctrl_kendall_tau": [
+      -0.002471,
+      -0.008367,
+      0.003252
+     ]
+    },
+    {
+     "base": "NOFM_W_FT",
+     "set": "test_ouhdl",
+     "n_units": 4406,
+     "n_writer_ids": 32,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.396,
+     "min_randomization_p": 0.112444,
+     "order_win": true,
+     "p_holm": 0.0075,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      0.001423,
+      -0.003744,
+      0.006489
+     ],
+     "ctrl_strict_order_acc": [
+      -0.003329,
+      -0.00905,
+      0.002825
+     ],
+     "ctrl_direction_acc": [
+      -0.002387,
+      -0.005614,
+      0.001222
+     ],
+     "ctrl_aiou": [
+      -0.000247,
+      -0.001322,
+      0.000777
+     ],
+     "ctrl_kendall_tau": [
+      0.003002,
+      -0.005872,
+      0.011708
+     ]
+    },
+    {
+     "base": "NOFM_W_comp",
+     "set": "german_onhw_all",
+     "n_units": 5925,
+     "n_writer_ids": 2,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "direction_acc;tau_cp",
+     "redraw_false_fail_rate_rule_8_metrics": 0.994,
+     "min_randomization_p": 0.313843,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      -0.00073,
+      -0.002855,
+      0.001525
+     ],
+     "ctrl_strict_order_acc": [
+      0.000506,
+      -0.002185,
+      0.003363
+     ],
+     "ctrl_direction_acc": [
+      0.001151,
+      0.000933,
+      0.001406
+     ],
+     "ctrl_aiou": [
+      -0.000243,
+      -0.000642,
+      0.00018
+     ],
+     "ctrl_kendall_tau": [
+      -0.002602,
+      -0.005436,
+      0.000546
+     ]
+    },
+    {
+     "base": "NOFM_W_comp",
+     "set": "german_unipen_de_test",
+     "n_units": 827,
+     "n_writer_ids": 7,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "tau_cp",
+     "redraw_false_fail_rate_rule_8_metrics": 0.674,
+     "min_randomization_p": 0.162919,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      0.00216,
+      -0.008053,
+      0.008649
+     ],
+     "ctrl_strict_order_acc": [
+      0.00524,
+      -0.002173,
+      0.01636
+     ],
+     "ctrl_direction_acc": [
+      -0.003533,
+      -0.013594,
+      0.000218
+     ],
+     "ctrl_aiou": [
+      -0.00011,
+      -0.000999,
+      0.001115
+     ],
+     "ctrl_kendall_tau": [
+      0.007984,
+      -0.002354,
+      0.040123
+     ]
+    },
+    {
+     "base": "NOFM_W_comp",
+     "set": "test_casia_en",
+     "n_units": 500,
+     "n_writer_ids": 60,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.366,
+     "min_randomization_p": 0.168416,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      0.002393,
+      -0.009688,
+      0.013906
+     ],
+     "ctrl_strict_order_acc": [
+      -0.001333,
+      -0.01314,
+      0.011156
+     ],
+     "ctrl_direction_acc": [
+      0.003849,
+      -0.002195,
+      0.010081
+     ],
+     "ctrl_aiou": [
+      0.000213,
+      -0.001231,
+      0.001586
+     ],
+     "ctrl_kendall_tau": [
+      -0.015238,
+      -0.052784,
+      0.022896
+     ]
+    },
+    {
+     "base": "NOFM_W_comp",
+     "set": "test_casia_zh",
+     "n_units": 500,
+     "n_writer_ids": 60,
+     "stored_control_null": false,
+     "stored_metrics_excluding_0": "strict_order_acc",
+     "redraw_false_fail_rate_rule_8_metrics": 0.381,
+     "min_randomization_p": 0.067966,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      -0.001969,
+      -0.011887,
+      0.00872
+     ],
+     "ctrl_strict_order_acc": [
+      0.020667,
+      0.00125,
+      0.041031
+     ],
+     "ctrl_direction_acc": [
+      -0.001934,
+      -0.006778,
+      0.002951
+     ],
+     "ctrl_aiou": [
+      0.000315,
+      -0.002026,
+      0.002556
+     ],
+     "ctrl_kendall_tau": [
+      -0.002006,
+      -0.008715,
+      0.003867
+     ]
+    },
+    {
+     "base": "NOFM_W_comp",
+     "set": "test_hpl_tamil",
+     "n_units": 500,
+     "n_writer_ids": 52,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.3905,
+     "min_randomization_p": 0.517241,
+     "order_win": false,
+     "p_holm": 0.009,
+     "full_stored": false,
+     "full_null_expectation_control": false,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.000614,
+      -0.009663,
+      0.008142
+     ],
+     "ctrl_strict_order_acc": [
+      0.0,
+      -0.008447,
+      0.008042
+     ],
+     "ctrl_direction_acc": [
+      -0.000333,
+      -0.00476,
+      0.003906
+     ],
+     "ctrl_aiou": [
+      0.000466,
+      -0.001083,
+      0.002178
+     ],
+     "ctrl_kendall_tau": [
+      0.003601,
+      -0.00846,
+      0.015616
+     ]
+    },
+    {
+     "base": "NOFM_W_comp",
+     "set": "test_iam500",
+     "n_units": 500,
+     "n_writer_ids": 63,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.3705,
+     "min_randomization_p": 0.258371,
+     "order_win": true,
+     "p_holm": 0.009,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": false,
+     "ctrl_penup_f1_v2": [
+      -0.000599,
+      -0.011905,
+      0.009508
+     ],
+     "ctrl_strict_order_acc": [
+      -0.004667,
+      -0.01649,
+      0.006074
+     ],
+     "ctrl_direction_acc": [
+      -0.001568,
+      -0.009126,
+      0.00616
+     ],
+     "ctrl_aiou": [
+      -0.000216,
+      -0.002123,
+      0.001732
+     ],
+     "ctrl_kendall_tau": [
+      -0.013698,
+      -0.036804,
+      0.006174
+     ]
+    },
+    {
+     "base": "PEINIT_W_FT",
+     "set": "test_ouhdl",
+     "n_units": 4406,
+     "n_writer_ids": 32,
+     "stored_control_null": true,
+     "stored_metrics_excluding_0": "",
+     "redraw_false_fail_rate_rule_8_metrics": 0.3865,
+     "min_randomization_p": 0.147426,
+     "order_win": true,
+     "p_holm": 0.0075,
+     "full_stored": true,
+     "full_null_expectation_control": true,
+     "order_gain_bound": true,
+     "ctrl_penup_f1_v2": [
+      -0.000683,
+      -0.00326,
+      0.001801
+     ],
+     "ctrl_strict_order_acc": [
+      0.002194,
+      -0.003114,
+      0.007517
+     ],
+     "ctrl_direction_acc": [
+      0.00014,
+      -0.002646,
+      0.003193
+     ],
+     "ctrl_aiou": [
+      -0.000689,
+      -0.001528,
+      0.000186
+     ],
+     "ctrl_kendall_tau": [
+      0.001687,
+      -0.007448,
+      0.010802
+     ]
+    }
+   ],
+   "note": "ctrl_<metric> = [delta, lo, hi] of rnd3 - pool3 as stored (writer-cluster 95 %); all 8 metrics, with unit-level normal intervals and redraw rates, are in L08_control_per_cell_metric_v11.csv",
+   "source": [
+    {
+     "file": "L08_control_cells_v11.csv",
+     "sha256": "cc253ff0856261de789b55ecd8a62dd66ea11c4c7373806e5d6461a608120a8c",
+     "note": "table in this facts pack"
+    },
+    {
+     "file": "L08_control_per_cell_metric_v11.csv",
+     "sha256": "2d650f50e371a4ca345a0b1503b4c62ce4554ecbd726db011b9a67c4b0b77405",
+     "note": "table in this facts pack"
+    }
+   ]
+  }
+ },
+ "L14_paired_contrasts": {
+  "protocol": {
+   "value": "test_ouhdl, 4,406 units; per unit: mean over sampling seeds 0-2, then mean over training seeds; paired difference; 95 % percentile interval of B=2000 writer-cluster bootstrap, default_rng(20261103) (build_tables_a9.paired, loaders of build_tables_rqf.py unchanged); [delta, lo, hi, n_units_defined]; seed-level: t interval (df = seeds - 1) over same-seed-label deltas, Welch interval from per-seed arm means",
+   "source": [
+    {
+     "path": "$U/exp/FMD/xs/code/fmdx_monitor_v1/build_tables_a9.py",
+     "sha256": "df1d4ec5f31cd619f969372270d93e8990ec5208093953fdd4bcbfabb6ba2244",
+     "mtime_utc": "2026-11-07T15:24:35Z"
+    },
+    {
+     "path": "$U/exp/RQF/code/rqf_v1/build_tables_rqf.py",
+     "sha256": "449a1b483796f8eec2249ccd10c902f5356d45e2072d956c68aca997d930205c"
+    }
+   ]
+  },
+  "WFTPE_minus_WFT": {
+   "value": {
+    "p01": {
+     "pooled_3_training_seeds": {
+      "aiou": [
+       0.012562,
+       0.011598,
+       0.013577,
+       4406
+      ],
+      "penup_f1_v2": [
+       0.038414,
+       0.033928,
+       0.043044,
+       4406
+      ],
+      "strict_order_acc": [
+       0.022469,
+       0.017514,
+       0.027772,
+       4406
+      ],
+      "direction_acc": [
+       0.001414,
+       -0.002404,
+       0.005094,
+       4391
+      ],
+      "kendall_tau": [
+       -0.014677,
+       -0.026065,
+       -0.002405,
+       2471
+      ]
+     },
+     "per_training_seed": {
+      "20261034": {
+       "aiou": [
+        0.011181,
+        0.009916,
+        0.012504,
+        4406
+       ],
+       "penup_f1_v2": [
+        0.037827,
+        0.032181,
+        0.04372,
+        4406
+       ],
+       "strict_order_acc": [
+        0.022167,
+        0.015865,
+        0.02924,
+        4406
+       ],
+       "direction_acc": [
+        0.00335,
+        -0.001958,
+        0.008304,
+        4400
+       ],
+       "kendall_tau": [
+        -0.009352,
+        -0.021763,
+        0.003118,
+        2546
+       ]
+      },
+      "20261035": {
+       "aiou": [
+        0.014671,
+        0.013611,
+        0.015708,
+        4406
+       ],
+       "penup_f1_v2": [
+        0.041117,
+        0.03585,
+        0.046844,
+        4406
+       ],
+       "strict_order_acc": [
+        0.024285,
+        0.018847,
+        0.029933,
+        4406
+       ],
+       "direction_acc": [
+        -0.001793,
+        -0.005396,
+        0.0017,
+        4396
+       ],
+       "kendall_tau": [
+        -0.023828,
+        -0.040883,
+        -0.005824,
+        2539
+       ]
+      },
+      "20261036": {
+       "aiou": [
+        0.011835,
+        0.010607,
+        0.013131,
+        4406
+       ],
+       "penup_f1_v2": [
+        0.036298,
+        0.03087,
+        0.042052,
+        4406
+       ],
+       "strict_order_acc": [
+        0.020956,
+        0.014712,
+        0.027461,
+        4406
+       ],
+       "direction_acc": [
+        0.002658,
+        -0.001699,
+        0.006729,
+        4397
+       ],
+       "kendall_tau": [
+        -0.008484,
+        -0.023429,
+        0.006902,
+        2559
+       ]
+      }
+     },
+     "seed_level": {
+      "aiou": {
+       "mean_of_seed_deltas": 0.012562,
+       "sd": 0.001855,
+       "t_lo": 0.007953,
+       "t_hi": 0.017171,
+       "df": 2.0,
+       "welch_lo": 0.007401,
+       "welch_hi": 0.017724,
+       "welch_df": 2.091115,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      },
+      "penup_f1_v2": {
+       "mean_of_seed_deltas": 0.038414,
+       "sd": 0.002462,
+       "t_lo": 0.032298,
+       "t_hi": 0.044531,
+       "df": 2.0,
+       "welch_lo": 0.033204,
+       "welch_hi": 0.043624,
+       "welch_df": 2.210801,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      },
+      "strict_order_acc": {
+       "mean_of_seed_deltas": 0.022469,
+       "sd": 0.001685,
+       "t_lo": 0.018284,
+       "t_hi": 0.026655,
+       "df": 2.0,
+       "welch_lo": 0.017009,
+       "welch_hi": 0.02793,
+       "welch_df": 2.868316,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      },
+      "direction_acc": {
+       "mean_of_seed_deltas": 0.001405,
+       "sd": 0.002791,
+       "t_lo": -0.005529,
+       "t_hi": 0.008339,
+       "df": 2.0,
+       "welch_lo": -0.005943,
+       "welch_hi": 0.008753,
+       "welch_df": 2.313081,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      },
+      "kendall_tau": {
+       "mean_of_seed_deltas": -0.013888,
+       "sd": 0.008619,
+       "t_lo": -0.0353,
+       "t_hi": 0.007523,
+       "df": 2.0,
+       "welch_lo": -0.038907,
+       "welch_hi": 0.01113,
+       "welch_df": 2.879426,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      }
+     }
+    },
+    "p10": {
+     "pooled_3_training_seeds": {
+      "aiou": [
+       0.007735,
+       0.007011,
+       0.00843,
+       4406
+      ],
+      "penup_f1_v2": [
+       0.018139,
+       0.01445,
+       0.021361,
+       4406
+      ],
+      "strict_order_acc": [
+       0.008322,
+       0.002951,
+       0.013908,
+       4406
+      ],
+      "direction_acc": [
+       0.001746,
+       -0.003054,
+       0.006497,
+       4401
+      ],
+      "kendall_tau": [
+       -0.010054,
+       -0.018148,
+       -0.002568,
+       2610
+      ]
+     },
+     "per_training_seed": {
+      "20261034": {
+       "aiou": [
+        0.006996,
+        0.006021,
+        0.007912,
+        4406
+       ],
+       "penup_f1_v2": [
+        0.015558,
+        0.011152,
+        0.020026,
+        4406
+       ],
+       "strict_order_acc": [
+        0.004615,
+        -0.002316,
+        0.012366,
+        4406
+       ],
+       "direction_acc": [
+        0.00191,
+        -0.002625,
+        0.006618,
+        4404
+       ],
+       "kendall_tau": [
+        -0.005065,
+        -0.015316,
+        0.005628,
+        2628
+       ]
+      },
+      "20261035": {
+       "aiou": [
+        0.007359,
+        0.006164,
+        0.008419,
+        4406
+       ],
+       "penup_f1_v2": [
+        0.017009,
+        0.012296,
+        0.021634,
+        4406
+       ],
+       "strict_order_acc": [
+        0.009532,
+        0.00369,
+        0.015941,
+        4406
+       ],
+       "direction_acc": [
+        0.002905,
+        -0.002212,
+        0.007994,
+        4403
+       ],
+       "kendall_tau": [
+        -0.010839,
+        -0.019811,
+        -0.001783,
+        2636
+       ]
+      },
+      "20261036": {
+       "aiou": [
+        0.008849,
+        0.007899,
+        0.009752,
+        4406
+       ],
+       "penup_f1_v2": [
+        0.021852,
+        0.017732,
+        0.02587,
+        4406
+       ],
+       "strict_order_acc": [
+        0.010819,
+        0.004726,
+        0.01664,
+        4406
+       ],
+       "direction_acc": [
+        0.000646,
+        -0.004804,
+        0.005983,
+        4404
+       ],
+       "kendall_tau": [
+        -0.01445,
+        -0.02551,
+        -0.003861,
+        2634
+       ]
+      }
+     },
+     "seed_level": {
+      "aiou": {
+       "mean_of_seed_deltas": 0.007735,
+       "sd": 0.000982,
+       "t_lo": 0.005296,
+       "t_hi": 0.010174,
+       "df": 2.0,
+       "welch_lo": 0.006423,
+       "welch_hi": 0.009046,
+       "welch_df": 3.847779,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      },
+      "penup_f1_v2": {
+       "mean_of_seed_deltas": 0.018139,
+       "sd": 0.003296,
+       "t_lo": 0.009952,
+       "t_hi": 0.026327,
+       "df": 2.0,
+       "welch_lo": 0.014028,
+       "welch_hi": 0.022251,
+       "welch_df": 3.668501,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      },
+      "strict_order_acc": {
+       "mean_of_seed_deltas": 0.008322,
+       "sd": 0.003274,
+       "t_lo": 0.000188,
+       "t_hi": 0.016456,
+       "df": 2.0,
+       "welch_lo": 0.001741,
+       "welch_hi": 0.014903,
+       "welch_df": 2.470959,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      },
+      "direction_acc": {
+       "mean_of_seed_deltas": 0.00182,
+       "sd": 0.001132,
+       "t_lo": -0.000992,
+       "t_hi": 0.004633,
+       "df": 2.0,
+       "welch_lo": -0.000182,
+       "welch_hi": 0.003823,
+       "welch_df": 2.324,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      },
+      "kendall_tau": {
+       "mean_of_seed_deltas": -0.010118,
+       "sd": 0.004734,
+       "t_lo": -0.021878,
+       "t_hi": 0.001643,
+       "df": 2.0,
+       "welch_lo": -0.020566,
+       "welch_hi": 0.00033,
+       "welch_df": 2.678858,
+       "n_train_seeds": 3,
+       "seeds": "20261034;20261035;20261036"
+      }
+     }
+    }
+   },
+   "note": "internal names PEINIT_W - NOFM_W; the three seeds of each arm share one warm backbone run (seed 20261016), so seed-level intervals cover fine-tuning seed variance only",
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L14_paired_contrasts.csv",
+     "sha256": "4fa44c61ba0103d82a7bc3d59a62f2383172d698f1299fef3fa2871f1c6d44bb",
+     "mtime_utc": "2026-11-15T13:46:57Z"
+    },
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L14_seed_level_intervals.csv",
+     "sha256": "229d506a14d0f3eb2b499e2b3d5266554b4692a7370092ae7353e16586fd9cbb",
+     "mtime_utc": "2026-11-15T13:46:57Z"
+    }
+   ]
+  },
+  "WFTPE_minus_WFT_30pct_single_seed": {
+   "value": {
+    "aiou": [
+     0.006525,
+     0.005759,
+     0.007288,
+     4406
+    ],
+    "penup_f1_v2": [
+     0.011833,
+     0.008287,
+     0.015466,
+     4406
+    ],
+    "strict_order_acc": [
+     0.007868,
+     0.001875,
+     0.014298,
+     4406
+    ],
+    "direction_acc": [
+     0.005675,
+     0.001655,
+     0.009788,
+     4403
+    ],
+    "kendall_tau": [
+     -0.006419,
+     -0.015175,
+     0.002799,
+     2653
+    ]
+   },
+   "note": "one training seed (20261034) per arm; no seed-level interval",
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L14_paired_contrasts.csv",
+     "sha256": "4fa44c61ba0103d82a7bc3d59a62f2383172d698f1299fef3fa2871f1c6d44bb",
+     "mtime_utc": "2026-11-15T13:46:57Z"
+    }
+   ]
+  },
+  "SFT1_minus_FT1": {
+   "value": {
+    "pooled": {
+     "aiou": [
+      0.014111,
+      0.012899,
+      0.015295,
+      4406
+     ],
+     "penup_f1_v2": [
+      0.023174,
+      0.018968,
+      0.027242,
+      4406
+     ],
+     "strict_order_acc": [
+      0.006254,
+      0.001633,
+      0.010818,
+      4406
+     ],
+     "direction_acc": [
+      -0.000685,
+      -0.003217,
+      0.002067,
+      4384
+     ],
+     "kendall_tau": [
+      -0.007441,
+      -0.014512,
+      -0.000244,
+      2346
+     ]
+    },
+    "n_train_seeds_SFT": 2,
+    "n_train_seeds_FT": 3,
+    "per_SFT_training_seed_vs_pooled_FT": {
+     "20261034": {
+      "aiou": [
+       0.01157,
+       0.010413,
+       0.012722,
+       4406
+      ],
+      "penup_f1_v2": [
+       0.018643,
+       0.014208,
+       0.022771,
+       4406
+      ],
+      "strict_order_acc": [
+       0.00633,
+       0.001438,
+       0.011493,
+       4406
+      ],
+      "direction_acc": [
+       0.000789,
+       -0.001579,
+       0.003441,
+       4384
+      ],
+      "kendall_tau": [
+       0.002105,
+       -0.005855,
+       0.01001,
+       2367
+      ]
+     },
+     "20261035": {
+      "aiou": [
+       0.016651,
+       0.015299,
+       0.017984,
+       4406
+      ],
+      "penup_f1_v2": [
+       0.027704,
+       0.022751,
+       0.032899,
+       4406
+      ],
+      "strict_order_acc": [
+       0.006178,
+       0.000767,
+       0.011392,
+       4406
+      ],
+      "direction_acc": [
+       -0.002056,
+       -0.005187,
+       0.001248,
+       4389
+      ],
+      "kendall_tau": [
+       -0.017916,
+       -0.027881,
+       -0.007814,
+       2361
+      ]
+     }
+    },
+    "seed_level": {
+     "aiou": {
+      "mean_of_seed_deltas": 0.014111,
+      "sd": 0.003593,
+      "t_lo": -0.018171,
+      "t_hi": 0.046393,
+      "df": 1.0,
+      "welch_lo": null,
+      "welch_hi": null,
+      "welch_df": null,
+      "n_train_seeds": 2,
+      "seeds": "20261034;20261035"
+     },
+     "penup_f1_v2": {
+      "mean_of_seed_deltas": 0.023174,
+      "sd": 0.006407,
+      "t_lo": -0.03439,
+      "t_hi": 0.080737,
+      "df": 1.0,
+      "welch_lo": null,
+      "welch_hi": null,
+      "welch_df": null,
+      "n_train_seeds": 2,
+      "seeds": "20261034;20261035"
+     },
+     "strict_order_acc": {
+      "mean_of_seed_deltas": 0.006254,
+      "sd": 0.000107,
+      "t_lo": 0.005293,
+      "t_hi": 0.007215,
+      "df": 1.0,
+      "welch_lo": null,
+      "welch_hi": null,
+      "welch_df": null,
+      "n_train_seeds": 2,
+      "seeds": "20261034;20261035"
+     },
+     "direction_acc": {
+      "mean_of_seed_deltas": -0.000633,
+      "sd": 0.002012,
+      "t_lo": -0.018708,
+      "t_hi": 0.017442,
+      "df": 1.0,
+      "welch_lo": null,
+      "welch_hi": null,
+      "welch_df": null,
+      "n_train_seeds": 2,
+      "seeds": "20261034;20261035"
+     },
+     "kendall_tau": {
+      "mean_of_seed_deltas": -0.007906,
+      "sd": 0.014157,
+      "t_lo": -0.135099,
+      "t_hi": 0.119288,
+      "df": 1.0,
+      "welch_lo": null,
+      "welch_hi": null,
+      "welch_df": null,
+      "n_train_seeds": 2,
+      "seeds": "20261034;20261035"
+     }
+    },
+    "missing": "LUOC40 p01 training seed 20261036: no scored rows at read time (run dir exists; job history ends 2026-11-15T08:53:52Z)",
+    "recomputed_equals_stored_row_SFT_p01_vs_FT1": true,
+    "max_abs_diff_to_stored": 0.0
+   },
+   "note": "internal names LUOC40 - pooled COMP_p01; SFT has 2 training seeds, so the seed-level t interval has df = 1",
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L14_paired_contrasts.csv",
+     "sha256": "4fa44c61ba0103d82a7bc3d59a62f2383172d698f1299fef3fa2871f1c6d44bb",
+     "mtime_utc": "2026-11-15T13:46:57Z"
+    },
+    {
+     "path": "$U/exp/RQF/tables/reviewer_followup_v1/stepmatched_p30_holm.csv",
+     "sha256": "9886010f1354f0c1aa742d79b2781025a67e0fa7243be714cfd8d7740d2c9235",
+     "artifact_version": "cbab2861-c155-460e-8513-2e4f856edb74"
+    }
+   ]
+  },
+  "decomposition_1pct": {
+   "value": {
+    "NOFM_W": {
+     "WFT_minus_FT": {
+      "aiou": [
+       0.046892,
+       0.044895,
+       0.049045,
+       4406
+      ],
+      "penup_f1_v2": [
+       0.074735,
+       0.067506,
+       0.08166,
+       4406
+      ],
+      "strict_order_acc": [
+       0.027412,
+       0.021115,
+       0.034103,
+       4406
+      ],
+      "direction_acc": [
+       -0.002997,
+       -0.007244,
+       0.001236,
+       4381
+      ],
+      "kendall_tau": [
+       0.005757,
+       -0.005408,
+       0.017905,
+       2323
+      ]
+     },
+     "WFT_minus_SFT": {
+      "aiou": [
+       0.032781,
+       0.031183,
+       0.034542,
+       4406
+      ],
+      "penup_f1_v2": [
+       0.051562,
+       0.045166,
+       0.058379,
+       4406
+      ],
+      "strict_order_acc": [
+       0.021158,
+       0.015214,
+       0.027241,
+       4406
+      ],
+      "direction_acc": [
+       -0.002438,
+       -0.006889,
+       0.001551,
+       4386
+      ],
+      "kendall_tau": [
+       0.017145,
+       0.002983,
+       0.033699,
+       2376
+      ]
+     }
+    },
+    "PEINIT_W": {
+     "WFT_minus_FT": {
+      "aiou": [
+       0.059454,
+       0.05734,
+       0.061861,
+       4406
+      ],
+      "penup_f1_v2": [
+       0.113149,
+       0.103572,
+       0.122284,
+       4406
+      ],
+      "strict_order_acc": [
+       0.049881,
+       0.042089,
+       0.058019,
+       4406
+      ],
+      "direction_acc": [
+       -0.001381,
+       -0.006479,
+       0.003228,
+       4385
+      ],
+      "kendall_tau": [
+       -0.007841,
+       -0.020826,
+       0.007387,
+       2358
+      ]
+     },
+     "WFT_minus_SFT": {
+      "aiou": [
+       0.045343,
+       0.043665,
+       0.047271,
+       4406
+      ],
+      "penup_f1_v2": [
+       0.089976,
+       0.081452,
+       0.0986,
+       4406
+      ],
+      "strict_order_acc": [
+       0.043627,
+       0.036558,
+       0.051342,
+       4406
+      ],
+      "direction_acc": [
+       -0.000737,
+       -0.005749,
+       0.003547,
+       4389
+      ],
+      "kendall_tau": [
+       0.00299,
+       -0.013556,
+       0.02173,
+       2414
+      ]
+     }
+    }
+   },
+   "note": "SFT - FT is in SFT1_minus_FT1; per-unit means over different seed counts (3, 2, 3), so the two parts add up to the total only approximately",
+   "source": [
+    {
+     "path": "$U/exp/RV10/tables/facts_v11_v2/L14_paired_contrasts.csv",
+     "sha256": "4fa44c61ba0103d82a7bc3d59a62f2383172d698f1299fef3fa2871f1c6d44bb",
+     "mtime_utc": "2026-11-15T13:46:57Z"
+    }
+   ]
+  }
+ },
+ "L02_warm_milestone": {
+  "rule": {
+   "value": "lowest mean native LDTW over the pooled units of the four non-Urdu val250 sets (casia_zh, casia_en, hpl_tamil, iam; 1,000 units), DDIM-50, eta 0, sampling seed 0, EMA weights; ties go to the higher AIoU; over ms1-ms4 (steps 10,000-40,000) of a warm stage. No Urdu data enters the selection.",
+   "source": [
+    {
+     "path": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+     "sha256": "be563cdfa038d76a216e14a0a251a94d1a894c25bf38b5b58f159b993d5d37ab",
+     "mtime_utc": "2026-11-08T08:48:48Z",
+     "lines": {
+      "206": "- Milestone selection (LUO rule, `exp/M5/runs/luo/eval/selection.json`): lowest mean native LDTW over the pooled units of the four M5 val250 sets (casia_zh, casia_en, hpl_tamil, iam; 1,000 units), DDIM-50, eta 0, seed 0, EMA. Ties go to the higher AIoU. ms6 was selected (pooled LDTW 0.27783, AIoU 0.77153).",
+      "225": "- (d) Milestone selection: the LUO rule of A4.1 (4 M5 val250 sets pooled, native LDTW, seed 0, ties higher AIoU) over ms1-ms4 (WARM) or ms1-ms10 (SCRATCH), sampled on the arm's training lane and recorded. unipen_de_tr3927 does not enter selection."
+     }
+    },
+    {
+     "path": "$U/exp/FMD/xs/runs/NOFM_W_clusterA/eval/selection.json",
+     "sha256": "c0e819b7327a9d1df13b0f044c98f27cd77cffb4355c1ef20e2c12b64a1e76db",
+     "mtime_utc": "2026-11-04T08:48:13Z",
+     "criterion": "lowest mean native LDTW over the pooled val units, ties -> higher AIoU; DDIM-50 eta 0 seed 0"
+    }
+   ]
+  },
+  "when_fixed": {
+   "value": {
+    "rule_frozen_utc": "2026-11-03T13:05:33Z",
+    "first_warm_stage_job_start_utc": "2026-11-03T15:09:46Z",
+    "A4_post_sha256": "eef828663d75295980f25b775542f5077a9d034f64a3b6025046db5d8011f779"
+   },
+   "note": "amendment A4 of FMD_PREREG_2026-11-03.md; freeze time from prereg_freeze_record.json",
+   "source": [
+    {
+     "path": "$U/exp/FMD/xs/admin/prereg_freeze_record.json",
+     "sha256": "621b1017f133b833cfe74bd113789df367dd2824edf6637cb4dbe228547599c2",
+     "mtime_utc": "2026-11-03T15:19:39Z"
+    },
+    {
+     "path": "$U/exp/FMD/xs/runs/NOFM_W_clusterA/job_history.txt",
+     "sha256": "891ac16d68d6e8c54ba2869eeb7d06806b95f6a5c2d77c72c1d15076abb83f3a",
+     "mtime_utc": "2026-11-04T08:48:24Z"
+    }
+   ]
+  },
+  "unguided_warm_backbone": {
+   "value": {
+    "selected_milestone": 3,
+    "selected_step": 30000,
+    "ldtw_ms3": 0.27875,
+    "ldtw_ms4": 0.27878,
+    "ldtw_difference_ms4_minus_ms3": 3e-05,
+    "aiou_ms3": 0.79274,
+    "aiou_ms4": 0.79896
+   },
+   "source": [
+    {
+     "path": "$U/exp/FMD/xs/runs/NOFM_W_clusterA/eval/selection.json",
+     "sha256": "c0e819b7327a9d1df13b0f044c98f27cd77cffb4355c1ef20e2c12b64a1e76db",
+     "mtime_utc": "2026-11-04T08:48:13Z"
+    },
+    {
+     "path": "$U/exp/FMD/xs/runs/NOFM_W_clusterA/eval/best_milestone.txt",
+     "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+     "mtime_utc": "2026-11-04T08:48:13Z"
+    }
+   ]
+  },
+  "step_matched_control": {
+   "value": {
+    "backbone_run": "LUOC40_bb (CLUSTER-A copy, Slurm 24964380)",
+    "selected_milestone": 3,
+    "selected_step": 30000,
+    "rule": "PREREG_RQ_finalise R2b: \"select by the WARM backbone selection rule\"",
+    "fine_tunes_init_from": [
+     "$U/exp/RQF/runs/LUOC40_bb/checkpoints/checkpoint_000003.pt"
+    ],
+    "best_milestone_txt_written_utc": "2026-11-10T09:52:16Z",
+    "selection_json_mtime_utc": "2026-11-09T23:15:01Z",
+    "note": "best_milestone.txt was written by the agent on 10 Nov because the backbone chain wrote none (rqf_log.md line 661); the value equals selection.json. The VPS copy LUOC40_bb_vps selected ms1 by the same rule (exploratory copy).",
+    "rqf_log_lines": {
+     "655": "2026-11-10T09:30:35Z [rqf-s2 <agent>] VPS 526/527/528 FT trained (10k steps each, rc=1 in post: rqf_vps_post.py line 160 SyntaxError, inline comment swallowed ')'); selection of LUOC40_bb = ms1 by rule (pooled val250x4 LDTW ms1 0.27705 < ms2 0.27909 < ms3 0.28046 < ms4 0.28071; best_milestone.txt written 8 Nov 19:30Z); fixed copy rqf_vps_post_v2.py sha256 4640f606d9e3246f506d5cc25a0638f29809826ca33fe046984cfdeeef509685 (v1 kept; SHA256SUMS updated); val1000 selection+final-job enqueue re-run directly on the VPS: s34 started 09:15:53Z, s35 then s36 chained sequentially after it (3 concurrent samplers + cmd 537 thrashed the GPU at 75 s/it, s35/s36 processes killed and restarted sequentially); final cmds will be named 52Xf_rqf_luoc40_LUOC40_p01_s*_final",
+     "661": "2026-11-10T09:52:16Z [rqf-s2 <agent>] RACE LUOC40_bb: CLUSTER-A h100 copy 24964380 trained from 2026-11-08T02:13:36Z, VPS cmd 525 trained from 2026-11-08T02:37:02Z (jobs.csv; the 21:36:11Z 2-s rc=3 attempt is not a training start) -> CLUSTER-A copy is the first-to-START winner (selected ms3; selection.json in RQF/runs/LUOC40_bb/eval); gate 24964073 never opened because m5_arm.sh writes no best_milestone.txt (my bug); wrote best_milestone.txt=3 from selection.json at this line so chain 24964016-21 releases on the CLUSTER-A backbone. VPS LUOC40 (ms1) chain kept as the loser copy, reported separately."
+    }
+   },
+   "source": [
+    {
+     "path": "$U/exp/RQF/runs/LUOC40_bb/eval/selection.json",
+     "sha256": "1a7ceb5af863cb33c6f061d608a80ec553bbb9ed0a9d2fa668646a3b8c55c0aa",
+     "mtime_utc": "2026-11-09T23:15:01Z"
+    },
+    {
+     "path": "$U/exp/RQF/runs/LUOC40_bb/eval/best_milestone.txt",
+     "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+     "mtime_utc": "2026-11-10T09:52:16Z"
+    },
+    {
+     "path": "$U/exp/RQF/queue/rqf_log.md",
+     "sha256": "d840b16299c9922ef5804047add61c1a1d65b14aa89a547c72af4a337bd7450d",
+     "mtime_utc": "2026-11-15T11:29:40Z"
+    },
+    {
+     "path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "mtime_utc": "2026-11-07T19:44:03Z",
+     "lines": {
+      "29": "R2b (compute-matched control LUOC40; CONFIRMATORY for attribution). LUO ms6 (model + EMA, fresh optimizer), ORIGINAL 64-px encoder and LUO recipe (64-px thickness 1-3 aug), +40,000 steps on m5_luo_train, seed 20261016, select by the WARM backbone selection rule; then p01 FT 3 seeds."
+     }
+    }
+   ]
+  },
+  "validation_scores_all_milestones": {
+   "value": [
+    {
+     "run": "NOFM_W_clusterA",
+     "selected_milestone": 3,
+     "selected_step": 30000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.31836,
+       "aiou": 0.74494,
+       "direction_acc": 0.95556,
+       "kendall_tau": 0.93301,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.28962,
+       "aiou": 0.77904,
+       "direction_acc": 0.96141,
+       "kendall_tau": 0.9351,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.27875,
+       "aiou": 0.79274,
+       "direction_acc": 0.97069,
+       "kendall_tau": 0.9429,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.27878,
+       "aiou": 0.79896,
+       "direction_acc": 0.97019,
+       "kendall_tau": 0.94175,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX NOFM_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/NOFM_W_clusterA/eval/selection.json",
+      "sha256": "c0e819b7327a9d1df13b0f044c98f27cd77cffb4355c1ef20e2c12b64a1e76db",
+      "mtime_utc": "2026-11-04T08:48:13Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/NOFM_W_clusterA/eval/best_milestone.txt",
+      "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+      "mtime_utc": "2026-11-04T08:48:13Z",
+      "content": "3"
+     }
+    },
+    {
+     "run": "PEINIT_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.28779,
+       "aiou": 0.77169,
+       "direction_acc": 0.96717,
+       "kendall_tau": 0.94457,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.27768,
+       "aiou": 0.78924,
+       "direction_acc": 0.97371,
+       "kendall_tau": 0.94887,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.27814,
+       "aiou": 0.79769,
+       "direction_acc": 0.9739,
+       "kendall_tau": 0.9411,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.27583,
+       "aiou": 0.80391,
+       "direction_acc": 0.97392,
+       "kendall_tau": 0.95356,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX PEINIT_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA (monitor copy of the arm.sh selection block)",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/PEINIT_W_clusterA/eval/selection.json",
+      "sha256": "60235e546685581c46daf8d5ff3cf5762ce5d48482b8665b2bef72fabdbf0536",
+      "mtime_utc": "2026-11-04T18:53:38Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/PEINIT_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-04T18:53:38Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "c-radiov3-h_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.29703,
+       "aiou": 0.74807,
+       "direction_acc": 0.96311,
+       "kendall_tau": 0.95509,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.28439,
+       "aiou": 0.77383,
+       "direction_acc": 0.96861,
+       "kendall_tau": 0.94953,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.27974,
+       "aiou": 0.78517,
+       "direction_acc": 0.96946,
+       "kendall_tau": 0.96908,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.2763,
+       "aiou": 0.79015,
+       "direction_acc": 0.97334,
+       "kendall_tau": 0.95955,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX c-radiov3-h_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/c-radiov3-h_W_clusterA/eval/selection.json",
+      "sha256": "7b66f7dd826d7cd7c10633c1e77d587a1f70d5e2ae0122d1fb05e8416711e685",
+      "mtime_utc": "2026-11-04T13:40:50Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/c-radiov3-h_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-04T13:40:50Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "pe-spatial-b16-512_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.30554,
+       "aiou": 0.7448,
+       "direction_acc": 0.95558,
+       "kendall_tau": 0.93359,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.28968,
+       "aiou": 0.77136,
+       "direction_acc": 0.96557,
+       "kendall_tau": 0.96001,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.28536,
+       "aiou": 0.78299,
+       "direction_acc": 0.96427,
+       "kendall_tau": 0.95612,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.27958,
+       "aiou": 0.79005,
+       "direction_acc": 0.96684,
+       "kendall_tau": 0.96053,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX pe-spatial-b16-512_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/pe-spatial-b16-512_W_clusterA/eval/selection.json",
+      "sha256": "1626e3c2204b37db99dca440ecee600f7be5ce05f9650045bbe3fa79a080ac9e",
+      "mtime_utc": "2026-11-07T13:31:28Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/pe-spatial-b16-512_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-07T13:31:29Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "dinov3-vitl16-sat493m_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.30833,
+       "aiou": 0.75333,
+       "direction_acc": 0.95798,
+       "kendall_tau": 0.92228,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.29109,
+       "aiou": 0.77694,
+       "direction_acc": 0.96551,
+       "kendall_tau": 0.93197,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.28381,
+       "aiou": 0.78829,
+       "direction_acc": 0.9697,
+       "kendall_tau": 0.9453,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.27988,
+       "aiou": 0.79494,
+       "direction_acc": 0.97245,
+       "kendall_tau": 0.94915,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX dinov3-vitl16-sat493m_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/dinov3-vitl16-sat493m_W_clusterA/eval/selection.json",
+      "sha256": "8c3221aad4877a7c2110e411301ffebd475b3a9df4da143f949b08d581feeee9",
+      "mtime_utc": "2026-11-07T08:41:32Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/dinov3-vitl16-sat493m_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-07T08:41:32Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "vit-mae-large_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.30175,
+       "aiou": 0.75567,
+       "direction_acc": 0.96087,
+       "kendall_tau": 0.94194,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.28323,
+       "aiou": 0.78064,
+       "direction_acc": 0.97162,
+       "kendall_tau": 0.96132,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.27733,
+       "aiou": 0.79083,
+       "direction_acc": 0.97123,
+       "kendall_tau": 0.96752,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.27503,
+       "aiou": 0.79731,
+       "direction_acc": 0.97378,
+       "kendall_tau": 0.96103,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX vit-mae-large_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/vit-mae-large_W_clusterA/eval/selection.json",
+      "sha256": "f65abb03e5c40fd5af25bf22249caa96b27ec01694f55f4bae6d941a896ba8e5",
+      "mtime_utc": "2026-11-07T06:03:40Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/vit-mae-large_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-07T06:03:40Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "cleandift-sd21_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.30208,
+       "aiou": 0.75824,
+       "direction_acc": 0.96118,
+       "kendall_tau": 0.934,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.28618,
+       "aiou": 0.78192,
+       "direction_acc": 0.96594,
+       "kendall_tau": 0.94975,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.28499,
+       "aiou": 0.79248,
+       "direction_acc": 0.96675,
+       "kendall_tau": 0.94674,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.28267,
+       "aiou": 0.79847,
+       "direction_acc": 0.96797,
+       "kendall_tau": 0.95405,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX cleandift-sd21_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/cleandift-sd21_W_clusterA/eval/selection.json",
+      "sha256": "46009f53971962297d2e51b37c5de50040c41be4dba89dc0a454099a01692360",
+      "mtime_utc": "2026-11-07T05:58:09Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/cleandift-sd21_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-07T05:58:09Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "c-radiov3-b_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.29403,
+       "aiou": 0.74578,
+       "direction_acc": 0.96248,
+       "kendall_tau": 0.94088,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.28528,
+       "aiou": 0.7713,
+       "direction_acc": 0.97237,
+       "kendall_tau": 0.94657,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.28167,
+       "aiou": 0.78154,
+       "direction_acc": 0.97085,
+       "kendall_tau": 0.9557,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.28097,
+       "aiou": 0.78875,
+       "direction_acc": 0.97064,
+       "kendall_tau": 0.95648,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX c-radiov3-b_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/c-radiov3-b_W_clusterA/eval/selection.json",
+      "sha256": "634622e09a7b6e8c3bf44945c77afe1dd2245be408d94b1d3b1b4adba0820460",
+      "mtime_utc": "2026-11-08T07:24:18Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/c-radiov3-b_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-08T07:24:18Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "c-radiov4-so400m_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.29857,
+       "aiou": 0.75286,
+       "direction_acc": 0.96569,
+       "kendall_tau": 0.94068,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.28299,
+       "aiou": 0.7785,
+       "direction_acc": 0.97146,
+       "kendall_tau": 0.94607,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.27791,
+       "aiou": 0.7881,
+       "direction_acc": 0.97329,
+       "kendall_tau": 0.95815,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.27583,
+       "aiou": 0.79538,
+       "direction_acc": 0.9734,
+       "kendall_tau": 0.94977,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX c-radiov4-so400m_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/c-radiov4-so400m_W_clusterA/eval/selection.json",
+      "sha256": "ab786beebc268c35ee8084263a7cebf9cc82a2be561c285b9e457b1c91096c9e",
+      "mtime_utc": "2026-11-08T07:41:48Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/c-radiov4-so400m_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-08T07:41:48Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "dinov3-vitb16_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.30244,
+       "aiou": 0.73729,
+       "direction_acc": 0.96076,
+       "kendall_tau": 0.95018,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.28912,
+       "aiou": 0.76687,
+       "direction_acc": 0.95963,
+       "kendall_tau": 0.9477,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.28444,
+       "aiou": 0.77874,
+       "direction_acc": 0.96709,
+       "kendall_tau": 0.95151,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.28114,
+       "aiou": 0.78584,
+       "direction_acc": 0.96978,
+       "kendall_tau": 0.95432,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX dinov3-vitb16_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/dinov3-vitb16_W_clusterA/eval/selection.json",
+      "sha256": "b762304c1f643f12a8afda797e0d40c035540a4dbdf034639e7d42e9276260cb",
+      "mtime_utc": "2026-11-08T14:55:39Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/dinov3-vitb16_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-08T14:55:40Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "webssl-mae300m-224_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.29953,
+       "aiou": 0.75749,
+       "direction_acc": 0.96229,
+       "kendall_tau": 0.93865,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.28438,
+       "aiou": 0.78241,
+       "direction_acc": 0.97109,
+       "kendall_tau": 0.94147,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.27895,
+       "aiou": 0.79286,
+       "direction_acc": 0.97475,
+       "kendall_tau": 0.95846,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.27803,
+       "aiou": 0.79888,
+       "direction_acc": 0.97499,
+       "kendall_tau": 0.95649,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX webssl-mae300m-224_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/webssl-mae300m-224_W_clusterA/eval/selection.json",
+      "sha256": "21a067b3a2a2b8bc8d775dba0914e402e3a7956ba1d2d878d9332555300fedd0",
+      "mtime_utc": "2026-11-08T01:28:59Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/webssl-mae300m-224_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-08T01:28:59Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "webssl-mae1b-224_W_clusterA",
+     "selected_milestone": 4,
+     "selected_step": 40000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.30791,
+       "aiou": 0.75331,
+       "direction_acc": 0.96002,
+       "kendall_tau": 0.93052,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.29029,
+       "aiou": 0.78019,
+       "direction_acc": 0.96891,
+       "kendall_tau": 0.94358,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.28034,
+       "aiou": 0.79111,
+       "direction_acc": 0.97077,
+       "kendall_tau": 0.94859,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.27719,
+       "aiou": 0.79721,
+       "direction_acc": 0.97373,
+       "kendall_tau": 0.9436,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "FMDX webssl-mae1b-224_W: LUO rule, val250 x {casia_zh casia_en hpl_tamil iam}, bb_sample.py --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0, EMA",
+     "selection_json": {
+      "path": "$U/exp/FMD/xs/runs/webssl-mae1b-224_W_clusterA/eval/selection.json",
+      "sha256": "cb99c7a74980443a2a6a525def12e5f9b5f9f4992343a8df4c52dc0842def27a",
+      "mtime_utc": "2026-11-08T05:32:45Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/FMD/xs/runs/webssl-mae1b-224_W_clusterA/eval/best_milestone.txt",
+      "sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "mtime_utc": "2026-11-08T05:32:45Z",
+      "content": "4"
+     }
+    },
+    {
+     "run": "LUOC40_bb",
+     "selected_milestone": 3,
+     "selected_step": 30000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.27963,
+       "aiou": 0.76833,
+       "direction_acc": 0.96998,
+       "kendall_tau": 0.96268,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.27925,
+       "aiou": 0.77147,
+       "direction_acc": 0.96814,
+       "kendall_tau": 0.96767,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.27745,
+       "aiou": 0.77465,
+       "direction_acc": 0.97145,
+       "kendall_tau": 0.95737,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.28044,
+       "aiou": 0.77724,
+       "direction_acc": 0.97054,
+       "kendall_tau": 0.96494,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "M5 LUOC40_bb: 250 val units per script (casia_zh,casia_en,hpl_tamil,iam), e0_sample --subset 250 --subset-seed 0",
+     "selection_json": {
+      "path": "$U/exp/RQF/runs/LUOC40_bb/eval/selection.json",
+      "sha256": "1a7ceb5af863cb33c6f061d608a80ec553bbb9ed0a9d2fa668646a3b8c55c0aa",
+      "mtime_utc": "2026-11-09T23:15:01Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/RQF/runs/LUOC40_bb/eval/best_milestone.txt",
+      "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+      "mtime_utc": "2026-11-10T09:52:16Z",
+      "content": "3"
+     }
+    },
+    {
+     "run": "LUOC40_bb_vps",
+     "selected_milestone": 1,
+     "selected_step": 10000,
+     "pooled_val": {
+      "1": {
+       "ldtw": 0.27705,
+       "aiou": 0.76307,
+       "direction_acc": 0.97,
+       "kendall_tau": 0.96818,
+       "n_units": 1000
+      },
+      "2": {
+       "ldtw": 0.27909,
+       "aiou": 0.7694,
+       "direction_acc": 0.96855,
+       "kendall_tau": 0.96797,
+       "n_units": 1000
+      },
+      "3": {
+       "ldtw": 0.28046,
+       "aiou": 0.7735,
+       "direction_acc": 0.96853,
+       "kendall_tau": 0.96766,
+       "n_units": 1000
+      },
+      "4": {
+       "ldtw": 0.28071,
+       "aiou": 0.77595,
+       "direction_acc": 0.96702,
+       "kendall_tau": 0.96666,
+       "n_units": 1000
+      }
+     },
+     "valsets": [
+      "casia_zh",
+      "casia_en",
+      "hpl_tamil",
+      "iam"
+     ],
+     "note": "RQF LUOC40: WARM backbone rule, val250 x {casia_zh,casia_en,hpl_tamil,iam}, e0_sample --subset 250 --subset-seed 0 --seed 0, DDIM-50 eta 0 EMA (VPS RTX 4090)",
+     "selection_json": {
+      "path": "$U/exp/RQF/runs/LUOC40_bb_vps/eval/selection.json",
+      "sha256": "b740341fd0b199e619cced609eb19cb876b9acdf696fc5ccd149d791f3c8051c",
+      "mtime_utc": "2026-11-08T19:30:44Z"
+     },
+     "best_milestone_txt": {
+      "path": "$U/exp/RQF/runs/LUOC40_bb_vps/eval/best_milestone.txt",
+      "sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "mtime_utc": "2026-11-08T19:30:44Z",
+      "content": "1"
+     }
+    }
+   ],
+   "note": "pooled over the four val250 sets (1,000 units); per-set rows in supp_warm_milestone_validation_v11.csv source files (selection_per_valset.csv)",
+   "source": [
+    {
+     "file": "supp_warm_milestone_validation_v11.csv",
+     "sha256": "05e867dbbd36c4f6943a04c571eb4fbff958b8d665b91e6aed3ea4d9d2a6e7ef",
+     "note": "table in this facts pack"
+    }
+   ]
+  },
+  "base_backbone": {
+   "value": {
+    "run": "luo",
+    "selected_milestone": 6,
+    "selected_step": 60000,
+    "pooled_val": {
+     "1": {
+      "ldtw": 0.40924,
+      "aiou": 0.54711,
+      "direction_acc": 0.93535,
+      "kendall_tau": 0.93123,
+      "n_units": 1000
+     },
+     "2": {
+      "ldtw": 0.30658,
+      "aiou": 0.70351,
+      "direction_acc": 0.96208,
+      "kendall_tau": 0.95802,
+      "n_units": 1000
+     },
+     "3": {
+      "ldtw": 0.29549,
+      "aiou": 0.73999,
+      "direction_acc": 0.96446,
+      "kendall_tau": 0.94077,
+      "n_units": 1000
+     },
+     "4": {
+      "ldtw": 0.28618,
+      "aiou": 0.7556,
+      "direction_acc": 0.96672,
+      "kendall_tau": 0.9642,
+      "n_units": 1000
+     },
+     "5": {
+      "ldtw": 0.28621,
+      "aiou": 0.76485,
+      "direction_acc": 0.96801,
+      "kendall_tau": 0.95779,
+      "n_units": 1000
+     },
+     "6": {
+      "ldtw": 0.27783,
+      "aiou": 0.77153,
+      "direction_acc": 0.96867,
+      "kendall_tau": 0.96777,
+      "n_units": 1000
+     },
+     "7": {
+      "ldtw": 0.28232,
+      "aiou": 0.77509,
+      "direction_acc": 0.96511,
+      "kendall_tau": 0.96363,
+      "n_units": 1000
+     },
+     "8": {
+      "ldtw": 0.28049,
+      "aiou": 0.77774,
+      "direction_acc": 0.97099,
+      "kendall_tau": 0.96073,
+      "n_units": 1000
+     },
+     "9": {
+      "ldtw": 0.28264,
+      "aiou": 0.77882,
+      "direction_acc": 0.96781,
+      "kendall_tau": 0.97246,
+      "n_units": 1000
+     },
+     "10": {
+      "ldtw": 0.28337,
+      "aiou": 0.78049,
+      "direction_acc": 0.96909,
+      "kendall_tau": 0.97302,
+      "n_units": 1000
+     }
+    },
+    "valsets": [
+     "casia_zh",
+     "casia_en",
+     "hpl_tamil",
+     "iam"
+    ],
+    "note": "M5 luo: 250 val units per script (casia_zh,casia_en,hpl_tamil,iam), e0_sample --subset 250 --subset-seed 0",
+    "selection_json": {
+     "path": "$U/exp/M5/runs/luo/eval/selection.json",
+     "sha256": "9340039fe681e8bfbb8d3a9f46b37145a7fff9d1a091104f7062d17abf515274",
+     "mtime_utc": "2026-10-21T12:25:22Z"
+    },
+    "best_milestone_txt": "not available"
+   },
+   "note": "f_not_ur: ms6 of 10 (step 60,000), same criterion string",
+   "source": [
+    {
+     "path": "$U/exp/M5/runs/luo/eval/selection.json",
+     "sha256": "9340039fe681e8bfbb8d3a9f46b37145a7fff9d1a091104f7062d17abf515274",
+     "mtime_utc": "2026-10-21T12:25:22Z"
+    }
+   ]
+  }
+ },
+ "L12_dates": {
+  "table": {
+   "value": [
+    {
+     "run_family": "backbone f_not_ur (M5 luo)",
+     "n_runs": 1,
+     "first_job_history_utc": "2026-10-20T22:06:31Z",
+     "last_job_history_utc": "2026-10-21T12:41:04Z",
+     "criterion_record": "M5_plan",
+     "record_path": "$U/plans/experiments_to_run_2026-10-18.md",
+     "record_sha256": "9df777b14f70dbb66b58ce0d0433111b04e1cf283c6ea8e1df0be5d7c063581c",
+     "record_date_utc": "2026-10-18T16:44:38Z",
+     "record_date_basis": "file mtime",
+     "record_content": "names the joint and leave-Urdu-out arms and the 1/10/30/100 % fine-tune; no checkpoint-selection rule text found by search for selection/milestone",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "backbone f_not_ur (M5 luo)",
+     "n_runs": 1,
+     "first_job_history_utc": "2026-10-20T22:06:31Z",
+     "last_job_history_utc": "2026-10-21T12:41:04Z",
+     "criterion_record": "M5_selection",
+     "record_path": "$U/exp/M5/runs/luo/eval/selection.json",
+     "record_sha256": "9340039fe681e8bfbb8d3a9f46b37145a7fff9d1a091104f7062d17abf515274",
+     "record_date_utc": "2026-10-21T12:25:22Z",
+     "record_date_basis": "file mtime",
+     "record_content": "selection criterion string stored with the selection result",
+     "record_precedes_first_training_timestamp": false
+    },
+    {
+     "run_family": "joint model f_all (M5 joint)",
+     "n_runs": 1,
+     "first_job_history_utc": "2026-10-20T22:06:32Z",
+     "last_job_history_utc": "2026-10-21T13:07:37Z",
+     "criterion_record": "M5_plan",
+     "record_path": "$U/plans/experiments_to_run_2026-10-18.md",
+     "record_sha256": "9df777b14f70dbb66b58ce0d0433111b04e1cf283c6ea8e1df0be5d7c063581c",
+     "record_date_utc": "2026-10-18T16:44:38Z",
+     "record_date_basis": "file mtime",
+     "record_content": "names the joint and leave-Urdu-out arms and the 1/10/30/100 % fine-tune; no checkpoint-selection rule text found by search for selection/milestone",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "joint model f_all (M5 joint)",
+     "n_runs": 1,
+     "first_job_history_utc": "2026-10-20T22:06:32Z",
+     "last_job_history_utc": "2026-10-21T13:07:37Z",
+     "criterion_record": "M5_selection",
+     "record_path": "$U/exp/M5/runs/luo/eval/selection.json",
+     "record_sha256": "9340039fe681e8bfbb8d3a9f46b37145a7fff9d1a091104f7062d17abf515274",
+     "record_date_utc": "2026-10-21T12:25:22Z",
+     "record_date_basis": "file mtime",
+     "record_content": "selection criterion string stored with the selection result",
+     "record_precedes_first_training_timestamp": false
+    },
+    {
+     "run_family": "plain FT 1 % (comp_p01_identity, seeds 20261034-36)",
+     "n_runs": 3,
+     "first_job_history_utc": "2026-10-29T16:10:51Z",
+     "last_job_history_utc": "2026-10-30T00:19:42Z",
+     "criterion_record": "FMD_A4",
+     "record_path": "$U/exp/FMD/xs/admin/prereg_freeze_record.json",
+     "record_sha256": "621b1017f133b833cfe74bd113789df367dd2824edf6637cb4dbe228547599c2",
+     "record_date_utc": "2026-11-03T13:05:33Z",
+     "record_date_basis": "A4 utc field",
+     "record_content": "FMD_PREREG_2026-11-03.md amendments A3/A4 frozen (warm 40k arms, milestone rule A4.3(d), 1 % FT recipe A4.3(e), exploratory reads A4.5)",
+     "record_precedes_first_training_timestamp": false
+    },
+    {
+     "run_family": "plain FT 1 % (comp_p01_identity, seeds 20261034-36)",
+     "n_runs": 3,
+     "first_job_history_utc": "2026-10-29T16:10:51Z",
+     "last_job_history_utc": "2026-10-30T00:19:42Z",
+     "criterion_record": "RQF",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "record_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "record_date_utc": "2026-11-07T19:44:03Z",
+     "record_date_basis": "file mtime",
+     "record_content": "R2a pooled 3-seed read, R2b step-matched control LUOC40, R2c 10 %/30 % curve, R3 selector and random-of-3 control rule",
+     "record_precedes_first_training_timestamp": false
+    },
+    {
+     "run_family": "plain FT 10 %/30 %/100 % first runs (M5 ft, seed 20261016)",
+     "n_runs": 4,
+     "first_job_history_utc": "2026-10-21T12:41:42Z",
+     "last_job_history_utc": "2026-10-21T17:15:34Z",
+     "criterion_record": "M5_plan",
+     "record_path": "$U/plans/experiments_to_run_2026-10-18.md",
+     "record_sha256": "9df777b14f70dbb66b58ce0d0433111b04e1cf283c6ea8e1df0be5d7c063581c",
+     "record_date_utc": "2026-10-18T16:44:38Z",
+     "record_date_basis": "file mtime",
+     "record_content": "names the joint and leave-Urdu-out arms and the 1/10/30/100 % fine-tune; no checkpoint-selection rule text found by search for selection/milestone",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "plain FT 10 %/30 %/100 % first runs (M5 ft, seed 20261016)",
+     "n_runs": 4,
+     "first_job_history_utc": "2026-10-21T12:41:42Z",
+     "last_job_history_utc": "2026-10-21T17:15:34Z",
+     "criterion_record": "RQF",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "record_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "record_date_utc": "2026-11-07T19:44:03Z",
+     "record_date_basis": "file mtime",
+     "record_content": "R2a pooled 3-seed read, R2b step-matched control LUOC40, R2c 10 %/30 % curve, R3 selector and random-of-3 control rule",
+     "record_precedes_first_training_timestamp": false
+    },
+    {
+     "run_family": "plain FT 10 % seeds 20261034-36 (LUOFT_p10)",
+     "n_runs": 3,
+     "first_job_history_utc": "2026-11-08T00:37:54Z",
+     "last_job_history_utc": "2026-11-08T11:35:37Z",
+     "criterion_record": "RQF",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "record_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "record_date_utc": "2026-11-07T19:44:03Z",
+     "record_date_basis": "file mtime",
+     "record_content": "R2a pooled 3-seed read, R2b step-matched control LUOC40, R2c 10 %/30 % curve, R3 selector and random-of-3 control rule",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "warm backbones NOFM_W, PEINIT_W",
+     "n_runs": 2,
+     "first_job_history_utc": "2026-11-03T15:09:46Z",
+     "last_job_history_utc": "2026-11-04T18:53:48Z",
+     "criterion_record": "FMD_A4",
+     "record_path": "$U/exp/FMD/xs/admin/prereg_freeze_record.json",
+     "record_sha256": "621b1017f133b833cfe74bd113789df367dd2824edf6637cb4dbe228547599c2",
+     "record_date_utc": "2026-11-03T13:05:33Z",
+     "record_date_basis": "A4 utc field",
+     "record_content": "FMD_PREREG_2026-11-03.md amendments A3/A4 frozen (warm 40k arms, milestone rule A4.3(d), 1 % FT recipe A4.3(e), exploratory reads A4.5)",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "FM-guided warm backbones (<fm>_W)",
+     "n_runs": 14,
+     "first_job_history_utc": "2026-11-03T19:06:54Z",
+     "last_job_history_utc": "2026-11-08T14:55:54Z",
+     "criterion_record": "FMD_A4",
+     "record_path": "$U/exp/FMD/xs/admin/prereg_freeze_record.json",
+     "record_sha256": "621b1017f133b833cfe74bd113789df367dd2824edf6637cb4dbe228547599c2",
+     "record_date_utc": "2026-11-03T13:05:33Z",
+     "record_date_basis": "A4 utc field",
+     "record_content": "FMD_PREREG_2026-11-03.md amendments A3/A4 frozen (warm 40k arms, milestone rule A4.3(d), 1 % FT recipe A4.3(e), exploratory reads A4.5)",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "warm FT 1 % seed 20261034 (NOFM_W_FT_clusterA, PEINIT_W_FT_clusterA)",
+     "n_runs": 2,
+     "first_job_history_utc": "2026-11-04T09:05:32Z",
+     "last_job_history_utc": "2026-11-05T21:22:22Z",
+     "criterion_record": "FMD_A4",
+     "record_path": "$U/exp/FMD/xs/admin/prereg_freeze_record.json",
+     "record_sha256": "621b1017f133b833cfe74bd113789df367dd2824edf6637cb4dbe228547599c2",
+     "record_date_utc": "2026-11-03T13:05:33Z",
+     "record_date_basis": "A4 utc field",
+     "record_content": "FMD_PREREG_2026-11-03.md amendments A3/A4 frozen (warm 40k arms, milestone rule A4.3(d), 1 % FT recipe A4.3(e), exploratory reads A4.5)",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "warm FT 1 % seed 20261034 (NOFM_W_FT_clusterA, PEINIT_W_FT_clusterA)",
+     "n_runs": 2,
+     "first_job_history_utc": "2026-11-04T09:05:32Z",
+     "last_job_history_utc": "2026-11-05T21:22:22Z",
+     "criterion_record": "RQF",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "record_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "record_date_utc": "2026-11-07T19:44:03Z",
+     "record_date_basis": "file mtime",
+     "record_content": "R2a pooled 3-seed read, R2b step-matched control LUOC40, R2c 10 %/30 % curve, R3 selector and random-of-3 control rule",
+     "record_precedes_first_training_timestamp": false
+    },
+    {
+     "run_family": "warm FT 1 % seeds 20261035-36",
+     "n_runs": 4,
+     "first_job_history_utc": "2026-11-08T00:30:23Z",
+     "last_job_history_utc": "2026-11-09T11:13:35Z",
+     "criterion_record": "RQF",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "record_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "record_date_utc": "2026-11-07T19:44:03Z",
+     "record_date_basis": "file mtime",
+     "record_content": "R2a pooled 3-seed read, R2b step-matched control LUOC40, R2c 10 %/30 % curve, R3 selector and random-of-3 control rule",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "warm FT 10 % (3 seeds)",
+     "n_runs": 6,
+     "first_job_history_utc": "2026-11-08T00:38:46Z",
+     "last_job_history_utc": "2026-11-11T02:52:48Z",
+     "criterion_record": "RQF",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "record_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "record_date_utc": "2026-11-07T19:44:03Z",
+     "record_date_basis": "file mtime",
+     "record_content": "R2a pooled 3-seed read, R2b step-matched control LUOC40, R2c 10 %/30 % curve, R3 selector and random-of-3 control rule",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "warm FT 30 % (1 seed)",
+     "n_runs": 2,
+     "first_job_history_utc": "2026-11-08T14:56:25Z",
+     "last_job_history_utc": "2026-11-11T09:02:49Z",
+     "criterion_record": "RQF",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "record_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "record_date_utc": "2026-11-07T19:44:03Z",
+     "record_date_basis": "file mtime",
+     "record_content": "R2a pooled 3-seed read, R2b step-matched control LUOC40, R2c 10 %/30 % curve, R3 selector and random-of-3 control rule",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "FM-guided warm FT 1 % (<fm>_W_FT_clusterA)",
+     "n_runs": 10,
+     "first_job_history_utc": "2026-11-04T13:46:42Z",
+     "last_job_history_utc": "2026-11-10T12:57:43Z",
+     "criterion_record": "FMD_A4",
+     "record_path": "$U/exp/FMD/xs/admin/prereg_freeze_record.json",
+     "record_sha256": "621b1017f133b833cfe74bd113789df367dd2824edf6637cb4dbe228547599c2",
+     "record_date_utc": "2026-11-03T13:05:33Z",
+     "record_date_basis": "A4 utc field",
+     "record_content": "FMD_PREREG_2026-11-03.md amendments A3/A4 frozen (warm 40k arms, milestone rule A4.3(d), 1 % FT recipe A4.3(e), exploratory reads A4.5)",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "step-matched backbone LUOC40_bb",
+     "n_runs": 1,
+     "first_job_history_utc": "2026-11-08T02:13:36Z",
+     "last_job_history_utc": "2026-11-11T04:31:33Z",
+     "criterion_record": "RQF",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "record_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "record_date_utc": "2026-11-07T19:44:03Z",
+     "record_date_basis": "file mtime",
+     "record_content": "R2a pooled 3-seed read, R2b step-matched control LUOC40, R2c 10 %/30 % curve, R3 selector and random-of-3 control rule",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "step-matched FT (LUOC40_p01/p10/p30)",
+     "n_runs": 5,
+     "first_job_history_utc": "2026-11-10T09:53:50Z",
+     "last_job_history_utc": "2026-11-15T08:53:52Z",
+     "criterion_record": "RQF",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "record_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "record_date_utc": "2026-11-07T19:44:03Z",
+     "record_date_basis": "file mtime",
+     "record_content": "R2a pooled 3-seed read, R2b step-matched control LUOC40, R2c 10 %/30 % curve, R3 selector and random-of-3 control rule",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "routed adapters (SMA_*)",
+     "n_runs": 32,
+     "first_job_history_utc": "2026-11-08T07:42:08Z",
+     "last_job_history_utc": "2026-11-14T16:40:48Z",
+     "criterion_record": "RQF_A2",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQF_amendment_A2_2026-11-07.md",
+     "record_sha256": "bface42b3f50ba963494b214873789f64bafd17186053e8b42fec42857d4ecb7",
+     "record_date_utc": "2026-11-07T20:37:09Z",
+     "record_date_basis": "file mtime",
+     "record_content": "single-model arms SM-R (replay) and SM-A (routed adapter)",
+     "record_precedes_first_training_timestamp": true
+    },
+    {
+     "run_family": "replay single models (SMR_*)",
+     "n_runs": 31,
+     "first_job_history_utc": "2026-11-08T01:49:47Z",
+     "last_job_history_utc": "2026-11-14T16:11:11Z",
+     "criterion_record": "RQF_A2",
+     "record_path": "$U/exp/RQF/plans/PREREG_RQF_amendment_A2_2026-11-07.md",
+     "record_sha256": "bface42b3f50ba963494b214873789f64bafd17186053e8b42fec42857d4ecb7",
+     "record_date_utc": "2026-11-07T20:37:09Z",
+     "record_date_basis": "file mtime",
+     "record_content": "single-model arms SM-R (replay) and SM-A (routed adapter)",
+     "record_precedes_first_training_timestamp": true
+    }
+   ],
+   "note": "training dates = first and last timestamp of the run job_history.txt files; record date basis is given per row (file mtime is the last modification time, not a signed timestamp)",
+   "source": [
+    {
+     "file": "supp_run_dates_v11.csv",
+     "sha256": "642550e6768d21af24d19d33a4888b39e68e53abcb25806e6f4fd5609c6ab00d",
+     "note": "table in this facts pack"
+    }
+   ]
+  },
+  "prereg_freeze_times": {
+   "value": {
+    "A3": "2026-11-03T13:05:33Z",
+    "A4": "2026-11-03T13:05:33Z",
+    "A5": "2026-11-03T13:08:47Z",
+    "A3.a": "2026-11-03T14:56:43Z",
+    "A3.b": "2026-11-03T15:09:00Z",
+    "A3.c": "2026-11-03T15:19:38Z"
+   },
+   "source": [
+    {
+     "path": "$U/exp/FMD/xs/admin/prereg_freeze_record.json",
+     "sha256": "621b1017f133b833cfe74bd113789df367dd2824edf6637cb4dbe228547599c2",
+     "mtime_utc": "2026-11-03T15:19:39Z"
+    }
+   ]
+  },
+  "rq_prereg_files": {
+   "value": {
+    "PREREG_RQ_finalise_2026-11-07.md": "2026-11-07T19:44:03Z",
+    "PREREG_RQF_amendment_A1_2026-11-07.md": "2026-11-07T20:37:16Z",
+    "PREREG_RQF_amendment_A2_2026-11-07.md": "2026-11-07T20:37:09Z"
+   },
+   "note": "file mtimes (UTC)",
+   "source": [
+    {
+     "path": "$U/exp/RQF/plans/PREREG_RQ_finalise_2026-11-07.md",
+     "sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+     "mtime_utc": "2026-11-07T19:44:03Z"
+    },
+    {
+     "path": "$U/exp/RQF/plans/PREREG_RQF_amendment_A1_2026-11-07.md",
+     "sha256": "627b8033e02c8f9cfcb978dab648b85b1ee5c2334d26707c85a400e8910cf726",
+     "mtime_utc": "2026-11-07T20:37:16Z"
+    },
+    {
+     "path": "$U/exp/RQF/plans/PREREG_RQF_amendment_A2_2026-11-07.md",
+     "sha256": "bface42b3f50ba963494b214873789f64bafd17186053e8b42fec42857d4ecb7",
+     "mtime_utc": "2026-11-07T20:37:09Z"
+    }
+   ]
+  },
+  "not_available": [
+   "a record dated before 20 Oct 2026 that states the checkpoint-selection rule of the M5 backbones (the 18 Oct plan names the arms only; the criterion string is stored with the selection result of 21 Oct)",
+   "a record that fixed a decision criterion for the plain 1 % fine-tune before it was trained (29-30 Oct); it is named as comparator in FMD_PREREG A4.1 (3 Nov) and PREREG_RQ_finalise (7 Nov)"
+  ]
+ },
+ "L10_recipes_roster_preprocessing": {
+  "recipes_per_family": {
+   "value": {
+    "FM_scratch_backbone (<fm>_S; not in paper tables)": {
+     "n_runs": 2,
+     "batch_size": "32",
+     "grad_accum": "16.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "0.0002",
+     "warmup_steps": "0.0",
+     "enc_warmup": "200.0",
+     "adam_betas": "[0.9, 0.99]",
+     "train_steps": "100000",
+     "save_every": "10000",
+     "seeds": "20261016.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "vits14",
+     "repa_lambda_effective": "0.5",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "not available",
+     "first_job_history_utc": "2026-11-05T06:29:05Z",
+     "last_job_history_utc": "2026-11-05T09:29:04Z",
+     "gpu_types": "NVIDIA A30",
+     "slurm_gpu_hours_sum": 0.0,
+     "n_runs_with_gpu_hours": 2
+    },
+    "FMguided_warm_FT (WFT^FM)": {
+     "n_runs": 10,
+     "batch_size": "128;32",
+     "grad_accum": "16.0;4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "8e-05",
+     "warmup_steps": "0.0",
+     "enc_warmup": "0.0",
+     "adam_betas": "[0.9, 0.99]",
+     "train_steps": "10000",
+     "save_every": "1000",
+     "seeds": "20261034.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "vits14",
+     "repa_lambda_effective": "0.0",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "2;3;4;5",
+     "first_job_history_utc": "2026-11-04T13:46:42Z",
+     "last_job_history_utc": "2026-11-10T12:57:43Z",
+     "gpu_types": "NVIDIA A30;NVIDIA H100 PCIe;NVIDIA RTX A4000;NVIDIA RTX PRO 6000 Blackwell Server Edition;NVIDIA A30;NVIDIA RTX A4000;NVIDIA RTX PRO 6000 Blackwell Server Edition;NVIDIA B200;NVIDIA RTX A4000;NVIDIA RTX PRO 6000 Blackwell Server Edition;NVIDIA B200;NVIDIA RTX PRO 6000 Blackwell Server Edition;NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "slurm_gpu_hours_sum": 67.0,
+     "n_runs_with_gpu_hours": 10
+    },
+    "FMguided_warm_backbone (<fm>_W)": {
+     "n_runs": 14,
+     "batch_size": "128;32;64",
+     "grad_accum": "16.0;4.0;8.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "0.0002",
+     "warmup_steps": "0.0",
+     "enc_warmup": "200.0",
+     "adam_betas": "[0.9, 0.99]",
+     "train_steps": "40000",
+     "save_every": "10000",
+     "seeds": "20261016.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "vits14",
+     "repa_lambda_effective": "0.5",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "4;not available",
+     "first_job_history_utc": "2026-11-03T19:06:54Z",
+     "last_job_history_utc": "2026-11-08T14:55:54Z",
+     "gpu_types": "8 values: NVIDIA A30;NVIDIA A40;NVIDIA RTX PRO 6000 Blackwell Server Edition;NVIDIA A30;NVIDIA GeForce GTX 1070;NVIDIA RTX PRO 6000 Blackwell Server Edition;NVIDIA A30;NVIDIA RTX A4000;NVIDIA RTX PRO 6000 Blackwell Server Edition;NVIDIA A40;NVIDIA A40;NVIDIA RTX PRO 6000 Blackwell Server Edition;NVIDIA H100 PCIe;NVIDIA RTX A4000;NVIDIA RTX PRO 6000 Blackwell Server Edition;...",
+     "slurm_gpu_hours_sum": 320.7,
+     "n_runs_with_gpu_hours": 14
+    },
+    "backbone_leave_Urdu_out (f_not_ur; M5 luo)": {
+     "n_runs": 1,
+     "batch_size": "128",
+     "grad_accum": "4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "not available",
+     "warmup_steps": "not available",
+     "enc_warmup": "not available",
+     "adam_betas": "not available",
+     "train_steps": "100000",
+     "save_every": "10000",
+     "seeds": "20261016.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available",
+     "repa_lambda_effective": "not available",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "not available",
+     "first_job_history_utc": "2026-10-20T22:06:31Z",
+     "last_job_history_utc": "2026-10-21T12:41:04Z",
+     "gpu_types": "NVIDIA B200",
+     "slurm_gpu_hours_sum": 29.2,
+     "n_runs_with_gpu_hours": 1
+    },
+    "joint_model (f_all; M5 joint)": {
+     "n_runs": 1,
+     "batch_size": "128",
+     "grad_accum": "4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "not available",
+     "warmup_steps": "not available",
+     "enc_warmup": "not available",
+     "adam_betas": "not available",
+     "train_steps": "100000",
+     "save_every": "10000",
+     "seeds": "20261016.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available",
+     "repa_lambda_effective": "not available",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "not available",
+     "first_job_history_utc": "2026-10-20T22:06:32Z",
+     "last_job_history_utc": "2026-10-21T13:07:37Z",
+     "gpu_types": "NVIDIA B200",
+     "slurm_gpu_hours_sum": 30.0,
+     "n_runs_with_gpu_hours": 1
+    },
+    "plain_FT_10pct_30pct (FT; LUOFT_p10_*, M5 ft/p*)": {
+     "n_runs": 7,
+     "batch_size": "128;32",
+     "grad_accum": "16.0;4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "not available",
+     "warmup_steps": "not available",
+     "enc_warmup": "not available",
+     "adam_betas": "not available",
+     "train_steps": "10000",
+     "save_every": "1000",
+     "seeds": "20261016.0;20261034.0;20261035.0;20261036.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available",
+     "repa_lambda_effective": "not available",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "10;4;5;7;9",
+     "first_job_history_utc": "2026-10-21T12:41:42Z",
+     "last_job_history_utc": "2026-11-08T11:35:37Z",
+     "gpu_types": ";NVIDIA B200",
+     "slurm_gpu_hours_sum": 71.5,
+     "n_runs_with_gpu_hours": 7
+    },
+    "plain_FT_1pct (FT1%; comp_p01_identity_*)": {
+     "n_runs": 3,
+     "batch_size": "128",
+     "grad_accum": "4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "not available",
+     "warmup_steps": "not available",
+     "enc_warmup": "not available",
+     "adam_betas": "not available",
+     "train_steps": "10000",
+     "save_every": "1000",
+     "seeds": "20261034.0;20261035.0;20261036.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available",
+     "repa_lambda_effective": "not available",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "3;4",
+     "first_job_history_utc": "2026-10-29T16:10:51Z",
+     "last_job_history_utc": "2026-10-30T00:19:42Z",
+     "gpu_types": "",
+     "slurm_gpu_hours_sum": 13.8,
+     "n_runs_with_gpu_hours": 2
+    },
+    "replay_single_model (RP; SMR_*)": {
+     "n_runs": 31,
+     "batch_size": "128;32",
+     "grad_accum": "16.0;4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "8e-05;not available",
+     "warmup_steps": "0.0;not available",
+     "enc_warmup": "0.0;not available",
+     "adam_betas": "[0.9, 0.99];not available",
+     "train_steps": "10000",
+     "save_every": "1000",
+     "seeds": "20261034.0;20261035.0;20261036.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available;pe_spatial_s16;vits14",
+     "repa_lambda_effective": "0.0;not available",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "10 values: 1;10;2;3;4;6;...",
+     "first_job_history_utc": "2026-11-08T01:49:47Z",
+     "last_job_history_utc": "2026-11-14T16:11:11Z",
+     "gpu_types": "7 values: ;NVIDIA A2;NVIDIA A30;NVIDIA A2;NVIDIA A40;NVIDIA RTX A4000;NVIDIA A30;NVIDIA RTX A4000;NVIDIA A40;NVIDIA A40;NVIDIA RTX A4000;...",
+     "slurm_gpu_hours_sum": 225.5,
+     "n_runs_with_gpu_hours": 31
+    },
+    "routed_adapter (AD; SMA_*)": {
+     "n_runs": 32,
+     "batch_size": "32;64",
+     "grad_accum": "4.0;8.0",
+     "learning_rate": "0.0001",
+     "enc_lr": "not available",
+     "warmup_steps": "0.0",
+     "enc_warmup": "not available",
+     "adam_betas": "[0.9, 0.99]",
+     "train_steps": "10000",
+     "save_every": "1000",
+     "seeds": "20261034.0;20261035.0;20261036.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available",
+     "repa_lambda_effective": "not available",
+     "lora_rank": "16.0",
+     "lora_alpha": "16.0",
+     "lora_targets": "cross,attn,linear",
+     "selected_milestones": "10;7;9;not available",
+     "first_job_history_utc": "2026-11-08T07:42:08Z",
+     "last_job_history_utc": "2026-11-14T16:40:48Z",
+     "gpu_types": "9 values: NVIDIA A2;NVIDIA A30;NVIDIA RTX A4000;NVIDIA A2;NVIDIA RTX A4000;NVIDIA A30;NVIDIA A30;NVIDIA A40;NVIDIA A30;NVIDIA A40;NVIDIA RTX A4000;NVIDIA A30;NVIDIA RTX A4000;...",
+     "slurm_gpu_hours_sum": 247.3,
+     "n_runs_with_gpu_hours": 32
+    },
+    "stepmatched_FT (SFT; LUOC40_p*)": {
+     "n_runs": 5,
+     "batch_size": "128;32",
+     "grad_accum": "16.0;4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "not available",
+     "warmup_steps": "not available",
+     "enc_warmup": "not available",
+     "adam_betas": "not available",
+     "train_steps": "10000",
+     "save_every": "1000",
+     "seeds": "20261034.0;20261035.0;20261036.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available",
+     "repa_lambda_effective": "not available",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "10;3;4;8;not available",
+     "first_job_history_utc": "2026-11-10T09:53:50Z",
+     "last_job_history_utc": "2026-11-15T08:53:52Z",
+     "gpu_types": "",
+     "slurm_gpu_hours_sum": 42.8,
+     "n_runs_with_gpu_hours": 5
+    },
+    "stepmatched_FT_VPS_copy (LUOC40VPS_*; exploratory)": {
+     "n_runs": 3,
+     "batch_size": "128",
+     "grad_accum": "4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "not available",
+     "warmup_steps": "not available",
+     "enc_warmup": "not available",
+     "adam_betas": "not available",
+     "train_steps": "10000",
+     "save_every": "1000",
+     "seeds": "20261034.0;20261035.0;20261036.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available",
+     "repa_lambda_effective": "not available",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "3;4",
+     "first_job_history_utc": "2026-11-10T09:15:53Z",
+     "last_job_history_utc": "2026-11-10T21:20:01Z",
+     "gpu_types": "",
+     "slurm_gpu_hours_sum": "not available",
+     "n_runs_with_gpu_hours": 0
+    },
+    "stepmatched_backbone (LUOC40_bb)": {
+     "n_runs": 1,
+     "batch_size": "128",
+     "grad_accum": "4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "not available",
+     "warmup_steps": "not available",
+     "enc_warmup": "not available",
+     "adam_betas": "not available",
+     "train_steps": "40000",
+     "save_every": "10000",
+     "seeds": "20261016.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available",
+     "repa_lambda_effective": "not available",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "3",
+     "first_job_history_utc": "2026-11-08T02:13:36Z",
+     "last_job_history_utc": "2026-11-11T04:31:33Z",
+     "gpu_types": "NVIDIA A30;NVIDIA H100 PCIe",
+     "slurm_gpu_hours_sum": 12.1,
+     "n_runs_with_gpu_hours": 1
+    },
+    "stepmatched_backbone_VPS_copy (LUOC40_bb_vps; exploratory)": {
+     "n_runs": 1,
+     "batch_size": "128",
+     "grad_accum": "4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "not available",
+     "warmup_steps": "not available",
+     "enc_warmup": "not available",
+     "adam_betas": "not available",
+     "train_steps": "40000",
+     "save_every": "10000",
+     "seeds": "20261016.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "not available",
+     "repa_lambda_effective": "not available",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "1",
+     "first_job_history_utc": "2026-11-08T19:20:56Z",
+     "last_job_history_utc": "2026-11-08T19:30:44Z",
+     "gpu_types": "",
+     "slurm_gpu_hours_sum": "not available",
+     "n_runs_with_gpu_hours": 0
+    },
+    "warm_FT (WFT, WFT^PE; NOFM_W/PEINIT_W FT)": {
+     "n_runs": 14,
+     "batch_size": "128;32",
+     "grad_accum": "16.0;4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "8e-05",
+     "warmup_steps": "0.0",
+     "enc_warmup": "0.0",
+     "adam_betas": "[0.9, 0.99]",
+     "train_steps": "10000",
+     "save_every": "1000",
+     "seeds": "20261034.0;20261035.0;20261036.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "pe_spatial_s16;vits14",
+     "repa_lambda_effective": "0.0",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "8 values: 1;10;2;3;4;6;...",
+     "first_job_history_utc": "2026-11-04T09:05:32Z",
+     "last_job_history_utc": "2026-11-11T09:02:49Z",
+     "gpu_types": "NVIDIA A30;NVIDIA A30;NVIDIA A40;NVIDIA RTX A4000;NVIDIA A30;NVIDIA RTX A4000;NVIDIA A30;NVIDIA RTX A4000;NVIDIA RTX PRO 6000 Blackwell Server Edition;NVIDIA H100 PCIe",
+     "slurm_gpu_hours_sum": 99.1,
+     "n_runs_with_gpu_hours": 14
+    },
+    "warm_backbone (NOFM_W, PEINIT_W)": {
+     "n_runs": 2,
+     "batch_size": "64",
+     "grad_accum": "8.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "0.0002",
+     "warmup_steps": "0.0",
+     "enc_warmup": "200.0",
+     "adam_betas": "[0.9, 0.99]",
+     "train_steps": "40000",
+     "save_every": "10000",
+     "seeds": "20261016.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "pe_spatial_s16;vits14",
+     "repa_lambda_effective": "0.0",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "3;4",
+     "first_job_history_utc": "2026-11-03T15:09:46Z",
+     "last_job_history_utc": "2026-11-04T18:53:48Z",
+     "gpu_types": "NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "slurm_gpu_hours_sum": 28.9,
+     "n_runs_with_gpu_hours": 2
+    },
+    "warm_backbone_2nd_seed (NOFM_W2/PEINIT_W2)": {
+     "n_runs": 1,
+     "batch_size": "128",
+     "grad_accum": "4.0",
+     "learning_rate": "8e-05",
+     "enc_lr": "0.0002",
+     "warmup_steps": "0.0",
+     "enc_warmup": "200.0",
+     "adam_betas": "[0.9, 0.99]",
+     "train_steps": "40000",
+     "save_every": "10000",
+     "seeds": "20261017.0",
+     "ema_decay": "0.995",
+     "max_grad_norm": "1.0",
+     "amp": "True",
+     "encoder": "pe_spatial_s16",
+     "repa_lambda_effective": "0.0",
+     "lora_rank": "not available",
+     "lora_alpha": "not available",
+     "lora_targets": "not available",
+     "selected_milestones": "not available",
+     "first_job_history_utc": "2026-11-09T22:11:20Z",
+     "last_job_history_utc": "2026-11-11T16:20:36Z",
+     "gpu_types": "NVIDIA A30;NVIDIA H100 PCIe",
+     "slurm_gpu_hours_sum": 0.0,
+     "n_runs_with_gpu_hours": 1
+    }
+   },
+   "note": "every value is read from the run_config.json of each run (one row per run with path and sha256 in supp_recipes_runs_v11.csv); several values in one cell mean the family holds runs with different settings (e.g. batch 128 x accumulation 4 and 32 x 16, both 512 sequences per step); urdu_share in e0-type configs is an argument default and is used only when replay_npz is set",
+   "source": [
+    {
+     "file": "supp_recipes_families_v11.csv",
+     "sha256": "22ed76bda6fb028fd3ccdde62581afff7dabd3a89eee701833abc54042c78827",
+     "note": "table in this facts pack"
+    },
+    {
+     "file": "supp_recipes_runs_v11.csv",
+     "sha256": "3e39a5bc294056e0d00e1f26a4b3bc685964b99b6e1a48859601a0dac2ec77fa",
+     "note": "table in this facts pack"
+    }
+   ]
+  },
+  "lr_schedule": {
+   "value": {
+    "fmdx_bb_train": "Adam, two parameter groups (UNet; encoder+heads+projector); lr = base_lr x min(1, (step+1)/warmup) when warmup > 0, else constant base_lr; no decay",
+    "code_line_385": "g[\"lr\"] = g[\"base_lr\"] * min(1.0, (step + 1) / g[\"warmup\"]) if g[\"warmup\"] else g[\"base_lr\"]",
+    "e0_type_trainer": "not available (run_config.json of LUOC40, comp_p01, LUOFT and M5 runs has learning_rate 8e-05 and no scheduler or warm-up key; the trainer source under repos/nagamatsu was not read)"
+   },
+   "source": [
+    {
+     "path": "$U/exp/FMD/xs/code/fmdx_backbone_v1/bb_train.py",
+     "sha256": "af64abb2c94f16bea965ac1bcc9286de23865fa02443242af3b9b89d28d41450",
+     "mtime_utc": "2026-11-03T14:05:30Z"
+    }
+   ]
+  },
+  "lora": {
+   "value": {
+    "rank": 16,
+    "alpha": 16,
+    "targets": [
+     "cross,attn,linear"
+    ],
+    "dropout": "not available (the string \"dropout\" does not occur in sma_model.py; make_moe takes rank, alpha, targets, gate_hidden, gate_feat; the wrapped LoRA layer class lives in the D2 MoE code tarball exp/RQF/admin/d2moe_code_9a020b75.tgz, not read)",
+    "make_moe_line_53": "def make_moe(kind, unet, rank=16, alpha=16.0, targets=(\"cross\", \"attn\", \"linear\"), gate_hidden=128, gate_feat=\"deepest\"):",
+    "learning_rate": "0.0001",
+    "prereg_line": " - SM-A: frozen backbone + one LoRA adapter (rank 16 on the D2 projection set) trained on the target subset only, 10,000 steps; at test the ScriptCNN router (script_clf.pt sha 22bb8802, threshold 0.5) enables the adapter on RTL-routed units. Urdu only (the router has no class for held-out targets)."
+   },
+   "source": [
+    {
+     "path": "$U/exp/RQF/code/sm_v1/sma_model.py",
+     "sha256": "0b9de4995a0a8158dd28aba446ecc7ba71dc8131356208cd58ce926c5a959e38",
+     "mtime_utc": "2026-11-07T20:55:07Z"
+    },
+    {
+     "path": "$U/exp/RQF/plans/PREREG_RQF_amendment_A2_2026-11-07.md",
+     "sha256": "bface42b3f50ba963494b214873789f64bafd17186053e8b42fec42857d4ecb7",
+     "mtime_utc": "2026-11-07T20:37:09Z"
+    },
+    {
+     "file": "supp_recipes_runs_v11.csv",
+     "sha256": "3e39a5bc294056e0d00e1f26a4b3bc685964b99b6e1a48859601a0dac2ec77fa",
+     "note": "table in this facts pack"
+    }
+   ]
+  },
+  "selected_checkpoints": {
+   "value": "per run in supp_recipes_runs_v11.csv (selected_milestone_txt = eval/best_milestone.txt, selected_milestone_selection_json = eval/selection.json); fine-tunes select on OUHD-L val1000 (E0 rule: lowest mean native LDTW, DDIM-50, seed 0), backbones on the four val250 sets",
+   "source": [
+    {
+     "file": "supp_recipes_runs_v11.csv",
+     "sha256": "3e39a5bc294056e0d00e1f26a4b3bc685964b99b6e1a48859601a0dac2ec77fa",
+     "note": "table in this facts pack"
+    },
+    {
+     "path": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+     "sha256": "be563cdfa038d76a216e14a0a251a94d1a894c25bf38b5b58f159b993d5d37ab",
+     "mtime_utc": "2026-11-08T08:48:48Z",
+     "lines": {
+      "226": "- (e) Urdu p01 FT = the COMP-p01 recipe of A4.1 exactly (init = the selected backbone milestone, model + EMA; frame identity; 10,000 steps, save every 1,000; E0-rule selection on val1000 seed 0), training seed 20261034, no FM loss. This is the recipe the COMP-p01 comparators ran (their selected milestones are 3,000-4,000 steps). Primary sampling is on the VPS RTX 4090 (A2 device rule), DDIM-50, eta 0, EMA, sampling seeds 0-2. Preds sampled on other devices are secondary and are reported only."
+     }
+    }
+   ]
+  },
+  "fm_screen": {
+   "value": {
+    "n_models_in_roster": 116,
+    "status_counts": {
+     "FAIL": 85,
+     "PASS_XS": 19,
+     "PASS_URDU_ONLY": 6,
+     "PENDING": 6
+    },
+    "n_models_with_screen_rows": 110,
+    "sets": [
+     "casia_en_val250",
+     "casia_zh_val250",
+     "hpl_tamil_val250",
+     "iam_val250",
+     "ouhdl_val1000",
+     "unipen_de_tr3927"
+    ],
+    "probe_settings": {
+     "28": "Probe grid G = the FM's native token grid if it is 14x14 (patch 16 at 224) or 16x16 (patch 14 at 224); any other native grid is mapped to 16x16. Grid mapping rule (features only): `F.interpolate(mode='bilinear', align_corners=False, antialias=True)`. Targets are computed directly on G from the trajectory (no resampling of targets).",
+     "67": "- Screening set: val1000 only. 5 writer-disjoint folds inside val1000 (`common.writer_folds`: writers ordered by unit count, ties by a default_rng(20261103) permutation, each assigned to the fold with the fewest units). Each unit is scored by the probe trained on the other four folds. Urdu test, gold and the six test sets are not touched by any FMD step before phase 5.",
+     "69": "- Linear probe: Linear(D+2, 12) (heads T0 1 | T1 8 | T2 1 | T3 1 | T4 1 with sigmoid), loss BCE + CE + BCE + BCE + MSE (labelled tokens only for T1/T4), AdamW lr 1e-3, weight decay 1e-4, 20 epochs, token batches 4,096.",
+     "70": "- Attentive probe: Linear(D+2, 128) + fixed 2-D sin-cos embedding -> one pre-norm TransformerEncoderLayer (d 128, 4 heads, ff 256, dropout 0) -> LayerNorm -> Linear(128, 12); AdamW lr 3e-4, wd 1e-4, 20 epochs, 32 units per batch.",
+     "72": "- Gate rows use the LINEAR probe on the pre-named gate layer. Attentive-probe and non-gate-layer rows are reported with gate_role 'info'."
+    },
+    "probe_code_HP_line_37_38": {
+     "37": "HP = dict(linear=dict(lr=1e-3, wd=1e-4, epochs=20, batch_tokens=4096),",
+     "38": "          attn=dict(lr=3e-4, wd=1e-4, epochs=20, batch_units=32, d=128, heads=4, ff=256))"
+    },
+    "layers_and_grids": "per model in supp_fm_screen_roster_v11.csv (columns layers, probes, grids, tasks)",
+    "hf_repo_not_available_for": [
+     "cleandift-sd15",
+     "cleandift-sd21",
+     "inkfm",
+     "inksight_small_p",
+     "sd1.5-dift",
+     "sd2.1-dift"
+    ]
+   },
+   "source": [
+    {
+     "file": "supp_fm_screen_roster_v11.csv",
+     "sha256": "5189b939bdf69d9fc3afbd0ba6dbfc1f46016226885e55277863a360b214ca59",
+     "note": "table in this facts pack"
+    },
+    {
+     "artifact": "fmdx_gate_read.csv",
+     "version": "4531786f-7d6c-4d25-8bab-f337fd87f737",
+     "sha256": "28a8b0c8f2aa1a3dd656859af0e5b71395d0edd08d0723379be41b80144d040d"
+    },
+    {
+     "artifact": "fmdx_screen_table.csv",
+     "version": "bcefeaef-2be6-457f-a049-b883c47dbe4e",
+     "sha256": "f819661d3d1a0194ea3de1e4be150a186e5e6aa5cd76a7bfb1c8490cb1cf885b"
+    },
+    {
+     "path": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+     "sha256": "be563cdfa038d76a216e14a0a251a94d1a894c25bf38b5b58f159b993d5d37ab",
+     "mtime_utc": "2026-11-08T08:48:48Z"
+    },
+    {
+     "path": "$U/exp/FMD/code/fmd_harness_v1/fmd_harness/probe.py",
+     "sha256": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+     "mtime_utc": "2026-11-03T01:22:33Z"
+    },
+    {
+     "path": "$U/exp/FMD/xs/weights/MANIFEST_v2.json",
+     "sha256": "c5718496cc0698b6dcacd94dd7eb2fb870c91a047b247e89ebb496e1db1a0ebf",
+     "mtime_utc": "2026-11-03T20:58:26Z"
+    },
+    {
+     "path": "$U/exp/FMD/weights/MANIFEST.json",
+     "sha256": "4e921b874863edde978562b1b3cfe225f52b08012dac9361e8e3c84757eb1653",
+     "mtime_utc": "2026-11-03T01:26:50Z"
+    }
+   ]
+  },
+  "preprocessing": {
+   "value": {
+    "canvas_and_encoding": "Ink on the 64x64 evaluation canvas (uhwr_eval.fit_transform_unit: bbox fitted into 56x56, centred, 4 px margin, y down, x not mirrored). CASIA / Tamil raw ink first passes uhwr_eval.clean_ink (D2 UF.to_eval_space 'isolated'); IAM and OUHD-L arrays are taken unchanged from data/d2_v2/iam and data/ouhdl_e0_v3. Target `seq` = e0_adapter.encode: per-stroke 1 px arc-length resampling, step x1.05 until <= 320 points (no truncation), Nagamatsu [x, y, pen, eos]. Condition `cond_rendered` = e0_adapter.render_condition (2 px anti-aliased, 64x64, black on white uint8). `sample_ids` = writer key `<script>:<writer>` (e0_score.py rows then carry writer clusters); `writer_ids` = integer index of the sorted writer keys within the file; `scripts` = script tag.",
+    "e0_adapter_docstring": {
+     "6": "  coords : float tensor (n, 4) = [x, y, pen, eos], x/y in [-1, 1],",
+     "7": "           pen = -1 on the LAST point of each stroke (+1 elsewhere),",
+     "15": "  * Target sequence: every stroke resampled at a uniform arc-length step (uhwr_eval",
+     "16": "    resample_ink_step) of 1.0 px of the evaluation canvas; if the unit then has > 320 points the",
+     "17": "    step is increased (x1.05 per try) until it fits, so no unit is truncated.  Single-point /",
+     "19": "    (x_n = 2 x / 64 - 1, same pen/eos convention as the repo), so predictions map back to",
+     "20": "    evaluation pixels exactly with uhwr_eval.from_normalized."
+    },
+    "length_stats_note": "n_points_1px = points after 1 px per-stroke resampling before any step growth; n_seq = stored sequence length (<= 320); step = resampling step used (1.0 unless n_points_1px > 320). Computed on the sampled units (train = the 20k training sample of each script). OUHD-L train arrays carry no GT ink: for its units with step > 1 the 1 px count is re-estimated from the decoded sequence (n1px_exact_units says how many are exact).",
+    "share_of_units_longer_than_320_points_at_1px": {
+     "casia_zh/train": "0.462",
+     "casia_zh/val": "0.468",
+     "casia_en/train": "0.002",
+     "casia_en/val": "0.000",
+     "hpl_tamil/train": "0.008",
+     "hpl_tamil/val": "0.020",
+     "iam/train": "0.001",
+     "iam/val": "0.000",
+     "ouhdl/train": "0.001",
+     "ouhdl/val": "0.000"
+    },
+    "max_step": {
+     "casia_zh/train": "2.786",
+     "casia_zh/val": "1.796",
+     "casia_en/train": "3.920",
+     "casia_en/val": "1.000",
+     "hpl_tamil/train": "1.629",
+     "hpl_tamil/val": "1.158",
+     "iam/train": "1.477",
+     "iam/val": "1.000",
+     "ouhdl/train": "4.322",
+     "ouhdl/val": "1.000"
+    }
+   },
+   "note": "resampling-step rule: 1 px arc-length step per stroke; if the unit has more than 320 points the step is multiplied by 1.05 until it fits (no truncation); coordinates x_n = 2x/64 - 1 in [-1, 1]; pen = -1 on the last point of each stroke, +1 elsewhere; eos channel; condition image 64x64, 2 px anti-aliased, black on white",
+   "source": [
+    {
+     "path": "$U/data/m5_multiscript_v1/DATA_CARD.md",
+     "sha256": "06b579ddc19a27bd4ac50622fe372fa6337e70406139c48d79fde52d735947ee",
+     "mtime_utc": "2026-10-22T21:55:53Z"
+    },
+    {
+     "path": "$U/e0/code_4cd40f57/e0_adapter.py",
+     "sha256": "83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10",
+     "mtime_utc": "2026-10-16T01:13:42Z"
+    },
+    {
+     "file": "supp_preprocessing_length_stats_v11.csv",
+     "sha256": "78b1fa8b7ada59bad97350ed7ef494665ab49cdef13ff3bd72a1882e97503c2a",
+     "note": "table in this facts pack"
+    }
+   ]
+  },
+  "baseline_inputs": {
+   "value": {
+    "inksight_other_canvas": "Table 7 \"other canvas\" = the 256-px f=4 InkSight crops of job c60d97fe (crops_v3); for the canvas-matched run J06 they are resized to 224 px (PIL BILINEAR) and the 224-px InkBridge render is given to InkSight",
+    "inksight_j06_prep_docstring": {
+     "3": "(1) crops_r224/<uid>.png : the 224-px InkBridge render (fmd_render224_test.npz img224) of every OUHD-L test unit, input for InkSight.",
+     "4": "(2) g1canvas_render224.npz (unit_ids, img224): the 256-px f=4 InkSight crops of G1 job c60d97fe (Table 7 'other canvas') resized to 224 px",
+     "5": "    (PIL BILINEAR with its built-in reducing filter), input for the InkBridge samplers."
+    },
+    "trace": {
+     "repo": "https://github.com/Tahlor/simple_hwr",
+     "commit": "fe8998c01ef7e6e9a2db88a04cd9f5f610a399b1",
+     "working_tree_modified": false,
+     "local_patches": [
+      "visdom stubbed in sys.modules (training-plot import only)",
+      "stroke_recovery.resample re-implemented as resample_compat with the list-wrapped boolean index unwrapped for numpy>=1.23; otherwise identical"
+     ],
+     "L4_note": "TRACE eval-space GT = fit_transform_line(clean_ink(GT), 64, 4) equals L4 GT point-for-point on every line (gt_check_L4_vs_TRACE.csv); uhwr_f4 input = uhwr_eval.render_image at f = 4, 8 px, antialiased = L4 render_input; trace_render input does not depend on the canvas",
+     "L4_trace_inference": "not re-run; predictions reused from exp/TRACE (Slurm 24516890, TRACE github Tahlor/simple_hwr fe8998c01ef7e6e9a2db88a04cd9f5f610a399b1, weights sha256 0a5bb3c68567b759941e8f35d86e9615c61e958a32051c450a2087623501278b)"
+    },
+    "pen_net": {
+     "official_repo": "https://github.com/ChenZhounan/PEN-Net",
+     "official_commit": "03bc59199f47d34e6df09b1ecdb956bbc284bd4a",
+     "official_code_status": "not runnable as released: train.py builds model.Net_tr_2d (absent from model.py); config.py, datasets/data_utils.py, soft_dtw_cuda.py, visualization.py, iam/hindi/japanese loaders are missing; no weights; no licence file. Used as architecture reference only.",
+     "seeds": {
+      "train_seed": 20261016,
+      "data_order": "epoch e: np.random.default_rng(seed + e).permutation(N), drop_last",
+      "decoding": "greedy arg-max (deterministic, no sampling seed)",
+      "val_subset_seed": 0,
+      "bootstrap_seed": 0,
+      "bootstrap_B": 2000
+     }
+    }
+   },
+   "source": [
+    {
+     "path": "$U/exp/RV10/code/j06_prep.py",
+     "sha256": "867cee557da7d8256c5db5a06b80e52d73c7eb85d996942a31e9d108e9951248",
+     "mtime_utc": "2026-11-15T11:21:46Z"
+    },
+    {
+     "path": "$U/exp/RV10/J06/g1canvas_render224.npz.meta.json",
+     "sha256": "beeb39a82d3fbd8bdb6b233a5ffefc0f029f78fff9310e8f43f9b87cf57ac349",
+     "mtime_utc": "2026-11-15T11:32:24Z"
+    },
+    {
+     "path": "$U/exp/TRACE/PROVENANCE_TRACE.json",
+     "sha256": "7ac2939304cdf6a7f588875ed42b256e8398aa2e341662468f702e71635c0fad",
+     "mtime_utc": "2026-10-20T21:39:02Z"
+    },
+    {
+     "path": "$U/exp/L4_TRACE/PROVENANCE_L4_TRACE.json",
+     "sha256": "e8f475f1df640ca8fb3e4e91546f0ec59ad60104660096e9469b9ed56a0bb3ff",
+     "mtime_utc": "2026-10-21T09:26:38Z"
+    },
+    {
+     "path": "$U/exp/PENNET/PROVENANCE_PENNET.json",
+     "sha256": "d0b38f0b232a8255fc3a9ef46291a07ce30924ba9525575d8c1195a3e152ab97",
+     "mtime_utc": "2026-10-23T00:48:41Z"
+    },
+    {
+     "path": "$U/exp/FMD/data/inksight_existing_test_outputs_check.json",
+     "sha256": "9dc61bdd35b1e7bd3faf7531b12226596e152ba68f85bf050e4588c524838ca6",
+     "mtime_utc": "2026-11-03T01:33:59Z"
+    }
+   ]
+  },
+  "gpu_hours": {
+   "value": {
+    "FM_scratch_backbone (<fm>_S; not in paper tables)": {
+     "slurm_gpu_hours_sum": 0.0,
+     "n_runs_with_record": 2,
+     "n_runs": 2
+    },
+    "FMguided_warm_FT (WFT^FM)": {
+     "slurm_gpu_hours_sum": 67.0,
+     "n_runs_with_record": 10,
+     "n_runs": 10
+    },
+    "FMguided_warm_backbone (<fm>_W)": {
+     "slurm_gpu_hours_sum": 320.7,
+     "n_runs_with_record": 14,
+     "n_runs": 14
+    },
+    "backbone_leave_Urdu_out (f_not_ur; M5 luo)": {
+     "slurm_gpu_hours_sum": 29.2,
+     "n_runs_with_record": 1,
+     "n_runs": 1
+    },
+    "joint_model (f_all; M5 joint)": {
+     "slurm_gpu_hours_sum": 30.0,
+     "n_runs_with_record": 1,
+     "n_runs": 1
+    },
+    "plain_FT_10pct_30pct (FT; LUOFT_p10_*, M5 ft/p*)": {
+     "slurm_gpu_hours_sum": 71.5,
+     "n_runs_with_record": 7,
+     "n_runs": 7
+    },
+    "plain_FT_1pct (FT1%; comp_p01_identity_*)": {
+     "slurm_gpu_hours_sum": 13.8,
+     "n_runs_with_record": 2,
+     "n_runs": 3
+    },
+    "replay_single_model (RP; SMR_*)": {
+     "slurm_gpu_hours_sum": 225.5,
+     "n_runs_with_record": 31,
+     "n_runs": 31
+    },
+    "routed_adapter (AD; SMA_*)": {
+     "slurm_gpu_hours_sum": 247.3,
+     "n_runs_with_record": 32,
+     "n_runs": 32
+    },
+    "stepmatched_FT (SFT; LUOC40_p*)": {
+     "slurm_gpu_hours_sum": 42.8,
+     "n_runs_with_record": 5,
+     "n_runs": 5
+    },
+    "stepmatched_FT_VPS_copy (LUOC40VPS_*; exploratory)": {
+     "slurm_gpu_hours_sum": "not available",
+     "n_runs_with_record": 0,
+     "n_runs": 3
+    },
+    "stepmatched_backbone (LUOC40_bb)": {
+     "slurm_gpu_hours_sum": 12.1,
+     "n_runs_with_record": 1,
+     "n_runs": 1
+    },
+    "stepmatched_backbone_VPS_copy (LUOC40_bb_vps; exploratory)": {
+     "slurm_gpu_hours_sum": "not available",
+     "n_runs_with_record": 0,
+     "n_runs": 1
+    },
+    "warm_FT (WFT, WFT^PE; NOFM_W/PEINIT_W FT)": {
+     "slurm_gpu_hours_sum": 99.1,
+     "n_runs_with_record": 14,
+     "n_runs": 14
+    },
+    "warm_backbone (NOFM_W, PEINIT_W)": {
+     "slurm_gpu_hours_sum": 28.9,
+     "n_runs_with_record": 2,
+     "n_runs": 2
+    },
+    "warm_backbone_2nd_seed (NOFM_W2/PEINIT_W2)": {
+     "slurm_gpu_hours_sum": 0.0,
+     "n_runs_with_record": 1,
+     "n_runs": 1
+    }
+   },
+   "note": "sum over Slurm jobs listed in each run job_history.txt (elapsed x allocated GPUs; includes selection and sampling stages and failed/requeued attempts; sacct -X gives the latest start of a requeued job); VPS and CLUSTER-B runs have no Slurm record here; per run in supp_recipes_runs_v11.csv",
+   "source": [
+    {
+     "path": "$U/exp/RV10/admin/facts_v11/sacct_runs.psv",
+     "sha256": "c8e9bbfa30ba6b81efb1ae276647d9fff4fab0391724f7519eb62522f826dbdf"
+    },
+    {
+     "path": "$U/exp/RV10/admin/facts_v11/sacct_facts_jobs_final.psv",
+     "sha256": "ea16707a6f9e36e46a17b6fc1a380066c4a1f848caaaf4d03b8bbe91224a975d",
+     "mtime_utc": "2026-11-15T13:50:05Z"
+    }
+   ]
+  }
+ },
+ "L11_metric_definitions": {
+  "evaluator": {
+   "value": {
+    "name": "uhwr_eval",
+    "version": "0.3.1",
+    "clusterA_path": "$U/shared/uhwr_eval-0.3.1",
+    "release_tarball": "$U/shared/uhwr_eval-0.3.1/release/uhwr_eval-0.3.1.tar.gz",
+    "tarball_sha256": "f8d967f56726f77f7384d7a78a2617ef5da6feeb00e5c1fc46cbc4666b244dc8",
+    "written_utc": "2026-10-20T21:21:44Z",
+    "git_commit": "not available (the release is a tarball, not a git checkout)",
+    "wrapped_upstream_metrics": "* `uhwr_eval/_nagamatsu_metrics.py` is `src/utils/metrics.py` from hirokinaga/Handwriting-Trajectory-Recovery-with-Diffusion-Models, commit 7c5cf62392e36cdc9f86445b4acb16c1e9198c68, copied byte-for-byte (sha256 7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4; checked at runtime by",
+    "py_file_sha256": {
+     "tests_marks.py": "2b7c33ece9c8082c7ddce59838ecbb9aa3215a32c58d8129f8cf4e25d8fdf088",
+     "tests_timing.py": "01f260c417e01faa21f9523f87f007dcf5406f54efc3a02cd726fb8b8ebee300",
+     "uhwr_eval/__init__.py": "1618fe4713334c9970453656a74bff182f32209a11804d7712833dabd573861a",
+     "uhwr_eval/marks.py": "aa215a6438c6aaa78dbad6c31f5e28b363e35dc05b1a82ac5e469e1d6776f765",
+     "uhwr_eval/metrics.py": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+     "uhwr_eval/_nagamatsu_metrics.py": "7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4",
+     "uhwr_eval/render.py": "49ff4cf1dc0f90bf784cc459fc2c1e501ec1482a3f50f6b48e20909d679966eb",
+     "uhwr_eval/strokes.py": "1b3ef8505b7cf8cdcfa2d95191ab475582e16316bf18fd7a0d5cf70ed9e152b7",
+     "uhwr_eval/timing.py": "3e86430e5482405eacdf44990646bc8a3f56b7ec674b2b4a8f4e37ed90bfb787",
+     "uhwr_eval/v2metrics.py": "483611923986650b6d6983ced00264fd39e0cba3a43149b32f3bf878643f2d43",
+     "uhwr_eval/validate_toy.py": "3e386e2603ac2f47a9d25fb6e7be8e51a2d6390ff4831c3e157015064aa5fd0b"
+    }
+   },
+   "source": [
+    {
+     "artifact": "PROVENANCE_uhwr_eval_0.3.1.json",
+     "version": "49e4a2be-45ed-47be-96b3-07d5f746f98a",
+     "sha256": "1de4c6a0dff94530c855012aecfc3e64324463ce2a999797ced2b077160e6878"
+    },
+    {
+     "artifact": "uhwr_eval-0.3.1.tar.gz",
+     "version": "d3c84644-ea57-4791-9a80-316b6dc76f38",
+     "sha256": "f8d967f56726f77f7384d7a78a2617ef5da6feeb00e5c1fc46cbc4666b244dc8"
+    },
+    {
+     "path": "$U/exp/RV10/admin/facts_v11/uhwr_eval_031_clusterA_sha256.txt",
+     "sha256": "bbc9d4377cd57bb507b5bbd9b7a8950a3c3e7b3a841c298d4744726c54ab9018"
+    },
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/README.md",
+     "sha256": "8f4ff5e466f90efb80e028ce110afb5b3175bae30725f11340e961ca5ff9f782",
+     "mtime_utc": "2026-10-20T20:54:02Z"
+    },
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/pyproject.toml",
+     "sha256": "8e903845cee77b47d226e37d3e18145aa4fb2339989fe04f4f906039257b897b",
+     "mtime_utc": "2026-10-20T20:54:02Z"
+    }
+   ]
+  },
+  "stroke_matching": {
+   "value": "match_strokes: each GT and predicted stroke is rendered as a mask of thickness 5 px on the canvas; one-to-one Hungarian assignment maximising mask IoU; pairs with IoU < 0.5 are discarded. Used by strict order, Kendall tau and direction.",
+   "source": [
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py",
+     "sha256": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+     "mtime_utc": "2026-10-20T20:54:02Z"
+    }
+   ]
+  },
+  "strict_order": {
+   "value": "strict_order_acc = 1 iff n_pred == n_gt and every GT stroke is matched and the matched predicted indices are strictly increasing in GT order; else 0 (per unit).",
+   "source": [
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py",
+     "sha256": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+     "mtime_utc": "2026-10-20T20:54:02Z"
+    }
+   ]
+  },
+  "kendall_tau": {
+   "value": "scipy kendalltau (tau-b) between GT stroke indices and matched predicted stroke indices; defined only with at least 2 matched strokes, else NaN (also NaN if not finite). tau_cp in the tables = units with at least 2 GT strokes, undefined tau set to 0.",
+   "source": [
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py",
+     "sha256": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+     "mtime_utc": "2026-10-20T20:54:02Z"
+    },
+    {
+     "path": "$U/exp/RQF/code/rq3_v1/loop_tables.py",
+     "sha256": "5f59016518803745f9a91cecac5d1ff1ddeee260899be45c2a5517f977302ca5"
+    }
+   ]
+  },
+  "direction": {
+   "value": "direction_acc = share of matched strokes with GT start-to-end chord >= 2.0 px whose predicted first point is nearer to the GT first point than to the GT last point; NaN when no matched stroke is eligible.",
+   "source": [
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py",
+     "sha256": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+     "mtime_utc": "2026-10-20T20:54:02Z"
+    }
+   ]
+  },
+  "penup_f1_v2": {
+   "value": "penup_endpoint_f1(gt, pr, tau=3.0): cost between a GT and a predicted stroke = min over the two orientations of the larger of the two end-point distances; Hungarian assignment on this cost; TP = assigned pairs with cost <= 3.0 px; F1 = 2 TP / (n_gt + n_pred); 0 if either side has no stroke. Invariant to stroke order and stroke direction.",
+   "source": [
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/v2metrics.py",
+     "sha256": "483611923986650b6d6983ced00264fd39e0cba3a43149b32f3bf878643f2d43",
+     "mtime_utc": "2026-10-20T20:54:02Z"
+    }
+   ]
+  },
+  "aiou": {
+   "value": "adaptive_iou (Nagamatsu metrics.py, unchanged): GT rendered with thickness 2, prediction with thickness 1 on the 64x64 canvas; the prediction mask is dilated with a 3x3 kernel 0 to 4 times and the maximum IoU over the 5 masks is returned (score() defaults aiou_gt_thickness=2, aiou_max_dilation=4).",
+   "source": [
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/_nagamatsu_metrics.py",
+     "sha256": "7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4",
+     "mtime_utc": "2026-10-19T16:24:08Z"
+    },
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py",
+     "sha256": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+     "mtime_utc": "2026-10-20T20:54:02Z"
+    }
+   ]
+  },
+  "protocol": {
+   "value": "native protocol: metrics on the stored points; standardised protocol resamples both sides at step 1.0 px first; tables use native.",
+   "source": [
+    {
+     "path": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/metrics.py",
+     "sha256": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+     "mtime_utc": "2026-10-20T20:54:02Z"
+    }
+   ]
+  },
+  "bootstrap": {
+   "value": {
+    "tables_5_6_and_L14": "B=2000, numpy default_rng(20261103), writer clusters (units on german_onhw_all), 95 % percentile",
+    "selector_tables_R3": "B=2000, default_rng(20261029), writer clusters on all sets, 95 % percentile",
+    "pen_net_tables": {
+     "train_seed": 20261016,
+     "data_order": "epoch e: np.random.default_rng(seed + e).permutation(N), drop_last",
+     "decoding": "greedy arg-max (deterministic, no sampling seed)",
+     "val_subset_seed": 0,
+     "bootstrap_seed": 0,
+     "bootstrap_B": 2000
+    },
+    "fm_probe_folds": "writer-disjoint 5 folds, default_rng(20261103); probe seeds 0-2"
+   },
+   "source": [
+    {
+     "path": "$U/exp/FMD/xs/code/fmdx_monitor_v1/build_tables_a9.py",
+     "sha256": "df1d4ec5f31cd619f969372270d93e8990ec5208093953fdd4bcbfabb6ba2244",
+     "mtime_utc": "2026-11-07T15:24:35Z",
+     "lines": {
+      "6": "(guided - comparator) over units present in both; 95 % percentile interval of B = 2,000 writer-cluster bootstrap resamples,",
+      "7": "numpy.random.default_rng(20261103), algorithm identical to loop_tables.boot_idx / fmd_harness.stats.boot_idx (writers drawn with replacement, all their",
+      "8": "units enter). german_onhw_all (2 writers): unit-cluster CI (Route A convention).",
+      "18": "B = 2000; SEED = 20261103"
+     }
+    },
+    {
+     "path": "$U/exp/RQF/code/rq3_v1/loop_tables.py",
+     "sha256": "5f59016518803745f9a91cecac5d1ff1ddeee260899be45c2a5517f977302ca5"
+    },
+    {
+     "path": "$U/exp/PENNET/PROVENANCE_PENNET.json",
+     "sha256": "d0b38f0b232a8255fc3a9ef46291a07ce30924ba9525575d8c1195a3e152ab97",
+     "mtime_utc": "2026-10-23T00:48:41Z"
+    },
+    {
+     "path": "$U/exp/FMD/code/fmd_harness_v1/fmd_harness/probe.py",
+     "sha256": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+     "mtime_utc": "2026-11-03T01:22:33Z"
+    }
+   ]
+  }
+ }
+}

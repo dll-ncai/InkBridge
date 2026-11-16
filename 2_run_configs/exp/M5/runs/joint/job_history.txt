@@ -1,0 +1,6 @@
+2026-10-20T22:06:32Z arm_job_start arm=joint steps=100000 save=10000 host=<node> slurm=24517794 restart=0 partition=b200idle cuda_visible=4,5 gpus=[NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;]
+2026-10-20T22:06:32Z train start 2gpu gpus=4,5
+2026-10-21T10:48:13Z train 2gpu finished
+2026-10-21T10:48:14Z training_complete {"status":"complete","completed_at":"20261021T124807+0200","final_step":100000} host=<node> slurm=24517794 restart=0 partition=b200idle cuda_visible=4,5 gpus=[NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;]
+2026-10-21T12:37:25Z selected milestone 9 host=<node> slurm=24517794 restart=0 partition=b200idle cuda_visible=4,5 gpus=[NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;]
+2026-10-21T13:07:37Z arm_job_end host=<node> slurm=24517794 restart=0 partition=b200idle cuda_visible=4,5 gpus=[NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;]

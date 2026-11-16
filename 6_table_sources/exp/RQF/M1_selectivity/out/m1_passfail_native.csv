@@ -1,0 +1,6 @@
+metric,casia_en,casia_zh,iam500,onhw,ouhdl,tamil,unipen_de
+aiou,FAIL,FAIL,FAIL,PASS,FAIL,FAIL,PASS
+direction_acc,FAIL,FAIL,FAIL,PASS,PASS,PASS,FAIL
+kendall_tau,PASS,PASS,PASS,PASS,PASS,PASS,PASS
+penup_f1_v2,FAIL,FAIL,FAIL,FAIL,FAIL,FAIL,FAIL
+strict_order_acc,FAIL,FAIL,FAIL,FAIL,FAIL,FAIL,FAIL

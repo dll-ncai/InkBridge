@@ -1,0 +1,3 @@
+arm_id	regime	encoder	fm	steps	save_every	repa_targets	repa_unit_ids	repa_lambda	pseudo_npz	pseudo_render	pseudo_frac	pe_weights	init_rank	hold_until_pass	lanes	needs	status	note
+NOFM_W2	warm	vits14	-	40000	10000	-	-	0.5	-	-	0	-	1	0	clusterA,clusterB,vps	-	QUEUED	control: student encoder, no FM loss
+PEINIT_W2	warm	pe_spatial_s16	-	40000	10000	-	-	0.5	-	-	0	$U/exp/FMD/xs/weights/pe-spatial-s16-512/PE-Spatial-S16-512.pt	4	0	clusterA,clusterB,vps	-	QUEUED	control: pe-spatial-s16-512 init (FlexiViT 16->14)

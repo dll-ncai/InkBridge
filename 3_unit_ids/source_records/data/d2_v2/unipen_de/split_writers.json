@@ -1,0 +1,49 @@
+{
+ "rule": "M4 unipen_de_split: per contributor (sie, atu), writers in seeded random order; a writer goes to test if the contributor's test strokes stay <= 0.30 of its strokes; stop once >= 0.20",
+ "seed": 20261016,
+ "test_writers": [
+  "DE-A01",
+  "DE-A02",
+  "DE-A05",
+  "DE-A08",
+  "DE-S03",
+  "DE-S04",
+  "DE-S06"
+ ],
+ "train_writers": [
+  "DE-A03",
+  "DE-A04",
+  "DE-A06",
+  "DE-A07",
+  "DE-A09",
+  "DE-A10",
+  "DE-A11",
+  "DE-A12",
+  "DE-A13",
+  "DE-S01",
+  "DE-S02",
+  "DE-S05"
+ ],
+ "writer_int": {
+  "DE-A01": 0,
+  "DE-A02": 1,
+  "DE-A03": 2,
+  "DE-A04": 3,
+  "DE-A05": 4,
+  "DE-A06": 5,
+  "DE-A07": 6,
+  "DE-A08": 7,
+  "DE-A09": 8,
+  "DE-A10": 9,
+  "DE-A11": 10,
+  "DE-A12": 11,
+  "DE-A13": 12,
+  "DE-S01": 15,
+  "DE-S02": 16,
+  "DE-S03": 17,
+  "DE-S04": 18,
+  "DE-S05": 19,
+  "DE-S06": 20
+ },
+ "note": "pseudonymous writer codes; private map on CLUSTER-A only"
+}

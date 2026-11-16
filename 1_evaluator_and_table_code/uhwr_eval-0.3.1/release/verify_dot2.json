@@ -1,0 +1,89 @@
+{
+ "dot2_class_axes_train.json": {
+  "sha_ref": "68c39a7edcf17eb547dd7fffe3cdfdba44da6f49a88c354018e19c88bc922ae2",
+  "sha_new": "68c39a7edcf17eb547dd7fffe3cdfdba44da6f49a88c354018e19c88bc922ae2",
+  "sha_equal": true,
+  "equal_json": true
+ },
+ "dot2_gt_direction_stats.csv": {
+  "sha_ref": "29eea8be4497808e0d62289957374672bdaf221e577a8c817c41978f29fe4926",
+  "sha_new": "29eea8be4497808e0d62289957374672bdaf221e577a8c817c41978f29fe4926",
+  "sha_equal": true,
+  "shape_ref": [
+   104,
+   12
+  ],
+  "shape_new": [
+   104,
+   12
+  ],
+  "n_values": 1248,
+  "n_different": 0,
+  "max_abs_diff": 0.0
+ },
+ "dot2_rescore_per_unit.csv.gz": {
+  "sha_ref": "fca372f59a074c19f7386162427d84dae7a8b0940c176b5cbe583275999e8c61",
+  "sha_new": "f5a3f85b41321acb6e02f4f93dd5ccce40ea7a142717adea99bff212e6e0e89a",
+  "sha_equal": false,
+  "shape_ref": [
+   13218,
+   43
+  ],
+  "shape_new": [
+   13218,
+   43
+  ],
+  "n_values": 568374,
+  "n_different": 211989,
+  "max_abs_diff": 955.4675308782196
+ },
+ "dot2_rescore_pooled_direction.csv": {
+  "sha_ref": "0782a27d97d06fb3468e2af5cd99be1a6a4a025a511e7d34c78f122ae997deb2",
+  "sha_new": "0782a27d97d06fb3468e2af5cd99be1a6a4a025a511e7d34c78f122ae997deb2",
+  "sha_equal": true,
+  "shape_ref": [
+   12,
+   5
+  ],
+  "shape_new": [
+   12,
+   5
+  ],
+  "n_values": 60,
+  "n_different": 0,
+  "max_abs_diff": 0.0
+ },
+ "dot2_rescore_summary.csv": {
+  "sha_ref": "4fd7c16f6c45316634f0f5651fb7070ef5687050d0225815468758e49f680365",
+  "sha_new": "082b644c6947ec13f0a2b889dadc36587170581839a5e1dbe91a027bde98c4fd",
+  "sha_equal": false,
+  "shape_ref": [
+   48,
+   12
+  ],
+  "shape_new": [
+   48,
+   12
+  ],
+  "n_values": 576,
+  "n_different": 14,
+  "max_abs_diff": 3.3306690738754696e-16
+ },
+ "dot2_strokes.csv.gz": {
+  "sha_ref": "083e448048d01b85d211eacc4ff23aab0f8e5206b588faf3fd8cb8781fb340c3",
+  "sha_new": "738022a231455d90ed7528b505d5da09770313d6665fa9cc00416a887251bad9",
+  "sha_equal": false,
+  "shape_ref": [
+   83619,
+   17
+  ],
+  "shape_new": [
+   83619,
+   17
+  ],
+  "n_values": 1421523,
+  "n_different": 0,
+  "max_abs_diff": 0.0
+ },
+ "all_sha_equal": false
+}

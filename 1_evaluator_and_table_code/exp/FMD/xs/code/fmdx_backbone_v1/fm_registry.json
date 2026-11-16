@@ -1,0 +1,60 @@
+{
+ "_note": "Screen extractor modules imported by prep_repa_targets.py (registered into fmd_harness 1.0.1 extract_api, unedited); gate layer = the extractor's gate_layer attribute (A3.3 pre-named) unless 'layer' is given; kw passed to the extractor.",
+ "_pythonpath": [
+  "$U/exp/FMD/code/fmd_ext_encoders",
+  "$U/exp/FMD/code/fmd_ext_xs_encoders",
+  "$U/exp/FMD/code/fmd_ext_diffusion",
+  "$U/exp/FMD/code/fmd_ext_vlm",
+  "$U/exp/FMD/code/fmd_ext_genvlm"
+ ],
+ "_import": [
+  "fmd_ext_encoders",
+  "fmd_ext_xs_encoders",
+  "sd21_dift",
+  "qwen_vlm",
+  "xs_common",
+  "extractors_genvlm",
+  "vlm_extractors"
+ ],
+ "fms": {
+  "sd2.1-dift": {
+   "layer": "t261_up1",
+   "kw": {
+    "micro": 2
+   }
+  },
+  "cleandift-sd21": {
+   "kw": {
+    "micro": 2
+   }
+  },
+  "cleandift-sd15": {
+   "kw": {
+    "micro": 2
+   }
+  },
+  "sd1.5-dift": {
+   "kw": {
+    "micro": 2
+   }
+  },
+  "dinov2-large": {
+   "layer": "last"
+  },
+  "dinov3-vitl16": {
+   "layer": "last"
+  },
+  "siglip2-so400m-patch14-224": {
+   "layer": "last"
+  },
+  "sam2.1-hiera-base-plus": {
+   "layer": "last"
+  },
+  "qwen3-vl-8b-instruct": {
+   "layer": "last"
+  },
+  "qwen3.5-4b": {
+   "layer": "last"
+  }
+ }
+}

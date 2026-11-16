@@ -1,0 +1,491 @@
+{
+ "release": "uhwr_eval 0.3.1",
+ "written_utc": "2026-10-20T21:21:44Z",
+ "location": "$U/shared/uhwr_eval-0.3.1",
+ "tarball": "$U/shared/uhwr_eval-0.3.1/release/uhwr_eval-0.3.1.tar.gz",
+ "tarball_sha256": "f8d967f56726f77f7384d7a78a2617ef5da6feeb00e5c1fc46cbc4666b244dc8",
+ "parents": {
+  "e1v2_0.3.0": {
+   "path": "$U/exp/E1_v2/out/uhwr_eval-0.3.0.tar.gz",
+   "sha256": "a9d0a1e130f11addadc5321e52f5e17989e1eb54d950314a3e344873cce0ed02",
+   "experiment": "E1-v2",
+   "slurm": "smoke 24480475, full 24480679"
+  },
+  "dot2_0.3.0": {
+   "path": "$U/exp/DOT2/code/eval/uhwr_eval-0.3.0.tar.gz",
+   "sha256": "143627cc883bce7646a1d733b08e3402b6bfc25e22e43643f5c7e474c513f6a3",
+   "experiment": "DOT2",
+   "slurm": "smokes 24480432 (failed), 24480638; full 24481418"
+  },
+  "ref_0.2.0": {
+   "path": "$U/exp/EV031/inputs/uhwr_eval-0.2.0.tar.gz",
+   "sha256": "b1664bd3bce3a445dd2bfc06fee3487b534b09b95c2963bcf7575481dc966e8e",
+   "note": "artifact uhwr_eval-0.2.0.tar.gz (version 6dec8ee2), staged; byte-equal to DOT2 code/eval/uhwr_eval-0.2.0 and runs/t22_momna_zenodo/eval/code/uhwr_eval except __pycache__"
+  }
+ },
+ "build": {
+  "script": "$U/exp/EV031/code/build_uhwr_eval_031.py",
+  "script_sha256": "541d823d6afd4c63542477bd5010bd617861966100a7687aca658c02b9630955",
+  "record": {
+   "parents": {
+    "e1v2_0.3.0": "a9d0a1e130f11addadc5321e52f5e17989e1eb54d950314a3e344873cce0ed02",
+    "dot2_0.3.0": "143627cc883bce7646a1d733b08e3402b6bfc25e22e43643f5c7e474c513f6a3",
+    "ref_0.2.0": "b1664bd3bce3a445dd2bfc06fee3487b534b09b95c2963bcf7575481dc966e8e"
+   },
+   "files": {
+    "CHANGELOG.md": {
+     "sha256": "f0cc135321a864c13648ac6ce9c0a0c543f5897402d51537fa0e6ba26f51330c",
+     "same_as_020": false,
+     "same_as_dot2_030": false,
+     "same_as_e1v2_030": false
+    },
+    "README.md": {
+     "sha256": "8f4ff5e466f90efb80e028ce110afb5b3175bae30725f11340e961ca5ff9f782",
+     "same_as_020": false,
+     "same_as_dot2_030": false,
+     "same_as_e1v2_030": false
+    },
+    "metric_registry.csv": {
+     "sha256": "4e9bd0e3058e62cb8f2e6c2994f12cb7224114cfaaf640e867ce3c7a94c47aa8",
+     "same_as_020": true,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": false
+    },
+    "metric_sanity_check.csv": {
+     "sha256": "798af9679785f20686110f97cf5f055371e20e0fb786f1c71a819384ef648ca1",
+     "same_as_020": true,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": false
+    },
+    "pyproject.toml": {
+     "sha256": "8e903845cee77b47d226e37d3e18145aa4fb2339989fe04f4f906039257b897b",
+     "same_as_020": false,
+     "same_as_dot2_030": false,
+     "same_as_e1v2_030": false
+    },
+    "release/uhwr_eval_0.2.0_to_0.3.1.diff": {
+     "sha256": "6022bb5e4cdcba5b821e7f0497cabf69630ae6b05f14fc1005a64b815735d659",
+     "same_as_020": false,
+     "same_as_dot2_030": false,
+     "same_as_e1v2_030": false
+    },
+    "release/uhwr_eval_dot2_0.3.0_to_0.3.1.diff": {
+     "sha256": "7d5b96fafae595d5f6e0feb0e7512e2f58ce5c98ba15a7e68d86d05b4ca9254c",
+     "same_as_020": false,
+     "same_as_dot2_030": false,
+     "same_as_e1v2_030": false
+    },
+    "release/uhwr_eval_e1v2_0.3.0_to_0.3.1.diff": {
+     "sha256": "a94ce2a2a636ff88be7d93e03f5af3e7c8ae02ab05f98d0cc5065edf663ab7b4",
+     "same_as_020": false,
+     "same_as_dot2_030": false,
+     "same_as_e1v2_030": false
+    },
+    "tests_marks.py": {
+     "sha256": "2b7c33ece9c8082c7ddce59838ecbb9aa3215a32c58d8129f8cf4e25d8fdf088",
+     "same_as_020": false,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": false
+    },
+    "tests_timing.py": {
+     "sha256": "01f260c417e01faa21f9523f87f007dcf5406f54efc3a02cd726fb8b8ebee300",
+     "same_as_020": true,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": false
+    },
+    "toy_validation.csv": {
+     "sha256": "8f3be97a02314cd5f1f66c15d4a0e67bbd78c72da8bef9394d85b80ce93ff460",
+     "same_as_020": true,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": false
+    },
+    "uhwr_eval/__init__.py": {
+     "sha256": "1618fe4713334c9970453656a74bff182f32209a11804d7712833dabd573861a",
+     "same_as_020": false,
+     "same_as_dot2_030": false,
+     "same_as_e1v2_030": false
+    },
+    "uhwr_eval/_nagamatsu_metrics.py": {
+     "sha256": "7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4",
+     "same_as_020": true,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": true
+    },
+    "uhwr_eval/marks.py": {
+     "sha256": "aa215a6438c6aaa78dbad6c31f5e28b363e35dc05b1a82ac5e469e1d6776f765",
+     "same_as_020": false,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": false
+    },
+    "uhwr_eval/metrics.py": {
+     "sha256": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+     "same_as_020": false,
+     "same_as_dot2_030": false,
+     "same_as_e1v2_030": true
+    },
+    "uhwr_eval/render.py": {
+     "sha256": "49ff4cf1dc0f90bf784cc459fc2c1e501ec1482a3f50f6b48e20909d679966eb",
+     "same_as_020": true,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": true
+    },
+    "uhwr_eval/strokes.py": {
+     "sha256": "1b3ef8505b7cf8cdcfa2d95191ab475582e16316bf18fd7a0d5cf70ed9e152b7",
+     "same_as_020": true,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": true
+    },
+    "uhwr_eval/timing.py": {
+     "sha256": "3e86430e5482405eacdf44990646bc8a3f56b7ec674b2b4a8f4e37ed90bfb787",
+     "same_as_020": true,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": true
+    },
+    "uhwr_eval/v2metrics.py": {
+     "sha256": "483611923986650b6d6983ced00264fd39e0cba3a43149b32f3bf878643f2d43",
+     "same_as_020": false,
+     "same_as_dot2_030": false,
+     "same_as_e1v2_030": true
+    },
+    "uhwr_eval/validate_toy.py": {
+     "sha256": "3e386e2603ac2f47a9d25fb6e7be8e51a2d6390ff4831c3e157015064aa5fd0b",
+     "same_as_020": true,
+     "same_as_dot2_030": true,
+     "same_as_e1v2_030": true
+    }
+   }
+  }
+ },
+ "code": {
+  "$U/exp/EV031/code/build_uhwr_eval_031.py": {
+   "sha256": "541d823d6afd4c63542477bd5010bd617861966100a7687aca658c02b9630955",
+   "bytes": 10081
+  },
+  "$U/exp/EV031/code/compare_dot2.py": {
+   "sha256": "e8db1c31b30bf110549ecc9f5053e5039fd2ac0b1c9d92042b55c40c21c1b26d",
+   "bytes": 1895
+  },
+  "$U/exp/EV031/code/compare_e1.py": {
+   "sha256": "0d01fcbcc6fa06d55daef97cd1bf24ed626a2599c622e92c84a7f40efdd4b787",
+   "bytes": 2589
+  },
+  "$U/exp/EV031/code/compare_identity.py": {
+   "sha256": "3264860770733cf02f6d5921a7e8baa1efc26d8b8346d11c8812169a6ddef884",
+   "bytes": 1479
+  },
+  "$U/exp/EV031/code/e0_adapter.py": {
+   "sha256": "83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10",
+   "bytes": 5040
+  },
+  "$U/exp/EV031/code/e0_identity.py": {
+   "sha256": "4675611b7460f0865757ac8e998db13cc54b392fc43a380e74484888f3fd54bf",
+   "bytes": 2111
+  },
+  "$U/exp/EV031/code/gate_and_summary.py": {
+   "sha256": "7a565d064aba5a6d586f1292f73659e831e16d4cc3dca91434b188630f542bfe",
+   "bytes": 2311
+  },
+  "$U/exp/EV031/code/make_prov_eval.py": {
+   "sha256": "ea7d24e5ac046216be69a71ce7d2c2acca361528c46564f85dade7dd6b04d872",
+   "bytes": 2604
+  },
+  "$U/exp/EV031/code/registry_031.py": {
+   "sha256": "fd79626ca5cbe215fadf67276408bdd5983a8f812cfe5e936ba3af4d890e990c",
+   "bytes": 551
+  },
+  "$U/exp/EV031/code/release_v31.py": {
+   "sha256": "29d142f1cf634fba99cb304844d8ed483477bd4143c8dd7f5a0794a388822cd9",
+   "bytes": 13542
+  },
+  "$U/exp/EV031/code/run_ev031.sh": {
+   "sha256": "03d07c43081cdbadd739bd3dfbf24f71337a94d0a60250590a0d5dcb778e6d9e",
+   "bytes": 11923
+  },
+  "$U/exp/EV031/inputs/ev031_code.tgz": {
+   "sha256": "dc620a607fb9aeee99f0a4e7ad65b77c3ded162f7ae10d27141a52a3511b2bf4",
+   "bytes": 18144
+  }
+ },
+ "reference_code": {
+  "dot2_code_tarball": {
+   "path": "$U/exp/DOT2/code_DOT2_d2560453.tgz",
+   "sha256": "d2560453f7ad7804fb3467534f7ba52f01a88eff2bed69552991238cd50d86b7"
+  },
+  "e1v2_code_tarball": {
+   "path": "$U/exp/E1_v2/code_E1_v2.tar.gz",
+   "sha256": "08ddfe97300f8a7c4fed90061537d4a49bcb978d4fe74f3eb3950db31cdf53fb",
+   "patch": "lib/uhwr_eval removed from the copy; e1_v2_run.py version assert '0.3.0' -> '0.3.1' (sed, only change)"
+  },
+  "e0_adapter": {
+   "path": "$U/exp/EV031/code/e0_adapter.py",
+   "sha256": "83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10"
+  }
+ },
+ "inputs": {
+  "$U/data/ouhdl_e0_v3/e0_test.npz": {
+   "sha256": "c09560ed07a526614b3342a2fb6b642165f6aab3fffa25876bf1bc7502b7a514",
+   "bytes": 65720223
+  },
+  "$U/runs/e0/e0_v3_rendered_100k_bs512/eval/test_rendered_ms8_ddim50_preds.npz": {
+   "sha256": "8f500e4d6b273dae1c3bb9f2988af0dd26070056e16dcd773c38d08ff86bf3bf",
+   "bytes": 18194809
+  },
+  "$U/runs/e0/e0_v3_rendered_100k_bs512/eval/test_dataset_ms8_ddim50_preds.npz": {
+   "sha256": "077e5c7448c28a1710a5fca804b0665e7a3782476bbb49de4eaaa376d042fa07",
+   "bytes": 18285175
+  },
+  "$U/data/e_bundle_v1/e1_units.pkl": {
+   "sha256": "66005a168f9fd2c8fd2c9ab5a60bdb68a33ed9391c00529b430dadd775959a4f",
+   "bytes": 6907817
+  },
+  "$U/data/e_bundle_v1/PROVENANCE_e_inputs.json": {
+   "sha256": "ef11bf0343446c8824065333cfcd6170983bc469b5b12abdca2d98a8f0548731",
+   "bytes": 7631
+  },
+  "$U/data/ouhdl_ligatures_v3/ligatures_v3_train.csv": {
+   "sha256": "ff788c5fb081af55edfc4dce9068ec5ec1ea7e9b0f4a577f846f1c8380ed4f2a",
+   "bytes": 3450166
+  },
+  "$U/data/ouhdl_ligatures_v3/ligatures_v3_train.npz": {
+   "sha256": "62482f11f89e3ed80659d512d8cb5c8152b27bf36cf4b404c0c36e38abc0dbec",
+   "bytes": 95040460
+  },
+  "$U/data/ouhdl_ligatures_v3/ligatures_v3_test.csv": {
+   "sha256": "3eaed4afbfaae95285c78e41b4679920c684ca18d8ef6a743d180f4c05385cb3",
+   "bytes": 446919
+  },
+  "$U/data/ouhdl_ligatures_v3/ligatures_v3_test.npz": {
+   "sha256": "1c08068f78772322e376798c2db8be56f686fa80afac6257f7d51a1e9d094953",
+   "bytes": 12029741
+  },
+  "$U/data/ouhdl_ligatures_v3/lines_v3_test.csv": {
+   "sha256": "ded4ca7dbaf9451d2b476865ac4a94f0a3147aeb630b26d4b3e7fc20f0a099a4",
+   "bytes": 29414
+  },
+  "$U/data/ouhdl_ligatures_v3/PROVENANCE.json": {
+   "sha256": "1d1cc107e88f5aee7fcd25e0048cb1eb45c63c6696e9a6ae5ee89bdb736b9907",
+   "bytes": 5449
+  },
+  "$U/data/gold_lines_v0_sample_ids.txt": {
+   "sha256": "e03954188395c4c587c95727e256ba355ef680fe97aa816a9eae882b093f98f2",
+   "bytes": 252
+  }
+ },
+ "reference_outputs": {
+  "$U/exp/E1_v2/out/e1_v2_scores_per_unit.csv.gz": {
+   "sha256": "af42e143baa22583cd38d3ed88f2188416e0b6651bb00e7101b3eb07d241c17f",
+   "bytes": 5480384
+  },
+  "$U/exp/E1_v2/out/e1_v2_sensitivity.csv": {
+   "sha256": "01c6808a37622c004bf8800e5984e26143ee1b546fb0150fd73db8422da403c9",
+   "bytes": 169392
+  },
+  "$U/exp/DOT2/out/dot2_class_axes_train.json": {
+   "sha256": "68c39a7edcf17eb547dd7fffe3cdfdba44da6f49a88c354018e19c88bc922ae2",
+   "bytes": 308
+  },
+  "$U/exp/DOT2/out/dot2_gt_direction_stats.csv": {
+   "sha256": "29eea8be4497808e0d62289957374672bdaf221e577a8c817c41978f29fe4926",
+   "bytes": 13882
+  },
+  "$U/exp/DOT2/out/dot2_rescore_per_unit.csv.gz": {
+   "sha256": "fca372f59a074c19f7386162427d84dae7a8b0940c176b5cbe583275999e8c61",
+   "bytes": 322249
+  },
+  "$U/exp/DOT2/out/dot2_rescore_pooled_direction.csv": {
+   "sha256": "0782a27d97d06fb3468e2af5cd99be1a6a4a025a511e7d34c78f122ae997deb2",
+   "bytes": 670
+  },
+  "$U/exp/DOT2/out/dot2_rescore_summary.csv": {
+   "sha256": "4fd7c16f6c45316634f0f5651fb7070ef5687050d0225815468758e49f680365",
+   "bytes": 6619
+  },
+  "$U/exp/DOT2/out/dot2_run_info.json": {
+   "sha256": "cc9844767f01039112a371558cdf8eff09356f78c61e082354d47b85ac63f2af",
+   "bytes": 477
+  },
+  "$U/exp/DOT2/out/dot2_strokes.csv.gz": {
+   "sha256": "083e448048d01b85d211eacc4ff23aab0f8e5206b588faf3fd8cb8781fb340c3",
+   "bytes": 3768280
+  }
+ },
+ "verification": {
+  "stages": {
+   "full": {
+    "start_utc": "2026-10-20T20:54:02Z",
+    "gate_pass": false,
+    "dir": "$U/exp/EV031/full"
+   }
+  },
+  "summary_files": {
+   "$U/shared/uhwr_eval-0.3.1/release/verify_dot2.json": {
+    "sha256": "785c60a9ba93b080db4601fcafed8526ba851429e92b5028a2129d4944cf0c3b",
+    "bytes": 2085
+   },
+   "$U/shared/uhwr_eval-0.3.1/release/verify_e1v2.json": {
+    "sha256": "5f1dbb9823fb4bf4c7293508bda802aebe72d03a1fb873f7780e36417a7effd0",
+    "bytes": 5568
+   },
+   "$U/shared/uhwr_eval-0.3.1/release/verify_identity_711.json": {
+    "sha256": "fd5bbe643ccf3f7d2deb3fed01d7575916d66d08a7be14f18390eeefbcbd1bd5",
+    "bytes": 450
+   },
+   "$U/shared/uhwr_eval-0.3.1/release/verify_identity_e0ms8.json": {
+    "sha256": "feaa4b2d6935070839fb9cd53c008a4e2e3c4c6d0d71b9bf94f3c543f3303692",
+    "bytes": 458
+   },
+   "$U/shared/uhwr_eval-0.3.1/release/verify_summary_uhwr_eval_0.3.1.json": {
+    "sha256": "57081fe40ba595f115c21cff762610b7e5cfc37e2ee54b61e4d067e1dae249e9",
+    "bytes": 10323
+   },
+   "$U/exp/EV031/full/tests/metric_sanity_check.csv": {
+    "sha256": "798af9679785f20686110f97cf5f055371e20e0fb786f1c71a819384ef648ca1",
+    "bytes": 368
+   },
+   "$U/exp/EV031/full/tests/tests.log": {
+    "sha256": "defca8ded4a04c7b9af19e9bb4a67421f232ba0ac5e0aed86292d4edfc98fc7a",
+    "bytes": 683
+   },
+   "$U/exp/EV031/full/tests/toy_validation.csv": {
+    "sha256": "46b9311d5b568304d00925998ef4f8e9bb6ede7859b861815a5e8cfa6b4fdc57",
+    "bytes": 4432
+   }
+  }
+ },
+ "commands": {
+  "build": "python3 build_uhwr_eval_031.py e1v2_uhwr_eval-0.3.0.tar.gz dot2_uhwr_eval-0.3.0.tar.gz uhwr_eval-0.2.0.tar.gz $U/shared/uhwr_eval-0.3.1 $U/shared/uhwr_eval-0.3.1/release",
+  "identity_711": "eval_identity.py $U/data/ouhdl_ligatures_v3 40 OUT.pkl (DOT2 code d2560453; PYTHONPATH=0.2.0 | 0.3.1; venv cpu_analysis)",
+  "identity_e0": "e0_identity.py e0_test.npz test_rendered_ms8_ddim50_preds.npz test_dataset_ms8_ddim50_preds.npz OUT.pkl 16 0",
+  "e1v2": "e1_v2_run.py --bundle $U/data/e_bundle_v1 --out $U/exp/EV031/full/e1 --datasets ouhdl casia tamil --workers 16 --boot 2000",
+  "dot2": "dot2.py --v3 $U/data/ouhdl_ligatures_v3 --gold $U/data/gold_lines_v0_sample_ids.txt --out $U/exp/EV031/full/dot2 --workers 16",
+  "driver": "$U/exp/EV031/code/run_ev031.sh"
+ },
+ "params": {
+  "mode": "full",
+  "score_kwargs_e0": "canvas (64,64), with_lpips=False, protocols native+standardised",
+  "score_kwargs_711": "DOT2 eval_identity.py: protocol native, with_lpips False",
+  "e1_seed": 20261016,
+  "e1_boot": 2000,
+  "e1_boot_seed": 0,
+  "env": "PYTHONHASHSEED=0, single-threaded BLAS/numba, PYTHONDONTWRITEBYTECODE=1, NUMBA_CACHE_DIR in /tmp"
+ },
+ "container": {
+  "path": "$U/images/torch27.sif",
+  "sha256": "c2ba6dbf95d647f6ae7a3a0844e96ee729a1b60e1f7b18e5ba977d6bb88cbc2e"
+ },
+ "venvs": {
+  "uhwr_eval02": {
+   "path": "$U/venvs/uhwr_eval02",
+   "freeze_sha256": "77cae0dc027b5258f62f022670ccf5b1b48c0d5c7e2104f2140e1ad1d5da003b",
+   "freeze_file": "$U/exp/EV031/inputs/freeze_uhwr_eval02.txt"
+  },
+  "cpu_analysis": {
+   "path": "$U/venvs/cpu_analysis",
+   "freeze_sha256": "5cf3a310c1bf2fa7a7a61f2b633acd0bb78376f640f96faec6e754751fca7ecd",
+   "freeze_file": "$U/exp/EV031/inputs/freeze_cpu_analysis.txt"
+  }
+ },
+ "host_python": "3.11.13",
+ "slurm": {
+  "job_id": "24516363",
+  "node": "<node>",
+  "partition": "epyc-256",
+  "cpus": "16",
+  "gpu": "none"
+ },
+ "outputs": {
+  "$U/shared/uhwr_eval-0.3.1/release/CHANGELOG_uhwr_eval_0.3.1.md": {
+   "sha256": "f0cc135321a864c13648ac6ce9c0a0c543f5897402d51537fa0e6ba26f51330c",
+   "bytes": 1845
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/build_file_record_0.3.1.json": {
+   "sha256": "f4f35175b7b3a4d61fe7103872df384e37828b529352e61d290993df5802a42b",
+   "bytes": 4258
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/uhwr_eval-0.3.1.tar.gz": {
+   "sha256": "f8d967f56726f77f7384d7a78a2617ef5da6feeb00e5c1fc46cbc4666b244dc8",
+   "bytes": 23041
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/uhwr_eval-0.3.1.tar.gz.sha256": {
+   "sha256": "e08bdca777a8282fb6e4b234a2a114a1c1a6c078636aec9a974607af8f11b4c2",
+   "bytes": 89
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/uhwr_eval_0.2.0_to_0.3.1.diff": {
+   "sha256": "6022bb5e4cdcba5b821e7f0497cabf69630ae6b05f14fc1005a64b815735d659",
+   "bytes": 27233
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/uhwr_eval_dot2_0.3.0_to_0.3.1.diff": {
+   "sha256": "7d5b96fafae595d5f6e0feb0e7512e2f58ce5c98ba15a7e68d86d05b4ca9254c",
+   "bytes": 44229
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/uhwr_eval_e1v2_0.3.0_to_0.3.1.diff": {
+   "sha256": "a94ce2a2a636ff88be7d93e03f5af3e7c8ae02ab05f98d0cc5065edf663ab7b4",
+   "bytes": 9965
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/verify_dot2.json": {
+   "sha256": "785c60a9ba93b080db4601fcafed8526ba851429e92b5028a2129d4944cf0c3b",
+   "bytes": 2085
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/verify_e1v2.json": {
+   "sha256": "5f1dbb9823fb4bf4c7293508bda802aebe72d03a1fb873f7780e36417a7effd0",
+   "bytes": 5568
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/verify_identity_711.json": {
+   "sha256": "fd5bbe643ccf3f7d2deb3fed01d7575916d66d08a7be14f18390eeefbcbd1bd5",
+   "bytes": 450
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/verify_identity_e0ms8.json": {
+   "sha256": "feaa4b2d6935070839fb9cd53c008a4e2e3c4c6d0d71b9bf94f3c543f3303692",
+   "bytes": 458
+  },
+  "$U/shared/uhwr_eval-0.3.1/release/verify_summary_uhwr_eval_0.3.1.json": {
+   "sha256": "57081fe40ba595f115c21cff762610b7e5cfc37e2ee54b61e4d067e1dae249e9",
+   "bytes": 10323
+  },
+  "$U/shared/uhwr_eval-0.3.1/metric_registry_0.3.1.csv": {
+   "sha256": "107809bc18e714818b3136774b7d467e5caceee42f88c30a8ab5234f32bd4d2c",
+   "bytes": 4958
+  },
+  "$U/exp/EV031/full/e1/e1_v2_run_info.json": {
+   "sha256": "aa18db053b0318c834f5cde82c57108e9e037590715ff251dbd4fa746f91dda0",
+   "bytes": 291
+  },
+  "$U/exp/EV031/full/e1/e1_v2_scores_per_unit.csv.gz": {
+   "sha256": "7a02a10331f077c8d2c9d80a268713357a09e2147b881f95574eea8f79643d92",
+   "bytes": 5479833
+  },
+  "$U/exp/EV031/full/e1/e1_v2_sensitivity.csv": {
+   "sha256": "e5d02ba7820d1b51fa602d7ed9ca78c1389b45ac689e8a2782ce6cd85446a25c",
+   "bytes": 169411
+  },
+  "$U/exp/EV031/full/dot2/dot2_class_axes_train.json": {
+   "sha256": "68c39a7edcf17eb547dd7fffe3cdfdba44da6f49a88c354018e19c88bc922ae2",
+   "bytes": 308
+  },
+  "$U/exp/EV031/full/dot2/dot2_gt_direction_stats.csv": {
+   "sha256": "29eea8be4497808e0d62289957374672bdaf221e577a8c817c41978f29fe4926",
+   "bytes": 13882
+  },
+  "$U/exp/EV031/full/dot2/dot2_rescore_per_unit.csv.gz": {
+   "sha256": "f5a3f85b41321acb6e02f4f93dd5ccce40ea7a142717adea99bff212e6e0e89a",
+   "bytes": 321653
+  },
+  "$U/exp/EV031/full/dot2/dot2_rescore_pooled_direction.csv": {
+   "sha256": "0782a27d97d06fb3468e2af5cd99be1a6a4a025a511e7d34c78f122ae997deb2",
+   "bytes": 670
+  },
+  "$U/exp/EV031/full/dot2/dot2_rescore_summary.csv": {
+   "sha256": "082b644c6947ec13f0a2b889dadc36587170581839a5e1dbe91a027bde98c4fd",
+   "bytes": 6621
+  },
+  "$U/exp/EV031/full/dot2/dot2_run_info.json": {
+   "sha256": "432e8c30243e4ef14b74993ada033273b91ad3e8194c7f33773958e7900b88ad",
+   "bytes": 476
+  },
+  "$U/exp/EV031/full/dot2/dot2_strokes.csv.gz": {
+   "sha256": "738022a231455d90ed7528b505d5da09770313d6665fa9cc00416a887251bad9",
+   "bytes": 3768280
+  }
+ },
+ "deviations": []
+}

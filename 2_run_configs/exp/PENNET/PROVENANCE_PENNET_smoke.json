@@ -1,0 +1,327 @@
+{
+ "experiment_id": "PENNET",
+ "mode": "smoke",
+ "created_utc": "2026-10-21T06:25:17Z",
+ "task": "PEN-Net re-implementation baseline (DEC-baselines; planned task T08) on OUHD-L v3 ligature units",
+ "paper": {
+  "citation": "Z. Chen, D. Yang, J. Liang, X. Liu, Y. Wang, Z. Peng, S. Huang. Complex Handwriting Trajectory Recovery: Evaluation Metrics and Algorithm. ACCV 2022, LNCS 13842, pp. 58-74 (CVF pp. 1060-1076). doi:10.1007/978-3-031-26284-5_4; arXiv:2210.15879"
+ },
+ "official_code": {
+  "url": "https://github.com/ChenZhounan/PEN-Net",
+  "commit": "03bc59199f47d34e6df09b1ecdb956bbc284bd4a",
+  "clone": "$U/repos/PEN-Net",
+  "files": {
+   "README.md": "c4a7914da10e47cfd5a4616a522c119b9a25512d1638fe53d7b95ca2989be56e",
+   "configs/sym_attn_z_resdtw_pot.yml": "8b7f6410e721dc9393d4231299d7d897a20b6046908a7a8a2a68b3094e1ef1a7",
+   "datasets/__init__.py": "3d53f89f0523a92c26be9d82c001c5478bf96018327a93e3d9c8e4e2e1987a4b",
+   "datasets/casia.py": "97319e0cd841a7a6a9d6bc5e7fcd36bba720023bd3c360eda48abdc0b5694351",
+   "model.py": "24929c7c8132f7e3621bebaacca6d8bd4921989ed50fd70bddcd14c8482cf2b9",
+   "train.py": "bc2f3ac6e7c90b728a652d379b994ba68d1f3d1adf5520aafe5b006243fb2910"
+  },
+  "status": "not runnable as released: train.py builds model.Net_tr_2d (absent from model.py); config.py, datasets/data_utils.py, soft_dtw_cuda.py, visualization.py, iam/hindi/japanese loaders are missing; no weights; no licence file. Used as architecture reference only."
+ },
+ "code": {
+  "dir": "$U/exp/PENNET/code_ec0280c1",
+  "tarballs": {
+   "pennet_code_ec0280c1.tar.gz": {
+    "sha256": "ec0280c19264a02046afab3b61129656d230986e92c66c71e43c54f943c267c2",
+    "bytes": 30422
+   }
+  },
+  "files": {
+   "README_PENNET.md": "78b0035f18ad5d70c5d70d745d6d416e63156e82e2ab2c24d75a2d4c5e6c0af7",
+   "e0_adapter.py": "83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10",
+   "e0_score.py": "46b1ff898e99f0d6b4aff99e79aa99d22ac59152d78394715de40880464786df",
+   "jobs/score_full.sh": "ec3c1f67b742ef547c7e9ea67478b1c0693980d451da3723949048915f6dfacb",
+   "jobs/smoke_driver.sh": "df6dcde64fedc45363852144311e60cd189b711743c9fab2a843db49902d76ef",
+   "jobs/train_full.sh": "d604c61ae0b692f1ef607533f872464d0e321eb5ebd44bcbd5eeebd2586c3e47",
+   "pennet_data.py": "62dafcc1cba10ac7d8413f14c4bc92ef3096d07ab3d368d8906f8efe000c0fb6",
+   "pennet_decode.py": "2c8816d2942df3c078d07371ef694740c94cf4a48f7ab903adbe23e863253dfe",
+   "pennet_model.py": "91b49a23282bc3e6ed71ef4a72cf8443103dc163ec3d011ba473429a042db111",
+   "pennet_provenance.py": "2f4d96c18779af9b5cb861aae905b0087ff98251b211ae6035025b4cda4bc32e",
+   "pennet_select.py": "63b0f49383dc19d5afddd423116ba80d217d3f13defc14a474d25d7748603965",
+   "pennet_softdtw.py": "875186424e75a02ac227a3f76a751e9546d07d53a59838aa019ab70b53ac418d",
+   "pennet_summary_wc.py": "1f8ae35278a60d77d1e0e64b0d93847f365178543fa309be6b9ccf2ff388619c",
+   "pennet_train.py": "81a77f08e1a157ff501166f98df28ab6932ffa00852da29d1a66e8f407c016b8",
+   "smoke_check.py": "4300eeb295cd5cce02167190d099c3b9344885721de88f0b8d50d7ce512a8898",
+   "test_pennet.py": "c215a567155c6f66dc461f25b24deff1983d5b4c5d0425f17cceebeeaa0035c4"
+  }
+ },
+ "inputs": {
+  "data_dir": "$U/data/ouhdl_e0_v3",
+  "npz_sha256": [
+   "128db32854fe76acf472e9f7b0b5b74b81d6c84b2928841eeac9f85ec0facd94  e0_gold.npz",
+   "c09560ed07a526614b3342a2fb6b642165f6aab3fffa25876bf1bc7502b7a514  e0_test.npz",
+   "2c4ddc48fb37b3eb3145977d9245f16e2e237f1224e24b5c81b72785d8a1f048  e0_train.npz",
+   "25451031d41408c32c504e07b9e16ebcafe4d5fc3c0678cb1bab82a877272f92  e0_val.npz",
+   ""
+  ],
+  "uhwr_eval": {
+   "version": "0.3.1",
+   "dir": "$U/shared/uhwr_eval-0.3.1",
+   "release_tarball_sha256": "f8d967f56726f77f7384d7a78a2617ef5da6feeb00e5c1fc46cbc4666b244dc8",
+   "files": {
+    "uhwr_eval/__init__.py": "1618fe4713334c9970453656a74bff182f32209a11804d7712833dabd573861a",
+    "uhwr_eval/_nagamatsu_metrics.py": "7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4",
+    "uhwr_eval/marks.py": "aa215a6438c6aaa78dbad6c31f5e28b363e35dc05b1a82ac5e469e1d6776f765",
+    "uhwr_eval/metrics.py": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+    "uhwr_eval/render.py": "49ff4cf1dc0f90bf784cc459fc2c1e501ec1482a3f50f6b48e20909d679966eb",
+    "uhwr_eval/strokes.py": "1b3ef8505b7cf8cdcfa2d95191ab475582e16316bf18fd7a0d5cf70ed9e152b7",
+    "uhwr_eval/timing.py": "3e86430e5482405eacdf44990646bc8a3f56b7ec674b2b4a8f4e37ed90bfb787",
+    "uhwr_eval/v2metrics.py": "483611923986650b6d6983ced00264fd39e0cba3a43149b32f3bf878643f2d43",
+    "uhwr_eval/validate_toy.py": "3e386e2603ac2f47a9d25fb6e7be8e51a2d6390ff4831c3e157015064aa5fd0b"
+   }
+  },
+  "uhwr_baselines_for_summary": "$U/e0/code_4cd40f57/uhwr_baselines (symlinked as $U/exp/PENNET/lib/uhwr_baselines)",
+  "e0_scorer": "e0_score.py + e0_adapter.py copied unchanged from $U/e0/code_4cd40f57 (cmp-checked by the smoke driver)"
+ },
+ "environment": {
+  "container": "$U/images/torch27.sif",
+  "container_sha256": "c2ba6dbf95d647f6ae7a3a0844e96ee729a1b60e1f7b18e5ba977d6bb88cbc2e  $U/images/torch27.sif",
+  "venv": "$U/venvs/e0",
+  "env_freeze": {
+   "env_freeze_e0.txt": {
+    "sha256": "480c0b6d78200c828f5f700ea308713b233a4e62cd67517b98a7a07f78167c3f",
+    "bytes": 8938
+   }
+  },
+  "scoring_note": "scoring runs from a /dev/shm copy of venvs/e0 with node-local NUMBA_CACHE_DIR (libllvmlite workaround of exp/M1b/code_v4_scorefix)"
+ },
+ "seeds": {
+  "train_seed": 20261016,
+  "data_order": "epoch e: np.random.default_rng(seed + e).permutation(N), drop_last",
+  "decoding": "greedy arg-max (deterministic, no sampling seed)",
+  "val_subset_seed": 0,
+  "bootstrap_seed": 0,
+  "bootstrap_B": 2000
+ },
+ "parameters": {
+  "run_config.json": {
+   "arguments": {
+    "train_npz": "$U/data/ouhdl_e0_v3/e0_train.npz",
+    "run_dir": "$U/exp/PENNET/run",
+    "condition": "rendered",
+    "steps": 100000,
+    "batch": 512,
+    "lr": 0.001,
+    "clip": 0.2,
+    "ce_weights": [
+     1.0,
+     5.0,
+     1.0
+    ],
+    "lambdas": [
+     0.5,
+     1.0,
+     1.0
+    ],
+    "sdtw_gamma": 0.1,
+    "seed": 20261016,
+    "ckpt_every": 1000,
+    "milestone_every": 10000,
+    "log_every": 100,
+    "max_steps_this_process": 0,
+    "max_units": 0
+   },
+   "n_train_units": 33615,
+   "device": "NVIDIA A40",
+   "capability": [
+    8,
+    6
+   ],
+   "torch": "2.7.1+cu128",
+   "cudnn": 90701,
+   "n_params": 10076422,
+   "resumed_from_step": null,
+   "gpu_uuid": "48098add-8e15-ad42-389d-ddef9b150910",
+   "cuda_visible_devices": "5",
+   "slurm_job_gpus": "5",
+   "cuda_device_order": "PCI_BUS_ID",
+   "slurm_job_id": "24522873",
+   "slurm_restart_count": null,
+   "host": "<node>",
+   "start_utc": "2026-10-21T06:24:32Z"
+  }
+ },
+ "smoke": {
+  "results": {
+   "resume": {
+    "stepA": 300,
+    "stepC": 300,
+    "posA": [
+     4,
+     40
+    ],
+    "posC": [
+     4,
+     40
+    ],
+    "resumed_from": [
+     200
+    ],
+    "param_max_abs_diff": 0.0,
+    "bitwise_equal": true,
+    "loss_max_rel_diff_210_300": 0.0,
+    "ok": true
+   },
+   "sigterm": {
+    "events": [
+     "2026-10-21T06:08:59Z\tstep=35\tsignal_15\tjob=24522486",
+     "2026-10-21T06:09:40Z\tstep=55\tfinal\tjob=24522486"
+    ],
+    "signal_step": 35,
+    "resume_config": true,
+    "final_step": 55,
+    "ok": true
+   },
+   "finite": {
+    "n": 68,
+    "ok": true
+   },
+   "timing": {
+    "device": "NVIDIA A30",
+    "capability": [
+     8,
+     0
+    ],
+    "n_params": 10076422,
+    "s_per_step_bs512": 1.0615274289558672,
+    "eta_100k_h": 29.486873026551866,
+    "mean_T": 274.6896551724138,
+    "loss_step1": 124.23515319824219,
+    "loss_step300": 15.697200775146484
+   },
+   "decode": {
+    "ok": true
+   },
+   "eta_100k_h": 29.486873026551866,
+   "all_ok": true
+  },
+  "tests": {
+   "device": "cuda",
+   "softdtw": [
+    {
+     "scale": 1.0,
+     "gamma": 1.0,
+     "rel_val": 2.146548823109136e-17,
+     "rel_grad_x": 8.79839071400998e-16,
+     "rel_grad_y": 1.0344290290821735e-15,
+     "ok": true
+    },
+    {
+     "scale": 64.0,
+     "gamma": 0.1,
+     "rel_val": 0.0,
+     "rel_grad_x": 3.6836159348014025e-12,
+     "rel_grad_y": 6.892522373634357e-13,
+     "ok": true
+    },
+    {
+     "float32_321_finite": true,
+     "ok": true
+    }
+   ],
+   "model": {
+    "cnn1": [
+     4,
+     256,
+     1,
+     33
+    ],
+    "cnn2": [
+     4,
+     256,
+     33,
+     1
+    ],
+    "attn": [
+     4,
+     66,
+     1
+    ],
+    "out": [
+     4,
+     17,
+     5
+    ],
+    "n_params": 10076422,
+    "ok": true
+   },
+   "roundtrip": {
+    "val": {
+     "n": 4349,
+     "bad": 0,
+     "max_abs_err_px": 1.9073486328125e-06,
+     "image_white_on_black": true,
+     "ok": true
+    },
+    "test": {
+     "n": 4406,
+     "bad": 0,
+     "max_abs_err_px": 1.9073486328125e-06,
+     "image_white_on_black": true,
+     "ok": true
+    },
+    "gold": {
+     "n": 354,
+     "bad": 0,
+     "max_abs_err_px": 1.9073486328125e-06,
+     "image_white_on_black": true,
+     "ok": true
+    }
+   },
+   "all_ok": true
+  }
+ },
+ "slurm": {
+  "ids_file": "24522486 smoke_driver <node> 2026-10-21T07:54:20+02:00\n24522873 train_full gpuidle 1gpu time=51h submitted 2026-10-21T08:23:47+02:00\n24522874 score_full epyc-256 16cpu afterok:24522873 submitted 2026-10-21T08:23:47+02:00\n",
+  "sacct": "JobID|JobName|Partition|NodeList|State|ExitCode|Submit|Start|End|Elapsed|AllocTRES|Restarts\n24522486|<agent>|gpuidle|<node>|RUNNING|0:0|2026-10-21T07:53:20|2026-10-21T07:54:18|Unknown|00:30:59|billing=8,cpu=8,gres/gpu=1,mem=64G,node=1|0\n24522873|pennet_train|gpuidle|<node>|RUNNING|0:0|2026-10-21T08:23:47|2026-10-21T08:24:15|Unknown|00:01:02|billing=8,cpu=8,gres/gpu=1,mem=96G,node=1|0\n24522874|pennet_score|epyc-256|None assigned|PENDING|0:0|2026-10-21T08:23:47|Unknown|Unknown|00:00:00||0\n",
+  "job_history": "2026-10-21T08:24:17+02:00 job=24522873 restart=0 host=<node> CUDA_VISIBLE_DEVICES=5 SLURM_JOB_GPUS=5 gpu=[5, NVIDIA A40, 8.6, 00000000:CA:00.0, GPU-48098add-8e15-ad42-389d-ddef9b150910] phase=start\n"
+ },
+ "checkpoints": {},
+ "training_complete": null,
+ "selection": null,
+ "outputs": {
+  "smoke/selection_smoke.json": {
+   "sha256": "8ddae25a7b136038f212283fad9b2649f4c0349467f3abe58fb5d3b0ac3f55a1",
+   "bytes": 994
+  },
+  "smoke/smoke_gate.json": {
+   "sha256": "c28576c859249e12c1e99df258717d6f48da040fce877743f79a30f157739dbb",
+   "bytes": 883
+  },
+  "smoke/tests.json": {
+   "sha256": "1e382d2397496b50a8127c6cc471ab54759624124035985c7d53806630cd33be",
+   "bytes": 1065
+  },
+  "smoke/summary_smoke_writercluster.csv": {
+   "sha256": "0b33e66b3030312de0a02f4fc2754df887ccd27afcbee9a90ec51863218f4fe9",
+   "bytes": 8340
+  },
+  "smoke/gpu.txt": {
+   "sha256": "e1f027c279e5438f72d7bcf48a5d23022199581a8f41813ea710795e8ff479d5",
+   "bytes": 30
+  },
+  "smoke/gpu_allocated.txt": {
+   "sha256": "42c01e20b7a2413f59507d74df2e6e3e915b388ee8268599b00b60a7ef9925e8",
+   "bytes": 193
+  },
+  "smoke/row_errors.txt": {
+   "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+   "bytes": 1
+  },
+  "smoke/smoke_status.txt": {
+   "sha256": "c99805e6babad64c67d212f0f922a9dfd1b88a78d823f149e7532f5ec902c422",
+   "bytes": 415
+  },
+  "smoke/squeue_after_submit.txt": {
+   "sha256": "86754bc0a2ca73616fa7c766dee7cac3add7482747604e8dc28f985c0fe79de8",
+   "bytes": 214
+  },
+  "smoke/uhwr_eval_version.txt": {
+   "sha256": "6a981702e2291905d7e93187a3dc880c0158594e4621a6780c3e7cd6d9cae6b8",
+   "bytes": 84
+  }
+ },
+ "decisions_file": "$U/exp/PENNET/code_ec0280c1/README_PENNET.md"
+}

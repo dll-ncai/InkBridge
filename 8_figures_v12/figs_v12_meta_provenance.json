@@ -1,0 +1,399 @@
+{
+ "title": "InkBridge v12 figures: meta provenance",
+ "created_utc": "2026-11-15T16:04Z",
+ "spec": "SPEC v12 narrative (artifact version 7ff96ceb), section 4 graph rules",
+ "script": {
+  "file": "make_figs_v12.py",
+  "sha256": "1fd282d6a6499b0196d3cd6a36755ee768e83791b7a1690694a5890767d55063",
+  "depends_on": {
+   "file": "figures_make_v11.py",
+   "artifact_version": "f58f1510-aeef-40ea-94e8-0ab38de2ed07",
+   "sha256": "b73c6a1e0e1b369c12448379c11ecaab90bad9ee2603230d3cc944906f72a68e"
+  },
+  "command": "python make_figs_v12.py src extract chosen_units_v11.json paper_inkbridge_v11.tex out [ONLY]; last run ONLY=fig_overview,fig_warm,fig_qual,fig_gain,fig_selector (fig_retention not redrawn, hash unchanged). Runs standalone: a render without the figure-style kernel helper is pixel-identical to the earlier render made with it (fig_retention, max abs difference 0).",
+  "environment": "conda env python; matplotlib 3.11.2, pandas 2.3.3, numpy 2.4.6"
+ },
+ "sources": [
+  {
+   "cluster_path": "$U/exp/RQF/tables/reviewer_followup_v1/T56_per_seed.csv",
+   "sha256": "14d1b817e2cff50c0125e16b612c5bf684b5ec380a33f8128e6dcedd2bfa35e8",
+   "cluster_mtime": "2026-11-15T09:45:33",
+   "used_for": "fig_gain warm variants (tab:warm): pooled rows of table T5_p01_vs_FT1",
+   "fetched": "tar on the cluster + host.compute download, 15 Nov 2026; sha256 equals the value computed on the cluster"
+  },
+  {
+   "cluster_path": "$U/exp/RQF/tables/RQF_R2_interim_latest_contrasts.csv",
+   "sha256": "500131638dddc79a83c5ace8d6be068c9d21535a8cb1d11dbac2afca8b4ae003",
+   "cluster_mtime": "2026-11-11T08:10",
+   "used_for": "fig_retention (tab:xni): block=3seed, cell R2a_X_composed; fig_gain control: block=3seed, cell R2b_STEPS_effect (identical to RQF_R2_interim_20261111T0704Z_contrasts.csv)",
+   "fetched": "tar on the cluster + host.compute download, 15 Nov 2026; sha256 equals the value computed on the cluster"
+  },
+  {
+   "cluster_path": "$U/exp/RQF/R3/split_v1/R3_split_paired.csv",
+   "sha256": "9f9a075ed74fc62e346095f59b9d8ab56fd8eca582334bf631700cd4ab41613d",
+   "cluster_mtime": "2026-11-11T20:11:47",
+   "used_for": "fig_selector (tab:r3a): split=all, metrics penup_f1_v2 and strict_order_acc",
+   "fetched": "tar on the cluster + host.compute download, 15 Nov 2026; sha256 equals the value computed on the cluster"
+  }
+ ],
+ "other_inputs": [
+  {
+   "file": "paper_inkbridge_v11.tex",
+   "artifact_version": "0417da64-8eae-402c-80ec-f75873c62e5d",
+   "sha256": "da8abb15a6c361750dc6b4f80f9d2af03e0e4708b6918d352eb9b3358bd3221c",
+   "used_for": "3-d.p. check of every plotted value against tab:warm, tab:xni, tab:r3a; margins 0.0141 / 0.01065 / 0.01245 and retention threshold -0.010 (Sec. Evaluation Protocol)"
+  },
+  {
+   "file": "fig_extract.npz",
+   "artifact_version": "f0164643-fda8-4fd3-826a-7e731f283664",
+   "sha256": "0ba02383aaa39f90e21ddf74040c6340c18d7c77d5973dd07073377a88cb55ad",
+   "cluster_path": "$U/exp/FIGS/ijdar_v11_figs/extract_v3/fig_extract.npz (same sha256)",
+   "used_for": "fig_overview image and samples"
+  },
+  {
+   "file": "fig_extract.json",
+   "artifact_version": "8f23b82a-c2ee-45ce-bcb1-fc86e10241c8",
+   "sha256": "3aa065b9751f2bf11a80278b51b10fe12ee272fb781fa745f04b25df5fec637d",
+   "used_for": "fig_overview selected sample index"
+  },
+  {
+   "file": "chosen_units_v11.json",
+   "artifact_version": "606e03d1-2812-45ff-8508-b54a3866598e",
+   "sha256": "6f57229ae00d376deb5c45f766e7f24607c2f35dd1b2fa01073afb0e41608ab9",
+   "used_for": "fig_overview unit (role test_ouhdl B1, the unit of the v11 overview)"
+  }
+ ],
+ "method": "No value is recomputed. Each graph plots delta, ci_lo, ci_hi exactly as stored in the source CSV (paired difference on common units, 95% percentile bootstrap interval; interval construction as described in v11 Sec. Evaluation Protocol). The data CSVs are written first and the figures are drawn from them.",
+ "data_files": {
+  "fig_gain": {
+   "file": "fig_gain_data.csv",
+   "rows": 15,
+   "sha256": "1982e054a0ff95b34607e3eb53ca2076809fa877e969660e500b14038a9951ba"
+  },
+  "fig_retention": {
+   "file": "fig_retention_data.csv",
+   "rows": 24,
+   "sha256": "0b7017f54f66e1dbb1915c422e2e2a95f26aa8c5d8767910ccb77a5df1ddb6df"
+  },
+  "fig_selector": {
+   "file": "fig_selector_data.csv",
+   "rows": 10,
+   "sha256": "8ea660345d1eb46b1710120328278a12522503bc84ef4a3196ccf1d6f0f5b8f7"
+  }
+ },
+ "columns": {
+  "figure": "figure name",
+  "metric": "uhwr_eval metric key",
+  "series": "plotted arm or base model",
+  "comparator": "reference of the paired difference",
+  "test_set": "test set",
+  "n_units": "paired units",
+  "n_ft_seeds_arm": "fine-tuning seeds of the arm (source column n_train_seeds_arm)",
+  "n_ft_seeds_comparator": "fine-tuning seeds of the comparator",
+  "delta": "paired difference (source value, unrounded)",
+  "ci_lo": "lower 95% bound",
+  "ci_hi": "upper 95% bound",
+  "reference_line": "margin or threshold drawn for this metric",
+  "reference_kind": "meaning of that line",
+  "marker": "filled or open marker",
+  "source_file": "path under cluster exp/RQF",
+  "source_sha256": "sha256 of the source file",
+  "source_row": "row filter in the source file",
+  "v11_location": "where the value appears in v11",
+  "v11_value": "value printed in the v11 table",
+  "v11_ci_lo": "v11 lower bound",
+  "v11_ci_hi": "v11 upper bound",
+  "in_v11_table": "value is in a v11 table",
+  "matches_v11_3dp": "source value, lo and hi each within 0.0005 of the v11 table"
+ },
+ "table_check": {
+  "fig_gain": {
+   "rows": 15,
+   "in_v11_table": 10,
+   "match_3dp": 10
+  },
+  "fig_retention": {
+   "rows": 24,
+   "in_v11_table": 24,
+   "match_3dp": 24
+  },
+  "fig_selector": {
+   "rows": 10,
+   "in_v11_table": 10,
+   "match_3dp": 10
+  }
+ },
+ "layout_qa": [
+  {
+   "figure": "fig_overview",
+   "n_texts": 18,
+   "text_overlaps": [],
+   "outside": [],
+   "box_overflow": [],
+   "on_page": {
+    "natural_width_mm": 175.0,
+    "include_width": 0.85,
+    "scale": 0.777,
+    "min_lettering_pt_in_figure": 8.0,
+    "min_lettering_pt_on_page": 6.22,
+    "has_subscripts": false
+   },
+   "unit": [
+    "test_ouhdl",
+    "B1"
+   ],
+   "selected_sample": 2
+  },
+  {
+   "figure": "fig_warm",
+   "n_texts": 22,
+   "text_overlaps": [],
+   "outside": [],
+   "box_overflow": [],
+   "on_page": {
+    "natural_width_mm": 175.0,
+    "include_width": 0.85,
+    "scale": 0.777,
+    "min_lettering_pt_in_figure": 8.0,
+    "min_lettering_pt_on_page": 6.22,
+    "has_subscripts": true
+   },
+   "old_label_strings": []
+  },
+  {
+   "figure": "fig_qual",
+   "n_texts": 48,
+   "text_overlaps": [],
+   "outside": [],
+   "box_overflow": [],
+   "on_page": {
+    "natural_width_mm": 192.0,
+    "include_width": 0.85,
+    "scale": 0.708,
+    "min_lettering_pt_in_figure": 8.0,
+    "min_lettering_pt_on_page": 5.67,
+    "has_subscripts": true
+   },
+   "units": [
+    [
+     "test_ouhdl",
+     "A1",
+     "3000_0042_1_L012",
+     1
+    ],
+    [
+     "test_ouhdl",
+     "A2",
+     "5000_0047_3_L006",
+     2
+    ],
+    [
+     "test_ouhdl",
+     "A3",
+     "2500_0032_6_L007",
+     1
+    ],
+    [
+     "test_ouhdl",
+     "B1",
+     "2500_0000_5_L001",
+     2
+    ],
+    [
+     "test_ouhdl",
+     "B5",
+     "5000_0010_4_L001",
+     2
+    ],
+    [
+     "test_iam500",
+     "C1",
+     "iam|k10-095z-06_u012",
+     0
+    ]
+   ],
+   "substitutions": [
+    [
+     "Wm, Hm = 174.0, 78.0",
+     "Wm, Hm = 191.0, 96.0"
+    ],
+    [
+     "x0s = (6.0, 93.0)",
+     "x0s = (6.0, 100.6)"
+    ],
+    [
+     "ytop = Hm - 11.0",
+     "ytop = Hm - 16.5"
+    ],
+    [
+     "pitch = 20.6",
+     "pitch = 23.6"
+    ],
+    [
+     "ci * (p + 0.9)",
+     "ci * (p + 3.0)"
+    ],
+    [
+     "1.9 / Hm, 0.1, 0.018]",
+     "4.6 / Hm, 0.1, 0.018]"
+    ],
+    [
+     "bg.text(x0s[0] + 21, 2.6,",
+     "bg.text(x0s[0] + 24, 5.4,"
+    ],
+    [
+     "va=\"top\", fontsize=S_ANN, color=\"0.25\")",
+     "va=\"top\", fontsize=S_ANN, color=\"0.25\", linespacing=1.15)"
+    ]
+   ],
+   "headers": [
+    "Units 1\u20133: warm adaptation against plain fine-tuning",
+    "Units 4, 5: selection among 3 samples\nUnit 6: English, no router"
+   ]
+  },
+  {
+   "figure": "fig_gain",
+   "n_texts": 25,
+   "text_overlaps": [],
+   "outside": [],
+   "box_overflow": [],
+   "on_page": {
+    "natural_width_mm": 171.9,
+    "include_width": 1.0,
+    "scale": 0.931,
+    "min_lettering_pt_in_figure": 6.0,
+    "min_lettering_pt_on_page": 5.58,
+    "has_subscripts": true
+   }
+  },
+  {
+   "figure": "fig_retention",
+   "n_texts": 33,
+   "text_overlaps": [],
+   "outside": []
+  },
+  {
+   "figure": "fig_selector",
+   "n_texts": 20,
+   "text_overlaps": [],
+   "outside": [],
+   "box_overflow": [],
+   "on_page": {
+    "natural_width_mm": 170.9,
+    "include_width": 0.8,
+    "scale": 0.749,
+    "min_lettering_pt_in_figure": 6.0,
+    "min_lettering_pt_on_page": 4.49,
+    "has_subscripts": true
+   }
+  }
+ ],
+ "figure_notes": {
+  "fig_gain": "15 intervals: WFT, WFT-PE (tab:warm, 10 values) and the SFT control for 5 metrics. The 5 control values are NOT in a v11 table: AIoU +0.0141 [+0.0129, +0.0153] is in the v11 text (Encoder versus extra steps), the other four are in the source file only. Control has 2 fine-tuning seeds (source evidence_label NOT_ASSESSED), drawn with open markers. Margins drawn at -0.0141, -0.01065, -0.01245; Kendall tau has no margin (reported, not gated). Round 3: value labels added for WFT and WFT-PE on the pen-up F1 and strict-order rows (formatted from fig_gain_data.csv delta, 3 d.p.); x-axis upper limit 0.135 -> 0.14 to hold the label.",
+  "fig_retention": "24 intervals (tab:xni AIoU and direction). Panel widths are proportional to the axis ranges, so one unit of difference has the same length in both panels. Retention threshold -0.010 gates AIoU only; the direction margin -0.01245 is drawn as a reference. tab:german values (0.881 / 0.889 against 0.955) are not plotted: they are unit-weighted absolute scores and differ from the paired deltas of tab:xni.",
+  "fig_selector": "10 intervals (tab:r3a pen-up F1 and strict order, n = 4,406). Margins 0.0141 and 0.01065 drawn (order-gain criterion: point estimate beyond the margin, interval above zero). Round 3: line labels read \"selection-gain margin\" (was \"order-gain margin\").",
+  "fig_overview": "Redrawn: script routing, two models (warm-adapted model, warm backbone), k = 3 samples, Endpoint Consensus Selection, warm-adaptation training lane. Frame-choice box and C1-C3 labels removed. Round 3 (lettering): all text 8 pt in the figure = 6.2 pt at 0.85 text width; the f_not_t symbol and its subscript were dropped; component titles bold; lane arrows now drawn above the lane background; \"other inputs\" follows the v12 caption. Every boxed label lies inside its box (box_overflow empty), 0 text overlaps. Routing colour #CC79A7.",
+  "unchanged": "fig_frame_verifier and fig_metric not regenerated (staged v11 PDFs, cluster paper/figs_v11/figs; sha256 prefixes f49c10ca576c, 959f9dcbd87b): pdftotext grep for 'step-matched', 'Label-Free', 'Order Selection', 'C1'-'C3', 'RQ1'-'RQ3', 'verifier' gives 0 matches in each. fig_retention not redrawn in round 3.",
+  "fig_warm": "Round 3: redrawn natively (no longer a substitution of the v11 function) with the v12 wording: \"warm adaptation\" (was \"warm fine-tune\"), \"source datasets\" (was \"non-target scripts\"), \"continued source training\" with the header \"four 10,000-step milestones, one kept\" (was \"+40k steps\"), \"source-training control\" kept. Wording source: lead instruction and paper_inkbridge_v12.tex Sec. Warm Adaptation (cluster paper/ijdar_v12, sha256 2414bd9a...). All text 8 pt (schedule labels 10 pt) = 6.2 pt at 0.85 text width. No data input. Printed strings contain none of step-matched / non-target / warm fine-tune / 40k / (C1)-(C3) / RQ.",
+  "fig_qual": "Round 3: figures_make_v11.py fig_qual rerun on the same extract and chosen-units file with 8-pt lettering (S_ANN = S_TICK = 8) and wider spacing; source substitutions are listed in layout_qa (substitutions) and in QUAL_SUBS. Second block header set on two lines. Units and scores unchanged: [[\"test_ouhdl\", \"A1\", \"3000_0042_1_L012\", 1], [\"test_ouhdl\", \"A2\", \"5000_0047_3_L006\", 2], [\"test_ouhdl\", \"A3\", \"2500_0032_6_L007\", 1], [\"test_ouhdl\", \"B1\", \"2500_0000_5_L001\", 2], [\"test_ouhdl\", \"B5\", \"5000_0010_4_L001\", 2], [\"test_iam500\", \"C1\", \"iam|k10-095z-06_u012\", 0]]. Lettering on the page at 0.85 text width: 5.7 pt (was 4.7-5.4 pt, subscripts 3.8 pt); 6 pt is not reachable at that width with 12 columns of three-line scores (at full text width this file gives 6.7 pt)."
+ },
+ "stale_source_note": "cluster exp/RQF/tables/RQF_R2_contrasts.csv (mtime 9 Nov, sha256 1189d42e...) holds 2 seeds for NOFM_W and does not match v11 tab:xni (UNIPEN-de AIoU lower bound 0.0129 against 0.011 in the table); it was not used.",
+ "outputs": {
+  "figs/fig_overview.pdf": "fae3d1bbab9598fe4750edfd6298870b5926cce4978cdfcfbd49b258d2c93dc2",
+  "figs/fig_overview.png": "d2c1bbbb8796f9d915a400bc00955f0beb43b08188cbfd6fd4c9e7f47b288e46",
+  "figs/fig_gain.pdf": "cf55213797675c1b9b6f8c226fe36f1660feadb01655d7ff2d47d70257ba3c88",
+  "figs/fig_gain.png": "8dfd724ff6764cbc82ca7cc3816b6d999c9cae1fe6ce5a380e35ae617595c1af",
+  "figs/fig_retention.pdf": "ab538adea05168b8c7f14ac19b1cc74979347074224d8c73cfb934b50831b6e8",
+  "figs/fig_retention.png": "024d6069484af9214b7d40b29efeda31c8c29199c431279eacad37254e2e0d01",
+  "figs/fig_selector.pdf": "0e257d2e0963b0648bb45ec55dc9b34eed9dad1224eea2a564da64bb30a631dc",
+  "figs/fig_selector.png": "a2bde4f294e21ae01eaa81b0f0d21082e2f54b814bbc3e38851cbc5bec1b3173",
+  "fig_gain_data.csv": "1982e054a0ff95b34607e3eb53ca2076809fa877e969660e500b14038a9951ba",
+  "fig_retention_data.csv": "0b7017f54f66e1dbb1915c422e2e2a95f26aa8c5d8767910ccb77a5df1ddb6df",
+  "fig_selector_data.csv": "8ea660345d1eb46b1710120328278a12522503bc84ef4a3196ccf1d6f0f5b8f7",
+  "captions_v12.md": "875380cfe853a08529647b2001473ad0ec75082d0a5bbbd0e4165735b86c8a61",
+  "figs/fig_warm.pdf": "c2dec52c57c207fce9d77f1e58b9201018e9fe37cc64c88e8c509e51d24a6c6e",
+  "figs/fig_warm.png": "73973549a244e3d7e49a71d690fad3ffc7ff56b04d88ab40fecd4fe49fc78d19",
+  "figs/fig_qual.pdf": "4c8e961a443bc3cc1cd9e90466a384e674273d47d566bb94d4488e9853c413d5",
+  "figs/fig_qual.png": "d2dfbd587163a4ec8a0b13340b9d44ba495677c2871bc8ab5e8ab55cf493326a"
+ },
+ "updated_utc": "2026-11-15T19:17Z",
+ "on_page": {
+  "text_width_mm": 160.0,
+  "include_widths_from": "cluster paper/ijdar_v12.1/paper_inkbridge_v12.1.tex (sha256 prefix acea81dc751c)",
+  "figures": {
+   "fig_overview": {
+    "natural_mm": [
+     175.0,
+     64.0
+    ],
+    "include_width": 0.85,
+    "scale": 0.777,
+    "on_page_height_mm": 49.7,
+    "min_lettering_pt_in_figure": 8.0,
+    "min_lettering_pt_on_page": 6.22
+   },
+   "fig_warm": {
+    "natural_mm": [
+     175.0,
+     58.0
+    ],
+    "include_width": 0.85,
+    "scale": 0.777,
+    "on_page_height_mm": 45.1,
+    "min_lettering_pt_in_figure": 8.0,
+    "min_lettering_pt_on_page": 6.22
+   },
+   "fig_qual": {
+    "natural_mm": [
+     191.9,
+     96.9
+    ],
+    "include_width": 0.85,
+    "scale": 0.709,
+    "on_page_height_mm": 68.7,
+    "min_lettering_pt_in_figure": 8.0,
+    "min_lettering_pt_on_page": 5.67
+   },
+   "fig_gain": {
+    "natural_mm": [
+     171.5,
+     66.9
+    ],
+    "include_width": 1.0,
+    "scale": 0.933,
+    "on_page_height_mm": 62.4,
+    "min_lettering_pt_in_figure": 6.0,
+    "min_lettering_pt_on_page": 5.6
+   },
+   "fig_retention": {
+    "natural_mm": [
+     175.0,
+     62.6
+    ],
+    "include_width": 1.0,
+    "scale": 0.914,
+    "on_page_height_mm": 57.2,
+    "min_lettering_pt_in_figure": 6.0,
+    "min_lettering_pt_on_page": 5.49,
+    "note": "not redrawn; smallest lettering is the 6-pt tick labels"
+   },
+   "fig_selector": {
+    "natural_mm": [
+     170.8,
+     51.8
+    ],
+    "include_width": 0.8,
+    "scale": 0.75,
+    "on_page_height_mm": 38.8,
+    "min_lettering_pt_in_figure": 6.0,
+    "min_lettering_pt_on_page": 4.5
+   }
+  },
+  "previous_on_page_height_mm": {
+   "fig_overview": 49.0,
+   "fig_warm": "42.6 (v11 file, natural 138.3 x 43.3 mm)",
+   "fig_qual": "61.8 (v11 file, natural 175.0 x 79.6 mm)"
+  },
+  "note": "Subscripts in mathtext labels are 0.7 of the stated size. fig_overview has no subscripts."
+ }
+}

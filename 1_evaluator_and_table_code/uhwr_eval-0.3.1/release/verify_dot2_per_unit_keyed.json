@@ -1,0 +1,13 @@
+{
+ "key": [
+  "unit_id",
+  "method",
+  "input"
+ ],
+ "n_rows": 13218,
+ "n_values": 568374,
+ "n_different_after_key_sort": 0,
+ "max_abs_diff": 0.0,
+ "columns_with_diff": {},
+ "row_order_identical": false
+}

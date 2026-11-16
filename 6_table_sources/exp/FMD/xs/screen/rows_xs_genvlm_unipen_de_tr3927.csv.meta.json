@@ -1,0 +1,209 @@
+{
+ "schema": "fmd_meta/1",
+ "kind": "fmdx_screen_rows",
+ "created_utc": "2026-11-05T13:56:22Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "code": {
+  "files": {
+   "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+   "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+   "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+   "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+   "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+   "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+   "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+   "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+   "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+   "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+  },
+  "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "command": "$U/exp/FMD/code/fmd_ext_genvlm/gv_post.py",
+ "env": {
+  "python": "3.11.13",
+  "host": "<node>",
+  "platform": "Linux-5.14.0-687.61.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "slurm_job_id": "24903135",
+  "numpy": "2.2.6",
+  "torch": "2.7.1+cu128",
+  "cv2": "4.12.0"
+ },
+ "inputs": {
+  "part arabic-english-hw-ocr-v3": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/arabic-english-hw-ocr-v3__zeroshot.json",
+   "sha256": "58e50a02c9b1e426b18a15ed85e65aa1306dd1e5011203f19e14b7ef3d0e1f1d"
+  },
+  "part arabic-ocr-deepseek-ocr-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/arabic-ocr-deepseek-ocr-2.json",
+   "sha256": "66f6aae3bf45528604f592d2198525e1f492e8c4ff7eeebd660445291b11d152"
+  },
+  "part chandra-ocr-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/chandra-ocr-2__zeroshot.json",
+   "sha256": "95f9730f600a83da87d1cc2db6ec18abb67c2c4ac696dac2ee7c674af8349596"
+  },
+  "part chandra": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/chandra__zeroshot.json",
+   "sha256": "c538103f071eb11192b6de661cc70cdb1fedb42f08b70b0739ff9160d9617416"
+  },
+  "part cleandift-sd15": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/cleandift-sd15.json",
+   "sha256": "ec6a01de22cf413a8e95540cd75751399d593cad88ca3a5145de6ce045c049bc"
+  },
+  "part cleandift-sd21": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/cleandift-sd21.json",
+   "sha256": "848c54e2fc7d20aa76bf6bb443ddf5dc74a92ae16d7be03b5807eefe8f7ad06c"
+  },
+  "part deepseek-ocr-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/deepseek-ocr-2__zeroshot.json",
+   "sha256": "2046da9765969280037f49034a461a6bf3a480051798f4546b80f37d3c1b0036"
+  },
+  "part deepseek-ocr": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/deepseek-ocr__zeroshot.json",
+   "sha256": "fb32cb8a85720b4d41b5c81e1b288973807ee2d4aebaae99af0af3c98be480ad"
+  },
+  "part dots-ocr": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/dots-ocr__zeroshot.json",
+   "sha256": "45ef7bb61b48a2bac2b54d2d562ee8afff1cecbc895668f2c17c1232e0737d67"
+  },
+  "part flux1-dev": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/flux1-dev.json",
+   "sha256": "37c9abe095de597db5aa4da369855a91b954dd8a87d0b843fcc6051e37476447"
+  },
+  "part flux1-schnell": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/flux1-schnell.json",
+   "sha256": "bdd4851ee070348b3c8183a7c59cc49fe24d5b1591bbf40721d3746118d6a9e2"
+  },
+  "part got-ocr2-hf": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/got-ocr2-hf.json",
+   "sha256": "de162162989f85a80cd002b356a4723ea799fc4c8c2a7a4672c0fa4d6f6e339b"
+  },
+  "part inksight_small_p": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/inksight_small_p__trajzs.json",
+   "sha256": "96b3ae8387030140dc134f775e599264591c643543ebc645dd911b4a44123bda"
+  },
+  "part lightonocr-2-1b": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/lightonocr-2-1b.json",
+   "sha256": "655379d810f954896095ed38ae904e386100c5024406a22aca108dab6ed1db43"
+  },
+  "part paddleocr-vl-1.6": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/paddleocr-vl-1.6.json",
+   "sha256": "914db52a9a4416ace4de4e934444bcce7d88711ad53c944f20c9b731e506ee1d"
+  },
+  "part qaari-0.1-urdu-ocr": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/qaari-0.1-urdu-ocr__zeroshot.json",
+   "sha256": "78155cbf3dedc2396fe5595c990eb683aaaaded5ed30a9ff0a8851c1d09ce52e"
+  },
+  "part qari-ocr-v0.3-vl-2b": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/qari-ocr-v0.3-vl-2b__zeroshot.json",
+   "sha256": "5415ed944c6b571c54b3f43d8fea6d94c61b310c6734013c7d77d80a8dfc6fb1"
+  },
+  "part qwen2-vl-2b-instruct": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/qwen2-vl-2b-instruct__zeroshot.json",
+   "sha256": "9994195af9cebfcd269be256bf1bc63944f172555bd9129a69105d099b2bfc19"
+  },
+  "part qwen3-vl-8b-instruct": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/qwen3-vl-8b-instruct__zeroshot.json",
+   "sha256": "59b0e51a727b4861803de90b6ba6d1fd62d6c124baa6071b5d68d1dcd027319d"
+  },
+  "part qwen3.5-4b": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/qwen3.5-4b__zeroshot.json",
+   "sha256": "c2f4cafae537f60d12a1f9d640de75be0c6a1262d13fd2e5f4b68bbd995cc80b"
+  },
+  "part sd1.5-dift": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/sd1.5-dift.json",
+   "sha256": "86cd860f1e2b957d550f69bc774b25b3e32aa69e89ad1d6b510b72230509418c"
+  },
+  "part sd2.1-dift": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/sd2.1-dift.json",
+   "sha256": "1b83e2234a97de2259e813b8ebda9fb6fd2d2dc7f8e8362e83b34cf4a709404a"
+  },
+  "part sd3-medium-diffusers": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/sd3-medium-diffusers.json",
+   "sha256": "58bfb6dbbe3a968d01bade85085ccf8a2bb9c4785f6047da41ccebd544f957e2"
+  },
+  "part sd3.5-large-diffusers-layout": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/sd3.5-large-diffusers-layout.json",
+   "sha256": "608f5c268e0471c73b6123f303e20902bef6ec23425d94042ef575600764ff07"
+  },
+  "part sd3.5-large-turbo-diffusers-layout": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/sd3.5-large-turbo-diffusers-layout.json",
+   "sha256": "8b8afa777cf629cf8bb92dcf41456f8421b2118dcdd96cb32fadd37216942912"
+  },
+  "part sd3.5-medium-diffusers-layout": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/sd3.5-medium-diffusers-layout.json",
+   "sha256": "3f73528a54dac24e85a97af3c37c9a3ff27517fd42183fd7a6c38ad2d1e7154c"
+  },
+  "part urdu-ocr-deepseek-nomy": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/urdu-ocr-deepseek-nomy__zeroshot.json",
+   "sha256": "dcb0579cc5ad99e510efc561f9d15c0dcc732558b388d9c7c1f1d1af30a48827"
+  },
+  "part urdu-ocr-deepseek-ocr2-kingabzpro": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/unipen_de_tr3927/urdu-ocr-deepseek-ocr2-kingabzpro__zeroshot.json",
+   "sha256": "6cd2854892013d2eb2239d315fbaf32db5c47eec44913e1b536637f1cf09f91c"
+  }
+ },
+ "params": {
+  "set_id": "unipen_de_tr3927",
+  "track": "genvlm",
+  "schema": "v1 (fmd_harness.screen_rows.SCHEMA)",
+  "comparators": [
+   "luo6:mid16",
+   "luo6:cat16",
+   "joint9:mid16",
+   "joint9:cat16"
+  ],
+  "delta_T0": 0.01035,
+  "boot_B": 2000,
+  "boot_seed": 20261103,
+  "prereg": "FMD_PREREG_2026-11-03.md A3.2/A3.5/A5.1"
+ },
+ "outputs": {
+  "$U/exp/FMD/xs/screen/rows_xs_genvlm_unipen_de_tr3927.csv": "6c8f396cc7c806e46f5fc8770db397b4e6067339a74a10bafc7347a8c17af36d"
+ },
+ "n_rows": 1001,
+ "fms": [
+  "arabic-english-hw-ocr-v3",
+  "arabic-ocr-deepseek-ocr-2",
+  "chandra",
+  "chandra-ocr-2",
+  "cleandift-sd15",
+  "cleandift-sd21",
+  "deepseek-ocr",
+  "deepseek-ocr-2",
+  "dots-ocr",
+  "flux1-dev",
+  "flux1-schnell",
+  "got-ocr2-hf",
+  "inksight_small_p",
+  "lightonocr-2-1b",
+  "paddleocr-vl-1.6",
+  "qaari-0.1-urdu-ocr",
+  "qari-ocr-v0.3-vl-2b",
+  "qwen2-vl-2b-instruct",
+  "qwen3-vl-8b-instruct",
+  "qwen3.5-4b",
+  "sd1.5-dift",
+  "sd2.1-dift",
+  "sd3-medium-diffusers",
+  "sd3.5-large-diffusers-layout",
+  "sd3.5-large-turbo-diffusers-layout",
+  "sd3.5-medium-diffusers-layout",
+  "urdu-ocr-deepseek-nomy",
+  "urdu-ocr-deepseek-ocr2-kingabzpro"
+ ],
+ "xs_code": {
+  "files": {
+   "__init__.py": "ce6fc8aa99758f3c13a2b3a770bc511f213d7979a8a03ef0b293756159495c78",
+   "fmdx_verdicts.py": "67c78eabf6ace3d9b0bc6ab3f4501d305f175d732368893b443a0037dd902a52",
+   "xs_common.py": "46f865ed36b9d8159ecfc812d02b8ace5ec9a6d87915cf99d568aec7016704a0",
+   "xs_extract.py": "8dfd370dbea40b16d83aeeade38ce0f6c101a267a0d3972c7526f0d9e86ae478",
+   "xs_plan.py": "811bfbe873fa5bf1c1dd8b8a5c64e22e6a13550753f885beee588bb5f844de59",
+   "xs_probe.py": "6dbb3ad424a2252fd4e5c1be3544ed550bc4e0d8c9e3cef6b536fa96f727efb8",
+   "xs_rows.py": "093862bb4a99f9c69398ca99f4a34c3739ef7822b0f9f29fa0ceca67abdc8c81",
+   "xs_targets.py": "6547a725d9fef182aebe554aafcb6fe4ebf5e0dcf79b1a776da1a223f0b2b7a5",
+   "xs_worker.py": "4c6a5e87b2a8dc7de5651ef7120db10368922d0ff21a35ce5a01df6194e45973"
+  },
+  "combined": "b4323c86e0baa10bf4599fb350d109c02785c0016467525946f04f5585b08ede",
+  "version": "fmd_harness_xs 1.0.0 (2026-11-03)"
+ }
+}

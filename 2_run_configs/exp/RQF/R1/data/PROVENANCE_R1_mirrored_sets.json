@@ -1,0 +1,84 @@
+{
+ "kind": "mirrored_ltr_sets",
+ "experiment": "RQF R1a",
+ "utc": "2026-11-07T20:21:01Z",
+ "transform": "mirror_x: seq x->-x (e0_frames.frame_seq); cond_rendered shifted flip out[:,0]=255,out[:,i]=in[:,64-i] (e0_frames.frame_cond); gt_points x->64-x (e0_frames.frame_ink convention); other cond_* keys dropped; unit order, ids, writers unchanged",
+ "seed": "none (deterministic transform)",
+ "code_tag": "5dd59e88",
+ "sets": {
+  "iam500": {
+   "source": "$U/data/m5_multiscript_v1/m5_test_iam500.npz",
+   "source_sha256": "0dbd1a613adadb4e5b846d5ecbdb5e7df9b0006d6a7665ee37e1020fc00637de",
+   "output": "$U/exp/RQF/R1/data/rqf_mir_iam500.npz",
+   "output_sha256": "f1ec9c95e23ac463488f4f7bf0b825e88564441331f232754b978bf44a0cb9d6",
+   "n_units": 500,
+   "n_writers": 63,
+   "n_sample_ids": 63,
+   "dropped_keys": [],
+   "cond_col0_background_units": 500,
+   "involution_cond_ok": true,
+   "involution_seq_ok": true,
+   "involution_gt_max_abs": 3.552713678800501e-15,
+   "render_check": {
+    "n": 100,
+    "mirrored_render_equals_flipped_cond": 0,
+    "abs_diff_sum_mirrored": 13012,
+    "unmirrored_render_equals_stored_cond": 100,
+    "abs_diff_sum_unmirrored": 0.0
+   }
+  },
+  "casia_en": {
+   "source": "$U/exp/X4a/data/x4a_casia_en.npz",
+   "source_sha256": "eb8c6a7a54fac56448b5232e2ef56726a9046198ba439129241bf3d9d9af7d6a",
+   "output": "$U/exp/RQF/R1/data/rqf_mir_casia_en.npz",
+   "output_sha256": "e90c6929330c9ea4a2c5847eca8e132d725fb403154ca4622421c21a57645ece",
+   "n_units": 500,
+   "n_writers": 60,
+   "n_sample_ids": 60,
+   "dropped_keys": [
+    "cond_d2"
+   ],
+   "cond_col0_background_units": 500,
+   "involution_cond_ok": true,
+   "involution_seq_ok": true,
+   "involution_gt_max_abs": 0.0,
+   "render_check": {
+    "n": 100,
+    "mirrored_render_equals_flipped_cond": 0,
+    "abs_diff_sum_mirrored": 10558,
+    "unmirrored_render_equals_stored_cond": 100,
+    "abs_diff_sum_unmirrored": 0.0
+   }
+  },
+  "hpl_tamil": {
+   "source": "$U/exp/X4a/data/x4a_hpl_tamil.npz",
+   "source_sha256": "d868ba858f07de2e5d179f5a635a4007fbfc25b1fa4bdbb1149ccf073dce6938",
+   "output": "$U/exp/RQF/R1/data/rqf_mir_hpl_tamil.npz",
+   "output_sha256": "a103fb20826fa8259b136df9f14c24c8afe45f8850cae28a3245cd3f99083373",
+   "n_units": 500,
+   "n_writers": 52,
+   "n_sample_ids": 52,
+   "dropped_keys": [
+    "cond_d2"
+   ],
+   "cond_col0_background_units": 500,
+   "involution_cond_ok": true,
+   "involution_seq_ok": true,
+   "involution_gt_max_abs": 3.552713678800501e-15,
+   "render_check": {
+    "n": 100,
+    "mirrored_render_equals_flipped_cond": 0,
+    "abs_diff_sum_mirrored": 27206,
+    "unmirrored_render_equals_stored_cond": 100,
+    "abs_diff_sum_unmirrored": 0.0
+   }
+  }
+ },
+ "render224_check": {
+  "set": "test_ouhdl",
+  "n": 50,
+  "exact": 0,
+  "abs_diff_sum": 50049,
+  "note": "shifted flip c->224-c vs re-render of mirrored ink at f=3.5, thickness 7"
+ }
+}

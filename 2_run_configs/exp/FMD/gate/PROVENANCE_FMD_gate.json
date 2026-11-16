@@ -1,0 +1,39 @@
+{
+ "kind": "FMD gate read",
+ "created_utc": "2026-11-03T04:19:03Z",
+ "lead_model": "<agent>",
+ "model_reason": "verdict-setting pre-registered read (<author> policy 30 Oct 2026)",
+ "prereg_sha256_prefix": "6ad98ab4",
+ "margin": -0.01035,
+ "rule": "FM pass = any order_gate row ci_lo>0 AND shape_NI ci_lo>-0.01035 (linear, gate layer); family pass = any FM pass",
+ "inputs_clusterA": "$U/exp/FMD/screen/",
+ "inputs_sha256": {
+  "prereg_gate_excerpt.txt": "7aa9eb1983839ca4291e4f869ea8eb90965dd24a99812d260d450e12fabac31d",
+  "verdicts_diffusion.json": "7a6315b8a57d7759fd7300365f7108fe95ac0fa0cbeb694bb9840ccfbd7c7f94",
+  "verdicts_ink.json": "ef29f87d8337c7bc86cd436b11c3cfde3e282cd51b59b8bbb1a7d99e433ec522",
+  "verdicts_encoders.json": "f07b8bd9e0cfc513306c104682656d8cd78f79088d9e2e4c8ec5a572b36eaf34",
+  "rows_diffusion.csv": "5f4faf206122422ca01557bd96b363073619eb8f49ca0ceded5f361f9ce26e3d",
+  "rows_ink.csv": "8b0b847730cb32478a232b5e8c26373ecb2c86e1e57d5bc95b1e793c515f664a",
+  "rows_encoders.csv": "1fa76ecd9ea67dcbcda94a0089fd211bcc654c283fc691b3bdfbf30809481ffd",
+  "rows_encoders_nomL1only.csv": "05a5df4921ffc1352095ab65d93bf2ec64e9778956f6d9c333020e9168f46a31",
+  "rows_vlm.csv": "a2d2b66d3ba41859fb3359db7754d7c37651b4f52221d029560555842d164a22",
+  "verdicts_vlm.json": "edb9e4286257f67507181a1e44eeeedc0380fabb5b122b9c358861b5e2fce18d",
+  "rows_vlm_exploratory.csv": "82703668a19afe51f1f96c93dc4a23c63aae1b430661218ec1007386b9d5552d"
+ },
+ "outputs": {
+  "fm_screen_results.csv": "f21accbdc36cabbfd017a7721603faa68851473d7aefdaba996d4f83079a360f",
+  "fm_gate_verdicts.csv": "d7f9599daaa5809a3a51f5b126973f3369209f867a52bb526a7f192db7b7d161",
+  "fm_screen_results.md": "fc0e079ba9167eb9b5df5d329e923695a5d91c7b14c3e124bb58f88028566b11"
+ },
+ "verdicts": {
+  "dinov2-large": false,
+  "dinov3-vitl16": true,
+  "inksight_small_p": false,
+  "qwen3-vl-8b-instruct": false,
+  "sam2.1-hiera-base-plus": false,
+  "sd2.1-dift": false,
+  "siglip2-so400m-patch14-224": false
+ },
+ "arm_B": "dinov3-vitl16 REPA lambda 0.5",
+ "arm_C": null
+}

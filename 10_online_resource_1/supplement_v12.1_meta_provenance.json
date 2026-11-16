@@ -1,0 +1,141 @@
+{
+ "dataset": "supplement_map_v12.1.csv",
+ "purpose": "Maps every item deferred from the InkBridge paper (v11 appendix, v12 text stages, v12.1 page reduction) to its place in the v12.1 supplementary material, or states why it is not there.",
+ "created_utc": "2026-11-15T19:24:30Z",
+ "frame_id": "226f9df3-1077-4e8b-a2d1-91570261c0f7",
+ "sources": [
+  {
+   "name": "paper_inkbridge_v11.tex",
+   "artifact_version": "0417da64-8eae-402c-80ec-f75873c62e5d",
+   "sha256": "da8abb15a6c361750dc6b4f80f9d2af03e0e4708b6918d352eb9b3358bd3221c",
+   "role": "appendix sections, deferred tables and passages"
+  },
+  {
+   "name": "paper_inkbridge_v12.tex",
+   "artifact_version": "c0b6e762-cd56-4dc5-b5e5-58868049348e",
+   "sha256": "2414bd9a2276414ef50fea615499cb9c100d31090c1a287b97046420ae550d5f",
+   "role": "full sentences around the v12.1 reduction items; tab:claims"
+  },
+  {
+   "name": "paper_inkbridge_v12.1.tex",
+   "artifact_version": "9718c2bd-45f9-45f7-8bdc-daa16a028da5",
+   "sha256": "acea81dc751cf2e1919fdf981d4690aeebfdfe84504f5e14262bed324cf77cf3",
+   "role": "section titles, wording, notation table, check of which tables the paper still prints in full"
+  },
+  {
+   "name": "deferred_from_main_v12.json",
+   "artifact_version": "bbf58af5-eeb5-4862-9f20-42d47e96c842",
+   "sha256": "00af4fef3bbc3caad7fa7d694dbdc134be339cfe5789f0791c64e2933371cf89",
+   "role": "items deferred in the v12 text stages"
+  },
+  {
+   "name": "deferred_from_main_v12.1.json",
+   "artifact_version": "06e1ca36-0641-4791-9397-6da09de52c1a",
+   "sha256": "460f7fd83a9c2ff613366e1e90bc60f63f58b2d844130a35c4326fbcf218167f",
+   "role": "13 prose passages and tab:claims removed for v12.1"
+  },
+  {
+   "name": "references.bib (audited)",
+   "artifact_version": "12c8f006-14a9-42bb-a04c-73fe4f5eacfa",
+   "sha256": "841398ae68cb168ed30fd595437ca74796230d52ad984d1772e6f8105bec5501",
+   "role": "bibliography of the compile (13 keys cited)"
+  },
+  {
+   "name": "checks_v12_summary.md",
+   "artifact_version": "46c03b90-6cbd-4563-8214-7db30544f0db",
+   "sha256": "acdf47a51d0497703643d5b5e397ae7ecb30db12d3686d89219c205983a6e79d",
+   "role": "description of the review checks listed in the README"
+  },
+  {
+   "name": "cluster exp/RV12/checks_v12 (out_r2 and code)",
+   "role": "review-check files named in the README; headers, row counts and top-level keys read, values not read",
+   "sha256_first16": {
+    "checks_v12_ft1abs.csv": "437bf9a724331022",
+    "checks_v12_inkinv.csv": "deca150791ff06bd",
+    "checks_v12_inkinv_units.csv": "253d78c25c9e1ac1",
+    "checks_v12_randctl_cells.csv": "023cb2802d0bb515",
+    "checks_v12_results.csv": "77555ecebba581a1",
+    "checks_v12_facts.json": "77ec8005342b04dd",
+    "PROVENANCE_checks_v12.json": "6d69ff99cb0f51cf",
+    "checks_v12.py": "5a7e55355433992a"
+   }
+  },
+  {
+   "name": "inkbridge_reviewer_archive_v11.tar.gz",
+   "artifact_version": "d5433241-1d25-41dd-ac6a-2000d7a41c15",
+   "sha256": "145eb6ac17294885ad0152bb62f568aadf7aec939d457aa897c476218acfde9f",
+   "role": "archive paths in the README were checked against its listing in the first build of this session"
+  }
+ ],
+ "method": {
+  "script": "build_supplement_v12_1.py",
+  "command": "python build_supplement_v12_1.py paper_inkbridge_v11.tex paper_inkbridge_v12.tex paper_inkbridge_v12.1.tex deferred_from_main_v12.json deferred_from_main_v12.1.json .",
+  "steps": [
+   "tables and passages are copied from the sources by label or exact string",
+   "wording edits are exact replacements with asserted match counts (supplement_v12.1_edit_log.json, 75 entries)",
+   "section titles named in the supplement are asserted to exist in the v12.1 tex",
+   "tab:xni and tab:r3a are left out after asserting that every v11 cell is present in the v12.1 table",
+   "supplement numbers in the CSV are computed from the order in the generated tex and equal the compiled .aux"
+  ],
+  "number_integrity_check": "numeric tokens compared as multisets per block: 11 v11 tables identical except removed labels C1-C3/RQ1-3 (tab:components) and C3 (tab:r1d caption); tab:claims identical to the v12 item; notation equals the v12.1 table plus the v11 FM-guided row; the three appendix sections equal v11 plus the inserted items E12, E20, E29, E32, E34",
+  "left_out": [
+   "two interpretive sentences of the v11 selector-control passage ('A post hoc calibration check shows why', 'The random pick is unbiased and the flag is miscalibrated')",
+   "rq-list (labels removed by review item 3)",
+   "prose-fit (wording only)",
+   "test (iv) of item E52 stays in the paper"
+  ]
+ },
+ "columns": {
+  "item": "label or item id in the source",
+  "kind": "table, appendix section, or passage with the stage that deferred it",
+  "source": "tex version the content was copied from",
+  "supplement_label": "LaTeX label in the supplement",
+  "supplement_number": "printed number (section, or table with its section)",
+  "transfer": "moved, full v11 version, copy with extra row, or not in supplement",
+  "note": "what differs or why it is absent",
+  "paper_section_extended": "v12.1 section title(s)"
+ },
+ "outputs": {
+  "supplementary_v12.1.tex": {
+   "sha256": "9a349b74a14872df3e9b681511b24dab1b9267d57f4ae234c9f650c22afc5938",
+   "bytes": 46424
+  },
+  "supplementary_v12.1.pdf": {
+   "sha256": "3902b1af1b358ef4a6abec93f57c27301fbd0e5f6bc7edb8a82921cec53ebc7b",
+   "bytes": 404492
+  },
+  "README_paper_section.md": {
+   "sha256": "9e1ebca00277031a47753f0f6965439558f5c835b6d716f6dcff564351682c42",
+   "bytes": 6950
+  },
+  "supplement_map_v12.1.csv": {
+   "sha256": "cab94c87641d27e89b9dce8648ea7b5725a558d12a73f3e6bdabe1d29f53bc2e",
+   "bytes": 4844
+  },
+  "build_supplement_v12_1.py": {
+   "sha256": "d224b649cf3a4934189246ecf86f59e1153d263aabb794a4414513fe51418f46",
+   "bytes": 31724
+  },
+  "supplement_v12.1_edit_log.json": {
+   "sha256": "aaf925109ca4b0396025049813f99dc9cebdae3a8176f77befd56c5b8e155604",
+   "bytes": 15487
+  }
+ },
+ "compile": {
+  "host": "cluster cluster (ssh:cluster)",
+  "directory": "$U/paper/ijdar_v12.1_supp",
+  "engine": "pdfTeX 3.14159265-2.6-1.40.21 (TeX Live 2020)",
+  "sequence": "pdflatex, bibtex (unsrtnat), pdflatex, pdflatex; TEXINPUTS=./tds//:",
+  "pages": 11,
+  "latex_errors": 0,
+  "undefined_references": 0,
+  "latex_warnings": 0,
+  "overfull_hbox_over_5pt": 0,
+  "bibitems": 13,
+  "visual_check": "all 11 pages of the final build (pdf sha256 3902b1af...) viewed as images at 95 dpi through explicit view calls: pages 7-11 after the Table S7 fix, pages 1-6 in a follow-up pass; no further defect seen"
+ },
+ "not_verified": [
+  "contents of the GitHub repository (git asks for credentials); every README path is marked to confirm",
+  "values inside the cluster check files (headers, row counts and keys only)"
+ ]
+}

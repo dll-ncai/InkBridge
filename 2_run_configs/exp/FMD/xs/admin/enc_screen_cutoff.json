@@ -1,0 +1,10 @@
+{
+ "cutoff_utc": "2026-11-07T00:00:59Z",
+ "written": {
+  "sam3.1": "written",
+  "webssl-dino3b-224": "written",
+  "webssl-dino5b-224": "written",
+  "webssl-dino7b-224": "written",
+  "webssl-mae3b-224": "written"
+ }
+}

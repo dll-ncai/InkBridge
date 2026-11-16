@@ -1,0 +1,19 @@
+{
+ "rows_csv": "$U/exp/FMD/screen/rows_vlm_exploratory.csv",
+ "rows_csv_sha256": "82703668a19afe51f1f96c93dc4a23c63aae1b430661218ec1007386b9d5552d",
+ "created_utc": "2026-11-03T03:23:21Z",
+ "note": "exploratory, not pre-registered: all rows gate_role info; verdict not a gate result",
+ "n_order_tests_gate_layer": null,
+ "verdicts": {
+  "VLM": {
+   "verdict": "INCOMPLETE",
+   "fms": {
+    "qwen3.5-4b": {
+     "order_pass": [],
+     "shape_NI": null,
+     "fm_pass": false
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,129 @@
+{
+ "parents": {
+  "e1v2_0.3.0": "a9d0a1e130f11addadc5321e52f5e17989e1eb54d950314a3e344873cce0ed02",
+  "dot2_0.3.0": "143627cc883bce7646a1d733b08e3402b6bfc25e22e43643f5c7e474c513f6a3",
+  "ref_0.2.0": "b1664bd3bce3a445dd2bfc06fee3487b534b09b95c2963bcf7575481dc966e8e"
+ },
+ "files": {
+  "CHANGELOG.md": {
+   "sha256": "f0cc135321a864c13648ac6ce9c0a0c543f5897402d51537fa0e6ba26f51330c",
+   "same_as_020": false,
+   "same_as_dot2_030": false,
+   "same_as_e1v2_030": false
+  },
+  "README.md": {
+   "sha256": "8f4ff5e466f90efb80e028ce110afb5b3175bae30725f11340e961ca5ff9f782",
+   "same_as_020": false,
+   "same_as_dot2_030": false,
+   "same_as_e1v2_030": false
+  },
+  "metric_registry.csv": {
+   "sha256": "4e9bd0e3058e62cb8f2e6c2994f12cb7224114cfaaf640e867ce3c7a94c47aa8",
+   "same_as_020": true,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": false
+  },
+  "metric_sanity_check.csv": {
+   "sha256": "798af9679785f20686110f97cf5f055371e20e0fb786f1c71a819384ef648ca1",
+   "same_as_020": true,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": false
+  },
+  "pyproject.toml": {
+   "sha256": "8e903845cee77b47d226e37d3e18145aa4fb2339989fe04f4f906039257b897b",
+   "same_as_020": false,
+   "same_as_dot2_030": false,
+   "same_as_e1v2_030": false
+  },
+  "release/uhwr_eval_0.2.0_to_0.3.1.diff": {
+   "sha256": "6022bb5e4cdcba5b821e7f0497cabf69630ae6b05f14fc1005a64b815735d659",
+   "same_as_020": false,
+   "same_as_dot2_030": false,
+   "same_as_e1v2_030": false
+  },
+  "release/uhwr_eval_dot2_0.3.0_to_0.3.1.diff": {
+   "sha256": "7d5b96fafae595d5f6e0feb0e7512e2f58ce5c98ba15a7e68d86d05b4ca9254c",
+   "same_as_020": false,
+   "same_as_dot2_030": false,
+   "same_as_e1v2_030": false
+  },
+  "release/uhwr_eval_e1v2_0.3.0_to_0.3.1.diff": {
+   "sha256": "a94ce2a2a636ff88be7d93e03f5af3e7c8ae02ab05f98d0cc5065edf663ab7b4",
+   "same_as_020": false,
+   "same_as_dot2_030": false,
+   "same_as_e1v2_030": false
+  },
+  "tests_marks.py": {
+   "sha256": "2b7c33ece9c8082c7ddce59838ecbb9aa3215a32c58d8129f8cf4e25d8fdf088",
+   "same_as_020": false,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": false
+  },
+  "tests_timing.py": {
+   "sha256": "01f260c417e01faa21f9523f87f007dcf5406f54efc3a02cd726fb8b8ebee300",
+   "same_as_020": true,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": false
+  },
+  "toy_validation.csv": {
+   "sha256": "8f3be97a02314cd5f1f66c15d4a0e67bbd78c72da8bef9394d85b80ce93ff460",
+   "same_as_020": true,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": false
+  },
+  "uhwr_eval/__init__.py": {
+   "sha256": "1618fe4713334c9970453656a74bff182f32209a11804d7712833dabd573861a",
+   "same_as_020": false,
+   "same_as_dot2_030": false,
+   "same_as_e1v2_030": false
+  },
+  "uhwr_eval/_nagamatsu_metrics.py": {
+   "sha256": "7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4",
+   "same_as_020": true,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": true
+  },
+  "uhwr_eval/marks.py": {
+   "sha256": "aa215a6438c6aaa78dbad6c31f5e28b363e35dc05b1a82ac5e469e1d6776f765",
+   "same_as_020": false,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": false
+  },
+  "uhwr_eval/metrics.py": {
+   "sha256": "16bd40d5a340458f7ccbef73c6e58cd75fbc2ceeb28f25c7002965afa713bf83",
+   "same_as_020": false,
+   "same_as_dot2_030": false,
+   "same_as_e1v2_030": true
+  },
+  "uhwr_eval/render.py": {
+   "sha256": "49ff4cf1dc0f90bf784cc459fc2c1e501ec1482a3f50f6b48e20909d679966eb",
+   "same_as_020": true,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": true
+  },
+  "uhwr_eval/strokes.py": {
+   "sha256": "1b3ef8505b7cf8cdcfa2d95191ab475582e16316bf18fd7a0d5cf70ed9e152b7",
+   "same_as_020": true,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": true
+  },
+  "uhwr_eval/timing.py": {
+   "sha256": "3e86430e5482405eacdf44990646bc8a3f56b7ec674b2b4a8f4e37ed90bfb787",
+   "same_as_020": true,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": true
+  },
+  "uhwr_eval/v2metrics.py": {
+   "sha256": "483611923986650b6d6983ced00264fd39e0cba3a43149b32f3bf878643f2d43",
+   "same_as_020": false,
+   "same_as_dot2_030": false,
+   "same_as_e1v2_030": true
+  },
+  "uhwr_eval/validate_toy.py": {
+   "sha256": "3e386e2603ac2f47a9d25fb6e7be8e51a2d6390ff4831c3e157015064aa5fd0b",
+   "same_as_020": true,
+   "same_as_dot2_030": true,
+   "same_as_e1v2_030": true
+  }
+ }
+}

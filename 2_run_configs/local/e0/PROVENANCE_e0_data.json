@@ -1,0 +1,276 @@
+{
+ "name": "OUHD-L ligature units v3.0 in Nagamatsu training format (E0 arrays)",
+ "created_utc": "2026-10-16T01:04:55Z",
+ "experiment": "S3/E0 reduced-budget Nagamatsu diffusion on OUHD-L v3 ligatures",
+ "inputs_sha256": {
+  "$LOCAL/data/ouhdl_ligatures_v3/PROVENANCE.json": "1d1cc107e88f5aee7fcd25e0048cb1eb45c63c6696e9a6ae5ee89bdb736b9907",
+  "$LOCAL/data/ouhdl_ligatures_v3/ligatures_v3_test.csv": "3eaed4afbfaae95285c78e41b4679920c684ca18d8ef6a743d180f4c05385cb3",
+  "$LOCAL/data/ouhdl_ligatures_v3/ligatures_v3_test.npz": "1c08068f78772322e376798c2db8be56f686fa80afac6257f7d51a1e9d094953",
+  "$LOCAL/data/ouhdl_ligatures_v3/ligatures_v3_train.csv": "ff788c5fb081af55edfc4dce9068ec5ec1ea7e9b0f4a577f846f1c8380ed4f2a",
+  "$LOCAL/data/ouhdl_ligatures_v3/ligatures_v3_train.npz": "62482f11f89e3ed80659d512d8cb5c8152b27bf36cf4b404c0c36e38abc0dbec",
+  "$LOCAL/data/ouhdl_ligatures_v3/ligatures_v3_val.csv": "7f166fa0864b94a5886175bdd1281e9c6e40300f2ee75620f79476f4622240ae",
+  "$LOCAL/data/ouhdl_ligatures_v3/ligatures_v3_val.npz": "4b7a0fd4d42e90110396ba046b9f439301a9be1ec0a4e0d5b2414a5980dc9523",
+  "data/gold_labels_Ali<user>_2026-10-15.json (artifact b234d282-fdac-43d1-9e02-4797d8be3e7a)": "9e7fda56c21beed11c165bc32156c006175e04996d149d901776eedbb4cf4801",
+  "$LOCAL/data/ouhdl/test.csv": "aaaccaee2669feb01e92f9f3a0007c324de0a373a859f749231c7ba458874c1b"
+ },
+ "code_sha256": {
+  "e0_adapter.py": "83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10",
+  "build_e0_data.py": "c79c3c1abbc191940ed10a7afcf11b38fa5af636840cada892336d7071e8bcb8",
+  "e0_dataset.py": "2f2a11c6df94af2f27292a436732fe4ed25cf2432382ac8a347e07f7c153c2fa",
+  "e0_train.py": "640ad9067b9e313e3356375721ee4d9f051b7b1c0503dd9ca137306b88ceb774",
+  "e0_sample.py": "5f60cb294f8bd7b27ccb676ef0a836b6b0c34730241e366d549fc2104953f84c",
+  "e0_score.py": "0a7569d47d7af1ba3eddb5cbcac6bfd602dc4d257cc950098748d50ff9a2e1af",
+  "test_e0_adapter.py": "0f7967b05cf8de47d36d03a9fc2dcd1f7ea4f2c7dbf7cfe770feaa33152416c6",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_eval/__init__.py": "fe1a1a410b83b28e5dcba7f3531480e3b6ba0e8ab9b5a7b301f6f9f12b9bfc8d",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_eval/_nagamatsu_metrics.py": "7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_eval/metrics.py": "00c937fa802a46c49ab8858047e9d1c2a4d2ae6bae648fa024276eb20bbfec40",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_eval/render.py": "49ff4cf1dc0f90bf784cc459fc2c1e501ec1482a3f50f6b48e20909d679966eb",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_eval/strokes.py": "1b3ef8505b7cf8cdcfa2d95191ab475582e16316bf18fd7a0d5cf70ed9e152b7",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_eval/validate_toy.py": "3e386e2603ac2f47a9d25fb6e7be8e51a2d6390ff4831c3e157015064aa5fd0b",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_baselines/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_baselines/aggregate.py": "7254af14d2593fd90e88c8b7aa6dc6d4f940b98cb2a670c61720b6ef2d877b32",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_baselines/geometric.py": "d016dc9e01a8f850cc640ad25c307cc17748ef2ea53d6634292ff88ea574fdc7",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_baselines/inksight_runner.py": "ce2ecea7d1d95c1b368843a8cb6f2093919dc2d613a01b2e544d451272fc6b5f",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_baselines/inputs.py": "85571dae5e00aa1741cc8ac10f452cc103c1b5a92b057f3bdaf6948361e0e708",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_baselines/momna.py": "3af0e8e91c35f64d9f1c3131cc0bc66018e88fb702d85ba0ad10cab7cae2a327",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_baselines/ouhdl.py": "8c45950246f98a9bbb14c36cbb59212b328b18f10b0c6fdb992bb1eb642df6b1",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_baselines/run_ouhdl.py": "b0362beda5cd851c797b55897f9435267deddde17dbf166f68d0367393b1fefa",
+  "$LOCAL/data/ouhdl_ligatures_v3/build/uhwr_baselines/score_inksight.py": "5f6ee3331f432a6e9d416b8cfe0e1152fd76dcd321cf818836acfafe35d2f1de"
+ },
+ "nagamatsu_repo": {
+  "url": "https://github.com/hirokinaga/Handwriting-Trajectory-Recovery-with-Diffusion-Models",
+  "commit": "7c5cf62392e36cdc9f86445b4acb16c1e9198c68",
+  "modified": false,
+  "note": "model, diffusion, Trainer1D, collate_fn and metrics used unchanged; e0_train.py is a fork of src/standard_diffusion_train.py (dataset swap, fixed run dir + auto-resume, resume seed offset)"
+ },
+ "parameters": {
+  "canvas": "64x64 evaluation canvas, uhwr_eval.fit_transform_unit (isotropic, ink bbox into 56x56, centred, 4 px margin)",
+  "y_axis": "down (image row = y)",
+  "x_axis": "as recorded (no mirroring; RTL kept)",
+  "sequence": "per-stroke uniform arc-length resampling, 1.0 px step; step x1.05 until <= 320 points (affects train 17, val 2, test 3, gold 1 units); uhwr_eval.to_nagamatsu x_n = 2x/64 - 1; pen=-1 last point of each stroke; eos=-1 final point",
+  "condition_rendered": "uhwr_eval.render_image(native ink, (64,64), thickness 2, antialias) = uhwr_baselines.inputs.rendered_unit(u, f=1); stored black-on-white uint8, dataset class inverts to white-on-black float [0,1]; no augmentation",
+  "condition_dataset": "uhwr_baselines.inputs.dataset_unit(line, unit, OUHD-L img/ PNG, f=4, mask_px=5) then cv2.resize INTER_AREA to 64x64 (test/gold only)",
+  "geometric_inputs": "cond_rendered_f4 = rendered_unit(u, f=4); cond_dataset_f4 = dataset_unit(..., f=4) (as uhwr_baselines/run_ouhdl.py)",
+  "gold_units": "<author> hand-corrected 21 test lines (labels 2026-10-15, build 4563e8b4e21d), unit k = strokes with assign==k, ids <sample_id>_G<k:03d>; evaluation only"
+ },
+ "command": "cd ~/Work/uhwr/experiments/e0 && PYTHONPATH=<v3>/build:<v3>:. python build_e0_data.py --v3 ~/Work/uhwr/data/ouhdl_ligatures_v3 --ouhdl ~/Work/uhwr/data/ouhdl --gold data/gold_labels_Ali<user>_2026-10-15.json --out data --procs 12",
+ "outputs": {
+  "train": {
+   "n_units": 33615,
+   "n_lines": 1911,
+   "seq_len_pct": {
+    "50": 124.0,
+    "90": 175.0,
+    "99": 229.0,
+    "100": 320.0
+   },
+   "n_step_gt_1": 17,
+   "step_max": 4.321942329406738,
+   "raw_vs_line_max_abs_dev_px": null,
+   "file": "e0_train.npz",
+   "sha256": "2c4ddc48fb37b3eb3145977d9245f16e2e237f1224e24b5c81b72785d8a1f048",
+   "seconds": 12.9
+  },
+  "val": {
+   "n_units": 4349,
+   "n_lines": 239,
+   "seq_len_pct": {
+    "50": 122.0,
+    "90": 170.0,
+    "99": 227.51999999999953,
+    "100": 316.0
+   },
+   "n_step_gt_1": 2,
+   "step_max": 2.6532976627349854,
+   "raw_vs_line_max_abs_dev_px": null,
+   "file": "e0_val.npz",
+   "sha256": "25451031d41408c32c504e07b9e16ebcafe4d5fc3c0678cb1bab82a877272f92",
+   "seconds": 1.9
+  },
+  "test": {
+   "n_units": 4406,
+   "n_lines": 253,
+   "seq_len_pct": {
+    "50": 123.0,
+    "90": 171.0,
+    "99": 220.0,
+    "100": 314.0
+   },
+   "n_step_gt_1": 3,
+   "step_max": 1.1024999618530273,
+   "raw_vs_line_max_abs_dev_px": 9.094947017729282e-13,
+   "file": "e0_test.npz",
+   "sha256": "c09560ed07a526614b3342a2fb6b642165f6aab3fffa25876bf1bc7502b7a514",
+   "seconds": 12.7
+  },
+  "gold": {
+   "n_units": 354,
+   "n_lines": 21,
+   "seq_len_pct": {
+    "50": 121.0,
+    "90": 174.0,
+    "99": 219.87999999999988,
+    "100": 313.0
+   },
+   "n_step_gt_1": 1,
+   "step_max": 1.0499999523162842,
+   "raw_vs_line_max_abs_dev_px": 1.3642420526593924e-12,
+   "file": "e0_gold.npz",
+   "sha256": "128db32854fe76acf472e9f7b0b5b74b81d6c84b2928841eeac9f85ec0facd94",
+   "seconds": 5.4
+  }
+ },
+ "clusterA_copy": "$U/data/ouhdl_e0_v3/ (sha256 verified equal in smoke job 24415666, data_sha256.txt)",
+ "unit_test": {
+  "script": "test_e0_adapter.py",
+  "n_units": 20,
+  "seed": 20261016,
+  "all_passed": true,
+  "checks": {
+   "gt_equals_raw_transform": {
+    "passed": 20,
+    "total": 20
+   },
+   "isotropic_positive_scale": {
+    "passed": 20,
+    "total": 20
+   },
+   "pen_minus1_exactly_at_stroke_ends": {
+    "passed": 20,
+    "total": 20
+   },
+   "eos_minus1_only_last": {
+    "passed": 20,
+    "total": 20
+   },
+   "xy_in_unit_box": {
+    "passed": 20,
+    "total": 20
+   },
+   "len_le_320": {
+    "passed": 20,
+    "total": 20
+   },
+   "roundtrip_stroke_count": {
+    "passed": 20,
+    "total": 20
+   },
+   "roundtrip_endpoints_lt_1e-3px": {
+    "passed": 20,
+    "total": 20
+   },
+   "roundtrip_points_on_gt_polyline_lt_1e-3px": {
+    "passed": 20,
+    "total": 20
+   },
+   "gt_points_within_half_step_of_decoded_polyline": {
+    "passed": 20,
+    "total": 20
+   },
+   "roundtrip_strict_order_1": {
+    "passed": 20,
+    "total": 20
+   },
+   "roundtrip_penup_f1_1": {
+    "passed": 20,
+    "total": 20
+   },
+   "roundtrip_direction_1_or_nan": {
+    "passed": 20,
+    "total": 20
+   },
+   "stroke_direction_signs_preserved": {
+    "passed": 20,
+    "total": 20
+   },
+   "cond_image_equals_fresh_render_of_gt": {
+    "passed": 20,
+    "total": 20
+   },
+   "cond_image_orientation_beats_flips_and_transpose": {
+    "passed": 20,
+    "total": 20
+   },
+   "cond_image_bbox_matches_ink_bbox_le_3px": {
+    "passed": 20,
+    "total": 20
+   },
+   "collate_shapes": {
+    "passed": 1,
+    "total": 1
+   },
+   "img_white_on_black": {
+    "passed": 1,
+    "total": 1
+   },
+   "collate_prefix_equals_seq": {
+    "passed": 20,
+    "total": 20
+   },
+   "collate_pad_repeats_last_row": {
+    "passed": 20,
+    "total": 20
+   },
+   "decode_after_padding_identical": {
+    "passed": 20,
+    "total": 20
+   },
+   "repo_metrics_self_dtw_0_aiou_gt_0.8": {
+    "passed": 20,
+    "total": 20
+   },
+   "dataset_condition_loads": {
+    "passed": 1,
+    "total": 1
+   },
+   "repo_model_loss_finite_small_cpu_model": {
+    "passed": 1,
+    "total": 1
+   },
+   "repo_ddim_sample_shape": {
+    "passed": 1,
+    "total": 1
+   },
+   "decode_untrained_sample_runs": {
+    "passed": 1,
+    "total": 1
+   }
+  },
+  "unit_ids": [
+   "1000_0028_3_L015",
+   "1000_0038_1_L012",
+   "1500_0013_5_L008",
+   "1500_0017_3_L009",
+   "2000_0007_2_L002",
+   "2000_0015_4_L018",
+   "2000_0022_0_L007",
+   "2500_0000_1_L000",
+   "2500_0032_7_L002",
+   "3000_0019_3_L012",
+   "3000_0019_4_L016",
+   "3000_0019_6_L003",
+   "3000_0027_5_L002",
+   "3500_0006_4_L014",
+   "5000_0010_4_L005",
+   "5000_0010_6_L008",
+   "5000_0023_2_L010",
+   "5000_0047_1_L013",
+   "6000_0008_5_L009",
+   "6000_0011_1_L003"
+  ]
+ },
+ "environment": {
+  "host": "local macOS (<author> laptop), conda env uhwr-eval",
+  "python": "3.11.17",
+  "packages": [
+   "accelerate==1.12.0",
+   "einops==0.8.1",
+   "ema-pytorch==0.7.7",
+   "lmdb==1.7.5",
+   "numba==0.68.0",
+   "opencv-python==5.0.0",
+   "opencv-python-headless==5.0.0",
+   "tslearn==0.9.0"
+  ]
+ }
+}

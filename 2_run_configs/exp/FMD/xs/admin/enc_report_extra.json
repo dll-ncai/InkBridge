@@ -1,0 +1,116 @@
+{
+ "not_assessed_fms": [],
+ "repos": {
+  "perception_models": "3e352cca660658d4b5c90f42a7808b11469e4c66 (exp/FMD/xs/weights/github/perception_models; PE extractor features before the _git_commit fix record perception_models_commit=null)",
+  "RADIO": "4ffaf15d0ff48197c194e306772bdb5fb92db230 (HF remote code in each c-radio weight dir is what runs)",
+  "star-vector": "0e083c1911760aa31bc576ca7f337a7f8ee605ec",
+  "depth-anything-3": "3d835ec1a5802d64a8b8b15f817a1ab54809bfe4 (git clone --depth 1 by this track, 3 Nov ~14:25Z, into exp/FMD/xs/weights/github/depth-anything-3)"
+ },
+ "comparators": {
+  "luo6": "exp/M5/runs/luo/checkpoints/checkpoint_000006.pt sha256 ab6b178d032d90e5ec86f5140e3dd166e0bda497b019d88d6d3fab5da646812c (checked at extraction)",
+  "joint9": "exp/M5/runs/joint/checkpoints/checkpoint_000009.pt sha256 b9592f22086555d3fcae46660a97f5c341dfe2de87717ed0a6e8c18d7eaaca7a (checked at extraction)",
+  "urdu": "phase-1 nominee units exp/FMD/screen/units/nomL{1,2}__{mid16,cat16}__{linear,attn}__G{14,16}__val1000.units.csv.gz (unchanged)",
+  "baseline_linear_units_sha256sums": "exp/FMD/xs/screen/units/baselines/SHA256SUMS_linear.txt sha256 7777e58b2f741ee4b9af25779f39e2f34e997991b1cd51b92eee548599cfae6d"
+ },
+ "incidents": [
+  {
+   "what": "CLUSTER-A->VPS hub pushes listed the directory exp/FMD/xs/targets, which also holds the backbone track's REPA targets (exp/FMD/xs/targets/repa/, repa_clusterA_chunk0/; 88 GB incl. DINOv3-derived targets)",
+   "jobs": [
+    "Slurm 24845238 (enc_push1, ~15:48-16:16Z 3 Nov, cancelled)",
+    "Slurm 24846129 (enc_push2, ~16:14-16:23Z, cancelled)",
+    "CLUSTER-A login-node push ~16:23Z (timeout 50 s)"
+   ],
+   "affected_paths": "VPS $VPS_ROOT/uhwr/stage/exp/FMD/xs/targets/repa*/ (files possibly overwritten or truncated by the killed tar streams; 246 files / 52.8 GB listed there at 16:24Z); nothing reached CLUSTER-B",
+   "actions": "lead informed 16:24Z; nothing deleted on the VPS (lead: backbone track verifies and re-pushes); push lists now name explicit files (enc_push3.list, 41 files, sha list enc_push3.sha256 on the stage)"
+  }
+ ],
+ "deviations": [
+  "Probe device: probes ran on CUDA when executed by a GPU worker and on CPU (16 threads) otherwise; the phase-1 Urdu nominee comparator probes ran on CPU. Hyper-parameters, seeds and folds are identical; the device is recorded in every units meta file.",
+  "Extraction device: FMs in CPU_OK (<=0.4B params plus dinov3-vit7b16 and aimv2-3b on a 192 GB CPU worker) may have been extracted on CPU (fp32); others on RTX A4000 fp32 (TF32 off). Device per feature file in its meta.",
+  "webssl-mae300m-224: A3.3 table says '224 -> 16'; the staged checkpoint is patch 16 (197 tokens at 224), so the A3.3 grid rule (native 14x14 kept) gives G14.",
+  "florence-2-large / -base / -large-ft: the repo remote code fails under transformers 5.22.1; the DaViT tower is built from the class source sliced verbatim from the pinned modeling_florence2.py (sha recorded) and loaded from vision_tower.* (norms/head keys absent in the checkpoint and unused).",
+  "depth-anything-3-large-1.1: depth_anything_3 code cloned by this track (commit 3d835ec1); checkpoint lacks head.scratch.output_conv2_aux.1-3 (unused by the main fusion chain and the backbone). DA3 base/giant (A3.c): backbone only (gate + mid; no DPT layer pre-named).",
+  "DPT fused map (A3.3 info layer for depth-anything-v2-large and -3-large-1.1): 'nearest stride 16' resolved as the fusion output whose side is closest to 224/16 = 14, i.e. the 16x16 map (stride 14); index and sizes recorded in the feature meta.",
+  "Theia ids: remote code needs hub access at construction; backbone rebuilt as transformers ViTModel (DeiT defaults) via from_pretrained legacy-key conversion; 224 input without processor resize/crop, ImageNet mean/std.",
+  "starvector-8b-im2svg: image encoder (siglip_384) rebuilt as SiglipVisionModel with shapes read from the checkpoint; 224 render resized bilinear to 384.",
+  "sam3 (and sam3.1 design): token maps (72x72 at the 1008-px processor size) mapped to 16x16 at extraction with the harness grid rule (before the float16 cast) instead of at probe time.",
+  "sam3.1: not assessed - only the original-format sam3.1_multiplex.pt is staged; no loader (A3.a.2/A3.b).",
+  "Incomplete at submission (queue keeps running to the A3.c.3 cut-off 2026-11-06T23:59:59Z; cut-off job 24850413): 33 roster ids without verdict (A3.c tail, dinov3-vit7b16, the 4 CLUSTER-B-lane webssl ids) and info-layer / attentive probes (537 of 2096 probe tasks done at 19:41Z). Every verdict written so far rests on complete gate-layer linear rows of its sets; info rows are partial.",
+  "Early verdicts: FAIL / PASS_URDU_ONLY were written as soon as A3.6 allows (SHAPE failed on a complete set or ORDER failed on 3), before all 5 xs sets were complete for some ids.",
+  "Verdict files are rewritten whenever a rows file they read changes (also when another fm's rows are added); the previous file goes to verdicts/history/. rows_sha256 records the rows-file version used.",
+  "PE-family features extracted before the commit-lookup fix record perception_models_commit = null in their meta (checkout commit 3e352cca... recorded here).",
+  "CLUSTER-B lane: a first subset (C-RADIO / SigLIP2-giant / TIPS / Florence) was cancelled before starting because CLUSTER-A finished those ids; the CLUSTER-B lane now holds only webssl-dino3b/5b/7b and webssl-mae3b (jobs 3700819/3700820, pending at submission); outputs return via the hub (ship_back.sh -> pull-back job 24846592/24850422).",
+  "Hub incident (see incidents): directory push included other tracks' REPA targets; VPS copies may be truncated."
+ ],
+ "devices": "Extraction: CLUSTER-A gpuidle RTX A4000 (fp32, TF32 off) for most FMs; CPU (cpuidle, fp32) for FMs flagged CPU_OK when no GPU worker was available; CLUSTER-B A100-RP/H100-RP for the CLUSTER-B subset if those jobs start. Probes: GPU (cuda) when run by a GPU worker, CPU (16 threads) otherwise; the device of each probe is in its units meta file. Phase-1 Urdu nominee probes ran on CPU.",
+ "clusterB_lane": {
+  "jobs": [
+   "3700819",
+   "3700820 (after 3700819 +40 min)"
+  ],
+  "queue": "$U_B/exp/FMD/xs/admin/enc_queue_clusterB/tasks.csv",
+  "fms": [
+   "webssl-dino3b-224",
+   "webssl-dino5b-224",
+   "webssl-dino7b-224",
+   "webssl-mae3b-224"
+  ],
+  "weights": "fetched on CLUSTER-B at MANIFEST revisions, sha256 vs CLUSTER-A manifest parts (exp/FMD/xs/admin/mirror/enc_clusterB_weights_verify.json)",
+  "ship_back": "exp/FMD/xs/code/enc_clusterB/ship_back.sh; CLUSTER-A pull-back jobs 24846592, 24850422"
+ },
+ "jobs": {
+  "workers_clusterA": [
+   "24842532",
+   "24842533",
+   "24842534",
+   "24843210",
+   "24843211",
+   "24843212",
+   "24843226 (A40, pending)",
+   "24843227 (A30 gpuidle, pending)",
+   "24843892",
+   "24843893",
+   "24843894",
+   "24845060",
+   "24845064",
+   "24846206 (192 GB CPU)",
+   "successors 24850414-24850420"
+  ],
+  "targets": [
+   "24843145 (unipen G16)"
+  ],
+  "smokes": [
+   "24842600",
+   "24843192",
+   "24843225",
+   "24843240",
+   "24843241",
+   "24843280",
+   "24843525",
+   "24844901",
+   "24844992",
+   "24845067",
+   "24845920",
+   "24845967",
+   "24846130",
+   "24846260",
+   "24846261"
+  ],
+  "refresh": "24843213",
+  "not_assessed": [
+   "24843974",
+   "24846585"
+  ],
+  "pushes": [
+   "24845238 (cancelled)",
+   "24846129 (cancelled)",
+   "enc_push3 login 16:24Z"
+  ],
+  "cutoff": "24850413",
+  "pullback": [
+   "24846592",
+   "24850422"
+  ]
+ },
+ "prereg_history": "screen rules A3.1-A3.7/A5.1 used; prereg sha256 at track start d5137178..., then 3c1beaa8 (A6), aa9c6c7b (A3.a), b84412d8 (A3.b), 85adc0e2 (A3.c); current sha recorded at report time"
+}

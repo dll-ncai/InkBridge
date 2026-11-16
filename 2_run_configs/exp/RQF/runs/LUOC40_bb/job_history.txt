@@ -1,0 +1,15 @@
+2026-11-08T02:13:36Z arm_job_start arm=LUOC40_bb steps=40000 save=10000 host=<node> slurm=24964380 restart=0 partition=gpuidle cuda_visible=0 gpus=[NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;]
+2026-11-08T02:13:36Z rqf_batch_layout ngpu=1 mem_gb=79 batch=128 accum=4 (512 sequences per step) host=<node> slurm=24964380 restart=0 partition=gpuidle cuda_visible=0 gpus=[NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;]
+2026-11-08T02:13:36Z train start 1gpu gpu=0
+2026-11-08T09:27:34Z train 1gpu finished
+2026-11-08T09:27:34Z training_complete {"status":"complete","completed_at":"20261108T102726+0100","final_step":40000} host=<node> slurm=24964380 restart=0 partition=gpuidle cuda_visible=0 gpus=[NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;]
+2026-11-08T12:50:05Z selected milestone 3 host=<node> slurm=24964380 restart=0 partition=gpuidle cuda_visible=0 gpus=[NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;]
+2026-11-08T12:50:05Z arm_phase12_end selected=3 host=<node> slurm=24964380 restart=0 partition=gpuidle cuda_visible=0 gpus=[NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;NVIDIA H100 PCIe;]
+2026-11-09T23:13:57Z arm_job_start arm=LUOC40_bb steps=40000 save=10000 host=<node> slurm=24964074 restart=0 partition=gpuidle cuda_visible=0 gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-09T23:13:57Z training_complete {"status":"complete","completed_at":"20261108T102726+0100","final_step":40000} host=<node> slurm=24964074 restart=0 partition=gpuidle cuda_visible=0 gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-09T23:15:01Z selected milestone 3 host=<node> slurm=24964074 restart=0 partition=gpuidle cuda_visible=0 gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-09T23:15:02Z arm_phase12_end selected=3 host=<node> slurm=24964074 restart=0 partition=gpuidle cuda_visible=0 gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-10T16:13:41Z bb_sampling_start ms3 gpu=[NVIDIA A30] host=<node> slurm=24964021
+2026-11-10T16:20:00Z bb_sampling_end rc=1 gpu=[NVIDIA A30]
+2026-11-11T03:09:56Z bb_sampling_start ms3 gpu=[NVIDIA A40] host=<node> slurm=25056069
+2026-11-11T04:31:33Z bb_sampling_end rc=0 gpu=[NVIDIA A40]

@@ -1,0 +1,20 @@
+{
+ "task": "RQF R3 (PREREG sec 3) queue",
+ "utc": "2026-11-07",
+ "model_run_as": "<agent> (lead choice: reruns existing sampling, frozen verifier 579c9b22, existing scorer lane_score/sealed_read)",
+ "prereg_sha256": "04766e973badf7ff469d468e25bab17cebabf38f2c9537d731a4d91ea960c624",
+ "code_dir": "$U/exp/RQF/code/rq3_v1 (SHA256SUMS.txt)",
+ "plan": "$U/exp/RQF/R3/plan_frozen.json (sha256 prefix 425012e3d8048f40)",
+ "verifier": "verify.py 579c9b220434c3d80ce23ddb90923addf6081fd70acc9ae9461b1b8086de2e22 via sealed_apply.py unchanged; control rng [20261104,set_index,train_index]",
+ "base_rows": "existing rows031 reused for 69/69 non-COMP-new base files (preds_sha256 checked vs sidecar); COMP units scored fresh",
+ "devices": {
+  "E0": "RTX 4090",
+  "M5": "RTX 4090",
+  "LUO": "RTX 4090",
+  "NOFM_W_FT_PEINIT_W_FT": "RTX A4000",
+  "NOFM_W_comp": "see sidecars",
+  "COMP_s35_s36": "RTX A4000 (seed0 existing + seeds1,2 new)",
+  "COMP_s34": "RTX 4090 (seed0 existing + seeds1,2 new on VPS)"
+ },
+ "blocked": "COMP s34 chain: VPS->CLUSTER-A transfer unavailable (ssh:vps scratch_root unset, CLUSTER-A->VPS key absent)"
+}

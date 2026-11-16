@@ -1,0 +1,154 @@
+{
+ "n_keys": 1623,
+ "top_prefix_counts": {
+  "detector.backbone.vision_backbone": 474,
+  "detector.backbone.language_backbone": 295,
+  "detector.transformer.decoder": 175,
+  "tracker.model.interactive_sam_mask_decoder": 131,
+  "tracker.model.sam_mask_decoder": 125,
+  "tracker.model.transformer": 122,
+  "detector.transformer.encoder": 108,
+  "detector.geometry_encoder.encode": 54,
+  "tracker.model.maskmem_backbone": 38,
+  "tracker.model.interactive_sam_prompt_encoder": 17,
+  "detector.segmentation_head.pixel_decoder": 12,
+  "tracker.model.obj_ptr_proj": 6,
+  "tracker.model.interactive_obj_ptr_proj": 6,
+  "detector.segmentation_head.mask_predictor": 6,
+  "detector.dot_prod_scoring.prompt_mlp": 6,
+  "detector.segmentation_head.cross_attend_prompt": 4,
+  "tracker.model.interactive_mask_downsample": 2,
+  "tracker.model.no_obj_ptr_linear": 2,
+  "tracker.model.obj_ptr_tpos_proj": 2,
+  "detector.geometry_encoder.points_direct_project": 2,
+  "detector.geometry_encoder.points_pool_project": 2,
+  "detector.geometry_encoder.points_pos_enc_project": 2,
+  "detector.geometry_encoder.boxes_direct_project": 2,
+  "detector.geometry_encoder.boxes_pool_project": 2,
+  "detector.geometry_encoder.boxes_pos_enc_project": 2
+ },
+ "vision_like_keys_n": 807,
+ "vision_samples": [
+  [
+   "detector.backbone.vision_backbone.interactive_convs.0.dconv_2x2_0.weight",
+   [
+    1024,
+    512,
+    2,
+    2
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.0.dconv_2x2_0.bias",
+   [
+    512
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.0.dconv_2x2_1.weight",
+   [
+    512,
+    256,
+    2,
+    2
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.0.dconv_2x2_1.bias",
+   [
+    256
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.0.conv_1x1.weight",
+   [
+    256,
+    256,
+    1,
+    1
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.0.conv_1x1.bias",
+   [
+    256
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.0.conv_3x3.weight",
+   [
+    256,
+    256,
+    3,
+    3
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.0.conv_3x3.bias",
+   [
+    256
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.1.dconv_2x2.weight",
+   [
+    1024,
+    512,
+    2,
+    2
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.1.dconv_2x2.bias",
+   [
+    512
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.1.conv_1x1.weight",
+   [
+    256,
+    512,
+    1,
+    1
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.interactive_convs.1.conv_1x1.bias",
+   [
+    256
+   ]
+  ]
+ ],
+ "pe_keys": [
+  [
+   "detector.backbone.vision_backbone.trunk.pos_embed",
+   [
+    1,
+    577,
+    1024
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.trunk.patch_embed.proj.weight",
+   [
+    1024,
+    3,
+    14,
+    14
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.trunk.ln_pre.weight",
+   [
+    1024
+   ]
+  ],
+  [
+   "detector.backbone.vision_backbone.trunk.ln_pre.bias",
+   [
+    1024
+   ]
+  ]
+ ]
+}

@@ -1,0 +1,667 @@
+# RQF A2.3 SM-R / SM-A tables (facts only; built 2026-11-10T20:19:07Z)
+
+arm|U_WIN|XNI_all6|SOLVES|n_train_seeds
+SMR_LUO_p01||||
+SMR_LUO_p10||||
+SMR_NOFM_W_p01||||
+SMR_NOFM_W_p10||||
+SMR_PEINIT_W_p01|False|True|False|1.0
+SMR_PEINIT_W_p10||||
+SMR_c-radiov3-h_W_p01|False|True|False|1.0
+SMR_c-radiov3-h_W_p10||||
+SMR_vit-mae-large_W_p01|False|True|False|1.0
+SMR_vit-mae-large_W_p10||||
+SMR_dinov3-vitl16-sat493m_W_p01|False|True|False|1.0
+SMR_dinov3-vitl16-sat493m_W_p10||||
+SMR_cleandift-sd21_W_p01|False|True|False|1.0
+SMR_cleandift-sd21_W_p10||||
+SMR_pe-spatial-b16-512_W_p01|False|True|False|1.0
+SMR_pe-spatial-b16-512_W_p10||||
+SMA_LUO_p01|False|False|False|1.0
+SMA_LUO_p10||||
+SMA_NOFM_W_p01|False|True|False|1.0
+SMA_NOFM_W_p10|False|True|False|1.0
+SMA_PEINIT_W_p01||||
+SMA_PEINIT_W_p10|False|True|False|1.0
+SMA_c-radiov3-h_W_p01|True|True|True|1.0
+SMA_c-radiov3-h_W_p10||||
+SMA_vit-mae-large_W_p01||||
+SMA_vit-mae-large_W_p10||||
+SMA_dinov3-vitl16-sat493m_W_p01||||
+SMA_dinov3-vitl16-sat493m_W_p10||||
+SMA_cleandift-sd21_W_p01|False|True|False|1.0
+SMA_cleandift-sd21_W_p10||||
+SMA_pe-spatial-b16-512_W_p01|True|True|True|1.0
+SMA_pe-spatial-b16-512_W_p10|False|True|False|1.0
+
+
+## Missing inputs
+- A22_XNI:SMA_LUO_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMA_LUO_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMA_LUO_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMA_LUO_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMA_LUO_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMA_LUO_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMA_PEINIT_W_p01 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMA_PEINIT_W_p01 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMA_PEINIT_W_p01 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMA_PEINIT_W_p01 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMA_PEINIT_W_p01 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMA_PEINIT_W_p01 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMA_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMA_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMA_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMA_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMA_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMA_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMA_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMA_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMA_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMA_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMA_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMA_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMA_vit-mae-large_W_p01 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMA_vit-mae-large_W_p01 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMA_vit-mae-large_W_p01 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMA_vit-mae-large_W_p01 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMA_vit-mae-large_W_p01 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMA_vit-mae-large_W_p01 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMA_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMA_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMA_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMA_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMA_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMA_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_LUO_p01 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_LUO_p01 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_LUO_p01 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_LUO_p01 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_LUO_p01 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_LUO_p01 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_LUO_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_LUO_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_LUO_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_LUO_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_LUO_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_LUO_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_NOFM_W_p01 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_NOFM_W_p01 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_NOFM_W_p01 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_NOFM_W_p01 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_NOFM_W_p01 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_NOFM_W_p01 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_NOFM_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_NOFM_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_NOFM_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_NOFM_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_NOFM_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_NOFM_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_PEINIT_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_PEINIT_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_PEINIT_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_PEINIT_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_PEINIT_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_PEINIT_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_c-radiov3-h_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_cleandift-sd21_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI:SMR_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:german_onhw_all
+- A22_XNI:SMR_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:german_unipen_de_test
+- A22_XNI:SMR_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:test_casia_en
+- A22_XNI:SMR_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:test_casia_zh
+- A22_XNI:SMR_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:test_hpl_tamil
+- A22_XNI:SMR_vit-mae-large_W_p10 vs LUO_ms6[RouteA]:test_iam500
+- A22_XNI_check:SMA_LUO_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMA_LUO_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMA_LUO_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMA_LUO_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMA_LUO_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMA_LUO_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMA_PEINIT_W_p01 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMA_PEINIT_W_p01 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMA_PEINIT_W_p01 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMA_PEINIT_W_p01 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMA_PEINIT_W_p01 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMA_PEINIT_W_p01 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMA_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMA_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMA_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMA_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMA_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMA_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMA_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMA_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMA_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMA_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMA_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMA_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p01 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMA_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMA_vit-mae-large_W_p01 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMA_vit-mae-large_W_p01 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMA_vit-mae-large_W_p01 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMA_vit-mae-large_W_p01 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMA_vit-mae-large_W_p01 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMA_vit-mae-large_W_p01 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMA_vit-mae-large_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMA_vit-mae-large_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMA_vit-mae-large_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMA_vit-mae-large_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMA_vit-mae-large_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMA_vit-mae-large_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_LUO_p01 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_LUO_p01 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_LUO_p01 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_LUO_p01 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_LUO_p01 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_LUO_p01 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_LUO_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_LUO_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_LUO_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_LUO_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_LUO_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_LUO_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_NOFM_W_p01 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_NOFM_W_p01 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_NOFM_W_p01 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_NOFM_W_p01 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_NOFM_W_p01 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_NOFM_W_p01 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_NOFM_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_NOFM_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_NOFM_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_NOFM_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_NOFM_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_NOFM_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_PEINIT_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_PEINIT_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_PEINIT_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_PEINIT_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_PEINIT_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_PEINIT_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_c-radiov3-h_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_cleandift-sd21_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_dinov3-vitl16-sat493m_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_pe-spatial-b16-512_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_XNI_check:SMR_vit-mae-large_W_p10 vs LUO_ms6[A4000]:german_onhw_all
+- A22_XNI_check:SMR_vit-mae-large_W_p10 vs LUO_ms6[A4000]:german_unipen_de_test
+- A22_XNI_check:SMR_vit-mae-large_W_p10 vs LUO_ms6[A4000]:test_casia_en
+- A22_XNI_check:SMR_vit-mae-large_W_p10 vs LUO_ms6[A4000]:test_casia_zh
+- A22_XNI_check:SMR_vit-mae-large_W_p10 vs LUO_ms6[A4000]:test_hpl_tamil
+- A22_XNI_check:SMR_vit-mae-large_W_p10 vs LUO_ms6[A4000]:test_iam500
+- A22_report_M5:SMA_LUO_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMA_LUO_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMA_LUO_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMA_LUO_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMA_LUO_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMA_LUO_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMA_LUO_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMA_PEINIT_W_p01 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMA_PEINIT_W_p01 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMA_PEINIT_W_p01 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMA_PEINIT_W_p01 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMA_PEINIT_W_p01 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMA_PEINIT_W_p01 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMA_PEINIT_W_p01 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMA_c-radiov3-h_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMA_c-radiov3-h_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMA_c-radiov3-h_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMA_c-radiov3-h_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMA_c-radiov3-h_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMA_c-radiov3-h_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMA_c-radiov3-h_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMA_cleandift-sd21_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMA_cleandift-sd21_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMA_cleandift-sd21_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMA_cleandift-sd21_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMA_cleandift-sd21_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMA_cleandift-sd21_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMA_cleandift-sd21_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p01 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p01 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p01 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p01 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p01 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p01 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p01 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMA_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMA_vit-mae-large_W_p01 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMA_vit-mae-large_W_p01 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMA_vit-mae-large_W_p01 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMA_vit-mae-large_W_p01 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMA_vit-mae-large_W_p01 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMA_vit-mae-large_W_p01 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMA_vit-mae-large_W_p01 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMA_vit-mae-large_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMA_vit-mae-large_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMA_vit-mae-large_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMA_vit-mae-large_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMA_vit-mae-large_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMA_vit-mae-large_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMA_vit-mae-large_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_LUO_p01 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_LUO_p01 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_LUO_p01 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_LUO_p01 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_LUO_p01 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_LUO_p01 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_LUO_p01 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_LUO_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_LUO_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_LUO_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_LUO_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_LUO_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_LUO_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_LUO_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_NOFM_W_p01 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_NOFM_W_p01 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_NOFM_W_p01 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_NOFM_W_p01 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_NOFM_W_p01 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_NOFM_W_p01 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_NOFM_W_p01 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_NOFM_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_NOFM_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_NOFM_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_NOFM_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_NOFM_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_NOFM_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_NOFM_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_PEINIT_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_PEINIT_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_PEINIT_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_PEINIT_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_PEINIT_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_PEINIT_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_PEINIT_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_c-radiov3-h_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_c-radiov3-h_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_c-radiov3-h_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_c-radiov3-h_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_c-radiov3-h_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_c-radiov3-h_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_c-radiov3-h_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_cleandift-sd21_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_cleandift-sd21_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_cleandift-sd21_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_cleandift-sd21_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_cleandift-sd21_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_cleandift-sd21_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_cleandift-sd21_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_dinov3-vitl16-sat493m_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_pe-spatial-b16-512_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_pe-spatial-b16-512_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_pe-spatial-b16-512_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_pe-spatial-b16-512_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_pe-spatial-b16-512_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_pe-spatial-b16-512_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_pe-spatial-b16-512_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_report_M5:SMR_vit-mae-large_W_p10 vs joint_M5_ms9:german_onhw_all
+- A22_report_M5:SMR_vit-mae-large_W_p10 vs joint_M5_ms9:german_unipen_de_test
+- A22_report_M5:SMR_vit-mae-large_W_p10 vs joint_M5_ms9:test_casia_en
+- A22_report_M5:SMR_vit-mae-large_W_p10 vs joint_M5_ms9:test_casia_zh
+- A22_report_M5:SMR_vit-mae-large_W_p10 vs joint_M5_ms9:test_hpl_tamil
+- A22_report_M5:SMR_vit-mae-large_W_p10 vs joint_M5_ms9:test_iam500
+- A22_report_M5:SMR_vit-mae-large_W_p10 vs joint_M5_ms9:test_ouhdl
+- A22_target:SMA_LUO_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMA_PEINIT_W_p01 vs COMP_p01_pooled[A4000]:test_ouhdl
+- A22_target:SMA_c-radiov3-h_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMA_cleandift-sd21_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMA_dinov3-vitl16-sat493m_W_p01 vs COMP_p01_pooled[A4000]:test_ouhdl
+- A22_target:SMA_dinov3-vitl16-sat493m_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMA_vit-mae-large_W_p01 vs COMP_p01_pooled[A4000]:test_ouhdl
+- A22_target:SMA_vit-mae-large_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMR_LUO_p01 vs COMP_p01_pooled[A4000]:test_ouhdl
+- A22_target:SMR_LUO_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMR_NOFM_W_p01 vs COMP_p01_pooled[A4000]:test_ouhdl
+- A22_target:SMR_NOFM_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMR_PEINIT_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMR_c-radiov3-h_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMR_cleandift-sd21_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMR_dinov3-vitl16-sat493m_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMR_pe-spatial-b16-512_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target:SMR_vit-mae-large_W_p10 vs LUOFT_p10_ms10[RouteA]:test_ouhdl
+- A22_target_check:SMA_PEINIT_W_p01 vs COMP_p01_pooled[4090]:test_ouhdl
+- A22_target_check:SMA_dinov3-vitl16-sat493m_W_p01 vs COMP_p01_pooled[4090]:test_ouhdl
+- A22_target_check:SMA_vit-mae-large_W_p01 vs COMP_p01_pooled[4090]:test_ouhdl
+- A22_target_check:SMR_LUO_p01 vs COMP_p01_pooled[4090]:test_ouhdl
+- A22_target_check:SMR_NOFM_W_p01 vs COMP_p01_pooled[4090]:test_ouhdl
+- FMD_cellF:SMA_c-radiov3-h_W_p01 vs SMA_PEINIT_W_p01:test_ouhdl
+- FMD_cellF:SMA_cleandift-sd21_W_p01 vs SMA_PEINIT_W_p01:test_ouhdl
+- FMD_cellF:SMA_dinov3-vitl16-sat493m_W_p01 vs SMA_NOFM_W_p01:test_ouhdl
+- FMD_cellF:SMA_dinov3-vitl16-sat493m_W_p01 vs SMA_PEINIT_W_p01:test_ouhdl
+- FMD_cellF:SMA_pe-spatial-b16-512_W_p01 vs SMA_PEINIT_W_p01:test_ouhdl
+- FMD_cellF:SMA_vit-mae-large_W_p01 vs SMA_NOFM_W_p01:test_ouhdl
+- FMD_cellF:SMA_vit-mae-large_W_p01 vs SMA_PEINIT_W_p01:test_ouhdl
+- FMD_cellF:SMR_c-radiov3-h_W_p01 vs SMR_NOFM_W_p01:test_ouhdl
+- FMD_cellF:SMR_cleandift-sd21_W_p01 vs SMR_NOFM_W_p01:test_ouhdl
+- FMD_cellF:SMR_dinov3-vitl16-sat493m_W_p01 vs SMR_NOFM_W_p01:test_ouhdl
+- FMD_cellF:SMR_pe-spatial-b16-512_W_p01 vs SMR_NOFM_W_p01:test_ouhdl
+- FMD_cellF:SMR_vit-mae-large_W_p01 vs SMR_NOFM_W_p01:test_ouhdl
+- SMA/LUO/p10/german_onhw_all
+- SMA/LUO/p10/german_unipen_de_test
+- SMA/LUO/p10/test_casia_en
+- SMA/LUO/p10/test_casia_zh
+- SMA/LUO/p10/test_hpl_tamil
+- SMA/LUO/p10/test_iam500
+- SMA/LUO/p10/test_ouhdl
+- SMA/PEINIT_W/p01/german_onhw_all
+- SMA/PEINIT_W/p01/german_unipen_de_test
+- SMA/PEINIT_W/p01/test_casia_en
+- SMA/PEINIT_W/p01/test_casia_zh
+- SMA/PEINIT_W/p01/test_hpl_tamil
+- SMA/PEINIT_W/p01/test_iam500
+- SMA/PEINIT_W/p01/test_ouhdl
+- SMA/c-radiov3-h_W/p10/german_onhw_all
+- SMA/c-radiov3-h_W/p10/german_unipen_de_test
+- SMA/c-radiov3-h_W/p10/test_casia_en
+- SMA/c-radiov3-h_W/p10/test_casia_zh
+- SMA/c-radiov3-h_W/p10/test_hpl_tamil
+- SMA/c-radiov3-h_W/p10/test_iam500
+- SMA/c-radiov3-h_W/p10/test_ouhdl
+- SMA/cleandift-sd21_W/p10/german_onhw_all
+- SMA/cleandift-sd21_W/p10/german_unipen_de_test
+- SMA/cleandift-sd21_W/p10/test_casia_en
+- SMA/cleandift-sd21_W/p10/test_casia_zh
+- SMA/cleandift-sd21_W/p10/test_hpl_tamil
+- SMA/cleandift-sd21_W/p10/test_iam500
+- SMA/cleandift-sd21_W/p10/test_ouhdl
+- SMA/dinov3-vitl16-sat493m_W/p01/german_onhw_all
+- SMA/dinov3-vitl16-sat493m_W/p01/german_unipen_de_test
+- SMA/dinov3-vitl16-sat493m_W/p01/test_casia_en
+- SMA/dinov3-vitl16-sat493m_W/p01/test_casia_zh
+- SMA/dinov3-vitl16-sat493m_W/p01/test_hpl_tamil
+- SMA/dinov3-vitl16-sat493m_W/p01/test_iam500
+- SMA/dinov3-vitl16-sat493m_W/p01/test_ouhdl
+- SMA/dinov3-vitl16-sat493m_W/p10/german_onhw_all
+- SMA/dinov3-vitl16-sat493m_W/p10/german_unipen_de_test
+- SMA/dinov3-vitl16-sat493m_W/p10/test_casia_en
+- SMA/dinov3-vitl16-sat493m_W/p10/test_casia_zh
+- SMA/dinov3-vitl16-sat493m_W/p10/test_hpl_tamil
+- SMA/dinov3-vitl16-sat493m_W/p10/test_iam500
+- SMA/dinov3-vitl16-sat493m_W/p10/test_ouhdl
+- SMA/vit-mae-large_W/p01/german_onhw_all
+- SMA/vit-mae-large_W/p01/german_unipen_de_test
+- SMA/vit-mae-large_W/p01/test_casia_en
+- SMA/vit-mae-large_W/p01/test_casia_zh
+- SMA/vit-mae-large_W/p01/test_hpl_tamil
+- SMA/vit-mae-large_W/p01/test_iam500
+- SMA/vit-mae-large_W/p01/test_ouhdl
+- SMA/vit-mae-large_W/p10/german_onhw_all
+- SMA/vit-mae-large_W/p10/german_unipen_de_test
+- SMA/vit-mae-large_W/p10/test_casia_en
+- SMA/vit-mae-large_W/p10/test_casia_zh
+- SMA/vit-mae-large_W/p10/test_hpl_tamil
+- SMA/vit-mae-large_W/p10/test_iam500
+- SMA/vit-mae-large_W/p10/test_ouhdl
+- SMA_LUO_p10_s20261034/german_onhw_all
+- SMA_LUO_p10_s20261034/german_unipen_de_test
+- SMA_LUO_p10_s20261034/test_casia_en
+- SMA_LUO_p10_s20261034/test_casia_zh
+- SMA_LUO_p10_s20261034/test_hpl_tamil
+- SMA_LUO_p10_s20261034/test_iam500
+- SMA_LUO_p10_s20261034/test_ouhdl
+- SMA_PEINIT_W_p01_s20261034/german_onhw_all
+- SMA_PEINIT_W_p01_s20261034/german_unipen_de_test
+- SMA_PEINIT_W_p01_s20261034/test_casia_en
+- SMA_PEINIT_W_p01_s20261034/test_casia_zh
+- SMA_PEINIT_W_p01_s20261034/test_hpl_tamil
+- SMA_PEINIT_W_p01_s20261034/test_iam500
+- SMA_PEINIT_W_p01_s20261034/test_ouhdl
+- SMA_c-radiov3-h_W_p10_s20261034/german_onhw_all
+- SMA_c-radiov3-h_W_p10_s20261034/german_unipen_de_test
+- SMA_c-radiov3-h_W_p10_s20261034/test_casia_en
+- SMA_c-radiov3-h_W_p10_s20261034/test_casia_zh
+- SMA_c-radiov3-h_W_p10_s20261034/test_hpl_tamil
+- SMA_c-radiov3-h_W_p10_s20261034/test_iam500
+- SMA_c-radiov3-h_W_p10_s20261034/test_ouhdl
+- SMA_cleandift-sd21_W_p10_s20261034/german_onhw_all
+- SMA_cleandift-sd21_W_p10_s20261034/german_unipen_de_test
+- SMA_cleandift-sd21_W_p10_s20261034/test_casia_en
+- SMA_cleandift-sd21_W_p10_s20261034/test_casia_zh
+- SMA_cleandift-sd21_W_p10_s20261034/test_hpl_tamil
+- SMA_cleandift-sd21_W_p10_s20261034/test_iam500
+- SMA_cleandift-sd21_W_p10_s20261034/test_ouhdl
+- SMA_dinov3-vitl16-sat493m_W_p01_s20261034/german_onhw_all
+- SMA_dinov3-vitl16-sat493m_W_p01_s20261034/german_unipen_de_test
+- SMA_dinov3-vitl16-sat493m_W_p01_s20261034/test_casia_en
+- SMA_dinov3-vitl16-sat493m_W_p01_s20261034/test_casia_zh
+- SMA_dinov3-vitl16-sat493m_W_p01_s20261034/test_hpl_tamil
+- SMA_dinov3-vitl16-sat493m_W_p01_s20261034/test_iam500
+- SMA_dinov3-vitl16-sat493m_W_p01_s20261034/test_ouhdl
+- SMA_dinov3-vitl16-sat493m_W_p10_s20261034/german_onhw_all
+- SMA_dinov3-vitl16-sat493m_W_p10_s20261034/german_unipen_de_test
+- SMA_dinov3-vitl16-sat493m_W_p10_s20261034/test_casia_en
+- SMA_dinov3-vitl16-sat493m_W_p10_s20261034/test_casia_zh
+- SMA_dinov3-vitl16-sat493m_W_p10_s20261034/test_hpl_tamil
+- SMA_dinov3-vitl16-sat493m_W_p10_s20261034/test_iam500
+- SMA_dinov3-vitl16-sat493m_W_p10_s20261034/test_ouhdl
+- SMA_vit-mae-large_W_p01_s20261034/german_onhw_all
+- SMA_vit-mae-large_W_p01_s20261034/german_unipen_de_test
+- SMA_vit-mae-large_W_p01_s20261034/test_casia_en
+- SMA_vit-mae-large_W_p01_s20261034/test_casia_zh
+- SMA_vit-mae-large_W_p01_s20261034/test_hpl_tamil
+- SMA_vit-mae-large_W_p01_s20261034/test_iam500
+- SMA_vit-mae-large_W_p01_s20261034/test_ouhdl
+- SMA_vit-mae-large_W_p10_s20261034/german_onhw_all
+- SMA_vit-mae-large_W_p10_s20261034/german_unipen_de_test
+- SMA_vit-mae-large_W_p10_s20261034/test_casia_en
+- SMA_vit-mae-large_W_p10_s20261034/test_casia_zh
+- SMA_vit-mae-large_W_p10_s20261034/test_hpl_tamil
+- SMA_vit-mae-large_W_p10_s20261034/test_iam500
+- SMA_vit-mae-large_W_p10_s20261034/test_ouhdl
+- SMR/LUO/p01/german_onhw_all
+- SMR/LUO/p01/german_unipen_de_test
+- SMR/LUO/p01/test_casia_en
+- SMR/LUO/p01/test_casia_zh
+- SMR/LUO/p01/test_hpl_tamil
+- SMR/LUO/p01/test_iam500
+- SMR/LUO/p01/test_ouhdl
+- SMR/LUO/p10/german_onhw_all
+- SMR/LUO/p10/german_unipen_de_test
+- SMR/LUO/p10/test_casia_en
+- SMR/LUO/p10/test_casia_zh
+- SMR/LUO/p10/test_hpl_tamil
+- SMR/LUO/p10/test_iam500
+- SMR/LUO/p10/test_ouhdl
+- SMR/NOFM_W/p01/german_onhw_all
+- SMR/NOFM_W/p01/german_unipen_de_test
+- SMR/NOFM_W/p01/test_casia_en
+- SMR/NOFM_W/p01/test_casia_zh
+- SMR/NOFM_W/p01/test_hpl_tamil
+- SMR/NOFM_W/p01/test_iam500
+- SMR/NOFM_W/p01/test_ouhdl
+- SMR/NOFM_W/p10/german_onhw_all
+- SMR/NOFM_W/p10/german_unipen_de_test
+- SMR/NOFM_W/p10/test_casia_en
+- SMR/NOFM_W/p10/test_casia_zh
+- SMR/NOFM_W/p10/test_hpl_tamil
+- SMR/NOFM_W/p10/test_iam500
+- SMR/NOFM_W/p10/test_ouhdl
+- SMR/PEINIT_W/p10/german_onhw_all
+- SMR/PEINIT_W/p10/german_unipen_de_test
+- SMR/PEINIT_W/p10/test_casia_en
+- SMR/PEINIT_W/p10/test_casia_zh
+- SMR/PEINIT_W/p10/test_hpl_tamil
+- SMR/PEINIT_W/p10/test_iam500
+- SMR/PEINIT_W/p10/test_ouhdl
+- SMR/c-radiov3-h_W/p10/german_onhw_all
+- SMR/c-radiov3-h_W/p10/german_unipen_de_test
+- SMR/c-radiov3-h_W/p10/test_casia_en
+- SMR/c-radiov3-h_W/p10/test_casia_zh
+- SMR/c-radiov3-h_W/p10/test_hpl_tamil
+- SMR/c-radiov3-h_W/p10/test_iam500
+- SMR/c-radiov3-h_W/p10/test_ouhdl
+- SMR/cleandift-sd21_W/p10/german_onhw_all
+- SMR/cleandift-sd21_W/p10/german_unipen_de_test
+- SMR/cleandift-sd21_W/p10/test_casia_en
+- SMR/cleandift-sd21_W/p10/test_casia_zh
+- SMR/cleandift-sd21_W/p10/test_hpl_tamil
+- SMR/cleandift-sd21_W/p10/test_iam500
+- SMR/cleandift-sd21_W/p10/test_ouhdl
+- SMR/dinov3-vitl16-sat493m_W/p10/german_onhw_all
+- SMR/dinov3-vitl16-sat493m_W/p10/german_unipen_de_test
+- SMR/dinov3-vitl16-sat493m_W/p10/test_casia_en
+- SMR/dinov3-vitl16-sat493m_W/p10/test_casia_zh
+- SMR/dinov3-vitl16-sat493m_W/p10/test_hpl_tamil
+- SMR/dinov3-vitl16-sat493m_W/p10/test_iam500
+- SMR/dinov3-vitl16-sat493m_W/p10/test_ouhdl
+- SMR/pe-spatial-b16-512_W/p10/german_onhw_all
+- SMR/pe-spatial-b16-512_W/p10/german_unipen_de_test
+- SMR/pe-spatial-b16-512_W/p10/test_casia_en
+- SMR/pe-spatial-b16-512_W/p10/test_casia_zh
+- SMR/pe-spatial-b16-512_W/p10/test_hpl_tamil
+- SMR/pe-spatial-b16-512_W/p10/test_iam500
+- SMR/pe-spatial-b16-512_W/p10/test_ouhdl
+- SMR/vit-mae-large_W/p10/german_onhw_all
+- SMR/vit-mae-large_W/p10/german_unipen_de_test
+- SMR/vit-mae-large_W/p10/test_casia_en
+- SMR/vit-mae-large_W/p10/test_casia_zh
+- SMR/vit-mae-large_W/p10/test_hpl_tamil
+- SMR/vit-mae-large_W/p10/test_iam500
+- SMR/vit-mae-large_W/p10/test_ouhdl
+- SMR_LUO_p01_s20261034/german_onhw_all
+- SMR_LUO_p01_s20261034/german_unipen_de_test
+- SMR_LUO_p01_s20261034/test_casia_en
+- SMR_LUO_p01_s20261034/test_casia_zh
+- SMR_LUO_p01_s20261034/test_hpl_tamil
+- SMR_LUO_p01_s20261034/test_iam500
+- SMR_LUO_p01_s20261034/test_ouhdl
+- SMR_LUO_p10_s20261034/german_onhw_all
+- SMR_LUO_p10_s20261034/german_unipen_de_test
+- SMR_LUO_p10_s20261034/test_casia_en
+- SMR_LUO_p10_s20261034/test_casia_zh
+- SMR_LUO_p10_s20261034/test_hpl_tamil
+- SMR_LUO_p10_s20261034/test_iam500
+- SMR_LUO_p10_s20261034/test_ouhdl
+- SMR_NOFM_W_p01_s20261034/german_onhw_all
+- SMR_NOFM_W_p01_s20261034/german_unipen_de_test
+- SMR_NOFM_W_p01_s20261034/test_casia_en
+- SMR_NOFM_W_p01_s20261034/test_casia_zh
+- SMR_NOFM_W_p01_s20261034/test_hpl_tamil
+- SMR_NOFM_W_p01_s20261034/test_iam500
+- SMR_NOFM_W_p01_s20261034/test_ouhdl
+- SMR_NOFM_W_p10_s20261034/german_onhw_all
+- SMR_NOFM_W_p10_s20261034/german_unipen_de_test
+- SMR_NOFM_W_p10_s20261034/test_casia_en
+- SMR_NOFM_W_p10_s20261034/test_casia_zh
+- SMR_NOFM_W_p10_s20261034/test_hpl_tamil
+- SMR_NOFM_W_p10_s20261034/test_iam500
+- SMR_NOFM_W_p10_s20261034/test_ouhdl
+- SMR_PEINIT_W_p10_s20261034/german_onhw_all
+- SMR_PEINIT_W_p10_s20261034/german_unipen_de_test
+- SMR_PEINIT_W_p10_s20261034/test_casia_en
+- SMR_PEINIT_W_p10_s20261034/test_casia_zh
+- SMR_PEINIT_W_p10_s20261034/test_hpl_tamil
+- SMR_PEINIT_W_p10_s20261034/test_iam500
+- SMR_PEINIT_W_p10_s20261034/test_ouhdl
+- SMR_c-radiov3-h_W_p10_s20261034/german_onhw_all
+- SMR_c-radiov3-h_W_p10_s20261034/german_unipen_de_test
+- SMR_c-radiov3-h_W_p10_s20261034/test_casia_en
+- SMR_c-radiov3-h_W_p10_s20261034/test_casia_zh
+- SMR_c-radiov3-h_W_p10_s20261034/test_hpl_tamil
+- SMR_c-radiov3-h_W_p10_s20261034/test_iam500
+- SMR_c-radiov3-h_W_p10_s20261034/test_ouhdl
+- SMR_cleandift-sd21_W_p10_s20261034/german_onhw_all
+- SMR_cleandift-sd21_W_p10_s20261034/german_unipen_de_test
+- SMR_cleandift-sd21_W_p10_s20261034/test_casia_en
+- SMR_cleandift-sd21_W_p10_s20261034/test_casia_zh
+- SMR_cleandift-sd21_W_p10_s20261034/test_hpl_tamil
+- SMR_cleandift-sd21_W_p10_s20261034/test_iam500
+- SMR_cleandift-sd21_W_p10_s20261034/test_ouhdl
+- SMR_dinov3-vitl16-sat493m_W_p10_s20261034/german_onhw_all
+- SMR_dinov3-vitl16-sat493m_W_p10_s20261034/german_unipen_de_test
+- SMR_dinov3-vitl16-sat493m_W_p10_s20261034/test_casia_en
+- SMR_dinov3-vitl16-sat493m_W_p10_s20261034/test_casia_zh
+- SMR_dinov3-vitl16-sat493m_W_p10_s20261034/test_hpl_tamil
+- SMR_dinov3-vitl16-sat493m_W_p10_s20261034/test_iam500
+- SMR_dinov3-vitl16-sat493m_W_p10_s20261034/test_ouhdl
+- SMR_pe-spatial-b16-512_W_p10_s20261034/german_onhw_all
+- SMR_pe-spatial-b16-512_W_p10_s20261034/german_unipen_de_test
+- SMR_pe-spatial-b16-512_W_p10_s20261034/test_casia_en
+- SMR_pe-spatial-b16-512_W_p10_s20261034/test_casia_zh
+- SMR_pe-spatial-b16-512_W_p10_s20261034/test_hpl_tamil
+- SMR_pe-spatial-b16-512_W_p10_s20261034/test_iam500
+- SMR_pe-spatial-b16-512_W_p10_s20261034/test_ouhdl
+- SMR_vit-mae-large_W_p10_s20261034/german_onhw_all
+- SMR_vit-mae-large_W_p10_s20261034/german_unipen_de_test
+- SMR_vit-mae-large_W_p10_s20261034/test_casia_en
+- SMR_vit-mae-large_W_p10_s20261034/test_casia_zh
+- SMR_vit-mae-large_W_p10_s20261034/test_hpl_tamil
+- SMR_vit-mae-large_W_p10_s20261034/test_iam500
+- SMR_vit-mae-large_W_p10_s20261034/test_ouhdl

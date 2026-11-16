@@ -1,0 +1,4 @@
+2026-11-05T06:29:05Z arm_job_start arm=dinov3-vitl16_S lane=clusterA site=clusterA host=<node> slurm=24843787 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-05T06:29:06Z race_lock WIN site=clusterA host=<node> slurm=24843787 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-05T06:29:06Z batch_layout ng=1 mem_gb=24 per_gpu=32 global_micro=32 accum=16 units_per_step=512 site=clusterA host=<node> slurm=24843787 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-05T06:29:06Z train_start ngpu=1 site=clusterA host=<node> slurm=24843787 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]

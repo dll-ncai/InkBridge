@@ -1,0 +1,16 @@
+{
+ "status": "complete",
+ "final_step": 40000,
+ "completed_at": "2026-11-07T04:56:16Z",
+ "arm_id": "vit-mae-large_W",
+ "milestones": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "peak_rss_mb": 6544.17578125,
+ "cuda_max_alloc_gb": 17.374736384,
+ "lane": "clusterA",
+ "slurm": "24939112"
+}

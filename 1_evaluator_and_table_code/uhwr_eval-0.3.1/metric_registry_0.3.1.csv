@@ -1,0 +1,34 @@
+metric,direction,tag,module,definition
+dtw,↓,established,metrics.score,"Nagamatsu metrics.py dtw_and_ldtw (tslearn dtw_path: sqrt of summed squared distances along the optimal path), pixel units of the evaluation canvas"
+ldtw,↓,established,metrics.score,"Nagamatsu metrics.py: DTW / alignment-path length (PEN-Net, Chen et al. ACCV 2022)"
+aiou,↑,established,metrics.score,"Nagamatsu metrics.py adaptive_iou: GT drawn at 2 px, prediction at 1 px, best IoU over 0-4 3x3 dilations; strokes with <2 points are not drawn"
+lpips,↓,established,metrics.score,"LPIPS (Zhang et al. 2018, AlexNet, lpips v0.1) between uniform-width renderings (2 px, anti-aliased, black on white) of GT and prediction on the evaluation canvas"
+chamfer,↓,established,metrics.score,"symmetric mean Chamfer distance 0.5*(mean_a min_b d + mean_b min_a d) between point sets, px"
+hausdorff,↓,established,metrics.score,"symmetric Hausdorff distance between point sets, px"
+frechet,↓,established,metrics.score,"discrete Frechet distance (Eiter & Mannila 1994) between the concatenated point sequences in drawing order (pen-ups ignored), px"
+rmse,↓,established,metrics.score,"point-wise RMSE after resampling each whole ink to K points uniformly in pen-down arc length (K=320 ligature, K=2048 line), px"
+penup_f1,↑,proposed,metrics.score,F1 of pen-up locations: last point of every stroke; one-to-one Hungarian matching on Euclidean distance with tolerance tau (3 px)
+stroke_count_abs_err,↓,established,metrics.score,|n_pred - n_gt| strokes
+stroke_count_err,n/a,established,metrics.score,n_pred - n_gt (signed)
+stroke_match_recall,↑,proposed,metrics.score,"fraction of GT strokes matched one-to-one (Hungarian on stroke-mask IoU, masks 5 px wide, accept IoU >= 0.5)"
+stroke_match_precision,↑,proposed,metrics.score,fraction of predicted strokes matched under the same rule
+strict_order_acc,↑,proposed,metrics.score,"1 if n_pred == n_gt, every GT stroke is matched (IoU >= 0.5, one-to-one; splits/merges therefore fail) and matched predicted indices are in GT order; else 0. Name follows Wang et al. 2026; matching rule is ours"
+kendall_tau,↑,proposed,metrics.score,Kendall tau-b between GT index and predicted index over matched strokes (needs >= 2 matches)
+direction_acc,↑,proposed,metrics.score,over matched strokes whose GT start-end distance >= 2 px: fraction where predicted start is nearer GT start than GT end
+timing_profile_tv,↓,proposed,metrics.score,"uhwr_eval 0.2.0: per matched stroke (pred oriented to GT), total-variation distance between dwell-time distributions over 16 normalised arc-length bins, weighted by GT stroke duration; pen-up time ignored; NaN without timestamps"
+timing_duration_tv,↓,proposed,metrics.score,uhwr_eval 0.2.0: total-variation distance between GT and predicted shares of pen-down time over matched strokes (>= 2 matches); NaN without timestamps
+penup_f1_v2,↑,proposed,metrics.score,uhwr_eval 0.3.0: orientation/order-invariant pen-up F1 on unordered stroke end-point pairs; cost = min over orientation of max end-point distance; Hungarian; TP if <= 3 px
+timing_profile_tv_v2,↓,proposed,metrics.score,uhwr_eval 0.3.0: timing_profile_tv with predicted segment midpoints binned by projected arc position on the matched GT stroke (not the prediction's own arc length); no orientation step
+loop_orient_acc,↑,proposed,metrics.score,over matched strokes whose GT is curved/looped (|signed area| >= 4 px^2 and 4*pi*|A|/L^2 >= 0.1): fraction with sign(signed area) of prediction == GT (CW vs CCW)
+body_direction_acc,↑,proposed,marks.mark_order_metrics,direction_acc over matched GT body strokes (chord >= 2 px)
+mark_direction_acc,↑,proposed,marks.mark_order_metrics,direction_acc over matched GT mark strokes (chord >= 2 px)
+body_direction_acc_ge4,↑,proposed,marks.mark_order_metrics,"as body_direction_acc, chord >= 4 px"
+mark_direction_acc_ge4,↑,proposed,marks.mark_order_metrics,"as mark_direction_acc, chord >= 4 px"
+mark_recall,↑,proposed,marks.mark_order_metrics,matched GT marks / GT marks (same matcher as kendall_tau)
+body_recall,↑,proposed,marks.mark_order_metrics,matched GT bodies / GT bodies
+mark_kendall_tau,↑,proposed,marks.mark_order_metrics,Kendall tau-b over matched GT marks (>= 2)
+body_kendall_tau,↑,proposed,marks.mark_order_metrics,Kendall tau-b over matched GT bodies (>= 2)
+mark_before_body_recall,↑,proposed,marks.mark_order_metrics,GT marks written before own group's first body: share also predicted before it
+mark_after_body_kept,↑,proposed,marks.mark_order_metrics,GT marks written after own group's first body: share also predicted after it
+mark_slot_exact,↑,proposed,marks.mark_order_metrics,matched GT marks whose predicted predecessor stroke (any kind) is the matched GT predecessor
+mark_slot_body_exact,↑,proposed,marks.mark_order_metrics,matched GT marks whose last predicted BODY before it is the matched last GT body before it

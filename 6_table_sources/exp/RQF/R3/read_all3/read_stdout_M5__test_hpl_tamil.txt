@@ -1,0 +1,19 @@
+                   set     method  comparator            metric   delta   ci_lo   ci_hi    n  p_boot
+0   M5__test_hpl_tamil  COMP_rep3  COMP_pool3              aiou  0.0038  0.0023  0.0055  500   0.000
+1   M5__test_hpl_tamil  COMP_rep3  COMP_pool3       penup_f1_v2  0.0089 -0.0004  0.0182  500   0.065
+2   M5__test_hpl_tamil  COMP_rep3  COMP_pool3  strict_order_acc  0.0060  0.0007  0.0122  500   0.021
+3   M5__test_hpl_tamil  COMP_rep3  COMP_pool3     direction_acc -0.0024 -0.0075  0.0025  500   0.381
+8   M5__test_hpl_tamil  COMP_rep3  COMP_pool3       composite_C  1.0047  0.0834  2.0621  500     NaN
+9   M5__test_hpl_tamil  COMP_rnd3  COMP_pool3              aiou  0.0010 -0.0003  0.0023  500   0.148
+10  M5__test_hpl_tamil  COMP_rnd3  COMP_pool3       penup_f1_v2  0.0087 -0.0006  0.0170  500   0.067
+11  M5__test_hpl_tamil  COMP_rnd3  COMP_pool3  strict_order_acc  0.0040 -0.0029  0.0112  500   0.205
+12  M5__test_hpl_tamil  COMP_rnd3  COMP_pool3     direction_acc  0.0011 -0.0022  0.0049  500   0.558
+17  M5__test_hpl_tamil  COMP_rnd3  COMP_pool3       composite_C  1.0796  0.0338  2.2104  500     NaN
+18  M5__test_hpl_tamil  COMP_rep3   COMP_rnd3              aiou  0.0028  0.0010  0.0047  500   0.005
+19  M5__test_hpl_tamil  COMP_rep3   COMP_rnd3       penup_f1_v2  0.0003 -0.0125  0.0148  500   0.985
+20  M5__test_hpl_tamil  COMP_rep3   COMP_rnd3  strict_order_acc  0.0020 -0.0045  0.0098  500   0.790
+21  M5__test_hpl_tamil  COMP_rep3   COMP_rnd3     direction_acc -0.0035 -0.0092  0.0018  500   0.249
+26  M5__test_hpl_tamil  COMP_rep3   COMP_rnd3       composite_C -0.0749 -1.2579  1.2877  500     NaN
+COMP_rep3__vs__COMP_pool3 ORDER-WIN False p1 [] holm [('strict_order_acc', 98.33, -0.0007, False), ('penup_f1_v2', 97.5, -0.0015, False), ('direction_acc', 95.0, -0.0075, False)]
+COMP_rnd3__vs__COMP_pool3 ORDER-WIN False p1 [] holm [('penup_f1_v2', 98.33, -0.0026, False), ('strict_order_acc', 97.5, -0.0039, False), ('direction_acc', 95.0, -0.0022, False)]
+COMP_rep3__vs__COMP_rnd3 ORDER-WIN None p1 [] holm [('direction_acc', 98.33, -0.0109, False), ('strict_order_acc', 97.5, -0.0057, False), ('penup_f1_v2', 95.0, -0.0125, False)]

@@ -1,0 +1,22 @@
+{
+ "status": "complete",
+ "final_step": 10000,
+ "completed_at": "2026-11-10T10:36:58Z",
+ "arm_id": "pe-spatial-b16-512_W_FT",
+ "milestones": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "peak_rss_mb": 4622.04296875,
+ "cuda_max_alloc_gb": 17.01538304,
+ "lane": "clusterA",
+ "slurm": "24964834"
+}

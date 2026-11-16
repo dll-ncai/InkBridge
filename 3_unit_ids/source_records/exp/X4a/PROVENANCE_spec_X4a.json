@@ -1,0 +1,100 @@
+{
+ "experiment": "X4a",
+ "title": "Zero-shot E0 (ms8) on D2 isolated sets: CASIA zh, CASIA en, HPL Tamil (500 units each, d2_pilot_v1, seed 2026)",
+ "plan_refs": [
+  "experiments_to_run_2026-10-18.md v b474164e §X4a"
+ ],
+ "status": "queued",
+ "run_dir": "$U/exp/X4a",
+ "parameters": {
+  "checkpoint_weights": "EMA",
+  "sampler": "DDIM",
+  "sampling_timesteps": 50,
+  "ddim_eta": 0.0,
+  "batch_size": 256,
+  "run_dir": "$U/runs/e0/e0_v3_rendered_100k_bs512",
+  "sampler_script": "e0/code_4cd40f57/e0_sample.py (unchanged; final-eval code, tarball sha256 4cd40f57b7069de950b4111e157725fe9b3d70c9bbe79c10231dedb2866c5d92)",
+  "gpu": "gpuidle, 1 GPU, any type with compute capability >= 8.0 (Features constraint set via scontrol on pending jobs; in-job guard requeues off Pascal nodes); GPU type per shard in samples/shard_log.tsv",
+  "requeue": "Slurm --requeue; finished shards are skipped on restart, partial shards are rewritten from scratch (same seed)",
+  "milestone": 8,
+  "seed": 0,
+  "conditions": {
+   "rendered": "E0 training renderer: uhwr_eval.render_image 64x64, 2 px, anti-aliased (white-on-black after OuhdlE0Dataset inversion)",
+   "d2": "D2 renderer row (N14): unit_features.render_input f=4 (256x256, 8 px, AA) then cv2.INTER_AREA to 64x64"
+  },
+  "scoring": "e0_score.py e0: uhwr_eval.score native + standardised, LPIPS off; summary = e0_score.py summary with sample_id = writer id, so the 95% CIs are writer-cluster bootstraps (B=2000, seed 0)",
+  "paired": "paired_compare.py d2 minus rendered per set, writer-cluster CI"
+ },
+ "seeds": {
+  "sampling_seed": 0,
+  "unit_selection": "d2_pilot_v1 (seed 2026, built for D2)"
+ },
+ "inputs": {
+  "d2_pilot_v1.npz": "$U/exp/D2/data/d2_pilot_v1/d2_pilot_v1.npz",
+  "d2_pilot_v1_index.csv": "$U/exp/D2/data/d2_pilot_v1/d2_pilot_v1_index.csv",
+  "x4a_casia_zh.npz": "$U/exp/X4a/data/x4a_casia_zh.npz",
+  "x4a_casia_en.npz": "$U/exp/X4a/data/x4a_casia_en.npz",
+  "x4a_hpl_tamil.npz": "$U/exp/X4a/data/x4a_hpl_tamil.npz"
+ },
+ "code": {
+  "e0_sample.py": "$U/e0/code_4cd40f57/e0_sample.py",
+  "e0_score.py": "$U/e0/code_4cd40f57/e0_score.py",
+  "e0_adapter.py": "$U/e0/code_4cd40f57/e0_adapter.py",
+  "e0_dataset.py": "$U/e0/code_4cd40f57/e0_dataset.py",
+  "e0_eval_tarball_4cd40f57 (final-eval job copy)": "$SCRATCH/.<agent>/jobs/48ac1dcf-a38d-43e6-969d-934b22db48b3/e0_code_v2.tar.gz",
+  "e0q_lib.sh": "$U/exp/e0q/code/e0q_lib.sh",
+  "make_prov.py": "$U/exp/e0q/code/make_prov.py",
+  "paired_compare.py": "$U/exp/e0q/code/paired_compare.py",
+  "uhwr_eval/metrics.py": "$U/e0/code_4cd40f57/uhwr_eval/metrics.py",
+  "build_x4a.py": "$U/exp/e0q/code/build_x4a.py",
+  "D2 unit_features.py": "$U/exp/D2/code/unit_features.py",
+  "D2 run_d2.py": "$U/exp/D2/code/run_d2.py",
+  "e0q_code_v3.tgz": "$U/exp/e0q/bundles/e0q_code_v3.tgz"
+ },
+ "checkpoints": {
+  "checkpoint_000008.pt": "$U/runs/e0/e0_v3_rendered_100k_bs512/checkpoints/checkpoint_000008.pt"
+ },
+ "commands": {
+  "prep (build)": "$U/exp/e0q/code/job_prep.sh",
+  "gpu": "$U/exp/e0q/code/jobs/x4a_gpu.sh",
+  "cpu": "$U/exp/e0q/code/jobs/x4a_cpu.sh"
+ },
+ "venvs": [
+  "$U/venvs/e0/bin/python"
+ ],
+ "slurm_ids": [
+  "24480348",
+  "24480785",
+  "24480800"
+ ],
+ "jobs": {
+  "prep": {
+   "agent_job": "55d39509-a469-48c1-8f81-30c91946eb21",
+   "slurm": "24480348"
+  },
+  "gpu": {
+   "agent_job": "002fe13f-758d-4246-86b4-11ed062eb757",
+   "slurm": "24480785"
+  },
+  "cpu": {
+   "agent_job": "2d4d7d25-52c3-4f4d-a202-c2686f9370a9",
+   "slurm": "24480800"
+  },
+  "smoke": {
+   "agent_job": "f2dd5be8-2c4d-45a2-830b-b72462ae1802",
+   "slurm": "24480431",
+   "note": "64 units casia_zh both renderers; 0 scoring errors"
+  }
+ },
+ "notes": [
+  "E0 was trained on RTL Urdu only; CASIA zh/en and Tamil are LTR scripts and are fed unmirrored (zero-shot as is).",
+  "The isolated-unit GT space is UF.to_eval_space (clean_ink + fit_transform_unit), identical to the D2 geometric pilot.",
+  "GT for the sequence target (seq) was encoded only because OuhdlE0Dataset requires it; sampling does not use it."
+ ],
+ "deviations": [
+  "D2-renderer input is down-sampled from 256 px to E0's 64 px input with cv2.INTER_AREA (E0 takes 64x64 only)."
+ ],
+ "code_history": [
+  "e0q_code_v2.tgz (sha256 1da32298...) was live when the first jobs were submitted; v3 (eb32b475...) only raises the GPU guard from cc>=7.0 to cc>=8.0 after a V100 CUDA failure. Job scripts are unchanged between v2 and v3."
+ ]
+}

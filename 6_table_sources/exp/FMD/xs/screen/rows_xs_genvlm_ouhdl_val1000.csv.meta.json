@@ -1,0 +1,194 @@
+{
+ "schema": "fmd_meta/1",
+ "kind": "fmdx_screen_rows",
+ "created_utc": "2026-11-05T13:56:19Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "code": {
+  "files": {
+   "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+   "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+   "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+   "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+   "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+   "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+   "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+   "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+   "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+   "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+  },
+  "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "command": "$U/exp/FMD/code/fmd_ext_genvlm/gv_post.py",
+ "env": {
+  "python": "3.11.13",
+  "host": "<node>",
+  "platform": "Linux-5.14.0-687.61.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "slurm_job_id": "24903135",
+  "numpy": "2.2.6",
+  "torch": "2.7.1+cu128",
+  "cv2": "4.12.0"
+ },
+ "inputs": {
+  "part arabic-english-hw-ocr-v3": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/arabic-english-hw-ocr-v3__zeroshot.json",
+   "sha256": "d79820b1aa138ace693b956909b54628ca2ed266d2754f773b6b08d37892b18e"
+  },
+  "part arabic-ocr-deepseek-ocr-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/arabic-ocr-deepseek-ocr-2.json",
+   "sha256": "b1ced8167b84ed50f865a4a916f5a2264881fae8ba381292d37c75164e5811d2"
+  },
+  "part chandra-ocr-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/chandra-ocr-2__zeroshot.json",
+   "sha256": "ad435aef487f0866300060ac6384a99ab382648dbfd247275fd04c12d193d1f9"
+  },
+  "part chandra": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/chandra__zeroshot.json",
+   "sha256": "c0cc74231f1b9b290c9868e5c1a92847c121dfc140ef25be88e38976f3a72d93"
+  },
+  "part cleandift-sd15": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/cleandift-sd15.json",
+   "sha256": "a299a40eef1d38d3e2e3c79f1dab0eb8a31dd99b4f5d8f398b2c053ca97d5616"
+  },
+  "part cleandift-sd21": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/cleandift-sd21.json",
+   "sha256": "0237ba1fecb46e78663915f6bf78be8333296f0e0c118d6e71a48931229c27fd"
+  },
+  "part deepseek-ocr-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/deepseek-ocr-2__zeroshot.json",
+   "sha256": "f3085ecaca57a8418ace33eafda08c73ad88e8da43b2bc63dde661a2410a432f"
+  },
+  "part deepseek-ocr": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/deepseek-ocr__zeroshot.json",
+   "sha256": "69d0b53d9a8086cc90225adc002e2f5a66d3659d58aa5e612cf202da648ba0af"
+  },
+  "part dots-ocr": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/dots-ocr__zeroshot.json",
+   "sha256": "96eb5b0e529cf0b229f3b0ef395d51fe001a3ee12ca7fc8e3a062f778abd392d"
+  },
+  "part flux1-dev": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/flux1-dev.json",
+   "sha256": "f203f4572f68e4cb72b1070cf54b4159aad779400cdb797da9cbd2e0bef71236"
+  },
+  "part flux1-schnell": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/flux1-schnell.json",
+   "sha256": "92b4381a9907ddaae2ce55814658b7ac83643c40fd94c0c6bf4f3a1a78745daf"
+  },
+  "part got-ocr2-hf": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/got-ocr2-hf__zeroshot.json",
+   "sha256": "43b04f9416c4655e51c2451b864760fad5fbc8b6023c1054be21aeb516249af6"
+  },
+  "part lightonocr-2-1b": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/lightonocr-2-1b__zeroshot.json",
+   "sha256": "d1c5c78a31fae0f832112df104c57e871f1586d8eccef905e1560d7c78b26e4c"
+  },
+  "part paddleocr-vl-1.6": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/paddleocr-vl-1.6__zeroshot.json",
+   "sha256": "360c80b81b5ee9aedd84d046d6b935f4cb0b520e07e46b6525503b5efb78ef1d"
+  },
+  "part qaari-0.1-urdu-ocr": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/qaari-0.1-urdu-ocr__zeroshot.json",
+   "sha256": "7999734190df32d654c5399a0b3d4defff916374accc6bd51015f2f370c22a44"
+  },
+  "part qari-ocr-v0.3-vl-2b": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/qari-ocr-v0.3-vl-2b__zeroshot.json",
+   "sha256": "c37dd377ab439df7b44b3173382a5c0d367c1d51c8717a079c85cead693d2236"
+  },
+  "part qwen2-vl-2b-instruct": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/qwen2-vl-2b-instruct__zeroshot.json",
+   "sha256": "7d4a6a2c8a25e4f3e6d6db5f760aa2043986a08ebade479248f25ef341c1529d"
+  },
+  "part qwen3.5-4b__urdu_adopted": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/qwen3.5-4b__urdu_adopted.json",
+   "sha256": "5a9ad34e7d245c7d5467c4ab27de36849f16c785e428f5bcb56081bb28eec214"
+  },
+  "part sd1.5-dift": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/sd1.5-dift.json",
+   "sha256": "7e32c049aafb04e223ea98a934457070944d482f3ab41b1098a96e32c658f676"
+  },
+  "part sd3-medium-diffusers": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/sd3-medium-diffusers.json",
+   "sha256": "48d48832d788e99fe9d8c6e51b7760dd383c9ed76deee93c0cc2fa74b04475e4"
+  },
+  "part sd3.5-large-diffusers-layout": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/sd3.5-large-diffusers-layout.json",
+   "sha256": "830c6480ef63f20405ae81320937cef2ee683aa2bc5367362eaaad8b46ba24c5"
+  },
+  "part sd3.5-large-turbo-diffusers-layout": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/sd3.5-large-turbo-diffusers-layout.json",
+   "sha256": "203ba3bb89b7d3626ac7246ca15978fec3e1fb7b74e580e9bde93ac68c7d1aeb"
+  },
+  "part sd3.5-medium-diffusers-layout": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/sd3.5-medium-diffusers-layout.json",
+   "sha256": "8e7674ffe5ff8b50684154355a194f9d32c7bf39e546df0d19bccf8fd867c959"
+  },
+  "part urdu-ocr-deepseek-nomy": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/urdu-ocr-deepseek-nomy__zeroshot.json",
+   "sha256": "85420a00d6b00c260749de102d3859979ad8e730c1c0e59d1f09431a822d9eac"
+  },
+  "part urdu-ocr-deepseek-ocr2-kingabzpro": {
+   "path": "$U/exp/FMD/xs/screen/parts/genvlm/ouhdl_val1000/urdu-ocr-deepseek-ocr2-kingabzpro__zeroshot.json",
+   "sha256": "3f72839fcb860dba738c24360a8effd36f48df57725a45fd6cec371ad96bb662"
+  }
+ },
+ "params": {
+  "set_id": "ouhdl_val1000",
+  "track": "genvlm",
+  "schema": "v1 (fmd_harness.screen_rows.SCHEMA)",
+  "comparators": [
+   "nomL1:mid16",
+   "nomL1:cat16",
+   "nomL2:mid16",
+   "nomL2:cat16"
+  ],
+  "delta_T0": 0.01035,
+  "boot_B": 2000,
+  "boot_seed": 20261103,
+  "prereg": "FMD_PREREG_2026-11-03.md A3.2/A3.5/A5.1"
+ },
+ "outputs": {
+  "$U/exp/FMD/xs/screen/rows_xs_genvlm_ouhdl_val1000.csv": "4badcce2ebc8d3d5adbc44e7c0b1d836f230fafedf85c166c733ca325abbc9fd"
+ },
+ "n_rows": 962,
+ "fms": [
+  "arabic-english-hw-ocr-v3",
+  "arabic-ocr-deepseek-ocr-2",
+  "chandra",
+  "chandra-ocr-2",
+  "cleandift-sd15",
+  "cleandift-sd21",
+  "deepseek-ocr",
+  "deepseek-ocr-2",
+  "dots-ocr",
+  "flux1-dev",
+  "flux1-schnell",
+  "got-ocr2-hf",
+  "lightonocr-2-1b",
+  "paddleocr-vl-1.6",
+  "qaari-0.1-urdu-ocr",
+  "qari-ocr-v0.3-vl-2b",
+  "qwen2-vl-2b-instruct",
+  "qwen3.5-4b",
+  "sd1.5-dift",
+  "sd3-medium-diffusers",
+  "sd3.5-large-diffusers-layout",
+  "sd3.5-large-turbo-diffusers-layout",
+  "sd3.5-medium-diffusers-layout",
+  "urdu-ocr-deepseek-nomy",
+  "urdu-ocr-deepseek-ocr2-kingabzpro"
+ ],
+ "xs_code": {
+  "files": {
+   "__init__.py": "ce6fc8aa99758f3c13a2b3a770bc511f213d7979a8a03ef0b293756159495c78",
+   "fmdx_verdicts.py": "67c78eabf6ace3d9b0bc6ab3f4501d305f175d732368893b443a0037dd902a52",
+   "xs_common.py": "46f865ed36b9d8159ecfc812d02b8ace5ec9a6d87915cf99d568aec7016704a0",
+   "xs_extract.py": "8dfd370dbea40b16d83aeeade38ce0f6c101a267a0d3972c7526f0d9e86ae478",
+   "xs_plan.py": "811bfbe873fa5bf1c1dd8b8a5c64e22e6a13550753f885beee588bb5f844de59",
+   "xs_probe.py": "6dbb3ad424a2252fd4e5c1be3544ed550bc4e0d8c9e3cef6b536fa96f727efb8",
+   "xs_rows.py": "093862bb4a99f9c69398ca99f4a34c3739ef7822b0f9f29fa0ceca67abdc8c81",
+   "xs_targets.py": "6547a725d9fef182aebe554aafcb6fe4ebf5e0dcf79b1a776da1a223f0b2b7a5",
+   "xs_worker.py": "4c6a5e87b2a8dc7de5651ef7120db10368922d0ff21a35ce5a01df6194e45973"
+  },
+  "combined": "b4323c86e0baa10bf4599fb350d109c02785c0016467525946f04f5585b08ede",
+  "version": "fmd_harness_xs 1.0.0 (2026-11-03)"
+ }
+}

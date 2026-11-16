@@ -1,0 +1,22 @@
+{
+ "created_utc": "2026-11-07T20:48:53Z",
+ "script_sha256": "effdf0dcada0eaa8e7643738fc99ffb27eeb8e4ee777042486be2523cffa2a1a",
+ "inputs": {
+  "$U/exp/CAND/K1/score/rows/test_ouhdl__LUO_ms6_identity__seed0__rows031.csv": "50ec6dd75b6823768c5bec298323f78208fa3bbca9543d585511b1c7995858fe",
+  "$U/exp/CAND/K1/score/rows/test_ouhdl__LUO_ms6_identity__seed1__rows031.csv": "e85a979522bc8f1aef34c8de931a225400200ae759aad715b465d7f08c25fa78",
+  "$U/exp/CAND/K1/score/rows/test_ouhdl__LUO_ms6_identity__seed2__rows031.csv": "3ac3a0c27b41d019085ad5821f19f5298b4460b8cc2ffae2e9c1af1b2655c3f6",
+  "$U/exp/CAND/K1/score/rows/test_ouhdl__LUO_ms6_mirror_x__seed0__rows031.csv": "9f97616fe90c115e231515eab127bf5343ac132a2d24ee1f6d1d1c2cf90803a9",
+  "$U/exp/CAND/K1/score/rows/test_ouhdl__LUO_ms6_mirror_x__seed1__rows031.csv": "f61c6b53efd46f7354ffcdfef2999d6d0ba88cd3b5feb957bb98f92ddf3ba460",
+  "$U/exp/CAND/K1/score/rows/test_ouhdl__LUO_ms6_mirror_x__seed2__rows031.csv": "486bf3a5f3fc5bdb246eafafb79d4aaf4cda418b793b4169844de13a37529ee0",
+  "$U/exp/RB4_baselines/inksight_e0r/rows/inksight_e0r_rendered_rows.csv": "dd7a16037fb071cd65c0f30aef1d73740230d78a72c9d64b3e73eb8b85a91b9b",
+  "$U/exp/D3_ROUTE/stageA/score_out/rows/test_ouhdl__E0_ms8__seed0__rows031.csv": "a95730af53befcfff6649571ffa45e09338b4671a89e53f6151faa7986cc37ec",
+  "$U/exp/D3_ROUTE/stageA/score_out/rows/test_ouhdl__E0_ms8__seed1__rows031.csv": "5f79636973f9013df63a77b277b530a0b0099387d04cc4abf087bc78f5bb3e35",
+  "$U/exp/D3_ROUTE/stageA/score_out/rows/test_ouhdl__E0_ms8__seed2__rows031.csv": "f30514ba530533c3077be3f82f746457d1ae41a92762840cae35304bc3f811c5",
+  "$U/exp/CAND/method_round/Frame/score_out/s2_e0_reverse/rows/german_unipen_de_test__E0_ms8_identity__seed0__rows031.csv": "f27e2f797721e537580d3d6c0f78e5683eb301c0e91d993629339925d3a7eeec",
+  "$U/exp/CAND/method_round/Frame/score_out/s2_e0_reverse/rows/german_unipen_de_test__E0_ms8_identity__seed1__rows031.csv": "7a9b279edffaeecd7a6e1960fad1467fa28db2146a5802263675bbe77586937a",
+  "$U/exp/CAND/method_round/Frame/score_out/s2_e0_reverse/rows/german_unipen_de_test__E0_ms8_identity__seed2__rows031.csv": "11c37c0536327e479819802dfca07f42281d3d853b74305e8458ba9b3b045c2d",
+  "$U/exp/D3_ROUTE/routeA/score_out/rows/german_unipen_de_test__LUO_ms6__seed0__rows031.csv": "2687a72017fc071425375a783e28dc5019f77c538d7e3003fd0c3d723003e862",
+  "$U/exp/D3_ROUTE/routeA/score_out/rows/german_unipen_de_test__LUO_ms6__seed1__rows031.csv": "95c3fa605aac7d8be8514407360165efaaf23c86b8200e0a3de366733fc0a26a",
+  "$U/exp/D3_ROUTE/routeA/score_out/rows/german_unipen_de_test__LUO_ms6__seed2__rows031.csv": "b47ebd5231885236133212ead0f4641b8a6cb7f2f1563e3cb6f0e20cfad063cb"
+ }
+}

@@ -1,0 +1,17 @@
+step,script,expert,mean_gate,argmax_count,n_units
+0,ouhdl,expert0,0.249927,3,32
+0,ouhdl,expert1,0.25001,1,32
+0,ouhdl,expert2,0.250063,28,32
+0,ouhdl,rtl,0.25,0,32
+0,iam,expert0,0.249904,1,32
+0,iam,expert1,0.250054,20,32
+0,iam,expert2,0.250042,11,32
+0,iam,rtl,0.25,0,32
+12,ouhdl,expert0,0.250054,8,32
+12,ouhdl,expert1,0.249915,6,32
+12,ouhdl,expert2,0.249989,6,32
+12,ouhdl,rtl,0.250042,12,32
+12,iam,expert0,0.249953,4,32
+12,iam,expert1,0.249999,9,32
+12,iam,expert2,0.250058,10,32
+12,iam,rtl,0.249991,9,32

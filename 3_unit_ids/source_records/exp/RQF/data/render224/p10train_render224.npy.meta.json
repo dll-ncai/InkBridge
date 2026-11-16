@@ -1,0 +1,56 @@
+{
+ "schema": "fmd_meta/1",
+ "kind": "fmdx_render224_npy",
+ "created_utc": "2026-11-07T20:17:34Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "code": {
+  "files": {
+   "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+   "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+   "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+   "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+   "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+   "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+   "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+   "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+   "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+   "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+  },
+  "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "command": "$U/exp/FMD/xs/code/fmdx_backbone_v1/prep_renders.py npz2npy --npz $U/data/m5_multiscript_v1/m5_ft_ouhdl_p10.npz --render-npz $U/exp/RQF/data/render224/p10_harness/fmd_render224_p10train.npz --out $U/exp/RQF/data/render224/p10train_render224.npy",
+ "env": {
+  "python": "3.11.13",
+  "host": "<node>",
+  "platform": "Linux-5.14.0-687.61.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "slurm_job_id": "24963971",
+  "numpy": "2.2.6",
+  "torch": "2.7.1+cu128",
+  "cv2": "4.12.0"
+ },
+ "inputs": {
+  "render_npz": {
+   "path": "$U/exp/RQF/data/render224/p10_harness/fmd_render224_p10train.npz",
+   "sha256": "3ca50827478866b69c982076e42192bf3a72677ff13647ed2bf79bf0933cb7da"
+  },
+  "order_npz": {
+   "path": "$U/data/m5_multiscript_v1/m5_ft_ouhdl_p10.npz",
+   "sha256": "3770d4d4cd6cbd5f1131e26d50be9412ce99daea345e3fc01e34d07c4de4696f"
+  }
+ },
+ "params": {
+  "note": "img224 copied unchanged from the harness render npz"
+ },
+ "outputs": {
+  "$U/exp/RQF/data/render224/p10train_render224.npy": "ac597f019147a4e168a4c72a94002e86b7b2c84869c6dcea6a6764e0b9ab0f98"
+ },
+ "result": {
+  "n_units": 3362,
+  "img224_sha256": "7cfe90cad44ece7393551013923a76dd8a9433629b6103d40102cd73f4524d73",
+  "unit_order_equal": true
+ },
+ "script": {
+  "path": "$U/exp/FMD/xs/code/fmdx_backbone_v1/prep_renders.py",
+  "sha256": "eb100e6a39a87f2f6b27eb684ab59a3c7cd0949fe47f832cade33feef042a2d7"
+ }
+}

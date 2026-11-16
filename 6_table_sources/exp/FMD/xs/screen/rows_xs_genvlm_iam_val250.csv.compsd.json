@@ -1,0 +1,23 @@
+{
+ "qwen2-vl-2b-instruct|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "deepseek-ocr|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "qwen3.5-4b|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "deepseek-ocr-2|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "urdu-ocr-deepseek-ocr2-kingabzpro|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "qaari-0.1-urdu-ocr|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "qari-ocr-v0.3-vl-2b|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "urdu-ocr-deepseek-nomy|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "chandra-ocr-2|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "arabic-english-hw-ocr-v3|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "dots-ocr|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "inksight_small_p|zeroshot|zeroshot|traj|aiou": 0.03874721123802046,
+ "inksight_small_p|zeroshot|zeroshot|traj|tau_cp": 0.36817299569279094,
+ "inksight_small_p|zeroshot|zeroshot|traj|strict_order_acc": 0.3400496695745752,
+ "inksight_small_p|zeroshot|zeroshot|traj|penup_f1_v2": 0.22900135298431915,
+ "inksight_small_p|zeroshot|zeroshot|traj|direction_acc": 0.12974411255954602,
+ "inksight_small_p|zeroshot|zeroshot|traj|kendall_tau": 0.27606170601897734,
+ "inksight_small_p|zeroshot|zeroshot|traj|ldtw": 0.2883711520863167,
+ "inksight_small_p|zeroshot|zeroshot|traj|stroke_count_err": 0.459417989296119,
+ "qwen3-vl-8b-instruct|zeroshot|zeroshot|V2|acc": 0.4945066854995802,
+ "chandra|zeroshot|zeroshot|V2|acc": 0.4945066854995802
+}

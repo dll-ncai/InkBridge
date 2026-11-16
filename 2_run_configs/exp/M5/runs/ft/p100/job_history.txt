@@ -1,0 +1,3 @@
+2026-10-21T15:18:30Z train start 1gpu gpu=7
+2026-10-21T16:33:06Z train 1gpu finished
+2026-10-21T17:15:34Z selected milestone 9 host=<node> slurm=24517796 restart=0 partition=b200idle cuda_visible=6,7 gpus=[NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;NVIDIA B200;]

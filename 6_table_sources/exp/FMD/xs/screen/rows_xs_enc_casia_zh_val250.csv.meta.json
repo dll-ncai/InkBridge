@@ -1,0 +1,489 @@
+{
+ "schema": "fmd_meta/1",
+ "kind": "fmdx_screen_rows",
+ "created_utc": "2026-11-07T22:20:02Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "code": {
+  "files": {
+   "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+   "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+   "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+   "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+   "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+   "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+   "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+   "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+   "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+   "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+  },
+  "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "command": "$U/exp/FMD/code/fmd_harness_xs/fmd_harness_xs/xs_rows.py --set casia_zh_val250 --track encoders --refresh-set",
+ "env": {
+  "python": "3.11.13",
+  "host": "<node>",
+  "platform": "Linux-5.14.0-687.61.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "slurm_job_id": "24850422",
+  "numpy": "2.2.6",
+  "torch": "2.7.1+cu128",
+  "cv2": "4.12.0"
+ },
+ "inputs": {
+  "part aimv2-1b-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/aimv2-1b-patch14-224.json",
+   "sha256": "62d01405b00483283796b1129f19f5854df2aa65cd3127f80c81f053053fe6f9"
+  },
+  "part aimv2-3b-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/aimv2-3b-patch14-224.json",
+   "sha256": "82de783280a46bcbd38ca843c866350d0d47470dacb89eb0b81479ff3f518b17"
+  },
+  "part aimv2-huge-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/aimv2-huge-patch14-224.json",
+   "sha256": "3eacb9373467eb8c4f8c7e27a750d468bc1ecce1fd7464c7827a384fa2741882"
+  },
+  "part aimv2-large-patch14-224-distilled": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/aimv2-large-patch14-224-distilled.json",
+   "sha256": "7bbc55a604e8c67e0bd9e2b41c6a2d5f47d1fcb0e9224e3d74fe8a58da9f2994"
+  },
+  "part aimv2-large-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/aimv2-large-patch14-224.json",
+   "sha256": "b801bc78b67eaed4decee1dcf5e96ec9ac3ed7294cd1a9ffcb450c841b12131b"
+  },
+  "part c-radiov3-b": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/c-radiov3-b.json",
+   "sha256": "f95bc58552c4825f7f784ac25937edd70f7eff046a68479953357a9c6da04011"
+  },
+  "part c-radiov3-g": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/c-radiov3-g.json",
+   "sha256": "53a6eb66aabca29cb372f151416bf60dd6657f7d935bc211bbe5b9bcef0d4a62"
+  },
+  "part c-radiov3-h": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/c-radiov3-h.json",
+   "sha256": "26c13ae5e62570578e3914682e6e872ab9865e783fa4c1943af1c26936f567ad"
+  },
+  "part c-radiov3-l": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/c-radiov3-l.json",
+   "sha256": "7c2427468c131f1989b07e3ea2e0bddb710e711bedc4df478f3c8d9d1b0a6925"
+  },
+  "part c-radiov4-h": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/c-radiov4-h.json",
+   "sha256": "0af32c80e1390a7505c64906f5ade651542ae14080c1de5e1874eed9eab13513"
+  },
+  "part c-radiov4-so400m": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/c-radiov4-so400m.json",
+   "sha256": "e927371adda2a7b21e23e04a84158a2d9b26535aed4bddaf753dfc37187c4642"
+  },
+  "part depth-anything-3-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/depth-anything-3-base.json",
+   "sha256": "b931b88b79ee4d1e1274056a4f7c3a9973d8245aaf7dc376ebe785466573a24c"
+  },
+  "part depth-anything-3-giant-1.1": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/depth-anything-3-giant-1.1.json",
+   "sha256": "1b062feb9cd7d55c360f67e8e8a3dcd83596551b754d5b69ce10f4218d764efa"
+  },
+  "part depth-anything-3-large-1.1": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/depth-anything-3-large-1.1.json",
+   "sha256": "c39e129d7f89a550a102861c4016b731f375611c6dd1d5fbff40da034b448355"
+  },
+  "part depth-anything-v2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/depth-anything-v2-large.json",
+   "sha256": "4f79902d2c752a7e58f2ac54edea00ba1b16b36562c13df55c2f99919f7a2ec2"
+  },
+  "part dinov2-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov2-base.json",
+   "sha256": "ff4e32e304c00c4e97cd106f48e21ac955b6f4c550254dff171ce66b5995e123"
+  },
+  "part dinov2-giant": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov2-giant.json",
+   "sha256": "cc9e66992d87b4c5210987fc487fda2a340a145ebc28d8bf4c9c9ba7a36d1767"
+  },
+  "part dinov2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov2-large.json",
+   "sha256": "e831ce587735b97e3f5f24acc0f375e8a2beb19188a00339448fdbd2590a8232"
+  },
+  "part dinov2-reg-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov2-reg-base.json",
+   "sha256": "588a110928e2592defe33fb6630447e6c536bdb9de5ff734ba50d8db4725b4c2"
+  },
+  "part dinov2-reg-giant": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov2-reg-giant.json",
+   "sha256": "31d08ab976e5b764c35b43e2d3938d15f3f4ee0aa0b246218aa9b016c77c0651"
+  },
+  "part dinov2-reg-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov2-reg-large.json",
+   "sha256": "a0dd22435af696dc5345b2c9765b0a9d4c155d173e9672780d12360e4902331f"
+  },
+  "part dinov2-reg-small": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov2-reg-small.json",
+   "sha256": "d210213a190f38026fd53ce25f85d6ddd4c09d7ffa190a6bbcbda07e5e25112f"
+  },
+  "part dinov3-convnext-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-convnext-base.json",
+   "sha256": "8f50b7786f7bb84bd522826a3ce7013526c72d852f9137625e170ab47a4f05ea"
+  },
+  "part dinov3-convnext-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-convnext-large.json",
+   "sha256": "70b7c28e2cbb1778e11ec4ce21938285c63225807eb7ef242a376b78a6120fa8"
+  },
+  "part dinov3-convnext-small": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-convnext-small.json",
+   "sha256": "e397dfe7b0e2d6693985cdfb9d0385ed8264969f659014100fe521900d6d517d"
+  },
+  "part dinov3-convnext-tiny": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-convnext-tiny.json",
+   "sha256": "8feee9fb35eb157ed2ff751857cd1fbc4f28fc68e32d1a58c210cd1d3bf3e8b0"
+  },
+  "part dinov3-vit7b16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-vit7b16.json",
+   "sha256": "62478e4bcca56355e0d03c8980313fa4e657d2b65be3a3174fb6395e5409f3b1"
+  },
+  "part dinov3-vitb16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-vitb16.json",
+   "sha256": "e85c1a991024c92e2612699e95f34b45bc004057b60a0ebca74e640eac63d93e"
+  },
+  "part dinov3-vith16plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-vith16plus.json",
+   "sha256": "17cbda70393945bd6b789af2eea201fc163e0a858ed2531739eeb765197af9cc"
+  },
+  "part dinov3-vitl16-sat493m": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-vitl16-sat493m.json",
+   "sha256": "3e35020daba9eb100a56b35a229219caa35ebc826aa3771f2592eeea1df70f01"
+  },
+  "part dinov3-vitl16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-vitl16.json",
+   "sha256": "a309ea12c3368208a628b801509f95773b9fcd3b9a8f1a045c6d82aded9bb887"
+  },
+  "part dinov3-vits16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-vits16.json",
+   "sha256": "2c0c2dac3dd8b8f1a7fda1e28c20228523fb534c853bfcc835fac213366503fc"
+  },
+  "part dinov3-vits16plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/dinov3-vits16plus.json",
+   "sha256": "9be6d11aa910488fdd4ebf0ab1798a96c2c970b355b23f4a65956186be6c4637"
+  },
+  "part florence-2-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/florence-2-base.json",
+   "sha256": "ee29e8f6dbf6e0077aa050598a6f68af849f3ce481d27e356ddea4e6daec4480"
+  },
+  "part florence-2-large-ft": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/florence-2-large-ft.json",
+   "sha256": "dac6a638fe1368f158131082c5d25b1612e9a5eb2dff8e5371fb45a61ff8ca01"
+  },
+  "part florence-2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/florence-2-large.json",
+   "sha256": "71a81fb0c2bf1a412bb28f6b73db15b7ca0634d198369425bf5ed443dd648bde"
+  },
+  "part pe-core-b16-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-core-b16-224.json",
+   "sha256": "7de6e93f71337035b29c306641f69a47b4648eb8d451c150c26b560ad02e9d5e"
+  },
+  "part pe-core-g14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-core-g14-448.json",
+   "sha256": "ed799723319936308e544427f18b352f4373c30d3879f6b23e92b8ecd5350fc6"
+  },
+  "part pe-core-l14-336": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-core-l14-336.json",
+   "sha256": "4a53af4b46893026415ca6c5c35626a044675f17fb31d693cb03c4666aef612f"
+  },
+  "part pe-core-s16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-core-s16-384.json",
+   "sha256": "250db48bc82cb606b52fe76c308f204dca565c770f8b6d9de94f81f55c0e6942"
+  },
+  "part pe-core-t16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-core-t16-384.json",
+   "sha256": "4a25f758791e8f5a897686ac51e40b84a7343322dfad0c92065d369144a8a4b9"
+  },
+  "part pe-lang-g14-448-timm": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-lang-g14-448-timm.json",
+   "sha256": "85afda1a4b2ce961cc121f62e06302e456e131a7de70cf461330dd537ef000d1"
+  },
+  "part pe-lang-l14-448-timm": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-lang-l14-448-timm.json",
+   "sha256": "f69beaedc14103ddfedc814ae78519d6a6360cbf567d176215b46b09c549e90a"
+  },
+  "part pe-spatial-b16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-spatial-b16-512.json",
+   "sha256": "87b2cf39ba704f82d2644d3228ee08d7004cbbda47aa47ba15295676dc46d836"
+  },
+  "part pe-spatial-g14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-spatial-g14-448.json",
+   "sha256": "3a99ac6de42565b2c506c27d1edc8bec5c8f1aea0cf6e09e07fc838c18812147"
+  },
+  "part pe-spatial-l14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-spatial-l14-448.json",
+   "sha256": "840ae99b0918d06618b25ff1175ea69419cce5aa1e6279f4d104db0d0b129724"
+  },
+  "part pe-spatial-s16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-spatial-s16-512.json",
+   "sha256": "945be96e301486b71e2a4032f4f1e162b031f4694de9d016d3db5462b8b169a7"
+  },
+  "part pe-spatial-t16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/pe-spatial-t16-512.json",
+   "sha256": "4c5113e86ee1726aacc12c3dcf0479dad1622d0237fd278db04ee355a16094bb"
+  },
+  "part sam2.1-hiera-base-plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/sam2.1-hiera-base-plus.json",
+   "sha256": "64a95072ff730fb6d2ba35f621c1b5848c9754554cd45e79cf28c836bef6dac8"
+  },
+  "part sam3": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/sam3.json",
+   "sha256": "08f1e7d855946899bf98a36ad16e88e01e0f1790a98f9ea5514915942a33bb5b"
+  },
+  "part siglip2-base-patch16-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/siglip2-base-patch16-224.json",
+   "sha256": "21d240d1a9fa2b7ef28a88db3655027b93666616b0e952f679b37d8059957a50"
+  },
+  "part siglip2-giant-opt-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/siglip2-giant-opt-patch16-256.json",
+   "sha256": "ddc295c2904475d2fe2016f4ddfd89a9fa9708502a1896906daa68e6fbe2365b"
+  },
+  "part siglip2-giant-opt-patch16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/siglip2-giant-opt-patch16-384.json",
+   "sha256": "9c5ddff3a657e9a9c5d7d7c81a8a0113e7b6caa127b2e4f7b7036337e556e9ab"
+  },
+  "part siglip2-large-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/siglip2-large-patch16-256.json",
+   "sha256": "ea540413b8ed39bb7077b8e50395454e04ede99031be5de5a647859b09fd6533"
+  },
+  "part siglip2-so400m-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/siglip2-so400m-patch14-224.json",
+   "sha256": "409bec6a7a2f390b2e7eabebcc6ff4954294084f90d52f6088a93139950d88c4"
+  },
+  "part siglip2-so400m-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/siglip2-so400m-patch16-256.json",
+   "sha256": "25fc0d29445dec9bdd9a4a04875738d783e4fe61083170b3e1f59ae8ca311cda"
+  },
+  "part starvector-1b-im2svg": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/starvector-1b-im2svg.json",
+   "sha256": "68a547a208da195af90ad8a21745d6d8d54b55d0cfb943f566c43610381a8d3c"
+  },
+  "part starvector-8b-im2svg": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/starvector-8b-im2svg.json",
+   "sha256": "52c2c2ec79f182748cee88a5b6596492c1a4b486add900f55e63295cb56efabc"
+  },
+  "part theia-base-cddsv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/theia-base-cddsv.json",
+   "sha256": "ba515a365ec16d7971b7e55d04d1fc1a4c9fb91837943b142a07010d45b8a56a"
+  },
+  "part theia-base-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/theia-base-cdiv.json",
+   "sha256": "893293fd89849de70afad2460abd68efc6b031d8eb4cc68e096425b2107e45b5"
+  },
+  "part theia-small-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/theia-small-cdiv.json",
+   "sha256": "5f06f5810b6966f872a8a2fa86256e4502e06eabf383a6559c1c18b917e5005b"
+  },
+  "part theia-tiny-cddsv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/theia-tiny-cddsv.json",
+   "sha256": "df54dad194193b6883b38e5827a347f4602b2ac9f58bfe299a94b51e0032e3e5"
+  },
+  "part theia-tiny-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/theia-tiny-cdiv.json",
+   "sha256": "b74b6f1239f22a823079aee02b5de91504071219c6273ac110aefaa731303b65"
+  },
+  "part tipsv1-b14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/tipsv1-b14.json",
+   "sha256": "43e3f2a2d42634dda9fc9780cfc1c8594c20f151b9e9ce84e1b8a77d4e3632e4"
+  },
+  "part tipsv1-g14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/tipsv1-g14.json",
+   "sha256": "606decf8b0bf83c2c2b478604340a43814cbf0643cfa0ba4f55a5567e1e34aef"
+  },
+  "part tipsv1-l14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/tipsv1-l14.json",
+   "sha256": "d642721bf9a7d13a610ad7afab0542aaebe114ee5841a09d13dd089f0bee2752"
+  },
+  "part tipsv1-s14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/tipsv1-s14.json",
+   "sha256": "bd4209c5cd9c4dcaa45ade9047f118763c68d33e3cf7542bc8736198818b881b"
+  },
+  "part tipsv1-so400m14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/tipsv1-so400m14.json",
+   "sha256": "d7f308205204939cb4d7f11814449856c6867de9a4cc24c8265a23384554c690"
+  },
+  "part tipsv2-b14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/tipsv2-b14.json",
+   "sha256": "715731196b731344c2d79ecf67d07a5a86c1e63f7286f48b29baa4a73782402c"
+  },
+  "part tipsv2-g14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/tipsv2-g14.json",
+   "sha256": "021fb421638c3991049365262fd58a914363503279150b24a75aa32a0fa37fbb"
+  },
+  "part tipsv2-l14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/tipsv2-l14.json",
+   "sha256": "79fe4e2eade8c18feae6654e7b9176b0d3f99bd1c653217db4b17b48038559dc"
+  },
+  "part tipsv2-so400m14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/tipsv2-so400m14.json",
+   "sha256": "cfe18ae29d3d74edb6540128cf744c6308cd17f509274d17005d7a7ec28d25b9"
+  },
+  "part trocr-base-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/trocr-base-handwritten.json",
+   "sha256": "629f95fc8e9a4b18ebec2cbefc81915ee6a33df4f45296e4dfa17fbb8626bb03"
+  },
+  "part trocr-base-hw-hist-swe-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/trocr-base-hw-hist-swe-2.json",
+   "sha256": "382a50beec1d738fbeb6cd8f6bb54a2e01e29325d019b178758ce0d0449857e5"
+  },
+  "part trocr-large-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/trocr-large-handwritten.json",
+   "sha256": "610f188edd2615ecc5dc36dca757c22de04c83ba419e590ceba1f5eb9a07a0be"
+  },
+  "part trocr-small-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/trocr-small-handwritten.json",
+   "sha256": "6579a976d0b98b81b7b352fa03acec75f49ec3eb38bcf2c32f97e7dcd812041b"
+  },
+  "part vit-mae-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/vit-mae-large.json",
+   "sha256": "b363fddf275a5abe47e2d88058ddd5b06d85c3c264e2441a6cab25c6e2aec522"
+  },
+  "part webssl-dino1b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/webssl-dino1b-224.json",
+   "sha256": "a19b8b25178802a73775dd9545d3ec3230dec2431b81d349ff2a2e6248833e1d"
+  },
+  "part webssl-dino2b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/webssl-dino2b-224.json",
+   "sha256": "8b06bdfe6cb0b6b920c03a862265a1c8199072f02bb2757f655b8be68ba08b42"
+  },
+  "part webssl-dino300m-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/webssl-dino300m-224.json",
+   "sha256": "e5cbabd17294755b9ac36d3ada77132933046ea38bd36612e3384f63b92d2ecd"
+  },
+  "part webssl-dino3b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/webssl-dino3b-224.json",
+   "sha256": "8d42a7403f39912193e57b6e3b88525930340bb764d337137e569efc578e1669"
+  },
+  "part webssl-dino5b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/webssl-dino5b-224.json",
+   "sha256": "8e97e67522ab52181beefb7b88f02bc885585110547142f1438ab775dbcfc962"
+  },
+  "part webssl-mae1b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/webssl-mae1b-224.json",
+   "sha256": "e5fe8070434515e3ea82bb54b02d1a116e0ab2cae2f70b81b0a64b7e980f5423"
+  },
+  "part webssl-mae300m-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/casia_zh_val250/webssl-mae300m-224.json",
+   "sha256": "ed0626df65112f22799a0c1cfaac8ee8300f22e184991e97fba116f88f93aaca"
+  }
+ },
+ "params": {
+  "set_id": "casia_zh_val250",
+  "track": "encoders",
+  "schema": "v1 (fmd_harness.screen_rows.SCHEMA)",
+  "comparators": [
+   "luo6:mid16",
+   "luo6:cat16",
+   "joint9:mid16",
+   "joint9:cat16"
+  ],
+  "delta_T0": 0.01035,
+  "boot_B": 2000,
+  "boot_seed": 20261103,
+  "prereg": "FMD_PREREG_2026-11-03.md A3.2/A3.5/A5.1"
+ },
+ "outputs": {
+  "$U/exp/FMD/xs/screen/rows_xs_enc_casia_zh_val250.csv": "f685ee8a051297bb27df735d6e7288db4a13a17c79e2f0626d500330870edeac"
+ },
+ "n_rows": 2338,
+ "fms": [
+  "aimv2-1b-patch14-224",
+  "aimv2-3b-patch14-224",
+  "aimv2-huge-patch14-224",
+  "aimv2-large-patch14-224",
+  "aimv2-large-patch14-224-distilled",
+  "c-radiov3-b",
+  "c-radiov3-g",
+  "c-radiov3-h",
+  "c-radiov3-l",
+  "c-radiov4-h",
+  "c-radiov4-so400m",
+  "depth-anything-3-base",
+  "depth-anything-3-giant-1.1",
+  "depth-anything-3-large-1.1",
+  "depth-anything-v2-large",
+  "dinov2-base",
+  "dinov2-giant",
+  "dinov2-large",
+  "dinov2-reg-base",
+  "dinov2-reg-giant",
+  "dinov2-reg-large",
+  "dinov2-reg-small",
+  "dinov3-convnext-base",
+  "dinov3-convnext-large",
+  "dinov3-convnext-small",
+  "dinov3-convnext-tiny",
+  "dinov3-vit7b16",
+  "dinov3-vitb16",
+  "dinov3-vith16plus",
+  "dinov3-vitl16",
+  "dinov3-vitl16-sat493m",
+  "dinov3-vits16",
+  "dinov3-vits16plus",
+  "florence-2-base",
+  "florence-2-large",
+  "florence-2-large-ft",
+  "pe-core-b16-224",
+  "pe-core-g14-448",
+  "pe-core-l14-336",
+  "pe-core-s16-384",
+  "pe-core-t16-384",
+  "pe-lang-g14-448-timm",
+  "pe-lang-l14-448-timm",
+  "pe-spatial-b16-512",
+  "pe-spatial-g14-448",
+  "pe-spatial-l14-448",
+  "pe-spatial-s16-512",
+  "pe-spatial-t16-512",
+  "sam2.1-hiera-base-plus",
+  "sam3",
+  "siglip2-base-patch16-224",
+  "siglip2-giant-opt-patch16-256",
+  "siglip2-giant-opt-patch16-384",
+  "siglip2-large-patch16-256",
+  "siglip2-so400m-patch14-224",
+  "siglip2-so400m-patch16-256",
+  "starvector-1b-im2svg",
+  "starvector-8b-im2svg",
+  "theia-base-cddsv",
+  "theia-base-cdiv",
+  "theia-small-cdiv",
+  "theia-tiny-cddsv",
+  "theia-tiny-cdiv",
+  "tipsv1-b14",
+  "tipsv1-g14",
+  "tipsv1-l14",
+  "tipsv1-s14",
+  "tipsv1-so400m14",
+  "tipsv2-b14",
+  "tipsv2-g14",
+  "tipsv2-l14",
+  "tipsv2-so400m14",
+  "trocr-base-handwritten",
+  "trocr-base-hw-hist-swe-2",
+  "trocr-large-handwritten",
+  "trocr-small-handwritten",
+  "vit-mae-large",
+  "webssl-dino1b-224",
+  "webssl-dino2b-224",
+  "webssl-dino300m-224",
+  "webssl-dino3b-224",
+  "webssl-dino5b-224",
+  "webssl-mae1b-224",
+  "webssl-mae300m-224"
+ ],
+ "xs_code": {
+  "files": {
+   "__init__.py": "ce6fc8aa99758f3c13a2b3a770bc511f213d7979a8a03ef0b293756159495c78",
+   "fmdx_verdicts.py": "67c78eabf6ace3d9b0bc6ab3f4501d305f175d732368893b443a0037dd902a52",
+   "xs_common.py": "46f865ed36b9d8159ecfc812d02b8ace5ec9a6d87915cf99d568aec7016704a0",
+   "xs_extract.py": "8dfd370dbea40b16d83aeeade38ce0f6c101a267a0d3972c7526f0d9e86ae478",
+   "xs_plan.py": "811bfbe873fa5bf1c1dd8b8a5c64e22e6a13550753f885beee588bb5f844de59",
+   "xs_probe.py": "6dbb3ad424a2252fd4e5c1be3544ed550bc4e0d8c9e3cef6b536fa96f727efb8",
+   "xs_rows.py": "093862bb4a99f9c69398ca99f4a34c3739ef7822b0f9f29fa0ceca67abdc8c81",
+   "xs_targets.py": "6547a725d9fef182aebe554aafcb6fe4ebf5e0dcf79b1a776da1a223f0b2b7a5",
+   "xs_worker.py": "4c6a5e87b2a8dc7de5651ef7120db10368922d0ff21a35ce5a01df6194e45973"
+  },
+  "combined": "b4323c86e0baa10bf4599fb350d109c02785c0016467525946f04f5585b08ede",
+  "version": "fmd_harness_xs 1.0.0 (2026-11-03)"
+ }
+}

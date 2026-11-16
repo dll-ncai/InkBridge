@@ -1,0 +1,503 @@
+{
+ "experiment": "X4a",
+ "title": "Zero-shot E0 (ms8) on D2 isolated sets: CASIA zh, CASIA en, HPL Tamil (500 units each, d2_pilot_v1, seed 2026)",
+ "plan_refs": [
+  "experiments_to_run_2026-10-18.md v b474164e §X4a"
+ ],
+ "status": "completed",
+ "run_dir": "$U/exp/X4a",
+ "parameters": {
+  "checkpoint_weights": "EMA",
+  "sampler": "DDIM",
+  "sampling_timesteps": 50,
+  "ddim_eta": 0.0,
+  "batch_size": 256,
+  "run_dir": "$U/runs/e0/e0_v3_rendered_100k_bs512",
+  "sampler_script": "e0/code_4cd40f57/e0_sample.py (unchanged; final-eval code, tarball sha256 4cd40f57b7069de950b4111e157725fe9b3d70c9bbe79c10231dedb2866c5d92)",
+  "gpu": "gpuidle, 1 GPU, any type with compute capability >= 8.0 (Features constraint set via scontrol on pending jobs; in-job guard requeues off Pascal nodes); GPU type per shard in samples/shard_log.tsv",
+  "requeue": "Slurm --requeue; finished shards are skipped on restart, partial shards are rewritten from scratch (same seed)",
+  "milestone": 8,
+  "seed": 0,
+  "conditions": {
+   "rendered": "E0 training renderer: uhwr_eval.render_image 64x64, 2 px, anti-aliased (white-on-black after OuhdlE0Dataset inversion)",
+   "d2": "D2 renderer row (N14): unit_features.render_input f=4 (256x256, 8 px, AA) then cv2.INTER_AREA to 64x64"
+  },
+  "scoring": "e0_score.py e0: uhwr_eval.score native + standardised, LPIPS off; summary = e0_score.py summary with sample_id = writer id, so the 95% CIs are writer-cluster bootstraps (B=2000, seed 0)",
+  "paired": "paired_compare.py d2 minus rendered per set, writer-cluster CI"
+ },
+ "seeds": {
+  "sampling_seed": 0,
+  "unit_selection": "d2_pilot_v1 (seed 2026, built for D2)"
+ },
+ "inputs": {
+  "d2_pilot_v1.npz": {
+   "path": "$U/exp/D2/data/d2_pilot_v1/d2_pilot_v1.npz",
+   "sha256": "1445d2a53fceaf42ea129751b402388fdbb852967aff9dfd4d60fe95913fcbaa",
+   "bytes": 8164669
+  },
+  "d2_pilot_v1_index.csv": {
+   "path": "$U/exp/D2/data/d2_pilot_v1/d2_pilot_v1_index.csv",
+   "sha256": "bb24ab6b1ea01b56e19cc021b7a90d195290750e9bebf94034799147085e54e7",
+   "bytes": 249987
+  },
+  "x4a_casia_zh.npz": {
+   "path": "$U/exp/X4a/data/x4a_casia_zh.npz",
+   "sha256": "93f4efcb99941a77fd942e19e9001316d14654ac77e3dc5b622a6da2cdbc0f72",
+   "bytes": 2477506
+  },
+  "x4a_casia_en.npz": {
+   "path": "$U/exp/X4a/data/x4a_casia_en.npz",
+   "sha256": "eb8c6a7a54fac56448b5232e2ef56726a9046198ba439129241bf3d9d9af7d6a",
+   "bytes": 1339654
+  },
+  "x4a_hpl_tamil.npz": {
+   "path": "$U/exp/X4a/data/x4a_hpl_tamil.npz",
+   "sha256": "d868ba858f07de2e5d179f5a635a4007fbfc25b1fa4bdbb1149ccf073dce6938",
+   "bytes": 2303231
+  }
+ },
+ "code": {
+  "e0_sample.py": {
+   "path": "$U/e0/code_4cd40f57/e0_sample.py",
+   "sha256": "5f60cb294f8bd7b27ccb676ef0a836b6b0c34730241e366d549fc2104953f84c",
+   "bytes": 5193
+  },
+  "e0_score.py": {
+   "path": "$U/e0/code_4cd40f57/e0_score.py",
+   "sha256": "46b1ff898e99f0d6b4aff99e79aa99d22ac59152d78394715de40880464786df",
+   "bytes": 5506
+  },
+  "e0_adapter.py": {
+   "path": "$U/e0/code_4cd40f57/e0_adapter.py",
+   "sha256": "83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10",
+   "bytes": 5040
+  },
+  "e0_dataset.py": {
+   "path": "$U/e0/code_4cd40f57/e0_dataset.py",
+   "sha256": "2f2a11c6df94af2f27292a436732fe4ed25cf2432382ac8a347e07f7c153c2fa",
+   "bytes": 1558
+  },
+  "e0_eval_tarball_4cd40f57 (final-eval job copy)": {
+   "path": "$SCRATCH/.<agent>/jobs/48ac1dcf-a38d-43e6-969d-934b22db48b3/e0_code_v2.tar.gz",
+   "sha256": "4cd40f57b7069de950b4111e157725fe9b3d70c9bbe79c10231dedb2866c5d92",
+   "bytes": 48121
+  },
+  "e0q_lib.sh": {
+   "path": "$U/exp/e0q/code/e0q_lib.sh",
+   "sha256": "2d4c53a26652456b4d74f9a2ffb3d79505e06462e7b775e7970c301ab0aac38f",
+   "bytes": 2938
+  },
+  "make_prov.py": {
+   "path": "$U/exp/e0q/code/make_prov.py",
+   "sha256": "cbc2250069d917e86254fb9885bf8b5dee0fbdd9a9c9f4cf54a60c4f1ffbe24d",
+   "bytes": 3806
+  },
+  "paired_compare.py": {
+   "path": "$U/exp/e0q/code/paired_compare.py",
+   "sha256": "416e6dc555501750ac1879a4b4f0caf4417068fc085ba3ca441b2ef8904f190e",
+   "bytes": 2218
+  },
+  "uhwr_eval/metrics.py": {
+   "path": "$U/e0/code_4cd40f57/uhwr_eval/metrics.py",
+   "sha256": "00c937fa802a46c49ab8858047e9d1c2a4d2ae6bae648fa024276eb20bbfec40",
+   "bytes": 12510
+  },
+  "build_x4a.py": {
+   "path": "$U/exp/e0q/code/build_x4a.py",
+   "sha256": "718c9db094d8e38be6421de81509a9da9196216b494108db16c1442e8df4cdc8",
+   "bytes": 3373
+  },
+  "D2 unit_features.py": {
+   "path": "$U/exp/D2/code/unit_features.py",
+   "sha256": "11b313dfdb2b527bd71083986cb6190d1e28f4dfba65b39d4f8a85e750befde8",
+   "bytes": 8490
+  },
+  "D2 run_d2.py": {
+   "path": "$U/exp/D2/code/run_d2.py",
+   "sha256": "caa010b761d42414b2e2b7760ce6071e14abf97da756494a1a8e04acd051d155",
+   "bytes": 4980
+  },
+  "e0q_code_v3.tgz": {
+   "path": "$U/exp/e0q/bundles/e0q_code_v3.tgz",
+   "sha256": "eb32b475967922f4aa1dcb2be2c06e5b12abbcfe6f3598e89f48ef37c614cdee",
+   "bytes": 108520
+  }
+ },
+ "checkpoints": {
+  "checkpoint_000008.pt": {
+   "path": "$U/runs/e0/e0_v3_rendered_100k_bs512/checkpoints/checkpoint_000008.pt",
+   "sha256": "9a9edb199d1c3308996b30a1663f83af3bf8dde3fd8f10deee8a7511f37700d5",
+   "bytes": 434608395
+  }
+ },
+ "commands": {
+  "prep (build)": {
+   "path": "$U/exp/e0q/code/job_prep.sh",
+   "sha256": "f39ca1e15fdf1950d7b344d075938e4bde7181fbb477bfe5e8779e20f6f3d4e5",
+   "bytes": 1526
+  },
+  "gpu": {
+   "path": "$U/exp/e0q/code/jobs/x4a_gpu.sh",
+   "sha256": "5a3891a03e0e6429c50d5860655c6d604ffb006eebecc3bfedda028555285c51",
+   "bytes": 458
+  },
+  "cpu": {
+   "path": "$U/exp/e0q/code/jobs/x4a_cpu.sh",
+   "sha256": "e5e2151bf5e5f61fb4117f903271f635a642cd93776dcec39df19d9d6ba8b514",
+   "bytes": 1126
+  }
+ },
+ "venvs": [
+  "$U/venvs/e0/bin/python"
+ ],
+ "slurm_ids": [
+  "24480348",
+  "24480785",
+  "24480800"
+ ],
+ "jobs": {
+  "prep": {
+   "agent_job": "55d39509-a469-48c1-8f81-30c91946eb21",
+   "slurm": "24480348"
+  },
+  "gpu": {
+   "agent_job": "002fe13f-758d-4246-86b4-11ed062eb757",
+   "slurm": "24480785"
+  },
+  "cpu": {
+   "agent_job": "2d4d7d25-52c3-4f4d-a202-c2686f9370a9",
+   "slurm": "24480800"
+  },
+  "smoke": {
+   "agent_job": "f2dd5be8-2c4d-45a2-830b-b72462ae1802",
+   "slurm": "24480431",
+   "note": "64 units casia_zh both renderers; 0 scoring errors"
+  }
+ },
+ "notes": [
+  "E0 was trained on RTL Urdu only; CASIA zh/en and Tamil are LTR scripts and are fed unmirrored (zero-shot as is).",
+  "The isolated-unit GT space is UF.to_eval_space (clean_ink + fit_transform_unit), identical to the D2 geometric pilot.",
+  "GT for the sequence target (seq) was encoded only because OuhdlE0Dataset requires it; sampling does not use it."
+ ],
+ "deviations": [
+  "D2-renderer input is down-sampled from 256 px to E0's 64 px input with cv2.INTER_AREA (E0 takes 64x64 only)."
+ ],
+ "code_history": [
+  "e0q_code_v2.tgz (sha256 1da32298...) was live when the first jobs were submitted; v3 (eb32b475...) only raises the GPU guard from cc>=7.0 to cc>=8.0 after a V100 CUDA failure. Job scripts are unchanged between v2 and v3."
+ ],
+ "written_utc": "2026-10-19T17:36:41Z",
+ "environment_freeze": {
+  "$U/venvs/e0/bin/python": [
+   "accelerate==1.12.0",
+   "annotated-types==0.8.0",
+   "anyio==4.15.1",
+   "archspec @ file://$HOME/feedstock_root/build_artifacts/archspec_1737352602016/work",
+   "asttokens @ file://$HOME/feedstock_root/build_artifacts/asttokens_1733250440834/work",
+   "astunparse==1.6.3",
+   "attrs @ file://$HOME/feedstock_root/build_artifacts/attrs_1741918516150/work",
+   "beautifulsoup4 @ file://$HOME/feedstock_root/build_artifacts/beautifulsoup4_1744783198182/work",
+   "boltons @ file://$HOME/feedstock_root/build_artifacts/boltons_1733827268945/work",
+   "Brotli @ file://$HOME/feedstock_root/build_artifacts/brotli-split_1725267488082/work",
+   "certifi @ file://$HOME/feedstock_root/build_artifacts/certifi_1746569525376/work/certifi",
+   "cffi @ file://$HOME/feedstock_root/build_artifacts/cffi_1725560564262/work",
+   "chardet @ file://$HOME/feedstock_root/build_artifacts/chardet_1741797914774/work",
+   "charset-normalizer @ file://$HOME/feedstock_root/build_artifacts/charset-normalizer_1746214863626/work",
+   "click==8.5.0",
+   "cloudpickle==3.1.2",
+   "cmake==4.0.2",
+   "colorama @ file://$HOME/feedstock_root/build_artifacts/colorama_1733218098505/work",
+   "conda @ file://$HOME/feedstock_root/build_artifacts/conda_1748334230838/work/conda-src",
+   "conda-build @ file://$HOME/feedstock_root/build_artifacts/conda-build_1748431289756/work",
+   "conda-libmamba-solver @ file://$HOME/feedstock_root/build_artifacts/conda-libmamba-solver_1742219570693/work/src",
+   "conda-package-handling @ file://$HOME/feedstock_root/build_artifacts/conda-package-handling_1736345463896/work",
+   "conda_index @ file://$HOME/feedstock_root/build_artifacts/conda-index_1748375757308/work",
+   "conda_package_streaming @ file://$HOME/feedstock_root/build_artifacts/conda-package-streaming_1741620732069/work",
+   "contourpy==1.3.3",
+   "cycler==0.12.1",
+   "decorator @ file://$HOME/feedstock_root/build_artifacts/decorator_1740384970518/work",
+   "distro @ file://$HOME/feedstock_root/build_artifacts/distro_1734729835256/work",
+   "dnspython==2.7.0",
+   "einops==0.8.1",
+   "ema-pytorch==0.7.7",
+   "evalidate @ file://$HOME/feedstock_root/build_artifacts/bld/rattler-build_evalidate_1746793833/work",
+   "exceptiongroup @ file://$HOME/feedstock_root/build_artifacts/exceptiongroup_1746947292760/work",
+   "executing @ file://$HOME/feedstock_root/build_artifacts/executing_1745502089858/work",
+   "expecttest==0.3.0",
+   "filelock @ file://$HOME/feedstock_root/build_artifacts/filelock_1741969488311/work",
+   "fonttools==4.67.0",
+   "frozendict @ file://$HOME/feedstock_root/build_artifacts/frozendict_1728841334936/work",
+   "fsspec==2025.5.1",
+   "gitdb==4.0.12",
+   "GitPython==3.2.1",
+   "h11==0.16.0",
+   "h2 @ file://$HOME/feedstock_root/build_artifacts/h2_1738578511449/work",
+   "hf-xet==1.7.0",
+   "hpack @ file://$HOME/feedstock_root/build_artifacts/hpack_1737618293087/work",
+   "httpcore2==2.13.1",
+   "httpx2==2.13.1",
+   "huggingface_hub==2.2.0",
+   "hyperframe @ file://$HOME/feedstock_root/build_artifacts/hyperframe_1737618333194/work",
+   "hypothesis==6.135.0",
+   "idna==3.20",
+   "ImageIO==2.38.1",
+   "importlib_resources @ file://$HOME/feedstock_root/build_artifacts/importlib_resources_1736252299705/work",
+   "ipython @ file://$HOME/feedstock_root/build_artifacts/bld/rattler-build_ipython_1748713870/work",
+   "ipython_pygments_lexers @ file://$HOME/feedstock_root/build_artifacts/ipython_pygments_lexers_1737123620466/work",
+   "jedi @ file://$HOME/feedstock_root/build_artifacts/jedi_1733300866624/work",
+   "Jinja2 @ file://$HOME/feedstock_root/build_artifacts/jinja2_1741263328855/work",
+   "joblib==1.6.0",
+   "jsonpatch @ file://$HOME/feedstock_root/build_artifacts/jsonpatch_1733814567314/work",
+   "jsonpointer @ file://$HOME/feedstock_root/build_artifacts/jsonpointer_1725302941992/work",
+   "jsonschema @ file://$HOME/feedstock_root/build_artifacts/jsonschema_1748294245630/work",
+   "jsonschema-specifications @ file:///tmp/tmpuvkyqc9y/src",
+   "kiwisolver==1.5.1",
+   "lazy-loader==0.6",
+   "libarchive-c @ file://$HOME/feedstock_root/build_artifacts/bld/rattler-build_python-libarchive-c_1747927321/work",
+   "libmambapy @ file://$HOME/feedstock_root/build_artifacts/mamba-split_1746515836725/work/libmambapy",
+   "lief @ file://$HOME/feedstock_root/build_artifacts/lief_1743551769507/work/api/python",
+   "lintrunner==0.12.7",
+   "llvmlite==0.50.0",
+   "lmdb==1.7.5",
+   "MarkupSafe @ file://$HOME/feedstock_root/build_artifacts/markupsafe_1733219680183/work",
+   "matplotlib==3.11.2",
+   "matplotlib-inline @ file://$HOME/feedstock_root/build_artifacts/matplotlib-inline_1733416936468/work",
+   "menuinst @ file://$HOME/feedstock_root/build_artifacts/menuinst_1731146975675/work",
+   "mpmath==1.3.0",
+   "msgpack @ file://$HOME/feedstock_root/build_artifacts/msgpack-python_1725974992554/work",
+   "narwhals==2.27.1",
+   "networkx==3.5",
+   "ninja==1.11.1.4",
+   "numba==0.68.0",
+   "numpy @ file://$HOME/feedstock_root/build_artifacts/numpy_1747544639841/work/dist/numpy-2.2.6-cp311-cp311-linux_x86_64.whl#sha256=d4f76e4f9939f09d6b8021a56dbd088095917d586ead71ad13dbe44bb22d3dfa",
+   "nvidia-cublas-cu12==12.8.3.14",
+   "nvidia-cuda-cupti-cu12==12.8.57",
+   "nvidia-cuda-nvrtc-cu12==12.8.61",
+   "nvidia-cuda-runtime-cu12==12.8.57",
+   "nvidia-cudnn-cu12==9.7.1.26",
+   "nvidia-cufft-cu12==11.3.3.41",
+   "nvidia-cufile-cu12==1.13.0.11",
+   "nvidia-curand-cu12==10.3.9.55",
+   "nvidia-cusolver-cu12==11.7.2.55",
+   "nvidia-cusparse-cu12==12.5.7.53",
+   "nvidia-cusparselt-cu12==0.6.3",
+   "nvidia-nccl-cu12==2.26.2",
+   "nvidia-nvjitlink-cu12==12.8.61",
+   "nvidia-nvtx-cu12==12.8.55",
+   "opencv-python-headless==4.12.0.88",
+   "optree==0.16.0",
+   "packaging @ file://$HOME/feedstock_root/build_artifacts/bld/rattler-build_packaging_1745345660/work",
+   "pandas==3.0.6",
+   "parso @ file://$HOME/feedstock_root/build_artifacts/parso_1733271261340/work",
+   "pexpect @ file://$HOME/feedstock_root/build_artifacts/pexpect_1733301927746/work",
+   "pickleshare @ file://$HOME/feedstock_root/build_artifacts/pickleshare_1733327343728/work",
+   "pillow==11.0.0",
+   "pkginfo @ file://$HOME/feedstock_root/build_artifacts/pkginfo_1739984581450/work",
+   "pkgutil_resolve_name @ file://$HOME/feedstock_root/build_artifacts/pkgutil-resolve-name_1733344503739/work",
+   "platformdirs @ file://$HOME/feedstock_root/build_artifacts/bld/rattler-build_platformdirs_1746710438/work",
+   "pluggy @ file://$HOME/feedstock_root/build_artifacts/pluggy_1733222765875/work",
+   "prompt_toolkit @ file://$HOME/feedstock_root/build_artifacts/prompt-toolkit_1744724089886/work",
+   "protobuf==6.33.6",
+   "psutil @ file://$HOME/feedstock_root/build_artifacts/psutil_1740663149797/work",
+   "ptyprocess @ file://$HOME/feedstock_root/build_artifacts/ptyprocess_1733302279685/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl#sha256=92c32ff62b5fd8cf325bec5ab90d7be3d2a8ca8c8a3813ff487a8d2002630d1f",
+   "pure_eval @ file://$HOME/feedstock_root/build_artifacts/pure_eval_1733569405015/work",
+   "pycosat @ file://$HOME/feedstock_root/build_artifacts/pycosat_1732588400443/work",
+   "pycparser @ file://$HOME/feedstock_root/build_artifacts/bld/rattler-build_pycparser_1733195786/work",
+   "pydantic==2.14.1",
+   "pydantic_core==2.50.1",
+   "Pygments @ file://$HOME/feedstock_root/build_artifacts/pygments_1736243443484/work",
+   "pyparsing==3.3.3",
+   "PySocks @ file://$HOME/feedstock_root/build_artifacts/pysocks_1733217236728/work",
+   "python-dateutil==2.9.0.post0",
+   "python-etcd==0.4.5",
+   "pytz @ file://$HOME/feedstock_root/build_artifacts/pytz_1742920838005/work",
+   "PyYAML @ file://$HOME/feedstock_root/build_artifacts/pyyaml_1737454647378/work",
+   "referencing @ file://$HOME/feedstock_root/build_artifacts/bld/rattler-build_referencing_1737836872/work",
+   "requests @ file://$HOME/feedstock_root/build_artifacts/requests_1733217035951/work",
+   "rpds-py @ file://$HOME/feedstock_root/build_artifacts/bld/rattler-build_rpds-py_1747837968/work",
+   "ruamel.yaml @ file://$HOME/feedstock_root/build_artifacts/ruamel.yaml_1748629995798/work",
+   "ruamel.yaml.clib @ file://$HOME/feedstock_root/build_artifacts/ruamel.yaml.clib_1728724459810/work",
+   "safetensors==0.8.0",
+   "scikit-image==0.26.0",
+   "scikit-learn==1.9.1",
+   "scipy==1.17.1",
+   "sentry-sdk==2.72.0",
+   "six==1.17.0",
+   "smmap==5.0.3",
+   "sortedcontainers==2.4.0",
+   "soupsieve @ file://$HOME/feedstock_root/build_artifacts/soupsieve_1746563585861/work",
+   "stack_data @ file://$HOME/feedstock_root/build_artifacts/stack_data_1733569443808/work",
+   "sympy==1.14.0",
+   "threadpoolctl==3.7.0",
+   "tifffile==2026.3.3",
+   "torch==2.7.1+cu128",
+   "torchaudio==2.7.1+cu128",
+   "torchelastic==0.2.2",
+   "torchvision==0.22.1+cu128",
+   "tqdm @ file://$HOME/feedstock_root/build_artifacts/tqdm_1735661334605/work",
+   "traitlets @ file://$HOME/feedstock_root/build_artifacts/traitlets_1733367359838/work",
+   "triton==3.3.1",
+   "truststore @ file://$HOME/feedstock_root/build_artifacts/bld/rattler-build_truststore_1739009763/work",
+   "tslearn==0.7.0",
+   "types-dataclasses==0.6.6",
+   "typing-inspection==0.4.4",
+   "typing_extensions==4.16.0",
+   "urllib3 @ file://$HOME/feedstock_root/build_artifacts/urllib3_1744323578849/work",
+   "wandb==0.23.1",
+   "wcwidth @ file://$HOME/feedstock_root/build_artifacts/wcwidth_1733231326287/work",
+   "zipp @ file://$HOME/feedstock_root/build_artifacts/zipp_1748277385522/work",
+   "zstandard==0.23.0"
+  ]
+ },
+ "nagamatsu_repo_commit": "7c5cf62392e36cdc9f86445b4acb16c1e9198c68",
+ "image_sha256_recorded": "c2ba6dbf95d647f6ae7a3a0844e96ee729a1b60e1f7b18e5ba977d6bb88cbc2e  $U/images/torch27.sif",
+ "slurm": [
+  {
+   "job_id": "24480348",
+   "name": "<agent>",
+   "partition": "epyc-256",
+   "state": "COMPLETED",
+   "exit_code": "0:0",
+   "submit_utc": "2026-10-19T16:21:07Z",
+   "start_utc": "2026-10-19T16:21:43Z",
+   "end_utc": "2026-10-19T16:37:32Z",
+   "nodes": "<node>",
+   "tres": "billing=16,cpu=16,mem=200G,node=1"
+  },
+  {
+   "job_id": "24480785",
+   "name": "<agent>",
+   "partition": "gpuidle",
+   "state": "COMPLETED",
+   "exit_code": "0:0",
+   "submit_utc": "2026-10-19T16:48:59Z",
+   "start_utc": "2026-10-19T16:49:38Z",
+   "end_utc": "2026-10-19T16:58:06Z",
+   "nodes": "<node>",
+   "tres": "billing=8,cpu=8,gres/gpu=1,mem=64G,node=1"
+  },
+  {
+   "job_id": "24480800",
+   "name": "<agent>",
+   "partition": "epyc-256",
+   "state": "COMPLETED",
+   "exit_code": "0:0",
+   "submit_utc": "2026-10-19T16:49:38Z",
+   "start_utc": "2026-10-19T16:58:21Z",
+   "end_utc": "2026-10-19T17:01:23Z",
+   "nodes": "<node>",
+   "tres": "billing=16,cpu=16,mem=200G,node=1"
+  }
+ ],
+ "outputs": {
+  "DATA_CARD.md": {
+   "path": "$U/exp/X4a/data/DATA_CARD.md",
+   "sha256": "78bfe622c5c9e4623d1be4c79b7f80986c94e51a6a26c06abfb43f9713d6c1ee",
+   "bytes": 1792
+  },
+  "x4a_build_stats.json": {
+   "path": "$U/exp/X4a/data/x4a_build_stats.json",
+   "sha256": "33cc911e269cb9bbe303a37cf135f1211f9c0ee08e640158d59a33cf0f835343",
+   "bytes": 817
+  },
+  "x4a_casia_en.npz": {
+   "path": "$U/exp/X4a/data/x4a_casia_en.npz",
+   "sha256": "eb8c6a7a54fac56448b5232e2ef56726a9046198ba439129241bf3d9d9af7d6a",
+   "bytes": 1339654
+  },
+  "x4a_casia_zh.npz": {
+   "path": "$U/exp/X4a/data/x4a_casia_zh.npz",
+   "sha256": "93f4efcb99941a77fd942e19e9001316d14654ac77e3dc5b622a6da2cdbc0f72",
+   "bytes": 2477506
+  },
+  "x4a_hpl_tamil.npz": {
+   "path": "$U/exp/X4a/data/x4a_hpl_tamil.npz",
+   "sha256": "d868ba858f07de2e5d179f5a635a4007fbfc25b1fa4bdbb1149ccf073dce6938",
+   "bytes": 2303231
+  },
+  "casia_en_d2_ms8_ddim50_rows.csv": {
+   "path": "$U/exp/X4a/out/casia_en_d2_ms8_ddim50_rows.csv",
+   "sha256": "27c1522ceb23c5a92ab9554348405c617141876ae35917f33e1feb58b2f437a4",
+   "bytes": 287886
+  },
+  "casia_en_rendered_ms8_ddim50_rows.csv": {
+   "path": "$U/exp/X4a/out/casia_en_rendered_ms8_ddim50_rows.csv",
+   "sha256": "e7fee9404545b8527892d7dfa265af88bb82113c18c98b5da5c03c415ca14c64",
+   "bytes": 296365
+  },
+  "casia_zh_d2_ms8_ddim50_rows.csv": {
+   "path": "$U/exp/X4a/out/casia_zh_d2_ms8_ddim50_rows.csv",
+   "sha256": "4a3cbfba02d42c9d5d8d8a6173aaed63b5acaff7de03bd2867e9dc0367e5488b",
+   "bytes": 300226
+  },
+  "casia_zh_rendered_ms8_ddim50_rows.csv": {
+   "path": "$U/exp/X4a/out/casia_zh_rendered_ms8_ddim50_rows.csv",
+   "sha256": "2d54120cfb247f5bd088f0758627a09438f3e4197ec4b035111f14fc649c660f",
+   "bytes": 308045
+  },
+  "hpl_tamil_d2_ms8_ddim50_rows.csv": {
+   "path": "$U/exp/X4a/out/hpl_tamil_d2_ms8_ddim50_rows.csv",
+   "sha256": "26dc943231c3e38f4839d584a013e2034d189d148d395927cd922d4f5c37c6ea",
+   "bytes": 284609
+  },
+  "hpl_tamil_rendered_ms8_ddim50_rows.csv": {
+   "path": "$U/exp/X4a/out/hpl_tamil_rendered_ms8_ddim50_rows.csv",
+   "sha256": "0361622c337ea617859b09d14c6e7c741d4f8a65702684debb9a215efc34b3ed",
+   "bytes": 294065
+  },
+  "paired_casia_en_d2_minus_rendered.csv": {
+   "path": "$U/exp/X4a/out/paired_casia_en_d2_minus_rendered.csv",
+   "sha256": "22d15e8485979e4eb657c92ccf3c58c9742d47cabd241c83cfbc460fbef44cbc",
+   "bytes": 5436
+  },
+  "paired_casia_zh_d2_minus_rendered.csv": {
+   "path": "$U/exp/X4a/out/paired_casia_zh_d2_minus_rendered.csv",
+   "sha256": "5cacc5b76d83cd6d641bb994db9df8ac55af9828e624563da2714ef7b18ecb97",
+   "bytes": 5507
+  },
+  "paired_hpl_tamil_d2_minus_rendered.csv": {
+   "path": "$U/exp/X4a/out/paired_hpl_tamil_d2_minus_rendered.csv",
+   "sha256": "fe2108bd9bf8a41c981fe4c62c4b23e81ce163b1ec894d9cff1247d82e65cb34",
+   "bytes": 5411
+  },
+  "summary_X4a_e0_ms8_zeroshot.csv": {
+   "path": "$U/exp/X4a/out/summary_X4a_e0_ms8_zeroshot.csv",
+   "sha256": "28b2a0a54ff753e01fd5e7d5456ff70fa9eef330cbe5422058bfd489bd1f491e",
+   "bytes": 22046
+  },
+  "casia_en_d2_ms8_ddim50_seed0_preds.npz": {
+   "path": "$U/exp/X4a/samples/casia_en_d2_ms8_ddim50_seed0_preds.npz",
+   "sha256": "32909d20527c967f4f320b4528effe643ac7e686c3512430eb561f891fb6c10d",
+   "bytes": 2076196
+  },
+  "casia_en_rendered_ms8_ddim50_seed0_preds.npz": {
+   "path": "$U/exp/X4a/samples/casia_en_rendered_ms8_ddim50_seed0_preds.npz",
+   "sha256": "381b905b98435a331405c2feeaa224da54068a3941758d23ab88a1d3db68677a",
+   "bytes": 2083434
+  },
+  "casia_zh_d2_ms8_ddim50_seed0_preds.npz": {
+   "path": "$U/exp/X4a/samples/casia_zh_d2_ms8_ddim50_seed0_preds.npz",
+   "sha256": "42d53466802402644d57fa4f7c23c7c690102048ced3358dd32142d631ef3d60",
+   "bytes": 2147664
+  },
+  "casia_zh_rendered_ms8_ddim50_seed0_preds.npz": {
+   "path": "$U/exp/X4a/samples/casia_zh_rendered_ms8_ddim50_seed0_preds.npz",
+   "sha256": "d96f855e1d38ddc7962e14381c6415b4857e59e949a1e35f556995cea7e285d1",
+   "bytes": 2167686
+  },
+  "hpl_tamil_d2_ms8_ddim50_seed0_preds.npz": {
+   "path": "$U/exp/X4a/samples/hpl_tamil_d2_ms8_ddim50_seed0_preds.npz",
+   "sha256": "936de97318d27d616683959d0d20f5a4522ca733b010d097fe80ad010c214b07",
+   "bytes": 2105568
+  },
+  "hpl_tamil_rendered_ms8_ddim50_seed0_preds.npz": {
+   "path": "$U/exp/X4a/samples/hpl_tamil_rendered_ms8_ddim50_seed0_preds.npz",
+   "sha256": "3f500bfde541bf7590aca1c03acc350ad8bd24b082a4e3cfde8ffd99b52afc18",
+   "bytes": 2128423
+  },
+  "shard_log.tsv": {
+   "path": "$U/exp/X4a/samples/shard_log.tsv",
+   "sha256": "7f92e3c7aa46fb798e50a6dcbb3373a3f4dd2b8747338ae43252c88fbcb47749",
+   "bytes": 1166
+  }
+ }
+}

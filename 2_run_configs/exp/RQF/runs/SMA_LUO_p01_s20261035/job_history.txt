@@ -1,0 +1,4 @@
+2026-11-09T04:30:06Z sma_chain_start tag=SMA_LUO_p01_s20261035 kind=luo backbone=$U/exp/M5/runs/luo/checkpoints/checkpoint_000006.pt frac=p01 seed=20261035 steps=10000 site=clusterA host=<node> slurm=24964842 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-09T04:30:06Z train_start layout=32x8 site=clusterA host=<node> slurm=24964842 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-09T08:16:39Z train_exit rc=0 site=clusterA host=<node> slurm=24964842 restart=0 part=gpuidle gpus=[NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;NVIDIA RTX A4000;]
+2026-11-10T13:57:40Z sma_chain_start tag=SMA_LUO_p01_s20261035 kind=luo backbone=$U/exp/M5/runs/luo/checkpoints/checkpoint_000006.pt frac=p01 seed=20261035 steps=10000 site=clusterA host=<node> slurm=24964842 restart=1 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]

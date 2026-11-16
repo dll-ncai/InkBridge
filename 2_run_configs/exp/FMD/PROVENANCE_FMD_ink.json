@@ -1,0 +1,194 @@
+{
+ "schema": "fmd_provenance/1",
+ "track": "ink",
+ "lane": "FMD",
+ "phase": 1,
+ "created_utc": "2026-11-03T04:11:44Z",
+ "subagent_model": "<agent>",
+ "model_reason": "new pseudo-label filter code + pre-registered gate read = <agent> (<author> 30 Oct model policy)",
+ "prereg": {
+  "path": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+  "sha256": "6ad98ab4c1f4455535afd468b9144df43bb26ed1aa6a091db79cfc669c896035",
+  "amendments": "none added by this track"
+ },
+ "harness": {
+  "version": "fmd_harness 1.0.1 (2026-11-03)",
+  "path": "$U/exp/FMD/code/fmd_harness_v1",
+  "edited": false,
+  "combined_code_sha": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "code": {
+  "dir": "$U/exp/FMD/code/fmd_ext_ink",
+  "tar": "$U/exp/FMD/code/fmd_ext_ink_v1.tar.gz",
+  "tar_sha256": "9094258920986e218522343e30360501ef0ca62dfbab406c39bd6224735c80f1",
+  "files": {
+   "e0_prep_preds.py": "f09280c4b9e43ddef578a51867d0342b4878f76df63e0b36df2a4b01e195dcc1",
+   "ink_filter.py": "1eb6a0472ffecd7b833b8c7904122f1b91e35ac7aba02828687fdc2024352ffb",
+   "inksight_signatures.py": "0a62a4d609b3e84c450e3a05d1fe3cf208edceca95ab23bf8602c763cc6f3ba1",
+   "ink_zeroshot.py": "de68443d7c2b49388f68bda587b2f9bea0f54d7757e5711b9ea9900dfc7b64e6",
+   "e0_val1000_sample.sbatch": "bdac41801a907b465913e5d4c611faae313652ee19110e557f3147cdb3b36bd8",
+   "e0_val1000_score.sbatch": "d3b57cf07dc589746ec65bfd0cacd76e47dc2b99539460a82edff066d61255c5",
+   "ink_analysis.sbatch": "bb684ecc5e58d3e006b671f104728ca82dd79a3e2d0dc7efbb65c643704fec0b",
+   "inksight_signatures.sbatch": "8228a61577f1f7b10a6e9644bc68d724fcaea3126fa089270e33ffa484b3239b"
+  },
+  "external_unchanged": {
+   "e0/code_4cd40f57/e0_sample.py": "5f60cb294f8bd7b27ccb676ef0a836b6b0c34730241e366d549fc2104953f84c",
+   "exp/D3_ROUTE/routeA/code/lane_score.py": "2acbac23c2a7bb5e6c7b48182d765c0cd8909b6c2811d1175a784e04eca16ee9"
+  },
+  "note": "e0_prep_preds.py edited once after job 24829997 (SyntaxError, kwarg name); ink_zeroshot.py/ink_analysis.sbatch edited once to add nomL2 info rows before job 24832004; sha256 above = final versions"
+ },
+ "inputs": {
+  "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md": "6ad98ab4c1f4455535afd468b9144df43bb26ed1aa6a091db79cfc669c896035",
+  "$U/exp/FMD/data/val1000_units.csv": "ecf35c304b40d842278f138c92bbb5ee01546d11f120cbc95b5533978ff34ea6",
+  "$U/exp/FMD/runs/inksight_val1000/out_val1000_rendered_f4.jsonl": "e9ad7350f670a6da377a007164eab3208bd14255227ecdac9747fc1164cb8477",
+  "$U/exp/FMD/data/inksight_val1000/manifest_rendered.json": "93e0cec5b7bb83c7a02489eaf7df41f3b42a4defb2c905b475e4339f6df9036f",
+  "$U/exp/FMD/runs/inksight_val1000/preds/val1000_ouhdl__inksight_small_p_g1f4__seed0_preds.npz": "5cb5b9d76390e9028886aa25ce56ebaa84978078cb0e9a92cbfea0d0d97397c3",
+  "$U/exp/FMD/runs/inksight_val1000/score_out/rows/val1000_ouhdl__inksight_small_p_g1f4__seed0__rows031.csv": "f3778eec6082b1555ef67713fe9575dd2f2741439437d8557f1e8fcc086dd461",
+  "$U/runs/e0/e0_v3_rendered_100k_bs512/eval/val1000_ms8_preds.npz": "d98dbee5199e700a8a50e1352578fd63938d29b4f2db06025f577d76264f2d6f",
+  "$U/runs/e0/e0_v3_rendered_100k_bs512/checkpoints/checkpoint_000008.pt": "9a9edb199d1c3308996b30a1663f83af3bf8dde3fd8f10deee8a7511f37700d5",
+  "$U/data/ouhdl_e0_v3/e0_val.npz": "25451031d41408c32c504e07b9e16ebcafe4d5fc3c0678cb1bab82a877272f92",
+  "$U/e0/code_4cd40f57/e0_sample.py": "5f60cb294f8bd7b27ccb676ef0a836b6b0c34730241e366d549fc2104953f84c",
+  "$U/exp/D3_ROUTE/routeA/code/lane_score.py": "2acbac23c2a7bb5e6c7b48182d765c0cd8909b6c2811d1175a784e04eca16ee9",
+  "$U/exp/CAND/method_round/Loop/score_out/lineHT_d4/rows/val1000_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_ms4_thr0p5_4090__seed0__rows031.csv": "44dfd911c386578f33f9831166a874e8cf22064881568b682caa7f1aad92b68b",
+  "$U/exp/CAND/method_round/Loop/score_out/lineHT_d4/rows/val1000_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_ms4_thr0p5_4090__seed1__rows031.csv": "8bf3872a54ac5bf57e92687de41c64b3608ffc99b887e6004ef8b38a009cb50b",
+  "$U/exp/CAND/method_round/Loop/score_out/lineHT_d4/rows/val1000_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_ms4_thr0p5_4090__seed2__rows031.csv": "a665798316c081caacc6648b23e24684b4ab123435f7c4ad4abec9ae9c5444c4",
+  "$U/exp/CAND/method_round/Loop/score_out/lineT_d4/rows/val1000_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_ms4_thr0p5_4090__seed0__rows031.csv": "fe2d2b119a33055b2e019e5dd1412accd34feca5ef1cba0f1956bee665714e11",
+  "$U/exp/CAND/method_round/Loop/score_out/lineT_d4/rows/val1000_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_ms4_thr0p5_4090__seed1__rows031.csv": "5791d5cfa77305fc200c4b353a689f289b8f5c1fafb39a54e9a8760e15065809",
+  "$U/exp/CAND/method_round/Loop/score_out/lineT_d4/rows/val1000_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_ms4_thr0p5_4090__seed2__rows031.csv": "7c2bbbb01805440a5864cbafa366116b3fb131e4fa1e3200f77cdb6656283186"
+ },
+ "staging_inputs": {
+  "inksight_array": "24828934 (64 tasks COMPLETED, Staging)",
+  "inksight_score_job": "24831109 (COMPLETED, Staging)",
+  "inksight_input_convention": "256x256 crops f=4 thickness 8 (G1 rendered crop convention) -> InkSight scale_and_pad 224; prompt 'Recognize and derender.' for 1000/1000; 0 empty; 8 thinned to 320 points"
+ },
+ "jobs": [
+  {
+   "id": "24829965",
+   "name": "fmd_ink_e0val1000",
+   "partition": "gpuidle",
+   "node": "<node> (NVIDIA RTX A4000)",
+   "gpus": 1,
+   "state": "COMPLETED",
+   "start_cet": "2026-11-03T03:26:06",
+   "end_cet": "2026-11-03T03:47:03",
+   "purpose": "E0 ms8 val1000 seeds 1,2 + seed0_repro (prereg 2.3)"
+  },
+  {
+   "id": "24829976",
+   "name": "fmd_ink_sig",
+   "partition": "cpuidle",
+   "node": "<node>",
+   "state": "COMPLETED",
+   "purpose": "InkSight SavedModel signature listing"
+  },
+  {
+   "id": "24829997",
+   "name": "fmd_ink_e0score",
+   "partition": "cpuidle",
+   "node": "<node>",
+   "state": "FAILED",
+   "purpose": "E0 rescoring; SyntaxError in e0_prep_preds.py"
+  },
+  {
+   "id": "24830474",
+   "name": "fmd_ink_e0score",
+   "partition": "cpuidle",
+   "node": "<node>",
+   "state": "COMPLETED",
+   "purpose": "E0 val1000 seeds 0-2 lane_score rows031"
+  },
+  {
+   "id": "24831183",
+   "name": "fmd_ink_analysis",
+   "partition": "cpuidle",
+   "node": "<node>",
+   "state": "COMPLETED",
+   "purpose": "zero-shot rows v1 (no nomL2; superseded) + filter (kept)"
+  },
+  {
+   "id": "24832004",
+   "name": "fmd_ink_analysis",
+   "partition": "cpuidle",
+   "node": "<node>",
+   "state": "COMPLETED",
+   "purpose": "zero-shot rows v2 incl. nomL2 info rows (SKIP_FILTER=1) + verdicts"
+  }
+ ],
+ "gpu_use": "1 GPU x 20 min 57 s (job 24829965); no other GPU job",
+ "outputs": {
+  "$U/exp/FMD/runs/ink_e0_val1000/raw/e0_ms8_val1000_seed1_preds.npz": "27d45567a633ef0af5d97fb5187fdc60ce7b562b3fdc9c180cf6587f57466931",
+  "$U/exp/FMD/runs/ink_e0_val1000/raw/e0_ms8_val1000_seed2_preds.npz": "8f742e9c62f38827269ac31b1de60779bfd46927c0189c047c96d9bdd0c5b6bf",
+  "$U/exp/FMD/runs/ink_e0_val1000/raw/e0_ms8_val1000_seed0_repro_preds.npz": "cedbe8b0f89eacef4b923c56b4ed515dd8ed094aefe8b814fde4349ec7918f6f",
+  "$U/exp/FMD/runs/ink_e0_val1000/e0_val1000_preds_check.json": "ad30bfcb530eb35cb45a9428d72fbeaaaff2087df174b6df2e6b249daddec6dd",
+  "$U/exp/FMD/runs/ink_e0_val1000/score_out/rows/val1000_ouhdl__e0_ms8_ddim50__seed0__rows031.csv": "fcdf21a90f5501158b450d925026c5b3a663d85cd61c5036cc87433ac9f2cfcb",
+  "$U/exp/FMD/runs/ink_e0_val1000/score_out/rows/val1000_ouhdl__e0_ms8_ddim50__seed1__rows031.csv": "246453804a22aa11cfddd16e1962d9ca8bece66db42b10b4d14dd10a230a7733",
+  "$U/exp/FMD/runs/ink_e0_val1000/score_out/rows/val1000_ouhdl__e0_ms8_ddim50__seed2__rows031.csv": "c5030993e7e080e37bad0d1e0c7534cd66c8d9e81989123c459a4053c35c7fee",
+  "$U/exp/FMD/screen/rows_ink.csv": "8b0b847730cb32478a232b5e8c26373ecb2c86e1e57d5bc95b1e793c515f664a",
+  "$U/exp/FMD/screen/verdicts_ink.json": "ef29f87d8337c7bc86cd436b11c3cfde3e282cd51b59b8bbb1a7d99e433ec522",
+  "$U/exp/FMD/screen/units/ink/e0_ms8__zeroshot__val1000.units.csv.gz": "e78c0cca6f98d676220aa920e5b080c6462d7a4c9b6238275f245c372552f3a5",
+  "$U/exp/FMD/screen/units/ink/ink_filter_summary_val1000.json": "1aaf2132714cb7ee18fca447b0febc4fb2edb98b7aa4e2d94691b91c009b969c",
+  "$U/exp/FMD/screen/units/ink/ink_filter_sweep_val1000.csv": "915c3d22d6921f0dc1ae53d1aa43dcc0849030fbeecf5e86a8e03394d64039d1",
+  "$U/exp/FMD/screen/units/ink/ink_filter_units_val1000.csv.gz": "3ee4c727b1279c920091c95c8e5644315a486003564f9e58e911d9dcb29a4bc0",
+  "$U/exp/FMD/screen/units/ink/inksight_small_p__zeroshot__val1000.units.csv.gz": "a81dd58b038af91619d1cfb91d39c09f61d100b22ff3ce7c9a89a60e3f4a2fbc",
+  "$U/exp/FMD/screen/units/ink/nomL1_lineHT_d4_ms4__zeroshot__val1000.units.csv.gz": "fb2a1b5f1c119a4230197cb291d2aa84ed50561d4798afb200338ac7349422e8",
+  "$U/exp/FMD/screen/units/ink/nomL2_lineT_d4_ms4__zeroshot__val1000.units.csv.gz": "6cef1f55ec52152738e5f4d9d55f0cf09ac1d3b69d8a593cfda08c905da4b98c",
+  "$U/exp/FMD/runs/ink/ink_zeroshot_summary_val1000.csv": "cb981ad72a0306aebfc6b664cfb75c1e085c2a5ead8719015921f3acb6244bda",
+  "$U/exp/FMD/runs/ink/ink_filter_meta.json": "d4f4bb3a268279fe57cbbf3444b76bcdd10a509081240e9205d2b45f356e4e81",
+  "$U/exp/FMD/runs/ink/inksight_signatures.json": "c4df71a259842b02f187cf2e965e09b04d46ecf1e4426fe037cf13da2f084392",
+  "$U/exp/FMD/runs/ink/ink_zeroshot_meta.json": "3c17bdd88f2fb7f567ee4ca52127712e98ec37882ebd99a624620f7dfd016144"
+ },
+ "e0_seed0_repro": {
+  "path": "$U/exp/FMD/runs/ink_e0_val1000/raw/e0_ms8_val1000_seed0_repro_preds.npz",
+  "sha256": "cedbe8b0f89eacef4b923c56b4ed515dd8ed094aefe8b814fde4349ec7918f6f",
+  "meta": {
+   "run_dir": "$U/runs/e0/e0_v3_rendered_100k_bs512",
+   "milestone": 8,
+   "step": 80000,
+   "npz": "$U/data/ouhdl_e0_v3/e0_val.npz",
+   "condition": "rendered",
+   "sampler": "DDIM",
+   "sampling_timesteps": 50,
+   "ddim_eta": 0.0,
+   "seed": 0,
+   "n_units": 1000,
+   "subset": 1000,
+   "subset_seed": 0,
+   "max_units": null,
+   "batch_size": 256,
+   "weights": "EMA",
+   "seconds": 185.5,
+   "device": "NVIDIA RTX A4000"
+  },
+  "bytes_identical": false,
+  "max_abs_diff": 2.0,
+  "n_units_identical": 0,
+  "n_units_maxdiff_le_1em3": 46
+ },
+ "gate": {
+  "fm": "inksight_small_p",
+  "family": "ink",
+  "order_tests": [
+   "tau_cp",
+   "strict_order_acc",
+   "penup_f1_v2",
+   "direction_acc"
+  ],
+  "order_pass": [],
+  "shape_clause": "zero-shot AIoU vs E0 (vision tokens not exposed)",
+  "shape_NI": "pass",
+  "fm_pass": false,
+  "family_verdict": "FAIL"
+ },
+ "filter": {
+  "rule": "IoU(re-render, Otsu-binarised input) >= 0.80 (prereg 6)",
+  "threshold": 0.8,
+  "render": "uhwr_eval.render_image 256 px thickness 8 AA, <128",
+  "n_kept_val1000": 937,
+  "status": "threshold pre-registered; predictive-validity measures exploratory, not pre-registered"
+ },
+ "other_ink_fms": "none staged (hf/ contains only InkSight-Small-p; repos/PEN-Net present, not in prereg list, not assessed)",
+ "rules": {
+  "no_weights_or_data_off_clusterA": true,
+  "artifacts": "code tar, tables, md/json only"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "experiment": "RQF A2.3 one-model arms SM-R / SM-A (reads per A2.2)",
+ "prereg": "PREREG_RQ_finalise sha256 04766e97... + amendment A2 sha256 bface42b...",
+ "agent": {
+  "model": "<agent>",
+  "lead_reason": "new FT code paths and multi-lane launches"
+ },
+ "created_utc": "2026-11-07T21:10:54Z",
+ "code_dir": "CLUSTER-A exp/RQF/code/sm_v1",
+ "code_sha256": {
+  "sm_cpu.sbatch": "e3339f8688a0f416c959f4b53337e981a0ba0f3fdcf19adbd77970135b9a8939",
+  "sm_env.sh": "c029cd0a110f8d7fcfce751772bd88fb8989c42e15bced47bf4302cf91bb2499",
+  "sm_gpu.sbatch": "e9dfe9102dea8f62d67e47bf9c7204da984c00b07198a1dde05687b5e2aeec9c",
+  "sm_read.py": "6f57c6473d63237748c48c92cb293826da20733601192d6171d29ce56ca7a046",
+  "sm_vps.py": "cb1c2de38ba19ca8ed6cd3b437de790e42a9820fb0876cfe779ca112f8797df1",
+  "sm_watch.sh": "5a4043961013ffbdf20c8f180f68bdfcbc29dab8781d8be3622bb58364252c6c",
+  "sma_chain.sh": "493d4ba141b963fec8a4554aa5c86b95a93fc188ac88f1911f0c124aeca85c45",
+  "sma_identity_check.py": "aa75e886c2e68826d9b4a28de12f90fd05c2ed652a782e23d3f04a6272068f38",
+  "sma_model.py": "0b9de4995a0a8158dd28aba446ecc7ba71dc8131356208cd58ce926c5a959e38",
+  "sma_sample.py": "64a40dbddad0dc2b42f0e6e9a055342a8e444c075a7229dc4b579b2e5be469f5",
+  "sma_train.py": "ff8700f664b2109bb9a6001cc6449e9d9ba39ca025089782a9f2220595feaa1a",
+  "smoke_cpu.sh": "c3af8cfe7fa8585596f09639633d709a8eac8710fd7a18e1ff54d2dfd34ade91",
+  "smr_luo.sh": "6a59853d8363c5fbc5c1d8b0f28cf54caa3f7b5c77e23ef1c53bc77ab9f41e03",
+  "smr_warm.sh": "b7962e4ba6032f29ea3a53b7daca7a616a9ae6cd79d4fb77c7ba984570fa3a1a",
+  "submit_sm.sh": "8477997c05d55db977d6dcb9cf9df9af64819d4c7ce282c839c9dcf88475fbf0"
+ },
+ "reused_unchanged": {
+  "d2moe": "exp/D2_MOE/code/d2moe_code_9a020b75 (d2moe_train.py imported; MoEUnet1D/MoELoRA)",
+  "fmdx": "fmdx_backbone_v1 bb_train.py --pseudo-frac 0.5 path, bb_sample.py",
+  "frame_code": "frame_code_a44e78b0 e0_train.py --replay-npz --urdu-share 0.5",
+  "router": "D3_ROUTE/router/script_clf.pt sha256 22bb8802f2da46fc; manifest_<set>.csv p_rtl>=0.5",
+  "scoring": "rqf_v1/post_run.sh (uhwr_eval 0.3.1 lane_score)",
+  "tables": "fmdx_monitor_v1/build_tables_a9.py"
+ },
+ "data_splits": "none new (m5_ft_ouhdl_p01/p10, p01 render224, p10 render224 with PROVENANCE_render224_p10.json, m5_luo_train + luo_train_render224)",
+ "backbones": {
+  "LUO": "exp/M5/runs/luo/checkpoints/checkpoint_000006.pt",
+  "NOFM_W": "exp/FMD/xs/runs/NOFM_W_clusterA/bb_ms3.pt",
+  "others": "exp/FMD/xs/runs/<arm>_clusterA/bb_ms4.pt (PEINIT_W, c-radiov3-h_W, vit-mae-large_W, dinov3-vitl16-sat493m_W, cleandift-sd21_W, pe-spatial-b16-512_W)"
+ },
+ "recipes": {
+  "SMR": "init=backbone, all weights trainable, LUO FT recipe (warm A4.3(e) bb_train ft lr 8e-5; LUO e0_train 128x4 lr 8e-5), 512 seq/step, 10k steps, ckpt 1k, batch 50% target + 50% m5_luo_train uniform; val1000 E0 selection",
+  "SMA": "frozen backbone + 1 LoRA r16 a16 on D2 set cross,attn,linear (n_experts 1, lb 0), lr 1e-4, 256/step, 10k, ckpt 1k, target subset only; val1000 E0 selection with adapter on for all val units; test gate = router p_rtl>=0.5 (gate 0 = exact backbone)"
+ },
+ "seeds": {
+  "train": "20261034/35/36 p01; 20261034 p10",
+  "sampling": "0,1,2; 7 test sets"
+ },
+ "code_note": "ft_job_smr.sh exists only on CLUSTER-A (sed copy of rqf_v1/ft_job_rqf.sh adding --pseudo-npz $LUO_NPZ --pseudo-render-npy $LUO_R224 --pseudo-frac 0.5); smr_warm.sh on CLUSTER-A carries a SM_SMOKE_STEPS early-exit line added by sed",
+ "fixes": [
+  "sma_train.py argparse allow_abbrev=False (VPS cmd 520 failure)",
+  "SM-A sampling batch 250 -> 64 (VPS cmd 522 hung, D2 einsum memory pitfall)"
+ ],
+ "smoke": {
+  "vps_521_SMR_LUO": "PASS 200 steps; replay_stats k_u 64/128 per micro-batch; replay draws casia_en 12833 casia_zh 12836 hpl_tamil 12835 iam 12760; selection ms1",
+  "vps_523_SMA_bb": "PASS (stand-in warm backbone dinov3-vitl16_W_vps bb_ms4): 200 steps 0.93 s/step, backbone unchanged True, val1000 selection, router-gated test sampling (casia_zh adapter_on 0/100)",
+  "vps_524_SMA_LUO": "PASS 200 steps 0.88 s/step, backbone unchanged True, selection + routed sampling at batch 64",
+  "vps_524_SMR_bb": "PASS 200 steps 2.2 s/step at 32x16, run_config pseudo_frac 0.5 m5_luo_train + luo_train_render224, selection ms1",
+  "clusterA_gpu_smoke": "4 jobs queued (24964771 RUNNING on A2 at 21:37Z; 24964772-74 pending)",
+  "clusterA_cpu_login_smoke": "not completed (login-node apptainer run terminated); superseded by VPS smoke"
+ }
+}

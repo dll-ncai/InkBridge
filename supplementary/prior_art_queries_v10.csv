@@ -1,0 +1,25 @@
+source,query,date,cap,total_hits,returned,status
+openalex,handwriting trajectory recovery,2026-11-15,25,3024,25,ok (retry after SSLError)
+openalex,offline to online handwriting conversion,2026-11-15,25,1600,25,ok
+openalex,stroke order recovery offline handwriting deep learning,2026-11-15,25,303,25,ok
+openalex,Arabic handwriting trajectory recovery,2026-11-15,25,293,25,ok
+openalex,Urdu online handwriting,2026-11-15,25,1012,25,ok
+openalex,temporal order recovery handwriting,2026-11-15,25,3883,25,ok
+openalex,diffusion model handwriting trajectory,2026-11-15,25,1797,25,ok
+openalex,cross-script transfer handwriting recognition,2026-11-15,25,4636,25,ok
+openalex,low-resource script handwriting transfer learning,2026-11-15,25,3071,25,ok
+openalex,multi-script handwriting adapters,2026-11-15,25,269,25,ok
+openalex,minimum Bayes risk diffusion sample selection,2026-11-15,25,24031,25,ok
+openalex,digital ink derendering,2026-11-15,25,9,9,ok
+arxiv,"all:""trajectory recovery"" AND all:handwriting",2026-11-15,25,7,7,ok
+arxiv,"all:""stroke order"" AND all:offline AND all:handwriting",2026-11-15,25,6,6,ok
+arxiv,"all:""offline-to-online"" AND all:handwriting",2026-11-15,25,5,5,ok
+arxiv,"all:""digital ink"" AND all:derendering",2026-11-15,25,1,1,ok
+arxiv,"all:""stroke recovery"" AND all:handwriting",2026-11-15,25,2,2,ok
+arxiv,"all:handwriting AND all:""right-to-left"" AND all:transfer",2026-11-15,25,1,1,ok
+openalex,incremental script learning handwriting catastrophic forgetting,2026-11-15,25,58,25,ok
+openalex,continual learning handwriting recognition new script,2026-11-15,25,1847,25,ok
+arxiv,"all:""minimum Bayes risk"" AND all:diffusion",2026-11-15,25,1,1,ok
+arxiv,"all:""self-consistency"" AND all:diffusion AND all:selection",2026-11-15,25,38,25,ok
+arxiv,all:handwriting AND all:continual AND all:script,2026-11-15,25,3,3,ok
+arxiv,"all:""test-time augmentation"" AND all:handwriting",2026-11-15,25,2,2,ok

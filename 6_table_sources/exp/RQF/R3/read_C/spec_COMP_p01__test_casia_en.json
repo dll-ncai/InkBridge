@@ -1,0 +1,52 @@
+{
+ "set": "test_casia_en",
+ "cells": {
+  "COMP_pool3": {
+   "device": "NVIDIA RTX A4000",
+   "files": {
+    "10": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261035_ms3_identity__seed0__rows031.csv",
+    "11": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261035_ms3_identity__seed1__rows031.csv",
+    "12": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261035_ms3_identity__seed2__rows031.csv",
+    "20": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261036_ms4_identity__seed0__rows031.csv",
+    "21": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261036_ms4_identity__seed1__rows031.csv",
+    "22": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261036_ms4_identity__seed2__rows031.csv"
+   }
+  },
+  "COMP_rep3": {
+   "device": "NVIDIA RTX A4000",
+   "files": {
+    "10": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261035_ms3_identity_rep3__seed0__rows031.csv",
+    "11": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261035_ms3_identity_rep3__seed0__rows031.csv",
+    "12": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261035_ms3_identity_rep3__seed0__rows031.csv",
+    "20": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261036_ms4_identity_rep3__seed0__rows031.csv",
+    "21": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261036_ms4_identity_rep3__seed0__rows031.csv",
+    "22": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261036_ms4_identity_rep3__seed0__rows031.csv"
+   }
+  },
+  "COMP_rnd3": {
+   "device": "NVIDIA RTX A4000",
+   "files": {
+    "10": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261035_ms3_identity_rnd3__seed0__rows031.csv",
+    "11": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261035_ms3_identity_rnd3__seed0__rows031.csv",
+    "12": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261035_ms3_identity_rnd3__seed0__rows031.csv",
+    "20": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261036_ms4_identity_rnd3__seed0__rows031.csv",
+    "21": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261036_ms4_identity_rnd3__seed0__rows031.csv",
+    "22": "$U/exp/RQF/R3/score_out/rows/test_casia_en__comp_p01_identity_s20261036_ms4_identity_rnd3__seed0__rows031.csv"
+   }
+  }
+ },
+ "contrasts": [
+  [
+   "COMP_rep3",
+   "COMP_pool3"
+  ],
+  [
+   "COMP_rnd3",
+   "COMP_pool3"
+  ],
+  [
+   "COMP_rep3",
+   "COMP_rnd3"
+  ]
+ ]
+}

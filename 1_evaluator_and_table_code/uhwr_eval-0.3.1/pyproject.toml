@@ -1,0 +1,11 @@
+[project]
+name = "uhwr_eval"
+version = "0.3.1"
+description = "Shared trajectory-recovery evaluator (uhwr baselines phase); wraps Nagamatsu metrics.py unchanged"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "opencv-python", "tslearn", "numba", "pandas", "lpips", "torch", "torchvision"]
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools]
+packages = ["uhwr_eval"]

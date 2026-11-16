@@ -1,0 +1,10 @@
+{
+ "uhwr_eval": "0.3.1",
+ "uhwr_eval_file": "$U/shared/uhwr_eval-0.3.1/uhwr_eval/__init__.py",
+ "e0code": "$U/e0/code_4cd40f57",
+ "procs": 16,
+ "n_files": 3,
+ "only": "test_hpl_tamil__*_preds.npz",
+ "slurm_job": "24964859",
+ "host": "<node>"
+}

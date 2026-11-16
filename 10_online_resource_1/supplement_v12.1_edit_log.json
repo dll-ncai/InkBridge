@@ -1,0 +1,452 @@
+[
+ {
+  "where": "tab:notation",
+  "old": "Notation for models and variants.",
+  "new": "Notation for models and variants, as in the paper, with the row of the FM-guided warm fine-tune added.",
+  "count": 1
+ },
+ {
+  "where": "tab:notation",
+  "old": "fraction of the target training units.}",
+  "new": "fraction of the target training units; FM: foundation model.}",
+  "count": 1
+ },
+ {
+  "where": "tab:notation",
+  "old": "$\\WFTpe{\\rho}$ & Warm fine-tune, PE init & as $\\WFT{\\rho}$ with the encoder initialised from Perception Encoder weights\\\\",
+  "new": "$\\WFTpe{\\rho}$ & Warm fine-tune, PE init & as $\\WFT{\\rho}$ with the encoder initialised from Perception Encoder weights\\\\\n$\\WFTfm{\\rho}$ & Warm fine-tune, FM-guided & as $\\WFT{\\rho}$ with a feature-alignment loss to a foundation model during the warm stage\\\\",
+  "count": 1
+ },
+ {
+  "where": "tab:notation",
+  "old": "Section~\\ref{sec:problem}",
+  "new": "$\\Fi$ processes the image as given; $\\Fm$ reflects the image horizontally, runs the model and reflects the output back",
+  "count": 1
+ },
+ {
+  "where": "tab:components",
+  "old": "columns Component, RQ, Labels, Samples; rows C1 frame choice, C2 warm adaptation, C3 endpoint selection",
+  "new": "RQ column and C1-C3 labels removed; rows ordered warm adaptation, Endpoint Consensus Selection, frame choice (negative result); cell values unchanged",
+  "count": 1
+ },
+ {
+  "where": "tab:singleapp",
+  "old": "for Table~\\ref{tab:singleT}.",
+  "new": "for the routed-adapter variants (Section ``Exploratory Routed Adapter Results'' of the paper).",
+  "count": 1
+ },
+ {
+  "where": "tab:warm",
+  "old": "\\fitwidth{\\begin{tabular}",
+  "new": "\\begin{tabular}",
+  "count": 1
+ },
+ {
+  "where": "tab:warm",
+  "old": "; --: not computed.}}\n\\end{table*}",
+  "new": "; --: not computed.}\n\\end{table*}",
+  "count": 1
+ },
+ {
+  "where": "tab:failure",
+  "old": "Cross-script failure on a different test set per row",
+  "new": "Direction errors under the tested shifts, on a different test set per row",
+  "count": 1
+ },
+ {
+  "where": "tab:singleR",
+  "old": "Single-model variants at",
+  "new": "Routed-adapter variants at",
+  "count": 1
+ },
+ {
+  "where": "tab:singleR",
+  "old": "(Table~\\ref{tab:singleT})",
+  "new": "(the routed-adapter table of the paper (Section ``Exploratory Routed Adapter Results''))",
+  "count": 1
+ },
+ {
+  "where": "tab:r3b",
+  "old": "The order-gain criterion on the six other sets",
+  "new": "The selection-gain criterion on the six non-Urdu sets",
+  "count": 1
+ },
+ {
+  "where": "tab:r3b",
+  "old": "number of sets with an order gain (Gain)",
+  "new": "number of sets with a gain (Gain)",
+  "count": 1
+ },
+ {
+  "where": "tab:r1d",
+  "old": "Label-free frame choice minus",
+  "new": "Automatic frame choice minus",
+  "count": 1
+ },
+ {
+  "where": "tab:r1d",
+  "old": "with the same C3 selector",
+  "new": "with the same Endpoint Consensus Selection",
+  "count": 1
+ },
+ {
+  "where": "tab:r1d",
+  "old": "the six other sets",
+  "new": "the six non-Urdu sets",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "four systems (Section~\\ref{sec:intro}); mirrored left-to-right control (Section~\\ref{sec:discussion})",
+  "new": "four systems (paper, ``Introduction''); mirrored left-to-right control (paper, ``Discussion'')",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "AIoU $+0.047$ and $+0.059$, Table~\\ref{tab:warm}, three",
+  "new": "AIoU $+0.047$ and $+0.059$, Table~\\ref{tab:warm}, three",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "(Section~\\ref{sec:warmres}), three fine-tuning seeds",
+  "new": "(Table~\\ref{tab:warm}), three fine-tuning seeds",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "over the source-training control (Table~\\ref{tab:warm})",
+  "new": "over the source-training control (paper, ``Warm Adaptation on the Target'')",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "Table~\\ref{tab:xni}: lowest AIoU lower bound",
+  "new": "paper, ``Retention on Six Non-Urdu Sets'': lowest AIoU lower bound",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "Table~\\ref{tab:r3a}, 5 of 5 bases",
+  "new": "paper, ``Endpoint Consensus Selection'', 5 of 5 bases",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "(Section~\\ref{sec:selres}); two random-pick controls",
+  "new": "(Section~\\ref{sup:selres}); two random-pick controls",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "three bases (Section~\\ref{sec:negative})",
+  "new": "three bases (Table~\\ref{tab:r1d})",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "lower for 5 (Section~\\ref{sec:negative})",
+  "new": "lower for 5 (paper, ``Negative Results'')",
+  "count": 1
+ },
+ {
+  "where": "tab:claims",
+  "old": "second comparator copy (Table~\\ref{tab:singleT})",
+  "new": "second comparator copy (paper, ``Exploratory Routed Adapter Results'')",
+  "count": 1
+ },
+ {
+  "where": "E29",
+  "old": "writers of Fig.~\\ref{fig:qual} excluded",
+  "new": "writers of the qualitative-results figure of the paper excluded",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "\\section{Implementation Details}\\label{app:impl}\n",
+  "new": "\\section{Implementation Details}\\label{app:impl}\n\\ext{Implementation Details, Datasets and Target Data Budget, Baselines (Experimental Setup); Warm Adaptation, Script Routing (Method)}\n",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "(Section~\\ref{sec:data}); the other corpora",
+  "new": "(Section ``Datasets and Target Data Budget'' of the paper); the other corpora",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "250 validation units per script. The third-party",
+  "new": "250 validation units per dataset. The third-party",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "\n\\textbf{Backbones.}",
+  "new": "\n\\textbf{Sequence length.} Each ground-truth stroke is resampled at 1-px arc length on the 64-px canvas, and the sequence length of 320 is fixed by the backbone. The step is enlarged only for units longer than 320 points (about 0.1\\% of OUHD-L training units, 46.2\\% of CASIA-zh).\n\n\\textbf{Backbones.}",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "(100,000 units, of which 20,000 are OUHD-L units).",
+  "new": "(100,000 units, of which 20,000 are OUHD-L units). Each backbone and each warm stage was trained once (seed 20261016).",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "segmentation F1 of Section~\\ref{sec:data}",
+  "new": "segmentation F1 reported in Section ``Datasets and Target Data Budget'' of the paper",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "Tables~\\ref{tab:warm}, \\ref{tab:xni}, \\ref{tab:singleT} and~\\ref{tab:singleR} pool the three seeds",
+  "new": "Tables~\\ref{tab:warm} and~\\ref{tab:singleR} and the warm-adaptation, retention and routed-adapter tables of the paper pool the three seeds",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "(Appendix~\\ref{app:rules})",
+  "new": "(Section~\\ref{app:rules})",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "FM-guided backbones of Table~\\ref{tab:singleT}",
+  "new": "FM-guided backbones of the routed-adapter table of the paper (Section ``Exploratory Routed Adapter Results'')",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "The step-matched control is selected by the same rule",
+  "new": "The source-training control is selected by the same rule",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "are in the reviewer archive (folder \\texttt{supplementary})",
+  "new": "are in the code repository (\\url{https://github.com/dll-ncai/InkBridge}, folder \\texttt{supplementary})",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "\\textbf{Composition.}",
+  "new": "\\textbf{Script routing.}",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "(20,000 per script)",
+  "new": "(20,000 per dataset)",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "250 validation units per script is kept",
+  "new": "250 validation units per dataset is kept",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "German belongs to no class.",
+  "new": "German belongs to no class. A router whose Urdu class is trained on the 336 units alone sends 93.5\\% of the Urdu test units to the Urdu model, and 97.9\\% with class-balanced sampling, against 99.6\\% for the reported router (three seeds each; checkpoint selection uses a validation set with 250 Urdu units).",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "\\textbf{Endpoint selection.}",
+  "new": "\\textbf{Endpoint Consensus Selection.}",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "The comparator $\\FT{1\\%}$ of Table~\\ref{tab:singleT} exists",
+  "new": "The comparator $\\FT{1\\%}$ of the routed-adapter table of the paper (Section ``Exploratory Routed Adapter Results'') exists",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "first-seed evaluation of the single-model variants",
+  "new": "first-seed evaluation of the routed-adapter variants",
+  "count": 1
+ },
+ {
+  "where": "app:impl",
+  "old": "\n\\textbf{Selectivity perturbations.}",
+  "new": "\n\\textbf{Example unit of the metric figure.} In the metric-illustration figure of the paper (Section ``Evaluation Metrics'') the unit is selected (highest $\\FT{1\\%}$ AIoU among the 62 legible units whose only error is one reversed stroke with a chord of at least 12\\,px, writers of the qualitative-results figure of the paper excluded).\n\n\\textbf{Selectivity perturbations.}",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "\\section{Full Decision Rules}\\label{app:rules}\n",
+  "new": "\\section{Full Decision Rules}\\label{app:rules}\n\\ext{Evaluation Protocol (Experimental Setup)}\n\n\\textbf{Margins.} Non-inferiority margins are 1.5 times the minimum detectable effect at 80\\% power of a three-versus-three-seed comparison, computed from its standard errors on the OUHD-L test set (0.0025 AIoU, 0.0034 pen-up F1, 0.0025 strict order, 0.0030 direction): 0.01035 (AIoU), 0.0141 (pen-up F1), 0.01065 (strict order) and 0.01245 (direction).\n",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "\\item \\emph{Solution}: target gain on the target and retention on all six other sets.",
+  "new": "\\item \\emph{Target gain plus shape retention}: target gain on the target and retention on all six non-Urdu sets.",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "\\item \\emph{Encoder attribution}: warm variant minus $\\SFT{\\rho}$ on the target",
+  "new": "\\item \\emph{Control comparison}: warm variant minus the source-training control $\\SFT{\\rho}$ on the target",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "\\item \\emph{Order gain}:",
+  "new": "\\item \\emph{Selection gain}:",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "with the same selector (lower bound above 0)",
+  "new": "with the same Endpoint Consensus Selection (lower bound above 0)",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "and the six other sets keep AIoU",
+  "new": "and the six non-Urdu sets keep AIoU",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "The test evaluation of endpoint selection on plain fine-tuning",
+  "new": "The test evaluation of Endpoint Consensus Selection on plain fine-tuning",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "\\textbf{Stricter reading of the order gain.}",
+  "new": "\\textbf{Stricter reading of the selection gain.}",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "7 of 24 cells on the other sets",
+  "new": "7 of 24 cells on the non-Urdu sets",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "The pooled three-seed read as the confirmatory read, the retention rule and the single-model arms were recorded",
+  "new": "The pooled three-seed analysis as the primary pooled analysis, the retention rule and the routed-adapter arms were recorded",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "Two deviations follow.",
+  "new": "Two protocol deviations follow.",
+  "count": 1
+ },
+ {
+  "where": "app:rules",
+  "old": "the margins were not fixed before any test result existed.",
+  "new": "the margins were not fixed before any test result existed. In the records the control comparison is named ``encoder attribution'', the selection gain ``order gain'', the target gain plus shape retention ``solution'', and the primary pooled analysis the ``confirmatory read''.",
+  "count": 1
+ },
+ {
+  "where": "app:fm",
+  "old": "\\section{Foundation-Model Screen}\\label{app:fm}\n",
+  "new": "\\section{Foundation-Model Screen}\\label{app:fm}\n\\ext{Negative Results (Results); Warm Adaptation (Method)}\n",
+  "count": 1
+ },
+ {
+  "where": "sec:failure-archive",
+  "old": "in the reviewer archive (folder",
+  "new": "in the code repository (folder",
+  "count": 1
+ },
+ {
+  "where": "sec:failure",
+  "old": "collects the evidence",
+  "new": "collects the direction evidence named in the paper",
+  "count": 1
+ },
+ {
+  "where": "E42",
+  "old": "the 336-label router of Section~\\ref{sec:compose}",
+  "new": "the 336-label router of Section~\\ref{sup:impl} (Script routing)",
+  "count": 1
+ },
+ {
+  "where": "sec:selres-control",
+  "old": "On the six other sets, 16 of 24 base-by-set cells show an order gain and 9 pass",
+  "new": "On the six non-Urdu sets, 16 of 24 base-by-set cells show a gain and 9 pass",
+  "count": 1
+ },
+ {
+  "where": "sec:selres-control",
+  "old": " A post hoc calibration check shows why. The flag requires",
+  "new": " In a post hoc calibration check, the flag requires",
+  "count": 1
+ },
+ {
+  "where": "sec:selres-control",
+  "old": " The random pick is unbiased and the flag is miscalibrated.",
+  "new": "",
+  "count": 1
+ },
+ {
+  "where": "sec:selres-control",
+  "old": "the five Urdu bases of Table~\\ref{tab:r3a}",
+  "new": "the five Urdu bases of the paper",
+  "count": 1
+ },
+ {
+  "where": "sec:selres-control",
+  "old": "the stricter reading is in Appendix~\\ref{app:rules}.",
+  "new": "the stricter reading is in Section~\\ref{sup:rules}. The paper reports the non-Urdu result as inconclusive because the two controls disagree.",
+  "count": 1
+ },
+ {
+  "where": "sec:frame",
+  "old": "\\textbf{Label-free frame choice.}",
+  "new": "\\textbf{Frame choice.}",
+  "count": 1
+ },
+ {
+  "where": "sec:frame",
+  "old": "the endpoint-agreement function $U$ (Eq.~\\ref{eq:utility}, Section~\\ref{sec:verifier})",
+  "new": "the endpoint-agreement function $U$ (defined in Section ``Endpoint Consensus Selection'' of the paper)",
+  "count": 1
+ },
+ {
+  "where": "sec:frame",
+  "old": "The output is the sample that C3 (Section~\\ref{sec:verifier}) selects among the $k$ samples of the chosen frame (Fig.~\\ref{fig:frameverifier}).",
+  "new": "The output is the sample that Endpoint Consensus Selection selects among the $k$ samples of the chosen frame.",
+  "count": 1
+ },
+ {
+  "where": "sec:frameres-extra",
+  "old": "\\textbf{Mirrored frame.} On",
+  "new": "\\textbf{Mirrored frame applied by hand.} On",
+  "count": 1
+ },
+ {
+  "where": "sec:frameres-extra",
+  "old": "(Appendix~\\ref{app:rules})",
+  "new": "(Section~\\ref{sup:rules})",
+  "count": 1
+ },
+ {
+  "where": "E52",
+  "old": "; and (iv) 1\\% low-rank adapters, which gain shape",
+  "new": "; and (iv) 1\\% low-rank adapters, reported in the paper.",
+  "count": 1
+ },
+ {
+  "where": "sec:selectivity-detail",
+  "old": "definitions in Appendix~\\ref{app:impl}",
+  "new": "definitions in Section~\\ref{sup:impl}",
+  "count": 1
+ },
+ {
+  "where": "sec:selectivity-detail",
+  "old": "(Section~\\ref{sec:singleres})",
+  "new": "(Section ``Exploratory Routed Adapter Results'' of the paper)",
+  "count": 1
+ }
+]

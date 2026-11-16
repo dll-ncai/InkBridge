@@ -1,0 +1,4 @@
+file,n_units,n_scored,n_dedup,n_error,seconds
+test_ouhdl__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed0_preds.npz,4406,4406,0,0,84.5
+test_ouhdl__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed1_preds.npz,4406,4406,0,0,5.4
+test_ouhdl__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed2_preds.npz,4406,4406,0,0,4.6

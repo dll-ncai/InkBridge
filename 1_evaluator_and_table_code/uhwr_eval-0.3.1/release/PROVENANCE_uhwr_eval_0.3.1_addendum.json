@@ -1,0 +1,60 @@
+{
+ "release": "uhwr_eval 0.3.1",
+ "written_utc": "2026-10-20 (post-job, agent on Mac)",
+ "refers_to": {
+  "file": "release/PROVENANCE_uhwr_eval_0.3.1.json",
+  "sha256": "1de4c6a0dff94530c855012aecfc3e64324463ce2a999797ced2b077160e6878",
+  "verify_summary_sha256": "57081fe40ba595f115c21cff762610b7e5cfc37e2ee54b61e4d067e1dae249e9",
+  "slurm_job": "24516363"
+ },
+ "why": "The in-job gate reported gate_pass=false: (a) dot2_rescore_per_unit.csv.gz was compared row by row without sorting, and the row order of the rerun differs from DOT2's run; (b) 14/588 penup_f1_v2 and 26/588 timing_profile_tv_v2 sensitivity-table values and 14/576 dot2_rescore_summary.csv values differ at <= 3.3e-16.",
+ "dot2_per_unit_keyed": {
+  "key": [
+   "unit_id",
+   "method",
+   "input"
+  ],
+  "n_rows": 13218,
+  "n_values": 568374,
+  "n_different_after_key_sort": 0,
+  "max_abs_diff": 0.0,
+  "columns_with_diff": {},
+  "row_order_identical": false,
+  "ref": {
+   "path": "$U/exp/DOT2/out/dot2_rescore_per_unit.csv.gz",
+   "sha256": "fca372f59a074c19f7386162427d84dae7a8b0940c176b5cbe583275999e8c61"
+  },
+  "new": {
+   "path": "$U/exp/EV031/full/dot2/dot2_rescore_per_unit.csv.gz",
+   "sha256": "f5a3f85b41321acb6e02f4f93dd5ccce40ea7a142717adea99bff212e6e0e89a"
+  },
+  "method": "pandas read_csv both, sort by (unit_id, method, input), compare every column exactly (NaN==NaN)"
+ },
+ "e1_sensitivity_new_metrics": {
+  "penup_f1_v2": {
+   "n_rows": 42,
+   "n_values": 588,
+   "n_exact_equal": 574,
+   "max_abs_diff": 2.220446049250313e-16
+  },
+  "timing_profile_tv_v2": {
+   "n_rows": 42,
+   "n_values": 588,
+   "n_exact_equal": 562,
+   "max_abs_diff": 2.220446049250313e-16
+  }
+ },
+ "e1_per_unit": "108,000 rows; every column exactly equal after sort by (dataset, uid, factor, strength, protocol), incl. penup_f1_v2 and timing_profile_tv_v2",
+ "dot2_summary": {
+  "n_values": 576,
+  "n_different": 14,
+  "max_abs_diff": 3.3306690738754696e-16
+ },
+ "toy_validation": {
+  "tests_timing": "passed",
+  "tests_marks": "passed",
+  "validate_toy": "passed (asserted DTW/LDTW/AIoU to 1e-3)",
+  "regenerated_vs_shipped_csv": "16 rows; regenerated has 2 extra columns (penup_f1_v2, timing_profile_tv_v2); 31 cells differ on shared columns: lpips 12 (max 7.45e-08), chamfer 7 (2.4e-15), rmse 7 (3.6e-15), hausdorff 3 (6.7e-15), frechet 2 (5.0e-15)"
+ },
+ "side_effect": "validate_toy LPIPS run had no TORCH_HOME set, so torchvision downloaded alexnet-owt-7be5be79.pth (244 MB) to $HOME/.cache/torch/hub/checkpoints/ on 20 Oct 22:47 CEST."
+}

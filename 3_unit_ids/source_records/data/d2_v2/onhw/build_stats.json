@@ -1,0 +1,89 @@
+{
+ "set": "onhw",
+ "licence": {
+  "name": "OnHW-wordsTraj raw recordings (Fraunhofer IIS), 2 persons x 29 recordings",
+  "licence": "Shared privately by F. Ott (Fraunhofer IIS) on 16 Oct 2026 for research use (Gmail thread 1a13ba55dd19248b); the public OnHW-wordsTraj release is CC BY-NC 4.0; redistribution of the raw recordings not granted; participant identifiers removed here",
+  "cite": "F. Ott et al., OnHW datasets (Fraunhofer IIS); cite the OnHW-wordsTraj publication.",
+  "redistributable": false
+ },
+ "params": {
+  "set": "onhw",
+  "data": "$U/data",
+  "out": "$U/data/d2_v2/onhw",
+  "m4_code": "$U/exp/M4/full2/code",
+  "procs": 16,
+  "limit": 0,
+  "seed": 20261016
+ },
+ "raw_columns": [
+  "x",
+  "y",
+  "t",
+  "p"
+ ],
+ "input_meta": {
+  "zip": "$U/data/onhw_raw/raw/OnHW-wordsTraj.zip",
+  "zip_sha256": "a1763cbeaa11576445cd180ac9ce00a6b33240f098f40560d72789e006470d0a",
+  "n_recordings": 58,
+  "meta_fields_kept": [
+   "pen_nr",
+   "recording_type",
+   "hw_version",
+   "fw_version",
+   "app_name",
+   "app_version"
+  ],
+  "meta_fields_dropped": "person_name, person_year_of_birth, person_handedness, person_gender (never copied)",
+  "not_copied": [
+   "setup.jpg",
+   "sensor_data.csv (IMU; not used)",
+   "calibration.json (sha256 only)",
+   "stylus_hover_data.csv (used only to cut strokes)"
+  ],
+  "stroke_rule": "touch rows (MILLIS;X;Y;Z;PRES) with start <= MILLIS < stop of the word label; a stroke ends where a hover row falls between two touch rows or the touch time gap exceeds 100 ms",
+  "label_rule": "label = correction column if non-empty, else Label",
+  "row_rule": "touch/hover rows with missing or non-numeric fields are skipped (counts per recording in recordings.csv)",
+  "touch_rows_skipped_total": 12,
+  "hover_rows_skipped_total": 15
+ },
+ "stats": {
+  "all": {
+   "n_sources": 4675,
+   "n_sources_error": 2,
+   "errors_first": [
+    [
+     "DE-O01/SES-11/REC-04/w054",
+     "no strokes"
+    ],
+    [
+     "DE-O02/SES-20/REC-42/w032",
+     "no strokes"
+    ]
+   ],
+   "n_sources_with_writer": 4675,
+   "n_writers": 2,
+   "n_units": 5925,
+   "n_units_encode_error": 0,
+   "n_units_with_marks": 1951,
+   "units_per_source_mean": 1.267379679144385,
+   "n_seq_pct": {
+    "50": 234.0,
+    "90": 301.0,
+    "99": 318.0,
+    "100": 320.0
+   },
+   "n_step_gt_1": 237,
+   "strokes_per_unit_pct": {
+    "50": 3.0,
+    "90": 6.0,
+    "100": 11.0
+   },
+   "seconds": 17.3
+  }
+ },
+ "extra": {
+  "n_word_types_both_writers": 259,
+  "n_word_types_total": 4155
+ },
+ "seconds": 22.2
+}

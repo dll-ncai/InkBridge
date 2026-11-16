@@ -1,0 +1,5 @@
+2026-11-08T14:36:01Z sma_chain_start tag=SMA_cleandift-sd21_W_p01_s20261034 kind=bb backbone=$U/exp/FMD/xs/runs/cleandift-sd21_W_clusterA/bb_ms4.pt frac=p01 seed=20261034 steps=10000 site=clusterA host=<node> slurm=24964888 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T14:36:01Z train_start layout=64x4 site=clusterA host=<node> slurm=24964888 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T17:15:18Z train_exit rc=0 site=clusterA host=<node> slurm=24964888 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-08T19:51:44Z selected SM-A milestone 10 (step 10000) site=clusterA host=<node> slurm=24964888 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T00:10:58Z sampling_done ms10 site=clusterA host=<node> slurm=24964888 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]

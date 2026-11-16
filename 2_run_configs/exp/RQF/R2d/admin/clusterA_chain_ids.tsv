@@ -1,0 +1,29 @@
+r2d_lto	24970049	24970048	--gres=gpu:a30:2 -c 16 --mem=96G -t 5-00:00:00
+r2d_ltow	24970050	24970049	--gres=gpu:a30:2 -c 16 --mem=96G -t 3-00:00:00
+r2d_samp_lto	24970051	24970049	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_ltow	24970052	24970050	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_ftp_34	24970053	24970049	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_smrp_34	24970054	24970049	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_ftw_34	24970055	24970050	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_smrw_34	24970056	24970050	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_ftp_34	24970057	24970053	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_smrp_34	24970058	24970054	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_ftw_34	24970059	24970055	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_smrw_34	24970060	24970056	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_ftp_35	24970061	24970049	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_smrp_35	24970062	24970049	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_ftw_35	24970063	24970050	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_smrw_35	24970064	24970050	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_ftp_35	24970065	24970061	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_smrp_35	24970066	24970062	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_ftw_35	24970067	24970063	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_smrw_35	24970068	24970064	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_ftp_36	24970069	24970049	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_smrp_36	24970070	24970049	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_ftw_36	24970071	24970050	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_smrw_36	24970072	24970050	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_ftp_36	24970073	24970069	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_smrp_36	24970074	24970070	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_ftw_36	24970075	24970071	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_samp_smrw_36	24970076	24970072	-p gpuidle --gres=gpu:a30:1 -c 8 --mem=60G -t 1-00:00:00
+r2d_score	24970077	24970051:24970052:24970057:24970058:24970059:24970060:24970065:24970066:24970067:24970068:24970073:24970074:24970075:24970076	-p epyc-128 -c 16 --mem=110G -t 2-00:00:00 --export=ALL,R2D_SHM=1

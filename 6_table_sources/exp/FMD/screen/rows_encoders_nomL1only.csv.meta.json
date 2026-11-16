@@ -1,0 +1,190 @@
+{
+ "schema": "fmd_meta/1",
+ "kind": "fmd_screen_rows",
+ "created_utc": "2026-11-03T02:45:49Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "code": {
+  "files": {
+   "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+   "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+   "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+   "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+   "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+   "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+   "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+   "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+   "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+   "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+  },
+  "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "command": "$U/exp/FMD/code/fmd_ext_encoders/make_rows.py $U/exp/FMD/screen/rows_encoders.csv",
+ "env": {
+  "python": "3.11.13",
+  "host": "<node>",
+  "platform": "Linux-5.14.0-687.61.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "slurm_job_id": "24830094",
+  "numpy": "2.2.6",
+  "torch": "2.7.1+cu128",
+  "cv2": "4.12.0"
+ },
+ "inputs": {
+  "dinov2-large:last:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov2-large__last__linear__G16__val1000.units.csv.gz",
+   "sha256": "06eeb18d8ef197019ea72294ea16e6e99b83a49e52ac12b5f92a6c0f13e6cad0"
+  },
+  "dinov2-large:last:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov2-large__last__attn__G16__val1000.units.csv.gz",
+   "sha256": "cf83d92494112750ec9de4ff8ca3f59d0c906c5bd5cccd81c097157ec49badb3"
+  },
+  "dinov2-large:mid:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov2-large__mid__linear__G16__val1000.units.csv.gz",
+   "sha256": "43374798c25af58228deca19970623458c8f4cc924fb7cae6e09f84f94dd2e3b"
+  },
+  "dinov2-large:mid:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov2-large__mid__attn__G16__val1000.units.csv.gz",
+   "sha256": "0ab4a9d5cfafc89713ad5860e99534c3a2fa409a69783c7d91fa8dd78388afd4"
+  },
+  "dinov3-vitl16:last:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov3-vitl16__last__linear__G14__val1000.units.csv.gz",
+   "sha256": "245b39d4a492fcd6a6d54ddfd678aac9a033130b0931be239487b2f04f0e7173"
+  },
+  "dinov3-vitl16:last:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov3-vitl16__last__attn__G14__val1000.units.csv.gz",
+   "sha256": "b72246f89b28217b4a12c41ab7cc38facaf3303acdbc4166225167455ddb1de8"
+  },
+  "dinov3-vitl16:mid:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov3-vitl16__mid__linear__G14__val1000.units.csv.gz",
+   "sha256": "c044e27ba1662f5753d07095131b35e55fcf83455556b8fd8bb406388f306d14"
+  },
+  "dinov3-vitl16:mid:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/dinov3-vitl16__mid__attn__G14__val1000.units.csv.gz",
+   "sha256": "758f678970c1973b84df79076a50e546d26ae30612f8d4ca906388933bf860ac"
+  },
+  "siglip2-so400m-patch14-224:last:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/siglip2-so400m-patch14-224__last__linear__G16__val1000.units.csv.gz",
+   "sha256": "318d7c1d18451bd55ab7a2e27eb314be371ecbb14b37acaa497582bb0ee5cc6b"
+  },
+  "siglip2-so400m-patch14-224:last:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/siglip2-so400m-patch14-224__last__attn__G16__val1000.units.csv.gz",
+   "sha256": "7fafc007b5ad940e965138bc54553f5ee71b8d9859e89b9381c48eff50f9aa1a"
+  },
+  "siglip2-so400m-patch14-224:mid:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/siglip2-so400m-patch14-224__mid__linear__G16__val1000.units.csv.gz",
+   "sha256": "2cb44470d48d149d816865606164dc9f06a9b9ca31bc3380aa6dd5c5047695cb"
+  },
+  "siglip2-so400m-patch14-224:mid:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/siglip2-so400m-patch14-224__mid__attn__G16__val1000.units.csv.gz",
+   "sha256": "3a82c4e96b1f926e4814cbed85107a4fdc7cda2169d0f078a5ad27cc2fb82c39"
+  },
+  "sam2.1-hiera-base-plus:last:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/sam2.1-hiera-base-plus__last__linear__G16__val1000.units.csv.gz",
+   "sha256": "683e628a041265b4d7edddcd092ee265145e22ec51bc37371583b56b8b873c97"
+  },
+  "sam2.1-hiera-base-plus:last:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/sam2.1-hiera-base-plus__last__attn__G16__val1000.units.csv.gz",
+   "sha256": "d6afae56359597ad498436f51dd715cb0546327bb2a9e9594190416d79069070"
+  },
+  "sam2.1-hiera-base-plus:mid:linear": {
+   "path": "$U/exp/FMD/screen/units/encoders/sam2.1-hiera-base-plus__mid__linear__G16__val1000.units.csv.gz",
+   "sha256": "875831a34c2946ff4d6ae2a4c663a3f128461164789e90f85e2c7ccee17d94f6"
+  },
+  "sam2.1-hiera-base-plus:mid:attn": {
+   "path": "$U/exp/FMD/screen/units/encoders/sam2.1-hiera-base-plus__mid__attn__G16__val1000.units.csv.gz",
+   "sha256": "c63f3bc75d93a36e8c31f99fa4d4d788df2e002a536aa8d9248fc3b49d548c83"
+  },
+  "base nomL1:mid16:linear:G14": {
+   "path": "$U/exp/FMD/screen/units/nomL1__mid16__linear__G14__val1000.units.csv.gz",
+   "sha256": "7b8e050495463cb24444bc5bb28af6b0956ccc0d6b496202d608fc0d85b8b282"
+  },
+  "base nomL1:mid16:attn:G14": {
+   "path": "$U/exp/FMD/screen/units/nomL1__mid16__attn__G14__val1000.units.csv.gz",
+   "sha256": "fd7b4be3af9a1343f0ba1a54941dc0e53a54ad489dd3a31c46dbf5bd6ccde3d7"
+  },
+  "base nomL1:mid16:linear:G16": {
+   "path": "$U/exp/FMD/screen/units/nomL1__mid16__linear__G16__val1000.units.csv.gz",
+   "sha256": "d17e7fe48e6b4b63342565cc1e3600c6f74edd8b74f4071e003cff692102bf27"
+  },
+  "base nomL1:mid16:attn:G16": {
+   "path": "$U/exp/FMD/screen/units/nomL1__mid16__attn__G16__val1000.units.csv.gz",
+   "sha256": "ba6605e3d1c3c98bd4cb94fc5a305c50afa6b37e728d071521608ab5aad21e62"
+  },
+  "base nomL1:cat16:linear:G14": {
+   "path": "$U/exp/FMD/screen/units/nomL1__cat16__linear__G14__val1000.units.csv.gz",
+   "sha256": "80f34d1446fb979ecddbd2b0f79071770cd8ab7b3cb5c4fcad575bf514c8e010"
+  },
+  "base nomL1:cat16:attn:G14": {
+   "path": "$U/exp/FMD/screen/units/nomL1__cat16__attn__G14__val1000.units.csv.gz",
+   "sha256": "ed0e74416c44acb497af98e052bc88eb4dcda2479d59343fcf414308fbcea5e3"
+  },
+  "base nomL1:cat16:linear:G16": {
+   "path": "$U/exp/FMD/screen/units/nomL1__cat16__linear__G16__val1000.units.csv.gz",
+   "sha256": "a6de81b5fe49389f82e3438a8acf52a96191be24a1ce9c3e788fbc2cd3dc90ad"
+  },
+  "base nomL1:cat16:attn:G16": {
+   "path": "$U/exp/FMD/screen/units/nomL1__cat16__attn__G16__val1000.units.csv.gz",
+   "sha256": "a6318b24c9955ae168e14319ba4c04a9bdf460194bc50e80e089c7185853a841"
+  }
+ },
+ "params": {
+  "track": "Encoders",
+  "fms": {
+   "dinov2-large": 16,
+   "dinov3-vitl16": 14,
+   "siglip2-so400m-patch14-224": 16,
+   "sam2.1-hiera-base-plus": 16
+  },
+  "gate_layer": "last",
+  "set": "val1000",
+  "schema": [
+   "fm",
+   "family",
+   "layer",
+   "target_or_task",
+   "metric",
+   "value",
+   "baseline",
+   "delta",
+   "ci_lo",
+   "ci_hi",
+   "n_units",
+   "gate_role",
+   "verdict",
+   "rows_file_sha",
+   "probe",
+   "grid",
+   "baseline_value",
+   "n_writers",
+   "baseline_rows_sha",
+   "harness_code_sha",
+   "created_utc"
+  ],
+  "delta_T0": 0.01035,
+  "boot_B": 2000,
+  "boot_seed": 20261103
+ },
+ "outputs": {
+  "$U/exp/FMD/screen/rows_encoders.csv": "05a5df4921ffc1352095ab65d93bf2ec64e9778956f6d9c333020e9168f46a31"
+ },
+ "n_rows": 112,
+ "missing_fm_units": [],
+ "baseline_arms_present": {
+  "nomL1:mid16:linear:G14": true,
+  "nomL1:mid16:attn:G14": true,
+  "nomL1:mid16:linear:G16": true,
+  "nomL1:mid16:attn:G16": true,
+  "nomL1:cat16:linear:G14": true,
+  "nomL1:cat16:attn:G14": true,
+  "nomL1:cat16:linear:G16": true,
+  "nomL1:cat16:attn:G16": true,
+  "nomL2:mid16:linear:G14": false,
+  "nomL2:mid16:attn:G14": false,
+  "nomL2:mid16:linear:G16": false,
+  "nomL2:mid16:attn:G16": false,
+  "nomL2:cat16:linear:G14": false,
+  "nomL2:cat16:attn:G14": false,
+  "nomL2:cat16:linear:G16": false,
+  "nomL2:cat16:attn:G16": false
+ },
+ "make_rows_sha256": "1ea40783575b3b506233ce4fef0b028ab4a7ed576592d450601519a63468d9d1"
+}

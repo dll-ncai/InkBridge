@@ -1,0 +1,88 @@
+gpu_tag,gpu,fm,units_per_s,batch_size,peak_gpu_mem_gb,dtype,token_map_hw_at_224,channels,input_mode,autocast,xs_probe_sha12,job
+a4000,NVIDIA RTX A4000,aimv2-1b-patch14-224,11.54,32,7.5,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 2048, ""mid"": 2048}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,aimv2-3b-patch14-224,31.256,32,7.35,torch.bfloat16,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 3072, ""mid"": 3072}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,aimv2-huge-patch14-224,22.767,32,4.65,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1536, ""mid"": 1536}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,aimv2-large-patch14-224-distilled,47.433,32,2.61,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1024, ""mid"": 1024}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,aimv2-large-patch14-224,47.016,32,2.61,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1024, ""mid"": 1024}","(224, False)",none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,arabic-english-hw-ocr-v3,58.353,32,1.79,torch.bfloat16,"{""pre_merge"": [16, 16], ""last"": [8, 8]}","{""pre_merge"": 1280, ""last"": 2048}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,c-radiov3-b,221.871,32,0.71,torch.float32,"{""last"": [14, 14]}","{""last"": 768}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,c-radiov3-g,17.905,32,7.93,torch.float32,"{""last"": [14, 14]}","{""last"": 1536}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,c-radiov3-h,31.989,32,4.44,torch.float32,"{""last"": [14, 14]}","{""last"": 1280}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,c-radiov3-l,65.804,32,2.07,torch.float32,"{""last"": [14, 14]}","{""last"": 1024}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,c-radiov4-h,31.914,32,7.84,torch.float32,"{""last"": [14, 14]}","{""last"": 1280}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,c-radiov4-so400m,46.98,32,4.85,torch.float32,"{""last"": [14, 14]}","{""last"": 1152}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,chandra-ocr-2,154.358,32,0.99,torch.bfloat16,"{""pre_merge"": [14, 14], ""last"": [7, 7]}","{""pre_merge"": 1024, ""last"": 2560}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,chandra,126.045,32,1.56,torch.bfloat16,"{""pre_merge"": [14, 14], ""last"": [7, 7]}","{""pre_merge"": 1152, ""last"": 4096}",,none,2e4d566186fd,24846335
+a4000,NVIDIA RTX A4000,cleandift-sd15,4.358,8,10.75,float32,"{""up1"": [32, 32], ""up2"": [64, 64]}","{""up1"": 1280, ""up2"": 640}",,none,0ccce9a0e9d4,24842562
+a4000,NVIDIA RTX A4000,cleandift-sd21,1.736,4,10.17,float32,"{""up1"": [48, 48], ""up2"": [96, 96]}","{""up1"": 1280, ""up2"": 640}",,none,0ccce9a0e9d4,24842562
+a4000,NVIDIA RTX A4000,deepseek-ocr,493.265,32,1.0,torch.bfloat16,"{""sam_last"": [4, 4], ""clip_last"": [4, 4]}","{""sam_last"": 1024, ""clip_last"": 1024}",,none,0ccce9a0e9d4,24843187
+a4000,NVIDIA RTX A4000,depth-anything-v2-large,46.323,32,2.61,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1024, ""mid"": 1024}",,none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,dinov2-base,139.41,32,1.01,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 768, ""mid"": 768}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,dinov2-giant,11.954,32,7.23,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1536, ""mid"": 1536}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,dinov2-large,42.143,32,2.5,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1024, ""mid"": 1024}","(224, False)",none,0ccce9a0e9d4,24842562
+a4000,NVIDIA RTX A4000,dinov2-reg-base,145.796,32,1.02,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 768, ""mid"": 768}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,dinov2-reg-giant,11.322,32,7.27,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1536, ""mid"": 1536}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,dinov2-reg-large,43.821,32,2.51,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1024, ""mid"": 1024}","(224, False)",none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,dinov2-reg-small,487.706,32,0.45,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 384, ""mid"": 384}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,dinov3-convnext-large,87.749,32,1.56,torch.float32,"{""last"": [7, 7], ""mid"": [14, 14]}","{""last"": 1536, ""mid"": 768}",,none,0ccce9a0e9d4,24842562
+a4000,NVIDIA RTX A4000,dinov3-vit7b16,18.256,32,16.12,torch.bfloat16,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 4096, ""mid"": 4096}","(224, False)",none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,dinov3-vitb16,181.93,32,0.88,torch.float32,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 768, ""mid"": 768}","(224, False)",none,0ccce9a0e9d4,24842562
+a4000,NVIDIA RTX A4000,dinov3-vith16plus,20.366,32,5.11,torch.float32,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 1280, ""mid"": 1280}","(224, False)",none,0ccce9a0e9d4,24842562
+a4000,NVIDIA RTX A4000,dinov3-vitl16-sat493m,58.579,32,2.25,torch.float32,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 1024, ""mid"": 1024}","(224, False)",none,2e4d566186fd,24846335
+a4000,NVIDIA RTX A4000,dinov3-vitl16,56.369,32,2.22,torch.float32,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 1024, ""mid"": 1024}","(224, False)",none,4b6291601bbf,24842562
+a4000,NVIDIA RTX A4000,dinov3-vits16,537.086,32,0.38,torch.float32,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 384, ""mid"": 384}","(224, False)",none,0ccce9a0e9d4,24842562
+a4000,NVIDIA RTX A4000,florence-2-base,133.777,32,1.02,torch.float32,"{""last"": [7, 7]}","{""last"": 1024}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,florence-2-large-ft,32.988,32,3.45,torch.float32,"{""last"": [7, 7]}","{""last"": 2048}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,lightonocr-3-0.8b,284.48,32,0.46,torch.bfloat16,"{""pre_merge"": [14, 14], ""last"": [7, 7]}","{""pre_merge"": 768, ""last"": 1024}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,lightonocr-3-4b,154.536,32,0.99,torch.bfloat16,"{""pre_merge"": [14, 14], ""last"": [7, 7]}","{""pre_merge"": 1024, ""last"": 2560}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,pe-core-b16-224,186.856,32,0.66,torch.float32,"{""last"": [14, 14]}","{""last"": 768}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,pe-core-g14-448,7.57,32,8.87,torch.float32,"{""last"": [16, 16]}","{""last"": 1536}",,none,2e4d566186fd,24846330
+a4000,NVIDIA RTX A4000,pe-lang-g14-448,8.321,32,8.29,torch.float32,"{""last"": [16, 16]}","{""last"": 1536}",,none,2e4d566186fd,24846330
+a4000,NVIDIA RTX A4000,pe-lang-l14-448,42.584,32,2.09,torch.float32,"{""last"": [16, 16]}","{""last"": 1024}",,none,2e4d566186fd,24846330
+a4000,NVIDIA RTX A4000,pe-spatial-b16-512,190.834,32,0.63,torch.float32,"{""last"": [14, 14]}","{""last"": 768}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,pe-spatial-g14-448,8.439,32,8.33,torch.float32,"{""last"": [16, 16]}","{""last"": 1536}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,pe-spatial-l14-448,45.399,32,1.69,torch.float32,"{""last"": [16, 16]}","{""last"": 1024}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,pe-spatial-s16-512,598.142,32,0.24,torch.float32,"{""last"": [14, 14]}","{""last"": 384}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,pe-spatial-t16-512,1146.864,32,1.87,torch.float32,"{""last"": [14, 14]}","{""last"": 192}",,none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,qaari-urdu-vision,77.212,32,1.78,torch.bfloat16,"{""pre_merge"": [16, 16], ""last"": [8, 8]}","{""pre_merge"": 1280, ""last"": 1536}",,none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,qari-ocr-0.4.0-vl-4b-vision,151.35,32,1.18,torch.bfloat16,"{""pre_merge"": [14, 14], ""last"": [7, 7]}","{""pre_merge"": 1024, ""last"": 2560}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,qari-ocr-v0.3-vl-2b,77.07,32,1.77,torch.bfloat16,"{""pre_merge"": [16, 16], ""last"": [8, 8]}","{""pre_merge"": 1280, ""last"": 1536}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,qwen2-vl-2b-instruct,76.889,32,1.78,torch.bfloat16,"{""pre_merge"": [16, 16], ""last"": [8, 8]}","{""pre_merge"": 1280, ""last"": 1536}",,none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,qwen2.5-vl-3b-instruct,58.238,32,1.8,torch.bfloat16,"{""pre_merge"": [16, 16], ""last"": [8, 8]}","{""pre_merge"": 1280, ""last"": 2048}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,qwen3-vl-4b-instruct,149.622,32,1.18,torch.bfloat16,"{""pre_merge"": [14, 14], ""last"": [7, 7]}","{""pre_merge"": 1024, ""last"": 2560}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,sam3,1.095,4,15.24,torch.float32,"{""last"": [72, 72]}","{""last"": 1024}",,none,2e4d566186fd,24846330
+a4000,NVIDIA RTX A4000,sd21-dift-gate,1.235,4,10.19,float32,"{""t261_up1"": [48, 48]}","{""t261_up1"": 1280}",,none,4b6291601bbf,24842562
+a4000,NVIDIA RTX A4000,sd3-medium-diffusers,10.735,16,11.41,torch.bfloat16,"{""mid"": [32, 32], ""last"": [32, 32]}","{""mid"": 1536, ""last"": 1536}",,none,2e4d566186fd,24846330
+a4000,NVIDIA RTX A4000,siglip2-giant-opt-patch16-256,17.407,32,6.93,torch.float32,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 1536, ""mid"": 1536}","(224, True)",none,0ccce9a0e9d4,24843116
+a4000,NVIDIA RTX A4000,siglip2-large-patch16-256,64.991,32,2.33,torch.float32,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 1024, ""mid"": 1024}","(224, True)",none,2e4d566186fd,24846335
+a4000,NVIDIA RTX A4000,siglip2-so400m-patch14-224,31.503,32,3.27,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1152, ""mid"": 1152}","(224, False)",none,0ccce9a0e9d4,24842562
+a4000,NVIDIA RTX A4000,siglip2-so400m-patch16-256,47.842,32,2.99,torch.float32,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 1152, ""mid"": 1152}","(224, True)",none,2e4d566186fd,24846335
+a4000,NVIDIA RTX A4000,starvector-1b-im2svg,46.052,32,1.79,float32,"{""last"": [16, 16]}","{""last"": 1024}",,none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,starvector-8b-im2svg,63.434,32,1.65,float32,"{""last"": [14, 14]}","{""last"": 1024}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,surya-ocr-2-persian-hw,286.733,32,0.46,torch.bfloat16,"{""pre_merge"": [14, 14], ""last"": [7, 7]}","{""pre_merge"": 768, ""last"": 1024}",,none,2e4d566186fd,24846335
+a4000,NVIDIA RTX A4000,theia-base-cddsv,191.592,32,1.08,torch.float32,"{""last"": [14, 14]}","{""last"": 768}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,theia-base-cdiv,191.867,32,0.89,torch.float32,"{""last"": [14, 14]}","{""last"": 768}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,theia-small-cdiv,582.253,32,0.34,torch.float32,"{""last"": [14, 14]}","{""last"": 384}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,theia-tiny-cddsv,1089.872,32,0.19,torch.float32,"{""last"": [14, 14]}","{""last"": 192}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,theia-tiny-cdiv,659.958,32,0.16,torch.float32,"{""last"": [14, 14]}","{""last"": 192}",,none,2e4d566186fd,24846341
+a4000,NVIDIA RTX A4000,tipsv1-b14,127.736,32,1.2,torch.float32,"{""last"": [16, 16]}","{""last"": 768}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,tipsv1-g14,10.722,32,7.39,torch.float32,"{""last"": [16, 16]}","{""last"": 1536}",,none,2e4d566186fd,24846330
+a4000,NVIDIA RTX A4000,tipsv1-l14,40.827,32,2.49,torch.float32,"{""last"": [16, 16]}","{""last"": 1024}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,tipsv1-s14,436.826,32,0.45,torch.float32,"{""last"": [16, 16]}","{""last"": 384}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,tipsv1-so400m14,28.506,32,4.07,torch.float32,"{""last"": [16, 16]}","{""last"": 1152}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,tipsv2-g14,11.617,32,6.96,torch.float32,"{""last"": [16, 16]}","{""last"": 1536}",,none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,tipsv2-l14,42.827,32,2.51,torch.float32,"{""last"": [16, 16]}","{""last"": 1024}",,none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,tipsv2-so400m14,30.302,32,4.07,torch.float32,"{""last"": [16, 16]}","{""last"": 1152}",,none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,trocr-base-handwritten,61.912,32,1.75,torch.float32,"{""last"": [24, 24]}","{""last"": 768}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,trocr-base-hw-hist-swe-2,55.569,32,1.74,torch.float32,"{""last"": [24, 24]}","{""last"": 768}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,trocr-large-handwritten,20.75,32,3.96,torch.float32,"{""last"": [24, 24]}","{""last"": 1024}",,none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,trocr-small-handwritten,198.903,32,0.83,torch.float32,"{""last"": [24, 24]}","{""last"": 384}",,none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,vit-mae-large,64.885,32,2.2,torch.float32,"{""last"": [14, 14], ""mid"": [14, 14]}","{""last"": 1024, ""mid"": 1024}","(224, False)",none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,webssl-dino1b-224,11.992,32,7.23,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1536, ""mid"": 1536}","(224, False)",none,0ccce9a0e9d4,24843117
+a4000,NVIDIA RTX A4000,webssl-dino2b-224,6.438,32,11.67,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 2688, ""mid"": 2688}","(224, False)",none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,webssl-dino300m-224,40.495,32,2.5,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1024, ""mid"": 1024}","(224, False)",none,2e4d566186fd,24844995
+a4000,NVIDIA RTX A4000,webssl-dino3b-224,33.855,32,7.87,torch.bfloat16,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 3072, ""mid"": 3072}","(224, False)",none,2e4d566186fd,24846335
+a4000,NVIDIA RTX A4000,webssl-dino5b-224,20.851,32,12.59,torch.bfloat16,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 3584, ""mid"": 3584}","(224, False)",none,2e4d566186fd,24846335
+a4000,NVIDIA RTX A4000,webssl-dino7b-224,,,,,null,null,,none,2e4d566186fd,24846335
+a4000,NVIDIA RTX A4000,webssl-mae1b-224,12.673,32,7.23,torch.float32,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 1536, ""mid"": 1536}","(224, False)",none,2e4d566186fd,24846340
+a4000,NVIDIA RTX A4000,webssl-mae3b-224,34.803,32,7.89,torch.bfloat16,"{""last"": [16, 16], ""mid"": [16, 16]}","{""last"": 3072, ""mid"": 3072}","(224, False)",none,2e4d566186fd,24846340

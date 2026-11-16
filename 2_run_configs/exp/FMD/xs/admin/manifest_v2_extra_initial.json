@@ -1,0 +1,136 @@
+{
+ "not_staged": [
+  {
+   "repo_id": "google/inkfm or google/ink-fm (InkFM, arXiv 2503.23081)",
+   "gated": "",
+   "license": "",
+   "reason": "NOT RELEASED: HF api model_info for google/inkfm and google/ink-fm -> RepositoryNotFoundError 404; GitHub repository search for 'inkfm', 'InkFM google' and 'ink foundation model handwriting' returned no InkFM repository (only thesephist/inkfmt, unrelated); paper says 'We plan to make this model public'. Checked 2026-11-03."
+  },
+  {
+   "repo_id": "nvidia/C-RADIOv4-B, nvidia/C-RADIOv4-L, nvidia/C-RADIOv4-g",
+   "gated": "",
+   "license": "",
+   "reason": "DO NOT EXIST on HF: RepositoryNotFoundError 404 on https://huggingface.co/api/models/nvidia/C-RADIOv4-{B,L,g}. Only C-RADIOv4-H and C-RADIOv4-SO400M exist (staged)."
+  },
+  {
+   "repo_id": "starvector/starvector-8b-im2svg",
+   "gated": "False",
+   "license": "apache-2.0",
+   "reason": "public (15.0 GB, 7.5B params) but not staged: roster names the 1B model; listed for the prereg track."
+  },
+  {
+   "repo_id": "oddadmix/Qaari-0.1-Urdu-OCR-VL-2B-Instruct base = unsloth/Qwen2-VL-2B-Instruct-unsloth-bnb-4bit",
+   "gated": "False",
+   "license": "",
+   "reason": "SUBSTITUTION (as requested in the task): the adapter's declared base is the unsloth bnb-4bit copy; Qwen/Qwen2-VL-2B-Instruct (bf16) is staged as base. Load test 'qaari-urdu-vision' merges the adapter's 256 visual LoRA tensors into the bf16 vision tower (scale alpha/r = 1)."
+  },
+  {
+   "repo_id": "unsloth/DeepSeek-OCR (declared base of nomypython/urdu-ocr-deepseek)",
+   "gated": "False",
+   "license": "mit",
+   "reason": "staged for identity check: its model-00001-of-000001.safetensors sha256 and config/tokenizer files are IDENTICAL to deepseek-ai/DeepSeek-OCR (compared 2026-11-03), so the declared base of the nomy Urdu adapter equals the official weights. Its remote config does not load with the transformers-4.46.3 stack (cannot import DeepseekV2Model) - the official repo does. Urdu LoRA adapters touch LM layers only (4392/4392 and 4584/4584 tensors), so the vision encoder equals the base model's."
+  },
+  {
+   "repo_id": "xcll/cleandift_flux_step_{1000..13000}",
+   "gated": "",
+   "license": "",
+   "reason": "community CleanDIFT-FLUX training snapshots (0 downloads, 2025-09); not staged: need gated FLUX.1 base, no release by CompVis."
+  },
+  {
+   "repo_id": "facebook/PE-Core-G14-448, facebook/vit_pe_lang_*_timm, facebook/PE-Core-S16-384/T16-384",
+   "gated": "False",
+   "license": "apache-2.0",
+   "reason": "public; not staged (PE-Core is the language-aligned variant, PE-Spatial is the dense one; B16-224 and L14-336 staged as PE-init candidates)."
+  },
+  {
+   "repo_id": "stabilityai/stable-diffusion-3.5-medium",
+   "gated": "auto",
+   "license": "other",
+   "reason": "gated; not attempted (SD3-medium on the roster is already blocked by the same gate)."
+  },
+  {
+   "repo_id": "facebook/sam3.1, facebook/sam3",
+   "gated": "manual",
+   "license": "other",
+   "reason": "gated (sam3 attempted: GatedRepoError, see blocked table); sam3.1 same gate, not attempted."
+  },
+  {
+   "repo_id": "depth-anything/DA3-LARGE-1.1 (staged) / DA3-GIANT-1.1",
+   "gated": "False",
+   "license": "",
+   "reason": "DA3 repos have no transformers model_type; need the depth_anything_3 package (not installed). DA3-LARGE-1.1 files are staged, load test failed with the exact error in the load-test table."
+  }
+ ],
+ "discovery_list": [
+  {
+   "repo_id": "google/tipsv2-{b14,l14,so400m14,g14} (+ -dpt heads), google/tipsv1-*",
+   "note": "TIPS v2 image-text encoders with strong dense features, 448-px native, 16x16 at 224 px (interpolated)",
+   "staged": "b14,l14,so400m14,g14 staged"
+  },
+  {
+   "repo_id": "facebook/dinov2-with-registers-{small,base,large,giant}",
+   "note": "DINOv2 + registers (ViT/14)",
+   "staged": "large staged"
+  },
+  {
+   "repo_id": "facebook/webssl-dino{300m,1b,2b,3b,5b,7b}-*, facebook/webssl-mae{300m,1b,3b}-full2b-224",
+   "note": "Web-SSL (DINO / MAE scaled on web data)",
+   "staged": "dino1b-224 and mae300m-224 staged"
+  },
+  {
+   "repo_id": "apple/aimv2-{large,huge,1B,3B}-patch14-*",
+   "note": "AIMv2 autoregressive image-text pretraining; dense-feature competitive",
+   "staged": "large-patch14-224 staged"
+  },
+  {
+   "repo_id": "facebook/vit-mae-large",
+   "note": "MAE ViT-L/16 pixel-reconstruction pretraining (relevant to stroke-level pixels)",
+   "staged": "staged (pytorch_model.bin only)"
+  },
+  {
+   "repo_id": "depth-anything/Depth-Anything-V2-Large-hf, depth-anything/DA3-{LARGE,GIANT}[-1.1]",
+   "note": "depth-trained DINOv2 backbones",
+   "staged": "V2-Large-hf and DA3-LARGE-1.1 staged"
+  },
+  {
+   "repo_id": "theaiinstitute/theia-{tiny,small,base}-patch16-224-*",
+   "note": "Theia multi-teacher distilled robot-vision encoders",
+   "staged": "not staged"
+  },
+  {
+   "repo_id": "facebook/dinov3-vitl16-pretrain-sat493m, facebook/dinov3-vit7b16-pretrain-sat493m",
+   "note": "DINOv3 satellite-domain variants",
+   "staged": "not staged (domain mismatch)"
+  },
+  {
+   "repo_id": "microsoft/trocr-{base,large,small}-handwritten, Riksarkivet/trocr-base-handwritten-hist-swe-2",
+   "note": "handwriting recognition ViT/BEiT encoders",
+   "staged": "trocr-large-handwritten staged (384-px native, 24x24)"
+  },
+  {
+   "repo_id": "microsoft/Florence-2-{base,large}[-ft]",
+   "note": "DaViT encoder VLM with OCR task",
+   "staged": "large staged (does not load with transformers 5.22.1; see load-test table)"
+  },
+  {
+   "repo_id": "stepfun-ai/GOT-OCR-2.0-hf, PaddlePaddle/PaddleOCR-VL-{1.5,1.6}, lightonai/LightOnOCR-{2-1B,3-4B,3-0.8B}, datalab-to/chandra-ocr-2, dots-studio/dots.ocr",
+   "note": "document-OCR VLMs",
+   "staged": "GOT-OCR2.0-hf, PaddleOCR-VL-1.6, LightOnOCR-2-1B staged; chandra, dots.ocr, LightOn-3 not staged"
+  },
+  {
+   "repo_id": "Reza2kn/surya-ocr-2-persian-handwriting-369k, sherif1313/Arabic-handwritten-OCR-4bit-Qwen2.5-VL-3B-v2, loay/Arabic-OCR-DeepSeek-OCR-2, NAMAA-Space/Qari-OCR-*",
+   "note": "Arabic-script / Persian handwriting OCR fine-tunes (Urdu-adjacent)",
+   "staged": "not staged"
+  },
+  {
+   "repo_id": "Derendering/InkSight-Small-p",
+   "note": "ink derendering VLM (already in FMD v1 manifest)",
+   "staged": "v1 (not re-downloaded)"
+  },
+  {
+   "repo_id": "digital-ink foundation models other than InkSight/InkFM",
+   "note": "HF searches 'digital ink', 'online handwriting', 'handwriting', 'handwritten', 'stroke', 'sketch' returned no further ink/stroke foundation model",
+   "staged": "n/a"
+  }
+ ]
+}

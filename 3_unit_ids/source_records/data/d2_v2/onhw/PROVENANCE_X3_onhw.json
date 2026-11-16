@@ -1,0 +1,227 @@
+{
+ "experiment": "X3",
+ "dataset": "d2_v2_onhw",
+ "title": "OnHW-wordsTraj raw recordings (2 persons x 29 recordings) -> words -> connected-component units",
+ "status": "full",
+ "created_utc": "2026-10-19T16:55:39Z",
+ "start_utc": "2026-10-19T16:55:06Z",
+ "host": "<node>",
+ "slurm": {
+  "job_id": "24480848",
+  "partition": "epyc-256",
+  "nodes": "<node>",
+  "cpus": "16",
+  "state_at_write": "RUNNING (provenance written by the job's last step; final state via sacct)",
+  "final_state": "COMPLETED"
+ },
+ "plan": "experiments_to_run_2026-10-18.md section A, X3 (artifact version b474164e)",
+ "licence": {
+  "name": "OnHW-wordsTraj raw recordings (Fraunhofer IIS), 2 persons x 29 recordings",
+  "licence": "Shared privately by F. Ott (Fraunhofer IIS) on 16 Oct 2026 for research use (Gmail thread 1a13ba55dd19248b); the public OnHW-wordsTraj release is CC BY-NC 4.0; redistribution of the raw recordings not granted; participant identifiers removed here",
+  "cite": "F. Ott et al., OnHW datasets (Fraunhofer IIS); cite the OnHW-wordsTraj publication.",
+  "redistributable": false
+ },
+ "command": "apptainer exec -B $SCRATCH_ROOT images/torch27.sif bash exp/X3/jobs/x3_run_v4.sh onhw full  ->  python -u $U/exp/X3/code_03cac395/x3_build.py --set onhw --data $U/data --out $U/data/d2_v2/onhw --procs 16 ",
+ "params": {
+  "set": "onhw",
+  "data": "$U/data",
+  "out": "$U/data/d2_v2/onhw",
+  "m4_code": "$U/exp/M4/full2/code",
+  "procs": 16,
+  "limit": 0,
+  "seed": 20261016
+ },
+ "seeds": {},
+ "inputs": {
+  "zip": "$U/data/onhw_raw/raw/OnHW-wordsTraj.zip",
+  "zip_sha256": "a1763cbeaa11576445cd180ac9ce00a6b33240f098f40560d72789e006470d0a",
+  "n_recordings": 58,
+  "meta_fields_kept": [
+   "pen_nr",
+   "recording_type",
+   "hw_version",
+   "fw_version",
+   "app_name",
+   "app_version"
+  ],
+  "meta_fields_dropped": "person_name, person_year_of_birth, person_handedness, person_gender (never copied)",
+  "not_copied": [
+   "setup.jpg",
+   "sensor_data.csv (IMU; not used)",
+   "calibration.json (sha256 only)",
+   "stylus_hover_data.csv (used only to cut strokes)"
+  ],
+  "stroke_rule": "touch rows (MILLIS;X;Y;Z;PRES) with start <= MILLIS < stop of the word label; a stroke ends where a hover row falls between two touch rows or the touch time gap exceeds 100 ms",
+  "label_rule": "label = correction column if non-empty, else Label",
+  "row_rule": "touch/hover rows with missing or non-numeric fields are skipped (counts per recording in recordings.csv)",
+  "touch_rows_skipped_total": 12,
+  "hover_rows_skipped_total": 15
+ },
+ "input_extra": {},
+ "code": {
+  "tarball": "code_X3_v4.tar.gz",
+  "tarball_sha256": "03cac3953bad92c11c2372e3cac20722fdcbefe528babe8f9cdb52c083ec70bd",
+  "e0_code_dir": "$U/e0/code_1a5ee72e",
+  "e0_code_py_sha256": {
+   "build_e0_data.py": "c79c3c1abbc191940ed10a7afcf11b38fa5af636840cada892336d7071e8bcb8",
+   "e0_adapter.py": "83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10",
+   "e0_dataset.py": "2f2a11c6df94af2f27292a436732fe4ed25cf2432382ac8a347e07f7c153c2fa",
+   "e0_sample.py": "5f60cb294f8bd7b27ccb676ef0a836b6b0c34730241e366d549fc2104953f84c",
+   "e0_score.py": "0a7569d47d7af1ba3eddb5cbcac6bfd602dc4d257cc950098748d50ff9a2e1af",
+   "e0_train.py": "640ad9067b9e313e3356375721ee4d9f051b7b1c0503dd9ca137306b88ceb774",
+   "test_e0_adapter.py": "0f7967b05cf8de47d36d03a9fc2dcd1f7ea4f2c7dbf7cfe770feaa33152416c6",
+   "uhwr_baselines/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "uhwr_baselines/aggregate.py": "7254af14d2593fd90e88c8b7aa6dc6d4f940b98cb2a670c61720b6ef2d877b32",
+   "uhwr_baselines/geometric.py": "d016dc9e01a8f850cc640ad25c307cc17748ef2ea53d6634292ff88ea574fdc7",
+   "uhwr_baselines/inksight_runner.py": "ce2ecea7d1d95c1b368843a8cb6f2093919dc2d613a01b2e544d451272fc6b5f",
+   "uhwr_baselines/inputs.py": "85571dae5e00aa1741cc8ac10f452cc103c1b5a92b057f3bdaf6948361e0e708",
+   "uhwr_baselines/momna.py": "3af0e8e91c35f64d9f1c3131cc0bc66018e88fb702d85ba0ad10cab7cae2a327",
+   "uhwr_baselines/ouhdl.py": "8c45950246f98a9bbb14c36cbb59212b328b18f10b0c6fdb992bb1eb642df6b1",
+   "uhwr_baselines/run_ouhdl.py": "b0362beda5cd851c797b55897f9435267deddde17dbf166f68d0367393b1fefa",
+   "uhwr_baselines/score_inksight.py": "5f6ee3331f432a6e9d416b8cfe0e1152fd76dcd321cf818836acfafe35d2f1de",
+   "uhwr_eval/__init__.py": "fe1a1a410b83b28e5dcba7f3531480e3b6ba0e8ab9b5a7b301f6f9f12b9bfc8d",
+   "uhwr_eval/_nagamatsu_metrics.py": "7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4",
+   "uhwr_eval/metrics.py": "00c937fa802a46c49ab8858047e9d1c2a4d2ae6bae648fa024276eb20bbfec40",
+   "uhwr_eval/render.py": "49ff4cf1dc0f90bf784cc459fc2c1e501ec1482a3f50f6b48e20909d679966eb",
+   "uhwr_eval/strokes.py": "1b3ef8505b7cf8cdcfa2d95191ab475582e16316bf18fd7a0d5cf70ed9e152b7",
+   "uhwr_eval/validate_toy.py": "3e386e2603ac2f47a9d25fb6e7be8e51a2d6390ff4831c3e157015064aa5fd0b"
+  },
+  "unit_rule": "uhwr_baselines.ouhdl.make_units (OUHD-L v1 component rule, unchanged) + left-to-right renumbering"
+ },
+ "checkpoint": null,
+ "environment": {
+  "container": "images/torch27.sif",
+  "venv": "venvs/cpu",
+  "pip_freeze_file": "pip_freeze_X3_onhw.txt",
+  "pip_freeze_sha256": "766a30b8da2cc10c685b3d353f7db7ba8e22deb85b86d70a2a7addec6f67c758"
+ },
+ "stats": {
+  "all": {
+   "n_sources": 4675,
+   "n_sources_error": 2,
+   "errors_first": [
+    [
+     "DE-O01/SES-11/REC-04/w054",
+     "no strokes"
+    ],
+    [
+     "DE-O02/SES-20/REC-42/w032",
+     "no strokes"
+    ]
+   ],
+   "n_sources_with_writer": 4675,
+   "n_writers": 2,
+   "n_units": 5925,
+   "n_units_encode_error": 0,
+   "n_units_with_marks": 1951,
+   "units_per_source_mean": 1.267379679144385,
+   "n_seq_pct": {
+    "50": 234.0,
+    "90": 301.0,
+    "99": 318.0,
+    "100": 320.0
+   },
+   "n_step_gt_1": 237,
+   "strokes_per_unit_pct": {
+    "50": 3.0,
+    "90": 6.0,
+    "100": 11.0
+   },
+   "seconds": 17.3
+  }
+ },
+ "extra": {
+  "n_word_types_both_writers": 259,
+  "n_word_types_total": 4155
+ },
+ "outputs": {
+  "build_log.txt": {
+   "sha256": "5e9426a376b172cf23e19f3940e4e0810fa791fcae03b6b036822545c7431089",
+   "bytes": 1616
+  },
+  "build_stats.json": {
+   "sha256": "5b08b735684c133705876f50133b9ddb6063936b01b20a8291f32f7fc149628d",
+   "bytes": 2645
+  },
+  "e0_all.npz": {
+   "sha256": "59bc5fcbdf276a440f6afc5a4e14d9e3c7351595a2a724a0085160054fa68939",
+   "bytes": 27740608
+  },
+  "pip_freeze_X3_onhw.txt": {
+   "sha256": "766a30b8da2cc10c685b3d353f7db7ba8e22deb85b86d70a2a7addec6f67c758",
+   "bytes": 8911
+  },
+  "recordings.csv": {
+   "sha256": "c3ded858201518abf993b4554c097447625a1f9b86571d1254378c70d6c433be",
+   "bytes": 23686
+  },
+  "sources_all.csv": {
+   "sha256": "daabc7439ea549ece514678ba3ef8b8a110481d4c79c1619ccc5a273b75dfbea",
+   "bytes": 597111
+  },
+  "units_all.csv": {
+   "sha256": "2be9b6a4aaf91ee0f5616aa52fc75899f21a5667f36c46f773f4ff5e45882a1c",
+   "bytes": 1311469
+  },
+  "units_all.npz": {
+   "sha256": "7b5c5de8726111151f6b460607fbc66a0c8ed54060abfda9c6fd590a1381e434",
+   "bytes": 11942475
+  },
+  "word_types_both_writers.csv": {
+   "sha256": "4e622aca865a9a5c37bab17e64790a45d9dc2888ec7b91d4ca4583bdce3eb101",
+   "bytes": 3379
+  }
+ },
+ "deviations": [
+  "Stroke segmentation rule defined here (no pen-up flag in touch data): hover row between touch rows or gap > 100 ms.",
+  "12 touch rows and 15 hover rows with empty/non-numeric fields skipped (per recording in recordings.csv); 2 words have no touch points in their [start, stop) window.",
+  "Split \"all\" (2 writers, evaluation only)."
+ ],
+ "slurm_jobs": [
+  {
+   "slurm_id": "24480691",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "FAILED",
+   "exit": "1:0",
+   "start_utc": "2026-10-19T16:43:44Z",
+   "end_utc": "2026-10-19T16:48:55Z",
+   "node": "<node>",
+   "role": "smoke v3, code 4d4e71ed: unipen_de smoke OK (staging fix complete); job script then stopped on a cp of onhw-only files (onhw not run) -> exit 1"
+  },
+  {
+   "slurm_id": "24480799",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "COMPLETED",
+   "exit": "0:0",
+   "start_utc": "2026-10-19T16:50:14Z",
+   "end_utc": "2026-10-19T16:50:46Z",
+   "node": "<node>",
+   "role": "smoke onhw, code 4d4e71ed: OK"
+  },
+  {
+   "slurm_id": "24480821",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "COMPLETED",
+   "exit": "0:0",
+   "start_utc": "2026-10-19T16:52:09Z",
+   "end_utc": "2026-10-19T16:53:23Z",
+   "node": "<node>",
+   "role": "full onhw, code 4d4e71ed: 90 words of DE-O01/SES-10 failed on empty CSV fields; output moved to exp/X3/superseded_onhw_v3_24480821"
+  },
+  {
+   "slurm_id": "24480848",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "COMPLETED",
+   "exit": "0:0",
+   "start_utc": "2026-10-19T16:54:35Z",
+   "end_utc": "2026-10-19T16:55:40Z",
+   "node": "<node>",
+   "role": "onhw smoke + full, code 03cac395 (code_X3_v4.tar.gz): non-numeric CSV rows skipped"
+  }
+ ],
+ "finalised_utc": "2026-10-19T17:00:00Z"
+}

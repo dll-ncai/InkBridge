@@ -1,0 +1,13 @@
+arm,fm,fm_status_at_read,U_WIN,X_NI,FM_ATTRIBUTED_vs_NOFM,FM_ATTRIBUTED_vs_PEINIT,F_X_AIoU_vs_NOFM,F_X_AIoU_vs_PEINIT,promotion,any_DEVICE_MIXED,devices,milestones,read_utc,label
+NOFM_W,-,control,True,True,,,,,not promotable (control),False,RTX A4000,bb:3;cmp:1;ft:1,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+PEINIT_W,-,control,True,True,,,,,not promotable (control),False,RTX A4000,bb:4;cmp:2;ft:2,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+c-radiov3-b_W,c-radiov3-b,PASS_XS,True,True,False,False,False,False,PROMOTED,True,A30;A30|RTX A4000;RTX A4000,bb:4;cmp:3;ft:3,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+c-radiov3-h_W,c-radiov3-h,PASS_XS,True,True,False,False,False,False,PROMOTED,False,RTX A4000,bb:4;cmp:4;ft:4,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+c-radiov4-so400m_W,c-radiov4-so400m,PASS_XS,True,True,True,False,True,False,PROMOTED,True,A30;A30|RTX A4000;RTX A4000,bb:4;cmp:3;ft:3,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+cleandift-sd21_W,cleandift-sd21,PASS_URDU_ONLY,True,True,True,False,True,False,not promotable (PASS_URDU_ONLY),True,B200|RTX A4000;RTX A4000,bb:4;cmp:3;ft:3,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+dinov3-vitb16_W,dinov3-vitb16,PASS_XS,True,True,False,False,False,False,PROMOTED,False,RTX A4000,bb:4;cmp:2;ft:2,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+dinov3-vitl16-sat493m_W,dinov3-vitl16-sat493m,PASS_XS,True,True,False,False,True,False,PROMOTED,True,B200;B200|RTX A4000;RTX A4000,bb:4;cmp:5;ft:5,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+pe-spatial-b16-512_W,pe-spatial-b16-512,PASS_URDU_ONLY,True,True,True,False,True,False,not promotable (PASS_URDU_ONLY),True,B200;B200|RTX A4000;RTX A4000,bb:4;cmp:2;ft:2,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+vit-mae-large_W,vit-mae-large,PASS_XS,True,True,True,False,True,False,PROMOTED,True,B200;B200|RTX A4000;RTX A4000,bb:4;cmp:5;ft:5,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+webssl-mae1b-224_W,webssl-mae1b-224,PASS_XS,True,,True,False,,,not assessed (cells incomplete),True,A30;RTX A4000,ft:3,2026-11-10T17:15Z,EXPLORATORY (single training seed)
+webssl-mae300m-224_W,webssl-mae300m-224,PASS_XS,True,True,True,False,True,True,PROMOTED,False,RTX A4000,bb:4;cmp:2;ft:2,2026-11-10T17:15Z,EXPLORATORY (single training seed)

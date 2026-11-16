@@ -1,0 +1,132 @@
+[
+ {
+  "model": "qari-ocr-v0.3-vl-2b",
+  "base": "qwen2-vl-2b-instruct",
+  "marks": [
+   "visual."
+  ],
+  "n_a": 391,
+  "n_b": 391,
+  "n_common": 391,
+  "n_identical": 205,
+  "n_different": 186,
+  "n_shape_mismatch": 0,
+  "max_abs_diff": 0.0750885009765625,
+  "first_different": "blocks.0.attn.proj.bias",
+  "status": "ok"
+ },
+ {
+  "model": "arabic-english-hw-ocr-v3",
+  "base": "qwen2.5-vl-3b-instruct",
+  "marks": [
+   "visual."
+  ],
+  "n_a": 390,
+  "n_b": 390,
+  "n_common": 390,
+  "n_identical": 294,
+  "n_different": 96,
+  "n_shape_mismatch": 0,
+  "max_abs_diff": 0.00909423828125,
+  "first_different": "blocks.0.mlp.down_proj.weight",
+  "status": "ok"
+ },
+ {
+  "model": "arabic-hw-ocr-4bit",
+  "base": "qwen2.5-vl-3b-instruct",
+  "marks": [
+   "visual."
+  ],
+  "n_a": 1200,
+  "n_b": 390,
+  "n_common": 390,
+  "n_identical": 203,
+  "n_different": 25,
+  "n_shape_mismatch": 162,
+  "max_abs_diff": 2.9802322387695312e-08,
+  "first_different": "blocks.1.attn.qkv.bias",
+  "status": "ok"
+ },
+ {
+  "model": "chandra-ocr-2",
+  "base": "qwen3.5-4b (v1)",
+  "marks": [
+   "visual."
+  ],
+  "n_a": 297,
+  "n_b": 297,
+  "n_common": 297,
+  "n_identical": 3,
+  "n_different": 294,
+  "n_shape_mismatch": 0,
+  "max_abs_diff": 0.015625,
+  "first_different": "blocks.0.attn.proj.bias",
+  "status": "ok"
+ },
+ {
+  "model": "lightonocr-3-4b",
+  "base": "qwen3.5-4b (v1)",
+  "marks": [
+   "visual."
+  ],
+  "n_a": 297,
+  "n_b": 297,
+  "n_common": 297,
+  "n_identical": 10,
+  "n_different": 287,
+  "n_shape_mismatch": 0,
+  "max_abs_diff": 0.0166015625,
+  "first_different": "blocks.0.attn.proj.bias",
+  "status": "ok"
+ },
+ {
+  "model": "chandra",
+  "base": "qwen3-vl-8b-instruct (v1)",
+  "marks": [
+   "visual."
+  ],
+  "n_a": 351,
+  "n_b": 351,
+  "n_common": 351,
+  "n_identical": 11,
+  "n_different": 340,
+  "n_shape_mismatch": 0,
+  "max_abs_diff": 0.0078125,
+  "first_different": "blocks.0.attn.proj.bias",
+  "status": "ok"
+ },
+ {
+  "model": "arabic-ocr-deepseek-ocr-2",
+  "base": "deepseek-ocr-2",
+  "marks": [
+   "sam_model.",
+   "qwen2_model.",
+   "projector."
+  ],
+  "n_a": 472,
+  "n_b": 472,
+  "n_common": 472,
+  "n_identical": 472,
+  "n_different": 0,
+  "n_shape_mismatch": 0,
+  "max_abs_diff": 0.0,
+  "first_different": null,
+  "status": "ok"
+ },
+ {
+  "model": "dots-ocr",
+  "base": "dots-ocr-base",
+  "marks": [
+   "vision_tower."
+  ],
+  "n_a": 304,
+  "n_b": 304,
+  "n_common": 304,
+  "n_identical": 0,
+  "n_different": 304,
+  "n_shape_mismatch": 0,
+  "max_abs_diff": 0.0546875,
+  "first_different": "blocks.0.attn.proj.weight",
+  "status": "ok"
+ }
+]

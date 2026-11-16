@@ -1,0 +1,5 @@
+2026-11-09T07:58:28Z sma_chain_start tag=SMA_NOFM_W_p10_s20261034 kind=bb backbone=$U/exp/FMD/xs/runs/NOFM_W_clusterA/bb_ms3.pt frac=p10 seed=20261034 steps=10000 site=clusterA host=<node> slurm=24964854 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T07:58:28Z train_start layout=64x4 site=clusterA host=<node> slurm=24964854 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T10:33:47Z train_exit rc=0 site=clusterA host=<node> slurm=24964854 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T12:58:19Z selected SM-A milestone 10 (step 10000) site=clusterA host=<node> slurm=24964854 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T17:08:03Z sampling_done ms10 site=clusterA host=<node> slurm=24964854 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]

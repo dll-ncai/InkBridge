@@ -1,0 +1,19 @@
+                  set     method  comparator            metric   delta   ci_lo   ci_hi    n  p_boot
+0   M5__test_casia_en  COMP_rep3  COMP_pool3              aiou  0.0026  0.0010  0.0040  500   0.001
+1   M5__test_casia_en  COMP_rep3  COMP_pool3       penup_f1_v2  0.0109  0.0033  0.0192  500   0.004
+2   M5__test_casia_en  COMP_rep3  COMP_pool3  strict_order_acc  0.0027 -0.0052  0.0106  500   0.452
+3   M5__test_casia_en  COMP_rep3  COMP_pool3     direction_acc  0.0007 -0.0029  0.0041  498   0.645
+8   M5__test_casia_en  COMP_rep3  COMP_pool3       composite_C  1.0818 -0.1126  2.3227  500     NaN
+9   M5__test_casia_en  COMP_rnd3  COMP_pool3              aiou -0.0002 -0.0019  0.0014  500   0.861
+10  M5__test_casia_en  COMP_rnd3  COMP_pool3       penup_f1_v2 -0.0030 -0.0141  0.0079  500   0.573
+11  M5__test_casia_en  COMP_rnd3  COMP_pool3  strict_order_acc -0.0053 -0.0165  0.0058  500   0.371
+12  M5__test_casia_en  COMP_rnd3  COMP_pool3     direction_acc -0.0020 -0.0080  0.0036  498   0.538
+17  M5__test_casia_en  COMP_rnd3  COMP_pool3       composite_C -0.8696 -2.8368  0.8315  500     NaN
+18  M5__test_casia_en  COMP_rep3   COMP_rnd3              aiou  0.0028  0.0009  0.0047  500   0.007
+19  M5__test_casia_en  COMP_rep3   COMP_rnd3       penup_f1_v2  0.0139  0.0000  0.0292  500   0.049
+20  M5__test_casia_en  COMP_rep3   COMP_rnd3  strict_order_acc  0.0080 -0.0060  0.0229  500   0.334
+21  M5__test_casia_en  COMP_rep3   COMP_rnd3     direction_acc  0.0027 -0.0033  0.0100  498   0.486
+26  M5__test_casia_en  COMP_rep3   COMP_rnd3       composite_C  1.9514 -0.2160  4.5069  500     NaN
+COMP_rep3__vs__COMP_pool3 ORDER-WIN False p1 [] holm [('penup_f1_v2', 98.33, 0.0018, True), ('strict_order_acc', 97.5, -0.0063, False), ('direction_acc', 95.0, -0.0029, False)]
+COMP_rnd3__vs__COMP_pool3 ORDER-WIN False p1 [] holm [('strict_order_acc', 98.33, -0.0198, False), ('direction_acc', 97.5, -0.0088, False), ('penup_f1_v2', 95.0, -0.0141, False)]
+COMP_rep3__vs__COMP_rnd3 ORDER-WIN None p1 [] holm [('penup_f1_v2', 98.33, -0.0036, False), ('strict_order_acc', 97.5, -0.008, False), ('direction_acc', 95.0, -0.0033, False)]

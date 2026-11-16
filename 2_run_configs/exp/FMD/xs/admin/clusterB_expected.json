@@ -1,0 +1,267 @@
+[
+ {
+  "name": "c-radiov3-b",
+  "repo": "nvidia/C-RADIOv3-B",
+  "revision": "44653a0482cf460bb4f12595fc3cc3dfecc403d1",
+  "local_dir": "exp/FMD/xs/weights/c-radiov3-b",
+  "allow_patterns": [
+   "*.py",
+   "*.json",
+   "*.safetensors",
+   "README.md"
+  ],
+  "files": {
+   ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+   "README.md": "0d8de9f10f76f6bba03fe9581e61c4f98add13c9f7d48a62ad43a49ffb169c6a",
+   "adaptor_base.py": "85b4c1d0a6d0c8c5ff9fdc8fb3afd7ee2be65407ee36600d6fedd5eabc4b7346",
+   "adaptor_generic.py": "938444bbb6c8beafd6b5c5faa51567847f9be4a696929dbcd67f6cd6e4ea67e9",
+   "adaptor_mlp.py": "0c720adfa8cddddae36b439c297756a4cd27066e2bdef8b648c862fca4bd8be4",
+   "adaptor_registry.py": "16963e07de300e5f3cbd5e343aed111d04e4e55a50e07f50ccc2ab930883ea1e",
+   "c-radio_v3-b_half.pth.tar": "530b0e827b1d409ca3b175466e11062885baedd823ec5dae3a88348e76d4c398",
+   "cls_token.py": "64ee35f128380c3bb9bc1a913e98ac328220be88964f2092686c637ef866fc79",
+   "common.py": "93610c9498799cddfacedb78cb81c0a5bf57c2a29156368ad9391d628aa1cee3",
+   "config.json": "f78c3717c6ba4059521ec4a5f70dfbc7c8b436f34202e893e9a7b55869ed9c5b",
+   "dinov2_arch.py": "5433d08522c28f46a69e710da1a86fc1d76fc03562dbb9b2b49baf5db21195d3",
+   "dual_hybrid_vit.py": "86853ae2ed28c902529cd9b78201350e7dba1cf54ea9e57578241ecc0d88d867",
+   "enable_cpe_support.py": "f585ab4ee09da408f953f7080ed7380298aad63e51f7af00ad0de6e494a1c185",
+   "enable_spectral_reparam.py": "b8e703400604ee5f9cdfac0de9b857b7f5126aad8bba03604b04f52f7641d6cb",
+   "eradio_model.py": "886bdce8f21a254c258c79aa50f16e6c2e67e7953576e84427a38a7175342b57",
+   "extra_models.py": "71e28c3e350a53347c6d6abde204338c34762d37d238cce8615d2b9a474be216",
+   "extra_timm_models.py": "6effb565218d0f81dd3ebe5c014037ed5a35e710fec583381e6812429c6749d6",
+   "feature_normalizer.py": "a74401f5220c2e5960d39addce9ba40f481efca9ab44bb9d96535ed23e1ef62b",
+   "forward_intermediates.py": "eb5a562d11edc655876eeb95bc1c3b4c7484b963dae41a3f76f7acd2a6906b9e",
+   "hf_model.py": "69238cd1391ad3d3fae3c8363e54bfe55a94ce2d3cb6846be73960ec72d355a3",
+   "input_conditioner.py": "72062d3b71877e1469e069cf090e5f35d6ad7abaeb451e56502f7f32dc6c1075",
+   "model.safetensors": "27881c65f10ab2a16d4b2bda2d6f52ddc8410b0980837fc96914e72a7d190b9b",
+   "open_clip_adaptor.py": "d6b3569d03db1e1175df09745005f3d7443885f3208c50a563a3efbbaf28d0b0",
+   "preprocessor_config.json": "d397d592ffa2498e46885a6a891bcd25c17ff32437de948e6da347774e0a3883",
+   "radio_model.py": "ab5decb89b49b4a2c68b9a769738ad7e58a54e7515840977cbed6e5e6a457773",
+   "vit_patch_generator.py": "591a6ae511fa38c56ee3bea70dce16ebd7854a52be8191a5749b9682c01bbb88",
+   "vitdet.py": "5b83b4c7b90b797d854a6da2fd4093ce9210a52533d3f7ba6bf505793b6c68c3"
+  }
+ },
+ {
+  "name": "c-radiov3-l",
+  "repo": "nvidia/C-RADIOv3-L",
+  "revision": "9d0413465e8a91e67bbf2c1ad342815478d1b906",
+  "local_dir": "exp/FMD/xs/weights/c-radiov3-l",
+  "allow_patterns": [
+   "*.py",
+   "*.json",
+   "*.safetensors",
+   "README.md"
+  ],
+  "files": {
+   ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+   "README.md": "44acb9a911229b2fb0c6c06df26eaad4b8fe390f0d596794919ec2568a5612cb",
+   "adaptor_base.py": "85b4c1d0a6d0c8c5ff9fdc8fb3afd7ee2be65407ee36600d6fedd5eabc4b7346",
+   "adaptor_generic.py": "938444bbb6c8beafd6b5c5faa51567847f9be4a696929dbcd67f6cd6e4ea67e9",
+   "adaptor_mlp.py": "0c720adfa8cddddae36b439c297756a4cd27066e2bdef8b648c862fca4bd8be4",
+   "adaptor_registry.py": "16963e07de300e5f3cbd5e343aed111d04e4e55a50e07f50ccc2ab930883ea1e",
+   "c-radio-v3_l_half.pth.tar": "5718db9e5581d31f2b910d1212a2efb38424a77840410fe3bd6292d12f7a8309",
+   "cls_token.py": "64ee35f128380c3bb9bc1a913e98ac328220be88964f2092686c637ef866fc79",
+   "common.py": "9a6ddfbc0204b914431e47aad9960c2957bb382ac266ff7cb7cb97394ded4c3d",
+   "config.json": "eb337a8f3adb1d78546e5cbcd4c008b7b5dddba756aae8313090330a536d69a7",
+   "dinov2_arch.py": "5433d08522c28f46a69e710da1a86fc1d76fc03562dbb9b2b49baf5db21195d3",
+   "dual_hybrid_vit.py": "86853ae2ed28c902529cd9b78201350e7dba1cf54ea9e57578241ecc0d88d867",
+   "enable_cpe_support.py": "3c1e3df656960f5c83b38ba5f632fc5b335edf1d6de67731396a865aaa5ce1ed",
+   "enable_spectral_reparam.py": "b8e703400604ee5f9cdfac0de9b857b7f5126aad8bba03604b04f52f7641d6cb",
+   "eradio_model.py": "bf76c60b991813eef45c76246cd7dcee3fefbf39bde3d2b6ac8576067012d05f",
+   "extra_models.py": "a938b96715266d2f65325e56d0d8e42465d23e944e905d2820023472785c55a9",
+   "extra_timm_models.py": "42f532b882f18ca448df68b1bc581dee9374ca53f6f163a81ccec1fd80d43621",
+   "feature_normalizer.py": "a74401f5220c2e5960d39addce9ba40f481efca9ab44bb9d96535ed23e1ef62b",
+   "forward_intermediates.py": "eb5a562d11edc655876eeb95bc1c3b4c7484b963dae41a3f76f7acd2a6906b9e",
+   "hf_model.py": "7120e573ddbf6e58e24cab4da01ea5c2213b18a565b3a09c1ba1f44f38c9a3d4",
+   "input_conditioner.py": "72062d3b71877e1469e069cf090e5f35d6ad7abaeb451e56502f7f32dc6c1075",
+   "model.safetensors": "2aedceebd3f8bd04a55bb23977dccf9d539724d715461f74db10c2a9b800e1a1",
+   "open_clip_adaptor.py": "c2eb9166de48f5eb5f90f8a750e8ebe67da93698e794dc0bbdab5f013bab8e66",
+   "preprocessor_config.json": "d397d592ffa2498e46885a6a891bcd25c17ff32437de948e6da347774e0a3883",
+   "radio_model.py": "2be659f5cd5b9db9c49db70387b65253c74bc16b3eb86e976f0f693271d4b183",
+   "utils.py": "3b83163ce2650ef04973538dd79716ab015d24344ea25d52cfb0c37b093ba4ba",
+   "vit_patch_generator.py": "092e9a0b8eca4fee162484ef3ef77b399f686e5e0ffc7be85fb2d69bc2f9ebd9",
+   "vitdet.py": "5b83b4c7b90b797d854a6da2fd4093ce9210a52533d3f7ba6bf505793b6c68c3"
+  }
+ },
+ {
+  "name": "c-radiov3-g",
+  "repo": "nvidia/C-RADIOv3-g",
+  "revision": "28e70735780c22cd7fca20f0c509cb9fc3893aeb",
+  "local_dir": "exp/FMD/xs/weights/c-radiov3-g",
+  "allow_patterns": [
+   "*.py",
+   "*.json",
+   "*.safetensors",
+   "README.md"
+  ],
+  "files": {
+   ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+   "README.md": "47bf69434bfb91baf729183b236649b55ef1621650cec43cd3407c03a23b67f7",
+   "adaptor_base.py": "85b4c1d0a6d0c8c5ff9fdc8fb3afd7ee2be65407ee36600d6fedd5eabc4b7346",
+   "adaptor_generic.py": "938444bbb6c8beafd6b5c5faa51567847f9be4a696929dbcd67f6cd6e4ea67e9",
+   "adaptor_mlp.py": "0c720adfa8cddddae36b439c297756a4cd27066e2bdef8b648c862fca4bd8be4",
+   "adaptor_registry.py": "16963e07de300e5f3cbd5e343aed111d04e4e55a50e07f50ccc2ab930883ea1e",
+   "c-radio_v3-g_half.pth.tar": "d779b9299ce323372fd32071ba18d0433ae6dbb963471115c91cf512e75fc2f7",
+   "cls_token.py": "64ee35f128380c3bb9bc1a913e98ac328220be88964f2092686c637ef866fc79",
+   "common.py": "9a6ddfbc0204b914431e47aad9960c2957bb382ac266ff7cb7cb97394ded4c3d",
+   "config.json": "d3ea13b9702fcdcabbb302f2313ce07194061b4ba580fe872d7a341813ccf604",
+   "dinov2_arch.py": "5433d08522c28f46a69e710da1a86fc1d76fc03562dbb9b2b49baf5db21195d3",
+   "dual_hybrid_vit.py": "86853ae2ed28c902529cd9b78201350e7dba1cf54ea9e57578241ecc0d88d867",
+   "enable_cpe_support.py": "3c1e3df656960f5c83b38ba5f632fc5b335edf1d6de67731396a865aaa5ce1ed",
+   "enable_spectral_reparam.py": "b8e703400604ee5f9cdfac0de9b857b7f5126aad8bba03604b04f52f7641d6cb",
+   "eradio_model.py": "bf76c60b991813eef45c76246cd7dcee3fefbf39bde3d2b6ac8576067012d05f",
+   "extra_models.py": "a938b96715266d2f65325e56d0d8e42465d23e944e905d2820023472785c55a9",
+   "extra_timm_models.py": "42f532b882f18ca448df68b1bc581dee9374ca53f6f163a81ccec1fd80d43621",
+   "feature_normalizer.py": "a74401f5220c2e5960d39addce9ba40f481efca9ab44bb9d96535ed23e1ef62b",
+   "forward_intermediates.py": "eb5a562d11edc655876eeb95bc1c3b4c7484b963dae41a3f76f7acd2a6906b9e",
+   "hf_model.py": "7120e573ddbf6e58e24cab4da01ea5c2213b18a565b3a09c1ba1f44f38c9a3d4",
+   "input_conditioner.py": "72062d3b71877e1469e069cf090e5f35d6ad7abaeb451e56502f7f32dc6c1075",
+   "model.safetensors": "8234e4556fcbbc36cb7935861ddbf795b5a1dab13ab2ccfe0e39a1e1ee6b899e",
+   "open_clip_adaptor.py": "c2eb9166de48f5eb5f90f8a750e8ebe67da93698e794dc0bbdab5f013bab8e66",
+   "preprocessor_config.json": "d397d592ffa2498e46885a6a891bcd25c17ff32437de948e6da347774e0a3883",
+   "radio_model.py": "2be659f5cd5b9db9c49db70387b65253c74bc16b3eb86e976f0f693271d4b183",
+   "utils.py": "3b83163ce2650ef04973538dd79716ab015d24344ea25d52cfb0c37b093ba4ba",
+   "vit_patch_generator.py": "092e9a0b8eca4fee162484ef3ef77b399f686e5e0ffc7be85fb2d69bc2f9ebd9",
+   "vitdet.py": "5b83b4c7b90b797d854a6da2fd4093ce9210a52533d3f7ba6bf505793b6c68c3"
+  }
+ },
+ {
+  "name": "c-radiov4-h",
+  "repo": "nvidia/C-RADIOv4-H",
+  "revision": "0057b339059c0b9e1b4ba996f975410ebbfdfcc8",
+  "local_dir": "exp/FMD/xs/weights/c-radiov4-h",
+  "allow_patterns": [
+   "*.py",
+   "*.json",
+   "*.safetensors",
+   "README.md"
+  ],
+  "files": {
+   ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+   "README.md": "be08bbaf49b38c62eb8496ebfd9b92292b4258838ade3d0e13e18d86978192d7",
+   "adaptor_attn.py": "baa112b58158d75077e9bba8baba51b2c75f6a6deed2d8046aa5e5f2d5cb669a",
+   "adaptor_base.py": "f9d285cc76e70f977f9c78e748f610765f0bd068a13f86d804c07c765cece577",
+   "adaptor_generic.py": "3d1b5a015ff3754a9eb64cd56b4d04cae01e537a1ffa606adaf904c55fff07a1",
+   "adaptor_mlp.py": "e75a9ed1f7f58c749dec5a510d699f36f32fdb7f3b61cd8a7e3ccd5afd2c9b77",
+   "adaptor_module_factory.py": "2beac17dc5824c7d9f925dc782cdd4b49bd15cf206bf1cbaa9108a8966e33316",
+   "adaptor_registry.py": "16963e07de300e5f3cbd5e343aed111d04e4e55a50e07f50ccc2ab930883ea1e",
+   "c-radio_v4-h_half.pth.tar": "bace44df72e750bc8555ea6979cc19d1a87e12ade89582edfe090513d5d6aab9",
+   "cls_token.py": "64ee35f128380c3bb9bc1a913e98ac328220be88964f2092686c637ef866fc79",
+   "common.py": "6cc79e1f7b61f4917602d2efc9e0a833fa74d60563f6aac74e4625de23723bab",
+   "config.json": "f141520df919f1c29cd4f5a95340d9a39b15fbacafa36ca1054c55c919b2af62",
+   "dinov2_arch.py": "5433d08522c28f46a69e710da1a86fc1d76fc03562dbb9b2b49baf5db21195d3",
+   "dual_hybrid_vit.py": "86853ae2ed28c902529cd9b78201350e7dba1cf54ea9e57578241ecc0d88d867",
+   "enable_cpe_support.py": "3c1e3df656960f5c83b38ba5f632fc5b335edf1d6de67731396a865aaa5ce1ed",
+   "enable_damp.py": "7e2a0b6f8934ac6e4a4768e5ca84cb4ff09ba3726a470f1cf046bd5169b2e334",
+   "enable_spectral_reparam.py": "b8e703400604ee5f9cdfac0de9b857b7f5126aad8bba03604b04f52f7641d6cb",
+   "eradio_model.py": "bf76c60b991813eef45c76246cd7dcee3fefbf39bde3d2b6ac8576067012d05f",
+   "extra_models.py": "a938b96715266d2f65325e56d0d8e42465d23e944e905d2820023472785c55a9",
+   "extra_timm_models.py": "d7364d5abf5b617782366948f0e593d7a2df275b076094afa1ebc5276a9f7102",
+   "feature_normalizer.py": "a74401f5220c2e5960d39addce9ba40f481efca9ab44bb9d96535ed23e1ef62b",
+   "forward_intermediates.py": "eb5a562d11edc655876eeb95bc1c3b4c7484b963dae41a3f76f7acd2a6906b9e",
+   "hf_model.py": "d28c0a0238ca8854a9af5a9f003761332bfc9182601b3b7466d9242be91ee96f",
+   "input_conditioner.py": "72062d3b71877e1469e069cf090e5f35d6ad7abaeb451e56502f7f32dc6c1075",
+   "model.safetensors": "851f283468118830a08e70173f1ab9a30f613c704958fc0b3c8e638aef738f81",
+   "open_clip_adaptor.py": "c2eb9166de48f5eb5f90f8a750e8ebe67da93698e794dc0bbdab5f013bab8e66",
+   "preprocessor_config.json": "6ca88d165592015b02a183d26a20fc96748e837d1cb21bde5f611141aca593cf",
+   "radio_model.py": "2be659f5cd5b9db9c49db70387b65253c74bc16b3eb86e976f0f693271d4b183",
+   "siglip2_adaptor.py": "1f40f7d77beefd69ad86aac61b12c82ed915b4012e6bea1628fc8abe80782851",
+   "utils.py": "3b83163ce2650ef04973538dd79716ab015d24344ea25d52cfb0c37b093ba4ba",
+   "vit_patch_generator.py": "092e9a0b8eca4fee162484ef3ef77b399f686e5e0ffc7be85fb2d69bc2f9ebd9",
+   "vitdet.py": "5b83b4c7b90b797d854a6da2fd4093ce9210a52533d3f7ba6bf505793b6c68c3"
+  }
+ },
+ {
+  "name": "pe-spatial-l14-448-timm",
+  "repo": "timm/vit_pe_spatial_large_patch14_448.fb",
+  "revision": "ac6f424680a305470340dac75a0a9b4c47ee030f",
+  "local_dir": "exp/FMD/xs/weights/pe-spatial-l14-448-timm",
+  "allow_patterns": [
+   "*.safetensors",
+   "*.json",
+   "*.md"
+  ],
+  "files": {
+   "README.md": "b2832529d690772e4ef64dfebd228a65c2204188a9551ccd8ce3134d3e992ba1",
+   "config.json": "fd208f2066e680226de1a272b83d82e8451bfe7648eb3ca5d7ed1dc4c8e88587",
+   "model.safetensors": "c21925194deea04a30e1e7c40f84f4ce9649bc379463fa81617a6cfa295f3927"
+  }
+ },
+ {
+  "name": "pe-spatial-g14-448-timm",
+  "repo": "timm/vit_pe_spatial_gigantic_patch14_448.fb",
+  "revision": "f2cea21ca9d5900061bee5e896031ab4e8352936",
+  "local_dir": "exp/FMD/xs/weights/pe-spatial-g14-448-timm",
+  "allow_patterns": [
+   "*.safetensors",
+   "*.json",
+   "*.md"
+  ],
+  "files": {
+   "README.md": "707efd98717c5f36840a5f1c110cd1c297e48d41939d98653dc3d7807ed4a833",
+   "config.json": "5f7a2c288def28601b6d3a4373524c4da712637279fbbf7b684466c8b0a5dba0",
+   "model.safetensors": "db69c2e41d38a72cf3f852707367934edbea3f47c3d8b07dc3e082b8caff8d8d"
+  }
+ },
+ {
+  "name": "siglip2-giant-opt-patch16-256",
+  "repo": "google/siglip2-giant-opt-patch16-256",
+  "revision": "46d7129e1aa1527cc5a44d86fb35250df3abf0aa",
+  "local_dir": "exp/FMD/xs/weights/siglip2-giant-opt-patch16-256",
+  "allow_patterns": null,
+  "files": {
+   ".gitattributes": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+   "README.md": "ac43752c5bb71827d52835028e092938595cfa3c0145301cb231c4fb0d7ba1ce",
+   "config.json": "68a043bad6cef6a36d3b43be565664cb2f8bc9181162b559e97aef65014ab265",
+   "model-00001-of-00002.safetensors": "0ca3ce5816388bb53458bac34e31c42a2a0f8b9a44ee17bdaf586d929727a825",
+   "model-00002-of-00002.safetensors": "dbbb979ee49f8b907e789379f2e3878cbbcf1a96d32928fe1b9057bcc98c9c1f",
+   "model.safetensors.index.json": "6bdb327dcc23d635ac79e2a1d7c5bf949e94dc390092b7ceaa43f920e20d9a34",
+   "preprocessor_config.json": "d14ba2ee3fd816f3de8abaddc31953565128eaf37c73ad4bed32101a98465aff",
+   "special_tokens_map.json": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+   "tokenizer.json": "cb9140fae3ac5122c972d37adf83e1248471a38147ad76f8215c8872c6fd8322",
+   "tokenizer.model": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+   "tokenizer_config.json": "14afe629fe4959b9e0d51e1852b8d9f7ad074f90a1a7125a4fcdd17f06e78fc8"
+  }
+ },
+ {
+  "name": "cleandift",
+  "repo": "CompVis/cleandift",
+  "revision": "bf3a8d841ebdce7e212b61e42877f8fdaed81d58",
+  "local_dir": "exp/FMD/xs/weights/cleandift",
+  "allow_patterns": [
+   "cleandift_sd21_unet.safetensors",
+   "README.md"
+  ],
+  "files": {
+   ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+   "README.md": "9ae68a729baac8b811c4e30bb1171f42e8230b355b8bf5a974700e3a1071db66",
+   "cleandift_sd15_full.safetensors": "7de3f049759470654dd32fbe850974ed6fbfdde3163977f8cd4e21a53659dc25",
+   "cleandift_sd15_unet.safetensors": "56697cc83cef762ac7ca0c8b9e749ee0abacfb426da92dc7fd5d7025ec727516",
+   "cleandift_sd21_depth_probe.safetensors": "6d2a7ee6469d4460c4051218059a33b61aba48f071703f28e248217844f77214",
+   "cleandift_sd21_full.safetensors": "8220ce0d5dbb3032c9d41c2842fe9d76fbe56478e8b407d3aae9ea7cc2ac6c32",
+   "cleandift_sd21_unet.safetensors": "9414809d959f000f986ef74ea609f4cb839363c05845ce36cab1f90bd2b660d0"
+  }
+ },
+ {
+  "name": "sd2.1",
+  "repo": "sd2-community/stable-diffusion-2-1",
+  "revision": "bb2154823665391b4fb29b0b9cf82a198964ee05",
+  "local_dir": "exp/FMD/weights/sd2.1",
+  "allow_patterns": null,
+  "files": {
+   "README.md": "aa3dd57f8edabdc9c96d36430130acd8d30f709b23744d851077c8bc913f618f",
+   "feature_extractor/preprocessor_config.json": "2a1da83b5e1032aaeef397552ddb408dca0d8cd1dc58f61bf6abf38d6f33a0a2",
+   "model_index.json": "14d34c52a8afbe01d22767226074ebb4367b59fe817cd7428e1d099125b7e34b",
+   "scheduler/scheduler_config.json": "4cd9b9597ca64549df35016ca02bd3450ecbac70ccd8b0465b018be4ba54fe4b",
+   "text_encoder/config.json": "6b34b0bf6cff02e2afe88145740ef5e0316caf7add8307c8ec0b021a7923cc42",
+   "text_encoder/model.safetensors": "cce6febb0b6d876ee5eb24af35e27e764eb4f9b1d0b7c026c8c3333d4cfc916c",
+   "tokenizer/merges.txt": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+   "tokenizer/special_tokens_map.json": "f118ab3a983206e4f32583448de6bd6aae4ee21869135cef1f5848a753cdaab6",
+   "tokenizer/tokenizer_config.json": "87a3154f0990fd992fd59f9d42c39520155b3d77cd543efe3f2bf011726f379d",
+   "tokenizer/vocab.json": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349",
+   "unet/config.json": "dc987e214928b191cb832df4e19c376e862af1e4c4a5f36aac054a53ee251ccf",
+   "unet/diffusion_pytorch_model.safetensors": "1238522277c48923ff2751e238f2742c562e45643f3d50cc93d163cb30638b0c",
+   "vae/config.json": "d69281aa3f6a0f3c41aaf6778e35464fc6ee8a92e6ac8a8b1eb679f6df6423eb",
+   "vae/diffusion_pytorch_model.safetensors": "a1d993488569e928462932c8c38a0760b874d166399b14414135bd9c42df5815"
+  }
+ }
+]

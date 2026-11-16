@@ -1,0 +1,90 @@
+{
+ "created_utc": "2026-11-07T20:48:05Z",
+ "seed": 20261016,
+ "n_target": 500,
+ "sets": {
+  "ouhdl": {
+   "n_pool": 4406,
+   "n": 500,
+   "n_clusters": 32,
+   "n_units_with_times": 0,
+   "median_positive_time_step_s": null,
+   "n_strokes_median": 2.0,
+   "gt_npz": "$U/data/ouhdl_e0_v3/e0_test.npz",
+   "raw_npz": null
+  },
+  "casia_zh": {
+   "n_pool": 500,
+   "n": 500,
+   "n_clusters": 60,
+   "n_units_with_times": 0,
+   "median_positive_time_step_s": null,
+   "n_strokes_median": 5.0,
+   "gt_npz": "$U/exp/X4a/data/x4a_casia_zh.npz",
+   "raw_npz": null
+  },
+  "casia_en": {
+   "n_pool": 500,
+   "n": 500,
+   "n_clusters": 60,
+   "n_units_with_times": 0,
+   "median_positive_time_step_s": null,
+   "n_strokes_median": 1.0,
+   "gt_npz": "$U/exp/X4a/data/x4a_casia_en.npz",
+   "raw_npz": null
+  },
+  "tamil": {
+   "n_pool": 500,
+   "n": 500,
+   "n_clusters": 52,
+   "n_units_with_times": 0,
+   "median_positive_time_step_s": null,
+   "n_strokes_median": 1.0,
+   "gt_npz": "$U/exp/X4a/data/x4a_hpl_tamil.npz",
+   "raw_npz": null
+  },
+  "iam500": {
+   "n_pool": 500,
+   "n": 500,
+   "n_clusters": 63,
+   "n_units_with_times": 0,
+   "median_positive_time_step_s": null,
+   "n_strokes_median": 1.0,
+   "gt_npz": "$U/data/m5_multiscript_v1/m5_test_iam500.npz",
+   "raw_npz": null
+  },
+  "unipen_de": {
+   "n_pool": 827,
+   "n": 500,
+   "n_clusters": 7,
+   "n_units_with_times": 500,
+   "median_positive_time_step_s": 0.015000000000100044,
+   "n_strokes_median": 1.0,
+   "gt_npz": "$U/data/d2_v2/unipen_de/e0_test.npz",
+   "raw_npz": "$U/data/d2_v2/unipen_de/units_test.npz"
+  },
+  "onhw": {
+   "n_pool": 5925,
+   "n": 500,
+   "n_clusters": 500,
+   "n_units_with_times": 500,
+   "median_positive_time_step_s": 0.016999999999999904,
+   "n_strokes_median": 3.0,
+   "gt_npz": "$U/data/d2_v2/onhw/e0_all.npz",
+   "raw_npz": "$U/data/d2_v2/onhw/units_all.npz"
+  }
+ },
+ "inputs": {
+  "$U/data/ouhdl_e0_v3/e0_test.npz": "c09560ed07a526614b3342a2fb6b642165f6aab3fffa25876bf1bc7502b7a514",
+  "$U/exp/X4a/data/x4a_casia_zh.npz": "93f4efcb99941a77fd942e19e9001316d14654ac77e3dc5b622a6da2cdbc0f72",
+  "$U/exp/X4a/data/x4a_casia_en.npz": "eb8c6a7a54fac56448b5232e2ef56726a9046198ba439129241bf3d9d9af7d6a",
+  "$U/exp/X4a/data/x4a_hpl_tamil.npz": "d868ba858f07de2e5d179f5a635a4007fbfc25b1fa4bdbb1149ccf073dce6938",
+  "$U/data/m5_multiscript_v1/m5_test_iam500.npz": "0dbd1a613adadb4e5b846d5ecbdb5e7df9b0006d6a7665ee37e1020fc00637de",
+  "$U/data/d2_v2/unipen_de/e0_test.npz": "c5f1c29e7bdf231f5d6032a29362d0ab3c912450af3294c7f8e6a51dc653157f",
+  "$U/data/d2_v2/unipen_de/units_test.npz": "53af1dfa318d36123a57ec1324db5f063abef99e1093bc47ca1cd7d99276c2eb",
+  "$U/data/d2_v2/onhw/e0_all.npz": "59bc5fcbdf276a440f6afc5a4e14d9e3c7351595a2a724a0085160054fa68939",
+  "$U/data/d2_v2/onhw/units_all.npz": "7b5c5de8726111151f6b460607fbc66a0c8ed54060abfda9c6fd590a1381e434"
+ },
+ "code_sha256": "d59320fc9b70f4acb2aa257adee9fd12ecc99b823e4579d4e33f9229b9872ed3",
+ "output_sha256": "bd0df5d943e09a06958992fb5321a443d38986262118f556d538a8cce7033ca7"
+}

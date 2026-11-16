@@ -1,0 +1,399 @@
+{
+ "schema": "fmd_provenance/1",
+ "track": "diffusion",
+ "created_utc": "2026-11-03T03:20:19Z",
+ "sub_agent_model": "<agent>",
+ "model_reason": "new extraction code + verdict-setting pre-registered probes = <agent> (<author>'s 30 Oct 2026 sub-agent model policy)",
+ "prereg": {
+  "path": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+  "sha256": "6ad98ab4c1f4455535afd468b9144df43bb26ed1aa6a091db79cfc669c896035"
+ },
+ "harness": {
+  "version": "fmd_harness 1.0.1 (2026-11-03)",
+  "dir": "$U/exp/FMD/code/fmd_harness_v1",
+  "code": {
+   "files": {
+    "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+    "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+    "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+    "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+    "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+    "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+    "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+    "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+    "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+    "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+   },
+   "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+  },
+  "tar": "$U/exp/FMD/code/fmd_harness_v1.0.1.tar.gz",
+  "tar_sha256": "a5b69f7b0753b2c486b5f2a297111f1cfdbb68b0ac0c1f2bf9c358bf6fcf53e3",
+  "edited": false
+ },
+ "extractor": {
+  "version": "fmd_ext_diffusion 1.0.0",
+  "dir": "$U/exp/FMD/code/fmd_ext_diffusion",
+  "code": {
+   "files": {
+    "jobs/common.sh": "e66b433dd3dc9b7b0493e023c79811a08e021f2d66660c17e51493555ef7d102",
+    "jobs/dift_cpusmoke.sbatch": "b089a7a51c9eb0d15470cc8eea6535c7ab17e97dbeee0ec8d21a5c148d39db65",
+    "jobs/dift_extract.sbatch": "14683806fb4e31ed988bdc43bbceccd971ee1c1208bc74db64467380b3f73a3a",
+    "jobs/dift_probe.sbatch": "c5afaf8462accf443da4325f0872fc5920d544169ea7a674a1be545203a4719e",
+    "jobs/dift_prov.sh": "e4aa2925b912ec57cc9c8f02149a8f7382de0fa151f215b5b66986347da07c32",
+    "jobs/dift_rows.sbatch": "0b01298a8fa86e988fea5b066a0be751d05d33c75f88d27b317961e625f029af",
+    "jobs/layers.txt": "9a80b889d40be105b3985619725c7ed0147073cff17ce3750baa34e282fccb3f",
+    "make_prov.py": "dd979a346deb9d785594c9d381a84de12e1a6305f106a08d94b9ffbdeab1faf7",
+    "rows_diffusion.py": "e9554cbf162e202b640a03f82dd29eefdcb349c3df4f65941e280b5359f4725a",
+    "sd21_dift.py": "fd7de78d60e061726ffe67aff5e8a4653b446f346ca4c8b4de69edffb64a4b57"
+   },
+   "combined": "b6dc3bce350718ed6fdd2f7848449a5eaae12743a6a7b85dd5fd039f6f7e7369"
+  }
+ },
+ "fm": {
+  "name": "sd2.1-dift",
+  "family": "diffusion",
+  "repo": "sd2-community/stable-diffusion-2-1",
+  "revision": "bb2154823665391b4fb29b0b9cf82a198964ee05",
+  "weights": {
+   "repo": "sd2-community/stable-diffusion-2-1",
+   "revision": "bb2154823665391b4fb29b0b9cf82a198964ee05",
+   "local_dir": "$U/exp/FMD/weights/sd2.1",
+   "file_sha256": {
+    "unet/config.json": "dc987e214928b191cb832df4e19c376e862af1e4c4a5f36aac054a53ee251ccf",
+    "unet/diffusion_pytorch_model.safetensors": "1238522277c48923ff2751e238f2742c562e45643f3d50cc93d163cb30638b0c",
+    "vae/config.json": "d69281aa3f6a0f3c41aaf6778e35464fc6ee8a92e6ac8a8b1eb679f6df6423eb",
+    "vae/diffusion_pytorch_model.safetensors": "a1d993488569e928462932c8c38a0760b874d166399b14414135bd9c42df5815",
+    "text_encoder/config.json": "6b34b0bf6cff02e2afe88145740ef5e0316caf7add8307c8ec0b021a7923cc42",
+    "text_encoder/model.safetensors": "cce6febb0b6d876ee5eb24af35e27e764eb4f9b1d0b7c026c8c3333d4cfc916c",
+    "scheduler/scheduler_config.json": "4cd9b9597ca64549df35016ca02bd3450ecbac70ccd8b0465b018be4ba54fe4b",
+    "tokenizer/merges.txt": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+    "tokenizer/special_tokens_map.json": "f118ab3a983206e4f32583448de6bd6aae4ee21869135cef1f5848a753cdaab6",
+    "tokenizer/tokenizer_config.json": "87a3154f0990fd992fd59f9d42c39520155b3d77cd543efe3f2bf011726f379d",
+    "tokenizer/vocab.json": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349"
+   },
+   "manifest_entry": {
+    "local_name": "sd2.1",
+    "repo_id": "sd2-community/stable-diffusion-2-1",
+    "role": "SD2.1 fp32 unet/vae/text_encoder (DIFT-style); stabilityai/stable-diffusion-2-1 returns 404",
+    "revision": "bb2154823665391b4fb29b0b9cf82a198964ee05",
+    "gated": "False",
+    "license": "openrail++",
+    "license_name": null,
+    "last_modified": "2025-11-15 10:33:12+00:00",
+    "safetensors_total_params": 865910724,
+    "status": "ok",
+    "total_bytes": 5161568464,
+    "n_files": 14,
+    "download_date": "2026-11-03T01:19Z",
+    "seconds": 39,
+    "command": "snapshot_download('sd2-community/stable-diffusion-2-1', revision='bb2154823665391b4fb29b0b9cf82a198964ee05', local_dir='$U/exp/FMD/weights/sd2.1', allow_patterns=['model_index.json', 'scheduler/*', 'tokenizer/*', 'feature_extractor/*', 'text_encoder/config.json', 'text_encoder/model.safetensors', 'unet/config.json', 'unet/diffusion_pytorch_model.safetensors', 'vae/config.json', 'vae/diffusion_pytorch_model.safetensors', 'README.md'])",
+    "load_test": {
+     "cls": "UNet2DConditionModel+AutoencoderKL",
+     "params": 949564587,
+     "unet_params": 865910724,
+     "vae_params": 83653863,
+     "shape": [
+      1,
+      4,
+      32,
+      32
+     ],
+     "status": "ok",
+     "seconds": 22.6
+    }
+   },
+   "dtype": "float32",
+   "device": "cuda",
+   "gpu": "NVIDIA RTX A4000",
+   "torch": "2.7.1+cu128",
+   "diffusers": "0.42.1",
+   "transformers": "5.22.1",
+   "resolution": 768,
+   "resize": "torch bilinear align_corners=False antialias=False (224->768), RGB replicate, x*2-1",
+   "vae_latent": "posterior mean x scaling_factor",
+   "scaling_factor": 0.18215,
+   "scheduler": {
+    "num_train_timesteps": 1000,
+    "beta_start": 0.00085,
+    "beta_end": 0.012,
+    "beta_schedule": "scaled_linear",
+    "trained_betas": null,
+    "clip_sample": false,
+    "set_alpha_to_one": false,
+    "steps_offset": 1,
+    "prediction_type": "v_prediction",
+    "thresholding": false,
+    "dynamic_thresholding_ratio": 0.995,
+    "clip_sample_range": 1.0,
+    "sample_max_value": 1.0,
+    "timestep_spacing": "leading",
+    "rescale_betas_zero_snr": false,
+    "_use_default_values": [
+     "timestep_spacing",
+     "rescale_betas_zero_snr",
+     "clip_sample_range",
+     "thresholding",
+     "sample_max_value",
+     "dynamic_thresholding_ratio"
+    ],
+    "_class_name": "DDIMScheduler",
+    "_diffusers_version": "0.8.0",
+    "skip_prk_steps": true
+   },
+   "timesteps": [
+    101,
+    261
+   ],
+   "up_blocks": [
+    1,
+    2
+   ],
+   "up_block_convention": "output of unet.up_blocks[i] incl. its upsampler (DIFT up_ft_index)",
+   "prompt": "",
+   "prompt_embedding": "text_encoder(tokenizer('', max_length=77 padding))[0]",
+   "n_noise_draws": 4,
+   "noise_seed": 0,
+   "noise_shape": [
+    4,
+    4,
+    96,
+    96
+   ],
+   "noise_sha256": "459f72c6ad4d20ab540e74b16863cbca6edcdda34a52b74dd6fa7c9c01529f28",
+   "noise_rule": "one eps tensor from torch.Generator('cpu').manual_seed(0), shared by all units and both t",
+   "pooling": "mean over draws at native grid, then F.interpolate(bilinear, align_corners=False, antialias=True) -> 16",
+   "tf32": false,
+   "micro_batch_units": 2,
+   "gate_layer": "t261_up1",
+   "extractor_version": "fmd_ext_diffusion 1.0.0",
+   "extractor_code": {
+    "files": {
+     "jobs/common.sh": "e66b433dd3dc9b7b0493e023c79811a08e021f2d66660c17e51493555ef7d102",
+     "jobs/dift_cpusmoke.sbatch": "b089a7a51c9eb0d15470cc8eea6535c7ab17e97dbeee0ec8d21a5c148d39db65",
+     "jobs/dift_extract.sbatch": "14683806fb4e31ed988bdc43bbceccd971ee1c1208bc74db64467380b3f73a3a",
+     "jobs/dift_probe.sbatch": "c5afaf8462accf443da4325f0872fc5920d544169ea7a674a1be545203a4719e",
+     "jobs/dift_rows.sbatch": "8bdbecf7bf33457443d09d4a66f3ac994ce20db0f9d06342fbe3ba875d729cbf",
+     "jobs/layers.txt": "9a80b889d40be105b3985619725c7ed0147073cff17ce3750baa34e282fccb3f",
+     "jobs/slurm-24829966.err": "2d79127b0e25bf515c41b4c4ba63b5ab735089471b6fd9ca55199867b4f380dc",
+     "jobs/slurm-24829967.err": "d47697d46c6fe0155431a7dbfa3acb7c6daf1e73cd55446ba2d3a1360c94ee08",
+     "jobs/slurm-24829992.err": "bc5c600611f34f818a6053606ac75c33e334280038a2af6a81392077b3404ab2",
+     "jobs/slurm-24830010.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "rows_diffusion.py": "95e5c1ba32974572316ba08e28118af81a9691f7f69cf07a8c81eb2097f3399f",
+     "sd21_dift.py": "fd7de78d60e061726ffe67aff5e8a4653b446f346ca4c8b4de69edffb64a4b57"
+    },
+    "combined": "8972ecb92e3ddcef045530ff3d17adb7aca8225c234168c1d3eede40ed41be5a"
+   }
+  }
+ },
+ "prereg_cells": {
+  "grid": [
+   "t101_up1",
+   "t101_up2",
+   "t261_up1",
+   "t261_up2"
+  ],
+  "gate": "t261_up1",
+  "resolution": 768,
+  "n_noise_draws": 4,
+  "noise_seed": 0,
+  "prompt": "",
+  "G": 16
+ },
+ "inputs": {
+  "render_npz": {
+   "path": "$U/exp/FMD/data/fmd_render224_val1000.npz",
+   "sha256": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+  },
+  "targets_G16": {
+   "path": "$U/exp/FMD/data/fmd_targets_G16_val1000.npz",
+   "sha256": "e6a44619d79b3001d6b8b98d7b586f8b0b4abd5c2a54c849869bbb70dbe461b5"
+  },
+  "val1000_units": {
+   "path": "$U/exp/FMD/data/val1000_units.csv",
+   "sha256": "ecf35c304b40d842278f138c92bbb5ee01546d11f120cbc95b5533978ff34ea6"
+  }
+ },
+ "features": {
+  "t101_up1": {
+   "path": "$U/exp/FMD/features/sd2.1-dift/t101_up1__val1000.npy",
+   "sha256": "ef3fe8531551d45f7c421d2746bf9a92561e6e1baf52c55e2f64cd686f900481",
+   "meta": "$U/exp/FMD/features/sd2.1-dift/t101_up1__val1000.npy.meta.json",
+   "meta_sha256": "e4f8371fabd7b5cdd5797cf4358cfd987fe0db1baf51bc58d4a44995b1439d9b",
+   "native_shape_cached": [
+    1000,
+    16,
+    16,
+    1280
+   ],
+   "seconds_extract_all_layers": 1906.41
+  },
+  "t101_up2": {
+   "path": "$U/exp/FMD/features/sd2.1-dift/t101_up2__val1000.npy",
+   "sha256": "ce7cc3fef77761f49f4b00b2f84fba3894bb7d6f825e3f0518a86420831c4292",
+   "meta": "$U/exp/FMD/features/sd2.1-dift/t101_up2__val1000.npy.meta.json",
+   "meta_sha256": "98d2c74967b98c1bed63b050fdaaa1c690f23af62f8c8d6e8e91281acc0bffb8",
+   "native_shape_cached": [
+    1000,
+    16,
+    16,
+    640
+   ],
+   "seconds_extract_all_layers": 1906.41
+  },
+  "t261_up1": {
+   "path": "$U/exp/FMD/features/sd2.1-dift/t261_up1__val1000.npy",
+   "sha256": "327e3f2d7f56baee27d0da6ec4519ff31f008648798a7defacfba65987801f10",
+   "meta": "$U/exp/FMD/features/sd2.1-dift/t261_up1__val1000.npy.meta.json",
+   "meta_sha256": "94e786a4444e636acc605c5a6988bc56ac573bf02faa60392098d247bd52fcc4",
+   "native_shape_cached": [
+    1000,
+    16,
+    16,
+    1280
+   ],
+   "seconds_extract_all_layers": 1906.41
+  },
+  "t261_up2": {
+   "path": "$U/exp/FMD/features/sd2.1-dift/t261_up2__val1000.npy",
+   "sha256": "127afce729263d2f7ceccad4a8fd53e0ffccd0d77123a6ca81a592fe74522dad",
+   "meta": "$U/exp/FMD/features/sd2.1-dift/t261_up2__val1000.npy.meta.json",
+   "meta_sha256": "f197b8c447bcd9b3d8357dc2f135a1ffaa6639a6c7bf4e3e80e090799ca404e9",
+   "native_shape_cached": [
+    1000,
+    16,
+    16,
+    640
+   ],
+   "seconds_extract_all_layers": 1906.41
+  }
+ },
+ "probe_units": {
+  "t261_up1:linear": {
+   "path": "$U/exp/FMD/screen/units/diffusion/sd2.1-dift__t261_up1__linear__G16__val1000.units.csv.gz",
+   "sha256": "f27bbf71675af0a33068509c2293cc805074cf5d7f932c9324adaca4286162cb",
+   "seconds": 130.0,
+   "n_units": 1000
+  },
+  "t261_up1:attn": {
+   "path": "$U/exp/FMD/screen/units/diffusion/sd2.1-dift__t261_up1__attn__G16__val1000.units.csv.gz",
+   "sha256": "8934ee939455a5b2634470f5769d02b96d51e9e1891a2d49c43e48e889da9547",
+   "seconds": 332.2,
+   "n_units": 1000
+  },
+  "t261_up2:linear": {
+   "path": "$U/exp/FMD/screen/units/diffusion/sd2.1-dift__t261_up2__linear__G16__val1000.units.csv.gz",
+   "sha256": "1e814abb604f3bef1282cf17303aa3d32562e355b7d77f3f92f44c20eccbebcc",
+   "seconds": 94.1,
+   "n_units": 1000
+  },
+  "t261_up2:attn": {
+   "path": "$U/exp/FMD/screen/units/diffusion/sd2.1-dift__t261_up2__attn__G16__val1000.units.csv.gz",
+   "sha256": "f00bd8c48612bbf03d4318542e2ea65e8633f61c14c35b430d3e63684925e8b8",
+   "seconds": 407.6,
+   "n_units": 1000
+  },
+  "t101_up1:linear": {
+   "path": "$U/exp/FMD/screen/units/diffusion/sd2.1-dift__t101_up1__linear__G16__val1000.units.csv.gz",
+   "sha256": "420df9df3f716011a00eda67036a80f2a93dac44301184412606f8614713f0b0",
+   "seconds": 136.6,
+   "n_units": 1000
+  },
+  "t101_up1:attn": {
+   "path": "$U/exp/FMD/screen/units/diffusion/sd2.1-dift__t101_up1__attn__G16__val1000.units.csv.gz",
+   "sha256": "1c1c46588be73f324b2ab61e6a1df95af0c8b27258c253140fb5dcd6741afd6e",
+   "seconds": 480.1,
+   "n_units": 1000
+  },
+  "t101_up2:linear": {
+   "path": "$U/exp/FMD/screen/units/diffusion/sd2.1-dift__t101_up2__linear__G16__val1000.units.csv.gz",
+   "sha256": "8b5734db3dc44f4d9a2962521b07a930c1979e58cc97f9271143ba7d3fbbf4d5",
+   "seconds": 40.8,
+   "n_units": 1000
+  },
+  "t101_up2:attn": {
+   "path": "$U/exp/FMD/screen/units/diffusion/sd2.1-dift__t101_up2__attn__G16__val1000.units.csv.gz",
+   "sha256": "f0eaf800b3b633494d7d5c147659acc288c79d82eba651f684aed0878c7807ef",
+   "seconds": 199.8,
+   "n_units": 1000
+  }
+ },
+ "baseline_units": {
+  "nomL1:mid16:linear": {
+   "path": "$U/exp/FMD/screen/units/nomL1__mid16__linear__G16__val1000.units.csv.gz",
+   "sha256": "d17e7fe48e6b4b63342565cc1e3600c6f74edd8b74f4071e003cff692102bf27"
+  },
+  "nomL1:mid16:attn": {
+   "path": "$U/exp/FMD/screen/units/nomL1__mid16__attn__G16__val1000.units.csv.gz",
+   "sha256": "ba6605e3d1c3c98bd4cb94fc5a305c50afa6b37e728d071521608ab5aad21e62"
+  },
+  "nomL1:cat16:linear": {
+   "path": "$U/exp/FMD/screen/units/nomL1__cat16__linear__G16__val1000.units.csv.gz",
+   "sha256": "a6de81b5fe49389f82e3438a8acf52a96191be24a1ce9c3e788fbc2cd3dc90ad"
+  },
+  "nomL1:cat16:attn": {
+   "path": "$U/exp/FMD/screen/units/nomL1__cat16__attn__G16__val1000.units.csv.gz",
+   "sha256": "a6318b24c9955ae168e14319ba4c04a9bdf460194bc50e80e089c7185853a841"
+  },
+  "nomL2:mid16:linear": {
+   "path": "$U/exp/FMD/screen/units/nomL2__mid16__linear__G16__val1000.units.csv.gz",
+   "sha256": "dfae5e76979c6c47ed68b5c321d569e77a5f9a1b42dfd623ebe69db3c9ef31cc"
+  },
+  "nomL2:mid16:attn": "absent at rows time",
+  "nomL2:cat16:linear": {
+   "path": "$U/exp/FMD/screen/units/nomL2__cat16__linear__G16__val1000.units.csv.gz",
+   "sha256": "6a0d683486fe19e1cd01c7bc2b7fb8ae85c1fe41db2af49151f711cd6e1d621e"
+  },
+  "nomL2:cat16:attn": {
+   "path": "$U/exp/FMD/screen/units/nomL2__cat16__attn__G16__val1000.units.csv.gz",
+   "sha256": "f9179ec73ef1c372226e7747d875dd638963cde092940e51d920a4d5c34c727b"
+  }
+ },
+ "rows": {
+  "path": "$U/exp/FMD/screen/rows_diffusion.csv",
+  "sha256": "5f4faf206122422ca01557bd96b363073619eb8f49ca0ceded5f361f9ce26e3d"
+ },
+ "verdicts": {
+  "path": "$U/exp/FMD/screen/verdicts_diffusion.json",
+  "sha256": "7a6315b8a57d7759fd7300365f7108fe95ac0fa0cbeb694bb9840ccfbd7c7f94"
+ },
+ "jobs": {
+  "ids": [
+   "24829966",
+   "24829967",
+   "24829969",
+   "24829992",
+   "24830010",
+   "24830011",
+   "24830903",
+   "24830913",
+   "24830935"
+  ],
+  "sacct_dump": "$U/exp/FMD/logs/diffusion/sacct_diffusion.txt",
+  "sacct": [
+   "24829966|fmd_dift_cpusmoke|cpuidle|COMPLETED|0:0|00:01:12|2026-11-03T03:25:32|2026-11-03T03:26:44|<node>|billing=16,cpu=16,mem=48G,node=1",
+   "24829967|fmd_dift_extract|gpuidle|FAILED|4:0|00:00:59|2026-11-03T03:26:06|2026-11-03T03:27:05|<node>|billing=8,cpu=8,gres/gpu=1,mem=48G,node=1",
+   "24829969_[1-4]|fmd_dift_probe|cpuidle|CANCELLED by 129107|0:0|00:00:00|None|2026-11-03T03:29:09|None assigned|",
+   "24829992|fmd_dift_cpusmoke|cpuidle|COMPLETED|0:0|00:00:32|2026-11-03T03:27:47|2026-11-03T03:28:19|<node>|billing=16,cpu=16,mem=48G,node=1",
+   "24830010|fmd_dift_extract|gpuidle|COMPLETED|0:0|00:34:15|2026-11-03T03:29:32|2026-11-03T04:03:47|<node>|billing=8,cpu=8,gres/gpu=1,mem=48G,node=1",
+   "24830011_1|fmd_dift_probe|cpuidle|COMPLETED|0:0|00:08:09|2026-11-03T04:03:59|2026-11-03T04:12:08|<node>|billing=16,cpu=16,mem=48G,node=1",
+   "24830011_2|fmd_dift_probe|cpuidle|COMPLETED|0:0|00:08:45|2026-11-03T04:03:59|2026-11-03T04:12:44|<node>|billing=16,cpu=16,mem=48G,node=1",
+   "24830011_3|fmd_dift_probe|cpuidle|COMPLETED|0:0|00:10:47|2026-11-03T04:03:59|2026-11-03T04:14:46|<node>|billing=16,cpu=16,mem=48G,node=1",
+   "24830011_4|fmd_dift_probe|cpuidle|COMPLETED|0:0|00:04:17|2026-11-03T04:03:59|2026-11-03T04:08:16|<node>|billing=16,cpu=16,mem=48G,node=1",
+   "24830903|fmd_dift_rows|cpuidle|COMPLETED|0:0|00:00:16|2026-11-03T04:15:23|2026-11-03T04:15:39|<node>|billing=4,cpu=4,mem=16G,node=1",
+   "24830913|fmd_dift_prov|cpuidle|COMPLETED|0:0|00:00:15|2026-11-03T04:19:29|2026-11-03T04:19:44|<node>|billing=2,cpu=2,mem=8G,node=1",
+   "24830935|fmd_dift_prov|cpuidle|RUNNING|0:0|00:00:00|2026-11-03T04:20:12|Unknown|<node>|billing=2,cpu=2,mem=8G,node=1"
+  ]
+ },
+ "implementation_choices_where_prereg_silent": [
+  "noise: one eps [4,4,96,96] float32 from torch.Generator('cpu').manual_seed(0), shared by all units and both t (draw k uses eps[k])",
+  "VAE latent = posterior mean x scaling_factor (DIFT samples the posterior)",
+  "224->768 resize: torch F.interpolate bilinear, align_corners=False, antialias=False; gray replicated to RGB; x*2-1",
+  "empty prompt: tokenizer('', padding max_length 77) -> text_encoder(ids)[0], no attention mask",
+  "4 draws averaged at the native grid, then mapped to 16x16 with the prereg grid rule (both linear)",
+  "strict fp32 (TF32 disabled for matmul and cuDNN)",
+  "UNet forward stopped after up_blocks[2] (later blocks do not affect up_blocks[1..2] outputs)",
+  "features mapped to 16x16 inside the extractor and cached at 16x16 float16 (native 48x48/96x96 maps not cached)",
+  "FM per-unit probe files in screen/units/diffusion/, nominee files read from screen/units/ (rows_diffusion.py wraps screen_rows.units_file)"
+ ],
+ "storage": "all features, probe units, rows and logs on CLUSTER-A under exp/FMD; nothing derived from SD weights leaves CLUSTER-A except tables/docs"
+}

@@ -1,0 +1,40 @@
+item,kind,source,supplement_label,supplement_number,transfer,note,paper_section_extended
+tab:xni,table,v11,,,not in supplement,printed in full in the v12.1 paper (all v11 cells present),
+tab:r3a,table,v11,,,not in supplement,printed in full in the v12.1 paper (all v11 cells present),
+app:impl,appendix section,v11,sup:impl,S2,moved,,Experimental Setup; Method
+app:fm,appendix section,v11,sup:fm,S3,moved,,Negative Results; Warm Adaptation
+app:rules,appendix section,v11,sup:rules,S4,moved,rule names follow the paper; record names listed in one sentence,Evaluation Protocol
+tab:notation,table,v12.1 + v11 row,tabS:notation,Table S1 (S1),copy with extra row,paper table plus the FM-guided row removed from the paper,Problem and Notation
+tab:components,table,v11,tabS:components,Table S2 (S1),moved,RQ column and C1-C3 labels removed,Method
+tab:singleapp,table,v11,tabS:singleapp,Table S3 (S2),moved,first-seed columns are not in the paper,Exploratory Routed Adapter Results
+tab:hyper,table,v11,tabS:hyper,Table S4 (S2),moved,,Implementation Details
+tab:corpora,table,v11,tabS:corpora,Table S5 (S2),moved,training-pool and test-set columns are not in the paper,Datasets and Target Data Budget
+tab:failure,table,v11,tabS:failure,Table S6 (S5.1),moved,caption reworded,Introduction; Discussion
+tab:warm,table,v11,tabS:warm,Table S7 (S5.2),full v11 version,"10% columns, per-seed range and seed-level interval rows are not in the paper table",Warm Adaptation on the Target
+tab:german,table,v11,tabS:german,Table S8 (S5.3),moved,per-writer ranges are not in the paper,Retention on Six Non-Urdu Sets
+tab:singleR,table,v11,tabS:singleR,Table S9 (S5.4),moved,order-kept counts are not in the paper,Exploratory Routed Adapter Results
+tab:r3b,table,v11,tabS:r3b,Table S10 (S5.5),moved,,Endpoint Consensus Selection
+tab:r1d,table,v11,tabS:r1d,Table S11 (S5.6),moved,,Negative Results
+tab:m1,table,v11,tabS:m1,Table S12 (S5.7),moved,,Discussion
+tab:claims,table,v12 (item T01),tabS:claims,Table S13 (S5.8),moved,references to paper tables given by section title,Discussion
+sec:frame,passage (v12 text stage),v11,sup:frameres,S5.6,moved,mirrored-frame and frame-choice definitions; selector named as in the paper,Negative Results
+rq-list,passage (v12 text stage),v11,,,not in supplement,research-question labels were removed by review item 3; no content beyond the labels,Introduction
+sec:failure-archive,passage (v12 text stage),v11,sup:failure,S5.1,moved,pointer now names the code repository,Introduction; Discussion
+sec:frameres-extra,passage (v12 text stage),v11,sup:frameres,S5.6,moved,v11 paragraph in full,Negative Results
+sec:selres-control,passage (v12 text stage),v11,sup:selres,S5.5,moved,"two interpretive sentences left out ('shows why', 'the flag is miscalibrated'); paper verdict added",Endpoint Consensus Selection
+sec:impl-archive,passage (v12 text stage),v11,sup:impl,S2,moved,pointer sentence in Warm stage and fine-tuning names the code repository,Implementation Details
+sec:selectivity-detail,passage (v12 text stage),v11,sup:m1res,S5.7,moved,v11 paragraph up to the verdict sentence,Discussion
+prose-fit,passage (v12 text stage),v11,,,not in supplement,"wording only; the deferral list states that every number, claim, limitation and citation stays in the paper",
+E12,passage (v12.1 page reduction),v12,sup:impl,S2,moved,Sequence length paragraph,Problem and Notation
+E15,passage (v12.1 page reduction),v12,sup:impl,S2,moved,already in the v11 appendix text (Warm stage and fine-tuning),Warm Adaptation
+E20,passage (v12.1 page reduction),v12,sup:impl,S2,moved,Script routing paragraph,Script Routing
+E29,passage (v12.1 page reduction),v12,sup:impl,S2,moved,Example unit of the metric figure paragraph,Evaluation Metrics
+E32,passage (v12.1 page reduction),v12,sup:impl,S2,moved,Backbones paragraph,Implementation Details
+E33,passage (v12.1 page reduction),v12,sup:impl,S2,moved,already in the v11 appendix text (Warm stage and fine-tuning),Implementation Details
+E34,passage (v12.1 page reduction),v12,sup:rules,S4,moved,Margins paragraph (full v12 sentence),Evaluation Protocol
+E39,passage (v12.1 page reduction),v12,sup:warmres,S5.2,moved,full v12 sentences on encoder initialisation,Warm Adaptation on the Target
+E41,passage (v12.1 page reduction),v12,sup:retres,S5.3,moved,Routing counts,Retention on Six Non-Urdu Sets
+E42,passage (v12.1 page reduction),v12,sup:retres,S5.3,moved,Routing counts,Retention on Six Non-Urdu Sets
+E43,passage (v12.1 page reduction),v12,sup:retres,S5.3,moved,Without a router at 10%,Retention on Six Non-Urdu Sets
+E50,passage (v12.1 page reduction),v12,sup:frameres,S5.6,moved,inside the v11 mirrored-frame paragraph,Negative Results
+E52,passage (v12.1 page reduction),v12,sup:frameres,S5.6,moved,tests (i) to (iii); test (iv) stays in the paper,Negative Results

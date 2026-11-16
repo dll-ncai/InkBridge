@@ -1,0 +1,168 @@
+{
+ "track": "FMDX Warm monitor (replacement instance; Phase 4 to 2026-11-10T18:00Z)",
+ "model": "<agent>",
+ "model_reason": "<agent> API failing; prior <agent> monitor frame 2f5f4d62 stalled after repeated API failures",
+ "written_utc": "2026-11-10T17:13:19Z",
+ "prereg": {
+  "path": "CLUSTER-A exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+  "sha256_history": {
+   "A8 (verified 2026-11-05T08:23Z)": "70ee53cd90c19c5aac3ce298440ae403e228fce2142f35711d0463e6d25ce348",
+   "A9 (verified 2026-11-05T20:0xZ)": "7a71c715dc5ca1cf146f829b8c7f498811e1330e1eefa2bf1b3b60fddbc5d154",
+   "A9.4": "see PREREG_FROZEN.flag (not re-read by this track)"
+  },
+  "governing": [
+   "A4 FT recipe (COMP-p01, 10k steps, E0 val1000 selection), A4.4 composed rows",
+   "A9 device per job + device_a/device_b/DEVICE_MIXED",
+   "A9.4 CLUSTER-A or CLUSTER-B sampling (not used: relays failed; lead 8 Nov: CLUSTER-A only)",
+   "A4.3f not assessed"
+  ]
+ },
+ "final_table": {
+  "job": "25049213 (CLUSTER-A cpuidle, tables_job_a9.sbatch; submitted 2026-11-10T16:27Z, COMPLETED)",
+  "builder": "code/fmdx_monitor_v1/build_tables_a9.py (regime-matched controls; sha256 prefix df1d4ec5f31cd619)",
+  "B": 2000,
+  "rng_seed": 20261103,
+  "cluster": "writer (german_onhw_all: unit)",
+  "n_inputs": 738,
+  "arms": [
+   "NOFM_W",
+   "PEINIT_W",
+   "c-radiov3-b_W",
+   "c-radiov3-h_W",
+   "c-radiov4-so400m_W",
+   "cleandift-sd21_W",
+   "dinov3-vitb16_W",
+   "dinov3-vitl16-sat493m_W",
+   "pe-spatial-b16-512_W",
+   "vit-mae-large_W",
+   "webssl-mae1b-224_W",
+   "webssl-mae300m-224_W"
+  ],
+  "n_contrast_rows": 5352,
+  "n_device_mixed": 2124,
+  "device_pairs": {
+   "A30 / RTX A4000": 504,
+   "A30|RTX A4000 / RTX A4000": 216,
+   "B200 / RTX A4000": 864,
+   "B200|RTX A4000 / RTX A4000": 540,
+   "RTX A4000 / RTX A4000": 3228
+  },
+  "verdicts": "none (lead applies A4.5)",
+  "files_sha256": {
+   "FMDX_warm_absolute.csv": "9af1e57e9c58650a1073823b1657bb04217304724de72c44086baca67030ca1a",
+   "FMDX_warm_contrasts.csv": "b8be069af995e58ba4b678d6f0c5dd78b8d716a620b969328a51209aaa9a2aa5",
+   "FMDX_warm_contrasts.md": "6df28db6e2630a3352ebedfafddc423127b6996448b7e506b522de4420f7c79e",
+   "FMDX_warm_inputs.json": "9f58d0b846f8b245d46a1c3af5c6cb728b0097174c7addaf4d27b3efb63c2baa",
+   "FMDX_not_assessed_A43f.csv": "7dd85d06e22c05a0c242dd6a047f1d1e0899af467a0cf724d839bd183465a056"
+  }
+ },
+ "arms_full": [
+  "NOFM_W",
+  "PEINIT_W",
+  "c-radiov3-b_W",
+  "c-radiov3-h_W",
+  "c-radiov4-so400m_W",
+  "cleandift-sd21_W",
+  "dinov3-vitb16_W",
+  "dinov3-vitl16-sat493m_W",
+  "pe-spatial-b16-512_W",
+  "vit-mae-large_W",
+  "webssl-mae300m-224_W"
+ ],
+ "arms_partial": {
+  "webssl-mae1b-224_W": {
+   "bb": 0,
+   "ft": 24,
+   "cmp": 0
+  }
+ },
+ "arm_milestones": {
+  "NOFM_W": {
+   "bb_ms": 3,
+   "ft_ms": 1,
+   "fm_status": "control"
+  },
+  "c-radiov3-h_W": {
+   "bb_ms": 4,
+   "ft_ms": 4,
+   "fm_status": "PASS_XS"
+  },
+  "PEINIT_W": {
+   "bb_ms": 4,
+   "ft_ms": 2,
+   "fm_status": "control"
+  },
+  "vit-mae-large_W": {
+   "bb_ms": 4,
+   "ft_ms": 5,
+   "fm_status": "PASS_XS"
+  },
+  "cleandift-sd21_W": {
+   "bb_ms": 4,
+   "ft_ms": 3,
+   "fm_status": "PASS_URDU_ONLY"
+  },
+  "dinov3-vitl16-sat493m_W": {
+   "bb_ms": 4,
+   "ft_ms": 5,
+   "fm_status": "PASS_XS"
+  },
+  "pe-spatial-b16-512_W": {
+   "bb_ms": 4,
+   "ft_ms": 2,
+   "fm_status": "PASS_URDU_ONLY"
+  },
+  "webssl-mae1b-224_W": {
+   "bb_ms": 4,
+   "ft_ms": 3,
+   "fm_status": "PASS_XS"
+  },
+  "webssl-mae300m-224_W": {
+   "bb_ms": 4,
+   "ft_ms": 2,
+   "fm_status": "PASS_XS"
+  },
+  "c-radiov3-b_W": {
+   "bb_ms": 4,
+   "ft_ms": 3,
+   "fm_status": "PASS_XS"
+  },
+  "c-radiov4-so400m_W": {
+   "bb_ms": 4,
+   "ft_ms": 3,
+   "fm_status": "PASS_XS"
+  },
+  "dinov3-vitb16_W": {
+   "bb_ms": 4,
+   "ft_ms": 2,
+   "fm_status": "PASS_XS"
+  }
+ },
+ "not_assessed": {
+  "file": "FMDX_not_assessed_A43f.csv",
+  "n": 45,
+  "by_regime": {
+   "scratch": 28,
+   "warm": 17
+  }
+ },
+ "comparators": "CLUSTER-A RTX A4000 rows (score_out_cmp/rows): LUO_ms6_identity; COMP-p01 s20261034/35/36 (six-set rows sampling seed 0 only)",
+ "code": {
+  "autopilot": "code/fmdx_monitor_v1/fxm_autopilot.py sha256 prefix 67c056a479ca6605 (job 25036911, 10 Nov 09:16Z-18:00Z)",
+  "sampler": "arm_sample_a9.sbatch sha16 3e1b951d0cae85ba",
+  "end_of_run": "fxm_final.py"
+ },
+ "operational": [
+  "5 Nov: nice 1000->0, TimeLimit 24h->3h/6h on A4000 sampling jobs (device unchanged)",
+  "5 Nov: cand_log correction: c-radiov3-h FT winner 24869368",
+  "8 Nov: race-cancel bug (squeue %A cancelled running array tasks); cleandift-sd21_W bb seed0 and webssl-mae1b-224_W bb seed0 killed and resubmitted; fixed to pending task ids",
+  "8 Nov: lead rule max 3 race copies per job by earliest --test-only; extra pending copies trimmed",
+  "8 Nov: A9.4 relays failed (CLUSTER-A sftp 'Connection closed' at 200/100/50 MB parts; CLUSTER-A SSH outages); addendum_10 entry",
+  "10 Nov 14:17Z: stale webssl-mae1b-224_W bb seed-0 copy 24969743 cancelled"
+ ],
+ "deviations": [
+  "webssl-mae1b-224_W: bb sampling seeds 1-2 not finished by 18:00Z (bb/cmp rows absent; FT rows present)",
+  "45 roster arms not assessed (A4.3f): 17 warm, 28 scratch; CLUSTER-B SCRATCH arms all PENDING, no RELAY.json",
+  "No arm sampled on CLUSTER-B (A9.4 relay failure)"
+ ]
+}

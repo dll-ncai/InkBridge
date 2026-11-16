@@ -1,0 +1,7 @@
+2026-11-08T01:29:44Z ft_job_start arm=PEINIT_W lane=clusterA src=$U/exp/FMD/xs/runs/PEINIT_W_clusterA/bb_ms4.pt seed=20261035 site=clusterA host=<node> slurm=24964008 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-08T01:29:46Z batch_layout ng=1 mem_gb=24 global_micro=32 accum=16 units_per_step=512 site=clusterA host=<node> slurm=24964008 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-08T01:29:46Z train_start site=clusterA host=<node> slurm=24964008 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-08T08:53:16Z train_exit rc=0 site=clusterA host=<node> slurm=24964008 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-08T11:15:15Z selected FT milestone 6 (step 6000) site=clusterA host=<node> slurm=24964008 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-08T11:15:45Z ft_job_end site=clusterA host=<node> slurm=24964008 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-08T15:23:10Z sampling_done ms6 site=clusterA host=<node> slurm=24964008 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]

@@ -1,0 +1,390 @@
+{
+ "schema": "fmdx_provenance/1",
+ "track": "XS staging (FMDX phase 0)",
+ "created_utc": "2026-11-03T14:43Z",
+ "sub_agent_model": "<agent>",
+ "model_reason": "staging/pulls with sha checks and re-running existing render/sizing recipes = <agent> per the lead's model policy (30 Oct 2026)",
+ "prereg": {
+  "path": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+  "sha256_at_build": "3c1beaa884d3570e608cf65c69affe792a26817425950d72d1ac90141e1808fc",
+  "lead_message": "A6 appended ~13:32Z; sha 3c1beaa8... ; A3 screen rules unchanged since d5137178"
+ },
+ "staged": {
+  "n_models_ok": 57,
+  "n_blocked": 4,
+  "blocked": [
+   "flux1-dev: GatedRepoError",
+   "flux1-schnell: GatedRepoError",
+   "sam3: GatedRepoError",
+   "sd3-medium-diffusers: GatedRepoError"
+  ],
+  "manifest_part_sha256": {
+   "aimv2-large-patch14-224": "e1d7002f0f0957d964ed47134b89347809eb9b476bee1c7dc3453eb94f5026e9",
+   "c-radiov3-b": "8b0ebdcf7fd525e2ecb5082e4bfdae5596dd6ff1b2df0594aac4a63ad788ec15",
+   "c-radiov3-g": "1c2e1cd5664f048e80748817eb9ae4ac613bb34ab06e0291516d0a25ddcd9513",
+   "c-radiov3-h": "16875c213b6c6fc79aadb592c35ef803d5a3ac2500b649a31221342df22e3cf4",
+   "c-radiov3-l": "1aadabd36ec0d71a55486b1de524bfd218b2300d5563d84145ee38fc74fae206",
+   "c-radiov4-h": "e7038c236c2a29ce5ff687f7f31136d6f874921040a31b76b44cb34c4810d04f",
+   "c-radiov4-so400m": "2d2067d072f79cb96cde3703b4ed5e3c865a3f075876ceb077511a9a288a1ee7",
+   "cleandift": "57f8ed52488009830f54022ecb763fcc106d7864181765245adc8c74a5112c7e",
+   "deepseek-ocr-2": "336a6e17e148c045bd20b10dca885e8eaff3f2a46ff7d0d867e019fc867955f6",
+   "deepseek-ocr": "a58119f5efb9ca7185c8ae804c3e2174ab15e432682ad7193ee9270ca80cafa1",
+   "depth-anything-3-large-1.1": "1e71f863bd7704881af3e119c7de86ad8c5150ddc0990b48b6eced4df6b2a853",
+   "depth-anything-v2-large": "b6417cd2301f0d865424a2c04bf8a849d2ccd407cad6f6b468759bb4aac566c7",
+   "dinov2-reg-large": "2e65c922d1d3ea948a3f388204ab90cd695e49c5f8eb49e0d96d0a6f0aa5ebe5",
+   "dinov3-convnext-base": "9f63b6964eaaa9359f042f9a5b2077aa3bc099ece8af7a84d498a65782094965",
+   "dinov3-convnext-large": "7f20b0cbad7ad7d7077001d543cd39998429ea9837cb3d7043706206c5771e18",
+   "dinov3-convnext-small": "82c8e419b30971eb823be877a47afbb97aeafee22b404a11c89c7348cf734f80",
+   "dinov3-convnext-tiny": "b1d45aed0ba6c221aafb0ad48f2d157471357156e00aac3aa1abd747221d29f9",
+   "dinov3-vit7b16": "30a8ada92d0b720b6a8bfe7fcf61fafa2de9e4295debf90450f61bb7a3d49027",
+   "dinov3-vitb16": "32d81f160aa4b580ade66641d0e382dd4b5d56d629eb6eb8b39b56bc9377466b",
+   "dinov3-vith16plus": "4a615b32fd6144926284dbe48265587f756c7388fe3a3eedbcafe86238bafd07",
+   "dinov3-vits16": "bec0a008b9ff69302703e907ed7f94f4a60988441aa2a3c9a8389cd157704d3e",
+   "dinov3-vits16plus": "bdfcb01fe91d0bf93d5017b57aa8e1fd560c7e8442219314e8725cef414ca7ac",
+   "florence-2-large": "7a28073bb895362525b55498c2204b3032ae481b9113d6b250194a2e10007e6f",
+   "flux1-dev": "5c56120ff85c42deae3e3865a43896a1ae5857159229a9f6a673bad122b50f54",
+   "flux1-schnell": "565ca736a8419a2cc3e551e3403f05c67b42f5e8dec6187f9f12bab1befdcd92",
+   "got-ocr2-hf": "bf4e1aea4ee9a38cf3597c6676ac852f634fe0430b7cdb4465b632872a5036ce",
+   "lightonocr-2-1b": "cba0fdb59d35d34884d4a81a06713e2c1d18e706ddba647538ac229c20af90e3",
+   "paddleocr-vl-1.6": "109ca51b7e01a77c78f0639d3b769b073f473dd69bba4f83c41d3b204c3a7553",
+   "pe-core-b16-224-timm": "d0993134478586c0d1491083b18a059aab34bc3e67b4395515224d14648f85b2",
+   "pe-core-b16-224": "1991eb246881b7e4461e5c917f545b28f298a42986c769581ab8f26a7d653eed",
+   "pe-core-l14-336-timm": "e66f88bd22cd6d4ce1dc87297fac2982416d3e356b736fddb8fa3f2652cfb0c0",
+   "pe-core-l14-336": "284a879af7ab90a4a20086f0c2b1936330efa108a3829ff68046c46c5fe2241a",
+   "pe-spatial-b16-512-timm": "332cc1ed69e0e54f35e9e33ef54c0c51d69964888142c87960698c816dbad275",
+   "pe-spatial-b16-512": "de1c307a10a19cd238a1243c37a4cc189f6f7c94a2ef2d1425208f082d223269",
+   "pe-spatial-g14-448-timm": "7435b3b99c5077226e9b9181d5b080e4ae325ec3d5e087a8b6451cff3875a83c",
+   "pe-spatial-g14-448": "82d055aadeccd72180837d8c6c027c5eb355da9e2ed98a4f066703b1db1627a8",
+   "pe-spatial-l14-448-timm": "b3cc9fe2ed8dcec9f462ecf112148fba531f67c2dae08990607bcb3c08884aac",
+   "pe-spatial-l14-448": "1c4dcc460a749c9678baaeaefee942f46418003a8ad49b74617dfe6af379cb6a",
+   "pe-spatial-s16-512-timm": "6899155e39f3ddfec2fc370e3cc6e6e8de898c405a7d811d6ca61256d46b29b1",
+   "pe-spatial-s16-512": "c58d7f99e583fa20e00a9c35e3f5bebc5c5018b1c8ea6772d32b9c6aad1876c0",
+   "pe-spatial-t16-512-timm": "b36af06698ee77fda0185bd299a8963fd79230f60913fbea1f8ededc809bde88",
+   "pe-spatial-t16-512": "a4118969ec82abfc5cc75a90776c1d035737e9b2848bba80baedfb93abd7f503",
+   "qaari-0.1-urdu-ocr": "d8a170f8c76dd978b8f1daf3006d7610539672d5f65ef830629775361f31b8b7",
+   "qwen2-vl-2b-instruct": "bcb84478a6f8da478b840f759231ce2f0e21f00d7f01f35458304493ab5db11e",
+   "sam3": "d4281945f8d7e85b1082ccf907582aacd83d3e0724a83c79305cf286d86954f1",
+   "sd1.5": "17a85a996660e3ae5917194c6eecda3b29a676da04fc151945a6a082abcfa5c7",
+   "sd3-medium-diffusers": "3d0edc733fbf97203f7f12f6748585dbce9f81493c4fb3cd7d90114dde4e2f7d",
+   "siglip2-giant-opt-patch16-256": "f61a3321cbff2f2a2cfbdc8ceb4bb2aaaec6ce3f61d4a85a7a8d3a5b53acd360",
+   "siglip2-giant-opt-patch16-384": "721a427fe5d110146251dc80ae2f1af2ff3c494229425bf093f873baca087149",
+   "starvector-1b-im2svg": "0f6910f7520cbf81f0faf20bc095ccef5ba5a42daed04923a475cfe6e71b2533",
+   "tipsv2-b14": "23e1cdbf848b86dc26dfb2dd28754d6556642337d8b97c078c79bd3f3cfa45bc",
+   "tipsv2-g14": "367216c4d59e2a8352208c14fdb4c826023170618b9032009d5baa5980c0331f",
+   "tipsv2-l14": "7f96799eee32b173dd77d106cf79d75c32764ecc8922d9ca3ab9fbea12674506",
+   "tipsv2-so400m14": "26736c4b23842b1a538a0026d41e111ad84fd4679f0b17276388928aab09aec7",
+   "trocr-large-handwritten": "bf6511f66ac009b326a13e0d486fb6a45949e636b0f119b9acf06da1166e61b6",
+   "unsloth-deepseek-ocr": "4c287b9a4a5048a8a7d9fac55d3c8df7764966ae25a86facfa85a7532bdbcd9f",
+   "urdu-ocr-deepseek-nomy": "5c12c575908032913615e11edda63ce17a00633430edea4b3370c11e0a4de558",
+   "urdu-ocr-deepseek-ocr2-kingabzpro": "fd3eb4672f6b690bdfaa37163806cd0c13acc237809f1368e8ff05de84c1416c",
+   "vit-mae-large": "275ed65f07816bf9d938bbac88e38172a463d6dc6896b4b2a1368998a382ad8d",
+   "webssl-dino1b-224": "b1495caf1c042bcf785bdbef0a7485caf684c36920d10a7a58f44b8bc059fa84",
+   "webssl-mae300m-224": "ee42f0bec6d1de1f85a27a4ff60ef79ed3ab58ce229114293d586a59e79cd7c7"
+  }
+ },
+ "outputs": {
+  "weights/MANIFEST_v2.json": {
+   "path": "$U/exp/FMD/xs/weights/MANIFEST_v2.json",
+   "sha256": "80b941b204d83ade4dd604690fba05362bca3438d2845a73c16f86ca3a1ce617",
+   "bytes": 173806
+  },
+  "weights/MANIFEST_v2.md": {
+   "path": "$U/exp/FMD/xs/weights/MANIFEST_v2.md",
+   "sha256": "dbd59ac4977a2f43d8bdd74bd6f3ec435c427f182efb02bd4ccc2fdd07f80161",
+   "bytes": 86580
+  },
+  "admin/CAPACITY_NOTE.md": {
+   "path": "$U/exp/FMD/xs/admin/CAPACITY_NOTE.md",
+   "sha256": "58b7833f3041dc8351b897aa72a123cf649c597f36c91ac2929c6ea0b0b9daf2",
+   "bytes": 19447
+  },
+  "admin/live_state_2026-11-03.json": {
+   "path": "$U/exp/FMD/xs/admin/live_state_2026-11-03.json",
+   "sha256": "137cf72e52c45dd3abcc6c622dfe267ca2936a7df9e370736ebc44585c6484dd",
+   "bytes": 18761
+  },
+  "admin/luo_render_probe.json": {
+   "path": "$U/exp/FMD/xs/admin/luo_render_probe.json",
+   "sha256": "cdec10e0bf81ac5d333456171c75d8b62f8fa250d89088448dbe4a5f4696137f",
+   "bytes": 770
+  },
+  "admin/hf_search_raw.txt": {
+   "path": "$U/exp/FMD/xs/admin/hf_search_raw.txt",
+   "sha256": "ac0e3333479b26b67add67365a6ff54c70175b8def57ee29bf2977cccf8249bb",
+   "bytes": 33089
+  },
+  "admin/clusterB_expected.json": {
+   "path": "$U/exp/FMD/xs/admin/clusterB_expected.json",
+   "sha256": "0ca677097a10bc9c209f9dce035f977f7a98592f85e66a62941aaaa6437ad248",
+   "bytes": 16693
+  },
+  "admin/manifest_v2_extra.json": {
+   "path": "$U/exp/FMD/xs/admin/manifest_v2_extra.json",
+   "sha256": "dbb57378baa7c6f18342888b0a6902bf4b965cf955552bca40e31cf805214d72",
+   "bytes": 6469
+  },
+  "data/luo_repa_order_v1.csv": {
+   "path": "$U/exp/FMD/xs/data/luo_repa_order_v1.csv",
+   "sha256": "57c10e1eed59d36818270744935a3c9130944d57b2b77f5e59b129cb5bc02c1d",
+   "bytes": 4413803
+  },
+  "data/luo_repa_order_v1.csv.meta.json": {
+   "path": "$U/exp/FMD/xs/data/luo_repa_order_v1.csv.meta.json",
+   "sha256": "5137add005697518c1441f9789683a918716cdd39eded44356b417d667c33073",
+   "bytes": 2316
+  },
+  "data/xs_render224_summary.json": {
+   "path": "$U/exp/FMD/xs/data/xs_render224_summary.json",
+   "sha256": "bc552a1c44b564ee7e298c34c5dfee73923b05a2e1045d4b13d9a5b55adc8842",
+   "bytes": 5141
+  },
+  "code_tar": {
+   "path": "$U/exp/FMD/xs/admin/fmdx_xs_staging_code.tar.gz",
+   "sha256": "e0fbb8130ae4030c1c87a9e412f609601df01984432fca8abd7b5f0f1e9b8eb8",
+   "bytes": 40773,
+   "n_files": 77
+  }
+ },
+ "renders": {
+  "xs_render224_casia_en_val250.npz": {
+   "sha256": "7324d782cb179eb08c7f1cae5978a1325a4acd26a49b3b61bcae5607d6b1046e",
+   "meta_sha256": "6e8602195a131c41eb972fba5f1ca15a1a9597f06e093048b162c5f5b34feff1"
+  },
+  "xs_render224_casia_zh_val250.npz": {
+   "sha256": "05313c1259288cf36559dd7b1306ded66fcde69ccfc8d9b9e0632f1b047c9613",
+   "meta_sha256": "a9231b1a4ffdc9c2301c33b0772ce2d46ac0d77abdf42a8595f74de247bf6214"
+  },
+  "xs_render224_hpl_tamil_val250.npz": {
+   "sha256": "8a039c7b20462b1f006833a4b7f0eb4b86979407aa8c41926aa9c24ec9c20d1d",
+   "meta_sha256": "9f31811fe8f99a78b3051e1612ebe3984bd3ff7e115eceb71bd8bebc1514cf3e"
+  },
+  "xs_render224_iam_val250.npz": {
+   "sha256": "4b96274ac56fa2b069606acd4de6e516caa910aaf693009f0f7199cd9bc50517",
+   "meta_sha256": "02f70e3c5eb22e5b8db49572d3f3da1a720edebe2dd324f1056d4c548b4522e8"
+  },
+  "xs_render224_unipen_de_train_standin_all.npz": {
+   "sha256": "460ac8ca3b98f2af24319b3768f9a9fd38bea879c3124c2e9567629c06b2b40c",
+   "meta_sha256": "0ac412ab49d2f25f1c335f8b30122e2a180b96516e20187636176c417f9dd9fe"
+  }
+ },
+ "mirror_lists": {
+  "A_code_data": {
+   "list_sha256": "681750af69ceb90f3640def5b62747f70f18a9312114ae1bede2a29f194f6598",
+   "sha256_listing_sha256": "a579d0e808385009e7ab2379d8be503e743dcc3284ec32edcd542852be96360c"
+  },
+  "B_w_radio_g_siglip_giant": {
+   "list_sha256": "a017990ff77890dfe2ac424eaa916230fbe511b1d80d629a0066826a1d505783",
+   "sha256_listing_sha256": "30e395cc4af523409b50091220af78872775646dfa9a2c845151c7c186589982"
+  },
+  "C_w_cleandift_sd21": {
+   "list_sha256": "bf70cb123c5b48bbab4c39d833d75d2cd95e7acf92ef92fcb213e1bbe2b57cfa",
+   "sha256_listing_sha256": "0cdf585e9a5bcb1ac6d98be66472c99be593388faeeb1d65d8cd2c00ee457f5b"
+  },
+  "D_w_radiov4h": {
+   "list_sha256": "ea665899e2fc8721168985c193e9f6bce84e20a7fd7160397667952e17cfd3f8",
+   "sha256_listing_sha256": "6f3faec0df5239f4d1baf0aaa3c787873305309117b34155d3ecc7e84bfbbc94"
+  },
+  "E_data_code": {
+   "list_sha256": "103411cf88133ed7ffc7c300aa4d5068d5da2fcbaa3c58fc95eaa4b6c42e4011",
+   "sha256_listing_sha256": "ef1f6c6f47bab9a1c33f87999e019c6fc459f144985e36a24fdd562b3d36f0a8"
+  },
+  "F_data_mine": {
+   "list_sha256": "d0e58fa7050d69b639a650e7b7d9666f92a766f71c58d8836d3c6a7e7e8ebbca",
+   "sha256_listing_sha256": "9645a234411091a6e82944997f993a8eda5ac3f1282b16047584657fe8b95958"
+  }
+ },
+ "clusterB_verify_last_lines": {
+  "clusterB_verify_F_data_mine.txt": {
+   "lines": 68,
+   "ok": 68,
+   "note": "sha256sum -c at CLUSTER-B login1 against the CLUSTER-A-created listing (CLUSTER-A -> VPS hub -> CLUSTER-B)"
+  },
+  "vps_verify_A_B_24842665.txt": {
+   "summary": [
+    "DONE tag=A_code_data n=6914 bad=13 at 2026-11-03 05:58:47Z",
+    "DONE tag=B_w_radio_g_siglip_giant n=38 bad=0 at 2026-11-03 05:59:02Z"
+   ],
+   "note": "Get-FileHash on the VPS: B 38/38 OK; A 6,901/6,914 OK, the 13 BAD files were edited on CLUSTER-A after the listing (12 belong to another track's code dir under xs/code, plus xs_probe.py)"
+  },
+  "clusterB_hf_direct_download": "admin/clusterB_stage_result.json: 8/9 repos all files sha-OK vs CLUSTER-A manifest; sd2.1 14/14 expected files sha-OK (14 extra unrequested variant files downloaded, then deleted)"
+ },
+ "inputs": {
+  "m5_val_npz_dir": "$U/data/m5_multiscript_v1",
+  "m5_luo_train_npz_sha256": "690441b6bd7c119d774066622c53f23a0aca6e62825a04014351bfba98260b67 (DATA_CARD)",
+  "unipen_de_train": "$U/data/d2_v2/unipen_de/e0_train.npz",
+  "harness": "$U/exp/FMD/code/fmd_harness_v1 (fmd_harness 1.0.1)",
+  "val1000_render": "a4af0b065a34ca1df549c49519a26855ba5fec63d62e17bba03c3193ec970503"
+ },
+ "code_sha256": {
+  "build_capacity_p1.py": "c5276f59704e016542ea2650fd1893368b753b3a397e97755861dbcd9f6b77de",
+  "build_capacity_p2.py": "cc35e05f42c3285035f2c356ea8ff4e8878c80f03b9c484dd64293c66dcaf7f8",
+  "build_manifest_v2.py": "59f328d76d01dc8c1c3efd5cb8f0b088d234da78b816131538e5c23d370c5140",
+  "build_provenance.py": "a5fc814b01f830682707437823c3e2e2d005477026f77d82bae12fbcda1a60df",
+  "cmp_ds.py": "4fe93278ad13db80c2d18f5ac8f4617ea47e51a72ef9441c23492aceb6144b6a",
+  "d4.py": "3c74c9865041c769bf406cf913c2dd119a9c7ac3a289956005de0169ff4ce3d1",
+  "clusterB_pull.sh": "2377c04dcfa410eca115f2a545a3eb5d4d2c9983f0c91cb8ca5fe2ac23f74f7d",
+  "clusterB_setup.sbatch": "b17b8b47697fb61e80930f9cac6a079b01ac0c67c66e98ef5cd3998a179544fd",
+  "clusterB_time_a100rp.sbatch": "017709971988c211adc1fec1494742a89728166d00ec66b87764262f66025fef",
+  "clusterB_time_h100rp.sbatch": "296a0bfa85043212a1904d2b4775630018bcbd6d13379e5c6c74fe77006a4bca",
+  "disc1.py": "86625894321c17ff168744a40795d2f8101527026c321a77c7dc576086d453d0",
+  "disc2.py": "dd0fc163d4be811f0a8e868b165d3315fc526277a2beb33e58aa5450c46ed151",
+  "disc3.py": "da6bf8d1eef1f7e07d4886f38e0c9310b7b25be64cdb7133f9d0a0c9ff3636b3",
+  "gen_clusterB_expected.py": "6423a17dc321e702b5c981138eb78ce05838e0675dc59a3a57c6eb646f5190f1",
+  "git_clone.sbatch": "82e8f5d4dc845dd40814ff9edc896de3f573766b93023a63b90fdfc971cd37b0",
+  "git_clone2.sbatch": "8ed69f2cb33e827ad2eefa334f12c4d045b2d3d7978fb45b1070107f7d8ba872",
+  "insp1.py": "11400c33566eac93a7efa11a2baf93c53f23d7e487d22cb18a9cc3a8ee169857",
+  "insp2.py": "059a735fdb25f7583254c4cb1482a4964b208281cbec41a40f7c201d6d4b00a5",
+  "insp3.py": "670f402a2d5bdfa39dabfd1593dfe2319d57e36b6f0e0d2c85d3efbeac93aa4b",
+  "insp4.py": "3943c8dd3b5cccea20e466a45296944d911e999efc4dd53d9d92f15d5bc60d00",
+  "insp5.py": "744497c2f7cb27f16b87ed588044426355d30e7f1c504c03775fc17a217b41ea",
+  "loadtest_cd.sbatch": "b7270d2ae4fde0768093c560be8aaae9247359b24b4e8ce0de02b5eca92a96ce",
+  "loadtest_cd2.sbatch": "7b87033a764260418028dd521dc5bd2bfefdb5f6830e2d20188a6ba1b8ba4137",
+  "loadtest_fix1.sbatch": "bb2b1c3253841196825d77b56ae8e1e1650321f3fea4383cd611a7256e119627",
+  "loadtest_fix2.sbatch": "7c6cdade584b5cb34b9cde2460fbff68c4f471ee76cb25e49849b3b34965af09",
+  "loadtest_l2a.sbatch": "52f80eca682afdf019d726a279673a6349e73bb3bf25b6fd8f7a9d587d35a738",
+  "loadtest_l2b.sbatch": "9c6ca9437f708112ca3b1ebe18404f3b1fd15ed8346cf878d44e9e202bb14951",
+  "loadtest_l2c.sbatch": "b7809319edaed37bc7ce004a6bb9c51adf5c78bb7e685fedf8783bb685e45047",
+  "loadtest_l2d.sbatch": "747a96c24cb65a0fe8a654ca90b01a46c86465f08dcd66cabdb013cb151a2156",
+  "loadtest_l2e.sbatch": "a2fb5400ddd64573d54c280803666c38028a1703148b8ff8e68606a29d150ef6",
+  "loadtest_l2f.sbatch": "941b713af6cfd809624c4edcedfed876181c6cf149ead47f26fbe66f382bf334",
+  "loadtest_l2g.sbatch": "f6fae91fe38bd110794d36ed580451e9bc3ae0557e692bfb681d152d985587fb",
+  "loadtest_l3a.sbatch": "a0dd0096bf716bdd84e51eb6b90f673c8f525e94dfc3d71ea1078aca869f7bec",
+  "loadtest_l3b.sbatch": "9dc5e572cc5a74c305b6d59f91fde5542b1bcc204e860ff9ef45a17dea7a15f1",
+  "loadtest_l4.sbatch": "9637a479fc74b22043b83d2a416b4708dae00be7a2f1b003a807072e87bf31b7",
+  "loadtest_pe.sbatch": "68b469c87d10edd38c6a3610ab2c3b409505ad3a8783b0a6419f916951c95e89",
+  "loadtest_pe2.sbatch": "db21c6fc3305d1ddac9ff7ea6260d58f989027445ffe4f90131c41e626097cca",
+  "loadtest_radio.sbatch": "1217a43f87f336b8fc9196635a70669b3f7cd4d601b720dc36d3076f2cb1ad2e",
+  "loadtest_siglip.sbatch": "83173de2ad337d4d2710cb6c04135408fe13da31be87d7bd338a976fd2bafb8c",
+  "loadtest_tips.sbatch": "6234805504c8af3e44eeb26a27e54d9bef3a864c4b7fdb21fb115e59710379f5",
+  "loadtest_vlm.sbatch": "59fb29bdd3bb0d3119a3333eb1f38534b9256f726b567bb810368cc898c0a2d5",
+  "lsparts.py": "b65fe00fa4cf06523c822aa0778a65da6dd3a87bbf14a2b4374432e169719ba8",
+  "ltsum.py": "f5f534fc99468adc5e36c504bb159db24ed3a88a386c287f60ba0f922fd962c7",
+  "luo_render_probe.py": "80c9999b26584a1c1494c87e641f439315fa461bcb6a399406bc4ddc7f65bbf4",
+  "luo_render_probe.sbatch": "d071d6531ed5469932f069d3c3041b09df88f89458e1790d368383477f818ba2",
+  "make_repa_order.py": "fbb27de47b030498f6c9e441569025220b8d85816f0b821625bbae9a97ebc781",
+  "make_repa_order.sbatch": "b19a504aa01a7fa673298d9bc015c270d3d06f343d768409875b8a9e5453de99",
+  "mirror_lists.py": "9a5e3503ddf64fb3de89d9f1da34d56f2501028faf41d5d2eb9dd300d1fd736e",
+  "mirror_push.sbatch": "65f4f29d0140b2ce3676ff8f61cfe601b5cea569c557ea7e803f3ecb0cb3b08e",
+  "nb.py": "db8488bdbc4baa02dd9ede2a052ffec42700c4534e3dd4d1184e4c20296e1187",
+  "pkgs.sbatch": "00c8e9a4968170bed1a72268a09d1136e0b2074ff8da6a27a34d450144d203de",
+  "pkgs2.sbatch": "a868bb665b7401b1cf1a90df752c48b89e1457ff31520ae090e5dfa7f2c0f167",
+  "pkgs3.sbatch": "24f08fe3277b8d27c0a04f2dc062cf0eeb1fa751fe5ab8f07a292c5b6866c48d",
+  "render_xs.py": "a0e256f070d117b38e091e10757a258f4a77b7fc7daeb5fa7d76128863f22b17",
+  "render_xs.sbatch": "bff1152cc5847cee7baffa35ce8747e066627e2846ebf3d2d1465cbfc48b7980",
+  "stage_cleandift.sbatch": "0ba5f25721808b68da2258f9081fba27870e6152b13e56fbfde6c24b6e4de2c8",
+  "stage_clusterB.py": "941d789c969a0803acc60d10ca71a1e282dd25a1e62fd80bfa57daf13b2200b9",
+  "stage_extras.sbatch": "94fb345f738b231007755a678baafc8cda4a9f6c44093b74d89884c6ed68c58a",
+  "stage_fix.sbatch": "4161b044c2dc2941549fa13db85d805bc100a5a28652eb112a12fc8f26509a88",
+  "stage_gated.sbatch": "136d7f4a232be1674648407fde12fb53d474774fc06a16aabbb62448edef4b2d",
+  "stage_ocr.sbatch": "8eacfc2c3223129686f668a1c68b60f1981d2b4c1aac6d834933f49ced015f50",
+  "stage_pe.sbatch": "84f9d929c523ca7bd7d6217dbc19853e0c26c7447c86d6cdd4e37cd98a81cfe5",
+  "stage_pecore.sbatch": "5bad819c71cf57fb2fb9a7bf082ff783f27e838acb57718e189b6843e20bfb25",
+  "stage_radio.sbatch": "8d7afefef2471ba80cfc7c84c30efa12a86379fba3a63056fb789cd32bd71c65",
+  "stage_variants.sbatch": "ddb6e6b7b9807982ddea55770837d1bb013bd4fe6e6895ddcae52f69b3a15d16",
+  "stage_xs.py": "ccf12bf0367d1576b92a55aaf8e64d73f869188dab9ddd5c010ada4806f16e97",
+  "stage_xs_v2b.py": "b123dcdf7bda8675cb97523e339c7b3c0f30c273524c7712717b4cbb2dcb0cb9",
+  "timing_a30.sbatch": "f7adc96b43d2e854b79445b8014a782049471e717b7c04566e02fc99bc1edfee",
+  "timing_a4000.sbatch": "67319b631c3d098468add52ca101ac459025b7279cd32a53cc2c356c615571a8",
+  "timing_a4000_ds.sbatch": "91ce0c10d12f6ac42fcae04b2ad7b418e8bab38dcaf26079b79472c24bd9ba18",
+  "timing_a4000b.sbatch": "039e8e6c071fbba7a377fba21a38f87beec5e4ff672139441a65622c13f2893d",
+  "timing_a4000c.sbatch": "71f2d103ba805ecdcdb237de226745f5d38fb8058038e6e78ce83499bc7d8a89",
+  "timsum.py": "2aead287efb2e459f3b038a8c96f362a208c036d3f1b0db7fddbab08e564d776",
+  "vps_verify.sbatch": "423abe17fca5f937dad5625ae1db2fd08d30015b24d47d13806132565be8fb48",
+  "xs_probe.py": "0ccce9a0e9d4a41d723e2dcb0733102b235750ebd9cb2d8fde78acf8538bf54f"
+ },
+ "xs_probe_versions_in_timing": [
+  "0ccce9a0e9d4",
+  "4b6291601bbf"
+ ],
+ "jobs": {
+  "clusterA_staging": [
+   24841106,
+   24841107,
+   24841108,
+   24841109,
+   24841110,
+   24841111,
+   24841114,
+   24842025,
+   24842361
+  ],
+  "clusterA_git": [
+   24841128,
+   24841674
+  ],
+  "clusterA_pkgs": [
+   24841619,
+   24841677,
+   24842323
+  ],
+  "clusterA_render": {
+   "run1": 24841130,
+   "final": 24841603
+  },
+  "clusterA_loadtests_completed": [
+   24841665,
+   24841670,
+   24841671,
+   24841672,
+   24842336,
+   24842339,
+   24842341,
+   24842342,
+   24842364,
+   24842365,
+   24842366,
+   24842368,
+   24842370,
+   24842374,
+   24842379,
+   24842564,
+   24842565,
+   24842658
+  ],
+  "clusterA_loadtests_cancelled": [
+   24841666,
+   24841668,
+   24842326
+  ],
+  "clusterA_timing_completed": [
+   24842562,
+   24843116,
+   24843117,
+   24843187
+  ],
+  "clusterA_timing_cancelled": [
+   24842474,
+   24842483,
+   24842484,
+   24842477,
+   24842563
+  ],
+  "clusterA_sizing": {
+   "luo_render_probe": 24842638,
+   "luo_render_probe_cancelled_slow_first_version": 24842569,
+   "repa_order": 24843166
+  },
+  "clusterA_hub": {
+   "push": [
+    24841888,
+    24843208,
+    24843292
+   ],
+   "vps_verify": 24842665
+  },
+  "clusterB": {
+   "failed_pull_job_no_key_on_compute_nodes": 3699811,
+   "setup_and_hf_download": 3699856,
+   "timing_cancelled": [
+    3699969,
+    3699970
+   ]
+  }
+ },
+ "deviations": [
+  "CLUSTER-B mirror of weights: public weights were downloaded directly from HF at the pinned revision and sha256-verified against the CLUSTER-A manifest (VPS hub blocked 13:35-15:05Z); DINOv3 weights not mirrored (licence)",
+  "A30 / A100 / H100 extraction rates not measured (jobs pending, cancelled); only A4000 measured",
+  "load tests are CPU/GPU load-test conventions, not the prereg extractors; DeepSeek-OCR runs with transformers 4.46.3 (pylibs_ds), everything else transformers 5.22.1",
+  "StarVector image encoder rebuilt from the repo's clip_model.py with fairscale stubbed (not via the starvector package)"
+ ]
+}

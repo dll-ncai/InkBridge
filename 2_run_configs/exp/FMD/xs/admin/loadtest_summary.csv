@@ -1,0 +1,119 @@
+test,status,token_map_hw_at_224,dtype,input_px,device,xs_probe_sha12,note_or_error
+aimv2-1b-patch14-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+aimv2-3b-patch14-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.bfloat16,,cpu,2e4d566186fd,
+aimv2-huge-patch14-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+aimv2-large-patch14-224-distilled,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+aimv2-large-patch14-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,4b6291601bbf,
+arabic-english-hw-ocr-v3,ok,"{""pre_merge"": [16, 16], ""last"": [8, 8]}",torch.bfloat16,224,cpu,2e4d566186fd,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+arabic-hw-ocr-4bit,error,null,,,cpu,2e4d566186fd,RuntimeError: AutoModelForImageTextToText: ImportError: Using `bitsandbytes` 4-bit quantization requires bitsandbytes: `pip install -U bitsandbytes>=0.46.1` | AutoModel: ImportError: Using `bitsandbytes` 4-bit quantization requires bitsandbytes: `pip install -U bitsandbytes>=0.46.1`
+arabic-ocr-deepseek-ocr-2,error,null,,,cpu,2e4d566186fd,RuntimeError: AutoModel/trc=False: ValueError: Loading $U/exp/FMD/xs/weights/arabic-ocr-deepseek-ocr-2 requires you to execute the configuration file in that repo on y | AutoModelForCausalLM/trc=False: ValueError: Loading $U/exp/FMD/xs/weights/arabic-ocr-deeps
+c-radiov3-b,ok,"{""last"": [14, 14]}",torch.float32,,cpu,,
+c-radiov3-g,ok,"{""last"": [14, 14]}",torch.float32,,cpu,,
+c-radiov3-h,ok,"{""last"": [14, 14]}",torch.float32,,cpu,,
+c-radiov3-l,ok,"{""last"": [14, 14]}",torch.float32,,cpu,,
+c-radiov4-h,ok,"{""last"": [14, 14]}",torch.float32,,cpu,,
+c-radiov4-so400m,ok,"{""last"": [14, 14]}",torch.float32,,cpu,,
+chandra-ocr-2,ok,"{""pre_merge"": [14, 14], ""last"": [7, 7]}",torch.bfloat16,224,cpu,1b06ba54987e,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+chandra,ok,"{""pre_merge"": [14, 14], ""last"": [7, 7]}",torch.bfloat16,224,cpu,1b06ba54987e,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+cleandift-sd15,ok,"{""up1"": [32, 32], ""up2"": [64, 64]}",float32,512,cpu,,"LOAD-TEST ONLY: clean latent (posterior mean), t=0, empty prompt, up_block outputs (full UNet forward; no early stop)"
+cleandift-sd21,ok,"{""up1"": [48, 48], ""up2"": [96, 96]}",float32,768,cpu,,"LOAD-TEST ONLY: clean latent (posterior mean), t=0, empty prompt, up_block outputs (full UNet forward; no early stop)"
+deepseek-ocr-2,loaded_no_extractor,null,,,cpu,4b6291601bbf,"NotImplementedError: DeepSeek-OCR-2 loaded (class DeepseekOCR2Model, encoder modules ['embed_tokens', 'layers', 'norm', 'sam_model', 'qwen2_model', 'projector']); its encoder is SAM + Qwen2 decoder-as-encoder (no CLIP vision_model) - extractor not written"
+deepseek-ocr,ok,"{""sam_last"": [4, 4], ""clip_last"": [4, 4]}",torch.bfloat16,,cpu,,"DeepSeek-OCR DeepEncoder; first tries 224 px direct, then 512 px (Tiny mode native)"
+depth-anything-3-base,error,null,,,cpu,2e4d566186fd,RuntimeError: AutoModel/trc=False: ValueError: Unrecognized model in $U/exp/FMD/xs/weights/depth-anything-3-base. Should have a `model_type` key in its config.json. | AutoModelForCausalLM/trc=False: ValueError: Unrecognized model in $U/exp/FMD/xs/weights/depth
+depth-anything-3-giant-1.1,error,null,,,cpu,2e4d566186fd,RuntimeError: AutoModel/trc=False: ValueError: Unrecognized model in $U/exp/FMD/xs/weights/depth-anything-3-giant-1.1. Should have a `model_type` key in its config.jso | AutoModelForCausalLM/trc=False: ValueError: Unrecognized model in $U/exp/FMD/xs/weights/de
+depth-anything-3-large-1.1,error,null,,,cpu,,RuntimeError: AutoModel: ValueError: Unrecognized model in $U/exp/FMD/xs/weights/depth-anything-3-large-1.1. Should have a `model_type` key in its config.json. | AutoModelForCausalLM: ValueError: Unrecognized model in $U/exp/FMD/xs/weights/depth-anything-3-lar
+depth-anything-v2-large,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,0ccce9a0e9d4,
+dinov2-base,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+dinov2-giant,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+dinov2-large,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,,
+dinov2-reg-base,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+dinov2-reg-giant,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+dinov2-reg-large,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,,
+dinov2-reg-small,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+dinov3-convnext-base,ok,"{""last"": [7, 7], ""mid"": [14, 14]}",torch.float32,,cpu,,
+dinov3-convnext-large,ok,"{""last"": [7, 7], ""mid"": [14, 14]}",torch.float32,,cpu,,
+dinov3-convnext-small,ok,"{""last"": [7, 7], ""mid"": [14, 14]}",torch.float32,,cpu,,
+dinov3-convnext-tiny,ok,"{""last"": [7, 7], ""mid"": [14, 14]}",torch.float32,,cpu,,
+dinov3-vit7b16-sat493m,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.bfloat16,,cpu,2e4d566186fd,
+dinov3-vit7b16,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.bfloat16,,cpu,0ccce9a0e9d4,
+dinov3-vitb16,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,,
+dinov3-vith16plus,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,,
+dinov3-vitl16-sat493m,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,2e4d566186fd,
+dinov3-vitl16,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,,
+dinov3-vits16,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,,
+dinov3-vits16plus,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,,
+dots-ocr-base,loaded_no_extractor,null,,,cpu,2e4d566186fd,"NotImplementedError: instantiate-only: DotsOCRForCausalLM (AutoModelForCausalLM, trust_remote_code=True) loaded, 3039179264 params; no feature-extraction loader written"
+dots-ocr,loaded_no_extractor,null,,,cpu,2e4d566186fd,"NotImplementedError: instantiate-only: DotsOCRForCausalLM (AutoModelForCausalLM, trust_remote_code=True) loaded, 3039179264 params; no feature-extraction loader written"
+florence-2-base,ok,"{""last"": [7, 7]}",torch.float32,,cpu,2e4d566186fd,"LOAD-TEST ONLY: DaViT tokens at 224 px input (native 768 px), pre-projection"
+florence-2-large-ft,ok,"{""last"": [7, 7]}",torch.float32,,cpu,2e4d566186fd,"LOAD-TEST ONLY: DaViT tokens at 224 px input (native 768 px), pre-projection"
+florence-2-large,error,null,,,cpu,,RuntimeError: AutoModel: AttributeError: 'Florence2LanguageConfig' object has no attribute 'forced_bos_token_id' | AutoModelForCausalLM: AttributeError: 'Florence2LanguageConfig' object has no attribute 'forced_bos_token_id' | AutoModelForImageTextToText: AttributeError: 'Florence2LanguageConfig' ob
+flux1-dev,ok,"{""mid"": [32, 32], ""last_double"": [32, 32]}",torch.bfloat16,512,cpu,2e4d566186fd,"LOAD-TEST ONLY: VAE latent, rectified-flow noise sigma=0.25, empty prompt (T5 max 64 tok), full forward; mid = double-stream block nb//2 image tokens"
+flux1-schnell,ok,"{""mid"": [32, 32], ""last_double"": [32, 32]}",torch.bfloat16,512,cpu,2e4d566186fd,"LOAD-TEST ONLY: VAE latent, rectified-flow noise sigma=0.25, empty prompt (T5 max 64 tok), full forward; mid = double-stream block nb//2 image tokens"
+got-ocr2-hf,loaded_no_extractor,null,,,cpu,,"NotImplementedError: instantiate-only: GotOcr2Model (AutoModel) loaded, 560528640 params; no feature-extraction loader written (extras tier)"
+lightonocr-2-1b,loaded_no_extractor,null,,,cpu,,"NotImplementedError: instantiate-only: Mistral3Model (AutoModel) loaded, 1005647872 params; no feature-extraction loader written (extras tier)"
+lightonocr-3-0.8b,ok,"{""pre_merge"": [14, 14], ""last"": [7, 7]}",torch.bfloat16,224,cpu,1b06ba54987e,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+lightonocr-3-4b,ok,"{""pre_merge"": [14, 14], ""last"": [7, 7]}",torch.bfloat16,224,cpu,1b06ba54987e,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+paddleocr-vl-1.0,loaded_no_extractor,null,,,cpu,1b06ba54987e,"NotImplementedError: instantiate-only: PaddleOCRVLModel (AutoModel, trust_remote_code=False) loaded, 799695472 params; no feature-extraction loader written"
+paddleocr-vl-1.5,loaded_no_extractor,null,,,cpu,1b06ba54987e,"NotImplementedError: instantiate-only: PaddleOCRVLModel (AutoModel, trust_remote_code=False) loaded, 799695472 params; no feature-extraction loader written"
+paddleocr-vl-1.6,error,null,,,cpu,,RuntimeError: AutoModel: KeyError: 'default' | AutoModelForCausalLM: KeyError: 'default' | AutoModelForImageTextToText: AttributeError: 'PaddleOCRVisionConfig' object has no attribute 'rope_parameters' | AutoModelForVision2Seq: AttributeError: module transformers has no attribute AutoModelForVision2
+pe-core-b16-224,ok,"{""last"": [14, 14]}",torch.float32,,cpu,0ccce9a0e9d4,
+pe-core-g14-448,ok,"{""last"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+pe-core-l14-336,ok,"{""last"": [16, 16]}",torch.float32,,cpu,0ccce9a0e9d4,
+pe-lang-g14-448,ok,"{""last"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+pe-lang-l14-448,ok,"{""last"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+pe-spatial-b16-512,ok,"{""last"": [14, 14]}",torch.float32,,cpu,,
+pe-spatial-g14-448,ok,"{""last"": [16, 16]}",torch.float32,,cpu,,
+pe-spatial-l14-448,ok,"{""last"": [16, 16]}",torch.float32,,cpu,,
+pe-spatial-s16-512,ok,"{""last"": [14, 14]}",torch.float32,,cpu,,
+pe-spatial-t16-512,ok,"{""last"": [14, 14]}",torch.float32,,cpu,,
+qaari-urdu-vision,ok,"{""pre_merge"": [16, 16], ""last"": [8, 8]}",torch.bfloat16,224,cpu,,"vision tower of Qwen2-VL; 224 px -> 16x16 patches (pre-merge), 8x8 after 2x2 merger"
+qari-ocr-0.4.0-vl-4b-vision,ok,"{""pre_merge"": [14, 14], ""last"": [7, 7]}",torch.bfloat16,224,cpu,2e4d566186fd,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+qari-ocr-v0.3-vl-2b,ok,"{""pre_merge"": [16, 16], ""last"": [8, 8]}",torch.bfloat16,224,cpu,2e4d566186fd,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+qwen2-vl-2b-instruct,ok,"{""pre_merge"": [16, 16], ""last"": [8, 8]}",torch.bfloat16,224,cpu,0ccce9a0e9d4,"vision tower of Qwen2-VL; 224 px -> 16x16 patches (pre-merge), 8x8 after 2x2 merger"
+qwen2.5-vl-3b-instruct,ok,"{""pre_merge"": [16, 16], ""last"": [8, 8]}",torch.bfloat16,224,cpu,2e4d566186fd,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+qwen3-vl-4b-instruct,ok,"{""pre_merge"": [14, 14], ""last"": [7, 7]}",torch.bfloat16,224,cpu,2e4d566186fd,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+sam3.1,error,null,,,cpu,2e4d566186fd,"RuntimeError: Sam3Model: OSError: Error no file named model.safetensors, or pytorch_model.bin, found in directory $U/exp/FMD/xs/weights/sam3.1. | AutoModel: OSError: Error no file named model.safetensors, or pytorch_model.bin, found in directory $U/exp/FMD/xs/"
+sam3,ok,"{""last"": [72, 72]}",torch.float32,,cpu,2e4d566186fd,
+sd21-dift-gate,ok,"{""t261_up1"": [48, 48]}",float32,768,cpu,,
+sd3-medium-diffusers,ok,"{""mid"": [32, 32], ""last"": [32, 32]}",torch.bfloat16,512,cpu,2e4d566186fd,"LOAD-TEST ONLY: VAE latent (shift/scale), flow noise sigma=0.25 fixed eps, empty prompt, full transformer forward; mid = block nb//2 image tokens, last = last block image tokens"
+sd3.5-large-diffusers-layout,ok,"{""s0.261_block19"": [64, 64], ""s0.261_block28"": [64, 64], ""s0.101_block19"": [64, 64], ""s0.101_block28"": [64, 64]}",torch.bfloat16,1024,cpu,2e4d566186fd,"prereg A3.a/A3.c DiT convention (1024 px, VAE latent, flow s 0.261/0.101, empty prompt x3 text encoders, seed 0); LOAD-TEST uses 1 noise draw(s) instead of 4; forward stopped after block floor(3N/4)"
+sd3.5-large-turbo-diffusers-layout,ok,"{""s0.261_block19"": [64, 64], ""s0.261_block28"": [64, 64], ""s0.101_block19"": [64, 64], ""s0.101_block28"": [64, 64]}",torch.bfloat16,1024,cpu,2e4d566186fd,"prereg A3.a/A3.c DiT convention (1024 px, VAE latent, flow s 0.261/0.101, empty prompt x3 text encoders, seed 0); LOAD-TEST uses 1 noise draw(s) instead of 4; forward stopped after block floor(3N/4)"
+sd3.5-medium-diffusers-layout,ok,"{""s0.261_block12"": [64, 64], ""s0.261_block18"": [64, 64], ""s0.101_block12"": [64, 64], ""s0.101_block18"": [64, 64]}",torch.bfloat16,1024,cpu,2e4d566186fd,"prereg A3.a/A3.c DiT convention (1024 px, VAE latent, flow s 0.261/0.101, empty prompt x3 text encoders, seed 0); LOAD-TEST uses 1 noise draw(s) instead of 4; forward stopped after block floor(3N/4)"
+siglip2-giant-opt-patch16-256,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,0ccce9a0e9d4,
+siglip2-giant-opt-patch16-384,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,0ccce9a0e9d4,
+siglip2-large-patch16-256,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,2e4d566186fd,
+siglip2-so400m-patch14-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,,
+siglip2-so400m-patch16-256,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,2e4d566186fd,
+starcoder2-7b,error,null,,,cpu,2e4d566186fd,"NotImplementedError: load-only: Starcoder2ForCausalLM (AutoModelForCausalLM) loaded, 7173923840 params; code LM, no image tokens"
+starvector-1b-im2svg,ok,"{""last"": [16, 16]}",float32,224,cpu,,encoder re-built from starvector repo clip_model.py (fairscale checkpoint_wrapper stubbed; commit in MANIFEST github list); weights = model.image_encoder.* of starvector-1b-im2svg
+starvector-8b-im2svg,ok,"{""last"": [14, 14]}",float32,,cpu,1b06ba54987e,weights = model.image_encoder.visual_encoder.* of starvector-8b-im2svg; post_layernorm/head keys may be absent
+surya-ocr-2-persian-hw,ok,"{""pre_merge"": [14, 14], ""last"": [7, 7]}",torch.bfloat16,224,cpu,2e4d566186fd,vision tower only; 224 px -> patch grid (pre_merge) and 2x2-merged grid (last)
+theia-base-cddsv,ok,"{""last"": [14, 14]}",torch.float32,,cpu,2e4d566186fd,
+theia-base-cdiv,ok,"{""last"": [14, 14]}",torch.float32,,cpu,2e4d566186fd,
+theia-small-cdiv,ok,"{""last"": [14, 14]}",torch.float32,,cpu,2e4d566186fd,
+theia-tiny-cddsv,ok,"{""last"": [14, 14]}",torch.float32,,cpu,2e4d566186fd,
+theia-tiny-cdiv,ok,"{""last"": [14, 14]}",torch.float32,,cpu,2e4d566186fd,
+tipsv1-b14,ok,"{""last"": [16, 16]}",torch.float32,,cpu,1b06ba54987e,
+tipsv1-g14,ok,"{""last"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+tipsv1-l14,ok,"{""last"": [16, 16]}",torch.float32,,cpu,1b06ba54987e,
+tipsv1-s14,ok,"{""last"": [16, 16]}",torch.float32,,cpu,1b06ba54987e,
+tipsv1-so400m14,ok,"{""last"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+tipsv2-b14,ok,"{""last"": [16, 16]}",torch.float32,,cpu,0ccce9a0e9d4,
+tipsv2-g14,ok,"{""last"": [16, 16]}",torch.float32,,cpu,,
+tipsv2-l14,ok,"{""last"": [16, 16]}",torch.float32,,cpu,0ccce9a0e9d4,
+tipsv2-so400m14,ok,"{""last"": [16, 16]}",torch.float32,,cpu,0ccce9a0e9d4,
+trocr-base-handwritten,ok,"{""last"": [24, 24]}",torch.float32,384,cpu,1b06ba54987e,
+trocr-base-hw-hist-swe-2,ok,"{""last"": [24, 24]}",torch.float32,384,cpu,2e4d566186fd,
+trocr-large-handwritten,ok,"{""last"": [24, 24]}",torch.float32,384,cpu,,
+trocr-small-handwritten,ok,"{""last"": [24, 24]}",torch.float32,384,cpu,1b06ba54987e,
+unsloth-deepseek-ocr,error,null,,,cpu,,RuntimeError: AutoModel: ImportError: cannot import name 'DeepseekV2Model' from 'transformers' ($U/exp/FMD/xs/pylibs_ds/transformers/__init__.py) | AutoModelForCausalLM: ImportError: cannot import name 'DeepseekV2Model' from 'transformers' ($U/exp/FMD/xs/pylib
+vit-mae-large,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,4b6291601bbf,
+webssl-dino1b-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,,
+webssl-dino2b-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,1b06ba54987e,
+webssl-dino300m-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,1b06ba54987e,
+webssl-dino3b-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.bfloat16,,cpu,2e4d566186fd,
+webssl-dino5b-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.bfloat16,,cpu,1b06ba54987e,
+webssl-dino7b-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.bfloat16,,cpu,2e4d566186fd,
+webssl-mae1b-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.float32,,cpu,2e4d566186fd,
+webssl-mae300m-224,ok,"{""last"": [14, 14], ""mid"": [14, 14]}",torch.float32,,cpu,4b6291601bbf,
+webssl-mae3b-224,ok,"{""last"": [16, 16], ""mid"": [16, 16]}",torch.bfloat16,,cpu,2e4d566186fd,

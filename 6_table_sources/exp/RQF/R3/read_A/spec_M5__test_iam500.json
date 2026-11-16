@@ -1,0 +1,43 @@
+{
+ "set": "test_iam500",
+ "cells": {
+  "COMP_pool3": {
+   "device": "NVIDIA GeForce RTX 4090",
+   "files": {
+    "00": "$U/exp/D3_ROUTE/stageA/score_out/rows/test_iam500__M5_joint_ms9__seed0__rows031.csv",
+    "01": "$U/exp/D3_ROUTE/stageA/score_out/rows/test_iam500__M5_joint_ms9__seed1__rows031.csv",
+    "02": "$U/exp/D3_ROUTE/stageA/score_out/rows/test_iam500__M5_joint_ms9__seed2__rows031.csv"
+   }
+  },
+  "COMP_rep3": {
+   "device": "NVIDIA GeForce RTX 4090",
+   "files": {
+    "00": "$U/exp/RQF/R3/score_out/rows/test_iam500__M5_joint_ms9_rep3__seed0__rows031.csv",
+    "01": "$U/exp/RQF/R3/score_out/rows/test_iam500__M5_joint_ms9_rep3__seed0__rows031.csv",
+    "02": "$U/exp/RQF/R3/score_out/rows/test_iam500__M5_joint_ms9_rep3__seed0__rows031.csv"
+   }
+  },
+  "COMP_rnd3": {
+   "device": "NVIDIA GeForce RTX 4090",
+   "files": {
+    "00": "$U/exp/RQF/R3/score_out/rows/test_iam500__M5_joint_ms9_rnd3__seed0__rows031.csv",
+    "01": "$U/exp/RQF/R3/score_out/rows/test_iam500__M5_joint_ms9_rnd3__seed0__rows031.csv",
+    "02": "$U/exp/RQF/R3/score_out/rows/test_iam500__M5_joint_ms9_rnd3__seed0__rows031.csv"
+   }
+  }
+ },
+ "contrasts": [
+  [
+   "COMP_rep3",
+   "COMP_pool3"
+  ],
+  [
+   "COMP_rnd3",
+   "COMP_pool3"
+  ],
+  [
+   "COMP_rep3",
+   "COMP_rnd3"
+  ]
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "script": "rqf_paired_ext.py",
+ "B": 2000,
+ "seed": 0,
+ "methods": {
+  "lineHT_d4": {
+   "device": "RTX 4090",
+   "note": "3 train seeds x 3 sampling seeds, per-unit mean",
+   "n_files": 9,
+   "n_units": 4406,
+   "n_writers": 32,
+   "files_sha256": {
+    "test_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_s20261031_ms4_thr0p5_4090__seed0__rows031.csv": "e01775d7e31e1e18acb87c0a18bc263637ce9f98a0dcd2317099580883b25d3e",
+    "test_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_s20261031_ms4_thr0p5_4090__seed1__rows031.csv": "b726ce549b8bb20cf37d5a73a70016582f7f8f3214e8d69870c82a58d2a68aaa",
+    "test_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_s20261031_ms4_thr0p5_4090__seed2__rows031.csv": "a2b7706ddd9ba3ba7672c71209c571363a78799d14748d30f7100958732dbfea",
+    "test_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_s20261032_ms4_thr0p5_4090__seed0__rows031.csv": "65aaffde7847da9339d5c93248813c59fc9487da41f1dcac4dce54450375178b",
+    "test_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_s20261032_ms4_thr0p5_4090__seed1__rows031.csv": "7562842b5849b8bbaff9303a574125fbdd1bf83c24b8ad107dccbe52c1ee57e7",
+    "test_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_s20261032_ms4_thr0p5_4090__seed2__rows031.csv": "aa98023b0e4f648a1b26d6ea5c1c544651e98fb38af4a1a63d25e4d3b0903415",
+    "test_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_s20261033_ms4_thr0p5_4090__seed0__rows031.csv": "bc5eef104a44ca0d5bb5bce562e4f57a2ad14a4ab42ff08976c3b35f82900f84",
+    "test_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_s20261033_ms4_thr0p5_4090__seed1__rows031.csv": "0f6fbde8f671bb5d6c9755b9cc98fc2d690b3a3064cc0c42f145b9c606825b54",
+    "test_ouhdl__lineHT_d4_initS30_temporal_r16_tconv_r16_tmlp_r16_s20261033_ms4_thr0p5_4090__seed2__rows031.csv": "a2f0e36d22e90c00d438b7478cef27ce12af7de2cd83c4dd0cf24d8d99798a9d"
+   },
+   "rows_per_unit_median": 9.0
+  },
+  "LineT_d4": {
+   "device": "RTX 4090",
+   "note": "3 train seeds x 3 sampling seeds",
+   "n_files": 9,
+   "n_units": 4406,
+   "n_writers": 32,
+   "files_sha256": {
+    "test_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261031_ms4_thr0p5_4090__seed0__rows031.csv": "64d22d2bc3616a946b65b1d9ca6d8c1b191ceedbef91039da8f013faa38392c9",
+    "test_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261031_ms4_thr0p5_4090__seed1__rows031.csv": "e3cd2d8ebf09433dfbbe9ec3a955f443bfa7cd17800e674da2141c18a8128c91",
+    "test_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261031_ms4_thr0p5_4090__seed2__rows031.csv": "eb951c48bd2f29f654c69d25d03115b72e6d818163b50d53898107b2d9543dfa",
+    "test_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261032_ms4_thr0p5_4090__seed0__rows031.csv": "6349b870f4b5fa6167904979e1919244b0b20787868a96cfc66f82a875347cbd",
+    "test_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261032_ms4_thr0p5_4090__seed1__rows031.csv": "b63730ae81a372f329aaaf59c05289dfd0137b51eddfccd47f131adb00127a82",
+    "test_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261032_ms4_thr0p5_4090__seed2__rows031.csv": "cbeb8b8ba3eeaf93e0ba1697b82bf7fd73e9beaaef31c411d9bf37daa702d969",
+    "test_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261033_ms4_thr0p5_4090__seed0__rows031.csv": "60a7dc4d0e9ac11859caa3f3d91ec9cc67fd7a936dd9e3a0188200a977be2ade",
+    "test_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261033_ms4_thr0p5_4090__seed1__rows031.csv": "7189ab82c96c2e99c0a5b420b7de8ff83a7114a0f0a3d61d4d518d90ab197d80",
+    "test_ouhdl__lineT_d4_temporal_r16_tconv_r16_tmlp_r16_s20261033_ms4_thr0p5_4090__seed2__rows031.csv": "dc748e3193efefc5dd25d078d6b63d9c5c0a15f37bbe85960cf4bee0f9690344"
+   },
+   "rows_per_unit_median": 9.0
+  },
+  "COMP_rep3": {
+   "device": "RTX 4090 (verifier on CPU)",
+   "note": "verifier output, 3 training seeds, seed0 file each",
+   "n_files": 3,
+   "n_units": 4406,
+   "n_writers": 32,
+   "files_sha256": {
+    "test_ouhdl__comp_p01_identity_s20261034_vps_ms3_identity_rep3__seed0__rows031.csv": "96973f27e71e6d2a2d4670aec9d6a6461dafd4b54f1499f018456b891aceba26",
+    "test_ouhdl__comp_p01_identity_s20261035_ms3_identity_rep3__seed0__rows031.csv": "fe90eda9f5472307ea8974b1253da5d84962c33aab4ba5d0fc3bf0f5978381ac",
+    "test_ouhdl__comp_p01_identity_s20261036_ms4_identity_rep3__seed0__rows031.csv": "474d4e4a725f2bc3167151a668b8f49bdd74a76d73ae941d9c4bb19250a9d2aa"
+   },
+   "rows_per_unit_median": 3.0
+  },
+  "NOFM_W_FT": {
+   "device": "RTX A4000",
+   "note": "1 FT seed, 3 sampling seeds",
+   "n_files": 3,
+   "n_units": 4406,
+   "n_writers": 32,
+   "files_sha256": {
+    "test_ouhdl__NOFM_W_ft_ms1__seed0__rows031.csv": "000285b5483c68b7d0329f0c6d84d7c9989c0b6bf9d888e93770d6fbed02ff24",
+    "test_ouhdl__NOFM_W_ft_ms1__seed1__rows031.csv": "366d0acc62a619f98784fed05c72f2c1a1babc48dc7a40998e1f8ac4e9a0dd82",
+    "test_ouhdl__NOFM_W_ft_ms1__seed2__rows031.csv": "d17a09155dc6b198504efe8481a73e6c2778a5deb8ae58e1154f084f6443c3a2"
+   },
+   "rows_per_unit_median": 3.0
+  },
+  "PEINIT_W_FT": {
+   "device": "RTX A4000",
+   "note": "1 FT seed, 3 sampling seeds",
+   "n_files": 3,
+   "n_units": 4406,
+   "n_writers": 32,
+   "files_sha256": {
+    "test_ouhdl__PEINIT_W_ft_ms2__seed0__rows031.csv": "7d739e1cae60ce57fca4909e7de001fa78559135361eb71863b7277f59fa82d1",
+    "test_ouhdl__PEINIT_W_ft_ms2__seed1__rows031.csv": "4f56f582721d67f3fa476b420997755cf1c12abbaf24ea88f5e0721bb225a05c",
+    "test_ouhdl__PEINIT_W_ft_ms2__seed2__rows031.csv": "65fdc18a54a0a3938147aa147f39c662bfe94ef78e387b3fea4865f6a58d15db"
+   },
+   "rows_per_unit_median": 3.0
+  },
+  "E0scratch_p01": {
+   "device": "CLUSTER-A GPU",
+   "note": "E0 from scratch on p01, ms10, 3 sampling seeds",
+   "n_files": 3,
+   "n_units": 4406,
+   "n_writers": 32,
+   "files_sha256": {
+    "test_ouhdl__E0scratch_p01_ms10__seed0__rows031.csv": "a37ceabbff754ff899a38748307552b3b4381750d2aac3c24b2a1a2504cba076",
+    "test_ouhdl__E0scratch_p01_ms10__seed1__rows031.csv": "3f8a51bcc981e729486d4450433c38beb85453ddc90c35f90cf8d9263738d594",
+    "test_ouhdl__E0scratch_p01_ms10__seed2__rows031.csv": "8a339c90db394116ef5d3390220bcb36185bad41585af211005966fbdde0c8e1"
+   },
+   "rows_per_unit_median": 3.0
+  },
+  "PEN-Net": {
+   "device": "n/a",
+   "note": "greedy ms10 rendered input; evaluator per PENNET/results/uhwr_eval_version.txt",
+   "n_files": 1,
+   "n_units": 4406,
+   "n_writers": 32,
+   "files_sha256": {
+    "test_rendered_ms10_rows.csv": "75b979c4e2ca7ce9ba6a40686ccb38a22e4ed8301e7c1d77e05da082011e5fc1"
+   },
+   "rows_per_unit_median": 1.0
+  },
+  "InkSight_e0r": {
+   "device": "",
+   "note": "Small-p zero-shot, e0r crops, rendered",
+   "n_files": 1,
+   "n_units": 4406,
+   "n_writers": 32,
+   "files_sha256": {
+    "inksight_e0r_rendered_rows.csv": "dd7a16037fb071cd65c0f30aef1d73740230d78a72c9d64b3e73eb8b85a91b9b"
+   },
+   "rows_per_unit_median": 1.0
+  },
+  "InkSight_g1f4": {
+   "device": "",
+   "note": "Small-p zero-shot, g1 f=4 crops, rendered",
+   "n_files": 1,
+   "n_units": 4406,
+   "n_writers": 32,
+   "files_sha256": {
+    "inksight_g1f4_rendered_rows.csv": "cc6e48588d145aac620416e9828bb3b30dd846da7ff8342c7e400e47adaa1039"
+   },
+   "rows_per_unit_median": 1.0
+  }
+ },
+ "common_units": 4406,
+ "trace_file": {
+  "path": "$U/exp/L4_TRACE/out/per_line_L4_TRACE_uhwr_eval031.csv",
+  "sha256": "77b7f5a3f98b812ec53515973ebe3d0ff2416712dc19d400dca6d73924fbbdb9"
+ },
+ "note_trace": "TRACE is line-level (line protocol, ink height 56 px); nominee unit rows averaged per line; not same-protocol, descriptive"
+}

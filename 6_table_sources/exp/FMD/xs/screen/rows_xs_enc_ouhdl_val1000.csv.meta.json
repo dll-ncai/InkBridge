@@ -1,0 +1,474 @@
+{
+ "schema": "fmd_meta/1",
+ "kind": "fmdx_screen_rows",
+ "created_utc": "2026-11-07T21:51:57Z",
+ "harness": "fmd_harness 1.0.1 (2026-11-03)",
+ "code": {
+  "files": {
+   "__init__.py": "f581d5af5778742b4eb69ec9f8699034e38bbe895cde1b0a9fe6441f90541ae9",
+   "common.py": "7077a5455467d58a6051626f0e46c8461ccd4f22ad65d71d0902b2013e7e5825",
+   "extract_api.py": "9fe0a016954fc7ea593e9e511271dfa6c9444eaa53e917d4122d6826096f65b4",
+   "probe.py": "f46cee77ea4224727a73fb5af24845426c95d4bac8cbb5cf03adab996439bc06",
+   "render.py": "50303289b0970d6dc1f17407b47575d253629dfad2ffeabb6ccf135621e90e13",
+   "screen_rows.py": "7d8d984efa15e3aca90126a93496e06986a752e378ef320336d4716a4ab96b0d",
+   "stats.py": "10588a049a7cc52d23d1c64331654eefb041cdade32f693187fbd4feb78e45c0",
+   "targets.py": "17f32a3f96d8d4dc3a638e28f83900f1eac64c4981a06234f49ed619eeeb11df",
+   "unitsets.py": "87eac299efcf0e491d923988eeada5b4170d754aa07c5aa85aa76856c4ed6464",
+   "verify_staging.py": "fc76ff6e092455cf12af5d024d3b0b5e1bfc333965ff3b822b1985366e633918"
+  },
+  "combined": "01c8074aab9f4c987265d10c38aa2cbfdf622227c4bbb67cc8c1a72049f1ab9c"
+ },
+ "command": "$U/exp/FMD/code/fmd_harness_xs/fmd_harness_xs/xs_rows.py --set ouhdl_val1000 --track encoders --refresh-set",
+ "env": {
+  "python": "3.11.13",
+  "host": "<node>",
+  "platform": "Linux-5.14.0-687.61.1.el9_8.x86_64-x86_64-with-glibc2.35",
+  "slurm_job_id": "24850422",
+  "numpy": "2.2.6",
+  "torch": "2.7.1+cu128",
+  "cv2": "4.12.0"
+ },
+ "inputs": {
+  "part aimv2-1b-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/aimv2-1b-patch14-224.json",
+   "sha256": "4746c6eee9c0883ac0ac310ca41ae346d51f8a2be512a8a7a48b1a819c89c62f"
+  },
+  "part aimv2-3b-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/aimv2-3b-patch14-224.json",
+   "sha256": "6bbf62d962e497baaffe8ca84805a86820f771545d9031d428ac6eb6d4004b13"
+  },
+  "part aimv2-huge-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/aimv2-huge-patch14-224.json",
+   "sha256": "fe08674188ed3c0cb703b6978ae049e37f5bdd2bcdfd8f7fe3972fe60df68901"
+  },
+  "part aimv2-large-patch14-224-distilled": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/aimv2-large-patch14-224-distilled.json",
+   "sha256": "88552a578660c9cd860d03bf254958b60976a15540acc7edc1ce52e0f6557716"
+  },
+  "part aimv2-large-patch14-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/aimv2-large-patch14-224.json",
+   "sha256": "9f721a6551b9cf068910f0c6654805e8585f62c60c38a92f694d087fd93f303d"
+  },
+  "part c-radiov3-b": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/c-radiov3-b.json",
+   "sha256": "ade09be4813eb7c5eec4304cf019193f6f45d3302be71a21940eda3853494d2f"
+  },
+  "part c-radiov3-g": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/c-radiov3-g.json",
+   "sha256": "2320a9b84b14c578a558309ae17c6b9895b748364e37031885d953354bb95c16"
+  },
+  "part c-radiov3-h": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/c-radiov3-h.json",
+   "sha256": "8876c4afb4a76df5f8d7e14f29da48b9262e3063b9269b526703e799aa8b0dfd"
+  },
+  "part c-radiov3-l": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/c-radiov3-l.json",
+   "sha256": "dc72a0d98ce36cd90630bfd4a4e1b7a0cebd806e912b06350c2677f71849648d"
+  },
+  "part c-radiov4-h": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/c-radiov4-h.json",
+   "sha256": "cd062913742a51f3b52146309ca7eafa4a5abbf35c73c40a47459de64c664c30"
+  },
+  "part c-radiov4-so400m": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/c-radiov4-so400m.json",
+   "sha256": "a9eee2760ffda336e53403fdb97b2547b480067757d18b7626f8e7aee5784ebe"
+  },
+  "part depth-anything-3-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/depth-anything-3-base.json",
+   "sha256": "8b54b7a54e8cc56eee35f0e802e8aa084241460c18a04a82c7db9a62ee249376"
+  },
+  "part depth-anything-3-giant-1.1": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/depth-anything-3-giant-1.1.json",
+   "sha256": "5caf369d4ffdf50cc8b19023e520bce079813cdc47a8c6e0c04d258c5c5666bb"
+  },
+  "part depth-anything-3-large-1.1": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/depth-anything-3-large-1.1.json",
+   "sha256": "c9c030581bd62cd3ebcc1bc8f4d9c1cb437a5ae1fccf281b128bc63cf1202b95"
+  },
+  "part depth-anything-v2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/depth-anything-v2-large.json",
+   "sha256": "b0172d24a792de6155f616814298cf2713feed40fc212587cef100118d73835d"
+  },
+  "part dinov2-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov2-base.json",
+   "sha256": "1ca289a294b9ca9acff2e83c4e16e2d785d6247a8d3279bc37f4ea7b92ba7715"
+  },
+  "part dinov2-giant": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov2-giant.json",
+   "sha256": "0abeb8dff8879112b616d70152e3911cbd141e326beb417fd50c3ba5ec29a4e5"
+  },
+  "part dinov2-reg-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov2-reg-base.json",
+   "sha256": "d1b187056a3c80b7d820131cad8a28193baa7bf5bbcb679e066a4dc6f8ffd51f"
+  },
+  "part dinov2-reg-giant": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov2-reg-giant.json",
+   "sha256": "27a24e69d43d76b59d5b60d8bd5a37b2631c85e910efe4505c04d48a0d4617e0"
+  },
+  "part dinov2-reg-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov2-reg-large.json",
+   "sha256": "1e6897d5e16ebce84c3eedd8ba3b67ccb58325e6e942907f79dc3f3778f3be9d"
+  },
+  "part dinov2-reg-small": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov2-reg-small.json",
+   "sha256": "a189e8ffd32f5dbdc64e1f6e390f1da6b800785d6a3793b5c7a0501582993f67"
+  },
+  "part dinov3-convnext-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-convnext-base.json",
+   "sha256": "f503cfe9182202f1da265faa3b32461bb258570a36cd6d73e3c0471cd0542774"
+  },
+  "part dinov3-convnext-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-convnext-large.json",
+   "sha256": "abe7597309f71599a637443f513aaefa2b45cfc2508b70673db59cdd18ba7f6c"
+  },
+  "part dinov3-convnext-small": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-convnext-small.json",
+   "sha256": "9abfa483890ef5b3d7c1afb9568b8abf1bd9a91ba5f069e206428158ceabb7ef"
+  },
+  "part dinov3-convnext-tiny": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-convnext-tiny.json",
+   "sha256": "fd28dcdea4f900e9ae1a2832edddbc1628b1ceb398a0ecff79d41a13c15d250e"
+  },
+  "part dinov3-vit7b16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-vit7b16.json",
+   "sha256": "c21b51361afd06fff0b69daa4ce68e2c20f2eb5d84ba68862bfa39004a9ce966"
+  },
+  "part dinov3-vitb16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-vitb16.json",
+   "sha256": "4f2daa7b7ab0817927573605ae6f26151e7af6c6662513695e4474a24bdd489d"
+  },
+  "part dinov3-vith16plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-vith16plus.json",
+   "sha256": "6ac8294e7bf6a7cf198850bba4735fa676c8703802c251e133f413dedd203478"
+  },
+  "part dinov3-vitl16-sat493m": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-vitl16-sat493m.json",
+   "sha256": "f13c07ae8c75c339d2f21f9c7d7a3abac29d6f03d99c3a37969c9a365823dc61"
+  },
+  "part dinov3-vits16": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-vits16.json",
+   "sha256": "9d2e91cca5d76854a0ec79ed47d67ee91410834f058d2f4b46ac105e20bedd3e"
+  },
+  "part dinov3-vits16plus": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/dinov3-vits16plus.json",
+   "sha256": "33e4b89c9592e6d3dc9df510c7a04225208876ca02ea220c54cc3ad73c2a1e06"
+  },
+  "part florence-2-base": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/florence-2-base.json",
+   "sha256": "37b40fb768ee8f098184b2987a15aad764758b518aefb267b50efd4eca5da31a"
+  },
+  "part florence-2-large-ft": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/florence-2-large-ft.json",
+   "sha256": "d0e5b62d0484339436a9dbf73bc68d1154cc1d839ed47181bd959da49096ee3e"
+  },
+  "part florence-2-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/florence-2-large.json",
+   "sha256": "8a1f5be7de7cc41ea80eaf26508994d5b403f8970b359a354d2a514b0c6c7fcf"
+  },
+  "part pe-core-b16-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-core-b16-224.json",
+   "sha256": "09aad677aa2b9c6f26013efd310b4f5beff8f03655d5f11f372f57689d9c933a"
+  },
+  "part pe-core-g14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-core-g14-448.json",
+   "sha256": "41a678822c378f19e88f7b64bf1d03e0a7528a83846a31cfa8bd60aab57019e8"
+  },
+  "part pe-core-l14-336": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-core-l14-336.json",
+   "sha256": "def27d0636a70822a183e41ea654e0a424f7b4dfbfe6c22a9cbcbdfac3a5e079"
+  },
+  "part pe-core-s16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-core-s16-384.json",
+   "sha256": "9359e465c694ad8c1239abae6f31d3b7cf42e26aef7f593c1dc55a25022de685"
+  },
+  "part pe-core-t16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-core-t16-384.json",
+   "sha256": "aadd3ef9390922ffb78dae954f3b6f770e7b02bf5b2d62a1599103e99db302be"
+  },
+  "part pe-lang-g14-448-timm": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-lang-g14-448-timm.json",
+   "sha256": "31fa5a487c69bd7db31314e85f8c2e816a41aa9f43fd14ea85745f8578eb8ade"
+  },
+  "part pe-lang-l14-448-timm": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-lang-l14-448-timm.json",
+   "sha256": "c70df347fd9cc91fa7d48deeb7f360dc60f9851694f8daf903888802125158ac"
+  },
+  "part pe-spatial-b16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-spatial-b16-512.json",
+   "sha256": "5f32377202f5ccacab5ced02a75c5ffacc61faaee9f232c72ebbb3def938d20d"
+  },
+  "part pe-spatial-g14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-spatial-g14-448.json",
+   "sha256": "958d4f371e8a0cd68d281d074f88b7f34005130fd5f0cfc6c594e023620c4f43"
+  },
+  "part pe-spatial-l14-448": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-spatial-l14-448.json",
+   "sha256": "42180e298167c7eaff7c495b9e0dc1bbee5a2c7cf92545c66666589fac8a6651"
+  },
+  "part pe-spatial-s16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-spatial-s16-512.json",
+   "sha256": "7858564fecc79649b9248e70de3d269eb9abf9c8313ddd2b55248070c86065fc"
+  },
+  "part pe-spatial-t16-512": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/pe-spatial-t16-512.json",
+   "sha256": "a119487605534e5fb3566deaf241cbfe2cd3d7e5cae2365ecc4f084a1800f1b6"
+  },
+  "part sam3": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/sam3.json",
+   "sha256": "0be1854989366d44af284cb372c7a84660433a2d440d12132eee257915fa2d73"
+  },
+  "part siglip2-base-patch16-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/siglip2-base-patch16-224.json",
+   "sha256": "cf9f875cca835523dbea661316013a8157e8491575f4d0bcb6c7eb7a16793d94"
+  },
+  "part siglip2-giant-opt-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/siglip2-giant-opt-patch16-256.json",
+   "sha256": "9f39d48be99e80fa857a121e6cfb08d849a907be0334d6293d9dab921c1a709e"
+  },
+  "part siglip2-giant-opt-patch16-384": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/siglip2-giant-opt-patch16-384.json",
+   "sha256": "5b1905ed7d51cda2150037f7f5389ca8320ff9a88a089b3773cc259c930a63d0"
+  },
+  "part siglip2-large-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/siglip2-large-patch16-256.json",
+   "sha256": "0043852e1a7486fa899a92bedd7866808073fbd524882d4ccfe611ac5256b25e"
+  },
+  "part siglip2-so400m-patch16-256": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/siglip2-so400m-patch16-256.json",
+   "sha256": "958a271cd2488412caf9646e56cae574884285a1f1036a7a6fd092fbd945cbc6"
+  },
+  "part starvector-1b-im2svg": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/starvector-1b-im2svg.json",
+   "sha256": "6d1cc662b135dbd423776e9b05b8bf90a294ea0ca98bc2e4db8d6f670846f20b"
+  },
+  "part starvector-8b-im2svg": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/starvector-8b-im2svg.json",
+   "sha256": "090b63c0725850579a7979d0bd035d2f03b7c2a001e7728362db494fac3b2df0"
+  },
+  "part theia-base-cddsv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/theia-base-cddsv.json",
+   "sha256": "7b2ef6374b479a4d28c78e1e705766608aa777262ee5542fbc19a5bafabd8cce"
+  },
+  "part theia-base-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/theia-base-cdiv.json",
+   "sha256": "0f9f5b1cc90428d4a88437bf2a6ea8da0b5ffbe246f4ca91ea4b91186534cf25"
+  },
+  "part theia-small-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/theia-small-cdiv.json",
+   "sha256": "e67e3599875ae6872b5128e9ec023195ef78748e5b150438373b7188f9589e05"
+  },
+  "part theia-tiny-cddsv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/theia-tiny-cddsv.json",
+   "sha256": "1c60140c03edb2e13598dde9da13693358342f417cd91ed3d7b2941dccf213bf"
+  },
+  "part theia-tiny-cdiv": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/theia-tiny-cdiv.json",
+   "sha256": "42565a35a88e2c9f3d761c7af818c728835a9a664bb30eb92d209092c0500d91"
+  },
+  "part tipsv1-b14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/tipsv1-b14.json",
+   "sha256": "25880e2a0586bc3cc09991c30112f8e36778206f914dd5e317aeab440133cedc"
+  },
+  "part tipsv1-g14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/tipsv1-g14.json",
+   "sha256": "5db1907d0be1dca0df0c989a0af07a7ead7461d49051eb53d2bb6d2bfe4dd6f3"
+  },
+  "part tipsv1-l14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/tipsv1-l14.json",
+   "sha256": "61502e8beb6793cc8419be17b8adefe4884e3f23bf7b5acdb012ca85e2885db5"
+  },
+  "part tipsv1-s14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/tipsv1-s14.json",
+   "sha256": "fc81312fa62fa7f5b427647b7d920100ae5d71c3b525c7696d4d6ab296f5ffbd"
+  },
+  "part tipsv1-so400m14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/tipsv1-so400m14.json",
+   "sha256": "ac51e2143839c353c1e8f4b1429515c4d15d30c61f8b2c9676a979c1f859f8e5"
+  },
+  "part tipsv2-b14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/tipsv2-b14.json",
+   "sha256": "7988376c0ff327a07f4c7146089ae48f1c0e8caee178861baf536aa76fd4119a"
+  },
+  "part tipsv2-g14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/tipsv2-g14.json",
+   "sha256": "26a093dbe82ff8347477aa22082a1d4f5422471d0826c73ca7a9038104e4221c"
+  },
+  "part tipsv2-l14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/tipsv2-l14.json",
+   "sha256": "0f2e111e46249ffba14c00235844d7bbd87e112e7fb92a098dddfb1d2946b369"
+  },
+  "part tipsv2-so400m14": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/tipsv2-so400m14.json",
+   "sha256": "29d8352a647b78e9a0b34a69eeae1e73b8a95fd085dd0bfdfd0c7cafe9f52f47"
+  },
+  "part trocr-base-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/trocr-base-handwritten.json",
+   "sha256": "cc0ae11508a518de1cb79792180d07119c8b720db8a61986c32813378b8e946d"
+  },
+  "part trocr-base-hw-hist-swe-2": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/trocr-base-hw-hist-swe-2.json",
+   "sha256": "6d7048c75b83823d894745fe1bb5b0a306dc4d4a2d401c3918f274d7e3031ee3"
+  },
+  "part trocr-large-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/trocr-large-handwritten.json",
+   "sha256": "1474d08703b4c34aa9da167f3afd3f71fb525d1b445a9f891819643670b9562f"
+  },
+  "part trocr-small-handwritten": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/trocr-small-handwritten.json",
+   "sha256": "553eb89a06d4c4d7c7b2a387e3aed6362b0320b458798bb20f971e728690c59f"
+  },
+  "part vit-mae-large": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/vit-mae-large.json",
+   "sha256": "16147f5fdd9ea6ebb023934ad7ca8d8c0e6d36792a85210bb0dd97a3380b9e9c"
+  },
+  "part webssl-dino1b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/webssl-dino1b-224.json",
+   "sha256": "5544eff4d1ecfd90aa39ae33136ae8f188fe3c089cb71368b650b96a14561c11"
+  },
+  "part webssl-dino2b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/webssl-dino2b-224.json",
+   "sha256": "19ed9f853c66914e33a2819216423eed76f03d3215a0c327b8f6d2ef6e6a4001"
+  },
+  "part webssl-dino300m-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/webssl-dino300m-224.json",
+   "sha256": "96b6208fa0cbf1e916ef3a52c47f26592f5b8b764bb4835a3f1844709be1bf71"
+  },
+  "part webssl-dino3b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/webssl-dino3b-224.json",
+   "sha256": "4d7b7aa24793502a874044352559ccd5d237d7ddadde6df42af31aaa2de46b3b"
+  },
+  "part webssl-dino5b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/webssl-dino5b-224.json",
+   "sha256": "173176056dea1366c57a38e49228fbcde9ece9699052f0ce118a1beb897c472a"
+  },
+  "part webssl-dino7b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/webssl-dino7b-224.json",
+   "sha256": "ea08d5a47842d69134a9942388dc48e4d10a1da4d214b528470f380877ce9dbe"
+  },
+  "part webssl-mae1b-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/webssl-mae1b-224.json",
+   "sha256": "74cc14f564cab3686d924ef2a3942feeb1dc34d38e6e112b4914915f252a7669"
+  },
+  "part webssl-mae300m-224": {
+   "path": "$U/exp/FMD/xs/screen/parts/encoders/ouhdl_val1000/webssl-mae300m-224.json",
+   "sha256": "addfe822aac098dd7a6c9aab32057c76b1dbb8e483b68149c78e0e50c5c08ce3"
+  }
+ },
+ "params": {
+  "set_id": "ouhdl_val1000",
+  "track": "encoders",
+  "schema": "v1 (fmd_harness.screen_rows.SCHEMA)",
+  "comparators": [
+   "nomL1:mid16",
+   "nomL1:cat16",
+   "nomL2:mid16",
+   "nomL2:cat16"
+  ],
+  "delta_T0": 0.01035,
+  "boot_B": 2000,
+  "boot_seed": 20261103,
+  "prereg": "FMD_PREREG_2026-11-03.md A3.2/A3.5/A5.1"
+ },
+ "outputs": {
+  "$U/exp/FMD/xs/screen/rows_xs_enc_ouhdl_val1000.csv": "11324df43c775abb29dffb395e88c999b15c3cb8be5cc0a3bc9a65765f1b05b3"
+ },
+ "n_rows": 2233,
+ "fms": [
+  "aimv2-1b-patch14-224",
+  "aimv2-3b-patch14-224",
+  "aimv2-huge-patch14-224",
+  "aimv2-large-patch14-224",
+  "aimv2-large-patch14-224-distilled",
+  "c-radiov3-b",
+  "c-radiov3-g",
+  "c-radiov3-h",
+  "c-radiov3-l",
+  "c-radiov4-h",
+  "c-radiov4-so400m",
+  "depth-anything-3-base",
+  "depth-anything-3-giant-1.1",
+  "depth-anything-3-large-1.1",
+  "depth-anything-v2-large",
+  "dinov2-base",
+  "dinov2-giant",
+  "dinov2-reg-base",
+  "dinov2-reg-giant",
+  "dinov2-reg-large",
+  "dinov2-reg-small",
+  "dinov3-convnext-base",
+  "dinov3-convnext-large",
+  "dinov3-convnext-small",
+  "dinov3-convnext-tiny",
+  "dinov3-vit7b16",
+  "dinov3-vitb16",
+  "dinov3-vith16plus",
+  "dinov3-vitl16-sat493m",
+  "dinov3-vits16",
+  "dinov3-vits16plus",
+  "florence-2-base",
+  "florence-2-large",
+  "florence-2-large-ft",
+  "pe-core-b16-224",
+  "pe-core-g14-448",
+  "pe-core-l14-336",
+  "pe-core-s16-384",
+  "pe-core-t16-384",
+  "pe-lang-g14-448-timm",
+  "pe-lang-l14-448-timm",
+  "pe-spatial-b16-512",
+  "pe-spatial-g14-448",
+  "pe-spatial-l14-448",
+  "pe-spatial-s16-512",
+  "pe-spatial-t16-512",
+  "sam3",
+  "siglip2-base-patch16-224",
+  "siglip2-giant-opt-patch16-256",
+  "siglip2-giant-opt-patch16-384",
+  "siglip2-large-patch16-256",
+  "siglip2-so400m-patch16-256",
+  "starvector-1b-im2svg",
+  "starvector-8b-im2svg",
+  "theia-base-cddsv",
+  "theia-base-cdiv",
+  "theia-small-cdiv",
+  "theia-tiny-cddsv",
+  "theia-tiny-cdiv",
+  "tipsv1-b14",
+  "tipsv1-g14",
+  "tipsv1-l14",
+  "tipsv1-s14",
+  "tipsv1-so400m14",
+  "tipsv2-b14",
+  "tipsv2-g14",
+  "tipsv2-l14",
+  "tipsv2-so400m14",
+  "trocr-base-handwritten",
+  "trocr-base-hw-hist-swe-2",
+  "trocr-large-handwritten",
+  "trocr-small-handwritten",
+  "vit-mae-large",
+  "webssl-dino1b-224",
+  "webssl-dino2b-224",
+  "webssl-dino300m-224",
+  "webssl-dino3b-224",
+  "webssl-dino5b-224",
+  "webssl-dino7b-224",
+  "webssl-mae1b-224",
+  "webssl-mae300m-224"
+ ],
+ "xs_code": {
+  "files": {
+   "__init__.py": "ce6fc8aa99758f3c13a2b3a770bc511f213d7979a8a03ef0b293756159495c78",
+   "fmdx_verdicts.py": "67c78eabf6ace3d9b0bc6ab3f4501d305f175d732368893b443a0037dd902a52",
+   "xs_common.py": "46f865ed36b9d8159ecfc812d02b8ace5ec9a6d87915cf99d568aec7016704a0",
+   "xs_extract.py": "8dfd370dbea40b16d83aeeade38ce0f6c101a267a0d3972c7526f0d9e86ae478",
+   "xs_plan.py": "811bfbe873fa5bf1c1dd8b8a5c64e22e6a13550753f885beee588bb5f844de59",
+   "xs_probe.py": "6dbb3ad424a2252fd4e5c1be3544ed550bc4e0d8c9e3cef6b536fa96f727efb8",
+   "xs_rows.py": "093862bb4a99f9c69398ca99f4a34c3739ef7822b0f9f29fa0ceca67abdc8c81",
+   "xs_targets.py": "6547a725d9fef182aebe554aafcb6fe4ebf5e0dcf79b1a776da1a223f0b2b7a5",
+   "xs_worker.py": "4c6a5e87b2a8dc7de5651ef7120db10368922d0ff21a35ce5a01df6194e45973"
+  },
+  "combined": "b4323c86e0baa10bf4599fb350d109c02785c0016467525946f04f5585b08ede",
+  "version": "fmd_harness_xs 1.0.0 (2026-11-03)"
+ }
+}

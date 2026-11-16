@@ -1,0 +1,4 @@
+file,n_units,n_scored,n_dedup,n_error,seconds
+test_casia_zh__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed0_preds.npz,500,500,0,0,79.2
+test_casia_zh__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed1_preds.npz,500,500,0,0,1.5
+test_casia_zh__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed2_preds.npz,500,500,0,0,1.3

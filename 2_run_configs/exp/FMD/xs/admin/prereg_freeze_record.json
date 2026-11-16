@@ -1,0 +1,89 @@
+{
+ "A3": {
+  "utc": "2026-11-03T13:05:33Z",
+  "pre_copy": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.pre_A3.md",
+  "pre_sha256": "c5bb785c597ec77862d85e5f40ef5fa12b598776226eba96fe201a0cacb451d9",
+  "post_sha256": "53150041ed0f1ea214649d3073f01b3a757fce9d55d1198ed352a0dd5e517afb"
+ },
+ "A4": {
+  "utc": "2026-11-03T13:05:33Z",
+  "pre_copy": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.pre_A4.md",
+  "pre_sha256": "53150041ed0f1ea214649d3073f01b3a757fce9d55d1198ed352a0dd5e517afb",
+  "post_sha256": "eef828663d75295980f25b775542f5077a9d034f64a3b6025046db5d8011f779"
+ },
+ "A5": {
+  "utc": "2026-11-03T13:08:47Z",
+  "pre_copy": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.pre_A5.md",
+  "pre_sha256": "eef828663d75295980f25b775542f5077a9d034f64a3b6025046db5d8011f779",
+  "post_sha256": "d5137178cf0c3beb5791fc7c45e2c9e986f38d30cc4bc42f939a3194cc4f2adb"
+ },
+ "A3.a": {
+  "utc": "2026-11-03T14:56:43Z",
+  "pre_copy": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.pre_A3a.md",
+  "pre_sha256": "3c1beaa884d3570e608cf65c69affe792a26817425950d72d1ac90141e1808fc",
+  "post_sha256": "aa9c6c7b725348acdda718674e1d2a7936d5d40220e21d8c82514ff7fe6e8e29"
+ },
+ "A3.b": {
+  "utc": "2026-11-03T15:09:00Z",
+  "pre_copy": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.pre_A3b.md",
+  "pre_sha256": "aa9c6c7b725348acdda718674e1d2a7936d5d40220e21d8c82514ff7fe6e8e29",
+  "post_sha256": "b84412d87d8f2d352b0b56c6b3eb8d68368a4a144c9cdfceea37762f411b127e"
+ },
+ "A3.c": {
+  "utc": "2026-11-03T15:19:38Z",
+  "pre_copy": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.pre_A3c.md",
+  "pre_sha256": "b84412d87d8f2d352b0b56c6b3eb8d68368a4a144c9cdfceea37762f411b127e",
+  "post_sha256": "85adc0e2293dd5217fd27c34e635c60155e2830d5bda458ecc140dcaf087e447",
+  "ids": [
+   "pe-core-s16-384",
+   "pe-core-t16-384",
+   "pe-lang-l14-448-timm",
+   "pe-lang-g14-448-timm",
+   "webssl-dino300m-224",
+   "webssl-dino2b-224",
+   "webssl-dino3b-224",
+   "webssl-dino5b-224",
+   "webssl-dino7b-224",
+   "webssl-mae1b-224",
+   "webssl-mae3b-224",
+   "dinov2-base",
+   "dinov2-giant",
+   "dinov2-reg-small",
+   "dinov2-reg-base",
+   "dinov2-reg-giant",
+   "aimv2-huge-patch14-224",
+   "aimv2-1b-patch14-224",
+   "aimv2-3b-patch14-224",
+   "aimv2-large-patch14-224-distilled",
+   "tipsv1-s14",
+   "tipsv1-b14",
+   "tipsv1-l14",
+   "tipsv1-so400m14",
+   "tipsv1-g14",
+   "dinov3-vitl16-sat493m",
+   "siglip2-large-patch16-256",
+   "siglip2-so400m-patch16-256",
+   "depth-anything-3-giant-1.1",
+   "depth-anything-3-base",
+   "trocr-base-handwritten",
+   "trocr-small-handwritten",
+   "trocr-base-hw-hist-swe-2",
+   "florence-2-base",
+   "florence-2-large-ft",
+   "lightonocr-3-4b",
+   "lightonocr-3-0.8b",
+   "paddleocr-vl-1.0",
+   "paddleocr-vl-1.5",
+   "qwen3-vl-4b-instruct",
+   "qwen2.5-vl-3b-instruct",
+   "qari-ocr-v0.3-vl-2b",
+   "qari-ocr-0.4.0-vl-4b",
+   "arabic-english-hw-ocr-v3",
+   "arabic-hw-ocr-4bit",
+   "arabic-ocr-deepseek-ocr-2",
+   "surya-ocr-2-persian-hw",
+   "dots-ocr-base",
+   "sd3.5-large-turbo-diffusers-layout"
+  ]
+ }
+}

@@ -1,0 +1,482 @@
+{
+ "source": "prereg A3.3 roster (FMD_PREREG_2026-11-03.md sha d5137178 / A6 3c1beaa8); order = table order",
+ "note": "arm=repa: one WARM + one SCRATCH REPA arm (A4.2) if the gate layer yields a token map; arm=pseudo: InkSight pseudo-label arms; licence_lanes: DINOv3 family CLUSTER-A and VPS only (A3.3 licence clause); gated_blocked_pending_licence: lead 3 Nov (no arm until weights exist)",
+ "fms": {
+  "dinov2-large": {
+   "family": "encoder",
+   "phase": 1,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-vitl16": {
+   "family": "encoder",
+   "phase": 1,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "siglip2-so400m-patch14-224": {
+   "family": "encoder",
+   "phase": 1,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "sam2.1-hiera-base-plus": {
+   "family": "encoder",
+   "phase": 1,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "siglip2-base-patch16-224": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "siglip2-giant-opt-patch16-256": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "siglip2-giant-opt-patch16-384": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-vits16": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-vits16plus": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-vitb16": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-vith16plus": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-vit7b16": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-convnext-tiny": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-convnext-small": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-convnext-base": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov3-convnext-large": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "dinov2-reg-large": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "c-radiov3-b": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "c-radiov3-l": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "c-radiov3-h": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "c-radiov3-g": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "c-radiov4-so400m": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "c-radiov4-h": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "pe-spatial-t16-512": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "pe-spatial-s16-512": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "pe-spatial-b16-512": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "pe-spatial-l14-448": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "pe-spatial-g14-448": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "pe-core-b16-224": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "pe-core-l14-336": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "tipsv2-b14": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "tipsv2-l14": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "tipsv2-so400m14": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "tipsv2-g14": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "webssl-dino1b-224": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "webssl-mae300m-224": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "vit-mae-large": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "aimv2-large-patch14-224": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "depth-anything-v2-large": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "depth-anything-3-large-1.1": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "sam3": {
+   "family": "encoder",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": true
+  },
+  "trocr-large-handwritten": {
+   "family": "encoder (OCR)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "florence-2-large": {
+   "family": "encoder (OCR)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "sd2.1-dift": {
+   "family": "diffusion",
+   "phase": 1,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "sd1.5-dift": {
+   "family": "diffusion",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "cleandift-sd21": {
+   "family": "diffusion",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "cleandift-sd15": {
+   "family": "diffusion",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "sd3-medium-diffusers": {
+   "family": "diffusion (DiT)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB",
+   "gated_blocked_pending_licence": false,
+   "licence_note": "HF licence accepted by <author> (lead relay 3 Nov); weights staged on CLUSTER-A; PASS_XS (lead 4 Nov); prereg A8: CLUSTER-A/CLUSTER-B lanes only"
+  },
+  "flux1-dev": {
+   "family": "diffusion (DiT)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB",
+   "gated_blocked_pending_licence": false,
+   "licence_note": "HF licence accepted by <author> (lead relay 3 Nov); weights staged on CLUSTER-A; PASS_XS (lead 4 Nov); prereg A8: CLUSTER-A/CLUSTER-B lanes only"
+  },
+  "flux1-schnell": {
+   "family": "diffusion (DiT)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB",
+   "gated_blocked_pending_licence": false,
+   "licence_note": "HF licence accepted by <author> (lead relay 3 Nov); weights staged on CLUSTER-A; PASS_XS (lead 4 Nov); prereg A8: CLUSTER-A/CLUSTER-B lanes only"
+  },
+  "qwen3-vl-8b-instruct": {
+   "family": "VLM",
+   "phase": 1,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "qwen3.5-4b": {
+   "family": "VLM",
+   "phase": 1,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "qwen2-vl-2b-instruct": {
+   "family": "VLM",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "qaari-0.1-urdu-ocr": {
+   "family": "VLM",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "deepseek-ocr": {
+   "family": "VLM (OCR)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "urdu-ocr-deepseek-nomy": {
+   "family": "VLM (OCR)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "deepseek-ocr-2": {
+   "family": "VLM (OCR)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "urdu-ocr-deepseek-ocr2-kingabzpro": {
+   "family": "VLM (OCR)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "got-ocr2-hf": {
+   "family": "VLM (OCR)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "paddleocr-vl-1.6": {
+   "family": "VLM (OCR)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "lightonocr-2-1b": {
+   "family": "VLM (OCR)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "starvector-1b-im2svg": {
+   "family": "vector",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "inksight_small_p": {
+   "family": "ink",
+   "phase": 1,
+   "arm": "pseudo",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false
+  },
+  "inkfm": {
+   "family": "ink",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA,clusterB,vps",
+   "gated_blocked_pending_licence": false,
+   "blocked_reason": "InkFM weights not public at staging time (CAPACITY_NOTE.md section 8: 'InkFM unreleased')"
+  },
+  "sd3.5-medium-diffusers-layout": {
+   "family": "diffusion (DiT)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA",
+   "gated_blocked_pending_licence": false,
+   "licence_note": "SD3.5 community licence (HF acceptance by <author>, lead relay 3 Nov); PASS_XS (lead 4 Nov ~19:45Z); CLUSTER-A only (lead)"
+  },
+  "sd3.5-large-diffusers-layout": {
+   "family": "diffusion (DiT)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA",
+   "gated_blocked_pending_licence": false,
+   "licence_note": "SD3.5 community licence (HF acceptance by <author>, lead relay 3 Nov); PASS_XS (lead 4 Nov ~19:45Z); CLUSTER-A only (lead)"
+  },
+  "sd3.5-large-turbo-diffusers-layout": {
+   "family": "diffusion (DiT)",
+   "phase": 3,
+   "arm": "repa",
+   "licence_lanes": "clusterA",
+   "gated_blocked_pending_licence": false,
+   "licence_note": "SD3.5 community licence (HF acceptance by <author>, lead relay 3 Nov); PASS_XS (lead 4 Nov ~19:45Z); CLUSTER-A only (lead)"
+  }
+ }
+}

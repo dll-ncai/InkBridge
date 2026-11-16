@@ -1,0 +1,75 @@
+{
+ "track": "FMDX XS prereg (plan phase 0)",
+ "sub_agent_model": "<agent>",
+ "model_reason": "design and pre-registration are <agent> tasks under <author>'s 30 Oct 2026 model policy",
+ "lead_model": "<agent>",
+ "created_utc": "2026-11-03T13:05:33Z (amendment append time)",
+ "prereg": {
+  "path_clusterA": "$U/exp/FMD/plans/FMD_PREREG_2026-11-03.md",
+  "sha256_before_A3": "c5bb785c597ec77862d85e5f40ef5fa12b598776226eba96fe201a0cacb451d9",
+  "sha256_after_A3": "53150041ed0f1ea214649d3073f01b3a757fce9d55d1198ed352a0dd5e517afb",
+  "sha256_after_A4_frozen": "eef828663d75295980f25b775542f5077a9d034f64a3b6025046db5d8011f779",
+  "A3_utc": "2026-11-03T13:05:33Z",
+  "A4_utc": "2026-11-03T13:05:33Z",
+  "pre_amendment_copies": [
+   "exp/FMD/plans/FMD_PREREG_2026-11-03.pre_A3.md",
+   "exp/FMD/plans/FMD_PREREG_2026-11-03.pre_A4.md",
+   "exp/FMD/plans/FMD_PREREG_2026-11-03.pre_A5.md"
+  ],
+  "sha_files": {
+   "exp/FMD/plans/FMD_PREREG_2026-11-03.A3.sha256": "729850bc72c80dd3f1bf5cccd5ebbba098da818baae72ad0182cfa343c5d6fea",
+   "exp/FMD/plans/FMD_PREREG_2026-11-03.A4.sha256": "0ae6491394ae625f4d72283dbba78d2c23f5dcd6450a25b7f96c7acd9e4cfcab",
+   "exp/FMD/plans/FMD_PREREG_2026-11-03.A5.sha256": "51432e46c608ab0bc64f306e1e792981d24323dbd2cd6332cd0d63d4c850e30a"
+  },
+  "frozen_flag": {
+   "path": "exp/FMD/xs/admin/PREREG_FROZEN.flag",
+   "sha256": "a75a3f825422f2824101133558d7aaf83fd066dd0e876c691b1d8e7deb063167",
+   "content_sha": "d5137178cf0c3beb5791fc7c45e2c9e986f38d30cc4bc42f939a3194cc4f2adb"
+  },
+  "freeze_record": {
+   "path": "exp/FMD/xs/admin/prereg_freeze_record.json",
+   "sha256": "c1cb394cc3564a1fc3d5c39240e254f8bdcbd06443a42266ee2669d94f67d917"
+  },
+  "A5_utc": "2026-11-03T13:08:47Z",
+  "sha256_after_A5_current": "d5137178cf0c3beb5791fc7c45e2c9e986f38d30cc4bc42f939a3194cc4f2adb"
+ },
+ "copies_sha_verified": {
+  "clusterA": [
+   "exp/FMD/plans/",
+   "exp/FMD/xs/plans/",
+   "$U/plans/"
+  ],
+  "vps": "$VPS_ROOT/uhwr/stage/exp/FMD/xs/plans/FMD_PREREG_2026-11-03.md (certutil sha256 eef82866...)",
+  "clusterB": "$U_B/exp/FMD/xs/plans/ + exp/FMD/xs/admin/ (7 files, sha256 identical to CLUSTER-A push list)",
+  "transfer": "CLUSTER-A -> VPS hub (tar over ssh) -> CLUSTER-B pull (tar over ssh)",
+  "note": "A5 state (d5137178...) verified on CLUSTER-A exp/FMD/plans, exp/FMD/xs/plans, $U/plans, and CLUSTER-B; VPS stage received the same tar (push rc 0)"
+ },
+ "superseded_copy": "$U/plans/FMD_PREREG_2026-11-03.superseded_c5bb785c.md (previous plans/ copy, A2 state; renamed, not deleted)",
+ "pre_freeze_state": "exp/FMD/xs/{screen,features,targets,verdicts,runs} empty at append time (checked by the freeze script, which would have aborted otherwise)",
+ "inputs_inspected": {
+  "data/m5_multiscript_v1/m5_val_casia_zh.npz": "4927393116fb065b559f26323faddc0d3f5323d839b61fad75cbc205136ca2e7",
+  "data/m5_multiscript_v1/m5_val_casia_en.npz": "eea15ff926c70bae84483f940f4491a1f784c8f1e40c9bae76b12f5be9281c8b",
+  "data/m5_multiscript_v1/m5_val_hpl_tamil.npz": "dce93506078cf17f8da84377a5bc5b5ebfc53da8e2025f079e8093683f08d686",
+  "data/m5_multiscript_v1/m5_val_iam.npz": "5ecbd8b0b4b159a87a8f65eeb3d298bdf233f708debbbea8a2a9699f03c7f840",
+  "data/d2_v2/unipen_de/e0_train.npz": "3d3dbaafc4364d2db9da9a079134ae126a8c0125e03e8be00fbc1a7fb43a7721",
+  "data/m5_multiscript_v1/m5_luo_train.npz": "690441b6bd7c119d774066622c53f23a0aca6e62825a04014351bfba98260b67 (from DATA_CARD)",
+  "exp/M5/runs/luo/checkpoints/checkpoint_000006.pt": "ab6b178d032d90e5ec86f5140e3dd166e0bda497b019d88d6d3fab5da646812c",
+  "exp/M5/runs/joint/checkpoints/checkpoint_000009.pt": "b9592f22086555d3fcae46660a97f5c341dfe2de87717ed0a6e8c18d7eaaca7a",
+  "exp/X4a/data/x4a_casia_zh.npz": "93f4efcb99941a77fd942e19e9001316d14654ac77e3dc5b622a6da2cdbc0f72",
+  "exp/X4a/data/x4a_casia_en.npz": "eb8c6a7a54fac56448b5232e2ef56726a9046198ba439129241bf3d9d9af7d6a",
+  "exp/X4a/data/x4a_hpl_tamil.npz": "d868ba858f07de2e5d179f5a635a4007fbfc25b1fa4bdbb1149ccf073dce6938",
+  "data/m5_multiscript_v1/m5_test_iam500.npz": "0dbd1a613adadb4e5b846d5ecbdb5e7df9b0006d6a7665ee37e1020fc00637de",
+  "data/d2_v2/unipen_de/e0_test.npz": "c5f1c29e7bdf231f5d6032a29362d0ab3c912450af3294c7f8e6a51dc653157f",
+  "data/d2_v2/onhw/e0_all.npz": "59bc5fcbdf276a440f6afc5a4e14d9e3c7351595a2a724a0085160054fa68939",
+  "data/ouhdl_e0_v3/e0_test.npz": "c09560ed07a526614b3342a2fb6b642165f6aab3fffa25876bf1bc7502b7a514",
+  "exp/D3_ROUTE/routeA/routeA_preds_index.csv": "29e3db8a0d2ee73eeb8f44439e3e9d479663f9045d66301a76c06557313a2c57",
+  "exp/D3_ROUTE/routeA/SHA256SUMS_routeA_preds.txt": "5fa490ae1e85563d1091985f3221001400d0557e8d77914f336008d003afdd2b",
+  "exp/CAND/method_round/COMP/SHA256SUMS": "75d6e7e5501240061dc93043a2a5f26e96a7b4b1f4c23d15aba629b8675799b7",
+  "exp/FMD/gate/fm_gate_verdicts.csv": "d7f9599daaa5809a3a51f5b126973f3369209f867a52bb526a7f192db7b7d161",
+  "exp/FMD/code/fmd_student_v1.tar.gz": "0f01293cfa05a7e50b1fb9aea9eb37d3974c445618fc9b15a7dff7e0b59a1dca"
+ },
+ "web_checks_for_roster": "3 Nov 2026 web searches: nvidia/C-RADIOv4-H and -SO400M exist; facebook/PE-Spatial-{T16,S16,B16}-512, -L14-448, -G14-448 exist; CompVis/cleandift ships SD1.5 and SD2.1 U-Nets; oddadmix/Qaari-0.1-Urdu-OCR-VL-2B-Instruct; nomypython/urdu-ocr-deepseek; kingabzpro/deepseek-ocr-2-urdu-ocr-1m-lora; InkFM paper (arXiv 2503.23081) says the model is planned to be public, no weights repo found by the search",
+ "jobs": [],
+ "notes": "No Slurm jobs were submitted by this track; only login-node file operations.",
+ "approved_plan_version": "fe054fca-4871-4713-a867-6b5e07abc25c (the brief cited fe054fca-...-67af2f26da0b, which does not exist; Reviewer finding add902ca)"
+}

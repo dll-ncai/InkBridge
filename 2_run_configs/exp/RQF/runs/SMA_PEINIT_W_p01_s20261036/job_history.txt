@@ -1,0 +1,5 @@
+2026-11-09T09:24:05Z sma_chain_start tag=SMA_PEINIT_W_p01_s20261036 kind=bb backbone=$U/exp/FMD/xs/runs/PEINIT_W_clusterA/bb_ms4.pt frac=p01 seed=20261036 steps=10000 site=clusterA host=<node> slurm=24964860 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T09:24:06Z train_start layout=64x4 site=clusterA host=<node> slurm=24964860 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T12:10:58Z train_exit rc=0 site=clusterA host=<node> slurm=24964860 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T14:38:42Z selected SM-A milestone 10 (step 10000) site=clusterA host=<node> slurm=24964860 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]
+2026-11-09T19:18:30Z sampling_done ms10 site=clusterA host=<node> slurm=24964860 restart=0 part=gpuidle gpus=[NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;NVIDIA A40;]

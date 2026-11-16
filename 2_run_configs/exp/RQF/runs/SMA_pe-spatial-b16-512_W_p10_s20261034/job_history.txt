@@ -1,0 +1,5 @@
+2026-11-09T23:24:05Z sma_chain_start tag=SMA_pe-spatial-b16-512_W_p10_s20261034 kind=bb backbone=$U/exp/FMD/xs/runs/pe-spatial-b16-512_W_clusterA/bb_ms4.pt frac=p10 seed=20261034 steps=10000 site=clusterA host=<node> slurm=24964902 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-09T23:24:05Z train_start layout=64x4 site=clusterA host=<node> slurm=24964902 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-10T02:08:38Z train_exit rc=0 site=clusterA host=<node> slurm=24964902 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-10T04:13:04Z selected SM-A milestone 9 (step 9000) site=clusterA host=<node> slurm=24964902 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]
+2026-11-10T08:09:05Z sampling_done ms9 site=clusterA host=<node> slurm=24964902 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;]

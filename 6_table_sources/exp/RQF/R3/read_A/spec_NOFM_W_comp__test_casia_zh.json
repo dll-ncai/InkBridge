@@ -1,0 +1,43 @@
+{
+ "set": "test_casia_zh",
+ "cells": {
+  "COMP_pool3": {
+   "device": null,
+   "files": {
+    "00": "$U/exp/FMD/xs/runs/fmdx_monitor/score_out/rows/test_casia_zh__NOFM_W_cmp_ms1__seed0__rows031.csv",
+    "01": "$U/exp/FMD/xs/runs/fmdx_monitor/score_out/rows/test_casia_zh__NOFM_W_cmp_ms1__seed1__rows031.csv",
+    "02": "$U/exp/FMD/xs/runs/fmdx_monitor/score_out/rows/test_casia_zh__NOFM_W_cmp_ms1__seed2__rows031.csv"
+   }
+  },
+  "COMP_rep3": {
+   "device": null,
+   "files": {
+    "00": "$U/exp/RQF/R3/score_out/rows/test_casia_zh__NOFM_W_cmp_ms1_rep3__seed0__rows031.csv",
+    "01": "$U/exp/RQF/R3/score_out/rows/test_casia_zh__NOFM_W_cmp_ms1_rep3__seed0__rows031.csv",
+    "02": "$U/exp/RQF/R3/score_out/rows/test_casia_zh__NOFM_W_cmp_ms1_rep3__seed0__rows031.csv"
+   }
+  },
+  "COMP_rnd3": {
+   "device": null,
+   "files": {
+    "00": "$U/exp/RQF/R3/score_out/rows/test_casia_zh__NOFM_W_cmp_ms1_rnd3__seed0__rows031.csv",
+    "01": "$U/exp/RQF/R3/score_out/rows/test_casia_zh__NOFM_W_cmp_ms1_rnd3__seed0__rows031.csv",
+    "02": "$U/exp/RQF/R3/score_out/rows/test_casia_zh__NOFM_W_cmp_ms1_rnd3__seed0__rows031.csv"
+   }
+  }
+ },
+ "contrasts": [
+  [
+   "COMP_rep3",
+   "COMP_pool3"
+  ],
+  [
+   "COMP_rnd3",
+   "COMP_pool3"
+  ],
+  [
+   "COMP_rep3",
+   "COMP_rnd3"
+  ]
+ ]
+}

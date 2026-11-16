@@ -1,0 +1,32 @@
+{
+ "sam3": {
+  "n_files": 12,
+  "n_sha_mismatch": 0,
+  "mismatch": []
+ },
+ "sam3.1": {
+  "n_files": 12,
+  "n_sha_mismatch": 0,
+  "mismatch": []
+ },
+ "aimv2-large-patch14-224-distilled": {
+  "n_files": 9,
+  "n_sha_mismatch": 0,
+  "mismatch": []
+ },
+ "aimv2-3b-patch14-224": {
+  "n_files": 12,
+  "n_sha_mismatch": 0,
+  "mismatch": []
+ },
+ "pe-core-g14-448": {
+  "n_files": 8,
+  "n_sha_mismatch": 0,
+  "mismatch": []
+ },
+ "pe-core-g14-448-timm": {
+  "n_files": 3,
+  "n_sha_mismatch": 0,
+  "mismatch": []
+ }
+}

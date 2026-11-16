@@ -1,0 +1,1 @@
+import json;c=json.load(open('config.json'));print({a:b for a,b in c.items() if a!='architectures'})

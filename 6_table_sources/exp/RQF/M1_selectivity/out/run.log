@@ -1,0 +1,88 @@
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+1/3500 41s
+101/3500 53s
+201/3500 66s
+301/3500 82s
+401/3500 95s
+501/3500 109s
+601/3500 123s
+701/3500 137s
+801/3500 152s
+901/3500 167s
+1001/3500 180s
+1101/3500 191s
+1201/3500 202s
+1301/3500 212s
+1401/3500 222s
+1501/3500 234s
+1601/3500 245s
+1701/3500 258s
+1801/3500 270s
+1901/3500 282s
+2001/3500 293s
+2101/3500 304s
+2201/3500 315s
+2301/3500 326s
+2401/3500 337s
+2501/3500 350s
+2601/3500 362s
+2701/3500 374s
+2801/3500 386s
+2901/3500 399s
+3001/3500 414s
+3101/3500 430s
+3201/3500 447s
+3301/3500 462s
+3401/3500 478s
+perturbation                    direction  order  penup_merge  penup_split  shape_elastic  shape_jitter  timing
+dataset   metric                                                                                               
+casia_en  penup_f1                 -0.991    0.0       -0.136       -0.630         -0.046        -0.281   0.000
+          penup_f1_v2               0.000    0.0       -0.357       -0.981         -0.079        -0.490   0.000
+casia_zh  penup_f1                 -0.810    0.0       -0.506       -0.347         -0.025        -0.311   0.000
+          penup_f1_v2               0.000    0.0       -0.890       -0.710         -0.046        -0.522   0.000
+iam500    penup_f1                 -0.940    0.0       -0.187       -0.612         -0.048        -0.301   0.000
+          penup_f1_v2               0.000    0.0       -0.452       -0.925         -0.081        -0.492   0.000
+onhw      penup_f1                 -0.870    0.0       -0.419       -0.471         -0.048        -0.306   0.000
+          penup_f1_v2               0.000    0.0       -0.782       -0.776         -0.074        -0.512   0.000
+          timing_profile_tv         0.000    0.0        0.143        0.196          0.067         0.211   0.198
+          timing_profile_tv_v2      0.000    0.0        0.239        0.250          0.178         0.174   0.197
+ouhdl     penup_f1                 -0.850    0.0       -0.289       -0.560         -0.068        -0.323   0.000
+          penup_f1_v2               0.000    0.0       -0.625       -0.800         -0.087        -0.529   0.000
+tamil     penup_f1                 -0.961    0.0       -0.161       -0.636         -0.042        -0.330   0.000
+          penup_f1_v2               0.000    0.0       -0.455       -0.934         -0.069        -0.554   0.000
+unipen_de penup_f1                 -0.981    0.0       -0.124       -0.648         -0.064        -0.354   0.000
+          penup_f1_v2               0.000    0.0       -0.302       -0.959         -0.109        -0.533   0.000
+          timing_profile_tv         0.000    0.0        0.068        0.300          0.065         0.203   0.219
+          timing_profile_tv_v2      0.000    0.0        0.072        0.382          0.122         0.126   0.218
+done 252000 rows 517s

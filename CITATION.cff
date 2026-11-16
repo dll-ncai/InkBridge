@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the paper below."
+title: "InkBridge"
+type: software
+authors:
+  - given-names: "Ali"
+    family-names: "Hussain"
+  - given-names: "Eshal"
+    family-names: "Fatima"
+  - given-names: "Anna"
+    family-names: "Scius-Bertrand"
+  - given-names: "Momina"
+    family-names: "Moetesum"
+  - given-names: "Adnan"
+    family-names: "Ul-Hasan"
+  - given-names: "Faisal"
+    family-names: "Shafait"
+repository-code: "https://github.com/dll-ncai/InkBridge"
+license: MIT
+preferred-citation:
+  type: article
+  title: "InkBridge: Low-Resource Adaptation and Endpoint Consensus for Handwriting Trajectory Recovery"
+  authors:
+    - given-names: "Ali"
+      family-names: "Hussain"
+    - given-names: "Eshal"
+      family-names: "Fatima"
+    - given-names: "Anna"
+      family-names: "Scius-Bertrand"
+    - given-names: "Momina"
+      family-names: "Moetesum"
+    - given-names: "Adnan"
+      family-names: "Ul-Hasan"
+    - given-names: "Faisal"
+      family-names: "Shafait"
+  journal: "International Journal on Document Analysis and Recognition (IJDAR)"
+  year: 2026
+  status: submitted
+  notes: "Manuscript submitted."

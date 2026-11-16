@@ -1,0 +1,131 @@
+{
+ "check": "DiT weight streaming vs resident (implementation detail of the pre-registered A3.3 computation; no convention change)",
+ "fm": "sd3-medium-diffusers",
+ "n_units": 4,
+ "units": "first 4 units of ouhdl_val1000 (fmd_render224_val1000.npz)",
+ "micro": 2,
+ "gate_layer": "s261_b12",
+ "stream_budget_gb": 1.5,
+ "runs": {
+  "resident_1": {
+   "setup_s": 77.8,
+   "s_per_unit": 2.815,
+   "placement": {
+    "vram_budget_gb": null,
+    "resident_blocks_1based": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "streamed_blocks_1based": [],
+    "never_run_blocks": 6,
+    "resident_block_gb": 3.059,
+    "streamed_block_gb": 0.0
+   },
+   "noise_sha256": "a64b21e3148993fa3457e801fb793d25b39a5f4234aa29735e1c9d6405f75f44",
+   "peak_cuda_gb": 9.33
+  },
+  "resident_2_same_process": {
+   "peak_cuda_gb": 9.33
+  },
+  "streamed": {
+   "setup_s": 4.8,
+   "s_per_unit": 1.578,
+   "placement": {
+    "vram_budget_gb": 1.5,
+    "resident_blocks_1based": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "streamed_blocks_1based": [
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "never_run_blocks": 6,
+    "resident_block_gb": 1.36,
+    "streamed_block_gb": 1.7
+   },
+   "noise_sha256": "a64b21e3148993fa3457e801fb793d25b39a5f4234aa29735e1c9d6405f75f44",
+   "peak_cuda_gb": 11.4
+  }
+ },
+ "resident_vs_streamed": {
+  "s101_b12": {
+   "bitwise_identical": true,
+   "max_abs_diff": 0.0,
+   "max_abs_value": 110.062255859375
+  },
+  "s261_b12": {
+   "bitwise_identical": true,
+   "max_abs_diff": 0.0,
+   "max_abs_value": 115.9007568359375
+  },
+  "s101_b18": {
+   "bitwise_identical": true,
+   "max_abs_diff": 0.0,
+   "max_abs_value": 317.02197265625
+  },
+  "s261_b18": {
+   "bitwise_identical": true,
+   "max_abs_diff": 0.0,
+   "max_abs_value": 314.07080078125
+  }
+ },
+ "resident_vs_resident": {
+  "s101_b12": {
+   "bitwise_identical": true,
+   "max_abs_diff": 0.0,
+   "max_abs_value": 110.062255859375
+  },
+  "s261_b12": {
+   "bitwise_identical": true,
+   "max_abs_diff": 0.0,
+   "max_abs_value": 115.9007568359375
+  },
+  "s101_b18": {
+   "bitwise_identical": true,
+   "max_abs_diff": 0.0,
+   "max_abs_value": 317.02197265625
+  },
+  "s261_b18": {
+   "bitwise_identical": true,
+   "max_abs_diff": 0.0,
+   "max_abs_value": 314.07080078125
+  }
+ },
+ "gate_bitwise_identical": true,
+ "all_layers_bitwise_identical": true,
+ "gpu": "NVIDIA RTX A4000",
+ "torch": "2.7.1+cu128",
+ "utc": "2026-11-03T17:57:57Z",
+ "requested_by": "lead (aef45235) 2026-11-03 ~17:50Z: bitwise-identical gate features required, else max abs diff + resident-vs-resident noise floor"
+}

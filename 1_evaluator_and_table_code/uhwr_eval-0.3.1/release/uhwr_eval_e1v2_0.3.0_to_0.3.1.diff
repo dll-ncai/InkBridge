@@ -1,0 +1,177 @@
+diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/e1/uhwr_eval/__init__.py $U/shared/uhwr_eval-0.3.1/uhwr_eval/__init__.py
+--- /tmp/EV031_24516363/ev031___eammki/e1/uhwr_eval/__init__.py	2026-10-19 02:00:00.000000000 +0200
++++ $U/shared/uhwr_eval-0.3.1/uhwr_eval/__init__.py	2026-10-20 22:54:02.000000000 +0200
+@@ -1,5 +1,12 @@
+ """uhwr_eval: shared trajectory-recovery evaluator for the uhwr baselines phase.
+ 
++0.3.1 (20 Oct 2026): merge of the two 0.3.0 builds (E1-v2 tarball sha256 a9d0a1e1..., DOT2 tarball
++sha256 143627cc...).  Contains both penup_f1_v2 / timing_profile_tv_v2 (v2metrics.py, in score()) and
++marks.py (mark_order_metrics, separate call).  No metric code differs from either parent; see CHANGELOG.md.
++
++0.3.0 (19 Oct 2026, DOT2): adds marks.py (mark_order_metrics: body/mark-split direction accuracy,
++mark recall, mark-before-body order flag, mark slot).  score() and every 0.2.0 metric are unchanged.
++
+ 0.2.0 (16 Oct 2026): adds timing_profile_tv / timing_duration_tv (timing.py), optional
+ per-point timestamps in score(), and AIoU GT-thickness / dilation-range arguments.
+ DTW/LDTW/AIoU defaults and every 0.1.0 metric are unchanged.
+@@ -12,5 +19,6 @@
+ from .render import render_mask, render_image
+ from .metrics import score, METRICS, PROTOCOLS, metric_table, NAGAMATSU_SHA256, NAGAMATSU_COMMIT
+ 
+-__version__ = "0.3.0"
++__version__ = "0.3.1"
+ from .timing import timing_metrics
++from .marks import mark_order_metrics, MARK_METRICS
+diff -ruN -x __pycache__ -x '._*' /tmp/EV031_24516363/ev031___eammki/e1/uhwr_eval/marks.py $U/shared/uhwr_eval-0.3.1/uhwr_eval/marks.py
+--- /tmp/EV031_24516363/ev031___eammki/e1/uhwr_eval/marks.py	1970-01-01 01:00:00.000000000 +0100
++++ $U/shared/uhwr_eval-0.3.1/uhwr_eval/marks.py	2026-10-19 18:35:40.000000000 +0200
+@@ -0,0 +1,149 @@
++"""uhwr_eval 0.3.0: body/mark-split order metrics (plan item DOT2, 19 Oct 2026).
++
++New in 0.3.0; nothing in score() or any 0.1.0/0.2.0 metric changes.  Use
++``mark_order_metrics(gt, pred, canvas, gt_is_mark, gt_group=None)`` next to ``score``.
++
++Stroke matching is exactly the matcher of ``metrics.order_metrics`` (``match_strokes``: Hungarian on
++stroke-mask IoU, masks 5 px wide, accept IoU >= 0.5), run on the cleaned inks (``clean_ink``), so the
++matched pairs are the pairs behind ``kendall_tau`` and ``direction_acc`` of ``score(..., 'native')``.
++
++Metrics (all NaN where undefined; every metric has an ``n_`` count of the strokes it averages over):
++  body_direction_acc / mark_direction_acc
++      ``direction_acc`` restricted to matched GT body / GT mark strokes (GT start-end chord >= 2 px:
++      prediction's start nearer the GT start than the GT end).  ``*_ge4`` use a 4 px chord threshold.
++  mark_recall            matched GT marks / GT marks (``n_gt_marks``)
++  body_recall            matched GT bodies / GT bodies
++  mark_kendall_tau       Kendall tau-b between GT and predicted indices over matched marks (>= 2)
++  body_kendall_tau       the same over matched bodies
++  mark_before_body_recall
++      over GT marks written before the first body stroke of their own group (``gt_group``; the whole
++      ink is one group when None) whose own first body is also matched: share whose predicted index is
++      also before the predicted index of that body.  ``n_gt_mark_before_body`` = number of such GT marks
++      (all, matched or not); ``gt_mark_before_body_flag`` = 1 if the ink has at least one.
++  mark_after_body_kept
++      the same for GT marks written after their group's first body: share whose predicted index is also
++      after it (so a method that moves marks early is visible).
++  mark_slot_body_exact
++      over matched GT marks whose last GT body stroke written before them is matched (or there is none): share
++      whose last predicted stroke matched to a GT body, before the mark's prediction, is that body's match
++      (-1 = none).  This is the PF2 slot (predecessor body); unmatched predicted strokes are ignored.
++  mark_slot_exact
++      over matched GT marks whose GT predecessor stroke (the stroke written just before the mark, any
++      kind; -1 = first stroke) is matched or is -1: share whose matched prediction has the matched
++      counterpart of that predecessor as its predicted predecessor (pred index - 1).
++"""
++from __future__ import annotations
++
++from typing import Dict, Optional, Sequence
++
++import numpy as np
++from scipy.stats import kendalltau
++
++from .metrics import match_strokes
++from .strokes import clean_ink
++
++MARK_METRICS = {
++    "body_direction_acc": ("\u2191", "proposed", "direction_acc over matched GT body strokes (chord >= 2 px)"),
++    "mark_direction_acc": ("\u2191", "proposed", "direction_acc over matched GT mark strokes (chord >= 2 px)"),
++    "body_direction_acc_ge4": ("\u2191", "proposed", "as body_direction_acc, chord >= 4 px"),
++    "mark_direction_acc_ge4": ("\u2191", "proposed", "as mark_direction_acc, chord >= 4 px"),
++    "mark_recall": ("\u2191", "proposed", "matched GT marks / GT marks (same matcher as kendall_tau)"),
++    "body_recall": ("\u2191", "proposed", "matched GT bodies / GT bodies"),
++    "mark_kendall_tau": ("\u2191", "proposed", "Kendall tau-b over matched GT marks (>= 2)"),
++    "body_kendall_tau": ("\u2191", "proposed", "Kendall tau-b over matched GT bodies (>= 2)"),
++    "mark_before_body_recall": ("\u2191", "proposed", "GT marks written before own group's first body: share also predicted before it"),
++    "mark_after_body_kept": ("\u2191", "proposed", "GT marks written after own group's first body: share also predicted after it"),
++    "mark_slot_exact": ("\u2191", "proposed", "matched GT marks whose predicted predecessor stroke (any kind) is the matched GT predecessor"),
++    "mark_slot_body_exact": ("\u2191", "proposed", "matched GT marks whose last predicted BODY before it is the matched last GT body before it"),
++}
++
++
++def _clean_with_flags(ink, flags, groups):
++    """clean_ink drops empty / non-finite strokes; keep flags aligned with the kept strokes."""
++    keep_ink, keep_f, keep_g = [], [], []
++    for s, f, g in zip(ink, flags, groups):
++        c = clean_ink([s])
++        if c:
++            keep_ink.append(c[0]); keep_f.append(bool(f)); keep_g.append(g)
++    return keep_ink, keep_f, keep_g
++
++
++def mark_order_metrics(gt: Sequence[np.ndarray], pred: Sequence[np.ndarray], canvas, gt_is_mark: Sequence[bool],
++                       gt_group: Optional[Sequence] = None, iou_min: float = 0.5, thickness: int = 5) -> Dict[str, float]:
++    if gt_group is None:
++        gt_group = [0] * len(gt)
++    assert len(gt_is_mark) == len(gt) == len(gt_group)
++    gt, isM, grp = _clean_with_flags(gt, gt_is_mark, gt_group)
++    pr = clean_ink(pred)
++    nan = float("nan")
++    out = {k: nan for k in MARK_METRICS}
++    nM = int(sum(isM)); nB = len(gt) - nM
++    out.update(n_gt_marks=float(nM), n_gt_bodies=float(nB))
++    m = match_strokes(gt, pr, canvas, thickness, iou_min) if (gt and pr) else []
++    g2p = {i: j for i, j, _ in m}
++    out["mark_recall"] = sum(1 for i in g2p if isM[i]) / nM if nM else nan
++    out["body_recall"] = sum(1 for i in g2p if not isM[i]) / nB if nB else nan
++    for kind, sel in (("body", False), ("mark", True)):
++        for thr, suf in ((2.0, ""), (4.0, "_ge4")):
++            ok = n = 0
++            for i, j in g2p.items():
++                if isM[i] != sel:
++                    continue
++                g, p = gt[i], pr[j]
++                if np.linalg.norm(g[-1] - g[0]) >= thr:
++                    n += 1; ok += int(np.linalg.norm(p[0] - g[0]) < np.linalg.norm(p[0] - g[-1]))
++            out[f"{kind}_direction_acc{suf}"] = ok / n if n else nan
++            out[f"n_{kind}_dir_eligible{suf}"] = float(n)
++        ii = sorted(i for i in g2p if isM[i] == sel)
++        if len(ii) >= 2:
++            t = kendalltau(ii, [g2p[i] for i in ii]).statistic
++            out[f"{kind}_kendall_tau"] = float(t) if np.isfinite(t) else nan
++        out[f"n_{kind}_tau_matched"] = float(len(ii))
++    # mark-before-body flag (per group)
++    first_body = {}
++    for i in range(len(gt)):
++        if not isM[i] and grp[i] not in first_body:
++            first_body[grp[i]] = i
++    before, after = [], []
++    n_before_all = 0
++    for i in range(len(gt)):
++        if not isM[i] or grp[i] not in first_body:
++            continue
++        b = first_body[grp[i]]
++        if i < b:
++            n_before_all += 1
++        if i in g2p and b in g2p:
++            (before if i < b else after).append(int((g2p[i] < g2p[b]) == (i < b)))
++    out["mark_before_body_recall"] = float(np.mean(before)) if before else nan
++    out["mark_after_body_kept"] = float(np.mean(after)) if after else nan
++    out["n_gt_mark_before_body"] = float(n_before_all)
++    out["n_mark_before_body_scored"] = float(len(before))
++    out["n_mark_after_body_scored"] = float(len(after))
++    out["gt_mark_before_body_flag"] = float(n_before_all > 0)
++    # exact slot
++    ex = []
++    for i, j in g2p.items():
++        if not isM[i]:
++            continue
++        pi = i - 1
++        if pi >= 0 and pi not in g2p:
++            continue
++        want = -1 if pi < 0 else g2p[pi]
++        ex.append(int(j - 1 == want))
++    out["mark_slot_exact"] = float(np.mean(ex)) if ex else nan
++    out["n_mark_slot_scored"] = float(len(ex))
++    p2g = {j: i for i, j in g2p.items()}
++    exb = []
++    for i, j in g2p.items():
++        if not isM[i]:
++            continue
++        gb = [q for q in range(i) if not isM[q]]
++        want_g = gb[-1] if gb else -1
++        if want_g >= 0 and want_g not in g2p:
++            continue
++        pb = [q for q in range(j) if q in p2g and not isM[p2g[q]]]
++        got_g = p2g[pb[-1]] if pb else -1
++        exb.append(int(got_g == want_g))
++    out["mark_slot_body_exact"] = float(np.mean(exb)) if exb else nan
++    out["n_mark_slot_body_scored"] = float(len(exb))
++    return out

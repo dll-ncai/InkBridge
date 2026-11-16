@@ -1,0 +1,28 @@
+{
+ "uhwr_eval": "0.3.0",
+ "datasets": [
+  "ouhdl",
+  "casia_zh",
+  "casia_en",
+  "tamil",
+  "iam500",
+  "unipen_de",
+  "onhw"
+ ],
+ "missing_datasets": [],
+ "n_tasks": 3500,
+ "n_rows": 252000,
+ "n_err": 0,
+ "seconds": 517.162273645401,
+ "seed": 20261016,
+ "boot": 2000,
+ "units_per_dataset": {
+  "casia_en": 500,
+  "casia_zh": 500,
+  "iam500": 500,
+  "onhw": 500,
+  "ouhdl": 500,
+  "tamil": 500,
+  "unipen_de": 500
+ }
+}

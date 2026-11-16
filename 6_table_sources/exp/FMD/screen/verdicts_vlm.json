@@ -1,0 +1,22 @@
+{
+ "rows_csv": "$U/exp/FMD/screen/rows_vlm.csv",
+ "rows_csv_sha256": "a2d2b66d3ba41859fb3359db7754d7c37651b4f52221d029560555842d164a22",
+ "created_utc": "2026-11-03T03:24:15Z",
+ "note": "pre-registered gate rows",
+ "n_order_tests_gate_layer": {
+  "probe": 4,
+  "zeroshot": 3
+ },
+ "verdicts": {
+  "VLM": {
+   "verdict": "FAIL",
+   "fms": {
+    "qwen3-vl-8b-instruct": {
+     "order_pass": [],
+     "shape_NI": false,
+     "fm_pass": false
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,59 @@
+arm,cell,clause,comparator,set,metric,threshold,test,ci_lo,delta,ci_hi,pass,n_units,n_clusters,cluster,device_a,device_b,DEVICE_MIXED,arm_milestone
+NOFM_W,U_FT_vs_pooledCOMPp01,U-WIN AIoU,pooled_COMP_p01_seeds_3,test_ouhdl,aiou,0.0,CI lo > 0,0.0462279831384665,0.0483385504610689,0.0506083336817563,True,4406.0,32.0,writer,RTX A4000,RTX A4000,False,1.0
+NOFM_W,U_FT_vs_pooledCOMPp01,U-WIN penup_f1_v2 NI,pooled_COMP_p01_seeds_3,test_ouhdl,penup_f1_v2,-0.0141,CI lo > -0.0141,0.0660826446530171,0.0747630225856528,0.0830526546620521,True,4406.0,32.0,writer,RTX A4000,RTX A4000,False,1.0
+NOFM_W,U_FT_vs_pooledCOMPp01,U-WIN strict_order_acc NI,pooled_COMP_p01_seeds_3,test_ouhdl,strict_order_acc,-0.01065,CI lo > -0.01065,0.0188209394197258,0.0266807888233217,0.0349730866797404,True,4406.0,32.0,writer,RTX A4000,RTX A4000,False,1.0
+NOFM_W,U_FT_vs_pooledCOMPp01,U-WIN direction_acc NI,pooled_COMP_p01_seeds_3,test_ouhdl,direction_acc,-0.01245,CI lo > -0.01245,-0.010580411512597,-0.0057645538835689,-0.0010105532990386,True,4386.0,32.0,writer,RTX A4000,RTX A4000,False,1.0
+NOFM_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_casia_zh,aiou,-0.01,CI lo > -0.010,0.0351546715454977,0.0379363445217034,0.0409240616893161,True,500.0,60.0,writer,RTX A4000,RTX A4000,False,1.0
+NOFM_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_casia_en,aiou,-0.01,CI lo > -0.010,0.006829438802761,0.0087481571649528,0.0106940580678536,True,500.0,60.0,writer,RTX A4000,RTX A4000,False,1.0
+NOFM_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_hpl_tamil,aiou,-0.01,CI lo > -0.010,0.0181542429722545,0.0205638865476128,0.023545902946762,True,500.0,52.0,writer,RTX A4000,RTX A4000,False,1.0
+NOFM_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_iam500,aiou,-0.01,CI lo > -0.010,0.0129932381510516,0.0153625399614119,0.0177306005379858,True,500.0,63.0,writer,RTX A4000,RTX A4000,False,1.0
+NOFM_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,german_unipen_de_test,aiou,-0.01,CI lo > -0.010,0.0133539827678204,0.0194495521129462,0.0249855986751313,True,827.0,7.0,writer,RTX A4000,RTX A4000,False,1.0
+NOFM_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,german_onhw_all,aiou,-0.01,CI lo > -0.010,0.0261460166793577,0.0269024957178277,0.0276432176152611,True,5925.0,5925.0,unit,RTX A4000,RTX A4000,False,1.0
+PEINIT_W,U_FT_vs_pooledCOMPp01,U-WIN AIoU,pooled_COMP_p01_seeds_3,test_ouhdl,aiou,0.0,CI lo > 0,,,,,,,,,,,
+PEINIT_W,U_FT_vs_pooledCOMPp01,U-WIN penup_f1_v2 NI,pooled_COMP_p01_seeds_3,test_ouhdl,penup_f1_v2,-0.0141,CI lo > -0.0141,,,,,,,,,,,
+PEINIT_W,U_FT_vs_pooledCOMPp01,U-WIN strict_order_acc NI,pooled_COMP_p01_seeds_3,test_ouhdl,strict_order_acc,-0.01065,CI lo > -0.01065,,,,,,,,,,,
+PEINIT_W,U_FT_vs_pooledCOMPp01,U-WIN direction_acc NI,pooled_COMP_p01_seeds_3,test_ouhdl,direction_acc,-0.01245,CI lo > -0.01245,,,,,,,,,,,
+PEINIT_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_casia_zh,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+PEINIT_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_casia_en,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+PEINIT_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_hpl_tamil,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+PEINIT_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_iam500,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+PEINIT_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,german_unipen_de_test,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+PEINIT_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,german_onhw_all,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+c-radiov3-h_W,U_FT_vs_pooledCOMPp01,U-WIN AIoU,pooled_COMP_p01_seeds_3,test_ouhdl,aiou,0.0,CI lo > 0,0.0324782013516499,0.0341141470244928,0.0357727020731784,True,4406.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,U_FT_vs_pooledCOMPp01,U-WIN penup_f1_v2 NI,pooled_COMP_p01_seeds_3,test_ouhdl,penup_f1_v2,-0.0141,CI lo > -0.0141,0.0577329384398765,0.0635673755264432,0.0691773699062033,True,4406.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,U_FT_vs_pooledCOMPp01,U-WIN strict_order_acc NI,pooled_COMP_p01_seeds_3,test_ouhdl,strict_order_acc,-0.01065,CI lo > -0.01065,0.0277269285936455,0.0331114137287537,0.0392310283502776,True,4406.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,U_FT_vs_pooledCOMPp01,U-WIN direction_acc NI,pooled_COMP_p01_seeds_3,test_ouhdl,direction_acc,-0.01245,CI lo > -0.01245,-0.0014119101944697,0.002877232991258,0.0072617884606236,True,4385.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_casia_zh,aiou,-0.01,CI lo > -0.010,0.0332712629234478,0.035963206032972,0.0388387222100102,True,500.0,60.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_casia_en,aiou,-0.01,CI lo > -0.010,0.0042370661400687,0.0062314812039799,0.0084723383118583,True,500.0,60.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_hpl_tamil,aiou,-0.01,CI lo > -0.010,0.0161135414843926,0.0181471613372639,0.0208650977176143,True,500.0,52.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,test_iam500,aiou,-0.01,CI lo > -0.010,0.0107629686611876,0.0130856908073317,0.0155488982718373,True,500.0,63.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,german_unipen_de_test,aiou,-0.01,CI lo > -0.010,-0.0019572762535235,0.0104821346769205,0.0192825888827841,True,827.0,7.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,X_composed_vs_LUOms6,X-NI AIoU,LUO_ms6,german_onhw_all,aiou,-0.01,CI lo > -0.010,0.0258915496671173,0.026637820378492,0.0273837707100663,True,5925.0,5925.0,unit,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_FT_vs_control,F U AIoU NI,NOFM_W,test_ouhdl,aiou,-0.01035,CI lo > -0.01035,-0.0159693074012622,-0.0142244034365761,-0.0125542223394942,False,4406.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_FT_vs_control,F U penup_f1_v2 NI,NOFM_W,test_ouhdl,penup_f1_v2,-0.0141,CI lo > -0.0141,-0.0180027037118161,-0.0111956470592096,-0.0041336117848697,False,4406.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_FT_vs_control,F U strict_order_acc NI,NOFM_W,test_ouhdl,strict_order_acc,-0.01065,CI lo > -0.01065,-0.0003823999164701,0.0064306249054319,0.0140114267804045,True,4406.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_FT_vs_control,F U direction_acc NI,NOFM_W,test_ouhdl,direction_acc,-0.01245,CI lo > -0.01245,0.0051329576480505,0.0087332272003638,0.0124174435537356,True,4397.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_FT_vs_control,F U aiou win,NOFM_W,test_ouhdl,aiou,0.0,CI lo > 0,-0.0159693074012622,-0.0142244034365761,-0.0125542223394942,False,4406.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_FT_vs_control,F U penup_f1_v2 win,NOFM_W,test_ouhdl,penup_f1_v2,0.0,CI lo > 0,-0.0180027037118161,-0.0111956470592096,-0.0041336117848697,False,4406.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_FT_vs_control,F U strict_order_acc win,NOFM_W,test_ouhdl,strict_order_acc,0.0,CI lo > 0,-0.0003823999164701,0.0064306249054319,0.0140114267804045,False,4406.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_FT_vs_control,F U direction_acc win,NOFM_W,test_ouhdl,direction_acc,0.0,CI lo > 0,0.0051329576480505,0.0087332272003638,0.0124174435537356,True,4397.0,32.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),NOFM_W,test_casia_zh,aiou,-0.01,CI lo > -0.010,-0.0039392986880369,-0.0019731384887314,7.766801761201211e-05,True,500.0,60.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),NOFM_W,test_casia_en,aiou,-0.01,CI lo > -0.010,-0.0037808989231282,-0.0025166759609728,-0.0013180593940209,True,500.0,60.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),NOFM_W,test_hpl_tamil,aiou,-0.01,CI lo > -0.010,-0.0039321443810933,-0.0024167252103488,-0.0008995250521635,True,500.0,52.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),NOFM_W,test_iam500,aiou,-0.01,CI lo > -0.010,-0.0037349390016236,-0.0022768491540801,-0.0007916454703193,True,500.0,63.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),NOFM_W,german_unipen_de_test,aiou,-0.01,CI lo > -0.010,-0.0155946918831955,-0.0089674174360256,-0.0049308141379162,False,827.0,7.0,writer,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),NOFM_W,german_onhw_all,aiou,-0.01,CI lo > -0.010,-0.0007450989974528,-0.0002646753393356,0.0002805676270161,True,5925.0,5925.0,unit,RTX A4000,RTX A4000,False,4.0
+c-radiov3-h_W,F_FT_vs_control,F U AIoU NI,PEINIT_W,test_ouhdl,aiou,-0.01035,CI lo > -0.01035,,,,,,,,,,,
+c-radiov3-h_W,F_FT_vs_control,F U penup_f1_v2 NI,PEINIT_W,test_ouhdl,penup_f1_v2,-0.0141,CI lo > -0.0141,,,,,,,,,,,
+c-radiov3-h_W,F_FT_vs_control,F U strict_order_acc NI,PEINIT_W,test_ouhdl,strict_order_acc,-0.01065,CI lo > -0.01065,,,,,,,,,,,
+c-radiov3-h_W,F_FT_vs_control,F U direction_acc NI,PEINIT_W,test_ouhdl,direction_acc,-0.01245,CI lo > -0.01245,,,,,,,,,,,
+c-radiov3-h_W,F_FT_vs_control,F U aiou win,PEINIT_W,test_ouhdl,aiou,0.0,CI lo > 0,,,,,,,,,,,
+c-radiov3-h_W,F_FT_vs_control,F U penup_f1_v2 win,PEINIT_W,test_ouhdl,penup_f1_v2,0.0,CI lo > 0,,,,,,,,,,,
+c-radiov3-h_W,F_FT_vs_control,F U strict_order_acc win,PEINIT_W,test_ouhdl,strict_order_acc,0.0,CI lo > 0,,,,,,,,,,,
+c-radiov3-h_W,F_FT_vs_control,F U direction_acc win,PEINIT_W,test_ouhdl,direction_acc,0.0,CI lo > 0,,,,,,,,,,,
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),PEINIT_W,test_casia_zh,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),PEINIT_W,test_casia_en,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),PEINIT_W,test_hpl_tamil,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),PEINIT_W,test_iam500,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),PEINIT_W,german_unipen_de_test,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,
+c-radiov3-h_W,F_composed_vs_control,F X AIoU (reported),PEINIT_W,german_onhw_all,aiou,-0.01,CI lo > -0.010,,,,,,,,,,,

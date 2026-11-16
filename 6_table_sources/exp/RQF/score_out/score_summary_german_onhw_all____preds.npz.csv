@@ -1,0 +1,4 @@
+file,n_units,n_scored,n_dedup,n_error,seconds
+german_onhw_all__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed0_preds.npz,5925,5925,0,0,83.2
+german_onhw_all__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed1_preds.npz,5925,5925,0,0,6.8
+german_onhw_all__SMA_PEINIT_W_p01_s20261035_ft_ms10__seed2_preds.npz,5925,5925,0,0,7.0

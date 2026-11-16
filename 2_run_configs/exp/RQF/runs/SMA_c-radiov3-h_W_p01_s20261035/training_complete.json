@@ -1,0 +1,18 @@
+{
+ "status": "complete",
+ "final_step": 10000,
+ "backbone_sha256_at_start": "f0d7e7d8da9f64213546c6045b61ad3f1b7e3bdec03623d07078388dfafbd183",
+ "backbone_sha256_end": "f0d7e7d8da9f64213546c6045b61ad3f1b7e3bdec03623d07078388dfafbd183",
+ "backbone_unchanged": true,
+ "completed_at": "2026-11-14T06:57:55Z",
+ "peak_rss_mb": 2555.296875,
+ "cuda_max_alloc_gb": 4.434310144,
+ "params": {
+  "backbone": 48592388,
+  "adapters_per_expert": 953344,
+  "adapters_total": 953344,
+  "gate": 65793,
+  "n_wrapped_modules": 75,
+  "trainable": 1019137
+ }
+}

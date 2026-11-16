@@ -1,0 +1,4 @@
+[2026-11-07T22:13:39Z] parallel copy venv+code to /dev/shm/m1_24965793 start host=<node> slurm=24965793
+[2026-11-07T22:15:44Z] copy done 906 MB
+[2026-11-07T22:19:58Z] start M1_selectivity mode=full host=<node> slurm=24965793 ncpu=8
+[2026-11-07T22:32:20Z] run finished rc=0 mode=full

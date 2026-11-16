@@ -1,0 +1,256 @@
+{
+ "params": {
+  "data": "$U/data",
+  "x4a": "$U/exp/X4a/data",
+  "out": "$U/data/m5_multiscript_v1",
+  "procs": 16,
+  "n_train": 20000,
+  "n_val": 250,
+  "limit_files": 0
+ },
+ "seed": 20261016,
+ "started_utc": "2026-10-20T20:48:22Z",
+ "casia_val_writers": [
+  "032",
+  "052",
+  "070",
+  "078",
+  "118",
+  "137",
+  "180",
+  "238",
+  "243",
+  "292",
+  "349",
+  "387",
+  "390",
+  "397",
+  "1014",
+  "1056",
+  "1062",
+  "1071",
+  "1091",
+  "1093",
+  "1137",
+  "1140",
+  "1187",
+  "1198"
+ ],
+ "tamil_val_users": [
+  "usr_109",
+  "usr_121",
+  "usr_156",
+  "usr_157",
+  "usr_185",
+  "usr_211"
+ ],
+ "inputs": {
+  "casia_reader": {
+   "path": "$U/exp/D2/ext/read_pot.py",
+   "sha256": "f9c2c1c0fba880f000689970b12916d942309f0c3ad4f2217848d40155e285bf"
+  },
+  "casia_train_files": {
+   "dir": "$U/data/casia/CASIA/train",
+   "n_files": 576,
+   "sha256_of_sorted_file_sha256s": "ed2d51deac37f09d63e9b37881cb765429cdd78f64c2652fa66b5fc0e8798ea0"
+  },
+  "tamil_reader": {
+   "path": "$U/data/hpl_tamil/read_unipen.py",
+   "sha256": "a3fae337ce7753b7ac509810bc915cbba2c5d869f9308b28d87333bb12127ada"
+  },
+  "tamil_train_dir": {
+   "dir": "$U/data/hpl_tamil/extracted/hpl-tamil-iwfhr06-train-online-0.2/new",
+   "n_users": 117,
+   "n_files": 50683
+  },
+  "iam_train_npz": {
+   "path": "$U/data/d2_v2/iam/e0_train.npz",
+   "sha256": "80544649b953100d7745103d32f6ff9f7edf335962f203a53e08282dce211a0a"
+  },
+  "iam_val_npz": {
+   "path": "$U/data/d2_v2/iam/e0_val1.npz",
+   "sha256": "8887df3362dbbde7929e46746587321a5adb066087425453163d33dae8546319"
+  },
+  "ouhdl_train_npz": {
+   "path": "$U/data/ouhdl_e0_v3/e0_train.npz",
+   "sha256": "2c4ddc48fb37b3eb3145977d9245f16e2e237f1224e24b5c81b72785d8a1f048"
+  },
+  "ouhdl_val_npz": {
+   "path": "$U/data/ouhdl_e0_v3/e0_val.npz",
+   "sha256": "25451031d41408c32c504e07b9e16ebcafe4d5fc3c0678cb1bab82a877272f92"
+  },
+  "iam_test_npz": {
+   "path": "$U/data/d2_v2/iam/e0_test.npz",
+   "sha256": "1ed8213557f82c6b417488b8ce6c7e229531a3e62a376f4b970659ab30e5a546"
+  }
+ },
+ "pools": {
+  "casia_zh_train": {
+   "pool_units": 2105324,
+   "picked": 20000,
+   "pool_writers": 552
+  },
+  "casia_zh_val": {
+   "pool_units": 91562,
+   "picked": 250,
+   "pool_writers": 24
+  },
+  "casia_en_train": {
+   "pool_units": 28699,
+   "picked": 20000,
+   "pool_writers": 552
+  },
+  "casia_en_val": {
+   "pool_units": 1247,
+   "picked": 250,
+   "pool_writers": 24
+  },
+  "hpl_tamil_train": {
+   "pool_units": 49156,
+   "picked": 20000,
+   "pool_writers": 111
+  },
+  "hpl_tamil_val": {
+   "pool_units": 1527,
+   "picked": 250,
+   "pool_writers": 6
+  },
+  "iam_train": {
+   "pool_units": 81659,
+   "picked": 20000
+  },
+  "iam_val": {
+   "pool_units": 18624,
+   "picked": 250
+  },
+  "ouhdl_train": {
+   "pool_units": 33615,
+   "picked": 20000
+  },
+  "ouhdl_val": {
+   "pool_units": 4349,
+   "picked": 250
+  }
+ },
+ "errors": {
+  "casia_zh_train": [
+   "n_errors=0"
+  ],
+  "casia_zh_val": [
+   "n_errors=0"
+  ],
+  "casia_en_train": [
+   "n_errors=0"
+  ],
+  "casia_en_val": [
+   "n_errors=0"
+  ],
+  "hpl_tamil_train": [
+   "n_errors=0"
+  ],
+  "hpl_tamil_val": [
+   "n_errors=0"
+  ],
+  "iam_train": [
+   "n_errors=0"
+  ],
+  "iam_val": [
+   "n_errors=0"
+  ],
+  "ouhdl_train": [
+   "n_errors=0"
+  ],
+  "ouhdl_val": [
+   "n_errors=0"
+  ]
+ },
+ "files": {
+  "m5_joint_train.npz": {
+   "sha256": "56649a2581bcbc3d47240cc77f39256049dc81fed993ea88ba9c165d6862694b",
+   "bytes": 725090434,
+   "n_units": 100000
+  },
+  "m5_luo_train.npz": {
+   "sha256": "690441b6bd7c119d774066622c53f23a0aca6e62825a04014351bfba98260b67",
+   "bytes": 598358642,
+   "n_units": 80000
+  },
+  "m5_val_casia_zh.npz": {
+   "sha256": "4927393116fb065b559f26323faddc0d3f5323d839b61fad75cbc205136ca2e7",
+   "bytes": 2506896,
+   "n_units": 250
+  },
+  "m5_val_casia_en.npz": {
+   "sha256": "eea15ff926c70bae84483f940f4491a1f784c8f1e40c9bae76b12f5be9281c8b",
+   "bytes": 1778752,
+   "n_units": 250
+  },
+  "m5_val_hpl_tamil.npz": {
+   "sha256": "dce93506078cf17f8da84377a5bc5b5ebfc53da8e2025f079e8093683f08d686",
+   "bytes": 2797508,
+   "n_units": 250
+  },
+  "m5_val_iam.npz": {
+   "sha256": "5ecbd8b0b4b159a87a8f65eeb3d298bdf233f708debbbea8a2a9699f03c7f840",
+   "bytes": 1853908,
+   "n_units": 250
+  },
+  "m5_val_ouhdl.npz": {
+   "sha256": "9c6b7dd93fde089fe3023f1539ac8c51d7f053e3d0f819451afb65bbbb73c707",
+   "bytes": 3050484,
+   "n_units": 250
+  },
+  "m5_test_iam500.npz": {
+   "sha256": "0dbd1a613adadb4e5b846d5ecbdb5e7df9b0006d6a7665ee37e1020fc00637de",
+   "bytes": 3747112,
+   "n_units": 500
+  },
+  "m5_ft_ouhdl_p01.npz": {
+   "sha256": "0e71475d6094b69a10dd1301bf05662e37816471407d2ee6e08a700a6780aad5",
+   "bytes": 2086428,
+   "n_units": 336
+  },
+  "m5_ft_ouhdl_p10.npz": {
+   "sha256": "3770d4d4cd6cbd5f1131e26d50be9412ce99daea345e3fc01e34d07c4de4696f",
+   "bytes": 20921260,
+   "n_units": 3362
+  },
+  "m5_ft_ouhdl_p30.npz": {
+   "sha256": "4e4394ae0b5e1ededf7c4aa40b936ede8530da3f511b663e1366fd118d79d702",
+   "bytes": 62762604,
+   "n_units": 10085
+  }
+ },
+ "ft_subsets": {
+  "p01": {
+   "frac": 0.01,
+   "n_units": 336,
+   "n_writers": 183,
+   "n_lines": 305,
+   "file": "m5_ft_ouhdl_p01.npz"
+  },
+  "p10": {
+   "frac": 0.1,
+   "n_units": 3362,
+   "n_writers": 247,
+   "n_lines": 1569,
+   "file": "m5_ft_ouhdl_p10.npz"
+  },
+  "p30": {
+   "frac": 0.3,
+   "n_units": 10085,
+   "n_writers": 248,
+   "n_lines": 1903,
+   "file": "m5_ft_ouhdl_p30.npz"
+  },
+  "p100": {
+   "frac": 1.0,
+   "n_units": 33615,
+   "n_writers": 248,
+   "n_lines": 1911,
+   "file": "$U/data/ouhdl_e0_v3/e0_train.npz"
+  }
+ },
+ "seconds": 532.0,
+ "finished_utc": "2026-10-20T20:57:14Z"
+}

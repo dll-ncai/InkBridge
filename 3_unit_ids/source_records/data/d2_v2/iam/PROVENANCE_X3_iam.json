@@ -1,0 +1,301 @@
+{
+ "experiment": "X3",
+ "dataset": "d2_v2_iam",
+ "title": "IAM-OnDB t1 line strokes -> connected-component units",
+ "status": "full",
+ "created_utc": "2026-10-19T16:36:33Z",
+ "start_utc": "2026-10-19T16:31:41Z",
+ "host": "<node>",
+ "slurm": {
+  "job_id": "24480488",
+  "partition": "epyc-256",
+  "nodes": "<node>",
+  "cpus": "16",
+  "state_at_write": "RUNNING (provenance written by the job's last step; final state via sacct)",
+  "final_state": "COMPLETED"
+ },
+ "plan": "experiments_to_run_2026-10-18.md section A, X3 (artifact version b474164e)",
+ "licence": {
+  "name": "IAM On-Line Handwriting Database (IAM-OnDB)",
+  "licence": "FKI/IAM terms: free for non-commercial research; registration with the FKI group requested (not yet done); no redistribution of the data or derived copies",
+  "cite": "M. Liwicki, H. Bunke. IAM-OnDB - an on-line English sentence database acquired from handwritten text on a whiteboard. ICDAR 2005, pp. 956-961.",
+  "redistributable": false
+ },
+ "command": "apptainer exec -B $SCRATCH_ROOT images/torch27.sif bash exp/X3/jobs/x3_run.sh iam full  ->  python -u $U/exp/X3/code_f7d16830/x3_build.py --set iam --data $U/data --out $U/data/d2_v2/iam --procs 16 ",
+ "params": {
+  "set": "iam",
+  "data": "$U/data",
+  "out": "$U/data/d2_v2/iam",
+  "m4_code": "$U/exp/M4/full2/code",
+  "procs": 16,
+  "limit": 0,
+  "seed": 20261016
+ },
+ "seeds": {},
+ "inputs": {
+  "task1_tar": "$U/data/iamondb/official_wayback/task1.tar.gz",
+  "task1_sha256": "d41191d02cf1f50405124294b761bbbdfcb94c7aa515129c5f27082a8f6822c3",
+  "writer_map": "$U/exp/M4/full2/code/iam_form_writer_M4.csv",
+  "writer_map_sha256": "23c6ebea9abfed72e8d57e5fcbecff4a1181e8f076f5d97c1b74697ad1c87bda",
+  "n_xml": 12195,
+  "n_xml_not_in_t1": 16,
+  "t1_forms": {
+   "train": 775,
+   "val1": 192,
+   "val2": 216,
+   "test": 544
+  },
+  "lines_per_split": {
+   "val2": 1518,
+   "train": 5364,
+   "val1": 1438,
+   "test": 3859
+  }
+ },
+ "input_extra": {},
+ "code": {
+  "tarball": "code_X3.tar.gz",
+  "tarball_sha256": "f7d1683019ff01352fc830789bcb2a706c44110feac0973fa81065270fc067d7",
+  "e0_code_dir": "$U/e0/code_1a5ee72e",
+  "e0_code_py_sha256": {
+   "build_e0_data.py": "c79c3c1abbc191940ed10a7afcf11b38fa5af636840cada892336d7071e8bcb8",
+   "e0_adapter.py": "83420e9838fc59007fde183d9d6201bb0d8a179f68fa8c4244f7702bcd819b10",
+   "e0_dataset.py": "2f2a11c6df94af2f27292a436732fe4ed25cf2432382ac8a347e07f7c153c2fa",
+   "e0_sample.py": "5f60cb294f8bd7b27ccb676ef0a836b6b0c34730241e366d549fc2104953f84c",
+   "e0_score.py": "0a7569d47d7af1ba3eddb5cbcac6bfd602dc4d257cc950098748d50ff9a2e1af",
+   "e0_train.py": "640ad9067b9e313e3356375721ee4d9f051b7b1c0503dd9ca137306b88ceb774",
+   "test_e0_adapter.py": "0f7967b05cf8de47d36d03a9fc2dcd1f7ea4f2c7dbf7cfe770feaa33152416c6",
+   "uhwr_baselines/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "uhwr_baselines/aggregate.py": "7254af14d2593fd90e88c8b7aa6dc6d4f940b98cb2a670c61720b6ef2d877b32",
+   "uhwr_baselines/geometric.py": "d016dc9e01a8f850cc640ad25c307cc17748ef2ea53d6634292ff88ea574fdc7",
+   "uhwr_baselines/inksight_runner.py": "ce2ecea7d1d95c1b368843a8cb6f2093919dc2d613a01b2e544d451272fc6b5f",
+   "uhwr_baselines/inputs.py": "85571dae5e00aa1741cc8ac10f452cc103c1b5a92b057f3bdaf6948361e0e708",
+   "uhwr_baselines/momna.py": "3af0e8e91c35f64d9f1c3131cc0bc66018e88fb702d85ba0ad10cab7cae2a327",
+   "uhwr_baselines/ouhdl.py": "8c45950246f98a9bbb14c36cbb59212b328b18f10b0c6fdb992bb1eb642df6b1",
+   "uhwr_baselines/run_ouhdl.py": "b0362beda5cd851c797b55897f9435267deddde17dbf166f68d0367393b1fefa",
+   "uhwr_baselines/score_inksight.py": "5f6ee3331f432a6e9d416b8cfe0e1152fd76dcd321cf818836acfafe35d2f1de",
+   "uhwr_eval/__init__.py": "fe1a1a410b83b28e5dcba7f3531480e3b6ba0e8ab9b5a7b301f6f9f12b9bfc8d",
+   "uhwr_eval/_nagamatsu_metrics.py": "7e2d330558f2ddf828cbd618ee80b36cada1818820315523ad826d2f3bbbb0c4",
+   "uhwr_eval/metrics.py": "00c937fa802a46c49ab8858047e9d1c2a4d2ae6bae648fa024276eb20bbfec40",
+   "uhwr_eval/render.py": "49ff4cf1dc0f90bf784cc459fc2c1e501ec1482a3f50f6b48e20909d679966eb",
+   "uhwr_eval/strokes.py": "1b3ef8505b7cf8cdcfa2d95191ab475582e16316bf18fd7a0d5cf70ed9e152b7",
+   "uhwr_eval/validate_toy.py": "3e386e2603ac2f47a9d25fb6e7be8e51a2d6390ff4831c3e157015064aa5fd0b"
+  },
+  "unit_rule": "uhwr_baselines.ouhdl.make_units (OUHD-L v1 component rule, unchanged) + left-to-right renumbering"
+ },
+ "checkpoint": null,
+ "environment": {
+  "container": "images/torch27.sif",
+  "venv": "venvs/cpu",
+  "pip_freeze_file": "pip_freeze_X3_iam.txt",
+  "pip_freeze_sha256": "766a30b8da2cc10c685b3d353f7db7ba8e22deb85b86d70a2a7addec6f67c758"
+ },
+ "stats": {
+  "test": {
+   "n_sources": 3859,
+   "n_sources_error": 0,
+   "errors_first": [],
+   "n_sources_with_writer": 3525,
+   "n_writers": 63,
+   "n_units": 54831,
+   "n_units_encode_error": 0,
+   "n_units_with_marks": 9631,
+   "units_per_source_mean": 14.208603265094585,
+   "n_seq_pct": {
+    "50": 147.0,
+    "90": 205.0,
+    "99": 270.0,
+    "100": 320.0
+   },
+   "n_step_gt_1": 81,
+   "strokes_per_unit_pct": {
+    "50": 1.0,
+    "90": 3.0,
+    "100": 14.0
+   },
+   "seconds": 29.1
+  },
+  "train": {
+   "n_sources": 5364,
+   "n_sources_error": 0,
+   "errors_first": [],
+   "n_sources_with_writer": 5067,
+   "n_writers": 92,
+   "n_units": 81659,
+   "n_units_encode_error": 0,
+   "n_units_with_marks": 15019,
+   "units_per_source_mean": 15.223527218493661,
+   "n_seq_pct": {
+    "50": 141.0,
+    "90": 198.0,
+    "99": 258.0,
+    "100": 320.0
+   },
+   "n_step_gt_1": 54,
+   "strokes_per_unit_pct": {
+    "50": 1.0,
+    "90": 3.0,
+    "100": 12.0
+   },
+   "seconds": 168.5
+  },
+  "val1": {
+   "n_sources": 1438,
+   "n_sources_error": 0,
+   "errors_first": [],
+   "n_sources_with_writer": 1176,
+   "n_writers": 20,
+   "n_units": 18624,
+   "n_units_encode_error": 0,
+   "n_units_with_marks": 3239,
+   "units_per_source_mean": 12.951321279554938,
+   "n_seq_pct": {
+    "50": 137.0,
+    "90": 199.0,
+    "99": 257.77000000000044,
+    "100": 320.0
+   },
+   "n_step_gt_1": 8,
+   "strokes_per_unit_pct": {
+    "50": 1.0,
+    "90": 3.0,
+    "100": 15.0
+   },
+   "seconds": 46.9
+  },
+  "val2": {
+   "n_sources": 1518,
+   "n_sources_error": 0,
+   "errors_first": [],
+   "n_sources_with_writer": 1092,
+   "n_writers": 20,
+   "n_units": 20327,
+   "n_units_encode_error": 0,
+   "n_units_with_marks": 4075,
+   "units_per_source_mean": 13.39064558629776,
+   "n_seq_pct": {
+    "50": 150.0,
+    "90": 217.0,
+    "99": 287.7400000000016,
+    "100": 320.0
+   },
+   "n_step_gt_1": 74,
+   "strokes_per_unit_pct": {
+    "50": 1.0,
+    "90": 3.0,
+    "100": 12.0
+   },
+   "seconds": 19.4
+  }
+ },
+ "extra": {},
+ "outputs": {
+  "build_log.txt": {
+   "sha256": "ded22028d27a2fc4646760726f4fc6e3eb1cf4dd6b808ca92369c2698683014a",
+   "bytes": 2167
+  },
+  "build_stats.json": {
+   "sha256": "ae76d987d38f476fa184f97b044df83fc643f8ee1252a74738c11b85775fbe96",
+   "bytes": 3326
+  },
+  "e0_test.npz": {
+   "sha256": "1ed8213557f82c6b417488b8ce6c7e229531a3e62a376f4b970659ab30e5a546",
+   "bytes": 125515920
+  },
+  "e0_train.npz": {
+   "sha256": "80544649b953100d7745103d32f6ff9f7edf335962f203a53e08282dce211a0a",
+   "bytes": 178767064
+  },
+  "e0_val1.npz": {
+   "sha256": "8887df3362dbbde7929e46746587321a5adb066087425453163d33dae8546319",
+   "bytes": 41631845
+  },
+  "e0_val2.npz": {
+   "sha256": "6f4aad2c2d822c4e92b58bbd5d6d939e04f51c7fb9a9f05e4d6eb57a2906e9c3",
+   "bytes": 48728857
+  },
+  "pip_freeze_X3_iam.txt": {
+   "sha256": "766a30b8da2cc10c685b3d353f7db7ba8e22deb85b86d70a2a7addec6f67c758",
+   "bytes": 8911
+  },
+  "sources_test.csv": {
+   "sha256": "43911ca48b2bc79d14b17b0d9ce423b0ab3f172a8d742983e42cd5aee32d10f5",
+   "bytes": 577523
+  },
+  "sources_train.csv": {
+   "sha256": "3523819b75c411b9c6f74af43edd0a53ee4878b2ee4af781d1d42c10fc472b95",
+   "bytes": 815377
+  },
+  "sources_val1.csv": {
+   "sha256": "b44cf86c4a76ba51d7ecdf5573793574fe1d8ccdc0c27a2a626f2891efa12727",
+   "bytes": 211072
+  },
+  "sources_val2.csv": {
+   "sha256": "f08596a7d65b4c1b91669cecf8fcec185b8a38a6e12867ef87ca3d9c167abed4",
+   "bytes": 224443
+  },
+  "units_test.csv": {
+   "sha256": "f7beedb57c1653a4e388d8afb1fb8edddca6d890c07fea461e808709d7214d4d",
+   "bytes": 8411047
+  },
+  "units_test.npz": {
+   "sha256": "6ce8cb68890d779dcb6b4a587c35fe2282ffb60ea486f70740f2b1e9f511bbfb",
+   "bytes": 17471459
+  },
+  "units_train.csv": {
+   "sha256": "18a68560bce37caaf07df6686cc5b40cb51a55014023eaf320d66f0c4bd37921",
+   "bytes": 12684526
+  },
+  "units_train.npz": {
+   "sha256": "a9f15e2949fd08f3f6bc322ef69814ea24a5a8875d9a418a3fb9141b645c394a",
+   "bytes": 23902741
+  },
+  "units_val1.csv": {
+   "sha256": "21f5d0ab322ad6d8ef53f5c35caf52ae8eda6e1f3012cacdfd7de20405dbe2d1",
+   "bytes": 2800653
+  },
+  "units_val1.npz": {
+   "sha256": "2c912b4391db0feecc39ed1ddc1925999602b1604491f26ecce9f81fb07ed221",
+   "bytes": 6338664
+  },
+  "units_val2.csv": {
+   "sha256": "20552e0f5c75bc309274fdb230c9e5b32f3fe1b6717b585fcca9b0d14612d37f",
+   "bytes": 3118440
+  },
+  "units_val2.npz": {
+   "sha256": "f9b40f97b14e89f52c5e6e7f527f9709720cbb6301eb917682f59fc0e0481c57",
+   "bytes": 7358900
+  }
+ },
+ "deviations": [
+  "Unit numbering is left-to-right by unit ink min x (OUHD-L make_units numbers right-to-left); component rule otherwise unchanged.",
+  "\"<=320 points per unit\" implemented as the E0 adapter rule (arc-length resampling, step grown x1.05 until <= 320 points), not by dropping units.",
+  "Writer ids from M4 form->writer map cover 10,860 of 12,179 t1 lines; the rest have writer_int -1.",
+  "Validation for X5 selection is not drawn here; val1 (testset_v) and val2 (testset_t) are stored whole."
+ ],
+ "slurm_jobs": [
+  {
+   "slurm_id": "24480325",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "FAILED",
+   "exit": "3:0",
+   "start_utc": "2026-10-19T16:19:37Z",
+   "end_utc": "2026-10-19T16:26:28Z",
+   "node": "<node>",
+   "role": "smoke v1, code f7d16830: iam smoke OK; unipen_de staging fix extracted 0 files (read-only CD-ROM dir modes) -> exit 3"
+  },
+  {
+   "slurm_id": "24480488",
+   "job_name": "<agent>",
+   "partition": "epyc-256",
+   "state": "COMPLETED",
+   "exit": "0:0",
+   "start_utc": "2026-10-19T16:31:39Z",
+   "end_utc": "2026-10-19T16:36:33Z",
+   "node": "<node>",
+   "role": "full iam, code f7d16830 (code_X3.tar.gz)"
+  }
+ ],
+ "finalised_utc": "2026-10-19T17:00:00Z"
+}

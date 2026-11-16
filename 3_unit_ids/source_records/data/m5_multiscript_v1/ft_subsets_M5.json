@@ -1,0 +1,36 @@
+{
+ "source": "$U/data/ouhdl_e0_v3/e0_train.npz",
+ "source_sha256": "2c4ddc48fb37b3eb3145977d9245f16e2e237f1224e24b5c81b72785d8a1f048",
+ "n_source": 33615,
+ "rule": "nested prefixes of one permutation, numpy default_rng([20261016, 9]).permutation(N); k = floor(frac*N + 0.5)",
+ "subsets": {
+  "p01": {
+   "frac": 0.01,
+   "n_units": 336,
+   "n_writers": 183,
+   "n_lines": 305,
+   "file": "m5_ft_ouhdl_p01.npz"
+  },
+  "p10": {
+   "frac": 0.1,
+   "n_units": 3362,
+   "n_writers": 247,
+   "n_lines": 1569,
+   "file": "m5_ft_ouhdl_p10.npz"
+  },
+  "p30": {
+   "frac": 0.3,
+   "n_units": 10085,
+   "n_writers": 248,
+   "n_lines": 1903,
+   "file": "m5_ft_ouhdl_p30.npz"
+  },
+  "p100": {
+   "frac": 1.0,
+   "n_units": 33615,
+   "n_writers": 248,
+   "n_lines": 1911,
+   "file": "$U/data/ouhdl_e0_v3/e0_train.npz"
+  }
+ }
+}

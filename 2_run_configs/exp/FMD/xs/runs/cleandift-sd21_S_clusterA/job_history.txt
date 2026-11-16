@@ -1,0 +1,4 @@
+2026-11-05T09:29:02Z arm_job_start arm=cleandift-sd21_S lane=clusterA site=clusterA host=<node> slurm=24843789 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-05T09:29:03Z race_lock WIN site=clusterA host=<node> slurm=24843789 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-05T09:29:04Z batch_layout ng=1 mem_gb=24 per_gpu=32 global_micro=32 accum=16 units_per_step=512 site=clusterA host=<node> slurm=24843789 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]
+2026-11-05T09:29:04Z train_start ngpu=1 site=clusterA host=<node> slurm=24843789 restart=0 part=gpuidle gpus=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;]

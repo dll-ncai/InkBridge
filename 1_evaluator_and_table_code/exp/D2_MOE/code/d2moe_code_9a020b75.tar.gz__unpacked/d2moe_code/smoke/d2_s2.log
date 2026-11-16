@@ -1,0 +1,13 @@
+stage 2: train units 50 per script {'ouhdl': 50}
+Model Parameters: 2.93M
+stage 2: added expert 'rtl' from mix {'expert0': 0.3332270681858063, 'expert1': 0.3333510458469391, 'expert2': 0.33342185616493225}
+params {'backbone': 27092036, 'adapters_per_expert': 953344, 'adapters_total': 3813376, 'gate': 66180, 'n_wrapped_modules': 75, 'trainable': 1019524}; experts ['expert0', 'expert1', 'expert2', 'rtl']; trainable tensors 154; eff. batch 16
+[val step 0] ouhdl: den 0.0028 gate {'expert0': 0.24993, 'expert1': 0.25001, 'expert2': 0.25006, 'rtl': 0.25} | iam: den 0.0028 gate {'expert0': 0.2499, 'expert1': 0.25005, 'expert2': 0.25004, 'rtl': 0.25}
+step 1 loss 0.0121 den 0.0021 lb 1.0003 gn 0.01 route {'expert0': 0, 'expert1': 0, 'expert2': 16, 'rtl': 0} 4.67s/step
+step 2 loss 0.0108 den 0.0008 lb 1.0004 gn 0.01 route {'expert0': 3, 'expert1': 13, 'expert2': 0, 'rtl': 0} 4.58s/step
+step 3 loss 0.0120 den 0.0020 lb 1.0006 gn 0.01 route {'expert0': 6, 'expert1': 0, 'expert2': 0, 'rtl': 10} 4.79s/step
+step 4 loss 0.0132 den 0.0032 lb 1.0006 gn 0.01 route {'expert0': 9, 'expert1': 0, 'expert2': 0, 'rtl': 7} 4.59s/step
+step 5 loss 0.0136 den 0.0036 lb 1.0005 gn 0.01 route {'expert0': 4, 'expert1': 3, 'expert2': 0, 'rtl': 9} 0.93s/step
+step 10 loss 0.0111 den 0.0011 lb 1.0002 gn 0.00 route {'expert0': 1, 'expert1': 6, 'expert2': 8, 'rtl': 1} 4.74s/step
+[val step 12] ouhdl: den 0.0028 gate {'expert0': 0.25005, 'expert1': 0.24991, 'expert2': 0.24999, 'rtl': 0.25004} | iam: den 0.0028 gate {'expert0': 0.24995, 'expert1': 0.25, 'expert2': 0.25006, 'rtl': 0.24999}
+training complete; backbone unchanged: True

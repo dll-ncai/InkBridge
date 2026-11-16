@@ -1,0 +1,17 @@
+stage 1: train units 400 per script {'casia_en': 100, 'casia_zh': 100, 'hpl_tamil': 100, 'iam': 100}
+Model Parameters: 2.93M
+params {'backbone': 27092036, 'adapters_per_expert': 953344, 'adapters_total': 2860032, 'gate': 66051, 'n_wrapped_modules': 75, 'trainable': 2926083}; experts ['expert0', 'expert1', 'expert2']; trainable tensors 454; eff. batch 16
+[val step 0] casia_zh: den 0.0073 gate {'expert0': 0.33333, 'expert1': 0.33333, 'expert2': 0.33333} | iam: den 0.0028 gate {'expert0': 0.33333, 'expert1': 0.33333, 'expert2': 0.33333}
+step 1 loss 0.0121 den 0.0021 lb 1.0000 gn 0.02 route {'expert0': 16, 'expert1': 0, 'expert2': 0} 4.56s/step
+step 2 loss 0.0153 den 0.0053 lb 1.0012 gn 0.02 route {'expert0': 0, 'expert1': 16, 'expert2': 0} 4.25s/step
+step 3 loss 0.0132 den 0.0032 lb 1.0027 gn 0.02 route {'expert0': 0, 'expert1': 0, 'expert2': 16} 4.25s/step
+step 4 loss 0.0138 den 0.0038 lb 1.0023 gn 0.02 route {'expert0': 0, 'expert1': 0, 'expert2': 16} 4.36s/step
+step 5 loss 0.0119 den 0.0019 lb 1.0016 gn 0.02 route {'expert0': 0, 'expert1': 0, 'expert2': 16} 0.83s/step
+step 10 loss 0.0129 den 0.0029 lb 1.0005 gn 0.01 route {'expert0': 16, 'expert1': 0, 'expert2': 0} 4.23s/step
+step 15 loss 0.0159 den 0.0059 lb 1.0003 gn 0.01 route {'expert0': 1, 'expert1': 9, 'expert2': 6} 4.34s/step
+[val step 15] casia_zh: den 0.0072 gate {'expert0': 0.33316, 'expert1': 0.33345, 'expert2': 0.3334} | iam: den 0.0028 gate {'expert0': 0.33312, 'expert1': 0.33351, 'expert2': 0.33338}
+step 20 loss 0.0144 den 0.0044 lb 1.0001 gn 0.01 route {'expert0': 4, 'expert1': 3, 'expert2': 9} 6.19s/step
+step 25 loss 0.0131 den 0.0031 lb 1.0002 gn 0.01 route {'expert0': 10, 'expert1': 5, 'expert2': 1} 4.41s/step
+step 30 loss 0.0106 den 0.0006 lb 1.0001 gn 0.00 route {'expert0': 3, 'expert1': 4, 'expert2': 9} 4.36s/step
+[val step 30] casia_zh: den 0.0071 gate {'expert0': 0.33326, 'expert1': 0.33337, 'expert2': 0.33337} | iam: den 0.0028 gate {'expert0': 0.3332, 'expert1': 0.33341, 'expert2': 0.33339}
+training complete; backbone unchanged: True

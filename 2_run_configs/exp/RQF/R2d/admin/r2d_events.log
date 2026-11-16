@@ -1,0 +1,40 @@
+2026-11-07T20:42:45Z [R2d clusterA] START stage data slurm=24964265 restart=0 host=<node> part=epyc-128
+2026-11-07T22:21:47Z [R2d clusterA] END stage data rc=0 slurm=24964265 restart=0 host=<node> part=epyc-128
+2026-11-07T22:22:23Z [R2d clusterA] START stage smoke slurm=24964266 restart=0 host=<node> part=epyc-128
+2026-11-07T22:28:04Z [R2d clusterA] END stage smoke rc=1 slurm=24964266 restart=0 host=<node> part=epyc-128
+2026-11-07T22:38:24Z [R2d clusterA] START stage smoke slurm=24966173 restart=0 host=<node> part=epyc-128
+2026-11-08T05:24:08Z [R2d clusterA] START stage smoke slurm=24969558 restart=0 host=<node> part=epyc-128
+2026-11-08T06:22:20Z [R2d clusterA] END stage smoke rc=2 slurm=24969558 restart=0 host=<node> part=epyc-128
+2026-11-08T06:33:15Z [R2d clusterA] START stage smoke slurm=24970048 restart=0 host=<node> part=epyc-128
+2026-11-08T09:10:03Z [R2d clusterA] END stage smoke rc=0 slurm=24970048 restart=0 host=<node> part=epyc-128
+2026-11-08T12:42:17Z [R2d clusterA] START stage lto slurm=24970049 restart=0 host=<node> part=gpu
+2026-11-10T14:45:39Z [R2d clusterA] END stage lto rc=0 slurm=24970049 restart=0 host=<node> part=gpu
+2026-11-10T20:45:31Z [R2d clusterA] START stage samp_lto slurm=24970051 restart=0 host=<node> part=gpuidle
+2026-11-10T20:46:26Z [R2d clusterA] START stage smrp 20261034 slurm=24970054 restart=0 host=<node> part=gpuidle
+2026-11-10T20:46:26Z [R2d clusterA] START stage ftp 20261034 slurm=24970053 restart=0 host=<node> part=gpuidle
+2026-11-10T20:48:11Z [R2d clusterA] START stage ftp 20261035 slurm=24970061 restart=0 host=<node> part=gpuidle
+2026-11-10T22:09:47Z [R2d clusterA] END stage samp_lto rc=0 slurm=24970051 restart=0 host=<node> part=gpuidle
+2026-11-11T00:08:33Z [R2d clusterA] START stage smrp 20261035 slurm=24970062 restart=0 host=<node> part=gpuidle
+2026-11-11T00:10:26Z [R2d clusterA] START stage ftp 20261036 slurm=24970069 restart=0 host=<node> part=gpuidle
+2026-11-11T05:30:49Z [R2d clusterA] END stage smrp 20261034 rc=0 slurm=24970054 restart=0 host=<node> part=gpuidle
+2026-11-11T05:31:25Z [R2d clusterA] START stage smrp 20261036 slurm=24970070 restart=0 host=<node> part=gpuidle
+2026-11-11T05:42:46Z [R2d clusterA] END stage ftp 20261035 rc=0 slurm=24970061 restart=0 host=<node> part=gpuidle
+2026-11-11T05:43:09Z [R2d clusterA] START stage ftp 20261034 slurm=24970053 restart=1 host=<node> part=gpuidle
+2026-11-11T07:13:43Z [R2d clusterA] START stage samp_smrp 20261034 slurm=24970058 restart=0 host=<node> part=gpuidle
+2026-11-11T07:20:52Z [R2d clusterA] END stage ftp 20261034 rc=0 slurm=24970053 restart=1 host=<node> part=gpuidle
+2026-11-11T07:21:25Z [R2d clusterA] START stage samp_ftp 20261034 slurm=24970057 restart=0 host=<node> part=gpuidle
+2026-11-11T07:46:15Z [R2d clusterA] END stage smrp 20261035 rc=0 slurm=24970062 restart=0 host=<node> part=gpuidle
+2026-11-11T07:46:15Z [R2d clusterA] END stage ftp 20261036 rc=0 slurm=24970069 restart=0 host=<node> part=gpuidle
+2026-11-11T08:00:38Z [R2d clusterA] START stage samp_ftp 20261034 slurm=24970057 restart=1 host=<node> part=gpuidle
+2026-11-11T08:04:22Z [R2d clusterA] START stage smrp 20261036 slurm=24970070 restart=1 host=<node> part=gpuidle
+2026-11-11T09:11:22Z [R2d clusterA] START stage samp_ftp 20261034 slurm=24970057 restart=2 host=<node> part=gpuidle
+2026-11-12T05:32:15Z [R2d clusterA] START stage samp_smrp 20261034 slurm=24970058 restart=1 host=<node> part=gpuidle
+2026-11-12T05:33:48Z [R2d clusterA] START stage smrp 20261036 slurm=24970070 restart=2 host=<node> part=gpuidle
+2026-11-12T05:34:39Z [R2d clusterA] START stage samp_ftp 20261034 slurm=24970057 restart=3 host=<node> part=gpuidle
+2026-11-12T06:01:50Z [R2d clusterA] END stage samp_smrp 20261034 rc=0 slurm=24970058 restart=1 host=<node> part=gpuidle
+2026-11-12T06:12:34Z [R2d clusterA] END stage samp_ftp 20261034 rc=0 slurm=24970057 restart=3 host=<node> part=gpuidle
+2026-11-12T08:45:41Z [R2d clusterA] START stage smrp 20261036 slurm=24970070 restart=3 host=<node> part=gpuidle
+2026-11-12T17:26:23Z [R2d clusterA] START stage smrp 20261036 slurm=24970070 restart=4 host=<node> part=gpuidle
+2026-11-13T00:30:40Z [R2d clusterA] START stage smrp 20261036 slurm=24970070 restart=5 host=<node> part=gpuidle
+2026-11-15T09:00:45Z [R2d clusterA] START stage smrp 20261036 slurm=24970070 restart=6 host=<node> part=gpuidle
+2026-11-15T10:38:13Z [R2d clusterA] END stage smrp 20261036 rc=0 slurm=24970070 restart=6 host=<node> part=gpuidle

@@ -1,0 +1,16 @@
+{
+ "status": "complete",
+ "final_step": 40000,
+ "completed_at": "2026-11-04T12:42:14Z",
+ "arm_id": "c-radiov3-h_W",
+ "milestones": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "peak_rss_mb": 5460.5234375,
+ "cuda_max_alloc_gb": 5.530687488,
+ "lane": "clusterA",
+ "slurm": "24843729"
+}

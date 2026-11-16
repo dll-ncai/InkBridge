@@ -1,0 +1,142 @@
+{
+ "date": "2026-10-16",
+ "dataset": "OUHD-L ligature units v3.0",
+ "sample": {
+  "seed": 20261016,
+  "lines": {
+   "train": 24,
+   "val": 12,
+   "test": 12,
+   "gold_hidden": 12
+  },
+  "units": 1041
+ },
+ "reviewers": {
+  "n": 6,
+  "model": "session model (same as the pairwise judge that agreed with <author> on 93% of regions)",
+  "packs": null
+ },
+ "reviewer_accuracy_on_gold": {
+  "units": 195,
+  "truly_wrong": 44,
+  "tp": 41,
+  "fp": 2,
+  "fn": 3,
+  "precision": 0.953,
+  "recall": 0.932,
+  "specificity": 0.987
+ },
+ "estimated_unit_error_rate": {
+  "gold": {
+   "flag_rate": 0.221,
+   "corrected_95ci": [
+    0.145,
+    0.313
+   ],
+   "lines": 12,
+   "writers": 9
+  },
+  "test": {
+   "flag_rate": 0.169,
+   "corrected_95ci": [
+    0.098,
+    0.246
+   ],
+   "lines": 12,
+   "writers": 12
+  },
+  "train": {
+   "flag_rate": 0.151,
+   "corrected_95ci": [
+    0.083,
+    0.223
+   ],
+   "lines": 24,
+   "writers": 24
+  },
+  "val": {
+   "flag_rate": 0.274,
+   "corrected_95ci": [
+    0.146,
+    0.43
+   ],
+   "lines": 12,
+   "writers": 10
+  }
+ },
+ "error_types_train_val_test": {
+  "merged_separate_ligatures": 63,
+  "missing_own_mark": 42,
+  "mark_or_stroke_as_own_unit": 24,
+  "has_foreign_mark": 22,
+  "part_of_ligature_split_off": 14,
+  "other": 4
+ },
+ "integrity_audit": {
+  "checks": [
+   {
+    "name": "1_sha256_outputs_and_manifests",
+    "passed": true,
+    "detail": "9 output files: 9 sha256+bytes match (mismatch=[]); 3 manifests: 3 match (mismatch=[]); extra: code hashes mismatched=[], letter_lengths mismatch=False"
+   },
+   {
+    "name": "2_loader_index_npz_unique_ids",
+    "passed": true,
+    "detail": "train: idx 33615 rows, npz 33615 units, offsets end 11904287=points 11904287, iterated 33615, columns [np.str_('x'), np.str_('y'), np.str_('time'), np.str_('pressure'), np.str_('stroke_local')]; val: idx 4349 rows, npz 4349 units, offsets end 1395987=points 1395987, iterated 4349, columns [np.str_('x'), np.str_('y'), np.str_('time'), np.str_('pressure'), np.str_('stroke_local')]; test: idx 4406 rows, npz 4406 units, offsets end 1502151=points 1502151, iterated 4406, columns [np.str_('x'), np.str_('y'), np.str_('time'), np.str_('pressure'), np.str_('stroke_local')]; unit_ids total 42370, unique 42370"
+   },
+   {
+    "name": "3_lines_vs_manifest_and_writer_disjoint",
+    "passed": true,
+    "detail": "train: manifest 1911 lines, lines_v3 1911, missing 0, extra 0, lines with units 1911, writer_id mismatches lines/index 0/0, transcript mismatches 0, wrong split label 0; val: manifest 239 lines, lines_v3 239, missing 0, extra 0, lines with units 239, writer_id mismatches lines/index 0/0, transcript mismatches 0, wrong split label 0; test: manifest 253 lines, lines_v3 253, missing 0, extra 0, lines with units 253, writer_id mismatches lines/index 0/0, transcript mismatches 0, wrong split label 0; writers [248, 31, 32], overlaps {'train&val': 0, 'train&test': 0, 'val&test': 0}"
+   },
+   {
+    "name": "4a_stroke_partition_all_lines",
+    "passed": true,
+    "detail": "2403 lines / 42370 units checked across 3 splits; lines failing partition 0..n_strokes-1: 0 []; units where stroke_idx != body∪mark (or overlap): 0"
+   },
+   {
+    "name": "4b_n_strokes_vs_raw",
+    "passed": true,
+    "detail": "seed-7 sample of 150 lines (train 126, val 14, test 10): 150/150 match own pen-down stroke count; extended to all 2403 lines: 2403 match []; raw rows with non-finite x/y in all lines: 0; lines where drop-order changes stroke count: 0"
+   },
+   {
+    "name": "5_unit_points_equal_raw",
+    "passed": true,
+    "detail": "seed-11 sample of 300 units ({'test': 37, 'train': 231, 'val': 32}): 300/300 npz x,y,time,pressure equal raw pen-down rows exactly, strokes concatenated in ascending recording order, per-stroke split via stroke_local equal too; loader units(...) stroke count mismatches in sample: 0; extended to all 42370 units: 42370 equal []; units whose stroke_local is not 0..k-1 in order: 0"
+   },
+   {
+    "name": "6_provenance_stats_match",
+    "passed": true,
+    "detail": "(mine/PROVENANCE) train: units 33615/33615, lines 1911/1911, writers 248/248, points 11904287/11904287; other stat mismatches []; val: units 4349/4349, lines 239/239, writers 31/31, points 1395987/1395987; other stat mismatches []; test: units 4406/4406, lines 253/253, writers 32/32, points 1502151/1502151; other stat mismatches []"
+   },
+   {
+    "name": "7_internal_consistency",
+    "passed": true,
+    "detail": "all 42370 units / 2403 lines: empty stroke lists 0, zero-point units 0, zero-point strokes 0, n_points vs offsets mismatches 0, n_strokes/n_body/n_mark vs index lists mismatches 0, stroke_idx unsorted 0, bbox (x0,y0,x1,y1 = min/max of points) mismatches 0, unit_id suffix != writing_rank 0, writing_rank non-permutation lines 0, rtl_rank non-permutation lines 0, lines_v3 n_units vs index mismatches 0, sum unit n_text_ligs != line n_text_ligs - skipped: 0, line blocks non-contiguous in index 0, units with no body stroke 0, empty aligned_text 0, units with decreasing time 0"
+   },
+   {
+    "name": "7b_writing_rank_definition",
+    "passed": true,
+    "detail": "writing_rank orders units by their first BODY stroke on 2403/2403 lines; ordering by first stroke of any kind (incl. marks) differs on 212 lines (e.g. 1000_0000_3, where stroke 0 is a mark written before its unit's body). Informational: README/loader docs say \"writing order\" without defining it as first-body-stroke order"
+   },
+   {
+    "name": "7c_rtl_rank_plausibility",
+    "passed": true,
+    "detail": "consecutive units in rtl_rank order have non-increasing bbox centre x in 39385/39967 pairs (98.5%); informational, overlapping ligatures make exact agreement not expected"
+   },
+   {
+    "name": "1b_code_and_source_archive_hashes",
+    "passed": true,
+    "detail": "build/ligseg_v3.py, build/build_ligature_dataset.py, ouhdl_ligatures.py and build/letter_lengths.json sha256 equal PROVENANCE.json; core_archive_sha256 equals data/ouhdl/core.sha256 and the sha256 of the 129 concatenated data/ouhdl/parts/part_* (8.0 GB) d2cdf97b...78ae. ouhdl_adapter_py hash NOT verified: the adapter file is not in build/ and no file defining load_raw_strokes was found under ~/Work/uhwr"
+   }
+  ],
+  "overall_ok": true,
+  "problems": [
+   "Not a data error: ouhdl_adapter_py hash in PROVENANCE.json could not be verified (adapter file not in build/ or anywhere under ~/Work/uhwr), so the README rebuild command (PYTHONPATH=<adapter>...) cannot be reproduced from the dataset folder alone",
+   "Documentation gap: writing_rank is the order of the first body stroke; on 212 lines this differs from the order of first stroke of any kind"
+  ]
+ },
+ "files": {
+  "per_unit_flags": "review_flags_per_unit.csv"
+ }
+}

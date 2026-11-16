@@ -1,0 +1,699 @@
+{
+ "utc": "2026-11-10T23:59:27Z",
+ "rule": "warm before scratch; controls first (init_rank); FM arms by verdict priority_score desc (A3.6), ties fm id asc; no verdict file -> score 2e9 + capacity-note init_rank",
+ "order": [
+  "NOFM_W",
+  "PEINIT_W",
+  "vit-mae-large_W",
+  "webssl-mae300m-224_W",
+  "c-radiov3-h_W",
+  "c-radiov3-g_W",
+  "webssl-mae1b-224_W",
+  "c-radiov4-h_W",
+  "flux1-schnell_W",
+  "flux1-dev_W",
+  "dinov3-vit7b16_W",
+  "c-radiov3-l_W",
+  "c-radiov4-so400m_W",
+  "c-radiov3-b_W",
+  "sd3-medium-diffusers_W",
+  "sd3.5-large-diffusers-layout_W",
+  "sd3.5-large-turbo-diffusers-layout_W",
+  "dinov3-vitl16-sat493m_W",
+  "sd3.5-medium-diffusers-layout_W",
+  "dinov3-vitb16_W",
+  "INKSIGHT_W",
+  "cleandift-sd21_W",
+  "pe-spatial-b16-512_W",
+  "dinov3-vitl16_W",
+  "chandra-ocr-2_W",
+  "qwen3.5-4b_W",
+  "dinov3-vits16_W",
+  "NOFM_S",
+  "PEINIT_S",
+  "vit-mae-large_S",
+  "webssl-mae300m-224_S",
+  "c-radiov3-h_S",
+  "c-radiov3-g_S",
+  "webssl-mae1b-224_S",
+  "c-radiov4-h_S",
+  "flux1-schnell_S",
+  "flux1-dev_S",
+  "dinov3-vit7b16_S",
+  "c-radiov3-l_S",
+  "c-radiov4-so400m_S",
+  "c-radiov3-b_S",
+  "sd3-medium-diffusers_S",
+  "sd3.5-large-diffusers-layout_S",
+  "sd3.5-large-turbo-diffusers-layout_S",
+  "dinov3-vitl16-sat493m_S",
+  "sd3.5-medium-diffusers-layout_S",
+  "dinov3-vitb16_S",
+  "INKSIGHT_S",
+  "cleandift-sd21_S",
+  "pe-spatial-b16-512_S",
+  "dinov3-vitl16_S",
+  "chandra-ocr-2_S",
+  "qwen3.5-4b_S",
+  "dinov3-vits16_S"
+ ],
+ "nice": {
+  "NOFM_W": 100,
+  "PEINIT_W": 200,
+  "vit-mae-large_W": 300,
+  "webssl-mae300m-224_W": 400,
+  "c-radiov3-h_W": 500,
+  "c-radiov3-g_W": 600,
+  "webssl-mae1b-224_W": 700,
+  "c-radiov4-h_W": 800,
+  "flux1-schnell_W": 900,
+  "flux1-dev_W": 1000,
+  "dinov3-vit7b16_W": 1100,
+  "c-radiov3-l_W": 1200,
+  "c-radiov4-so400m_W": 1300,
+  "c-radiov3-b_W": 1400,
+  "sd3-medium-diffusers_W": 1500,
+  "sd3.5-large-diffusers-layout_W": 1600,
+  "sd3.5-large-turbo-diffusers-layout_W": 1700,
+  "dinov3-vitl16-sat493m_W": 1800,
+  "sd3.5-medium-diffusers-layout_W": 1900,
+  "dinov3-vitb16_W": 2000,
+  "INKSIGHT_W": 2100,
+  "cleandift-sd21_W": 2200,
+  "pe-spatial-b16-512_W": 2300,
+  "dinov3-vitl16_W": 2400,
+  "chandra-ocr-2_W": 2500,
+  "qwen3.5-4b_W": 2600,
+  "dinov3-vits16_W": 2700,
+  "NOFM_S": 2800,
+  "PEINIT_S": 2900,
+  "vit-mae-large_S": 3000,
+  "webssl-mae300m-224_S": 3100,
+  "c-radiov3-h_S": 3200,
+  "c-radiov3-g_S": 3300,
+  "webssl-mae1b-224_S": 3400,
+  "c-radiov4-h_S": 3500,
+  "flux1-schnell_S": 3600,
+  "flux1-dev_S": 3700,
+  "dinov3-vit7b16_S": 3800,
+  "c-radiov3-l_S": 3900,
+  "c-radiov4-so400m_S": 4000,
+  "c-radiov3-b_S": 4100,
+  "sd3-medium-diffusers_S": 4200,
+  "sd3.5-large-diffusers-layout_S": 4300,
+  "sd3.5-large-turbo-diffusers-layout_S": 4400,
+  "dinov3-vitl16-sat493m_S": 4500,
+  "sd3.5-medium-diffusers-layout_S": 4600,
+  "dinov3-vitb16_S": 4700,
+  "INKSIGHT_S": 4800,
+  "cleandift-sd21_S": 4900,
+  "pe-spatial-b16-512_S": 5000,
+  "dinov3-vitl16_S": 5100,
+  "chandra-ocr-2_S": 5200,
+  "qwen3.5-4b_S": 5300,
+  "dinov3-vits16_S": 5400
+ },
+ "hold": [],
+ "verdicts": {
+  "aimv2-1b-patch14-224": {
+   "status": "FAIL",
+   "sha256": "4a5ad60923808e41983494419355ee97e6e2819660679534b88fe617ce218600",
+   "priority_score": 401340
+  },
+  "aimv2-3b-patch14-224": {
+   "status": "FAIL",
+   "sha256": "ec77c49c595dd38b37636132d6073f03fa00bbb7b94eae670a575b32ad04c95f",
+   "priority_score": 432365
+  },
+  "aimv2-huge-patch14-224": {
+   "status": "FAIL",
+   "sha256": "3070070e945dbbca348bd6b12da102fdc259a4adb69c1f26ef45b26940826394",
+   "priority_score": 320318
+  },
+  "aimv2-large-patch14-224-distilled": {
+   "status": "FAIL",
+   "sha256": "3809bfdd1cc9c463a75d8dc46c84e6b5bde5c1308bfe9119b87d4fa61ea1c286",
+   "priority_score": 442308
+  },
+  "aimv2-large-patch14-224": {
+   "status": "FAIL",
+   "sha256": "df77874c0902fbba125e743ca0cd351f042212c43c003b6c1786731c7006cd52",
+   "priority_score": 378300
+  },
+  "arabic-english-hw-ocr-v3": {
+   "status": "FAIL",
+   "sha256": "bdb967f21763cf2b7437dc3c8f9a2312f0175c47ea19a9c6c85a1e67d8b0f84d",
+   "priority_score": 918316
+  },
+  "arabic-ocr-deepseek-ocr-2": {
+   "status": "FAIL",
+   "sha256": "4dab2f4e82a0f6fcd793a725b48627c41a74317a30d30b8b82fa36a27a55be35",
+   "priority_score": 675251
+  },
+  "c-radiov3-b": {
+   "status": "PASS_XS",
+   "sha256": "468c5cdadadb7bf52e6023fa28042d75bab32cce487a7e72b6d1c621c8f12f8b",
+   "priority_score": 3051143538
+  },
+  "c-radiov3-g": {
+   "status": "PASS_XS",
+   "sha256": "32cb3e74e900896710e38f76899ec27c023ccddadd0342a4884d13fad7693f82",
+   "priority_score": 3051222553
+  },
+  "c-radiov3-h": {
+   "status": "PASS_XS",
+   "sha256": "24c26bb5ebb4d06a3201f4a9879b7142d83c4447084e1ec9a2cf3d159a9878f9",
+   "priority_score": 3051231558
+  },
+  "c-radiov3-l": {
+   "status": "PASS_XS",
+   "sha256": "0570638601c35a5eb124ecf6d6d00dd1216db5dcd3e9c19e871b11282b2f31b3",
+   "priority_score": 3051167544
+  },
+  "c-radiov4-h": {
+   "status": "PASS_XS",
+   "sha256": "73ef609a875197350973a5f8486e00179c36b16cf2081865b42213fc461a316d",
+   "priority_score": 3051206532
+  },
+  "c-radiov4-so400m": {
+   "status": "PASS_XS",
+   "sha256": "0e845eae446d3901aa315f83b592a583099b797e16e9d77b29168e11eb4ce506",
+   "priority_score": 3051158522
+  },
+  "chandra-ocr-2": {
+   "status": "PASS_URDU_ONLY",
+   "sha256": "4d74355f991a58e09daa073ec51d054c612a6cd4e9275e5cc6df17c07498959d",
+   "priority_score": 1010956509
+  },
+  "chandra": {
+   "status": "FAIL",
+   "sha256": "59fb7adc61f1761df1d7bba6a2b51778b664a4448c5fe271bbc24f6642b7518f",
+   "priority_score": 1104355
+  },
+  "cleandift-sd15": {
+   "status": "FAIL",
+   "sha256": "9a6c233d50a08dc59211df68706028a0fb4830fbf8fab6a226f263bfdae40429",
+   "priority_score": 1126478
+  },
+  "cleandift-sd21": {
+   "status": "PASS_URDU_ONLY",
+   "sha256": "e260d879a06d0aa40dc691aea83d3d7fe795b24c54abaaf89362243fd6d95dd5",
+   "priority_score": 1031192492
+  },
+  "deepseek-ocr-2": {
+   "status": "FAIL",
+   "sha256": "e961ea2ef082cd4243f91cc5ec16e14bdc5385c267974ce715afee1ff67b0e62",
+   "priority_score": 675251
+  },
+  "deepseek-ocr": {
+   "status": "FAIL",
+   "sha256": "c23cdaa6acfa42bc5c3bd430d1e7c2d8b37f83e5d6a90a2d509287e038ff3cb7",
+   "priority_score": 917363
+  },
+  "depth-anything-3-base": {
+   "status": "FAIL",
+   "sha256": "0f3ec49ff606afe92ce9993f9ed054642bd933f4dbe443a557bfddff5383a8ce",
+   "priority_score": 805466
+  },
+  "depth-anything-3-giant-1.1": {
+   "status": "FAIL",
+   "sha256": "0d59a96d361e53d419b7cb4805bb75663afde6fa1d5f6767f7755ff2a5601028",
+   "priority_score": 10952480
+  },
+  "depth-anything-3-large-1.1": {
+   "status": "FAIL",
+   "sha256": "b962e167cf029c8b34c4a44f08dfce43a43dc298ec8719d9728f533a3b766a56",
+   "priority_score": 851466
+  },
+  "depth-anything-v2-large": {
+   "status": "FAIL",
+   "sha256": "2e1100168c78238b6516776fc4f6798f372eaa59f69a3a2ccd776ffb63b5b182",
+   "priority_score": 1009453
+  },
+  "dinov2-base": {
+   "status": "FAIL",
+   "sha256": "e97fae40ca7f2248302f7b37bd272599226dba66a680fcbe1d8190cb36e8ed25",
+   "priority_score": 879424
+  },
+  "dinov2-giant": {
+   "status": "FAIL",
+   "sha256": "14ef9b755253a537dc9910d1ca778a071b58116c393993ec525fe9e567ab3def",
+   "priority_score": 1073453
+  },
+  "dinov2-large": {
+   "status": "FAIL",
+   "sha256": "04ca56645dd7f569e01bbf46b95aeb91796b674d346bf68bf0a81bf3a7dbb5b7",
+   "priority_score": 921420
+  },
+  "dinov2-reg-base": {
+   "status": "FAIL",
+   "sha256": "a1722a2be4e1e091a55312eb035c2b44f0e7add6bf2025cb55989bb7f38f9d79",
+   "priority_score": 846424
+  },
+  "dinov2-reg-giant": {
+   "status": "FAIL",
+   "sha256": "ad13a48e46af5023cdef15d346ce006c3649fbf498820bbd9d13c98a4f367eea",
+   "priority_score": 957440
+  },
+  "dinov2-reg-large": {
+   "status": "FAIL",
+   "sha256": "70c0935a5aa62632f93f5b197d5e3396240f3b2b725c93238779be36f5574a35",
+   "priority_score": 820414
+  },
+  "dinov2-reg-small": {
+   "status": "FAIL",
+   "sha256": "beec5e82efed797fcca94f84022e777af400f71bafd0e7f1b594b5e8880ee8de",
+   "priority_score": 684396
+  },
+  "dinov3-convnext-base": {
+   "status": "FAIL",
+   "sha256": "c878ded498ab5aeb6f46d14cad2a14560bb2a9bbe2ce7ace9a7536ea09968f7d",
+   "priority_score": 654407
+  },
+  "dinov3-convnext-large": {
+   "status": "FAIL",
+   "sha256": "e691de2e351d911930c1a7ac8075b714de0395de6fcb6a8ed3fe467e7fe8efd5",
+   "priority_score": 584376
+  },
+  "dinov3-convnext-small": {
+   "status": "FAIL",
+   "sha256": "c4b9f91c7f8933b882a6212b46b8b05ff4d9358b503df7e8be2d747be2dac441",
+   "priority_score": 729413
+  },
+  "dinov3-convnext-tiny": {
+   "status": "FAIL",
+   "sha256": "9e8bffe258fc1717b21ecbb4ae7aaeb77de4c66d2b21fbbbf68b79432d6134f4",
+   "priority_score": 894457
+  },
+  "dinov3-vit7b16": {
+   "status": "PASS_XS",
+   "sha256": "8a21bfcffbd17fc40341a2259def4b504302728d00c23117f1c8789dbe7b18fa",
+   "priority_score": 3051177527
+  },
+  "dinov3-vitb16": {
+   "status": "PASS_XS",
+   "sha256": "195de8211ac4de935e6eb7185acaa95883234686a031fda2359a02688ee096c9",
+   "priority_score": 3041055518
+  },
+  "dinov3-vith16plus": {
+   "status": "FAIL",
+   "sha256": "3c28ee23421f8785202927d63822da4f60bcb75280b3fdcd4fde0ba595a83ce2",
+   "priority_score": 20954486
+  },
+  "dinov3-vitl16-sat493m": {
+   "status": "PASS_XS",
+   "sha256": "68a3d553b9ecfe1ec869ead8fd8069c9b3e926bc0e39a4ef80cd2c14a1e01bd8",
+   "priority_score": 3041090565
+  },
+  "dinov3-vitl16": {
+   "status": "PASS_URDU_ONLY",
+   "sha256": "4482999670330b78dfb21633683dffd90d4e06a3076504ba4e436133e63effa0",
+   "priority_score": 1020959502
+  },
+  "dinov3-vits16": {
+   "status": "PASS_URDU_ONLY",
+   "sha256": "58fe0386f389971135e6b10efafb10896979107c302d4178923fd5a7df4a639b",
+   "priority_score": 1000915505
+  },
+  "dinov3-vits16plus": {
+   "status": "FAIL",
+   "sha256": "344d504cead9308b8f368e208d9e9995fe202ae9788b07a4cf9c09f888f09baa",
+   "priority_score": 831480
+  },
+  "dots-ocr": {
+   "status": "FAIL",
+   "sha256": "1bb661fd00a265d36f5fcb19f77b1673a5fc91c291b226a7c323100e8dd39071",
+   "priority_score": 517249
+  },
+  "florence-2-base": {
+   "status": "FAIL",
+   "sha256": "a3f792610adcc669375f3b22aac668639b29867cde25e115876eee2570292d72",
+   "priority_score": 1144459
+  },
+  "florence-2-large-ft": {
+   "status": "FAIL",
+   "sha256": "4455c5f09416e95bd27580b5df324c841de7fc9bdccbb75b0a747a4aadd8251d",
+   "priority_score": 1125443
+  },
+  "florence-2-large": {
+   "status": "FAIL",
+   "sha256": "dada4d34fea35186f8735031f2b6c19571562bad82393e5e025355b0886c7b45",
+   "priority_score": 1168466
+  },
+  "flux1-dev": {
+   "status": "PASS_XS",
+   "sha256": "494d635714ef3532dd706660e5649f90ac1b775e5a61dec044fa4acde2a8bca4",
+   "priority_score": 3051188518
+  },
+  "flux1-schnell": {
+   "status": "PASS_XS",
+   "sha256": "902126a46067322544d0413c3729d961a6b18b6173c74cf2817c216f18efb711",
+   "priority_score": 3051203517
+  },
+  "got-ocr2-hf": {
+   "status": "FAIL",
+   "sha256": "d45b820f13930743faee211dbfd4b4f39b3df2f2fae0b87265bbc93bba037a74",
+   "priority_score": 417186
+  },
+  "inkfm": {
+   "status": "PENDING",
+   "sha256": "00a0b3e97c64e62ec5683eb612b77cac260ae2023bae189d127fadcd2abdd78a",
+   "priority_score": 2001000500
+  },
+  "inksight_small_p": {
+   "status": "PASS_XS",
+   "sha256": "aaa68e8d612786d72e43cb5981875e608078a8d4564ba8be90b502b4042dc059",
+   "priority_score": 3030739532
+  },
+  "lightonocr-2-1b": {
+   "status": "FAIL",
+   "sha256": "ca4c325f701d670a9c6ece3fa3f5a4c2db074d0922d5ae90cf75c2e2395659bc",
+   "priority_score": 954361
+  },
+  "paddleocr-vl-1.6": {
+   "status": "FAIL",
+   "sha256": "257a261151933162cd31e72001085ebe35c8654084442a7ee63bb705c9d32636",
+   "priority_score": 570288
+  },
+  "pe-core-b16-224": {
+   "status": "FAIL",
+   "sha256": "5a68527bfb344ee0288083587cc7e57999657f09f52bca479a410e4296dbac8d",
+   "priority_score": 675352
+  },
+  "pe-core-g14-448": {
+   "status": "FAIL",
+   "sha256": "cfce4a97a2c724fbbd963d29354ebfb9f18a4497175fefaa9683498dfebf7f11",
+   "priority_score": 521236
+  },
+  "pe-core-l14-336": {
+   "status": "FAIL",
+   "sha256": "b691271f5e6cad1924ba4d7eb3f83b93a962dcd1cad815f1a7d757fec2351184",
+   "priority_score": 436210
+  },
+  "pe-core-s16-384": {
+   "status": "FAIL",
+   "sha256": "73ff8f22e3d6180eabfdd09759547736418301dd7bdec881a42d6677038ae73c",
+   "priority_score": 710346
+  },
+  "pe-core-t16-384": {
+   "status": "FAIL",
+   "sha256": "010d0295449eacbe391f4f9d873665346fccd06f01525a72cfbc6edeb4cd02b6",
+   "priority_score": 667382
+  },
+  "pe-lang-g14-448-timm": {
+   "status": "FAIL",
+   "sha256": "d9b8b0f73a88bf1787303e55f15b4736d80bc19b2b3057e871d8265ef9982af0",
+   "priority_score": 848342
+  },
+  "pe-lang-l14-448-timm": {
+   "status": "FAIL",
+   "sha256": "086e398afb0453567889cdb2c2ac98fb7c550f1ab7df312a47f35d3a4d322e06",
+   "priority_score": 893335
+  },
+  "pe-spatial-b16-512": {
+   "status": "PASS_URDU_ONLY",
+   "sha256": "978f7868264a13fe9b6a8bdde0d4e019dd580768211f6f63f9400c4562349253",
+   "priority_score": 1020993505
+  },
+  "pe-spatial-g14-448": {
+   "status": "FAIL",
+   "sha256": "b0c9941540f0c4a0e56c19749efd1dcd110b178de3ea274f964e253005242bbd",
+   "priority_score": 929431
+  },
+  "pe-spatial-l14-448": {
+   "status": "FAIL",
+   "sha256": "bb7765355fa0a0776edd4cd890bca0fb3881d3ede117ca912fbbbcc3ee18cdc0",
+   "priority_score": 881447
+  },
+  "pe-spatial-s16-512": {
+   "status": "FAIL",
+   "sha256": "59837f53109241e09acda90d41618f128870d54c6ce4d972ad9b1af4d2adbabb",
+   "priority_score": 874504
+  },
+  "pe-spatial-t16-512": {
+   "status": "FAIL",
+   "sha256": "41b2998bc09d0fe40c170af87fbf655711c6250872c9c782b102e636e4aa53ee",
+   "priority_score": 732490
+  },
+  "qaari-0.1-urdu-ocr": {
+   "status": "FAIL",
+   "sha256": "4e52393ab533adc63f883b0eae5c16e435fc4463d75ea837970ef7b8e5e1a2c6",
+   "priority_score": 917388
+  },
+  "qari-ocr-v0.3-vl-2b": {
+   "status": "FAIL",
+   "sha256": "8dd51f4de85d473931f3ef45212ac090c2fc8d642e60e371fb168e79ff39b4ad",
+   "priority_score": 895383
+  },
+  "qwen2-vl-2b-instruct": {
+   "status": "FAIL",
+   "sha256": "f728a1afc6964cbe6f36f373094e4d9672c8d1e5257195ca95bd0b4fa01fd228",
+   "priority_score": 915382
+  },
+  "qwen3-vl-8b-instruct": {
+   "status": "FAIL",
+   "sha256": "983b2396aab27fc6c903524d5e32756dbc16247edb6a7178d5147798dfdfbefc",
+   "priority_score": 945314
+  },
+  "qwen3.5-4b": {
+   "status": "PASS_URDU_ONLY",
+   "sha256": "a8d603086a6a96f088c9f0fe3805c938f2716f2a17b944fc3e87604614bfc6c4",
+   "priority_score": 1010888514
+  },
+  "sam2.1-hiera-base-plus": {
+   "status": "FAIL",
+   "sha256": "04a4c8a271d7a9270eee5001daae3b71ec4f4d9197774bfd1ef1ec670f59dc68",
+   "priority_score": 967473
+  },
+  "sam3.1": {
+   "status": "PENDING",
+   "sha256": "50a3a000f3a585aa8b32806ac8fcb615b88451695d39aad7da10e12a279667dd",
+   "priority_score": 2001000500
+  },
+  "sam3": {
+   "status": "FAIL",
+   "sha256": "9680ccde27135868ef8ef29c1f20fb352ebb8a817d505fd2f06bfee87fafb9df",
+   "priority_score": 1225484
+  },
+  "sd1.5-dift": {
+   "status": "FAIL",
+   "sha256": "9fd7624b22fa800be7ff395da4a06f4a36ce62b20ce3f1ae469abcbe18bbfe50",
+   "priority_score": 1133469
+  },
+  "sd2.1-dift": {
+   "status": "FAIL",
+   "sha256": "08a4beb093e77a74fe11d4c24ad908117049aa4d3bdecddf3982e6cd308f9085",
+   "priority_score": 11192486
+  },
+  "sd3-medium-diffusers": {
+   "status": "PASS_XS",
+   "sha256": "2d2550e9d1df97caa7626eb7ed80702aa997dd56cae7f9cd47b6030ca2ffe550",
+   "priority_score": 3051105512
+  },
+  "sd3.5-large-diffusers-layout": {
+   "status": "PASS_XS",
+   "sha256": "1b7d841d11a491d12cffc787741f2a1a436cbefb3b26214c3ef9b8074a1b29e0",
+   "priority_score": 3041115518
+  },
+  "sd3.5-large-turbo-diffusers-layout": {
+   "status": "PASS_XS",
+   "sha256": "355d9d828f88a28128e5ed21c32ca0c68465dce3d5fbf8590f1acc805ab7ae8a",
+   "priority_score": 3041112517
+  },
+  "sd3.5-medium-diffusers-layout": {
+   "status": "PASS_XS",
+   "sha256": "4975bb16f0ace81dd70d2c6c8ef38f7270975e9c489c82ea2b19077739bdd7e2",
+   "priority_score": 3041085513
+  },
+  "siglip2-base-patch16-224": {
+   "status": "FAIL",
+   "sha256": "6c64900c4882a657dc6b75b704e376c0288d598098b0882191b8badf1571c02a",
+   "priority_score": 1015395
+  },
+  "siglip2-giant-opt-patch16-256": {
+   "status": "FAIL",
+   "sha256": "463e2a5e915ca1b388d7a34623eec62f3d60b3bddb3d474e02ba3060ddea6bd7",
+   "priority_score": 1105379
+  },
+  "siglip2-giant-opt-patch16-384": {
+   "status": "FAIL",
+   "sha256": "a158712b916449cb4a2f0e3caa8bd4bff6f6505ee7b752340364bfca554ae45b",
+   "priority_score": 1137388
+  },
+  "siglip2-large-patch16-256": {
+   "status": "FAIL",
+   "sha256": "96dd6ad612ed0e0de809e634a03807d7dd4acd46e533dca4ac032846219b5ca7",
+   "priority_score": 1052380
+  },
+  "siglip2-so400m-patch14-224": {
+   "status": "FAIL",
+   "sha256": "759c8181222ae31cdb5fe152f7993243090d8e768100c811576513899436c69c",
+   "priority_score": 1052354
+  },
+  "siglip2-so400m-patch16-256": {
+   "status": "FAIL",
+   "sha256": "6e503fd3be51fb3e61583cceb3258bf6c0257847acf346a1bad9fc11114449e7",
+   "priority_score": 1065361
+  },
+  "starvector-1b-im2svg": {
+   "status": "FAIL",
+   "sha256": "da678d4e0b7f68eaad9fe122aed214faf6a73c703d25301e7d5b5efe40f2b79f",
+   "priority_score": 780334
+  },
+  "starvector-8b-im2svg": {
+   "status": "FAIL",
+   "sha256": "46d258a4098a6e9a81142db71a4fb4fb131ecdf90199b06ff188955692f82969",
+   "priority_score": 983402
+  },
+  "theia-base-cddsv": {
+   "status": "FAIL",
+   "sha256": "5d389afc0a92a40801554fc7581ea14e28994615b87854f5e108c7f807a2cece",
+   "priority_score": 849563
+  },
+  "theia-base-cdiv": {
+   "status": "FAIL",
+   "sha256": "92952bc65becaa3377efa6fb7ddb2600c8a1d383b0194f15436479f096368e4e",
+   "priority_score": 810554
+  },
+  "theia-small-cdiv": {
+   "status": "FAIL",
+   "sha256": "51b569ad100de601ed0e76f96f878e6aac9e3867667d945f6d7c0180694128a5",
+   "priority_score": 673559
+  },
+  "theia-tiny-cddsv": {
+   "status": "FAIL",
+   "sha256": "9eccda01c24036bf280346c7c9b145cc178d0f2cbc1b9e43b0a9f1a5ca4f5167",
+   "priority_score": 497536
+  },
+  "theia-tiny-cdiv": {
+   "status": "FAIL",
+   "sha256": "27631d7a8dde75ce806fa208a1a3a9ae100b4e214812005118c04d2f4452f609",
+   "priority_score": 515551
+  },
+  "tipsv1-b14": {
+   "status": "FAIL",
+   "sha256": "f30fc750c7dc2ec0f3251586d81754920f390803012f8b6943791c535f32b666",
+   "priority_score": 824389
+  },
+  "tipsv1-g14": {
+   "status": "FAIL",
+   "sha256": "3b8f3cbbfd54850c2c74df8b413fd30963b50123064a890f5f6541bd164b2843",
+   "priority_score": 1022416
+  },
+  "tipsv1-l14": {
+   "status": "FAIL",
+   "sha256": "90a869d47abd370134166ea09b901f3871ef685c92b36218535632d1ddb80b37",
+   "priority_score": 940398
+  },
+  "tipsv1-s14": {
+   "status": "FAIL",
+   "sha256": "c18bef7c03d4e89b8819e248ae1f4b8d8b316a8de868b2e1c2c6374b45c964eb",
+   "priority_score": 744383
+  },
+  "tipsv1-so400m14": {
+   "status": "FAIL",
+   "sha256": "e5e9f0df78113a3fa5350cee4c445b5b0205f117274f40fefa1488904de85224",
+   "priority_score": 918384
+  },
+  "tipsv2-b14": {
+   "status": "FAIL",
+   "sha256": "700d5fbef2fadcb00ddb6e9c7c7d0db60acbe2d5e10288a8db2513cd389a459f",
+   "priority_score": 905423
+  },
+  "tipsv2-g14": {
+   "status": "FAIL",
+   "sha256": "35a65966ac84130b537ede99cb2c13f37e10baad8d0b8a6155c7e3982b63fd8b",
+   "priority_score": 968444
+  },
+  "tipsv2-l14": {
+   "status": "FAIL",
+   "sha256": "a4cc588d244613f73d7dd8f54e7887bd9171ee850aea0d5886e85227f2f1fd9d",
+   "priority_score": 846429
+  },
+  "tipsv2-so400m14": {
+   "status": "FAIL",
+   "sha256": "2a5fa0d34d2cd10b00d74e99bac624a1e35f5a2209d31008a230dbe3cbb48f8b",
+   "priority_score": 909429
+  },
+  "trocr-base-handwritten": {
+   "status": "FAIL",
+   "sha256": "3300e9569c16f2f1d168153e803a9915486a6ad53dec37b6719224cdb1b782e7",
+   "priority_score": 860324
+  },
+  "trocr-base-hw-hist-swe-2": {
+   "status": "FAIL",
+   "sha256": "d0197f6b6a0c3dc0932e53e6223f7061e6dd83e10ad54f0fa3d71b18ea0181f8",
+   "priority_score": 808401
+  },
+  "trocr-large-handwritten": {
+   "status": "FAIL",
+   "sha256": "2a099b514d22c222bfed05e7574a5038652a132bf55a6fc5d0effaa835d4cfe8",
+   "priority_score": 835322
+  },
+  "trocr-small-handwritten": {
+   "status": "FAIL",
+   "sha256": "2575bf50156f085394a28a2795e861993bcd660488bbbd4f9b2ba03409da4dfd",
+   "priority_score": 548337
+  },
+  "urdu-ocr-deepseek-nomy": {
+   "status": "FAIL",
+   "sha256": "77a2d83340cc1de89a5402cce43389b306c3515e83ec06f639205bc133220b90",
+   "priority_score": 917363
+  },
+  "urdu-ocr-deepseek-ocr2-kingabzpro": {
+   "status": "FAIL",
+   "sha256": "4dff0908eecdd9f47b93dec3c62aa8bd7711c2c9663609f56e0714eb0f959678",
+   "priority_score": 675251
+  },
+  "vit-mae-large": {
+   "status": "PASS_XS",
+   "sha256": "ac8f2c6131b188eb03bf21e0222691b86eed38b5e76678a51c45095f937c0910",
+   "priority_score": 3051295567
+  },
+  "webssl-dino1b-224": {
+   "status": "FAIL",
+   "sha256": "58c89aa8f5560a18798d9287bc710855a92d90c56146b79dc5033ac881894111",
+   "priority_score": 983424
+  },
+  "webssl-dino2b-224": {
+   "status": "FAIL",
+   "sha256": "5c77519919ebaae4affd5e8c6d72edab393b2fc0f46790174c0f01fbb422a352",
+   "priority_score": 1130460
+  },
+  "webssl-dino300m-224": {
+   "status": "FAIL",
+   "sha256": "d550c61267c0041a180e13cd7e040a6dbe22a0d4782f6ac8f9cc74039f61788f",
+   "priority_score": 1059443
+  },
+  "webssl-dino3b-224": {
+   "status": "PENDING",
+   "sha256": "04d1f37b8fd1933558036b25b38969664d97a44753c094b588ebc8aadfb13825",
+   "priority_score": 2001000500
+  },
+  "webssl-dino5b-224": {
+   "status": "PENDING",
+   "sha256": "bfb9f31ea26a1c8735922f03c3d13f56747f3e46c40cf56554182def1f80faf2",
+   "priority_score": 2001000500
+  },
+  "webssl-dino7b-224": {
+   "status": "PENDING",
+   "sha256": "d482730c6016a9154fe1c9af2591934e4ad4cd9e13c55e4057af19b5c0a00e5a",
+   "priority_score": 2001000500
+  },
+  "webssl-mae1b-224": {
+   "status": "PASS_XS",
+   "sha256": "137888be35eefc296c7a610c4734d3b9743695725bce0149f011f25e01d4f950",
+   "priority_score": 3051221521
+  },
+  "webssl-mae300m-224": {
+   "status": "PASS_XS",
+   "sha256": "c48d06557b5f190bf6f4fa5cd4dfd07256334177392af494da278dc3fb31d526",
+   "priority_score": 3051262562
+  },
+  "webssl-mae3b-224": {
+   "status": "PENDING",
+   "sha256": "ede3e8d6f6d972b7b07c6229879a2403be9419e2bdb340161d4c65d031095177",
+   "priority_score": 2001000500
+  }
+ }
+}

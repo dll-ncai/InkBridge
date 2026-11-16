@@ -1,0 +1,8 @@
+2026-11-10T09:53:50Z arm_start frac=p01 frame=identity replay=0 qu=0.25 qu_end= cur_start= steps=10000 gate= batch=32x16 workers=4 amp=--amp smoke_units= gpu=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;] host=<node> slurm=24964017 restart=0
+2026-11-10T16:21:33Z arm_start frac=p01 frame=identity replay=0 qu=0.25 qu_end= cur_start= steps=10000 gate= batch=32x16 workers=4 amp=--amp smoke_units= gpu=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;] host=<node> slurm=24964017 restart=1
+2026-11-10T18:24:37Z arm_start frac=p01 frame=identity replay=0 qu=0.25 qu_end= cur_start= steps=10000 gate= batch=32x16 workers=4 amp=--amp smoke_units= gpu=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;] host=<node> slurm=24964017 restart=2
+2026-11-10T18:43:46Z arm_start frac=p01 frame=identity replay=0 qu=0.25 qu_end= cur_start= steps=10000 gate= batch=32x16 workers=4 amp=--amp smoke_units= gpu=[NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;NVIDIA A30;] host=<node> slurm=24964017 restart=3
+2026-11-11T03:14:19Z selected milestone 3 host=<node> slurm=24964017 restart=3
+2026-11-11T03:14:19Z arm_phase12_end selected=3 host=<node> slurm=24964017 restart=3
+2026-11-11T03:14:19Z final_sampling_start ms3 gpu=[NVIDIA A30] host=<node> slurm=24964017
+2026-11-11T05:42:00Z final_sampling_end rc=0 gpu=[NVIDIA A30]

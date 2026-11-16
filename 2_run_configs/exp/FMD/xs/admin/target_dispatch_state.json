@@ -1,0 +1,174 @@
+{
+ "c-radiov3-h": {
+  "attempts": 0,
+  "jobs": [],
+  "clusterB": "manual (addenda 2/3)"
+ },
+ "c-radiov3-g": {
+  "attempts": 0,
+  "jobs": [],
+  "clusterB": "manual (addenda 2/3)"
+ },
+ "c-radiov4-h": {
+  "attempts": 0,
+  "jobs": [],
+  "clusterB": "manual (addenda 2/3)"
+ },
+ "c-radiov3-l": {
+  "attempts": 0,
+  "jobs": [],
+  "clusterB": "manual (addenda 2/3)"
+ },
+ "c-radiov4-so400m": {
+  "attempts": 0,
+  "jobs": [],
+  "clusterB": "manual (addenda 2/3)"
+ },
+ "c-radiov3-b": {
+  "attempts": 0,
+  "jobs": [],
+  "clusterB": "manual (addenda 2/3)"
+ },
+ "dinov3-vitl16": {
+  "attempts": 0,
+  "jobs": [],
+  "clusterB": "manual (addenda 2/3)"
+ },
+ "vit-mae-large": {
+  "attempts": 1,
+  "jobs": [
+   "24850169"
+  ],
+  "clusterB": "manual (refpush 24850170, CLUSTER-B jobs 3701232/3701233)",
+  "refpush": "24850170"
+ },
+ "webssl-mae300m-224": {
+  "attempts": 1,
+  "jobs": [
+   "24850169"
+  ],
+  "clusterB": "manual (refpush 24850170, CLUSTER-B jobs 3701232/3701233)",
+  "refpush": "24850170"
+ },
+ "dinov3-vitb16": {
+  "attempts": 1,
+  "jobs": [
+   "24850169"
+  ],
+  "clusterB": "none"
+ },
+ "cleandift-sd21": {
+  "attempts": 1,
+  "jobs": [
+   "24850329"
+  ],
+  "clusterB": "none"
+ },
+ "pe-spatial-b16-512": {
+  "attempts": 1,
+  "jobs": [
+   "24850382"
+  ],
+  "clusterB": "requested",
+  "refpush": "24850651"
+ },
+ "qwen3.5-4b": {
+  "attempts": 1,
+  "jobs": [
+   "24850451"
+  ],
+  "clusterB": "none"
+ },
+ "dinov3-vits16": {
+  "attempts": 0,
+  "jobs": [],
+  "clusterB": "none"
+ },
+ "dinov3-vit7b16": {
+  "attempts": 3,
+  "jobs": [
+   "24854234",
+   "24856159",
+   "24856737"
+  ],
+  "clusterB": "none"
+ },
+ "flux1-schnell": {
+  "attempts": 3,
+  "jobs": [
+   "24866395",
+   "",
+   ""
+  ],
+  "clusterB": "relay (diffusion family; controller relay)"
+ },
+ "flux1-dev": {
+  "attempts": 3,
+  "jobs": [
+   "24866395",
+   "",
+   ""
+  ],
+  "clusterB": "relay (diffusion family; controller relay)"
+ },
+ "sd3-medium-diffusers": {
+  "attempts": 3,
+  "jobs": [
+   "24866395",
+   "",
+   ""
+  ],
+  "clusterB": "relay (diffusion family; controller relay)"
+ },
+ "sd3.5-large-diffusers-layout": {
+  "attempts": 3,
+  "jobs": [
+   "24878952",
+   "",
+   ""
+  ],
+  "clusterB": "none (CLUSTER-A only)"
+ },
+ "sd3.5-large-turbo-diffusers-layout": {
+  "attempts": 3,
+  "jobs": [
+   "24878952",
+   "",
+   ""
+  ],
+  "clusterB": "none (CLUSTER-A only)"
+ },
+ "sd3.5-medium-diffusers-layout": {
+  "attempts": 3,
+  "jobs": [
+   "24878952",
+   "",
+   ""
+  ],
+  "clusterB": "none (CLUSTER-A only)"
+ },
+ "webssl-mae1b-224": {
+  "attempts": 1,
+  "jobs": [
+   "24915040"
+  ],
+  "clusterB": "none"
+ },
+ "dinov3-vitl16-sat493m": {
+  "attempts": 2,
+  "jobs": [
+   "24915041",
+   "24915212"
+  ],
+  "clusterB": "none"
+ },
+ "chandra-ocr-2": {
+  "attempts": 3,
+  "jobs": [
+   "",
+   "",
+   ""
+  ],
+  "clusterB": "none"
+ }
+}

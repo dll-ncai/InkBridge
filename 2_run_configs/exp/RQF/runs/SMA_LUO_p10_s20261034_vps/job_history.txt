@@ -1,0 +1,5 @@
+2026-11-10T06:23:30Z sm_vps start kind=sma_luo tag=SMA_LUO_p10_s20261034 frac=p10 seed=20261034 backbone= gpu=NVIDIA GeForce RTX 4090 cmd=537_rqf_sm_SMA_LUO_p10_s20261034 smoke=None
+2026-11-10T09:33:37Z selected ms10
+2026-11-10T22:49:43Z sm_vps start kind=sma_luo tag=SMA_LUO_p10_s20261034 frac=p10 seed=20261034 backbone= gpu=NVIDIA GeForce RTX 4090 cmd=537_rqf_sm_SMA_LUO_p10_s20261034 smoke=None
+2026-11-10T22:49:43Z selected ms10
+2026-11-11T00:10:29Z sampling_done

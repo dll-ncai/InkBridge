@@ -1,0 +1,15 @@
+stage 1: train units 240 per script {'casia_en': 60, 'casia_zh': 60, 'hpl_tamil': 60, 'iam': 60}
+Model Parameters: 2.93M
+params {'backbone': 27092036, 'adapters_per_expert': 953344, 'adapters_total': 2860032, 'gate': 66051, 'n_wrapped_modules': 75, 'trainable': 2926083}; experts ['expert0', 'expert1', 'expert2']; trainable tensors 454; eff. batch 8
+step 1 loss 0.0175 den 0.0075 lb 1.0000 gn 0.02 route {'expert0': 8, 'expert1': 0, 'expert2': 0} 2.25s/step
+step 2 loss 0.0160 den 0.0060 lb 1.0012 gn 0.02 route {'expert0': 0, 'expert1': 8, 'expert2': 0} 2.00s/step
+step 3 loss 0.0112 den 0.0011 lb 1.0027 gn 0.02 route {'expert0': 0, 'expert1': 0, 'expert2': 8} 2.06s/step
+step 4 loss 0.0120 den 0.0020 lb 1.0024 gn 0.03 route {'expert0': 0, 'expert1': 0, 'expert2': 8} 2.25s/step
+step 5 loss 0.0106 den 0.0006 lb 1.0015 gn 0.02 route {'expert0': 0, 'expert1': 0, 'expert2': 8} 2.21s/step
+step 6 loss 0.0125 den 0.0025 lb 1.0008 gn 0.01 route {'expert0': 0, 'expert1': 6, 'expert2': 2} 2.18s/step
+step 7 loss 0.0111 den 0.0011 lb 1.0008 gn 0.02 route {'expert0': 0, 'expert1': 8, 'expert2': 0} 2.14s/step
+step 8 loss 0.0126 den 0.0026 lb 1.0007 gn 0.02 route {'expert0': 0, 'expert1': 8, 'expert2': 0} 2.34s/step
+step 9 loss 0.0192 den 0.0092 lb 1.0010 gn 0.02 route {'expert0': 8, 'expert1': 0, 'expert2': 0} 2.57s/step
+step 10 loss 0.0131 den 0.0031 lb 1.0010 gn 0.02 route {'expert0': 8, 'expert1': 0, 'expert2': 0} 2.24s/step
+step 11 loss 0.0118 den 0.0018 lb 1.0011 gn 0.01 route {'expert0': 8, 'expert1': 0, 'expert2': 0} 2.31s/step
+step 12 loss 0.0114 den 0.0014 lb 1.0008 gn 0.01 route {'expert0': 8, 'expert1': 0, 'expert2': 0} 2.11s/step

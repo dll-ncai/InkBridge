@@ -1,0 +1,49 @@
+{
+ "base": "NOFM_W_bb",
+ "rule": "PREREG_RQ_finalise A2.5 R1d PASS",
+ "PASS": false,
+ "clauses": {
+  "test_ouhdl": {
+   "direction_lo_gt_0": true,
+   "aiou_lo_gt_m01035": true
+  },
+  "test_casia_zh": {
+   "aiou_lo_gt_m010": true,
+   "penup_f1_v2_lo_gt_-0.0141": true,
+   "strict_order_acc_lo_gt_-0.01065": false,
+   "direction_acc_lo_gt_-0.01245": false
+  },
+  "test_casia_en": {
+   "aiou_lo_gt_m010": true,
+   "penup_f1_v2_lo_gt_-0.0141": true,
+   "strict_order_acc_lo_gt_-0.01065": false,
+   "direction_acc_lo_gt_-0.01245": false
+  },
+  "test_hpl_tamil": {
+   "aiou_lo_gt_m010": true,
+   "penup_f1_v2_lo_gt_-0.0141": false,
+   "strict_order_acc_lo_gt_-0.01065": false,
+   "direction_acc_lo_gt_-0.01245": false
+  },
+  "test_iam500": {
+   "aiou_lo_gt_m010": true,
+   "penup_f1_v2_lo_gt_-0.0141": true,
+   "strict_order_acc_lo_gt_-0.01065": false,
+   "direction_acc_lo_gt_-0.01245": false
+  },
+  "german_unipen_de_test": {
+   "aiou_lo_gt_m010": true,
+   "penup_f1_v2_lo_gt_-0.0141": false,
+   "strict_order_acc_lo_gt_-0.01065": false,
+   "direction_acc_lo_gt_-0.01245": false
+  },
+  "german_onhw_all": {
+   "aiou_lo_gt_m010": true,
+   "penup_f1_v2_lo_gt_-0.0141": true,
+   "strict_order_acc_lo_gt_-0.01065": false,
+   "direction_acc_lo_gt_-0.01245": false
+  }
+ },
+ "missing": {},
+ "utc": "2026-11-08T05:38:19Z"
+}
