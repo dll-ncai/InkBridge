@@ -775,6 +775,18 @@
     "README.md": "598e4802cf8c5260130f9767f5b61a07e6e2379b49956e5d9ffd40828f1f8834"
    },
    "manifest_lines_updated": 3
+  },
+  {
+   "date": "2026-11-16",
+   "change": "source of the submitted Online Resource 1 added to 10_online_resource_1/ (ESM_1.tex, references.bib, build_esm_1.py, ESM_1_meta_provenance.json); README row of the folder updated; no file removed",
+   "files": {
+    "10_online_resource_1/ESM_1.tex": "4c3d66d6f007549aeef45a5075ce1532d12df540078079bd06f69174f1a15033",
+    "10_online_resource_1/references.bib": "9a6eca65538b8f6a82477866eac3b678c18b38a69d60905cf018656a5c09aa20",
+    "10_online_resource_1/build_esm_1.py": "50172224f5ad1e7dee399f9a67dbf05148d2183c35de2e83b62ee5f972a8128c",
+    "10_online_resource_1/ESM_1_meta_provenance.json": "74fded8c5a96f2ec233b9427b35c9598041d42aadcc208dc1fbdede5bac1669f",
+    "README.md": "03305f81d884267401c9c301cdc61438809d5392edadd23ca0b7af66783177ef"
+   },
+   "after_commit": "9045a8d (first public commit)"
   }
  ]
 }

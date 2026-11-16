@@ -1,0 +1,459 @@
+% Online Resource 1 (Supplementary Information) to: InkBridge: Low-Resource Adaptation and Endpoint Consensus for Handwriting Trajectory Recovery
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{url}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{placeins}
+\newcommand{\botrule}{\bottomrule}
+\newcommand{\ext}[1]{\par\noindent{\small\itshape Extends in the paper: #1.}\par\smallskip}
+\newcommand{\figfile}[2]{\IfFileExists{#2}{\includegraphics[width=#1]{#2}}{\fbox{\parbox{#1}{\centering\color{red}\textbf{[figure pending: \detokenize{#2}]}}}}}
+\newcommand{\fur}{f_{\mathrm{ur}}}
+\newcommand{\fall}{f_{\mathrm{all}}}
+\newcommand{\fnot}[1]{f_{\neg\mathrm{#1}}}
+\newcommand{\FT}[1]{\mathrm{FT}_{#1}}
+\newcommand{\WFT}[1]{\mathrm{WFT}_{#1}}
+\newcommand{\WFTpe}[1]{\mathrm{WFT}^{\mathrm{PE}}{}_{#1}}
+\newcommand{\WFTfm}[1]{\mathrm{WFT}^{\mathrm{FM}}{}_{#1}}
+\newcommand{\SFT}[1]{\mathrm{SFT}_{#1}}
+\newcommand{\RP}[1]{\mathrm{RP}_{#1}}
+\newcommand{\AD}[1]{\mathrm{AD}_{#1}}
+\newcommand{\Rt}{\mathcal{R}}
+\newcommand{\Fi}{\mathcal{I}}
+\newcommand{\Fm}{\mathcal{M}}
+\newcommand{\tabsz}{\fontsize{7pt}{8.5pt}\selectfont}
+\newsavebox{\fitbox}
+\newcommand{\fitwidth}[1]{\sbox{\fitbox}{#1}\ifdim\wd\fitbox>\textwidth\resizebox{\textwidth}{!}{\usebox{\fitbox}}\else\usebox{\fitbox}\fi}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\pdfinfo{/Title (Online Resource 1: InkBridge: Low-Resource Adaptation and Endpoint Consensus for Handwriting Trajectory Recovery) /Author (Ali Hussain, Eshal Fatima, Anna Scius-Bertrand, Momina Moetesum, Adnan Ul-Hasan, Faisal Shafait) /Subject (Supplementary Information, International Journal on Document Analysis and Recognition)}
+\renewcommand{\theequation}{S\arabic{equation}}
+\setlength{\parskip}{3pt}
+\raggedbottom
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Online Resource 1}\\[8pt]
+{\large Supplementary Information for the article}\\[4pt]
+{\Large\bfseries InkBridge: Low-Resource Adaptation and Endpoint Consensus for Handwriting Trajectory Recovery}\\[8pt]
+{\large\itshape International Journal on Document Analysis and Recognition}\\[10pt]
+{\large Ali Hussain, Eshal Fatima, Anna Scius-Bertrand,\\ Momina Moetesum, Adnan Ul-Hasan, Faisal Shafait}\\[10pt]
+\end{center}
+\noindent\textbf{Corresponding author:} Momina Moetesum, School of Electrical Engineering and Computer Science (SEECS), National University of Sciences and Technology (NUST), Islamabad, 44000, Pakistan; Deep Learning Laboratory, National Center of Artificial Intelligence (NCAI), National University of Sciences and Technology (NUST), Islamabad, 44000, Pakistan. E-mail: \texttt{momina.moetesum@seecs.edu.pk}
+\par\medskip\hrule\medskip
+
+\noindent This document accompanies the paper ``InkBridge: Low-Resource Adaptation and Endpoint Consensus for Handwriting Trajectory Recovery''. It holds implementation details, the foundation-model screen, the full decision rules with their records, and results that the paper summarises. The paper is complete without this document. Each section and subsection names the part of the paper that it extends, by its title. Code, the evaluator, unit-ID lists, score tables and protocol records are in the repository \url{https://github.com/dll-ncai/InkBridge}.
+
+\medskip
+\noindent\textbf{Contents.} Section~\ref{sup:notation}: notation, data budget and statistics. Section~\ref{sup:impl}: implementation details (Tables~\ref{tabS:singleapp}--\ref{tabS:corpora}). Section~\ref{sup:fm}: foundation-model screen. Section~\ref{sup:rules}: full decision rules, records and protocol deviations. Section~\ref{sup:results}: additional results (Tables~\ref{tabS:failure}--\ref{tabS:claims}).
+
+\section{Notation, Data Budget and Statistics}\label{sup:notation}
+\ext{Problem and Notation (Method); Datasets and Target Data Budget, Evaluation Metrics, Evaluation Protocol (Experimental Setup)}
+
+Table~\ref{tabS:notation} repeats the notation of the paper so that this document can be read on its own, and Table~\ref{tabS:components} lists the components with the target labels and samples they use. Urdu (OUHD-L) is the evaluated target; the four source datasets are CASIA-zh, CASIA-en, HPL Tamil and IAM, and the six non-Urdu test sets are CASIA-zh, CASIA-en, HPL Tamil, IAM500, UNIPEN-de and OnHW (Table~\ref{tabS:corpora}).
+
+\textbf{Target data budget.} ``1\% of Urdu'' means 1\% of the target training units: 336 of the 33,615 OUHD-L training units. Checkpoint selection on Urdu uses 1,000 labelled validation units. The script router is trained on the script labels of the 100,000 units of the joint training set, of which 20,000 are OUHD-L units (Section~\ref{sup:impl}).
+
+\textbf{Metrics.} AIoU measures shape, strict order and Kendall $\tau$ stroke order, direction the drawing direction of matched strokes, and pen-up F1 the stroke boundaries; LDTW is used only for checkpoint selection. The definitions are in Section ``Evaluation Metrics'' of the paper.
+
+\textbf{Statistics.} Every comparison is paired on the common units, using the per-unit mean over training and sampling seeds. Intervals are 95\% percentile intervals from a bootstrap with 2,000 draws that resamples writers on every set except OnHW, where units are resampled because it has two writers. Rows with fewer than three seeds are exploratory and marked by a table note. The selection tables resample writers on every set, so their OnHW cells rest on two clusters.
+
+\begin{table}[!htbp]
+\centering
+\caption{Notation for models and variants, as in the paper, with the row of the FM-guided warm fine-tune added. $t$: target script; $\rho$: fraction of the target training units; FM: foundation model.}\label{tabS:notation}
+\scriptsize
+\begin{tabular}{@{}llp{0.60\textwidth}@{}}
+\toprule
+Symbol & Name & Definition\\
+\midrule
+$\fur$ & Urdu specialist & trained on Urdu (OUHD-L) only\\
+$\fall$ & Joint model & trained on all five training datasets, Urdu included\\
+$\fnot{t}$ & Leave-target-out backbone & trained on the four source datasets; $\fnot{ur}$ for the Urdu target\\
+$\FT{\rho}$ & Plain fine-tune & $\fnot{t}$ fine-tuned on $\rho$ of $t$\\
+$\WFT{\rho}$ & Warm fine-tune & warm stage on $\fnot{t}$ (new 224-px encoder, continued source training), then fine-tuned on $\rho$ of $t$\\
+$\WFTpe{\rho}$ & Warm fine-tune, PE init & as $\WFT{\rho}$ with the encoder initialised from Perception Encoder weights\\
+$\WFTfm{\rho}$ & Warm fine-tune, FM-guided & as $\WFT{\rho}$ with a feature-alignment loss to a foundation model during the warm stage\\
+$\SFT{\rho}$ & Source-training control & as $\WFT{\rho}$ but keeping the original 64-px encoder\\
+$\Rt(\cdot)$ & Routed composition & a script router sends units it assigns to the target script (probability $\ge 0.5$) to the fine-tuned model and all others to the backbone that the fine-tune started from: the warm backbone for warm variants, $\fnot{t}$ for $\FT{\rho}$\\
+$\RP{\rho}$ & Replay single model & one checkpoint fine-tuned on $\rho$ of $t$ mixed 1:1 with source units; no router\\
+$\AD{\rho}$ & Routed adapter model & frozen backbone ($\fnot{t}$ or a warm backbone) plus one low-rank adapter for $t$, switched on by the router\\
+$\Fi$, $\Fm$ & Identity, mirrored frame & $\Fi$ processes the image as given; $\Fm$ reflects the image horizontally, runs the model and reflects the output back\\
+$k$ & Samples per input & $k=3$ per frame\\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{The two InkBridge components and the frame-choice experiment: target labels used and samples drawn per input.}\label{tabS:components}
+\tabsz\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Component & Labels & Samples\\
+\midrule
+Warm adaptation & $\rho$ of $t$ & 1\\
+Endpoint Consensus Selection & none & $k$\\
+Frame choice ($\Fi$/$\Fm$; negative result) & none & $2k$\\
+\botrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\section{Implementation Details}\label{sup:impl}
+\ext{Implementation Details, Datasets and Target Data Budget, Baselines (Experimental Setup); Warm Adaptation, Script Routing (Method)}
+
+\textbf{Inputs and frames.} The 64-px input re-draws the ground-truth ink with thickness 2, anti-aliased; a \emph{dataset} variant (the real image crop, area-resized) is used where marked. The 224-px warm-encoder render scales the ink by 3.5 with thickness 7. In $\Fm$ column 0 is set to background, which makes the shifted flip an exact involution on the stored image; re-rendering mirrored ink does not reproduce it byte for byte, so the stored image is flipped. Urdu ligature units are division v3.0 of the OUHD-L lines~\cite{hussain2026urdu} (Section ``Datasets and Target Data Budget'' of the paper); the other corpora are described in Table~\ref{tabS:corpora}. For connected-component units, strokes drawn as 2-px masks on a 64-px-high line canvas are merged when they touch; components smaller than 0.18 of the ink height in both dimensions are marks and are attached to the body they overlap horizontally. Checkpoint selection uses 250 validation units per dataset. The third-party corpora are used under their research licences and are not redistributed.
+
+\textbf{Sequence length.} Each ground-truth stroke is resampled at 1-px arc length on the 64-px canvas, and the sequence length of 320 is fixed by the backbone. The step is enlarged only for units longer than 320 points (about 0.1\% of OUHD-L training units, 46.2\% of CASIA-zh).
+
+\textbf{Backbones.} $\fnot{ur}$ is trained on 80,000 units (CASIA-zh, CASIA-en, HPL Tamil, IAM) for 100,000 steps (batch 128, gradient accumulation 4), seed 20261016, with a checkpoint every 10,000 steps; the checkpoint with the lowest pooled LDTW on 250 validation units per source is kept (step 60,000). $\fur$ is trained on OUHD-L only (100,000 steps; checkpoint at step 80,000 by lowest mean LDTW on the Urdu validation subset, ties to higher AIoU). $\fall$ is trained on all five training sets (100,000 units, of which 20,000 are OUHD-L units). Each backbone and each warm stage was trained once (seed 20261016).
+
+\textbf{Urdu validation subset.} Checkpoint selection on Urdu uses 1,000 validation units from 31 writers, rows of the validation split drawn with numpy, $\mathrm{default\_rng}(0).\mathrm{choice}(4349, 1000)$ with $\mathrm{replace}{=}\mathrm{False}$, then sorted: 1,000 distinct units. The 354 units of 21 hand-corrected test lines are the gold set behind the segmentation F1 reported in Section ``Datasets and Target Data Budget'' of the paper.
+
+\textbf{Target subsets.} The 1\% Urdu subset is the first 336 entries of one permutation of the 33,615 training units ($\mathrm{default\_rng}([20261016, 9])$), uniform over units, covering 183 writers and 305 lines; the 10\% (3,362 units, 247 writers) and 30\% (10,085 units, 248 writers) subsets extend the same permutation.
+
+\textbf{Warm stage and fine-tuning.} The warm stage runs 40,000 steps at 512 sequences per step, encoder learning rate $2\times10^{-4}$ with 200 warm-up steps, other modules $8\times10^{-5}$, starting from the $\fnot{t}$ exponential-moving-average weights. The PE-initialised encoder loads PE-Spatial-S/16-512 weights with the patch embedding resized from 16 to 14. Fine-tunes run 10,000 steps with a checkpoint every 1,000 steps, selected on the target validation set by the $\fur$ rule, encoder learning rate $8\times10^{-5}$. Fine-tune training seeds are 20261034, 20261035 and 20261036; Tables~\ref{tabS:warm} and~\ref{tabS:singleR} and the warm-adaptation, retention and routed-adapter tables of the paper pool the three seeds, and 20261034 is the first seed of Table~\ref{tabS:singleapp}. For $\WFT{1\%}$ and $\WFTpe{1\%}$ the seed-20261034 run is an earlier run of the same recipe that predates the record of the pooled evaluation (Section~\ref{sup:rules}). Of the four 10,000-step milestones of each warm stage one is selected as the warm backbone: step 30,000 for the unguided warm backbone and step 40,000 for the PE-initialised and FM-guided backbones of the routed-adapter table of the paper (Section ``Exploratory Routed Adapter Results''). The milestone kept is the one with the lowest mean LDTW over the 1,000 units of the four non-Urdu validation sets (250 each; ties go to the higher AIoU); no Urdu data enters the selection, and the rule was recorded before the first warm stage started. For the unguided backbone, steps 30,000 and 40,000 differ by 0.00003 LDTW (0.27875 against 0.27878). The source-training control is selected by the same rule and is also its step-30,000 milestone, so it is matched in steps to the unguided warm backbone; the PE-initialised backbone has 10,000 further warm steps. $\SFT{\rho}$ continues $\fnot{ur}$ (model and moving-average weights, fresh optimiser) with seed 20261016; its 1\% fine-tunes use seeds 20261034 and 20261035, and its 10\% and 30\% fine-tunes seed 20261034. Sampling seeds are 0--2. The full recipe of every run family, the foundation-model roster and the baseline inputs are in the code repository (\url{https://github.com/dll-ncai/InkBridge}, folder \texttt{supplementary}).
+
+\textbf{Script routing.} The router is a script classifier with four blocks of $3\times3$ convolution, batch normalisation, ReLU and max-pooling (widths 16, 32, 64, 96), dropout 0.3, a 128-unit layer and five outputs (Urdu, CASIA-zh, CASIA-en, HPL Tamil, IAM); it has 276,485 parameters. It is trained on the rendered 64-px images and script labels of the 100,000 units of the joint training set (20,000 per dataset) with AdamW (learning rate $2\times10^{-3}$, one-cycle schedule), batch 256, 8 epochs, random shifts of up to 3 px and seed 0; the epoch with the best accuracy on 250 validation units per dataset is kept (epoch 6, 98.3\%). Its five-class test accuracy is 99.6\% on OUHD-L, 98.0\% on CASIA-zh, 96.0\% on CASIA-en, 99.4\% on HPL Tamil and 96.4\% on IAM500; German belongs to no class. A router whose Urdu class is trained on the 336 units alone sends 93.5\% of the Urdu test units to the Urdu model, and 97.9\% with class-balanced sampling, against 99.6\% for the reported router (three seeds each; checkpoint selection uses a validation set with 250 Urdu units). $\RP{\rho}$ fine-tunes for 10,000 steps with each batch half target units and half units drawn uniformly from the backbone's training set. $\AD{\rho}$ trains one rank-16 adapter on the attention and projection layers. The two 1\% adapter baselines use rank-32 adapters on the attention, cross-attention and linear projections and the encoder $1\times1$ convolutions; one adds a shared tier and a temporal-pathway adapter, the other a rank-16 temporal-pathway adapter.
+
+\textbf{Endpoint Consensus Selection.} Scores are rounded to nine decimals before comparison; the input-ink tie-break counts predicted points on the input ink after 1-px dilation, then the lowest sample index.
+
+\textbf{Devices.} Training and sampling ran on cluster GPUs (two clusters) and one RTX 4090. DDIM sampling is not bitwise reproducible across GPU types, so every prediction file records its device, and each contrast records the device of both sides; for the plain comparator the cross-device difference is $+0.0004$ AIoU [$-0.0003$, $+0.0011$]. The comparator $\FT{1\%}$ of the routed-adapter table of the paper (Section ``Exploratory Routed Adapter Results'') exists in two sampled copies (RTX A4000, primary, and RTX 4090); the C-RADIOv3-H-guided adapter was sampled on an A30 (first seed) and on RTX A4000 (second and third seeds), so neither copy matches the device of the arm for all seeds. One 10\% PE-initialised fine-tune (seed 20261034) was resubmitted after a GPU fault; the tables use all three of its sampling seeds. Table~\ref{tabS:singleapp} gives the device check and the first-seed evaluation of the routed-adapter variants. On the first seed alone the PE-Spatial-B/16-guided backbone passes as well against the A4000 copy ($-0.0110$), and no backbone passes against the 4090 copy in either evaluation. No multiplicity-corrected interval is available.
+
+\begin{table}[!htbp]
+\centering
+\caption{Device check and first-seed evaluation for the routed-adapter variants (Section ``Exploratory Routed Adapter Results'' of the paper).}\label{tabS:singleapp}
+\scriptsize\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Three seeds} & \multicolumn{2}{c}{First seed}\\
+\cmidrule(lr){2-3}\cmidrule(l){4-5}
+$\AD{1\%}$ backbone & Dir.\ lo, 4090 & Gain & Dir.\ lo, A4000 / 4090 & Gain\\
+\midrule
+C-RADIOv3-H-guided & $-0.0132$ & yes / no & $-0.0116$ / $-0.0131$ & yes / no\\
+PE-Spatial-B/16-guided & $-0.0140$ & no / no & $-0.0110$ / $-0.0125^{b}$ & yes / no\\
+CleanDIFT-SD2.1-guided & $-0.0185$ & no / no & $-0.0158$ / $-0.0181$ & no / no\\
+MAE-L-guided & $-0.0183$ & no / no & $-0.0173$ / $-0.0190$ & no / no\\
+DINOv3-L/16-SAT-guided & $-0.0195$ & no / no & $-0.0187$ / $-0.0199$ & no / no\\
+PE-initialised warm & $-0.0180$ & no / no & $-0.0184$ / $-0.0196$ & no / no\\
+unguided warm & $-0.0198$ & no / no & $-0.0195$ / $-0.0208$ & no / no\\
+$\fnot{ur}$ (no warm stage)$^{a}$ & $-0.0180$ & no / no & $-0.0176$ / $-0.0180$ & no / no\\
+\botrule
+\end{tabular}
+\par\smallskip{\scriptsize Dir.\ lo: direction lower bound against the comparator copy sampled on an RTX A4000 (primary) or an RTX 4090; Gain: target-gain criterion met, A4000 / 4090 copy; first seed: training seed 20261034 alone; $^{a}$ one seed; $^{b}$ $-0.01247$.}
+\end{table}
+
+
+\textbf{Baselines.} PEN-Net is re-implemented from the official code and trained on all 33,615 OUHD-L training units with rendered input for 100,000 steps (batch 512, learning rate $10^{-3}$, gradient clipping 0.2, seed 20261016); the checkpoint at step 100,000 has the lowest LDTW on the Urdu validation subset, and decoding is greedy. The Urdu-only 1\% model has the backbone architecture and is trained from scratch on the 336-unit subset for 10,000 steps. InkSight Small-p is applied zero-shot to the 4,406 test units.
+
+\textbf{Example unit of the metric figure.} In the metric-illustration figure of the paper (Section ``Evaluation Metrics'') the unit is selected (highest $\FT{1\%}$ AIoU among the 62 legible units whose only error is one reversed stroke with a chord of at least 12\,px, writers of the qualitative-results figure of the paper excluded).
+
+\textbf{Selectivity perturbations.} Each unit of Table~\ref{tabS:m1} is perturbed at five strengths (seed 20261016). Shape: Gaussian jitter of every point with a standard deviation of 0.25, 0.5, 1, 1.5 or 2 px, and a smooth elastic displacement field (Gaussian-filtered noise, filter width 8 px) with a maximum displacement of 0.5, 1, 2, 3 or 4 px. Order: one to five swaps of two strokes that are still in their original relative order. Direction: one to five strokes with a chord of at least 2 px are reversed. Pen-up: one to five merges of two consecutive strokes, and one to five splits of a stroke of at least four points at a random interior point. Timing: a sinusoidal warp of the time stamps with amplitude 0.15 to 0.75, which leaves the points unchanged. An entry of Table~\ref{tabS:m1} is the largest absolute change of the metric at the highest strength over the perturbations of the other factors, divided by the largest over the perturbations of its own factor (shape for AIoU, order for Kendall $\tau$ and strict order, direction for direction, pen-up for pen-up F1); perturbations under which a metric is undefined are left out.
+
+\begin{table}[!htbp]
+\centering
+\caption{Training and sampling settings, from the run configurations; backbone values are those of $\fnot{ur}$ and warm-stage values those of the unguided warm stage. Wall times of the other runs were not collected.}\label{tabS:hyper}
+\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.76\textwidth}@{}}
+\toprule
+Setting & Value\\
+\midrule
+Denoiser & 1D U-Net, base width 64, width multipliers 1, 2, 4, 8; self-attention with 4 heads of width 32, cross-attention with 8 heads of width 64; sequence length 320\\
+Parameters & 27.09M with the original encoder (encoder 3.96M); 48.59M with the warm encoder (ViT-S/14 and heads 25.46M)\\
+Diffusion & 1,000 training timesteps, cosine noise schedule ($s=0.008$), noise-prediction objective; sampling with DDIM, 50 steps, $\eta=0$, moving-average weights\\
+Optimiser & Adam, $\beta=(0.9, 0.99)$, gradient-norm clipping at 1.0, mixed precision; the run configurations set no weight decay and no learning-rate decay\\
+Learning rate & backbone $8\times10^{-5}$; warm stage: encoder $2\times10^{-4}$ after 200 warm-up steps, other modules $8\times10^{-5}$; fine-tunes $8\times10^{-5}$ for all modules, no warm-up\\
+Units per step & 512 (backbone: batch 128, accumulation 4; warm stage: batch 64, accumulation 8)\\
+Moving average & decay 0.995, updated every 10 steps\\
+Steps & backbone 100,000 and warm stage 40,000 (checkpoint every 10,000); fine-tunes 10,000 (checkpoint every 1,000)\\
+Warm-stage data & 79,200 of the 80,000 source units; 800 are held out (split seed 0)\\
+Wall time & backbone: 12 h 41 min on two NVIDIA B200; warm stage: 13 h for steps 8,000 to 40,000 on two RTX A4000\\
+\botrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[!htbp]
+\centering
+\caption{Corpora, units, training samples and test sets. Training samples are drawn uniformly without replacement (seed 20261016) from pools whose writers are disjoint from the validation writers.}\label{tabS:corpora}
+\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}@{}}
+\toprule
+Corpus & Release and subset & Unit & Training pool and sample & Test set\\
+\midrule
+OUHD-L~\cite{hussain2026urdu} & v1.0, ligature division v3.0 & ligature (transcript-aligned) & 33,615 units, 248 writers; 20,000 in $\fall$ & test split, all 4,406 units, 32 writers\\
+CASIA-zh~\cite{liu2011casia} & OLHWDB 1.0 and 1.1, training files & isolated Chinese character & 20,000 of 2,105,324 units, 552 writers & OLHWDB 1.1 test, 500 units, 60 writers\\
+CASIA-en~\cite{liu2011casia} & same files & isolated Latin letter & 20,000 of 28,699 units, 552 writers & OLHWDB 1.1 test, 500 units, 60 writers\\
+HPL Tamil~\cite{hpl2006tamil} & hpl-tamil-iso-char, IWFHR 2006 online training set & isolated character & 20,000 of 49,156 units, 111 writers & IWFHR 2006 test set, 500 units, 52 writers\\
+IAM~\cite{liwicki2005iamondb} & IAM-OnDB task 1, training set & connected component of a line & 20,000 of 81,659 units & final test set, 500 units, 63 writers (IAM500)\\
+UNIPEN-de~\cite{guyon1994unipen} & Train-R01/V07, German parts (\texttt{sie}, \texttt{atu}) & connected component of a word or phrase & not trained on & writer-disjoint test split (seed 20261016), 827 units from 475 items, 7 writers\\
+OnHW~\cite{ott2022onhw} & OnHW-wordsTraj tablet recordings & connected component of a word & not trained on & all 5,925 units from 4,675 words, 2 writers\\
+\botrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\section{Foundation-Model Screen}\label{sup:fm}
+\ext{Negative Results (Results); Warm Adaptation (Method)}
+
+\textbf{Task translation.} Each FM is applied to the 224-px render; its token grid is resampled to $16\times 16$ where needed. Probe targets are computed per patch from the ground-truth trajectory: ink occupancy (shape control; IoU), signed local stroke direction in 8 bins (accuracy), stroke start- and end-point maps (R-precision), and normalised time rank (Spearman $\rho$). Ink models are scored zero-shot with the full evaluator, and vision-language models with four zero-shot questions (first-stroke direction, which of two highlighted strokes came first, whether marks follow the body, transcript error).
+
+\textbf{Probes and screen.} A linear probe on z-scored features plus patch-centre coordinates (AdamW, 20 epochs, three seeds, hyper-parameters never tuned) is trained on a layer named in advance for each FM, with five writer-disjoint folds. The comparator is the best probe of the baseline encoders. An FM passes a set if at least one order target has a paired interval above zero against the comparator and the shape target's lower bound is above $-0.01035$. The Urdu screening set is the validation subset; five cross-script sets are added. An FM passes cross-script if it keeps shape on all five and order on at least three. The roster had 116 FMs in four families: frozen vision encoders, diffusion features, vision-language and OCR models, and ink models. The encoders behind the reported variants are C-RADIOv3~\cite{ranzinger2024amradio,heinrich2025radiov25}, DINOv3~\cite{simeoni2025dinov3}, MAE~\cite{he2022mae}, the Perception Encoder~\cite{bolya2025pe}, CleanDIFT~\cite{stracke2025cleandift} and WebSSL~\cite{fan2025webssl}.
+
+\textbf{Guidance.} The projector is a three-layer MLP (SiLU, hidden width 2,048, discarded after training); the alignment weight is 0.5. Ink models contribute pseudo-trajectories on unlabelled images, kept if the re-rendered trajectory has IoU of at least 0.80 with the binarised input. A guided variant is promoted only if its FM passes cross-script and the variant meets target gain and retention; it is FM-attributed if it also beats both unguided warm variants (AIoU non-inferior, order metrics non-inferior, at least one lower bound above zero).
+
+\section{Full Decision Rules}\label{sup:rules}
+\ext{Evaluation Protocol (Experimental Setup)}
+
+\textbf{Margins.} Non-inferiority margins are 1.5 times the minimum detectable effect at 80\% power of a three-versus-three-seed comparison, computed from its standard errors on the OUHD-L test set (0.0025 AIoU, 0.0034 pen-up F1, 0.0025 strict order, 0.0030 direction): 0.01035 (AIoU), 0.0141 (pen-up F1), 0.01065 (strict order) and 0.01245 (direction).
+
+\begin{itemize}
+\item \emph{Target gain}: lower bound above 0 for AIoU, above $-0.0141$ for pen-up F1, above $-0.01065$ for strict order and above $-0.01245$ for direction, against plain fine-tuning at the same $\rho$.
+\item \emph{Retention}: AIoU lower bound above $-0.010$ on every non-target set for the composed system against $\fnot{t}$; the three order clauses are reported per set.
+\item \emph{Target gain plus shape retention}: target gain on the target and retention on all six non-Urdu sets.
+\item \emph{Control comparison}: warm variant minus the source-training control $\SFT{\rho}$ on the target has AIoU lower bound above 0 and meets the three order clauses.
+\item \emph{Selection gain}: at least one of pen-up F1, strict order and direction has a point estimate beyond its margin with the interval above zero (Holm correction across the three); this is a gain above zero, not a lower bound beyond the margin, no other order metric shows an interval-backed loss beyond its margin, AIoU is non-inferior, and the random-of-$k$ control has every interval containing zero.
+\item \emph{Mirror collapse and repair}: collapse needs the direction change on a mirrored left-to-right set to have an interval upper bound below $-0.10$ on at least two of three sets per base; repair needs a direction gain with lower bound above 0 and AIoU lower bound above $-0.01035$ on at least two of three sets (three of four in the reverse direction).
+\item \emph{Rank agreement}: Kendall $\tau$ lower bound of at least 0.65.
+\item \emph{Frame-choice success}: OUHD-L direction improves over $\Fi$ with the same Endpoint Consensus Selection (lower bound above 0), AIoU is non-inferior, and the six non-Urdu sets keep AIoU above $-0.010$ and the order clauses.
+\end{itemize}
+The test evaluation of Endpoint Consensus Selection on plain fine-tuning was added after its validation result, under an amendment recorded before the test output existed; all other evaluations were specified before sampling. Test sets were sealed until each run's validation-based checkpoint selection existed.
+
+\textbf{Stricter reading of the selection gain.} If the lower bound itself must exceed the margin, the gain clause holds for 4 of 5 bases on Urdu (not for $\fur$: lower bounds $+0.0116$ for pen-up F1 against $0.0141$ and $+0.0098$ for strict order against $0.01065$) and for 7 of 24 cells on the non-Urdu sets (recount from the unadjusted pen-up F1 and strict-order intervals).
+
+\textbf{Records and dates.} The rules are kept as files with SHA-256 checksums on the compute cluster; the dates below are file modification times, and the records are local, not a public registry. (i) The margins come from a power table of 29 Oct 2026 (checksum \texttt{ebae9e4a}), computed from OUHD-L test-set scores of earlier models. (ii) The target-gain rule was recorded on 3 Nov 2026, 13:05 UTC (\texttt{eef82866}), before the unguided warm stage started (15:09 UTC); reads under it were declared exploratory and single-seed. (iii) The comparator copy sampled on an RTX A4000 was declared primary on 5 Nov 2026 (\texttt{7a71c715}). (iv) The pooled three-seed analysis as the primary pooled analysis, the retention rule and the routed-adapter arms were recorded on 7 Nov 2026 (\texttt{04766e97}, 19:44 UTC; amendment \texttt{bface42b}, 20:37 UTC). Two protocol deviations follow. First, record (iv) asks for three fresh fine-tuning seeds, but for $\WFT{1\%}$ and $\WFTpe{1\%}$ the pooled read reuses the seed-20261034 run that had been scored on the test set on 5 Nov 2026 under rule (ii); its result was known when (iv) was written. The other two seeds were submitted at 20:13 UTC and all routed-adapter runs at 21:02 UTC on 7 Nov, after the records. Second, because of (i), the margins were not fixed before any test result existed. In the records the control comparison is named ``encoder attribution'', the selection gain ``order gain'', the target gain plus shape retention ``solution'', and the primary pooled analysis the ``confirmatory read''.
+\FloatBarrier
+
+\section{Additional Results}\label{sup:results}
+
+The decision rules behind the verdict columns are in Section~\ref{sup:rules}.
+
+\subsection{Direction errors under the tested shifts}\label{sup:failure}
+\ext{Introduction; Discussion}
+Table~\ref{tabS:failure} collects the direction evidence named in the paper; its rows are scored on different sets and are not one comparison. The left-to-right and mirrored-control values are not rows of Table~\ref{tabS:failure}; their per-set tables are in the code repository (folder \texttt{6\_table\_sources}).
+
+\begin{table}[!htbp]
+\centering
+\caption{Direction errors under the tested shifts, on a different test set per row (one training seed, descriptive). Dir.: direction accuracy on matched strokes; $\tau$: Kendall $\tau$.}\label{tabS:failure}
+\scriptsize
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+System & Test set & AIoU & $\tau$ & Dir.\\
+\midrule
+Urdu specialist $\fur$ & OUHD-L, 4,406 units & 0.798 & 0.892 & 0.951\\
+$\fnot{ur}$, identity frame & OUHD-L, 4,406 units & 0.712 & 0.480 & 0.547\\
+InkSight Small-p, zero-shot & OUHD-L, 4,406 units & 0.701 & 0.306 & 0.491\\
+TRACE (IAM-trained) & OUHD-L, 253 lines & 0.517 & $-0.987$ & 0.476\\
+Urdu specialist $\fur$ & UNIPEN-de, 827 units & 0.589 & $-0.119$ & 0.400\\
+\botrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\subsection{Warm adaptation on the target}\label{sup:warmres}
+\ext{Warm Adaptation on the Target (Results)}
+Table~\ref{tabS:warm} gives the warm variants against plain fine-tuning at 1\% and at 10\% of Urdu, with the per-seed ranges and the seed-level intervals.
+
+\textbf{Encoder initialisation.} Paired against random initialisation of the warm encoder, Perception Encoder initialisation adds $+0.0126$ [$+0.0116$, $+0.0136$] AIoU at 1\% and $+0.0077$ [$+0.0070$, $+0.0084$] at 10\% (three fine-tuning seeds, one warm run each). Pen-up F1 ($+0.038$, $+0.018$) and strict order ($+0.022$, $+0.008$) rise as well, direction shows no detectable change ($+0.001$ and $+0.002$, intervals include zero), and Kendall $\tau$ is lower ($-0.015$ [$-0.026$, $-0.002$] and $-0.010$ [$-0.018$, $-0.003$]).
+
+\begin{table}[!htbp]
+\centering
+\caption{Warm variants minus plain fine-tuning at the same fraction of Urdu on the OUHD-L test set (4,406 units, three fine-tuning seeds each): paired $\Delta$ with its unadjusted 95\% CI below.}\label{tabS:warm}
+\scriptsize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{1\% of Urdu, minus $\FT{1\%}$} & \multicolumn{2}{c}{10\% of Urdu, minus $\FT{10\%}$}\\
+\cmidrule(lr){2-3}\cmidrule(l){4-5}
+Metric & $\WFT{1\%}$ & $\WFTpe{1\%}$ & $\WFT{10\%}$ & $\WFTpe{10\%}$\\
+\midrule
+AIoU & $+0.047$ & $+0.059$ & $+0.043$ & $+0.051$\\
+ & [$+0.045$, $+0.049$] & [$+0.057$, $+0.062$] & [$+0.041$, $+0.044$] & [$+0.049$, $+0.052$]\\
+Pen-up F1 & $+0.075$ & $+0.113$ & $+0.066$ & $+0.084$\\
+ & [$+0.068$, $+0.082$] & [$+0.104$, $+0.122$] & [$+0.061$, $+0.072$] & [$+0.078$, $+0.091$]\\
+Strict order & $+0.027$ & $+0.050$ & $+0.030$ & $+0.038$\\
+ & [$+0.021$, $+0.034$] & [$+0.042$, $+0.058$] & [$+0.024$, $+0.035$] & [$+0.030$, $+0.045$]\\
+Direction & $-0.003$ & $-0.001$ & $-0.004$ & $-0.002$\\
+ & [$-0.007$, $+0.001$] & [$-0.006$, $+0.003$] & [$-0.007$, $-0.000$] & [$-0.007$, $+0.003$]\\
+Kendall $\tau$ & $+0.006$ & $-0.008$ & $-0.010$ & $-0.022$\\
+ & [$-0.005$, $+0.018$] & [$-0.021$, $+0.007$] & [$-0.017$, $-0.003$] & [$-0.031$, $-0.013$]\\
+\midrule
+AIoU, per seed & $+0.044$ to $+0.048$ & $+0.059$ to $+0.060$ & $+0.042$ to $+0.043$ & $+0.050$ to $+0.051$\\
+AIoU, seed $t$ CI & [$+0.042$, $+0.052$] & [$+0.059$, $+0.060$] & [$+0.042$, $+0.044$] & [$+0.049$, $+0.052$]\\
+Dir., seed $t$ CI & [$-0.011$, $+0.005$] & [$-0.003$, $+0.000$] & -- & --\\
+$\tau$, seed $t$ CI & -- & -- & [$-0.021$, $+0.000$] & [$-0.029$, $-0.015$]\\
+Target gain & yes & yes & yes & yes\\
+\botrule
+\end{tabular}
+\par\smallskip{\scriptsize Per seed: range of the three single-seed differences; seed $t$ CI: $t$ interval (2 d.f.) over them; Dir.: direction; --: not computed.}
+\end{table}
+\FloatBarrier
+
+\subsection{Retention on six non-Urdu sets}\label{sup:retres}
+\ext{Retention on Six Non-Urdu Sets (Results)}
+Table~\ref{tabS:german} gives direction on UNIPEN-de per system, with and without the router.
+
+\textbf{Routing counts.} The router sends 4,389 of 4,406 Urdu test units to the fine-tuned model, none of the CASIA-zh, CASIA-en and IAM500 units, 1 of 500 HPL Tamil units, 3 of 5,925 OnHW units and 106 of 827 UNIPEN-de units (12.8\%). With the 336-label router of Section~\ref{sup:impl} (Script routing), routing is unchanged on CASIA-zh, CASIA-en and IAM500, so the composed result on these sets is unchanged; composed scores on the other three sets were not recomputed with that router.
+
+\textbf{Without a router at 10\%.} At 10\% without a router the warm variants beat $\FT{10\%}$ on AIoU on all six non-Urdu sets (fewer than three seeds, exploratory), but direction lower bounds fall to $-0.059$ ($\WFT{}$) and $-0.025$ ($\WFTpe{}$).
+
+\begin{table}[!htbp]
+\centering
+\caption{German direction after adding Urdu, on UNIPEN-de (unit-weighted over writers; three training seeds). $\Delta$: per-writer direction minus the $\fnot{ur}$ direction for the same writer.}\label{tabS:german}
+\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lrrrrc@{}}
+\toprule
+System & Writers & Units & Direction & $\fnot{ur}$ direction & Per-writer $\Delta$ range\\
+\midrule
+$\Rt(\WFT{1\%})$ & 7 & 827 & 0.881 & 0.955 & $-0.270$ to $-0.007$\\
+$\WFT{1\%}$, no router & 7 & 827 & 0.395 & 0.955 & $-0.841$ to $-0.238$\\
+$\Rt(\WFTpe{1\%})$ & 7 & 827 & 0.889 & 0.955 & $-0.274$ to $+0.014$\\
+$\WFTpe{1\%}$, no router & 7 & 827 & 0.403 & 0.955 & $-0.908$ to $-0.229$\\
+\botrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\subsection{Exploratory routed adapter results}\label{sup:rares}
+\ext{Exploratory Routed Adapter Results (Results)}
+Table~\ref{tabS:singleR} gives the retention side of the routed-adapter variants; the target side is in the paper, and the device check and first-seed evaluation are in Table~\ref{tabS:singleapp}. The comparison is exploratory.
+
+\begin{table}[!htbp]
+\centering
+\caption{Routed-adapter variants at 1\% of Urdu, retention side: $\AD{1\%}$ minus $\fnot{ur}$ on the six non-Urdu sets.}\label{tabS:singleR}
+\tabsz\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+$\AD{1\%}$ backbone & Min.\ AIoU lo & Order kept & Both\\
+\midrule
+C-RADIOv3-H-guided & $+0.0054$ & 3/6 & yes\\
+PE-Spatial-B/16-guided & $+0.0065$ & 4/6 & no\\
+CleanDIFT-SD2.1-guided & $+0.0112$ & 5/6 & no\\
+MAE-L-guided & $+0.0121$ & 4/6 & no\\
+DINOv3-L/16-SAT-guided & $+0.0090$ & 4/6 & no\\
+PE-initialised warm & $+0.0127$ & 5/6 & no\\
+unguided warm & $+0.0081$ & 3/6 & no\\
+$\fnot{ur}$ (no warm stage)$^{a}$ & $-0.0256$ & 4/6 & no\\
+\botrule
+\end{tabular}
+\par\smallskip{\scriptsize $^{a}$ One seed. Min.\ AIoU lo: lowest AIoU lower bound over the six sets; Order kept: sets on which pen-up F1, strict order and direction are non-inferior; Both: target gain (the routed-adapter table of the paper (Section ``Exploratory Routed Adapter Results'')) and retention met.}
+\end{table}
+\FloatBarrier
+
+\subsection{Endpoint Consensus Selection on the non-Urdu sets}\label{sup:selres}
+\ext{Endpoint Consensus Selection (Results)}
+On the six non-Urdu sets, 16 of 24 base-by-set cells show a gain and 9 pass the full criterion (Table~\ref{tabS:r3b}; $n$ = 127--3,157 units per set for Kendall $\tau$). The random control is not null in 11 of the 24 cells. In a post hoc calibration check, the flag requires all eight unadjusted 95\% intervals of the random pick to contain zero; a correctly drawn random pick fails this in 37.5\% of 2,000 redraws on the four sets with 52--63 writers, in 67.6\% on UNIPEN-de (seven writers) and in 99.5\% on OnHW (two writers), so 12.7 failing cells are expected and 11 are observed. With a randomization test of the stored pick against the redraws as the control (Bonferroni over the eight metrics), 23 of 24 cells are null and 15 pass the full criterion; the pre-specified flag gives 9. Table~\ref{tabS:r3b} uses four bases, which differ from the five Urdu bases of the paper. All counts use the pre-specified reading of a gain (point estimate beyond the margin, interval above zero); the stricter reading is in Section~\ref{sup:rules}. The paper reports the non-Urdu result as inconclusive because the two controls disagree.
+
+\begin{table}[!htbp]
+\centering
+\caption{The selection-gain criterion on the six non-Urdu sets (Holm within base): number of sets with a gain (Gain), with a lower bound of pen-up F1 or strict order beyond its margin (Bound, unadjusted), with a null random control (Null) and passing the full criterion (Full).}\label{tabS:r3b}
+\tabsz\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Base & Gain & Bound & Null & Full & $\tau$\\
+\midrule
+$\FT{1\%}$ & 5/6 & 4/6 & 3/6 & 2/6 & 1/5/0\\
+$\fnot{ur}$ & 3/6 & 0/6 & 4/6 & 3/6 & 0/5/1\\
+$\fall$ & 3/6 & 0/6 & 3/6 & 2/6 & 0/4/2\\
+$\Rt(\WFT{1\%})$ & 5/6 & 3/6 & 3/6 & 2/6 & 0/5/1\\
+\botrule
+\end{tabular}
+\par\smallskip{\scriptsize $\tau$: sets with the Kendall $\tau$ interval above zero / containing zero / below zero.}
+\end{table}
+\FloatBarrier
+
+\subsection{Negative results}\label{sup:frameres}
+\ext{Negative Results (Results)}
+\textbf{Mirrored frame.} In $\Fm$, image columns $c$ map to $W-c$, the trajectory is reflected ($x\mapsto -x$), and the output is reflected back before scoring. A backbone trained on left-to-right scripts then sees a right-to-left unit in its familiar orientation.
+
+\textbf{Frame choice.} For each unit we draw $k$ samples in $\Fi$ and $k$ in $\Fm$. The frame score is the mean pairwise value of the endpoint-agreement function $U$ (defined in Section ``Endpoint Consensus Selection'' of the paper) over the samples in that frame,
+\begin{equation}
+S_f=\frac{2}{k(k-1)}\sum_{i<j}U\!\left(a^{f}_i,a^{f}_j\right),\quad f\in\{\Fi,\Fm\},
+\end{equation}
+and the frame with the higher score is chosen; ties go to $\Fi$. The output is the sample that Endpoint Consensus Selection selects among the $k$ samples of the chosen frame. No script label and no ground truth are used.
+
+Table~\ref{tabS:r1d} gives the automatic frame choice against the identity frame, per base.
+
+\textbf{Mirrored frame applied by hand.} On $\fnot{ur}$, $\Fm$ raises direction from 0.5468 to 0.8687 and Kendall $\tau$ from 0.4799 to 0.6586 ($[0.6204, 0.6931]$), with AIoU 0.7117 against 0.7090; the lower bound of $\tau$ misses the rank-agreement bar of 0.65 (Section~\ref{sup:rules}). On TRACE the same flip gives direction $0.476\to0.918$ at an AIoU cost ($0.517\to0.465$). After 1\% fine-tuning the frame adds $+0.0003$ AIoU (not significant). In the reverse direction, $\fur$ read in the mirrored frame raises direction on all four left-to-right sets ($+0.11$ to $+0.63$), but AIoU stays non-inferior on only two (IAM500, OnHW; CASIA-en $-0.016$ [$-0.027$, $-0.006$]), so the repair criterion (three of four) fails. For the warm backbone $\Fm$ raises Urdu $\tau$ to a lower bound of $0.419$, below the 0.65 bar; the PE-initialised warm backbone is not assessed.
+
+\textbf{Other tests.} Four further tests did not pass their criterion: (i) direction guidance during sampling (best direction $+0.0017$ at an AIoU cost of $0.222$); (ii) renderer-robust fine-tuning (a gain on a second renderer, with order losses in all 20 configurations); (iii) a script-token joint model, which ignores the token (AIoU $-0.017$ against $\fall$); and (iv) 1\% low-rank adapters, reported in Section ``Negative Results'' of the paper.
+
+\begin{table}[!htbp]
+\centering
+\caption{Automatic frame choice minus the identity frame $\Fi$ with the same Endpoint Consensus Selection: paired $\Delta$ on Urdu and its range over the six non-Urdu sets. dir.: direction; strict: strict order; Pass: frame-choice criterion met.}\label{tabS:r1d}
+\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrrc@{}}
+\toprule
+Base & Urdu $\Delta$dir. & Urdu $\Delta$strict & Urdu $\Delta$AIoU & 6 sets $\Delta$dir. & 6 sets $\Delta$strict & Pass\\
+\midrule
+$\fnot{ur}$ & $+0.155$ & $+0.072$ & $+0.003$ & $-0.188$ to $-0.014$ & $-0.030$ to $-0.006$ & no\\
+$\fall$ & $-0.035$ & $-0.013$ & $-0.002$ & $-0.187$ to $-0.005$ & $-0.024$ to $-0.006$ & no\\
+Warm backbone & $+0.124$ & $+0.047$ & $+0.002$ & $-0.170$ to $-0.010$ & $-0.024$ to $-0.008$ & no\\
+\botrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\subsection{Metric selectivity}\label{sup:m1res}
+\ext{Discussion}
+For each metric we perturb the ink along its own factor and along the other factors (seven perturbation types at five strengths, 500 units per set, seven sets; definitions in Section~\ref{sup:impl}) and require the largest off-factor change to be at most 10\% of the largest own-factor change at the highest strength. Of 35 metric-by-set cells, 12 pass (Table~\ref{tabS:m1}). Kendall $\tau$ passes on all seven sets, AIoU on two, direction on three, and pen-up F1 and strict order on none. The two gated order guardrails, strict order and pen-up F1, therefore fail the check, and the only order metric that passes, Kendall $\tau$, is reported and not gated; a value of 0.000 means that no shape, direction, pen-up or timing perturbation changed $\tau$. The ratio of strict order exceeds 1 on every set: it moves more under perturbations of other factors than under order perturbations. We therefore read a strict-order gain as a gain in complete-unit correctness and a pen-up F1 gain as a segmentation gain, not as evidence about the relative order of strokes. The losses in $\tau$ at 10\% (Table~\ref{tabS:warm}) and for the routed adapter (Section ``Exploratory Routed Adapter Results'' of the paper) change no verdict under the pre-specified criteria.
+
+\begin{table}[!htbp]
+\centering
+\caption{Metric selectivity: largest off-factor change as a fraction of the own-factor change (500 units per set; bold: pass, $\le 0.10$).}\label{tabS:m1}
+\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Metric & OUHD-L & CASIA-zh & CASIA-en & HPL Tamil & IAM500 & UNIPEN-de & OnHW & Pass\\
+\midrule
+AIoU & 0.288 & 0.205 & 0.382 & 0.110 & 0.145 & \textbf{0.056} & \textbf{0.066} & 2/7\\
+Kendall $\tau$ & \textbf{0.000} & \textbf{0.000} & \textbf{0.000} & \textbf{0.000} & \textbf{0.000} & \textbf{0.000} & \textbf{0.000} & 7/7\\
+Direction & \textbf{0.045} & 0.117 & 0.131 & \textbf{0.088} & 0.115 & 0.157 & \textbf{0.052} & 3/7\\
+Pen-up F1 & 0.662 & 0.586 & 0.499 & 0.594 & 0.532 & 0.556 & 0.655 & 0/7\\
+Strict order & 1.582 & 1.035 & 2.732 & 2.193 & 2.193 & 3.311 & 1.256 & 0/7\\
+\botrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+\subsection{Claims, evidence and verdicts}\label{sup:claims}
+\ext{Discussion}
+Table~\ref{tabS:claims} lists each claim of the paper with its evidence and verdict.
+
+\begin{table}[!htbp]
+\centering
+\caption{Claims, evidence and verdicts.}\label{tabS:claims}
+\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}p{0.44\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}@{}}
+\toprule
+Claim & Evidence & Verdict\\
+\midrule
+The evaluated models show substantial direction errors under the tested shifts & four systems (paper, ``Introduction''); mirrored left-to-right control (paper, ``Discussion'') & holds (descriptive); cause not isolated\\
+Mean AIoU does not show a direction error & on Urdu the mirror moves direction by 0.32 (0.547 to 0.869) and mean AIoU by 0.003 (0.712 to 0.709) & holds for the set mean\\
+Warm adaptation beats plain fine-tuning at 1\% & AIoU $+0.047$ and $+0.059$, Table~\ref{tabS:warm}, three fine-tuning seeds & holds\\
+It beats plain fine-tuning at 10\% & AIoU $+0.043$ and $+0.051$ (Table~\ref{tabS:warm}), three fine-tuning seeds; Kendall $\tau$ falls by 0.010 and 0.022 & holds; $\tau$ not gated\\
+It beats further source training with the original encoder & AIoU $+0.033$ and $+0.045$ over the source-training control (paper, ``Warm Adaptation on the Target''); encoder, resolution and training settings change together & holds for the combined change\\
+Shape is retained on all six non-Urdu sets; direction on UNIPEN-de is not & paper, ``Retention on Six Non-Urdu Sets'': lowest AIoU lower bound $+0.0068$; UNIPEN-de direction $-0.072$ and $-0.066$ & holds with the router\\
+Endpoint Consensus Selection improves pen-up F1 and strict order on Urdu & paper, ``Endpoint Consensus Selection'', 5 of 5 bases; no detectable change in Kendall $\tau$ & holds\\
+It improves the non-Urdu sets & gain in 16 of 24 base-by-set cells (Section~\ref{sup:selres}); two random-pick controls disagree (9 and 15 cells) & inconclusive\\
+Automatic frame choice works & three bases (Table~\ref{tabS:r1d}) & fails\\
+Foundation-model guidance improves on unguided warm adaptation & AIoU higher for 1 of 10 encoders, lower for 5 (paper, ``Negative Results'') & fails\\
+Target gain plus shape retention in one routed-adapter model & 1 of 7 warm backbones; fails against the second comparator copy (paper, ``Exploratory Routed Adapter Results'') & exploratory; not claimed\\
+\botrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}

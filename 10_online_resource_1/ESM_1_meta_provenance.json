@@ -1,0 +1,29 @@
+{
+ "file_set": "Source of the submitted Online Resource 1 (ESM_1.pdf)",
+ "created": "2026-11-16",
+ "files": {
+  "ESM_1.tex": "4c3d66d6f007549aeef45a5075ce1532d12df540078079bd06f69174f1a15033",
+  "references.bib": "9a6eca65538b8f6a82477866eac3b678c18b38a69d60905cf018656a5c09aa20",
+  "build_esm_1.py": "50172224f5ad1e7dee399f9a67dbf05148d2183c35de2e83b62ee5f972a8128c"
+ },
+ "submitted_pdf": {
+  "name": "ESM_1.pdf",
+  "pages": 11,
+  "bytes": 425347,
+  "sha256": "b7d120a7be049f9b0e59f50104a1eadb45b7e94b66c97bfd5c71282368862009",
+  "note": "not stored in this repository; a recompiled PDF has the same content but not the same bytes"
+ },
+ "compile": "pdflatex ESM_1; bibtex ESM_1; pdflatex ESM_1; pdflatex ESM_1 (document class article, bibliography style unsrtnat); these two files compiled to the submitted PDF",
+ "derivation": {
+  "script": "build_esm_1.py",
+  "command": "python build_esm_1.py supplementary_v12.1.tex <manuscript source> ESM_1.tex",
+  "inputs": {
+   "supplementary_v12.1.tex": "in this folder, sha256 9a349b74a14872df3e9b681511b24dab1b9267d57f4ae234c9f650c22afc5938",
+   "manuscript source": "the LaTeX source of the paper at the time of the build (title and author block only); not in this repository, so the script cannot be re-run from the repository alone"
+  },
+  "difference_from_script_output": "the first two comment lines of the script output were replaced by one comment line; no other byte differs",
+  "what_the_script_changes": "title block and preamble (heading Online Resource 1, article title, journal name, authors, affiliation and e-mail of the corresponding author, PDF metadata, separate figure numbering) and the note markers of tables; the content of the supplement is unchanged"
+ },
+ "references.bib": "the bibliography database used for the paper and the supplement; four comment lines about how entries were collected were removed, entries unchanged",
+ "not_replaced_by_placeholders": "ESM_1.tex is the unchanged source of a submitted file and contains the author names and the e-mail address of the corresponding author as printed in the paper"
+}
